@@ -1,116 +1,287 @@
 - type: radioChannel
-  id: Common
-  name: chat-radio-common
-  keycode: ";"
-  frequency: 1459
-  color: "#4bb14b" # Fire edit
-  longRange: true # Fire added
-
-- type: radioChannel
-  id: CentCom
-  name: chat-radio-centcom
-  keycode: '1' # Fire edit - чтобы не конфликтовало
-  frequency: 1337
-  color: "#2681a5"
+  id: Channel1
+  name: "Canal 1"
+  keycode: "1"
+  frequency: 101
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Command
-  name: chat-radio-command
-  keycode: '2' # Fire edit - чтобы не конфликтовало
-  frequency: 1353
-  color: "#d1c56b" # Fire edit
-
-- type: radioChannel
-  id: Engineering
-  name: chat-radio-engineering
-  keycode: '3' # Fire edit - чтобы не конфликтовало
-  frequency: 1357
-  color: "#cf8f76" # Fire edit
-
-- type: radioChannel
-  id: Medical
-  name: chat-radio-medical
-  keycode: '4' # Fire edit - чтобы не конфликтовало
-  frequency: 1355
-  color: "#5b94aa" # Fire edit
-
-- type: radioChannel
-  id: Science
-  name: chat-radio-science
-  keycode: '5' # Fire edit - чтобы не конфликтовало
-  frequency: 1351
-  color: "#c49dc4" # Fire edit
-
-- type: radioChannel
-  id: Security
-  name: chat-radio-security
-  keycode: '6' # Fire edit - чтобы не конфликтовало
-  frequency: 1359
-  color: "#976162" # Fire edit
-
-- type: radioChannel
-  id: Service
-  name: chat-radio-service
-  keycode: '7' # Fire edit - чтобы не конфликтовало
-  frequency: 1349
-  color: "#849b6a" # Fire edit
-
-- type: radioChannel
-  id: Supply
-  name: chat-radio-supply
-  keycode: '8' # Fire edit - чтобы не конфликтовало
-  frequency: 1347
-  color: "#b99f7d" # Fire edit
-
-- type: radioChannel
-  id: Syndicate
-  name: chat-radio-syndicate
-  keycode: '9' # Fire edit - чтобы не конфликтовало
-  frequency: 1213
-  color: "#976162" # Fire edit
+  id: Channel2
+  name: "Canal 2"
+  keycode: "2"
+  frequency: 102
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Handheld
-  name: chat-radio-handheld
-  frequency: 1330
-  color: "#af9e6b" # Fire edit
-  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  id: Channel3
+  name: "Canal 3"
+  keycode: "3"
+  frequency: 103
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Binary
-  name: chat-radio-binary
-  keycode: '<' # Fire edit - чтобы не конфликтовало
-  frequency: 1001
-  color: "#9fd6c1" # Fire edit
-  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  id: Channel4
+  name: "Canal 4"
+  keycode: "4"
+  frequency: 104
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Freelance
-  name: chat-radio-freelance
-  keycode: '\' # Fire edit - чтобы не конфликтовало
-  frequency: 1984
-  color: "#f6ce64"
-  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  id: Channel5
+  name: "Canal 5"
+  keycode: "5"
+  frequency: 105
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Xenoborg
-  name: chat-radio-xenoborg
-  keycode: ']' # Sunrise-Localization
-  frequency: 2002
-  color: "#2288ff"
-  # long range since I don't wanna make a special xenoborg telecomm server
+  id: Channel6
+  name: "Canal 6"
+  keycode: "6"
+  frequency: 106
+  color: "#888888"
   longRange: true
 
 - type: radioChannel
-  id: Mothership
-  name: chat-radio-mothership
-  keycode: ')' # Sunrise-Localization
-  frequency: 2003
-  color: "#ff2222"
-  # long range since I don't wanna make a special xenoborg telecomm server
+  id: Channel7
+  name: "Canal 7"
+  keycode: "7"
+  frequency: 107
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel8
+  name: "Canal 8"
+  keycode: "8"
+  frequency: 108
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel9
+  name: "Canal 9"
+  keycode: "9"
+  frequency: 109
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel10
+  name: "Canal 10"
+  keycode: "0"
+  frequency: 110
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel11
+  name: "Canal 11"
+  keycode: null
+  frequency: 111
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel12
+  name: "Canal 12"
+  keycode: null
+  frequency: 112
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel13
+  name: "Canal 13"
+  keycode: null
+  frequency: 113
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel14
+  name: "Canal 14"
+  keycode: null
+  frequency: 114
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel15
+  name: "Canal 15"
+  keycode: null
+  frequency: 115
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel16
+  name: "Canal 16"
+  keycode: null
+  frequency: 116
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel17
+  name: "Canal 17"
+  keycode: null
+  frequency: 117
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel18
+  name: "Canal 18"
+  keycode: null
+  frequency: 118
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel19
+  name: "Canal 19"
+  keycode: null
+  frequency: 119
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel20
+  name: "Canal 20"
+  keycode: null
+  frequency: 120
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel21
+  name: "Canal 21"
+  keycode: null
+  frequency: 121
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel22
+  name: "Canal 22"
+  keycode: null
+  frequency: 122
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel23
+  name: "Canal 23"
+  keycode: null
+  frequency: 123
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel24
+  name: "Canal 24"
+  keycode: null
+  frequency: 124
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel25
+  name: "Canal 25"
+  keycode: null
+  frequency: 125
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel26
+  name: "Canal 26"
+  keycode: null
+  frequency: 126
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel27
+  name: "Canal 27"
+  keycode: null
+  frequency: 127
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel28
+  name: "Canal 28"
+  keycode: null
+  frequency: 128
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel29
+  name: "Canal 29"
+  keycode: null
+  frequency: 129
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel30
+  name: "Canal 30"
+  keycode: null
+  frequency: 130
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel31
+  name: "Canal 31"
+  keycode: null
+  frequency: 131
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel32
+  name: "Canal 32"
+  keycode: null
+  frequency: 132
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel33
+  name: "Canal 33"
+  keycode: null
+  frequency: 133
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel34
+  name: "Canal 34"
+  keycode: null
+  frequency: 134
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel35
+  name: "Canal 35"
+  keycode: null
+  frequency: 135
+  color: "#888888"
+  longRange: true
+
+- type: radioChannel
+  id: Channel36
+  name: "Canal 36"
+  keycode: null
+  frequency: 136
+  color: "#888888"
   longRange: true
