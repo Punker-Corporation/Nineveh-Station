@@ -1,0 +1,10 @@
+ent-BaseBulletStarlight = Marcador básico
+    .desc = Se você ver isso, provavelmente você está morto!
+ent-BulletAdvTaser = Descarga Taser
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BaseBulletRubber = { ent-BaseBulletStarlight }
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BulletEnergyCrossbow = { ent-BaseBullet }
+    .desc = { ent-BaseBullet.desc }
+ent-BulletMiniEnergyCrossbow = { ent-BulletEnergyCrossbow }
+    .desc = { ent-BulletEnergyCrossbow.desc }

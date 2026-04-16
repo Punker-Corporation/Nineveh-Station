@@ -1,0 +1,14 @@
+ent-WeaponEnergyTurretControlPanelFrame = montagem do painel de controle da torre de segurança
+    .desc = Montagem parcial de parede para painel de controle da torre de segurança.
+ent-WeaponEnergyTurretStationControlPanelBase = painel de controle da torre de segurança
+    .desc = Interface montada na parede para configuração remota dos parâmetros operacionais das torres de segurança associadas.
+ent-WeaponEnergyTurretAIControlPanel = Painel de controle da torre de segurança AI
+    .desc = Uma interface de parede que permite que a inteligência artificial local configure os parâmetros operacionais das torres de segurança associadas.
+ent-WeaponEnergyTurretSecurityControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = SB
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretCommandControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Comando
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretStationControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }

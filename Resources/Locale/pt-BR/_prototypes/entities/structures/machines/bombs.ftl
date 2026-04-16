@@ -1,0 +1,12 @@
+ent-BaseHardBomb = megabomba
+    .desc = Basta falar e ninguém explodirá.
+ent-TrainingBomb = bomba de treinamento
+    .desc = Bomba para manequins, instruções não incluídas.
+ent-SyndicateBomb = Bomba sindicalizada
+    .desc = Bomba para agentes e agentes do Sindicato. O verdadeiro negócio, sem treinamento, comece!
+ent-SyndicateBombFake = { ent-SyndicateBomb }
+    .suffix = Blenda
+    .desc = { ent-SyndicateBomb.desc }
+ent-DebugHardBomb = Bomba DEBAG
+    .desc = Deus, ela vai explodir.
+    .suffix = DEPURAR

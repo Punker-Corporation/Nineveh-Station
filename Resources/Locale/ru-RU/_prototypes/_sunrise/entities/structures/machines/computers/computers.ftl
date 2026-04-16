@@ -5,6 +5,3 @@ ent-AbductorHumanObservationConsole = консоль наблюдения за �
 ent-AbductorHumanObservationConsoleEye = глаз абдукторов
     .desc = Устройство наблюдения абдукторов.
     .suffix = НЕ РАЗМЕЩАТЬ НА КАРТЕ
-
-ent-SlopDispenser = раздатчик питательной пасты
-    .desc = Производит ту самую жижу из биомассы. Также может перерабатывать растения в биомассу для прямого использования.

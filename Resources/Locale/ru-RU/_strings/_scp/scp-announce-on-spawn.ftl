@@ -1,4 +1,4 @@
-﻿scp-announce-on-spawn-source-name = Автоматическая система оповещения
+scp-announce-on-spawn-source-name = Автоматическая система оповещения
 
 scp999-announce-on-spawn = Обнаружена активность в камере содержания объекта SCP-999
 scp049-announce-on-spawn = Обнаружена активность в камере содержания объекта SCP-049
@@ -6,9 +6,7 @@ scp173-announce-on-spawn = Обнаружена активность в каме
 scp096-announce-on-spawn = Обнаружена активность в камере содержания объекта SCP-096
 scp939-announce-on-spawn = Обнаружена активность в камере содержания объекта SCP-939
 scp106-announce-on-spawn = Обнаружена активность в камере содержания объекта SCP-106
-head-announce-on-spawn = { $name }, { $job }, назначен главой отдела.
-squad-commander-announce-on-spawn = { $name }, { $job }, назначен командиром отряда.
-class-d-announce-on-spawn = Зарегистрирован новый сотрудник класса Д: { $name }, { $job }.
-mtf-announce-on-spawn =
-    ВНИМАНИЕ! Мобильная оперативная группа вошла в комплекс.
+head-announce-on-spawn = {$name}, {$job}, назначен главой отдела.
+squad-commander-announce-on-spawn = {$name}, {$job}, назначен командиром отряда.
+mtf-announce-on-spawn = ВНИМАНИЕ! Мобильная оперативная группа вошла в комплекс.
     Всем выжившим рекомендуется оставаться в убежище или в любом другом безопасном месте, пока группа не зачистит комплекс.

@@ -1,0 +1,10 @@
+ent-ClothingEyesUniversalMedicalHud = viseira médica universal
+    .desc = Um display que combina os benefícios de um scanner médico e óculos de análise química.
+ent-ClothingEyesHudSyndicateMech = Visor do Piloto do Sindicato Mech
+    .desc = Uma viseira profissional que analisa o estado da PELE em tempo real.
+ent-ClothingEyesHudDiagnosticERT = viseira de diagnóstico de segurança
+    .desc = Uma ocular com indicador no vidro, capaz de analisar a integridade e o estado de robôs e exosuits. A tecnologia de viseira de segurança também está integrada.
+ent-ClothingEyesGlassesHiddenSecurityChameleon = { ent-ClothingEyesGlassesHiddenSecurity }
+    .desc = { ent-ClothingEyesGlassesHiddenSecurity.desc }
+ent-ClothingEyesHudMilira = viseira Milir
+    .desc = Uma viseira adaptada ao Milir e que combina as vantagens de um scanner médico e proteção contra flash.

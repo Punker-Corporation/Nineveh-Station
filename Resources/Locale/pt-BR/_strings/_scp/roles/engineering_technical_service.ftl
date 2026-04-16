@@ -1,0 +1,9 @@
+job-name-lead-technical-specialist = Engenheiro Sênior
+job-description-lead-technical-specialist = Especialista técnico com muitos anos de experiência.
+job-name-electrical-technical-specialist = Eletricista
+job-description-electrical-technical-specialist = Engenheiro eletricista responsável por energia elétrica, equipamentos elétricos e sistemas de aquecimento, ventilação e ar condicionado (HVAC).
+job-name-general-technical-specialist = Técnico
+job-description-general-technical-specialist = Funcionário envolvido na manutenção de máquinas e equipamentos. A lâmpada da sala de descanso queimou de novo? O seu novo SCiPhone não está funcionando? - Ele resolverá seus problemas!
+job-name-technical-trainee = Técnico em treinamento
+job-description-technical-trainee = Técnico iniciante. Recebe treinamento de técnicos seniores e auxilia nos pequenos detalhes.
+job-supervisors-chief-technical-specialist = Chefe de Engenharia

@@ -1,0 +1,9 @@
+docking-component-dock = Doca
+docking-component-undock = Desencaixar
+cmd-dock-desc = Tente encaixar 2 gateways juntos. Não há verificação para ver se isso é válido.
+cmd-dock-help = Uso: doca <airlock entityuid1> <airlock entityuid2>
+cmd-dock-args = Número inválido de argumentos
+cmd-dock-invalid = EntidadeUid { $entity } inválida
+cmd-dock-found = Nenhum componente de encaixe encontrado para { $airlock }
+cmd-dock-success = Encaixado com sucesso
+cmd-dock-fail = Não é possível atracar

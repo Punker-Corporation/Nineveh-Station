@@ -64,8 +64,3 @@ ent-ClothingBackpackDuffelSyndicateSuperAmmoFilled = Набор "Оружейн�
     .desc = Большой боекомплект для всего отряда! В набор входят: коробка магазинов для C-20r, коробка барабанов для «Бульдога», коробка магазинов для L6 SAW и россыпные патроны, коробка магазинов для DL6902 и дополнительная россыпь патронов, коробка магазинов для «Эстока», коробка магазинов для «Драгунова», а также коробка безгильзовых патронов.
 ent-ClothingBackpackDuffelWeaponRifleAsh12 = Набор АШ-12
     .desc = АШ-12, 5 магазинов и чертеж.
-
-ent-ClothingBackpackDuffelMilitaryBundlePirateEva = пиратский EVA набор
-    .desc = Содержит старый пиратский EVA костюм.
-ent-ClothingBackpackDuffelMilitaryBundleScaf = набор Scaf
-    .desc = Содержит старый боевой EVA костюм.

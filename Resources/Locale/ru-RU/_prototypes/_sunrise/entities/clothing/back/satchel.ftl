@@ -28,9 +28,6 @@ ent-ClothingBackpackSatchelWhite = белая сумка
     .desc = С этой сумкой вы выглядите очень стильно.
 ent-ClothingBackpackSatchelYellow = жёлтая сумка
     .desc = С этой сумкой вы выглядите очень стильно.
-
-ent-ClothingBackpackSatchelRandomColorSpawner = сумка (случайный цвет)
-    .desc = Сумка случайного цвета.
 # сумки Метус
 ent-ClothingBackpackSatchelHeadOfPrisonMetus = сумка начальника тюрьмы
     .desc = Старая кожа с трещинами, ремень перетянут, запах пыли и металла смешался в нём, как память о годах за закрытыми дверями.

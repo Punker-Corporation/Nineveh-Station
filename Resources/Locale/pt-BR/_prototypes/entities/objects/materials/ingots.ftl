@@ -1,0 +1,14 @@
+ent-IngotBase = { ent-BaseItem }
+    .desc = Um lingote de metal pesado com o logotipo da Fundação em relevo.
+ent-IngotGold = barra de ouro
+    .suffix = Completo
+    .desc = { ent-IngotBase.desc }
+ent-IngotGold1 = barra de ouro
+    .suffix = Um
+    .desc = { ent-IngotGold.desc }
+ent-IngotSilver = barra de prata
+    .suffix = Completo
+    .desc = { ent-IngotBase.desc }
+ent-IngotSilver1 = barra de prata
+    .suffix = Um
+    .desc = { ent-IngotSilver.desc }

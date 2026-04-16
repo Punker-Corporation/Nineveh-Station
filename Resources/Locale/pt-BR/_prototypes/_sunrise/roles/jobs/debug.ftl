@@ -1,0 +1,12 @@
+ent-MobHumanBasicArmor = Urist MakBaza
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanBulletproof = Urist McBastard
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanSWAT = Urist Makomon
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanAgentGear = Urist McAgent
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanNukieGear = Urist MacYAO
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanjuggGear = Urist McGiggle
+    .desc = { ent-BaseMobHuman.desc }

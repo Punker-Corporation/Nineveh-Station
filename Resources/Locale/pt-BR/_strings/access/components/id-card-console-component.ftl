@@ -1,0 +1,11 @@
+id-card-console-window-privileged-id = ID principal:
+id-card-console-window-target-id = ID de destino:
+id-card-console-window-full-name-label = Nome completo:
+id-card-console-window-save-button = Salvar
+id-card-console-window-job-title-label = Cargo:
+id-card-console-window-eject-button = Extrair
+id-card-console-window-insert-button = Inserir
+id-card-console-window-job-selection-label = Predefinições de posição (define o ícone do departamento e da posição):
+access-id-card-console-component-no-hands-error = Você não tem mãos.
+id-card-console-privileged-id = ID principal
+id-card-console-target-id = ID de destino

@@ -1,0 +1,11 @@
+ent-BenchComfy = banco confortável
+    .desc = Um banco com encosto muito confortável.
+ent-BenchColorfulComfy = { ent-BenchComfy }
+    .desc = Um banco com encosto muito confortável.
+    .suffix = Único, Colorido
+ent-BenchRedComfy = { ent-BenchComfy }
+    .suffix = Único, Vermelho
+    .desc = { ent-BenchComfy.desc }
+ent-BenchBlueComfy = { ent-BenchComfy }
+    .suffix = Solteiro. Azul
+    .desc = { ent-BenchComfy.desc }

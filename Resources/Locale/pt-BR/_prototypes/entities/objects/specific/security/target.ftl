@@ -1,0 +1,10 @@
+ent-BaseTarget = { ent-BaseStructureDynamic }
+    .desc = { ent-BaseStructureDynamic.desc }
+ent-TargetHuman = alvo humano
+    .desc = Alvo para tiro. Representa um homem.
+ent-TargetSyndicate = alvo do sindicato
+    .desc = Alvo para tiro. Ele retrata um agente do Syndicate.
+ent-TargetClown = palhaço alvo
+    .desc = Alvo para tiro. Retrata um palhaço.
+ent-TargetStrange = alvo estranho
+    .desc = Alvo para tiro. Não está totalmente claro o que representa, mas é muito, muito durável.

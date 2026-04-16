@@ -1,0 +1,10 @@
+ent-BaseBlueprint = desenho
+    .desc = Um desenho de algum dispositivo. Pode ser inserido no autolat.
+ent-BlueprintFulton = Desenho Fulton
+    .desc = Desenho com diagrama Fulton. Pode ser inserido no autolat.
+ent-BlueprintSeismicCharge = desenho de carga sísmica
+    .desc = Desenho com diagrama de carga sísmica. Pode ser inserido no autolat.
+ent-BlueprintDoubleEmergencyTank = desenho de um cilindro duplo de emergência
+    .desc = Desenho com diagrama de cilindro duplo de emergência. Pode ser inserido no autolat.
+ent-BlueprintFlare = desenho de flare
+    .desc = Desenho com diagrama de um sinalizador. Pode ser inserido no autolat.

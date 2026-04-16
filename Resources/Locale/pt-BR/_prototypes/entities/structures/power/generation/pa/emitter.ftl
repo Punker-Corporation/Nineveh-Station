@@ -1,0 +1,15 @@
+ent-ParticleAcceleratorEmitterPort = emissor de contenção HF esquerdo
+    .desc = Lança partículas Alfa, não fique na frente delas.
+ent-ParticleAcceleratorEmitterFore = emissor central de contenção UC
+    .desc = Lança partículas Alfa, não fique na frente delas.
+ent-ParticleAcceleratorEmitterStarboard = emissor de retenção direito UC
+    .desc = Lança partículas Alfa, não fique na frente delas.
+ent-ParticleAcceleratorEmitterPortUnfinished = emissor de contenção HF esquerdo
+    .desc = Lança partículas Alfa, não fique na frente delas. Parece inacabado.
+    .suffix = Inacabado, Esquerda
+ent-ParticleAcceleratorEmitterForeUnfinished = emissor central de contenção UC
+    .desc = Lança partículas Alfa, não fique na frente delas. Parece inacabado.
+    .suffix = Inacabado, Central
+ent-ParticleAcceleratorEmitterStarboardUnfinished = emissor de retenção direito UC
+    .desc = Lança partículas Alfa, não fique na frente delas. Parece inacabado.
+    .suffix = Inacabado, certo

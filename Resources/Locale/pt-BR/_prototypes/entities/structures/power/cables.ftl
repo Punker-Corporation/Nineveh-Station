@@ -1,0 +1,17 @@
+ent-CableBase = { "" }
+    .desc = { "" }
+ent-CableHV = Cabo BB
+    .desc = Cabo laranja de alta tensão.
+ent-CableHVUncuttable = { ent-CableHV }
+    .suffix = sem cortes
+    .desc = { ent-CableHV.desc }
+ent-CableMV = Cabo CB
+    .desc = Cabo de média tensão.
+ent-CableMVUncuttable = { ent-CableMV }
+    .suffix = sem cortes
+    .desc = { ent-CableMV.desc }
+ent-CableApcExtension = Cabo NV
+    .desc = Um cabo usado para conectar dispositivos à pintura.
+ent-CableApcExtensionUncuttable = { ent-CableApcExtension }
+    .suffix = sem cortes
+    .desc = { ent-CableApcExtension.desc }

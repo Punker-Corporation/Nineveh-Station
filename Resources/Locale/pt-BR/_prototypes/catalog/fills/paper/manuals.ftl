@@ -1,0 +1,9 @@
+ent-PaperWrittenAMEScribbles = { ent-PaperWritten }
+    .suffix = notas sobre AME
+    .desc = { ent-PaperWritten.desc }
+ent-HoloparasiteInfo = Termos de uso do holoparasita
+    .desc = A pequena tela surround para visualização de documentos faz você se perguntar se o departamento jurídico da Cybersun tem um orçamento muito grande.
+ent-PaperAgrichemManual = manual da Fundação “AgriChem é divertido”
+    .desc = Uma folha de instruções que foi incluída.
+ent-PaperWrittenCombatBakeryKit = Instruções para o conjunto de panificação de combate
+    .desc = Coma a nota depois de lê-la.

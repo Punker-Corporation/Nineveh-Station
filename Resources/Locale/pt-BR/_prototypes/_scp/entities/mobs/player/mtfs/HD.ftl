@@ -1,0 +1,15 @@
+ent-RandomHumanoidSpawnerHDLeader = { ghost-role-information-mtf-leader-HD-name }
+    .suffix = FTM | Nu-7
+    .desc = { ghost-role-information-mtf-leader-description }
+ent-RandomHumanoidSpawnerHDSpecialist = { ghost-role-information-mtf-specialist-HD-name }
+    .suffix = FTM | Nu-7
+    .desc = { ghost-role-information-mtf-specialist-description }
+ent-RandomHumanoidSpawnerHDCadet = { ghost-role-information-mtf-cadet-HD-name }
+    .suffix = FTM | Nu-7
+    .desc = { ghost-role-information-mtf-cadet-description }
+ent-SpawnerMTFSquadHD = { spawner-squad-name } FTM Nu-7
+    .desc = Gerador de esquadrão MTF
+    .suffix = Nu-7
+ent-SpawnerMTFSquadHDSpawnOnTrigger = { ent-SpawnerMTFSquadHD }
+    .desc = { ent-SpawnerMTFSquadHD.desc }
+    .suffix = { ent-SpawnerMTFSquadHD.suffix }, { spawner-on-trigger-suffix }

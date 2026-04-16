@@ -1,0 +1,10 @@
+ent-CultTileSpawnEffect = Faísca
+    .desc = { "" }
+ent-CultTeleportInEffect = Teletransporte: Aparência
+    .desc = { "" }
+ent-CultTeleportOutEffect = Teletransporte: Desaparecer
+    .desc = { "" }
+ent-CultWallGlow = Brilho da parede
+    .desc = { "" }
+ent-CultAirlockGlow = Brilho do portal
+    .desc = { "" }

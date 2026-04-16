@@ -1,0 +1,11 @@
+boris-installed = Atividade neural detectada.
+boris-off = Nenhuma atividade neural foi detectada.
+boris-still-searching = O processo de decodificação neural sintética está em andamento...
+boris-searching = O processo de decodificação neural sintética começa...
+boris-role-name = cérebro de robô
+boris-role-description = Sirva a equipe complexa.
+boris-wipe-device-verb-text = Apague o cérebro
+boris-wiped-device = A atividade neural foi interrompida.
+boris-stop-searching-verb-text = Pare de pesquisar
+boris-stopped-searching = A descodificação neural parou.
+boris-slot-component-slot-name-brain = Cérebro

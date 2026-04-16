@@ -1,0 +1,10 @@
+server-info-rules-button = Regras
+server-info-guidebook-button = Gerenciamento
+server-info-discord-button = Discórdia
+server-info-website-button = Site
+server-info-wiki-button = Vicky
+server-info-forum-button = Fórum
+server-info-telegram-button = Telegrama
+server-info-report-button = Reportar um bug
+server-info-credits-button = Autores
+server-info-github-button = GitHub

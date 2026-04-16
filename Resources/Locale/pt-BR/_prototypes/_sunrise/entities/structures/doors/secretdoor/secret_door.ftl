@@ -1,0 +1,9 @@
+ent-BaseReinforcedSecretDoor = muro fortificado
+    .desc = Mantém o ar dentro e os assistentes fora.
+    .suffix = Porta secreta
+ent-ReinforcedSecretDoorAssembly = moldura de porta secreta reforçada
+    .desc = Ainda não abre nem fecha. Mas isso definitivamente pode esmagar você.
+ent-ReinforcedSecretDoor = muro fortificado
+    .desc = { ent-BaseSecretDoor.desc }
+ent-BaseReinforcedSecretDoorAssembly = moldura de porta secreta reforçada
+    .desc = Ele abre, fecha e pode esmagar você.

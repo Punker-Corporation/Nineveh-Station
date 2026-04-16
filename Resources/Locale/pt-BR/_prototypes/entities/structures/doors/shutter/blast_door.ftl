@@ -1,0 +1,14 @@
+ent-BlastDoor = porta blindada
+    .desc = Existe uma etiqueta "PERIGO DE EXPLOSÃO".
+ent-BlastDoorOpen = { ent-BlastDoor }
+    .suffix = Abrir
+    .desc = { ent-BlastDoor.desc }
+ent-BlastDoorFrame = moldura de porta blindada
+    .desc = { ent-BlastDoor.desc }
+ent-BlastDoorXeno = porta de explosão xenomorfo
+    .desc = Não perca um membro!
+ent-BlastDoorXenoOpen = { ent-BlastDoorXeno }
+    .suffix = Abrir
+    .desc = { ent-BlastDoorXeno.desc }
+ent-BlastDoorXenoFrame = moldura da porta de explosão xenomorfo
+    .desc = Diz "EXPLOSIVO".

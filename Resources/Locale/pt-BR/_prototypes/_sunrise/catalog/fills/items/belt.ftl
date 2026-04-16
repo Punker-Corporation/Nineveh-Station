@@ -1,0 +1,11 @@
+ent-ClothingBeltSheathSyndicateFilled = { ent-ClothingBeltSheathSyndicate }
+    .suffix = Preenchido
+    .desc = { ent-ClothingBeltSheathSyndicate.desc }
+ent-BeltSheathSyndieFilledBox = Espada Embrulhada do Sindicato
+    .desc = Invólucro.
+ent-ClothingBeltMilitaryWebbingMedSunriseFilled = { ent-ClothingBeltMilitaryWebbingMedSunrise }
+    .suffix = Preenchido
+    .desc = { ent-ClothingBeltMilitaryWebbingMedSunrise.desc }
+ent-ClothingAbductorBeltFilled = { ent-ClothingAbductorBelt }
+    .suffix = Preenchido
+    .desc = { ent-ClothingAbductorBelt.desc }

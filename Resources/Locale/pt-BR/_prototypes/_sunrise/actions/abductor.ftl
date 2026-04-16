@@ -1,0 +1,12 @@
+ent-ActionExitConsole = Saindo do console
+    .desc = Saia do console.
+ent-ActionSendYourself = Teleporte-se
+    .desc = Teleporte-se.
+ent-ActionGizmoMark = Bandeira
+    .desc = Use o dispositivo de bolso para marcar o agente.
+ent-ActionSendAgent = Envie um agente
+    .desc = Teleporte o agente da plataforma de teletransporte.
+ent-AbductorVestToggleStealth = Alternar invisibilidade
+    .desc = Ativa/desativa a invisibilidade do traje. Não se esqueça de definir o modo furtivo!
+ent-ActionReturnToShip = Retornar
+    .desc = Retorne ao navio.

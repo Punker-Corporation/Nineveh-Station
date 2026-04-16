@@ -1,0 +1,10 @@
+ent-ClothingMaskBandOrange = bandana laranja
+    .desc = Bandana laranja para ficar legal.
+ent-ClothingMaskBandYellow = bandana amarela
+    .desc = Bandana amarela para ficar legal.
+ent-ClothingMaskBandCyan = bandana azul
+    .desc = Bandana azul para ficar legal.
+ent-ClothingMaskBandWhite = bandana branca
+    .desc = Bandana branca para ficar legal.
+ent-ClothingMaskBandPurple = bandana roxa
+    .desc = Bandana roxa para ficar legal.

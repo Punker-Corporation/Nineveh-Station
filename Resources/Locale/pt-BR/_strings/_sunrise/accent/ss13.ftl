@@ -1,0 +1,12 @@
+accent-ss13-words-1 = nº
+accent-ss13-words-replace-1 = DR
+accent-ss13-words-2 = guardas
+accent-ss13-words-replace-2 = SM
+accent-ss13-words-3 = GP
+accent-ss13-words-replace-3 = Saltar
+accent-ss13-words-4 = GSB
+accent-ss13-words-replace-4 = HoS
+accent-ss13-words-5 = si
+accent-ss13-words-replace-5 = SE
+accent-ss13-words-6 = tanque de combustível
+accent-ss13-words-replace-6 = tanque de combustível

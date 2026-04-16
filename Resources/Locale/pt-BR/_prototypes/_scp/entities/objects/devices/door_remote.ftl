@@ -1,0 +1,10 @@
+ent-DoorRemoteAdministration = controle remoto de airlocks da administração
+    .desc = { ent-DoorRemoteCommand.desc }
+ent-DoorRemoteScientificService = { ent-DoorRemoteResearch }
+    .desc = { ent-DoorRemoteResearch.desc }
+ent-DoorRemoteScpChambers = controle remoto das celas de contenção SCP
+    .desc = { ent-DoorRemoteResearch.desc }
+ent-DoorRemoteLogistics = controle remoto de airlocks da logística
+    .desc = { ent-DoorRemoteCargo.desc }
+ent-DoorRemoteClassD = controle remoto de airlocks da Classe D
+    .desc = { ent-DoorRemoteSecurity.desc }

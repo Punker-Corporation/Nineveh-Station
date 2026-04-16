@@ -1,0 +1,11 @@
+cmd-rmobjective-desc = Remove o alvo da mente do jogador.
+cmd-rmobjective-help = rmobjetivo <username> <index>
+cmd-rmobjective-invalid-args = São esperados exatamente 2 argumentos.
+cmd-rmobjective-player-not-found = Não foi possível encontrar os dados do jogador.
+cmd-rmobjective-mind-not-found = Não foi possível encontrar a mente.
+cmd-rmobjective-success = Alvo excluído com sucesso!
+cmd-rmobjective-failed = Falha ao excluir o destino. Talvez o índice esteja fora do intervalo? Confira lsobjetivos!
+cmd-rmobjective-invalid-index = Falha ao analisar o índice { $index } como um número inteiro.
+cmd-rmobjective-invalid-objective-info = VAZIO
+cmd-rmobjective-player-completion = <Player>
+cmd-rmobjective-index-completion = <Index>

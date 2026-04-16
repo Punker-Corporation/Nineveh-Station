@@ -14,5 +14,3 @@ ent-SewingPrinterPrisonMachineCircuitboard = тюремный швейный п�
     .desc = Изрезана следами пайки с закисшими контактами и следами перегораний, изредка мерцают тусклые диоды.
 ent-PirateTechFabCircuitboard = плата пиратского фабрикатора
     .desc = { ent-BaseMachineCircuitboard.desc }
-ent-SlopDispenserMachineCircuitboard = плата раздатчика питательной пасты
-    .desc = Машинная печатная плата для раздатчика питательной пасты.

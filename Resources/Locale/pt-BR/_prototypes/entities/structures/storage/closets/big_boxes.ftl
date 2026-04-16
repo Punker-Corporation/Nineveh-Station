@@ -1,0 +1,9 @@
+ent-BaseBigBox = caixa
+    .desc = UM? Apenas uma caixa...
+ent-StealthBox = { ent-BaseBigBox }
+    .desc = Te deixou esperando, hein?
+    .suffix = Invisibilidade
+ent-BigBox = { ent-BaseBigBox }
+    .desc = { ent-BaseBigBox.desc }
+ent-GhostBox = caixa fantasma
+    .desc = Cuidado!

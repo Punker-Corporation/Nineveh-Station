@@ -1,0 +1,14 @@
+ent-BaseArrow = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-ArrowRegular = seta
+    .desc = Você sente o poder da estepe dentro de você.
+ent-ArrowImprovised = flecha de caco de vidro
+    .desc = Projétil favorito de camisas cinzentas.
+ent-ArrowImprovisedPlasma = flecha de fragmento de vidro de plasma
+    .desc = Projétil favorito de camisas cinzentas. Agora com maior letalidade!
+ent-ArrowImprovisedUranium = trinado de caco de vidro de urânio
+    .desc = Projétil favorito de camisas cinzentas. Agora com radiação adicional!
+ent-ArrowImprovisedCarp = flecha de dente de carpa
+    .desc = A favorita da flecha de salvamento. Mate os inimigos com os dentes de suas famílias.
+ent-ArrowCard = flecha de papelão
+    .desc = Isso não vai te matar, não importa o quanto você tente.

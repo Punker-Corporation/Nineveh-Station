@@ -1,0 +1,15 @@
+construction-category-all = Todos
+construction-category-furniture = Mobília
+construction-category-storage = Armazenar
+construction-category-tools = Ferramentas
+construction-category-materials = Materiais
+construction-category-structures = Estruturas
+construction-category-machines = Equipamento
+construction-category-weapons = Arma
+construction-category-tiles = Azulejos
+construction-category-utilities = Utilitários
+construction-category-misc = Variado
+construction-category-clothing = Pano
+construction-category-favorites = Favoritos
+construction-add-favorite-button = Adicionar aos favoritos
+construction-remove-from-favorite-button = Remover dos favoritos

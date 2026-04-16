@@ -1,6 +1,6 @@
 - type: entity
   name: lanterna de instabilidade quântica
-  parent: FlashlightLantern
+  parent: BaseItem
   id: QuantumInstabilityFlashlight
   description: Um dispositivo de iluminação experimental. A luz parece viva e perturbada.
   components:

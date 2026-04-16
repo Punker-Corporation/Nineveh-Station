@@ -1,0 +1,10 @@
+ent-SpawnMobMedibot = gerador de medibot
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobCleanBot = gerador de limpeza
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobFireBot = robô desovador
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobSupplyBot = robô de carga gerador
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobHonkBot = gerador de buzina
+    .desc = { ent-MarkerBase.desc }

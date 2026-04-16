@@ -1,0 +1,9 @@
+ent-CrateCommandNTGygaxBundle = Conjunto NanoTrasen "Gygax"
+    .desc = Contém um conjunto de mech NanoTrasen levemente blindado.
+    .suffix = Preenchido
+ent-CrateCommandMarauderBundle = Conjunto NanoTrasen "Marauder"
+    .desc = Contém um conjunto de mech NanoTrasen fortemente blindado.
+    .suffix = Preenchido
+ent-CrateCommandSeraphBundle = Conjunto NanoTrasen "Serafim"
+    .desc = Contém um conjunto de mech NanoTrasen de elite fortemente blindado.
+    .suffix = Preenchido

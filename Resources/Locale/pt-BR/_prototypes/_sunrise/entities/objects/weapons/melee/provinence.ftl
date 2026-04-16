@@ -1,0 +1,13 @@
+ent-WeaponMeleeMoltenAmputator = Foice Derretida
+    .desc = Como ainda não congelou? Requer 2 mãos para usar
+ent-WeaponArcMoltenAmputator = { ent-WeaponArcStatic }
+    .desc = { ent-WeaponArcStatic.desc }
+ent-WeaponProjectileMoltenAmputator = { ent-BaseBullet }
+    .desc = { ent-BaseBullet.desc }
+ent-WeaponMeleeMoltenCollider = Colisor fundido
+    .desc = Como ele ainda não congelou?
+ent-WeaponArcMeleeMoltenCollider = { ent-WeaponArcStatic }
+    .desc = { ent-WeaponArcStatic.desc }
+ent-WeaponMeleeMoltenColliderDEBUG = { ent-WeaponMeleeMoltenCollider }
+    .suffix = DEPURAR
+    .desc = { ent-WeaponMeleeMoltenCollider.desc }
