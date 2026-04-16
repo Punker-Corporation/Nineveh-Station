@@ -1,0 +1,17 @@
+spooky-speaker-generic-1 = ...uuuuuuu...
+spooky-speaker-generic-2 = ...alguém pode me ouvir...?
+spooky-speaker-generic-3 = ...Junte-se a nós...
+spooky-speaker-generic-4 = ... brinque conosco...
+spooky-speaker-generic-5 = KkkhkhhkKhhkhkhkKk
+spooky-speaker-generic-6 = Khhggkkghkk
+spooky-speaker-generic-7 = khkhkkkKkhkkHk
+spooky-speaker-generic-8 = ...
+spooky-speaker-generic-9 = ...h-h-olá...?
+spooky-speaker-generic-10 = Bzzzt
+spooky-speaker-generic-11 = Wekh
+spooky-speaker-generic-12 = TREMILATE, MORTAL!
+spooky-speaker-generic-13 = 4444444444
+spooky-speaker-generic-14 = ...Eu encontrei você...
+spooky-speaker-recycler-1 = ESTOU COM FOME
+spooky-speaker-recycler-2 = MAIS! DÊ-ME MAIS!
+spooky-speaker-recycler-3 = ALIMENTE-ME

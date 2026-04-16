@@ -1,0 +1,11 @@
+cmd-tippy-desc = Envie uma mensagem em nome de Tippy the Clown.
+cmd-tippy-help = Uso: tippy <user | all> <message> [entity prototype] [speak time] [slide time] [waddle interval]
+cmd-tippy-auto-1 = <user | all>
+cmd-tippy-auto-2 = texto
+cmd-tippy-auto-3 = protótipo de entidade
+cmd-tippy-auto-4 = tempo da mensagem, em segundos
+cmd-tippy-auto-5 = tempo de animação, em segundos
+cmd-tippy-auto-6 = intervalo de salto, em segundos
+cmd-tippy-error-no-user = Usuário não encontrado.
+cmd-tippy-error-no-prototype = Protótipo não encontrado: { $proto }
+cmd-tip-desc = Gera tabuleiro de jogo aleatório.

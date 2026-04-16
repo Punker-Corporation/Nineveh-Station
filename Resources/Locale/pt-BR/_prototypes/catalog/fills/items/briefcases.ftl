@@ -1,0 +1,12 @@
+ent-BriefcaseBrownFilled = mala marrom
+    .suffix = Preenchido, Papel
+    .desc = { ent-BriefcaseBrown.desc }
+ent-BriefcaseSyndieSniperBundleFilled = mala marrom
+    .suffix = Cheio, de Cristo
+    .desc = { ent-BriefcaseSyndie.desc }
+ent-BriefcaseSyndieLobbyingBundleFilled = mala marrom
+    .suffix = Sindicato, Empréstimos
+    .desc = { ent-BriefcaseSyndie.desc }
+ent-BriefcaseThiefBribingBundleFilled = mala marrom
+    .suffix = Ladrão, Empréstimos
+    .desc = { ent-BriefcaseSyndie.desc }

@@ -61,4 +61,4 @@ ent-RubberStampPsychologist = печать психолога
     .suffix = НЕ МАППИТЬ
 ent-RubberStampWizard = печать мага
     .desc = Хаотичный волшебный штамп для оформления нехаотичной документации, какая ирония.
-wizard-stamp = Маг
+Wizard = Маг

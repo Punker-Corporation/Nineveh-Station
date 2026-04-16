@@ -1,0 +1,12 @@
+ent-WeaponSniperDragunov = Dragunov
+    .desc = Conhecido por sua precisão, o rifle de precisão semiautomático foi projetado inteiramente para tiros de longo alcance. Usa munição de rifle 7,62x54R.
+ent-WeaponRifleBR64 = BR-64
+    .desc = O San Cristo Arms BR-64 é o principal rifle de batalha do Corpo de Fuzileiros Navais. É conhecido por sua capacidade consistente de bom desempenho na maioria das distâncias e seu poder de parada a curta distância. É usado principalmente por pessoas que preferem um formato redondo maior do que o normal. Carrega munição .45 magnum.
+ent-WeaponRifleBauer127 = Rifle de ferrolho Bauer SR-127
+    .desc = Bauer SR-127 - Rifle de precisão portátil de grande calibre. Dispara poderosos projéteis antimateriais perfurantes de armadura de 15 mm.
+ent-WeaponSniperGarand = M1 Garand
+    .desc = O Carlford-1 é um clássico convertido da Carl Ford Armouries, adaptado às condições modernas. As diferenças mais notáveis ​​são pequenas modificações nos trilhos, além disso.
+ent-WeaponSniperRepeater = Alavanca H2524
+    .desc = Uma espingarda civil de ação de alavanca, preferida pelos cowboys espaciais por sua confiabilidade e poderoso poder de ataque. Usa munição .45 magnum.
+ent-WeaponSniperMosinLubed = Kardashev-Mosin
+    .desc = A relíquia do rifle Kardashev-Mosin passou por centenas de guerras, mas ainda é mortal. Fresco, simplesmente não enlatado, generosamente untado com óleo - pronto para uma nova guerra! Usa munição calibre .30.

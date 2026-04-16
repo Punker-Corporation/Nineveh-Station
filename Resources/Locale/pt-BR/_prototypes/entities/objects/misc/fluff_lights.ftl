@@ -1,0 +1,14 @@
+ent-BaseLamp = lanterna
+    .desc = { ent-BaseItem.desc }
+ent-Lamp = lâmpada
+    .desc = Dispositivo emissor de luz.
+ent-LampBanana = lâmpada de banana
+    .desc = Dispositivo emissor de luz em forma de banana.
+ent-LampGold = luminária de mesa
+    .desc = Um dispositivo emissor de luz que ficará ótimo em sua mesa.
+ent-LampInterrogator = lâmpada interrogadora
+    .desc = Lâmpada super brilhante para um policial mau.
+ent-Floodlight = destaque
+    .desc = Um pilar com lanternas poderosas instaladas nele.
+ent-FloodlightBroken = holofote quebrado
+    .desc = Um pilar com lanternas poderosas instaladas nele. Está quebrado.

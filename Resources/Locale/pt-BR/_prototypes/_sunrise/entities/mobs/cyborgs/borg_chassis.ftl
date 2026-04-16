@@ -1,0 +1,16 @@
+ent-BorgChassisSecurity = { ent-PlayerBorgSecurityBattery }
+    .desc = { ent-PlayerBorgSecurityBattery.desc }
+ent-BorgChassisPeace = { ent-PlayerBorgPeaceBattery }
+    .desc = { ent-PlayerBorgPeaceBattery.desc }
+ent-BorgChassisClown = { ent-PlayerBorgClownBattery }
+    .desc = { ent-PlayerBorgClownBattery.desc }
+ent-BorgChassisSyndicateReaper = { ent-PlayerBorgSyndicateReaperBattery }
+    .desc = { ent-PlayerBorgSyndicateReaperBattery.desc }
+ent-BorgChassisERT = combate ciborgue MTF
+    .desc = Um robô de combate da Fundação SCP projetado para apoiar MTFs na realização de missões de combate particularmente complexas.
+ent-BorgChassisSyndicateHeavy = ciborgue de combate pesado do Sindicato
+    .desc = Uma versão atualizada do ciborgue de combate do Sindicato, equipado com armas pesadas e um corpo forte.
+ent-BorgChassisSyndicateSpider = sabotador ciborgue do Sindicato
+    .desc = O pequeno robô Syndicate, projetado para o Esquadrão de Sabotagem, está equipado com tudo o que é necessário para grandes sabotagens.
+ent-BorgChassisSecurityCombat = { ent-PlayerBorgSecurityCombatBattery }
+    .desc = { ent-PlayerBorgSecurityCombatBattery.desc }

@@ -1,0 +1,14 @@
+marking-effect-type-color = Sem efeito
+marking-effect-color-color-base = Cor
+marking-effect-type-gradient = Gradiente
+marking-effect-gradient-color-base = Começar
+marking-effect-gradient-color-gradient = Fim
+marking-effect-gradient-parameter-offset = Posição
+marking-effect-gradient-parameter-size = Tamanho
+marking-effect-gradient-parameter-rotation = Vez
+marking-effect-gradient-parameter-pixelation = Pixelização
+marking-effect-gradient-parameter-mirror = Efeito de reflexão
+marking-effect-type-roughgradient = Gradiente irregular
+marking-effect-roughgradient-color-base = Começar
+marking-effect-roughgradient-color-gradient = Fim
+marking-effect-roughgradient-parameter-horizontal = Horizontal

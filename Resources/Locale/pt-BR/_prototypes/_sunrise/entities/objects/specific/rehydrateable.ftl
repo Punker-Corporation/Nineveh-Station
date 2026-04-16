@@ -1,0 +1,12 @@
+ent-WildSlimeCube = cubo de limo
+    .desc = Basta adicionar água!
+ent-PigCube = cubo de porco
+    .desc = Basta adicionar água!
+ent-ChikenCube = cubo de frango
+    .desc = Basta adicionar água!
+ent-InferiorVulpkaninCube = Cubo Vulcano Inferior
+    .desc = Basta adicionar água!
+ent-FelinidCube = cubo de felinida
+    .desc = Basta adicionar água!
+ent-PirateMonkeyCube = cubo de macaco encharcado de rum
+    .desc = Basta adicionar água!

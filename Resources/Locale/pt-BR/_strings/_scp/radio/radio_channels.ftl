@@ -1,0 +1,14 @@
+chat-radio-regional-administration = Gestão regional
+chat-radio-administration = Gerenciamento
+chat-radio-ethics-committee = Comitê de Ética
+chat-radio-internal-security = Segurança Interna
+chat-radio-internal-tribunal-service = Tribunal
+chat-radio-heavy-containment-security-service = Forças Especiais
+chat-radio-external-administrative-zone-security-service = Forças-tarefa Móvel
+chat-radio-scientific-service = Departamento de Pesquisa
+chat-radio-medical-service = Médico
+chat-radio-engineering-technical-service = Engenharia
+chat-radio-logistics-service = Logística
+chat-radio-food-and-sanitation-service = Serviço
+chat-radio-chaos = CHAOS
+chat-radio-gru = GRU-P

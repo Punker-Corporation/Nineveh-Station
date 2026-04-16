@@ -1,0 +1,9 @@
+ent-RandomCableHVSpawner = gerador de cabo de alta tensão
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }
+ent-RandomCableMVSpawner = gerador de cabo de média tensão
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }
+ent-RandomCableApcExtensionSpawner = gerador de cabo de baixa tensão
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }

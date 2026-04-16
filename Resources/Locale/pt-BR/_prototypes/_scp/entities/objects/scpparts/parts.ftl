@@ -1,0 +1,16 @@
+ent-BaseScpMaterial = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-BaseScpResearchMaterial = { ent-BaseScpMaterial }
+    .desc = { ent-BaseScpMaterial.desc }
+ent-Scp999Jelly = pedaço de muco anormal
+    .desc = Um coágulo de líquido pegajoso que vibra calorosamente em suas mãos.
+ent-Scp173Shard = fragmento de pedra
+    .desc = Pequeno fragmento de pedra de cor laranja claro
+ent-Scp173PaintChips = pedaços de tinta
+    .desc = Várias lascas de tinta arrancadas por um objeto áspero
+ent-Scp173PaintBall = bola pintada
+    .desc = Vários pedaços de tinta grudados formando uma bola. Por que eu fiz isso?
+ent-Scp096PhotoDeveloped = foto estranha
+    .desc = Uma pequena fotografia em formato 4:3. Suas bordas parecem enrugadas, parece que alguém o carregou antes... Você tenta decifrar a imagem...
+ent-Scp096Photo = foto estranha
+    .desc = Uma pequena fotografia cujo conteúdo é quase indistinguível.

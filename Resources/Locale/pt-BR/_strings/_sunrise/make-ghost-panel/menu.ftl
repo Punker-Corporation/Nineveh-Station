@@ -1,0 +1,15 @@
+make-ghost-role-menu-name = Faça o papel de um fantasma
+make-ghost-role-menu-entity = UID de destino
+make-ghost-role-menu-role-name = Nome
+make-ghost-role-menu-role-description = Descrição
+make-ghost-role-menu-role-rules = Regras
+make-ghost-role-menu-make-sentient = Torná-lo razoável?
+make-ghost-role-menu-raffle-enabled = Usar a loteria?
+make-ghost-role-menu-raffle-duration-initial = Duração base (seg)
+make-ghost-role-menu-raffle-duration-extend = Aumentar ao adicionar um jogador em (seg)
+make-ghost-role-menu-raffle-duration-max = Duração máxima (seg)
+make-ghost-role-menu-done = Preparar
+make-ghost-role-menu-duration-initial-error = A duração base não deve exceder o máximo
+make-ghost-role-menu-raffle-disabled = Sem loteria
+make-ghost-role-menu-raffle-custom = Suas configurações
+make-ghost-role-menu-raffle-custom-new = { $ID } (base { $initial } seg, máximo { $max } seg, cada novo aumenta em { $extends } seg)

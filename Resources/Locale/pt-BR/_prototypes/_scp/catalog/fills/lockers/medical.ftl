@@ -1,0 +1,9 @@
+ent-ScpLockerMedicalServiceFilledMedicine = { ent-ScpLockerMedicalService }
+    .suffix = Preenchido, Medicina
+    .desc = { ent-ScpLockerMedicalService.desc }
+ent-ScpLockerMedicalSpecialistFilled = { ent-ScpLockerMedicalSpecialist }
+    .suffix = Concluído, Médico Especialista
+    .desc = { ent-ScpLockerMedicalSpecialist.desc }
+ent-ScpLockerLaboratoryFilled = { ent-ScpLockerLaboratory }
+    .suffix = Preenchido
+    .desc = { ent-ScpLockerLaboratory.desc }

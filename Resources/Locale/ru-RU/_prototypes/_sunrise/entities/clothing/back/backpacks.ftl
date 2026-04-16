@@ -32,5 +32,3 @@ ent-ClothingBackpackWhite = белый рюкзак
     .desc = Это просто рюкзак, но он прекрасен.
 ent-ClothingBackpackYellow = желтый рюкзак
     .desc = Это просто рюкзак, но он прекрасен.
-ent-ClothingBackpackRandomColorSpawner = рюкзак (случайный цвет)
-    .desc = Рюкзак случайного цвета.

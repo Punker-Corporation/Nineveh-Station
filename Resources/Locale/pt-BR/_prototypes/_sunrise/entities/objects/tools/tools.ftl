@@ -1,0 +1,11 @@
+ent-RCDAdvancedSunrise = DCS avançado
+    .desc = Bluespace é um RCS aprimorado que regenera cargas passivamente.
+    .suffix = Engenheiro Sênior, Carregamento Automático
+ent-WirecutterAbductor = cortadores abdutores
+    .desc = { ent-BaseItem.desc }
+ent-ScrewdriverAbductor = chave de fenda abdutora
+    .desc = { ent-BaseItem.desc }
+ent-WrenchAbductor = chave abdutora
+    .desc = { ent-Wrench.desc }
+ent-MultitoolAbductor = multiferramenta abdutora
+    .desc = { ent-Multitool.desc }

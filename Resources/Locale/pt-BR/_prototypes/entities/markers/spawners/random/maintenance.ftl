@@ -1,0 +1,15 @@
+ent-MaintenanceFluffSpawner = gerador de itens variados da manutenção
+    .suffix = Diversos+Roupas
+    .desc = { ent-MarkerBase.desc }
+ent-MaintenanceToolSpawner = gerador de ferramentas da manutenção
+    .suffix = Ferramentas+Baterias+Materiais
+    .desc = { ent-MarkerBase.desc }
+ent-MaintenanceWeaponSpawner = gerador de armas da manutenção
+    .suffix = Lixo + Armas
+    .desc = { ent-MarkerBase.desc }
+ent-MaintenancePlantSpawner = gerador de plantas da manutenção
+    .suffix = Plantas
+    .desc = { ent-MarkerBase.desc }
+ent-MaintenanceInsulsSpawner = gerador de luvas isolantes da manutenção
+    .suffix = Luvas isolantes, seguras
+    .desc = { ent-MarkerBase.desc }

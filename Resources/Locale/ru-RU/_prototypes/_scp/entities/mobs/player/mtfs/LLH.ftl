@@ -10,3 +10,6 @@ ent-SpawnerMTFSquadLLH = { spawner-squad-name } МОГ Омега-1
 ent-SpawnerMTFSquadLLHSpawnOnTrigger = { ent-SpawnerMTFSquadLLH }
     .desc = { ent-SpawnerMTFSquadLLH.desc }
     .suffix = { ent-SpawnerMTFSquadLLH.suffix }, { spawner-on-trigger-suffix }
+ent-RandomHumanoidSpawnerLLHCadet = { ghost-role-information-mtf-cadet-LLH-name }
+    .suffix = МОГ | Омега-1
+    .desc = { ghost-role-information-mtf-cadet-description }

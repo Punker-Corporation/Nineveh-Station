@@ -1,0 +1,10 @@
+ent-CrateVendingMachineRestockSeedsScpClassDFilled = caixa de reabastecimento { ent-VendingMachineSeedsDClass } classe D
+    .desc = Contém um kit de recarga para máquina de venda automática { ent-VendingMachineSeedsDClass }.
+ent-CrateVendingMachineRestockNutriMaxScpClassDFilled = caixa de reabastecimento { ent-VendingMachineNutriDClass } classe D
+    .desc = Contém um kit de recarga para máquina de venda automática { ent-VendingMachineNutriDClass }.
+ent-CrateVendingMachineRestockChefvendScpClassDFilled = caixa de reabastecimento { ent-VendingMachineChefvendDClass } classe D
+    .desc = Contém um kit de recarga para máquina de venda automática { ent-VendingMachineChefvendDClass }.
+ent-CrateVendingMachineRestockDinnerwareScpClassDFilled = caixa de reabastecimento { ent-VendingMachineDinnerwareDClass } classe D
+    .desc = Contém um kit de recarga para máquina de venda automática { ent-VendingMachineDinnerwareDClass }.
+ent-CrateVendingMachineRestockBoozeScpClassDFilled = caixa de reabastecimento { ent-VendingMachineBoozeDClass } classe D
+    .desc = Contém um kit de recarga para máquina de venda automática { ent-VendingMachineBoozeDClass }.

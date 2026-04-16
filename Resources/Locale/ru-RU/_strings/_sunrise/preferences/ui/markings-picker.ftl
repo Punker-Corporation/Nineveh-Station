@@ -5,6 +5,4 @@ humanoid-marking-modifier-enable = Включить
 humanoid-marking-modifier-prototype-id = ID прототипа:
 
 markings-category-SnoutCover = Морда (покрытие)
-markings-category-Dreadlocks = Дреды
-markings-category-Rings = Кольца
 

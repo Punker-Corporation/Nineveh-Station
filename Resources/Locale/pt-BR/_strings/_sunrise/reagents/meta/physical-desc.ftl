@@ -1,0 +1,12 @@
+reagent-physical-desc-nutricryokomp = soja e um pouco efervescente
+reagent-physical-desc-aphrodisiac = Um líquido vermelho rubi cintilante que brilha suavemente na luz.
+reagent-physical-desc-honkpower = tremendo
+reagent-physical-desc-strong-smell = Cheiro forte
+reagent-physical-desc-grcoffee = Líquido marrom, ligeiramente espesso.
+reagent-physical-desc-abductor = sequestrado
+reagent-physical-desc-h-32 = cheirando fortemente a queimaduras radioativas
+reagent-physical-desc-antidon = limpar
+reagent-physical-desc-brutedon = cura
+reagent-physical-desc-celliminol = fortemente perfumado
+reagent-physical-desc-blessing = bênção de Baco
+reagent-physical-desc-pulverizedlantern = lanterna esmagada

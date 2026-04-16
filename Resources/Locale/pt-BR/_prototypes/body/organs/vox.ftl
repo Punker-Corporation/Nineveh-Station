@@ -1,0 +1,17 @@
+ent-OrganVoxLungs = { ent-OrganHumanLungs }
+    .suffix = voz
+    .desc = { ent-OrganHumanLungs.desc }
+ent-OrganVoxStomach = estômago
+    .desc = Estômago com odor de amônia.
+ent-OrganVoxLiver = fígado
+    .desc = Cheira a combustível.
+ent-OrganVoxHeart = coração
+    .desc = O estranho coração da vox.
+ent-OrganVoxKidneys = broto
+    .desc = Cheira a combustível.
+ent-OrganVoxEyes = olhos
+    .desc = Um par de olhos vox.
+ent-OrganVoxTongueA = linguagem
+    .desc = Um músculo carnudo usado principalmente para gritar.
+ent-OrganVoxTongueB = linguagem
+    .desc = Um músculo carnudo usado principalmente para gritar.

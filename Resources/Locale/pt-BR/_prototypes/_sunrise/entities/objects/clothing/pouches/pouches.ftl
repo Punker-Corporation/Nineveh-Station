@@ -1,0 +1,15 @@
+ent-Pouch = { ent-BaseClothingBeltSounds }
+    .desc = { ent-BaseClothingBeltSounds.desc }
+ent-PouchExplosive = bolsa para granadas
+    .desc = Um contêiner confiável para armazenar e transportar granadas e explosivos. Possui uma caixa à prova de explosão que evita a detonação da corrente se danificada.
+ent-PouchExplosiveFilled = bolsa para granadas
+    .suffix = Cheio de granadas
+    .desc = { ent-PouchExplosive.desc }
+ent-PouchAmmo = bolsa de revista
+    .desc = Projetado para armazenar diversos carregadores e caixas de munições.
+ent-PouchAmmoFilledSMG = bolsa de revista
+    .suffix = PP preenchido
+    .desc = { ent-PouchAmmo.desc }
+ent-PouchAmmoFilledPistol40 = bolsa de revista
+    .suffix = Pistola .40 cheia
+    .desc = { ent-PouchAmmo.desc }

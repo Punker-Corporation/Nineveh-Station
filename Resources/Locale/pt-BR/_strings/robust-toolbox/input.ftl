@@ -1,0 +1,15 @@
+input-key-NumpadNum0 = Teclado numérico 0
+input-key-NumpadNum1 = Teclado numérico 1
+input-key-NumpadNum2 = Teclado numérico 2
+input-key-NumpadNum3 = Teclado numérico 3
+input-key-NumpadNum4 = Teclado numérico 4
+input-key-NumpadNum5 = Teclado numérico 5
+input-key-NumpadNum6 = Teclado numérico 6
+input-key-NumpadNum7 = Teclado numérico 7
+input-key-NumpadNum8 = Teclado numérico 8
+input-key-NumpadNum9 = Teclado numérico 9
+input-key-NumpadAdd = Teclado numérico +
+input-key-NumpadSubtract = Teclado numérico -
+input-key-NumpadDivide = Teclado numérico /
+input-key-NumpadMultiply = Teclado numérico*
+input-key-NumpadDecimal = Teclado numérico.

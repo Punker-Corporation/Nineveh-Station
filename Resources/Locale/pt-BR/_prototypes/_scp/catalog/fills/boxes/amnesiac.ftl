@@ -1,0 +1,16 @@
+ent-BoxVialScpBase = { ent-BoxCardboard }
+    .desc = { ent-BoxCardboard.desc }
+ent-BoxVialScpBaseSecure = { ent-BoxVialScpBase }
+    .desc = { ent-BoxVialScpBase.desc }
+ent-BoxVialAmnesiacA = caixa de tubos amnésticos classe A
+    .desc = Contém 3 tubos de ensaio. { reagent-amnesiac-a-desc }
+    .suffix = Cheio, Amnésico A
+ent-BoxVialAmnesiacB = Caixa de tubos amnésticos classe B
+    .desc = Contém 3 tubos de ensaio. { reagent-amnesiac-b-desc }
+    .suffix = Cheio, Amnésico B
+ent-BoxVialAmnesiacC = Caixa de tubos amnésticos Classe C
+    .desc = Contém 3 tubos de ensaio. { reagent-amnesiac-c-desc }
+    .suffix = Cheio, Amnésico C
+ent-BoxVialAmnesiacD = caixa de tubos amnésticos Classe D
+    .desc = Contém 3 tubos de ensaio. { reagent-amnesiac-d-desc }
+    .suffix = Cheio, Amnésico D

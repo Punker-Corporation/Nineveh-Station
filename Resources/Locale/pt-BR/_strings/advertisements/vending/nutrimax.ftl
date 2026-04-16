@@ -1,0 +1,9 @@
+advertisement-nutrimax-1 = Amamos plantas!
+advertisement-nutrimax-2 = Talvez você mesmo possa aceitar isso?
+advertisement-nutrimax-3 = Os botões mais verdes do mundo.
+advertisement-nutrimax-4 = Amamos plantas grandes.
+advertisement-nutrimax-5 = Solo macio...
+advertisement-nutrimax-6 = Agora com baldes!
+advertisement-nutrimax-7 = Quanto maior a planta, melhor!
+thankyou-nutrimax-1 = É hora de plantar!
+thankyou-nutrimax-2 = Enterre-se no chão!

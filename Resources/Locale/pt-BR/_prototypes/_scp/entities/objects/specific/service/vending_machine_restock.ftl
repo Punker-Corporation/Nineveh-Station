@@ -1,0 +1,10 @@
+ent-VendingMachineRestockSeedsScpClassD = { ent-VendingMachineSeedsDClass } Kit de reposição classe D
+    .desc = O rótulo diz que essas sementes foram usadas e transmitidas pelos nossos antepassados. Envie-os para { ent-VendingMachineSeedsDClass }!
+ent-VendingMachineRestockNutriMaxScpClassD = { ent-VendingMachineNutriDClass } Kit de reposição classe D
+    .desc = Com nossos fertilizantes suas mãos douradas ficarão verdes! É hora de colher os benefícios! Carregue { ent-VendingMachineNutriDClass } na máquina.
+ent-VendingMachineRestockChefvendScpClassD = { ent-VendingMachineChefvendDClass } Kit de reposição classe D
+    .desc = Reabastece { ent-VendingMachineChefvendDClass }. O principal é cuidar dos ovos.
+ent-VendingMachineRestockDinnerwareScpClassD = { ent-VendingMachineDinnerwareDClass } Kit de reposição classe D
+    .desc = Está sempre quente nesta cozinha! Coloque { ent-VendingMachineDinnerwareDClass } no slot de recarga para começar.
+ent-VendingMachineRestockBoozeScpClassD = { ent-VendingMachineBoozeDClass } Kit de reposição classe D
+    .desc = Coloque em { ent-VendingMachineBoozeDClass } para dar água a quem tem sede! Não está à venda para funcionários.

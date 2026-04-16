@@ -1,0 +1,9 @@
+ent-MobScp106Monster = Sombreie algo
+    .desc = Um acúmulo de medo em ódio veio de uma fenda gigante para preencher esta dimensão.
+    .suffix = Monstro SCP-106
+ent-Scp106Portal = Fenda da Realidade
+    .desc = O horror inimaginável do outro lado abala até a possível ideia da existência de si mesmo dentro dele.
+    .suffix = Portal SCP-106
+ent-MobScp106BigMonster = Coisa de sombra gigante
+    .desc = { ent-MobScp106Monster.desc }
+    .suffix = { ent-MobScp106Monster.suffix }

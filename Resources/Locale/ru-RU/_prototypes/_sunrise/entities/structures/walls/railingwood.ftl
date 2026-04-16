@@ -1,4 +1,4 @@
-ent-BaseRailingWood = деревянные перила
+ent-BaseRailingWood = деревянное ограждение
     .desc = Простое деревянное ограждение, предназначенное для защиты таких идиотов, как ты, от падения. В нем есть немного стиля.
 ent-RailingWood = { ent-BaseRailingWood }
     .desc = { ent-BaseRailingWood.desc }

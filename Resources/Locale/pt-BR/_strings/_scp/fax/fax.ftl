@@ -1,0 +1,11 @@
+fax-name-regional-administration = Gestão regional
+fax-name-o4-headquarters = Sede da O4
+fax-name-complex-director-office = Gabinete do Diretor do Sítio
+fax-name-encrypted = SST&B*?*%!
+fax-name-chief-researcher-office = Gabinete do Pesquisador Chefe
+fax-name-security-commander-office = Gabinete do Segurança Chefe
+fax-name-chief-engineer-office = Escritório do Engenheiro Chefe
+fax-name-personnel-manager-office = Escritório do Gerente de RH
+fax-name-chief-medical-officer-office = Gabinete do Médico Chefe
+fax-name-quartermaster-office = Escritório do Intendente de Logística
+fax-name-ethics-committee-office = Escritório do Comitê de Ética
