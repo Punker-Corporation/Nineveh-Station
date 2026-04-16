@@ -1,8 +1,7 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
-using Content.Server.Radio;
 using Content.Server.Radio.EntitySystems;
 using Content.Shared._Scp.Other.Radio;
 using Content.Shared.Chat;
@@ -24,7 +23,7 @@ namespace Content.Server._Scp.Other.Radio;
 public sealed class ScpRadioSystem : SharedScpRadioSystem
 {
     [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly EntitySystems.RadioSystem _radio = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
