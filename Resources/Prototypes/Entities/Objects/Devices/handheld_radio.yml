@@ -101,9 +101,47 @@
       enum.HandheldRadioUiKey.Key:
         type: HandheldRadioBoundUserInterface
   - type: CorruptedRadio
-    corruptionChance: 0.6
-    spoofChance: 0.3
-    deadAirChance: 0.15
+    corruptionChance: 0.7
+    spoofChance: 0.25
+    deadAirChance: 0.18
     whisperChance: 0.08
+    silenceChance: 0.05
+    infrasoundChance: 0.03
+    semanticSatiationThreshold: 2
+    jamaisVuChance: 0.10
+    corruptionIntensity: 0.35
+    corruptionReplacements: "!@#$%&*_?."
+    whisperMessages:
+    - "...v...ocê..."
+    - "...me...ou...ve..."
+    - "...atrás..."
+    - "...não..."
+    - "...s...o...z...i...n...h...o..."
+    - "...cuidado..."
+    - "...f...r...i...o..."
+    - "...peso..."
+    - "...v...a...z...i...o..."
+    - "...eles..."
+    - "...es...tá...tica..."
+    - "...por quê?..."
+    - "...silên...cio..."
+    - "...olhos..."
+    - "...mentira..."
+    - "...voz..."
+    - "...nunca..."
+    - "...morte..."
+    - "...a...ju...da..."
+    - "...sem...pre..."
+    spoofNames:
+    - "???"
+    - "Desconhecido"
+    - "Sinal Fraco"
+    - "Estática"
+    - "Ninguém"
+    - "000-0000"
+    - "Vazio"
+    - "..."
+    - "Erro"
+    - "Desconexão"
   - type: StaticPrice
     price: 25
