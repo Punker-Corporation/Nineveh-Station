@@ -1,88 +1,43 @@
+using Content.Server.Radio.Components;
 using Content.Shared.Radio;
-using Robust.Server.GameObjects;
-using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.Radio;
+namespace Content.Server.Radio.EntitySystems;
 
 public sealed partial class RadioSystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
-    private TimeSpan _nextWhisperTime = TimeSpan.Zero;
+    private TimeSpan _nextWhisperGlobal = TimeSpan.Zero;
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        if (_timing.CurTime < _nextWhisperTime)
+        if (_timing.CurTime < _nextWhisperGlobal)
             return;
 
-        _nextWhisperTime = _timing.CurTime + TimeSpan.FromSeconds(_random.Next(60, 180));
+        _nextWhisperGlobal = _timing.CurTime + TimeSpan.FromSeconds(_random.Next(45, 120));
 
-        foreach (var (radio, corrupted) in EntityManager.EntityQuery<RadioMicrophoneComponent, CorruptedRadioComponent>())
+        var query = EntityQueryEnumerator<CorruptedRadioComponent, RadioSpeakerComponent, ActiveRadioComponent>();
+        while (query.MoveNext(out var uid, out var corruption, out var speaker, out _))
         {
-            if (!corrupted.WhisperMessages.Any())
+            if (!_random.Prob(corruption.WhisperChance))
                 continue;
 
-            if (!_random.Prob(corrupted.WhisperChance))
+            if (!speaker.Enabled)
                 continue;
 
-            var message = _random.Pick(corrupted.WhisperMessages);
-            var senderName = _random.Pick(corrupted.SpoofNames);
+            var message = _random.Pick(corruption.WhisperMessages);
+            var spoofName = _random.Pick(corruption.SpoofNames);
 
-            var ev = new RadioReceiveEvent(
-                message,
-                senderName,
-                radio.BroadcastChannel,
-                EntityUid.Invalid);
+            var channel = speaker.Channels.FirstOrDefault();
+            if (channel == default)
+                continue;
 
-            RaiseLocalEvent(radio.Owner, ref ev);
+            SendRadioMessage(uid, message, channel, uid, escapeMarkup: false);
         }
-    }
-
-    private void OnSendRadioMessage(EntityUid uid, RadioMicrophoneComponent radio, ref RadioSendEvent args)
-    {
-        if (!TryComp<CorruptedRadioComponent>(uid, out var corruption))
-            return;
-
-        if (_random.Prob(corruption.DeadAirChance))
-        {
-            args.Message = "[estática intensa]";
-            return;
-        }
-
-        if (_random.Prob(corruption.SpoofChance))
-        {
-            args.SenderName = _random.Pick(corruption.SpoofNames);
-        }
-
-        if (_random.Prob(corruption.CorruptionChance))
-        {
-            args.Message = CorruptMessage(args.Message);
-        }
-    }
-
-    private string CorruptMessage(string input)
-    {
-        if (string.IsNullOrEmpty(input))
-            return input;
-
-        var chars = input.ToCharArray();
-        for (int i = 0; i < chars.Length; i++)
-        {
-            if (_random.Prob(0.25f))
-            {
-                chars[i] = _random.Pick("!@#$%&*_?. ");
-            }
-            else if (_random.Prob(0.05f))
-            {
-                chars[i] = char.ToUpperInvariant(chars[i]);
-            }
-        }
-        return new string(chars);
     }
 }
