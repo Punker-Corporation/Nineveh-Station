@@ -12,7 +12,7 @@
     gloves: ClothingHandsGlovesFingerless
     shoes: ClothingShoesBootsJack
     id: PassengerPDA
-    ears: ClothingHeadsetGrey
+    pocket2: HandheldRadio
   storage:
     back:
     - BoxSurvival
@@ -26,7 +26,6 @@
     shoes: ClothingShoesBootsCombat
     gloves: ClothingHandsGlovesColorBlack
     id: SyndiPDA
-    ears: ClothingHeadsetAltSyndicate
 
 # Syndicate Footsoldier Gear - No Headset
 - type: startingGear
@@ -82,7 +81,6 @@
     head: ClothingHeadHelmetSwat
     mask: ClothingMaskGasSwat
     outerClothing: ClothingOuterArmorBulletproofHeavy # Sunrise-Edit
-    ears: ClothingHeadsetSecurity
     gloves: ClothingHandsGlovesCombat
   inhand:
    - WeaponSubMachineGunWt550 # Sunrise-Edit
@@ -101,14 +99,12 @@
   id: MobMonkeyGear
   equipment:
     head: ClothingHeadHatTophat
-    ears: ClothingHeadsetService
     jumpsuit: ClothingUniformJumpsuitJacketMonkey
     id: PunPunIDCard
 
 - type: startingGear
   id: MobPollyGear
-  equipment:
-    ears: ClothingHeadsetEngineering
+  equipment: {}
 
 # Emotional Support Scurret
 
@@ -124,8 +120,8 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorWhite
     shoes: ClothingShoesBootsJack
-    ears: ClothingHeadsetGrey
     gloves: ClothingHandsGlovesFingerless
+    pocket2: HandheldRadio
   inhand:
     - WeaponMeleeToolboxRobust
 
