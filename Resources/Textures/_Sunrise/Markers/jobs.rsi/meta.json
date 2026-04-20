@@ -8,61 +8,73 @@
   },
   "states": [
     {
-        "name": "jobicon"
+      "name": "jobicon"
     },
     {
-        "name": "green"
+      "name": "green"
     },
     {
-        "name": "adjutant"
-    },
-	{
-	    "name": "magistrat"
-	},
-    {
-        "name": "ntrep"
+      "name": "adjutant"
     },
     {
-        "name": "blueshield"
+      "name": "magistrat"
     },
     {
-        "name": "ntrleader"
+      "name": "mailcarrier"
     },
     {
-        "name": "ntrguard"
+      "name": "ntrep"
     },
     {
-        "name": "barber"
+      "name": "blueshield"
     },
     {
-        "name": "blueshieldoperative"
+      "name": "ntrleader"
     },
     {
-        "name": "headofprison"
+      "name": "ntrguard"
     },
     {
-        "name": "prisoninspector"
+      "name": "barber"
     },
     {
-        "name": "prisonworker"
+      "name": "commaid"
     },
     {
-        "name": "prisonengineer"
+      "name": "blueshieldoperative"
     },
     {
-        "name": "prisonscientist"
+      "name": "headofprison"
     },
     {
-        "name": "prisondoctor"
+      "name": "prisoninspector"
     },
     {
-        "name": "prisonchef"
+      "name": "prisonworker"
     },
     {
-        "name": "prisontrainee"
+      "name": "prisonengineer"
     },
     {
-        "name": "planetprisoner"
+      "name": "prisonscientist"
+    },
+    {
+      "name": "prisondoctor"
+    },
+    {
+      "name": "prisonchef"
+    },
+    {
+      "name": "prisontrainee"
+    },
+    {
+      "name": "planetprisoner"
+    },
+    {
+      "name": "roboticist"
+    },
+    {
+      "name": "security_pilot"
     }
   ]
 }

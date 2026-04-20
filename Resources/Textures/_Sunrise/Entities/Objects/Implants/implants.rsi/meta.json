@@ -8,7 +8,25 @@
   },
   "states": [
     {
+      "name": "inject_implant_blue"
+    },
+    {
+      "name": "inject_implant_purple"
+    },
+    {
+      "name": "inject_implant_red"
+    },
+    {
+      "name": "inject_implant_redblue"
+    },
+    {
       "name": "reviver_implant"
+    },
+    {
+      "name": "inject_implant_white"
+    },
+    {
+      "name": "inject_implant_yellow"
     }
   ]
 }

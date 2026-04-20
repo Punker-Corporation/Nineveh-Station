@@ -185,6 +185,10 @@
       "directions": 4
     },
     {
+      "name": "dollhouse-unshaded",
+      "directions": 4
+    },
+    {
       "name": "dollhouse-open",
       "delays": [
         [

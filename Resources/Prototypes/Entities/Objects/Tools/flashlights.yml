@@ -5,18 +5,18 @@
   description: Um dispositivo de iluminação experimental. A luz parece viva e perturbada.
   components:
   - type: Sprite
-    sprite: _Nineveh/Objects/Tools/quantum_flashlight.rsi
+    sprite: Objects/Tools/flashlight.rsi
     layers:
-    - state: flashlight_body
-    - state: flashlight_light
+    - state: flashlight
+    - state: flashlight-overlay
       shader: unshaded
       visible: false
       map: [ "light" ]
   - type: Item
-    sprite: _Nineveh/Objects/Tools/quantum_flashlight.rsi
+    sprite: Objects/Tools/flashlight.rsi
     storedRotation: -90
   - type: Clothing
-    sprite: _Nineveh/Objects/Tools/quantum_flashlight.rsi
+    sprite: Objects/Tools/flashlight.rsi
     quickEquip: false
     slots:
     - Belt
@@ -44,14 +44,6 @@
     wattage: 1.2
   - type: LightBehaviour
     behaviours:
-    - !type:FadeBehaviour
-      id: chromatic_degradation
-      property: Color
-      maxDuration: 45.0
-      startValue: "#E0C090"
-      endValue: "#4A6A8A"
-      isLooped: false
-      interpolate: Linear
     - !type:FadeBehaviour
       id: intensity_wobble
       property: Energy
@@ -87,7 +79,7 @@
       endValue: 2.0
       isLooped: true
       reverseWhenFinished: true
-      interpolate: Sine
+      interpolate: Cubic
   - type: ToggleableVisuals
     spriteLayer: light
     inhandVisuals:

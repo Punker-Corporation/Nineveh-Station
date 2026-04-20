@@ -1,0 +1,10 @@
+- type: entity
+  id: NinevehRolling
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 2
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+  - type: NinevehRollingGameRule
+    pairTable: NinevehRollingAntagPairs

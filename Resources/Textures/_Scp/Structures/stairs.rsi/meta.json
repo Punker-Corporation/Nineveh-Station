@@ -18,6 +18,12 @@
         },
         {
             "name": "stairs_stage_steel"
+        },
+        {
+            "name": "stairs_wood"
+        },
+        {
+            "name": "stairs_stage_wood"
         }
     ]
 }

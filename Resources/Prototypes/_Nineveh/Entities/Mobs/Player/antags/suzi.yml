@@ -1,0 +1,46 @@
+- type: startingGear
+  id: NinevehSuziGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackSyndicate
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSyndicate
+    pocket1: WeaponPistolViper
+
+- type: startingGear
+  id: NinevehContainmentHeavyGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    outerClothing: ClothingOuterArmorBasic
+    back: ClothingBackpackSecurity
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsGlovesCombat
+    head: ClothingHeadHelmetBasic
+    pocket1: WeaponShotgunEnforcer
+
+- type: entity
+  id: MobHumanSuzi
+  parent: BaseMobHuman
+  name: Suzi
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ NinevehSuziGear ]
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+- type: entity
+  id: MobHumanContainmentHeavy
+  parent: BaseMobHuman
+  name: containment heavy
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ NinevehContainmentHeavyGear ]
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen

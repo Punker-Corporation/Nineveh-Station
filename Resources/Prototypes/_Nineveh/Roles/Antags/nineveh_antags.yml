@@ -1,0 +1,15 @@
+- type: antag
+  id: NinevehSuzi
+  name: nineveh-antag-suzi-name
+  antagonist: true
+  setPreference: true
+  objective: nineveh-antag-suzi-objective
+  playTimeTracker: AntagNinevehSuzi
+
+- type: antag
+  id: NinevehContainmentHeavy
+  name: nineveh-antag-containment-heavy-name
+  antagonist: true
+  setPreference: true
+  objective: nineveh-antag-containment-heavy-objective
+  playTimeTracker: AntagNinevehContainmentHeavy

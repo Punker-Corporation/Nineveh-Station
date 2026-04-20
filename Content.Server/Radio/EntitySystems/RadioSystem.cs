@@ -1,19 +1,23 @@
-using System.Reflection;
+using Content.Server.Chat.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Radio;
-using HarmonyLib;
+using Content.Shared.Radio.Components;
+using Content.Shared.Speech.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Radio.EntitySystems;
 
-public sealed partial class RadioSystem
+public sealed partial class RadioSystem : EntitySystem
 {
+    [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
@@ -23,28 +27,98 @@ public sealed partial class RadioSystem
     private readonly Dictionary<string, int> _recentWordCounts = new();
     private TimeSpan _lastWordCleanup = TimeSpan.Zero;
 
-    public void InitializeCorruption()
+    public override void Initialize()
     {
-        var harmony = new Harmony("com.nineveh.radiocorruption");
-        var original = typeof(RadioSystem).GetMethod("SendRadioMessage",
-            new[] { typeof(EntityUid), typeof(string), typeof(RadioChannelPrototype), typeof(EntityUid), typeof(bool) });
-
-        var prefix = typeof(RadioSystem).GetMethod(nameof(SendRadioMessagePrefix), BindingFlags.NonPublic | BindingFlags.Instance);
-        harmony.Patch(original, new HarmonyMethod(prefix));
+        base.Initialize();
     }
 
-    private static bool SendRadioMessagePrefix(
+    public void SendRadioMessage(
         EntityUid messageSource,
-        ref string message,
+        string message,
         RadioChannelPrototype channel,
         EntityUid radioSource,
-        bool escapeMarkup,
-        RadioSystem __instance)
+        bool escapeMarkup = true)
     {
-        if (!__instance.TryComp<CorruptedRadioComponent>(radioSource, out var corruption))
+        var sendAttempt = new RadioSendAttemptEvent(channel, radioSource);
+        RaiseLocalEvent(ref sendAttempt);
+        if (sendAttempt.Cancelled)
+            return;
+
+        if (!TryApplyCorruption(messageSource, ref message, radioSource))
+            return;
+
+        var speech = _chat.GetSpeechVerb(messageSource, message);
+        var nameEv = new TransformSpeakerNameEvent(messageSource, Name(messageSource));
+        RaiseLocalEvent(messageSource, nameEv);
+
+        var speakerName = nameEv.VoiceName;
+        if (nameEv.SpeechVerb != null && _prototypeManager.Resolve(nameEv.SpeechVerb, out var overrideVerb))
+            speech = overrideVerb;
+
+        var wrappedMessage = Loc.GetString(
+            speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+            ("color", channel.Color),
+            ("fontType", speech.FontId),
+            ("fontSize", speech.FontSize),
+            ("verb", Loc.GetString(_robustRandom.Pick(speech.SpeechVerbStrings))),
+            ("channel", $"[{channel.LocalizedName}]"),
+            ("name", FormattedMessage.EscapeText(speakerName)),
+            ("message", escapeMarkup ? FormattedMessage.EscapeText(message) : message));
+
+        var chatMessage = new ChatMessage(
+            ChatChannel.Radio,
+            message,
+            wrappedMessage,
+            GetNetEntity(messageSource),
+            null);
+
+        var netMessage = new MsgChatMessage { Message = chatMessage };
+        var receivers = new List<EntityUid>();
+
+        var sourceMap = Transform(radioSource).MapUid;
+        var query = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var activeRadio, out var xform))
+        {
+            var canReceiveChannel = activeRadio.ReceiveAllChannels || activeRadio.Channels.Contains(channel.ID);
+            if (!canReceiveChannel)
+                continue;
+
+            var crossMapAllowed = activeRadio.GlobalReceive || channel.LongRange;
+            if (!crossMapAllowed && (sourceMap == null || xform.MapUid != sourceMap))
+                continue;
+
+            var receiveAttempt = new RadioReceiveAttemptEvent(channel, radioSource, uid);
+            RaiseLocalEvent(ref receiveAttempt);
+            if (receiveAttempt.Cancelled)
+                continue;
+
+            var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, netMessage, receivers);
+            RaiseLocalEvent(uid, ref ev);
+        }
+
+        RaiseLocalEvent(new RadioSpokeEvent(messageSource, message, receivers.ToArray()));
+    }
+
+    public void SendRadioMessage(
+        EntityUid messageSource,
+        string message,
+        ProtoId<RadioChannelPrototype> channelId,
+        EntityUid radioSource,
+        bool escapeMarkup = true)
+    {
+        SendRadioMessage(messageSource, message, _prototypeManager.Index(channelId), radioSource, escapeMarkup);
+    }
+
+    private bool TryApplyCorruption(
+        EntityUid messageSource,
+        ref string message,
+        EntityUid radioSource,
+        CorruptedRadioComponent? corruption = null)
+    {
+        if (!Resolve(radioSource, ref corruption, false))
             return true;
 
-        var random = __instance._robustRandom;
+        var random = _robustRandom;
 
         if (random.Prob(corruption.SilenceChance))
             return false;
@@ -57,26 +131,24 @@ public sealed partial class RadioSystem
 
         if (random.Prob(corruption.SpoofChance))
         {
-            var spoofedName = random.Pick(corruption.SpoofNames);
-            var nameEv = new TransformSpeakerNameEvent(messageSource, spoofedName);
-            __instance.RaiseLocalEvent(messageSource, nameEv);
+            _ = random.Pick(corruption.SpoofNames);
         }
 
         if (random.Prob(corruption.CorruptionChance))
         {
-            message = __instance.ApplyCorruptionFilter(message, corruption);
+            message = ApplyCorruptionFilter(message, corruption);
         }
 
         if (random.Prob(corruption.JamaisVuChance))
         {
-            message = __instance.ApplyJamaisVu(message, corruption);
+            message = ApplyJamaisVu(message, corruption);
         }
 
-        __instance.ProcessSemanticSatiation(message, corruption);
+        ProcessSemanticSatiation(message, corruption);
 
         if (random.Prob(corruption.InfrasoundChance))
         {
-            __instance.TriggerInfrasound(radioSource);
+            TriggerInfrasound(radioSource);
         }
 
         return true;
@@ -146,8 +218,7 @@ public sealed partial class RadioSystem
 
     private void TriggerInfrasound(EntityUid source)
     {
-        var filter = Filter.Pvs(source);
-        _audio.PlayStatic("/Audio/Effects/infrasound_rumble.ogg", filter, source, false);
+        _audio.PlayPvs("/Audio/Effects/infrasound_rumble.ogg", source);
     }
 
     public override void Update(float frameTime)

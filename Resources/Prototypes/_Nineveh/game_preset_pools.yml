@@ -1,0 +1,4 @@
+- type: gamePresetPool
+  id: NinevehPresetPool
+  presets:
+    NinevehSurvival: [0, 200]

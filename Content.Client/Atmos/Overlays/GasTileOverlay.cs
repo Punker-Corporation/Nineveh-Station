@@ -120,6 +120,10 @@ namespace Content.Client.Atmos.Overlays
             for (var i = 0; i < _gasCount; i++)
             {
                 var delays = _frameDelays[i];
+                var frames = _frames[i];
+                if (delays == null || frames == null || frames.Length == 0)
+                    continue;
+
                 if (delays.Length == 0)
                     continue;
 
@@ -131,7 +135,7 @@ namespace Content.Client.Atmos.Overlays
                     continue;
 
                 _timer[i] -= time;
-                _frameCounter[i] = (frameCount + 1) % _frames[i].Length;
+                _frameCounter[i] = (frameCount + 1) % frames.Length;
             }
 
             for (var i = 0; i < FireStates; i++)
@@ -228,9 +232,13 @@ namespace Content.Client.Atmos.Overlays
 
                             for (var i = 0; i < state.gasCount; i++)
                             {
+                                var frames = state.frames[i];
+                                if (frames == null || frames.Length == 0 || gas.Opacity.Length <= i)
+                                    continue;
+
                                 var opacity = gas.Opacity[i];
                                 if (opacity > 0)
-                                    state.drawHandle.DrawTexture(state.frames[i][state.frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
+                                    state.drawHandle.DrawTexture(frames[state.frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
                             }
                         }
                     }
@@ -290,6 +298,9 @@ namespace Content.Client.Atmos.Overlays
 
                     for (var i = 0; i < atmos.OverlayData.Opacity.Length; i++)
                     {
+                        if (i >= _frames.Length || _frames[i] == null || _frames[i].Length == 0)
+                            continue;
+
                         var opacity = atmos.OverlayData.Opacity[i];
 
                         if (opacity > 0)

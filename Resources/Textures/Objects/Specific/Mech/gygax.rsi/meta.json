@@ -211,6 +211,10 @@
       "directions": 4
     },
     {
+      "name": "molot-unshaded",
+      "directions": 4
+    },
+    {
       "name": "molot-broken",
       "directions": 4
     },

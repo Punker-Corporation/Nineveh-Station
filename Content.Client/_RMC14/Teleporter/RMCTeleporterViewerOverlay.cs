@@ -6,6 +6,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Containers;
+using Robust.Shared.Enums;
 
 namespace Content.Client._RMC14.Teleporter;
 
@@ -14,6 +15,8 @@ public sealed class RMCTeleporterViewerOverlay : Overlay
     [Dependency] private readonly IEntityManager _entity = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IOverlayManager _overlay = default!;
+
+    public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
     private readonly SharedContainerSystem _container;
     private readonly EntityLookupSystem _entityLookup;

@@ -1,0 +1,14 @@
+- type: gamePreset
+  id: NinevehSurvival
+  alias:
+  - nineveh
+  - ninevehsurvival
+  - ninevehrolling
+  - rolling
+  name: nineveh-survival-title
+  description: nineveh-survival-description
+  showInVote: false
+  hide: false
+  rules:
+  - NinevehRolling
+  - NinevehRoundTimer

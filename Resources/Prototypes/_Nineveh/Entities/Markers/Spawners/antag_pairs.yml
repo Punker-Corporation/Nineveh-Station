@@ -1,0 +1,53 @@
+- type: entity
+  id: SpawnPointNinevehSuzi
+  parent: SpawnPointJobBase
+  name: nineveh suzi spawn point
+  components:
+  - type: SpawnPoint
+    spawn_type: Job
+    job_id: null
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointNinevehContainmentHeavy
+  parent: SpawnPointJobBase
+  name: nineveh containment heavy spawn point
+  components:
+  - type: SpawnPoint
+    spawn_type: Job
+    job_id: null
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_cadet
+
+- type: entity
+  id: SpawnerPairSuzi
+  parent: MarkerBase
+  name: Nineveh pair spawner
+  components:
+  - type: NinevehAntagPairSpawner
+    pairId: PairSuzi
+    primaryMob: MobHumanSuzi
+    secondaryMob: MobHumanContainmentHeavy
+    primaryMarker: SpawnPointNinevehSuzi
+    secondaryMarker: SpawnPointNinevehContainmentHeavy
+    primaryFallbackJob: Passenger
+    secondaryFallbackJob: SecurityCadet
+    primaryDefinition:
+      prefRoles: [ NinevehSuzi ]
+      fallbackRoles: [ NinevehSuzi ]
+      mindRoles:
+      - MindRoleNinevehSuzi
+      briefing:
+        text: nineveh-role-briefing-suzi
+    secondaryDefinition:
+      prefRoles: [ NinevehContainmentHeavy ]
+      fallbackRoles: [ NinevehContainmentHeavy ]
+      mindRoles:
+      - MindRoleNinevehContainmentHeavy
+      briefing:
+        text: nineveh-role-briefing-containment-heavy

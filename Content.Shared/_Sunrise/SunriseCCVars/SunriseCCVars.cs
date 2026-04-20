@@ -307,7 +307,7 @@ public sealed partial class SunriseCCVars : CVars
         CVarDef.Create("game.reset_preset_after_restart", false);
 
     public static readonly CVarDef<string> GamePresetPool = // Fire edit
-        CVarDef.Create("game.preset_pool", "ScpPresetPool", CVar.SERVERONLY);
+        CVarDef.Create("game.preset_pool", "NinevehPresetPool", CVar.SERVERONLY);
 
     /*
      * Ban links.

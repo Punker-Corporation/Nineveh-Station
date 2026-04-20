@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleNinevehSuzi
+  name: Nineveh Suzi Role
+  components:
+  - type: MindRole
+    antagPrototype: NinevehSuzi
+    roleType: TeamAntagonist
+    exclusiveAntag: true
+    subtype: role-subtype-nineveh-suzi
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleNinevehContainmentHeavy
+  name: Nineveh Containment Heavy Role
+  components:
+  - type: MindRole
+    antagPrototype: NinevehContainmentHeavy
+    roleType: TeamAntagonist
+    exclusiveAntag: true
+    subtype: role-subtype-nineveh-containment-heavy

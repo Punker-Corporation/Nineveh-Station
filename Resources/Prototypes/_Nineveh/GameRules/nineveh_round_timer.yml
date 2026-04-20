@@ -1,0 +1,6 @@
+- type: entity
+  id: NinevehRoundTimer
+  parent: BaseGameRule
+  components:
+  - type: NinevehRoundTimerRule
+    roundDuration: 10800

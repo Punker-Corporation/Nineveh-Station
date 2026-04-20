@@ -1,4 +1,12 @@
 - type: radioChannel
+  id: Common
+  name: chat-radio-common
+  keycode: ';'
+  frequency: 1459
+  color: "#5b97bc"
+  longRange: true
+
+- type: radioChannel
   id: Channel1
   name: "Canal 1"
   keycode: "1"
@@ -81,7 +89,7 @@
 - type: radioChannel
   id: Channel11
   name: "Canal 11"
-  keycode: null
+  keycode: "a"
   frequency: 111
   color: "#888888"
   longRange: true
@@ -89,7 +97,7 @@
 - type: radioChannel
   id: Channel12
   name: "Canal 12"
-  keycode: null
+  keycode: "b"
   frequency: 112
   color: "#888888"
   longRange: true
@@ -97,7 +105,7 @@
 - type: radioChannel
   id: Channel13
   name: "Canal 13"
-  keycode: null
+  keycode: "c"
   frequency: 113
   color: "#888888"
   longRange: true
@@ -105,7 +113,7 @@
 - type: radioChannel
   id: Channel14
   name: "Canal 14"
-  keycode: null
+  keycode: "d"
   frequency: 114
   color: "#888888"
   longRange: true
@@ -113,7 +121,7 @@
 - type: radioChannel
   id: Channel15
   name: "Canal 15"
-  keycode: null
+  keycode: "e"
   frequency: 115
   color: "#888888"
   longRange: true
@@ -121,7 +129,7 @@
 - type: radioChannel
   id: Channel16
   name: "Canal 16"
-  keycode: null
+  keycode: "f"
   frequency: 116
   color: "#888888"
   longRange: true
@@ -129,7 +137,7 @@
 - type: radioChannel
   id: Channel17
   name: "Canal 17"
-  keycode: null
+  keycode: "g"
   frequency: 117
   color: "#888888"
   longRange: true
@@ -137,7 +145,7 @@
 - type: radioChannel
   id: Channel18
   name: "Canal 18"
-  keycode: null
+  keycode: "h"
   frequency: 118
   color: "#888888"
   longRange: true
@@ -145,7 +153,7 @@
 - type: radioChannel
   id: Channel19
   name: "Canal 19"
-  keycode: null
+  keycode: "i"
   frequency: 119
   color: "#888888"
   longRange: true
@@ -153,7 +161,7 @@
 - type: radioChannel
   id: Channel20
   name: "Canal 20"
-  keycode: null
+  keycode: "j"
   frequency: 120
   color: "#888888"
   longRange: true
@@ -161,7 +169,7 @@
 - type: radioChannel
   id: Channel21
   name: "Canal 21"
-  keycode: null
+  keycode: "k"
   frequency: 121
   color: "#888888"
   longRange: true
@@ -169,7 +177,7 @@
 - type: radioChannel
   id: Channel22
   name: "Canal 22"
-  keycode: null
+  keycode: "l"
   frequency: 122
   color: "#888888"
   longRange: true
@@ -177,7 +185,7 @@
 - type: radioChannel
   id: Channel23
   name: "Canal 23"
-  keycode: null
+  keycode: "m"
   frequency: 123
   color: "#888888"
   longRange: true
@@ -185,7 +193,7 @@
 - type: radioChannel
   id: Channel24
   name: "Canal 24"
-  keycode: null
+  keycode: "n"
   frequency: 124
   color: "#888888"
   longRange: true
@@ -193,7 +201,7 @@
 - type: radioChannel
   id: Channel25
   name: "Canal 25"
-  keycode: null
+  keycode: "o"
   frequency: 125
   color: "#888888"
   longRange: true
@@ -201,7 +209,7 @@
 - type: radioChannel
   id: Channel26
   name: "Canal 26"
-  keycode: null
+  keycode: "p"
   frequency: 126
   color: "#888888"
   longRange: true
@@ -209,7 +217,7 @@
 - type: radioChannel
   id: Channel27
   name: "Canal 27"
-  keycode: null
+  keycode: "q"
   frequency: 127
   color: "#888888"
   longRange: true
@@ -217,7 +225,7 @@
 - type: radioChannel
   id: Channel28
   name: "Canal 28"
-  keycode: null
+  keycode: "r"
   frequency: 128
   color: "#888888"
   longRange: true
@@ -225,7 +233,7 @@
 - type: radioChannel
   id: Channel29
   name: "Canal 29"
-  keycode: null
+  keycode: "s"
   frequency: 129
   color: "#888888"
   longRange: true
@@ -233,7 +241,7 @@
 - type: radioChannel
   id: Channel30
   name: "Canal 30"
-  keycode: null
+  keycode: "t"
   frequency: 130
   color: "#888888"
   longRange: true
@@ -241,7 +249,7 @@
 - type: radioChannel
   id: Channel31
   name: "Canal 31"
-  keycode: null
+  keycode: "u"
   frequency: 131
   color: "#888888"
   longRange: true
@@ -249,7 +257,7 @@
 - type: radioChannel
   id: Channel32
   name: "Canal 32"
-  keycode: null
+  keycode: "v"
   frequency: 132
   color: "#888888"
   longRange: true
@@ -257,7 +265,7 @@
 - type: radioChannel
   id: Channel33
   name: "Canal 33"
-  keycode: null
+  keycode: "w"
   frequency: 133
   color: "#888888"
   longRange: true
@@ -265,7 +273,7 @@
 - type: radioChannel
   id: Channel34
   name: "Canal 34"
-  keycode: null
+  keycode: "x"
   frequency: 134
   color: "#888888"
   longRange: true
@@ -273,7 +281,7 @@
 - type: radioChannel
   id: Channel35
   name: "Canal 35"
-  keycode: null
+  keycode: "y"
   frequency: 135
   color: "#888888"
   longRange: true
@@ -281,7 +289,7 @@
 - type: radioChannel
   id: Channel36
   name: "Canal 36"
-  keycode: null
+  keycode: "z"
   frequency: 136
   color: "#888888"
   longRange: true
