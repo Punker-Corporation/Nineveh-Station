@@ -2,6 +2,7 @@ using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Radio;
 using Content.Server.Radio.EntitySystems;
 using Content.Shared._Scp.Other.Radio;
 using Content.Shared.Chat;
@@ -17,13 +18,14 @@ using Robust.Server.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using ServerRadioSystem = Content.Server.Radio.EntitySystems.RadioSystem;
 
 namespace Content.Server._Scp.Other.Radio;
 
 public sealed class ScpRadioSystem : SharedScpRadioSystem
 {
     [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly EntitySystems.RadioSystem _radio = default!;
+    [Dependency] private readonly ServerRadioSystem _radio = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
@@ -82,6 +84,7 @@ public sealed class ScpRadioSystem : SharedScpRadioSystem
             // Если радио не находится у игрока - пусть говорит в чатик.
             SayMessage(ent, args.MessageSource, args.Message);
             _audio.PlayPvs(ent.Comp.ReceiveSound, ent);
+            TryTakeCharge(ent);
 
             return;
         }
@@ -205,7 +208,7 @@ public sealed class ScpRadioSystem : SharedScpRadioSystem
 
     private void UpdateMicrophone(Entity<ScpRadioComponent> ent)
     {
-        if (ent.Comp.MicrophoneEnabled && ent.Comp.ActiveChannel != null)
+        if (ent.Comp.Enabled && ent.Comp.MicrophoneEnabled && ent.Comp.ActiveChannel != null)
             EnsureComp<ActiveListenerComponent>(ent).Range = ent.Comp.ListenRange;
         else
             RemCompDeferred<ActiveListenerComponent>(ent);

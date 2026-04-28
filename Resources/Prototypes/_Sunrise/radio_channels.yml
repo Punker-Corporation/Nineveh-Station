@@ -32,7 +32,7 @@
 - type: radioChannel
   id: USSPCom
   name: chat-radio-ussp-com
-  keycode: '0' # Fire edit - чтобы не конфликтовало
+  keycode: '~' # Fire edit - чтобы не конфликтовало
   frequency: 1991
   color: "#890000"
   longRange: false
