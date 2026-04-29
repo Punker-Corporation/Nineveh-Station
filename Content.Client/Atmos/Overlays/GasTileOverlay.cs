@@ -70,6 +70,9 @@ namespace Content.Client.Atmos.Overlays
 
             for (var i = 0; i < _gasCount; i++)
             {
+                _frames[i] = Array.Empty<Texture>();
+                _frameDelays[i] = Array.Empty<float>();
+
                 var gasPrototype = _atmosphereSystem.GetGas(system.VisibleGasId[i]);
 
                 SpriteSpecifier overlay;
@@ -229,8 +232,12 @@ namespace Content.Client.Atmos.Overlays
                             for (var i = 0; i < state.gasCount; i++)
                             {
                                 var opacity = gas.Opacity[i];
+                                var frames = state.frames[i];
+                                if (frames.Length == 0)
+                                    continue;
+
                                 if (opacity > 0)
-                                    state.drawHandle.DrawTexture(state.frames[i][state.frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
+                                    state.drawHandle.DrawTexture(frames[state.frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
                             }
                         }
                     }
@@ -291,9 +298,12 @@ namespace Content.Client.Atmos.Overlays
                     for (var i = 0; i < atmos.OverlayData.Opacity.Length; i++)
                     {
                         var opacity = atmos.OverlayData.Opacity[i];
+                        var frames = _frames[i];
+                        if (frames.Length == 0)
+                            continue;
 
                         if (opacity > 0)
-                            handle.DrawTexture(_frames[i][_frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
+                            handle.DrawTexture(frames[_frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
                     }
                 }
             }

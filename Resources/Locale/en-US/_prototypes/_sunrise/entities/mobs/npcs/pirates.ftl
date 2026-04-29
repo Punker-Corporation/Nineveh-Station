@@ -1,12 +1,16 @@
 ent-MobBasePirateMonkey = monkey
     .desc = New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
 
+ent-MobPirateT2Juggernaut = Jugger Murmillo
+    .desc = Clad in a heavily armored ancient spacesuit. Slow but incredibly resilient.
 ent-MobPirateT2JuggernautMG = { ent-MobPirateT2Juggernaut }
     .suffix = Machine gunner
     .desc = { ent-MobPirateT2Juggernaut.desc }
 
 ent-MobPirateT1LCG = Scrap chaingunner
     .desc = A pirate with a light chain gun, well-armed and suitably dangerous.
+ent-MobPirateT1Knife = Scrap boarder
+    .desc = Rookie raider sent first through the breach. Usually doesnt come back, but makes a great distraction.
 ent-MobPirateT1KnifeEMP = { ent-MobPirateT1Knife }
     .suffix = EMP
     .desc = { ent-MobPirateT1Knife.desc }
