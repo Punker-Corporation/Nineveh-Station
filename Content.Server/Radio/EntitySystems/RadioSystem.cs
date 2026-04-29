@@ -1,85 +1,273 @@
-using System.Reflection;
+using System.Globalization;
+using Content.Server._Sunrise.Chat.Sanitization;
+using Content.Server.Administration.Logs;
+using Content.Server.Chat.Systems;
+using Content.Server.Power.Components;
+using Content.Server.Radio.Components;
+using Content.Shared._Sunrise.TTS;
+using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
+using Content.Shared.Database;
+using Content.Shared.PDA;
 using Content.Shared.Radio;
-using HarmonyLib;
-using Robust.Server.GameObjects;
+using Content.Shared.Radio.Components;
+using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Silicons.StationAi;
+using Content.Shared.Speech;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Replays;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Radio.EntitySystems;
 
-public sealed partial class RadioSystem
+/// <summary>
+///     This system handles intrinsic radios and the general process of converting radio messages into chat messages.
+/// </summary>
+public sealed partial class RadioSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly INetManager _netMan = default!;
+    [Dependency] private readonly IReplayRecordingManager _replay = default!;
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
+    // set used to prevent radio feedback loops.
+    private readonly HashSet<string> _messages = new();
+
+    private EntityQuery<TelecomExemptComponent> _exemptQuery;
+
+    // Sunrise start
+    private const string NoIdIconPath = "/Textures/Interface/Misc/job_icons.rsi/NoId.png";
+    private const string StationAiIconPath = "/Textures/Interface/Misc/job_icons.rsi/StationAi.png";
+    private const string BorgIconPath = "/Textures/_Sunrise/Interface/Misc/job_icons.rsi/Borg.png";
+    // Sunrise end
+
+    // Nineveh corruption fields
     private TimeSpan _nextWhisperGlobal = TimeSpan.Zero;
     private readonly Dictionary<string, int> _recentWordCounts = new();
     private TimeSpan _lastWordCleanup = TimeSpan.Zero;
 
-    public void InitializeCorruption()
+    public override void Initialize()
     {
-        var harmony = new Harmony("com.nineveh.radiocorruption");
-        var original = typeof(RadioSystem).GetMethod("SendRadioMessage",
-            new[] { typeof(EntityUid), typeof(string), typeof(RadioChannelPrototype), typeof(EntityUid), typeof(bool) });
+        base.Initialize();
+        SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
+        SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
+        SubscribeLocalEvent<CorruptedRadioComponent, RadioSendAttemptEvent>(OnCorruptedSendAttempt);
+        SubscribeLocalEvent<CorruptedRadioComponent, RadioReceiveAttemptEvent>(OnCorruptedReceiveAttempt);
 
-        var prefix = typeof(RadioSystem).GetMethod(nameof(SendRadioMessagePrefix), BindingFlags.NonPublic | BindingFlags.Instance);
-        harmony.Patch(original, new HarmonyMethod(prefix));
+        _exemptQuery = GetEntityQuery<TelecomExemptComponent>();
     }
 
-    private static bool SendRadioMessagePrefix(
-        EntityUid messageSource,
-        ref string message,
-        RadioChannelPrototype channel,
-        EntityUid radioSource,
-        bool escapeMarkup,
-        RadioSystem __instance)
+    private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
     {
-        if (!__instance.TryComp<CorruptedRadioComponent>(radioSource, out var corruption))
-            return true;
+        if (args.Channel != null && component.Channels.Contains(args.Channel.ID))
+        {
+            SendRadioMessage(uid, args.Message, args.Channel, uid);
+            args.Channel = null; // prevent duplicate messages from other listeners.
+        }
+    }
 
-        var random = __instance._robustRandom;
+    private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
+    {
+        // Sunrise-TTS-Start
+        if (TryComp(uid, out ActorComponent? actor))
+        {
+            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+            if (uid != args.MessageSource && HasComp<TTSComponent>(args.MessageSource))
+            {
+                args.Receivers.Add(uid);
+            }
+        }
+        // Sunrise-TTS-End
+    }
 
-        if (random.Prob(corruption.SilenceChance))
-            return false;
+    /// <summary>
+    /// Send radio message to all active radio listeners
+    /// </summary>
+    public void SendRadioMessage(EntityUid messageSource, string message, ProtoId<RadioChannelPrototype> channel, EntityUid radioSource, bool escapeMarkup = true)
+    {
+        SendRadioMessage(messageSource, message, _prototype.Index(channel), radioSource, escapeMarkup: escapeMarkup);
+    }
 
-        if (random.Prob(corruption.DeadAirChance))
+    /// <summary>
+    /// Send radio message to all active radio listeners
+    /// </summary>
+    /// <param name="messageSource">Entity that spoke the message</param>
+    /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
+    public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
+    {
+        // Apply corruption to outgoing message if the radio source has CorruptedRadioComponent
+        if (TryComp<CorruptedRadioComponent>(radioSource, out var corruption))
+        {
+            ApplyCorruptionToMessage(ref message, ref messageSource, channel, radioSource, corruption);
+        }
+
+        // Sunrise added start - для санитизации чата
+        var trySendEvent = new TrySendChatMessageEvent(message, InGameICChatType.Speak, ProcessUserInput: false);
+        RaiseLocalEvent(messageSource, ref trySendEvent);
+
+        if (trySendEvent.Cancelled)
+            return;
+
+        message = trySendEvent.Message;
+        // Sunrise added end
+
+        // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
+        if (!_messages.Add(message))
+            return;
+
+        var evt = new TransformSpeakerNameEvent(messageSource, MetaData(messageSource).EntityName);
+        RaiseLocalEvent(messageSource, evt);
+
+        var name = evt.VoiceName;
+        name = FormattedMessage.EscapeText(name);
+
+        // Sunrise-Start
+        var tag = Loc.GetString("radio-icon-tag",
+            ("path", GetIdSprite(messageSource)),
+            ("scale", "3"),
+            ("text", GetIdCardName(messageSource)),
+            ("color", GetIdCardColor(messageSource))
+        );
+
+        var formattedName = $"{tag} {name}";
+        // Sunrise-End
+
+        SpeechVerbPrototype speech;
+        if (evt.SpeechVerb != null && _prototype.Resolve(evt.SpeechVerb, out var evntProto))
+            speech = evntProto;
+        else
+            speech = _chat.GetSpeechVerb(messageSource, message);
+
+        var content = escapeMarkup
+            ? FormattedMessage.EscapeText(message)
+            : message;
+
+        // Sunrise-Start
+        if (GetIdCardIsBold(messageSource))
+        {
+            content = $"[bold]{content}[/bold]";
+        }
+        // Sunrise-End
+
+        var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+            ("color", channel.Color),
+            ("fontType", speech.FontId),
+            ("fontSize", speech.FontSize),
+            ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
+            ("channel", $"\\[{channel.LocalizedName}\\]"), // Sunrise-Edit
+            ("name", formattedName),
+            ("message", content));
+
+        // most radios are relayed to chat, so lets parse the chat message beforehand
+        var chat = new ChatMessage(
+            ChatChannel.Radio,
+            message,
+            wrappedMessage,
+            GetNetEntity(messageSource),
+            null);
+        var chatMsg = new MsgChatMessage { Message = chat };
+        var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg, []);
+
+        var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
+        RaiseLocalEvent(ref sendAttemptEv);
+        RaiseLocalEvent(radioSource, ref sendAttemptEv);
+        var canSend = !sendAttemptEv.Cancelled;
+
+        var sourceMapId = Transform(radioSource).MapID;
+        var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
+        var sourceServerExempt = _exemptQuery.HasComp(radioSource);
+
+        var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
+        while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
+        {
+            if (!radio.ReceiveAllChannels)
+            {
+                if (!radio.Channels.Contains(channel.ID) || (TryComp<IntercomComponent>(receiver, out var intercom) &&
+                                                             !intercom.SupportedChannels.Contains(channel.ID)))
+                    continue;
+            }
+
+            if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
+                continue;
+
+            // don't need telecom server for long range channels or handheld radios and intercoms
+            var needServer = !channel.LongRange && !sourceServerExempt;
+            if (needServer && !hasActiveServer)
+                continue;
+
+            // check if message can be sent to specific receiver
+            var attemptEv = new RadioReceiveAttemptEvent(channel, radioSource, receiver);
+            RaiseLocalEvent(ref attemptEv);
+            RaiseLocalEvent(receiver, ref attemptEv);
+            if (attemptEv.Cancelled)
+                continue;
+
+            // send the message
+            RaiseLocalEvent(receiver, ref ev);
+        }
+
+        RaiseLocalEvent(new RadioSpokeEvent(messageSource, FormattedMessage.RemoveMarkupPermissive(message), ev.Receivers.ToArray())); // Sunrise-TTS
+
+        if (name != Name(messageSource))
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} as {name} on {channel.LocalizedName}: {message}");
+        else
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} on {channel.LocalizedName}: {message}");
+
+        _replay.RecordServerMessage(chat);
+        _messages.Remove(message);
+    }
+
+    // Nineveh corruption methods
+    private void ApplyCorruptionToMessage(ref string message, ref EntityUid messageSource, RadioChannelPrototype channel, EntityUid radioSource, CorruptedRadioComponent corruption)
+    {
+        if (_random.Prob(corruption.SilenceChance))
+        {
+            message = string.Empty;
+            return;
+        }
+
+        if (_random.Prob(corruption.DeadAirChance))
         {
             message = "[estática intensa]";
-            return true;
+            return;
         }
 
-        if (random.Prob(corruption.SpoofChance))
+        if (_random.Prob(corruption.SpoofChance))
         {
-            var spoofedName = random.Pick(corruption.SpoofNames);
+            var spoofedName = _random.Pick(corruption.SpoofNames);
             var nameEv = new TransformSpeakerNameEvent(messageSource, spoofedName);
-            __instance.RaiseLocalEvent(messageSource, nameEv);
+            RaiseLocalEvent(messageSource, nameEv);
         }
 
-        if (random.Prob(corruption.CorruptionChance))
+        if (_random.Prob(corruption.CorruptionChance))
         {
-            message = __instance.ApplyCorruptionFilter(message, corruption);
+            message = ApplyCorruptionFilter(message, corruption);
         }
 
-        if (random.Prob(corruption.JamaisVuChance))
+        if (_random.Prob(corruption.JamaisVuChance))
         {
-            message = __instance.ApplyJamaisVu(message, corruption);
+            message = ApplyJamaisVu(message, corruption);
         }
 
-        __instance.ProcessSemanticSatiation(message, corruption);
+        ProcessSemanticSatiation(message, corruption);
 
-        if (random.Prob(corruption.InfrasoundChance))
+        if (_random.Prob(corruption.InfrasoundChance))
         {
-            __instance.TriggerInfrasound(radioSource);
+            TriggerInfrasound(radioSource);
         }
-
-        return true;
     }
 
     private string ApplyCorruptionFilter(string input, CorruptedRadioComponent corruption)
@@ -91,11 +279,11 @@ public sealed partial class RadioSystem
         var replacements = corruption.CorruptionReplacements.ToCharArray();
         for (int i = 0; i < chars.Length; i++)
         {
-            if (_robustRandom.Prob(corruption.CorruptionIntensity))
+            if (_random.Prob(corruption.CorruptionIntensity))
             {
-                chars[i] = _robustRandom.Pick(replacements);
+                chars[i] = _random.Pick(replacements);
             }
-            else if (_robustRandom.Prob(0.1f))
+            else if (_random.Prob(0.1f))
             {
                 chars[i] = char.ToUpperInvariant(chars[i]);
             }
@@ -108,9 +296,9 @@ public sealed partial class RadioSystem
         var words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         for (int i = 0; i < words.Length; i++)
         {
-            if (words[i].Length > 3 && _robustRandom.Prob(0.3f))
+            if (words[i].Length > 3 && _random.Prob(0.3f))
             {
-                words[i] = _robustRandom.Pick(corruption.WhisperMessages).Replace("...", "");
+                words[i] = _random.Pick(corruption.WhisperMessages).Replace("...", "");
             }
         }
         return string.Join(' ', words);
@@ -130,17 +318,17 @@ public sealed partial class RadioSystem
 
             if (_recentWordCounts[word] >= corruption.SemanticSatiationThreshold)
             {
-                if (_robustRandom.Prob(0.5f))
+                if (_random.Prob(0.5f))
                 {
                     _recentWordCounts[word] = 0;
                 }
             }
         }
 
-        if (_gameTiming.CurTime - _lastWordCleanup > TimeSpan.FromSeconds(30))
+        if (_timing.CurTime - _lastWordCleanup > TimeSpan.FromSeconds(30))
         {
             _recentWordCounts.Clear();
-            _lastWordCleanup = _gameTiming.CurTime;
+            _lastWordCleanup = _timing.CurTime;
         }
     }
 
@@ -150,44 +338,135 @@ public sealed partial class RadioSystem
         _audio.PlayStatic("/Audio/Effects/infrasound_rumble.ogg", filter, source, false);
     }
 
+    private void OnCorruptedSendAttempt(EntityUid uid, CorruptedRadioComponent comp, ref RadioSendAttemptEvent args)
+    {
+        if (_random.Prob(comp.SilenceChance))
+            args.Cancelled = true;
+    }
+
+    private void OnCorruptedReceiveAttempt(EntityUid uid, CorruptedRadioComponent comp, ref RadioReceiveAttemptEvent args)
+    {
+        if (_random.Prob(comp.SilenceChance))
+            args.Cancelled = true;
+    }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        if (_gameTiming.CurTime < _nextWhisperGlobal)
+        if (_timing.CurTime < _nextWhisperGlobal)
             return;
 
-        _nextWhisperGlobal = _gameTiming.CurTime + TimeSpan.FromSeconds(_robustRandom.Next(45, 120));
+        _nextWhisperGlobal = _timing.CurTime + TimeSpan.FromSeconds(_random.Next(45, 120));
 
-        var query = EntityQueryEnumerator<CorruptedRadioComponent, RadioMicrophoneComponent, ActiveRadioComponent>();
-        while (query.MoveNext(out var uid, out var corruption, out var microphone, out var activeRadio))
+        var query = EntityQueryEnumerator<CorruptedRadioComponent, RadioSpeakerComponent, ActiveRadioComponent>();
+        while (query.MoveNext(out var uid, out var corruption, out var speaker, out _))
         {
-            if (!_robustRandom.Prob(corruption.WhisperChance))
+            if (!_random.Prob(corruption.WhisperChance))
                 continue;
 
-            var channelId = microphone.BroadcastChannel;
-            if (!_prototypeManager.TryIndex<RadioChannelPrototype>(channelId, out var channelProto))
+            if (!speaker.Enabled)
                 continue;
 
-            var message = _robustRandom.Pick(corruption.WhisperMessages);
-            var spoofName = _robustRandom.Pick(corruption.SpoofNames);
+            var channel = speaker.Channels.FirstOrDefault();
+            if (channel == default)
+                continue;
 
-            var chatMessage = new ChatMessage(
-                ChatChannel.Radio,
-                message,
-                Loc.GetString("chat-radio-message-wrap",
-                    ("color", channelProto.Color),
-                    ("fontType", "Default"),
-                    ("fontSize", 12),
-                    ("verb", "sussurra"),
-                    ("channel", $"\\[{channelProto.LocalizedName}\\]"),
-                    ("name", $"[???] {spoofName}"),
-                    ("message", message)),
-                GetNetEntity(uid),
-                null);
+            var message = _random.Pick(corruption.WhisperMessages);
+            var spoofName = _random.Pick(corruption.SpoofNames);
 
-            var ev = new RadioReceiveEvent(message, uid, channelProto, uid, new MsgChatMessage { Message = chatMessage }, new List<EntityUid>());
-            RaiseLocalEvent(uid, ref ev);
+            SendRadioMessage(uid, message, channel, uid, escapeMarkup: false);
         }
+    }
+
+    // Sunrise-Start
+    private IdCardComponent? GetIdCard(EntityUid senderUid)
+    {
+        if (!_accessReader.FindAccessItemsInventory(senderUid, out var accessItems))
+            return null;
+
+        if (accessItems.Count == 0)
+            return null;
+
+        foreach (var item in accessItems)
+        {
+            if (TryComp<PdaComponent>(item, out var pda) && pda.ContainedId.HasValue)
+            {
+                if (TryComp<IdCardComponent>(pda.ContainedId, out var idComp))
+                    return idComp;
+            }
+            else if (TryComp<IdCardComponent>(item, out var id))
+            {
+                return id;
+            }
+        }
+
+        return null;
+    }
+
+    private string GetIdCardName(EntityUid senderUid)
+    {
+        var idCardTitle = Loc.GetString("chat-radio-no-id");
+        idCardTitle = GetIdCard(senderUid)?.LocalizedJobTitle ?? idCardTitle;
+
+        var textInfo = CultureInfo.CurrentCulture.TextInfo;
+        idCardTitle = textInfo.ToTitleCase(idCardTitle);
+
+        return $"[{idCardTitle}] ";
+    }
+
+    private string GetIdCardColor(EntityUid senderUid)
+    {
+        var color = GetIdCard(senderUid)?.JobColor;
+        return (!string.IsNullOrEmpty(color)) ? color : "#9FED58";
+    }
+
+    private string GetIdSprite(EntityUid senderUid)
+    {
+        if (HasComp<BorgChassisComponent>(senderUid))
+            return BorgIconPath;
+
+        if (HasComp<StationAiHeldComponent>(senderUid))
+            return StationAiIconPath;
+
+        var protoId = GetIdCard(senderUid)?.JobIcon;
+        var sprite = NoIdIconPath;
+
+        if (_prototype.TryIndex(protoId, out var prototype))
+        {
+            switch (prototype.Icon)
+            {
+                case SpriteSpecifier.Texture tex:
+                    sprite = tex.TexturePath.CanonPath;
+                    break;
+                case SpriteSpecifier.Rsi rsi:
+                    sprite = rsi.RsiPath.CanonPath + "/" + rsi.RsiState + ".png";
+                    break;
+            }
+        }
+
+        return sprite;
+    }
+
+    private bool GetIdCardIsBold(EntityUid senderUid)
+    {
+        return GetIdCard(senderUid)?.RadioBold ?? false;
+    }
+    // Sunrise-End
+
+    /// <inheritdoc cref="TelecomServerComponent"/>
+    private bool HasActiveServer(MapId mapId, string channelId)
+    {
+        var servers = EntityQuery<TelecomServerComponent, EncryptionKeyHolderComponent, ApcPowerReceiverComponent, TransformComponent>();
+        foreach (var (_, keys, power, transform) in servers)
+        {
+            if (transform.MapID == mapId &&
+                power.Powered &&
+                keys.Channels.Contains(channelId))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
