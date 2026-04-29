@@ -199,6 +199,7 @@ public abstract class SharedScpRadioSystem : EntitySystem
             return;
 
         ent.Comp.ActiveChannel = next;
+        DirtyField(ent!, nameof(ScpRadioComponent.ActiveChannel));
 
         var message = Loc.GetString("scp-radio-current-channel", ("name", nextPrototype.LocalizedName));
         _popup.PopupClient(message, ent, user);
@@ -211,6 +212,7 @@ public abstract class SharedScpRadioSystem : EntitySystem
             return;
 
         ent.Comp.MicrophoneEnabled = !ent.Comp.MicrophoneEnabled;
+        DirtyField(ent!, nameof(ScpRadioComponent.MicrophoneEnabled));
 
         var message = Loc.GetString("scp-radio-microphone", ("value", ent.Comp.MicrophoneEnabled));
         _popup.PopupClient(message, ent, user);

@@ -1,7 +1,7 @@
 ﻿- type: radioChannel
   id: RegionalAdministration
   name: chat-radio-regional-administration
-  keycode: 'р'
+  keycode: 'я'
   frequency: 2337
   color: "#2aa526"
   longRange: true

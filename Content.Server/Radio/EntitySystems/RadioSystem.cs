@@ -3,7 +3,6 @@ using Content.Server._Sunrise.Chat.Sanitization;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
-using Content.Server.Radio.Components;
 using Content.Shared._Sunrise.TTS;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -31,7 +30,7 @@ namespace Content.Server.Radio.EntitySystems;
 /// <summary>
 ///     This system handles intrinsic radios and the general process of converting radio messages into chat messages.
 /// </summary>
-public sealed partial class RadioSystem : EntitySystem
+public sealed class RadioSystem : EntitySystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
@@ -40,13 +39,17 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
 
     private EntityQuery<TelecomExemptComponent> _exemptQuery;
+
+    private TimeSpan _nextWhisperGlobal = TimeSpan.Zero;
+    private readonly Dictionary<string, int> _recentWordCounts = new();
+    private TimeSpan _lastWordCleanup = TimeSpan.Zero;
 
     // Sunrise start
     private const string NoIdIconPath = "/Textures/Interface/Misc/job_icons.rsi/NoId.png";
@@ -54,18 +57,11 @@ public sealed partial class RadioSystem : EntitySystem
     private const string BorgIconPath = "/Textures/_Sunrise/Interface/Misc/job_icons.rsi/Borg.png";
     // Sunrise end
 
-    // Nineveh corruption fields
-    private TimeSpan _nextWhisperGlobal = TimeSpan.Zero;
-    private readonly Dictionary<string, int> _recentWordCounts = new();
-    private TimeSpan _lastWordCleanup = TimeSpan.Zero;
-
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
-        SubscribeLocalEvent<CorruptedRadioComponent, RadioSendAttemptEvent>(OnCorruptedSendAttempt);
-        SubscribeLocalEvent<CorruptedRadioComponent, RadioReceiveAttemptEvent>(OnCorruptedReceiveAttempt);
 
         _exemptQuery = GetEntityQuery<TelecomExemptComponent>();
     }
@@ -108,11 +104,8 @@ public sealed partial class RadioSystem : EntitySystem
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
     public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
     {
-        // Apply corruption to outgoing message if the radio source has CorruptedRadioComponent
-        if (TryComp<CorruptedRadioComponent>(radioSource, out var corruption))
-        {
-            ApplyCorruptionToMessage(ref message, ref messageSource, channel, radioSource, corruption);
-        }
+        if (!TryApplyCorruption(ref message, radioSource, out var spoofedName))
+            return;
 
         // Sunrise added start - для санитизации чата
         var trySendEvent = new TrySendChatMessageEvent(message, InGameICChatType.Speak, ProcessUserInput: false);
@@ -128,7 +121,7 @@ public sealed partial class RadioSystem : EntitySystem
         if (!_messages.Add(message))
             return;
 
-        var evt = new TransformSpeakerNameEvent(messageSource, MetaData(messageSource).EntityName);
+        var evt = new TransformSpeakerNameEvent(messageSource, spoofedName ?? MetaData(messageSource).EntityName);
         RaiseLocalEvent(messageSource, evt);
 
         var name = evt.VoiceName;
@@ -167,7 +160,7 @@ public sealed partial class RadioSystem : EntitySystem
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
-            ("channel", $"\\[{channel.LocalizedName}\\]"), // Sunrise-Edit
+            ("channel", $"\\[{channel.LocalizedName}\\]"),
             ("name", formattedName),
             ("message", content));
 
@@ -176,7 +169,7 @@ public sealed partial class RadioSystem : EntitySystem
             ChatChannel.Radio,
             message,
             wrappedMessage,
-            GetNetEntity(messageSource),
+            NetEntity.Invalid,
             null);
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg, []);
@@ -219,7 +212,7 @@ public sealed partial class RadioSystem : EntitySystem
             RaiseLocalEvent(receiver, ref ev);
         }
 
-        RaiseLocalEvent(new RadioSpokeEvent(messageSource, FormattedMessage.RemoveMarkupPermissive(message), ev.Receivers.ToArray())); // Sunrise-TTS
+        RaiseLocalEvent(new RadioSpokeEvent(messageSource, FormattedMessage.RemoveMarkupPermissive(message), ev.Receivers.ToArray()));
 
         if (name != Name(messageSource))
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} as {name} on {channel.LocalizedName}: {message}");
@@ -230,156 +223,6 @@ public sealed partial class RadioSystem : EntitySystem
         _messages.Remove(message);
     }
 
-    // Nineveh corruption methods
-    private void ApplyCorruptionToMessage(ref string message, ref EntityUid messageSource, RadioChannelPrototype channel, EntityUid radioSource, CorruptedRadioComponent corruption)
-    {
-        if (_random.Prob(corruption.SilenceChance))
-        {
-            message = string.Empty;
-            return;
-        }
-
-        if (_random.Prob(corruption.DeadAirChance))
-        {
-            message = "[estática intensa]";
-            return;
-        }
-
-        if (_random.Prob(corruption.SpoofChance))
-        {
-            var spoofedName = _random.Pick(corruption.SpoofNames);
-            var nameEv = new TransformSpeakerNameEvent(messageSource, spoofedName);
-            RaiseLocalEvent(messageSource, nameEv);
-        }
-
-        if (_random.Prob(corruption.CorruptionChance))
-        {
-            message = ApplyCorruptionFilter(message, corruption);
-        }
-
-        if (_random.Prob(corruption.JamaisVuChance))
-        {
-            message = ApplyJamaisVu(message, corruption);
-        }
-
-        ProcessSemanticSatiation(message, corruption);
-
-        if (_random.Prob(corruption.InfrasoundChance))
-        {
-            TriggerInfrasound(radioSource);
-        }
-    }
-
-    private string ApplyCorruptionFilter(string input, CorruptedRadioComponent corruption)
-    {
-        if (string.IsNullOrEmpty(input))
-            return input;
-
-        var chars = input.ToCharArray();
-        var replacements = corruption.CorruptionReplacements.ToCharArray();
-        for (int i = 0; i < chars.Length; i++)
-        {
-            if (_random.Prob(corruption.CorruptionIntensity))
-            {
-                chars[i] = _random.Pick(replacements);
-            }
-            else if (_random.Prob(0.1f))
-            {
-                chars[i] = char.ToUpperInvariant(chars[i]);
-            }
-        }
-        return new string(chars);
-    }
-
-    private string ApplyJamaisVu(string input, CorruptedRadioComponent corruption)
-    {
-        var words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        for (int i = 0; i < words.Length; i++)
-        {
-            if (words[i].Length > 3 && _random.Prob(0.3f))
-            {
-                words[i] = _random.Pick(corruption.WhisperMessages).Replace("...", "");
-            }
-        }
-        return string.Join(' ', words);
-    }
-
-    private void ProcessSemanticSatiation(string message, CorruptedRadioComponent corruption)
-    {
-        var words = message.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        foreach (var word in words)
-        {
-            if (word.Length <= 3)
-                continue;
-
-            if (!_recentWordCounts.ContainsKey(word))
-                _recentWordCounts[word] = 0;
-            _recentWordCounts[word]++;
-
-            if (_recentWordCounts[word] >= corruption.SemanticSatiationThreshold)
-            {
-                if (_random.Prob(0.5f))
-                {
-                    _recentWordCounts[word] = 0;
-                }
-            }
-        }
-
-        if (_timing.CurTime - _lastWordCleanup > TimeSpan.FromSeconds(30))
-        {
-            _recentWordCounts.Clear();
-            _lastWordCleanup = _timing.CurTime;
-        }
-    }
-
-    private void TriggerInfrasound(EntityUid source)
-    {
-        var filter = Filter.Pvs(source);
-        _audio.PlayStatic("/Audio/Effects/infrasound_rumble.ogg", filter, source, false);
-    }
-
-    private void OnCorruptedSendAttempt(EntityUid uid, CorruptedRadioComponent comp, ref RadioSendAttemptEvent args)
-    {
-        if (_random.Prob(comp.SilenceChance))
-            args.Cancelled = true;
-    }
-
-    private void OnCorruptedReceiveAttempt(EntityUid uid, CorruptedRadioComponent comp, ref RadioReceiveAttemptEvent args)
-    {
-        if (_random.Prob(comp.SilenceChance))
-            args.Cancelled = true;
-    }
-
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-
-        if (_timing.CurTime < _nextWhisperGlobal)
-            return;
-
-        _nextWhisperGlobal = _timing.CurTime + TimeSpan.FromSeconds(_random.Next(45, 120));
-
-        var query = EntityQueryEnumerator<CorruptedRadioComponent, RadioSpeakerComponent, ActiveRadioComponent>();
-        while (query.MoveNext(out var uid, out var corruption, out var speaker, out _))
-        {
-            if (!_random.Prob(corruption.WhisperChance))
-                continue;
-
-            if (!speaker.Enabled)
-                continue;
-
-            var channel = speaker.Channels.FirstOrDefault();
-            if (channel == default)
-                continue;
-
-            var message = _random.Pick(corruption.WhisperMessages);
-            var spoofName = _random.Pick(corruption.SpoofNames);
-
-            SendRadioMessage(uid, message, channel, uid, escapeMarkup: false);
-        }
-    }
-
-    // Sunrise-Start
     private IdCardComponent? GetIdCard(EntityUid senderUid)
     {
         if (!_accessReader.FindAccessItemsInventory(senderUid, out var accessItems))
@@ -418,7 +261,7 @@ public sealed partial class RadioSystem : EntitySystem
     private string GetIdCardColor(EntityUid senderUid)
     {
         var color = GetIdCard(senderUid)?.JobColor;
-        return (!string.IsNullOrEmpty(color)) ? color : "#9FED58";
+        return !string.IsNullOrEmpty(color) ? color : "#9FED58";
     }
 
     private string GetIdSprite(EntityUid senderUid)
@@ -452,7 +295,6 @@ public sealed partial class RadioSystem : EntitySystem
     {
         return GetIdCard(senderUid)?.RadioBold ?? false;
     }
-    // Sunrise-End
 
     /// <inheritdoc cref="TelecomServerComponent"/>
     private bool HasActiveServer(MapId mapId, string channelId)
@@ -468,5 +310,125 @@ public sealed partial class RadioSystem : EntitySystem
             }
         }
         return false;
+    }
+
+    private bool TryApplyCorruption(
+        ref string message,
+        EntityUid radioSource,
+        out string? spoofedName)
+    {
+        spoofedName = null;
+
+        if (!TryComp<CorruptedRadioComponent>(radioSource, out var corruption))
+            return true;
+
+        if (_random.Prob(corruption.SilenceChance))
+            return false;
+
+        if (_random.Prob(corruption.DeadAirChance))
+        {
+            message = "[estatica intensa]";
+            return true;
+        }
+
+        if (_random.Prob(corruption.SpoofChance))
+            spoofedName = _random.Pick(corruption.SpoofNames);
+
+        if (_random.Prob(corruption.CorruptionChance))
+            message = ApplyCorruptionFilter(message, corruption);
+
+        if (_random.Prob(corruption.JamaisVuChance))
+            message = ApplyJamaisVu(message, corruption);
+
+        ProcessSemanticSatiation(message, corruption);
+
+        if (_random.Prob(corruption.InfrasoundChance))
+            TriggerInfrasound(radioSource);
+
+        return true;
+    }
+
+    private string ApplyCorruptionFilter(string input, CorruptedRadioComponent corruption)
+    {
+        if (string.IsNullOrEmpty(input))
+            return input;
+
+        var chars = input.ToCharArray();
+        var replacements = corruption.CorruptionReplacements.ToCharArray();
+        for (var i = 0; i < chars.Length; i++)
+        {
+            if (_random.Prob(corruption.CorruptionIntensity))
+                chars[i] = _random.Pick(replacements);
+            else if (_random.Prob(0.1f))
+                chars[i] = char.ToUpperInvariant(chars[i]);
+        }
+
+        return new string(chars);
+    }
+
+    private string ApplyJamaisVu(string input, CorruptedRadioComponent corruption)
+    {
+        var words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        for (var i = 0; i < words.Length; i++)
+        {
+            if (words[i].Length > 3 && _random.Prob(0.3f))
+                words[i] = _random.Pick(corruption.WhisperMessages).Replace("...", "");
+        }
+
+        return string.Join(' ', words);
+    }
+
+    private void ProcessSemanticSatiation(string message, CorruptedRadioComponent corruption)
+    {
+        var words = message.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        foreach (var word in words)
+        {
+            if (word.Length <= 3)
+                continue;
+
+            if (!_recentWordCounts.ContainsKey(word))
+                _recentWordCounts[word] = 0;
+
+            _recentWordCounts[word]++;
+
+            if (_recentWordCounts[word] >= corruption.SemanticSatiationThreshold && _random.Prob(0.5f))
+                _recentWordCounts[word] = 0;
+        }
+
+        if (_gameTiming.CurTime - _lastWordCleanup > TimeSpan.FromSeconds(30))
+        {
+            _recentWordCounts.Clear();
+            _lastWordCleanup = _gameTiming.CurTime;
+        }
+    }
+
+    private void TriggerInfrasound(EntityUid source)
+    {
+        var filter = Filter.Pvs(source);
+        _audio.PlayStatic("/Audio/Effects/infrasound_rumble.ogg", filter, Transform(source).Coordinates, false);
+    }
+
+    public override void FrameUpdate(float frameTime)
+    {
+        base.FrameUpdate(frameTime);
+
+        if (_gameTiming.CurTime < _nextWhisperGlobal)
+            return;
+
+        _nextWhisperGlobal = _gameTiming.CurTime + TimeSpan.FromSeconds(_random.Next(45, 120));
+
+        var query = EntityQueryEnumerator<CorruptedRadioComponent, RadioMicrophoneComponent, ActiveRadioComponent>();
+        while (query.MoveNext(out var uid, out var corruption, out var microphone, out _))
+        {
+            if (!_random.Prob(corruption.WhisperChance))
+                continue;
+
+            var channelId = microphone.BroadcastChannel;
+            if (!_prototype.TryIndex<RadioChannelPrototype>(channelId, out var channelProto))
+                continue;
+
+            var message = _random.Pick(corruption.WhisperMessages);
+            SendRadioMessage(uid, message, channelProto, uid, false);
+        }
     }
 }
