@@ -5,11 +5,11 @@
   description: "Um rádio de mão enferrujado. A estática nunca cessa. Possui 36 canais."
   components:
   - type: Sprite
-    sprite: Objects/Devices/handheld_radio.rsi
+    sprite: _Scp/Objects/Devices/radio.rsi
     layers:
-    - state: radio
+    - state: common
   - type: Item
-    sprite: Objects/Devices/handheld_radio.rsi
+    sprite: _Scp/Objects/Devices/radio.rsi
     size: Small
   - type: RadioMicrophone
     broadcastChannel: Channel1
