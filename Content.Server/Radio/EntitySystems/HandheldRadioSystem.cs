@@ -111,9 +111,19 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
             return;
 
         var receiver = GetUser(ent);
+        var relayName = GetRelayName(ent, args.MessageSource);
 
         if (TryComp(receiver, out ActorComponent? actor))
         {
+            _chat.TrySendInGameICMessage(ent,
+                args.Message,
+                InGameICChatType.Whisper,
+                hideChat: true,
+                hideLog: true,
+                nameOverride: relayName,
+                checkRadioPrefix: false,
+                ignoreActionBlocker: true);
+
             _net.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
 
             if (receiver != args.MessageSource && HasComp<TTSComponent>(args.MessageSource) && !args.Receivers.Contains(receiver))
@@ -122,14 +132,23 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
             return;
         }
 
-        var nameEv = new TransformSpeakerNameEvent(args.MessageSource, Name(args.MessageSource));
-        RaiseLocalEvent(args.MessageSource, nameEv);
+        _chat.TrySendInGameICMessage(ent,
+            args.Message,
+            InGameICChatType.Whisper,
+            ChatTransmitRange.GhostRangeLimit,
+            nameOverride: relayName,
+            checkRadioPrefix: false,
+            ignoreActionBlocker: true);
+    }
 
-        var name = Loc.GetString("speech-name-relay",
+    private string GetRelayName(Entity<HandheldRadioComponent> ent, EntityUid messageSource)
+    {
+        var nameEv = new TransformSpeakerNameEvent(messageSource, Name(messageSource));
+        RaiseLocalEvent(messageSource, nameEv);
+
+        return Loc.GetString("speech-name-relay",
             ("speaker", Name(ent)),
             ("originalName", nameEv.VoiceName));
-
-        _chat.TrySendInGameICMessage(ent, args.Message, InGameICChatType.Whisper, ChatTransmitRange.GhostRangeLimit, nameOverride: name, checkRadioPrefix: false);
     }
 
     private void ApplyChannel(Entity<HandheldRadioComponent> ent)
