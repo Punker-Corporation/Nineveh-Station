@@ -1,14 +1,119 @@
 - type: radioChannel
   id: Common
   name: chat-radio-common
-  keycode: 'р'
+  keycode: ";"
   frequency: 1459
   color: "#66cc66"
   longRange: true
 
 - type: radioChannel
+  id: CentCom
+  name: chat-radio-centcom
+  keycode: "!"
+  frequency: 1337
+  color: "#2681a5"
+  longRange: true
+
+- type: radioChannel
+  id: Command
+  name: chat-radio-command
+  keycode: "@"
+  frequency: 1353
+  color: "#d1c56b"
+
+- type: radioChannel
+  id: Engineering
+  name: chat-radio-engineering
+  keycode: "#"
+  frequency: 1357
+  color: "#cf8f76"
+
+- type: radioChannel
+  id: Medical
+  name: chat-radio-medical
+  keycode: "$"
+  frequency: 1355
+  color: "#5b94aa"
+
+- type: radioChannel
+  id: Science
+  name: chat-radio-science
+  keycode: "%"
+  frequency: 1351
+  color: "#c49dc4"
+
+- type: radioChannel
+  id: Security
+  name: chat-radio-security
+  keycode: "^"
+  frequency: 1359
+  color: "#976162"
+
+- type: radioChannel
+  id: Service
+  name: chat-radio-service
+  keycode: "&"
+  frequency: 1349
+  color: "#849b6a"
+
+- type: radioChannel
+  id: Supply
+  name: chat-radio-supply
+  keycode: "*"
+  frequency: 1347
+  color: "#b99f7d"
+
+- type: radioChannel
+  id: Syndicate
+  name: chat-radio-syndicate
+  keycode: "("
+  frequency: 1213
+  color: "#976162"
+  longRange: true
+
+- type: radioChannel
+  id: Handheld
+  name: chat-radio-handheld
+  keycode: ")"
+  frequency: 1330
+  color: "#af9e6b"
+  longRange: true
+
+- type: radioChannel
+  id: Binary
+  name: chat-radio-binary
+  keycode: "<"
+  frequency: 1001
+  color: "#9fd6c1"
+  longRange: true
+
+- type: radioChannel
+  id: Freelance
+  name: chat-radio-freelance
+  keycode: "\\"
+  frequency: 1984
+  color: "#f6ce64"
+  longRange: true
+
+- type: radioChannel
+  id: Xenoborg
+  name: chat-radio-xenoborg
+  keycode: "]"
+  frequency: 2002
+  color: "#2288ff"
+  longRange: true
+
+- type: radioChannel
+  id: Mothership
+  name: chat-radio-mothership
+  keycode: "{"
+  frequency: 2003
+  color: "#ff2222"
+  longRange: true
+
+- type: radioChannel
   id: Channel1
-  name: "1"
+  name: chat-radio-channel-1
   keycode: "1"
   frequency: 101
   color: "#888888"
@@ -16,7 +121,7 @@
 
 - type: radioChannel
   id: Channel2
-  name: "2"
+  name: chat-radio-channel-2
   keycode: "2"
   frequency: 102
   color: "#888888"
@@ -24,7 +129,7 @@
 
 - type: radioChannel
   id: Channel3
-  name: "3"
+  name: chat-radio-channel-3
   keycode: "3"
   frequency: 103
   color: "#888888"
@@ -32,7 +137,7 @@
 
 - type: radioChannel
   id: Channel4
-  name: "4"
+  name: chat-radio-channel-4
   keycode: "4"
   frequency: 104
   color: "#888888"
@@ -40,7 +145,7 @@
 
 - type: radioChannel
   id: Channel5
-  name: "5"
+  name: chat-radio-channel-5
   keycode: "5"
   frequency: 105
   color: "#888888"
@@ -48,7 +153,7 @@
 
 - type: radioChannel
   id: Channel6
-  name: "6"
+  name: chat-radio-channel-6
   keycode: "6"
   frequency: 106
   color: "#888888"
@@ -56,7 +161,7 @@
 
 - type: radioChannel
   id: Channel7
-  name: "7"
+  name: chat-radio-channel-7
   keycode: "7"
   frequency: 107
   color: "#888888"
@@ -64,7 +169,7 @@
 
 - type: radioChannel
   id: Channel8
-  name: "8"
+  name: chat-radio-channel-8
   keycode: "8"
   frequency: 108
   color: "#888888"
@@ -72,7 +177,7 @@
 
 - type: radioChannel
   id: Channel9
-  name: "9"
+  name: chat-radio-channel-9
   keycode: "9"
   frequency: 109
   color: "#888888"
@@ -80,7 +185,7 @@
 
 - type: radioChannel
   id: Channel10
-  name: "10"
+  name: chat-radio-channel-10
   keycode: "0"
   frequency: 110
   color: "#888888"
@@ -88,7 +193,7 @@
 
 - type: radioChannel
   id: Channel11
-  name: "11"
+  name: chat-radio-channel-11
   keycode: "A"
   frequency: 111
   color: "#888888"
@@ -96,7 +201,7 @@
 
 - type: radioChannel
   id: Channel12
-  name: "12"
+  name: chat-radio-channel-12
   keycode: "B"
   frequency: 112
   color: "#888888"
@@ -104,7 +209,7 @@
 
 - type: radioChannel
   id: Channel13
-  name: "13"
+  name: chat-radio-channel-13
   keycode: "C"
   frequency: 113
   color: "#888888"
@@ -112,7 +217,7 @@
 
 - type: radioChannel
   id: Channel14
-  name: "14"
+  name: chat-radio-channel-14
   keycode: "D"
   frequency: 114
   color: "#888888"
@@ -120,7 +225,7 @@
 
 - type: radioChannel
   id: Channel15
-  name: "15"
+  name: chat-radio-channel-15
   keycode: "E"
   frequency: 115
   color: "#888888"
@@ -128,7 +233,7 @@
 
 - type: radioChannel
   id: Channel16
-  name: "16"
+  name: chat-radio-channel-16
   keycode: "F"
   frequency: 116
   color: "#888888"
@@ -136,7 +241,7 @@
 
 - type: radioChannel
   id: Channel17
-  name: "17"
+  name: chat-radio-channel-17
   keycode: "G"
   frequency: 117
   color: "#888888"
@@ -144,7 +249,7 @@
 
 - type: radioChannel
   id: Channel18
-  name: "18"
+  name: chat-radio-channel-18
   keycode: "H"
   frequency: 118
   color: "#888888"
@@ -152,7 +257,7 @@
 
 - type: radioChannel
   id: Channel19
-  name: "19"
+  name: chat-radio-channel-19
   keycode: "I"
   frequency: 119
   color: "#888888"
@@ -160,7 +265,7 @@
 
 - type: radioChannel
   id: Channel20
-  name: "20"
+  name: chat-radio-channel-20
   keycode: "J"
   frequency: 120
   color: "#888888"
@@ -168,7 +273,7 @@
 
 - type: radioChannel
   id: Channel21
-  name: "21"
+  name: chat-radio-channel-21
   keycode: "K"
   frequency: 121
   color: "#888888"
@@ -176,7 +281,7 @@
 
 - type: radioChannel
   id: Channel22
-  name: "22"
+  name: chat-radio-channel-22
   keycode: "L"
   frequency: 122
   color: "#888888"
@@ -184,7 +289,7 @@
 
 - type: radioChannel
   id: Channel23
-  name: "23"
+  name: chat-radio-channel-23
   keycode: "M"
   frequency: 123
   color: "#888888"
@@ -192,7 +297,7 @@
 
 - type: radioChannel
   id: Channel24
-  name: "24"
+  name: chat-radio-channel-24
   keycode: "N"
   frequency: 124
   color: "#888888"
@@ -200,7 +305,7 @@
 
 - type: radioChannel
   id: Channel25
-  name: "25"
+  name: chat-radio-channel-25
   keycode: "O"
   frequency: 125
   color: "#888888"
@@ -208,7 +313,7 @@
 
 - type: radioChannel
   id: Channel26
-  name: "26"
+  name: chat-radio-channel-26
   keycode: "P"
   frequency: 126
   color: "#888888"
@@ -216,7 +321,7 @@
 
 - type: radioChannel
   id: Channel27
-  name: "27"
+  name: chat-radio-channel-27
   keycode: "Q"
   frequency: 127
   color: "#888888"
@@ -224,7 +329,7 @@
 
 - type: radioChannel
   id: Channel28
-  name: "28"
+  name: chat-radio-channel-28
   keycode: "R"
   frequency: 128
   color: "#888888"
@@ -232,7 +337,7 @@
 
 - type: radioChannel
   id: Channel29
-  name: "29"
+  name: chat-radio-channel-29
   keycode: "S"
   frequency: 129
   color: "#888888"
@@ -240,7 +345,7 @@
 
 - type: radioChannel
   id: Channel30
-  name: "30"
+  name: chat-radio-channel-30
   keycode: "T"
   frequency: 130
   color: "#888888"
@@ -248,7 +353,7 @@
 
 - type: radioChannel
   id: Channel31
-  name: "31"
+  name: chat-radio-channel-31
   keycode: "U"
   frequency: 131
   color: "#888888"
@@ -256,7 +361,7 @@
 
 - type: radioChannel
   id: Channel32
-  name: "32"
+  name: chat-radio-channel-32
   keycode: "V"
   frequency: 132
   color: "#888888"
@@ -264,7 +369,7 @@
 
 - type: radioChannel
   id: Channel33
-  name: "33"
+  name: chat-radio-channel-33
   keycode: "W"
   frequency: 133
   color: "#888888"
@@ -272,7 +377,7 @@
 
 - type: radioChannel
   id: Channel34
-  name: "34"
+  name: chat-radio-channel-34
   keycode: "X"
   frequency: 134
   color: "#888888"
@@ -280,7 +385,7 @@
 
 - type: radioChannel
   id: Channel35
-  name: "35"
+  name: chat-radio-channel-35
   keycode: "Y"
   frequency: 135
   color: "#888888"
@@ -288,7 +393,7 @@
 
 - type: radioChannel
   id: Channel36
-  name: "36"
+  name: chat-radio-channel-36
   keycode: "z"
   frequency: 136
   color: "#888888"

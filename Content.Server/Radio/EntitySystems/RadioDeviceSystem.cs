@@ -139,6 +139,17 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
         if (!args.IsInDetailsRange)
             return;
 
+        if (TryComp(uid, out HandheldRadioComponent? handheld) && handheld.SelectedChannel == null)
+        {
+            using (args.PushGroup(nameof(RadioMicrophoneComponent)))
+            {
+                args.PushMarkup(Loc.GetString("handheld-radio-component-chennel-examine",
+                    ("channel", Loc.GetString("handheld-radio-channel-null"))));
+            }
+
+            return;
+        }
+
         var proto = _protoMan.Index<RadioChannelPrototype>(component.BroadcastChannel);
 
         using (args.PushGroup(nameof(RadioMicrophoneComponent)))
@@ -151,6 +162,9 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
 
     private void OnListen(EntityUid uid, RadioMicrophoneComponent component, ListenEvent args)
     {
+        if (HasComp<HandheldRadioComponent>(uid))
+            return;
+
         if (HasComp<RadioSpeakerComponent>(args.Source))
             return; // no feedback loops please.
 
@@ -170,6 +184,9 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
 
     private void OnReceiveRadio(EntityUid uid, RadioSpeakerComponent component, ref RadioReceiveEvent args)
     {
+        if (HasComp<HandheldRadioComponent>(uid))
+            return;
+
         if (uid == args.RadioSource)
             return;
 
