@@ -139,6 +139,17 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
         if (!args.IsInDetailsRange)
             return;
 
+        if (TryComp(uid, out HandheldRadioComponent? handheld) && handheld.SelectedChannel == null)
+        {
+            using (args.PushGroup(nameof(RadioMicrophoneComponent)))
+            {
+                args.PushMarkup(Loc.GetString("handheld-radio-component-chennel-examine",
+                    ("channel", Loc.GetString("handheld-radio-channel-null"))));
+            }
+
+            return;
+        }
+
         var proto = _protoMan.Index<RadioChannelPrototype>(component.BroadcastChannel);
 
         using (args.PushGroup(nameof(RadioMicrophoneComponent)))

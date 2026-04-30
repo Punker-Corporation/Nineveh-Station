@@ -1,0 +1,18 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'ui-handheld-radio-title'}"
+               Resizable="False">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinSize="240 96">
+        <Label Name="CurrentChannel" Access="Public" HorizontalExpand="True" />
+        <BoxContainer Orientation="Horizontal">
+            <LineEdit Name="ChannelLineEdit" Access="Public" HorizontalExpand="True" PlaceHolder="{Loc 'ui-handheld-radio-line-edit-placeholder'}" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Name="MinimumChannel" Access="Public" HorizontalExpand="True" />
+            <Label Name="MaximumChannel" Access="Public" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <Button Name="NullButton" Access="Public" Text="{Loc 'ui-handheld-radio-null'}" HorizontalExpand="True" />
+            <Button Name="ApplyButton" Access="Public" Text="{Loc 'ui-handheld-radio-apply'}" HorizontalExpand="True" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>
