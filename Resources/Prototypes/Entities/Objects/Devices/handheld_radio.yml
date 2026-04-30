@@ -4,6 +4,7 @@
   name: "rádio portátil"
   description: "Um rádio de mão enferrujado. A estática nunca cessa. Possui 36 canais."
   components:
+  - type: TelecomExempt
   - type: Sprite
     sprite: _Scp/Objects/Devices/radio.rsi
     layers:

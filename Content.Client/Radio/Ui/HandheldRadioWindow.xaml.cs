@@ -17,14 +17,20 @@ public sealed partial class HandheldRadioWindow : DefaultWindow
         ChannelLineEdit.OnTextChanged += OnValueChanged;
     }
 
-    public void SetState(int? selectedChannel, int min, int max)
+    public void SetState(int? selectedChannel, int min, int max, bool microphoneEnabled, bool speakerEnabled)
     {
         _min = min;
         _max = max;
+        var activeChannel = selectedChannel != null;
 
         CurrentChannel.Text = selectedChannel is { } channel
             ? Loc.GetString("ui-handheld-radio-current", ("channel", channel))
             : Loc.GetString("ui-handheld-radio-current-null");
+
+        MicButton.Pressed = activeChannel && microphoneEnabled;
+        SpeakerButton.Pressed = activeChannel && speakerEnabled;
+        MicButton.Disabled = !activeChannel;
+        SpeakerButton.Disabled = !activeChannel;
 
         MinimumChannel.Text = Loc.GetString("ui-handheld-radio-min", ("channel", _min));
         MaximumChannel.Text = Loc.GetString("ui-handheld-radio-max", ("channel", _max));

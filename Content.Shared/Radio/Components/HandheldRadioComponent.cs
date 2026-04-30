@@ -14,6 +14,12 @@ public sealed partial class HandheldRadioComponent : Component
 
     [DataField]
     public int MaxChannel = 36;
+
+    [DataField, AutoNetworkedField]
+    public bool MicrophoneEnabled = true;
+
+    [DataField, AutoNetworkedField]
+    public bool SpeakerEnabled = true;
 }
 
 [Serializable, NetSerializable]
@@ -28,17 +34,48 @@ public sealed class HandheldRadioSetChannelMessage : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
+public sealed class HandheldRadioToggleMicrophoneMessage : BoundUserInterfaceMessage
+{
+    public bool Enabled;
+
+    public HandheldRadioToggleMicrophoneMessage(bool enabled)
+    {
+        Enabled = enabled;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class HandheldRadioToggleSpeakerMessage : BoundUserInterfaceMessage
+{
+    public bool Enabled;
+
+    public HandheldRadioToggleSpeakerMessage(bool enabled)
+    {
+        Enabled = enabled;
+    }
+}
+
+[Serializable, NetSerializable]
 public sealed class HandheldRadioBoundUserInterfaceState : BoundUserInterfaceState
 {
     public int? SelectedChannel;
     public int MinChannel;
     public int MaxChannel;
+    public bool MicrophoneEnabled;
+    public bool SpeakerEnabled;
 
-    public HandheldRadioBoundUserInterfaceState(int? selectedChannel, int minChannel, int maxChannel)
+    public HandheldRadioBoundUserInterfaceState(
+        int? selectedChannel,
+        int minChannel,
+        int maxChannel,
+        bool microphoneEnabled,
+        bool speakerEnabled)
     {
         SelectedChannel = selectedChannel;
         MinChannel = minChannel;
         MaxChannel = maxChannel;
+        MicrophoneEnabled = microphoneEnabled;
+        SpeakerEnabled = speakerEnabled;
     }
 }
 

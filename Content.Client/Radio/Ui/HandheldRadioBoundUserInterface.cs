@@ -22,7 +22,17 @@ public sealed class HandheldRadioBoundUserInterface : BoundUserInterface
         _window = this.CreateWindow<HandheldRadioWindow>();
 
         if (EntMan.TryGetComponent(Owner, out HandheldRadioComponent? radio))
-            _window.SetState(radio.SelectedChannel, radio.MinChannel, radio.MaxChannel);
+            _window.SetState(radio.SelectedChannel, radio.MinChannel, radio.MaxChannel, radio.MicrophoneEnabled, radio.SpeakerEnabled);
+
+        _window.MicButton.OnPressed += args =>
+        {
+            SendMessage(new HandheldRadioToggleMicrophoneMessage(args.Button.Pressed));
+        };
+
+        _window.SpeakerButton.OnPressed += args =>
+        {
+            SendMessage(new HandheldRadioToggleSpeakerMessage(args.Button.Pressed));
+        };
 
         _window.ApplyButton.OnPressed += _ =>
         {
@@ -53,6 +63,6 @@ public sealed class HandheldRadioBoundUserInterface : BoundUserInterface
         if (_window == null || state is not HandheldRadioBoundUserInterfaceState cast)
             return;
 
-        _window.SetState(cast.SelectedChannel, cast.MinChannel, cast.MaxChannel);
+        _window.SetState(cast.SelectedChannel, cast.MinChannel, cast.MaxChannel, cast.MicrophoneEnabled, cast.SpeakerEnabled);
     }
 }

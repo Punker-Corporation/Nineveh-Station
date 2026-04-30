@@ -21,6 +21,8 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         SubscribeLocalEvent<HandheldRadioComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<HandheldRadioComponent, AfterActivatableUIOpenEvent>(OnAfterUiOpen);
         SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioSetChannelMessage>(OnSetChannel);
+        SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioToggleMicrophoneMessage>(OnToggleMicrophone);
+        SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioToggleSpeakerMessage>(OnToggleSpeaker);
     }
 
     private void OnStartup(Entity<HandheldRadioComponent> ent, ref ComponentStartup args)
@@ -50,6 +52,22 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         }
     }
 
+    private void OnToggleMicrophone(Entity<HandheldRadioComponent> ent, ref HandheldRadioToggleMicrophoneMessage args)
+    {
+        ent.Comp.MicrophoneEnabled = args.Enabled;
+        Dirty(ent);
+        ApplyChannel(ent);
+        UpdateUi(ent);
+    }
+
+    private void OnToggleSpeaker(Entity<HandheldRadioComponent> ent, ref HandheldRadioToggleSpeakerMessage args)
+    {
+        ent.Comp.SpeakerEnabled = args.Enabled;
+        Dirty(ent);
+        ApplyChannel(ent);
+        UpdateUi(ent);
+    }
+
     private void ApplyChannel(Entity<HandheldRadioComponent> ent)
     {
         if (ent.Comp.SelectedChannel is not { } channel)
@@ -63,7 +81,7 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         if (TryComp(ent, out RadioMicrophoneComponent? microphone))
         {
             microphone.BroadcastChannel = radioChannel;
-            _radioDevice.SetMicrophoneEnabled(ent, null, true, true, microphone);
+            _radioDevice.SetMicrophoneEnabled(ent, null, ent.Comp.MicrophoneEnabled, true, microphone);
             Dirty(ent.Owner, microphone);
         }
 
@@ -71,11 +89,11 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         {
             speaker.Channels.Clear();
             speaker.Channels.Add(radioChannel);
-            _radioDevice.SetSpeakerEnabled(ent, null, true, true, speaker);
+            _radioDevice.SetSpeakerEnabled(ent, null, ent.Comp.SpeakerEnabled, true, speaker);
             Dirty(ent.Owner, speaker);
         }
 
-        if (TryComp(ent, out ActiveRadioComponent? activeRadio))
+        if (ent.Comp.SpeakerEnabled && TryComp(ent, out ActiveRadioComponent? activeRadio))
         {
             activeRadio.Channels.Clear();
             activeRadio.Channels.Add(radioChannel);
@@ -111,6 +129,11 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
     {
         _ui.SetUiState(ent.Owner,
             HandheldRadioUiKey.Key,
-            new HandheldRadioBoundUserInterfaceState(ent.Comp.SelectedChannel, ent.Comp.MinChannel, ent.Comp.MaxChannel));
+            new HandheldRadioBoundUserInterfaceState(
+                ent.Comp.SelectedChannel,
+                ent.Comp.MinChannel,
+                ent.Comp.MaxChannel,
+                ent.Comp.MicrophoneEnabled,
+                ent.Comp.SpeakerEnabled));
     }
 }
