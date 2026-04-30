@@ -162,6 +162,9 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
 
     private void OnListen(EntityUid uid, RadioMicrophoneComponent component, ListenEvent args)
     {
+        if (HasComp<HandheldRadioComponent>(uid))
+            return;
+
         if (HasComp<RadioSpeakerComponent>(args.Source))
             return; // no feedback loops please.
 
@@ -181,6 +184,9 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
 
     private void OnReceiveRadio(EntityUid uid, RadioSpeakerComponent component, ref RadioReceiveEvent args)
     {
+        if (HasComp<HandheldRadioComponent>(uid))
+            return;
+
         if (uid == args.RadioSource)
             return;
 

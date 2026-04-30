@@ -1,16 +1,28 @@
 using Content.Server.Popups;
+using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
+using Content.Shared._Sunrise.TTS;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
+using Content.Shared.Speech;
 using Content.Shared.UserInterface;
+using Robust.Server.Containers;
 using Robust.Server.GameObjects;
+using Robust.Shared.Network;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Radio.EntitySystems;
 
 public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
 {
+    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly ContainerSystem _container = default!;
+    [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly RadioSystem _radio = default!;
     [Dependency] private readonly RadioDeviceSystem _radioDevice = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
 
@@ -23,6 +35,8 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioSetChannelMessage>(OnSetChannel);
         SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioToggleMicrophoneMessage>(OnToggleMicrophone);
         SubscribeLocalEvent<HandheldRadioComponent, HandheldRadioToggleSpeakerMessage>(OnToggleSpeaker);
+        SubscribeLocalEvent<HandheldRadioComponent, RadioReceiveEvent>(OnRadioReceive);
+        SubscribeLocalEvent<EntitySpokeEvent>(OnEntitySpoke);
     }
 
     private void OnStartup(Entity<HandheldRadioComponent> ent, ref ComponentStartup args)
@@ -68,6 +82,56 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
         UpdateUi(ent);
     }
 
+    private void OnEntitySpoke(EntitySpokeEvent args)
+    {
+        var sentChannels = new HashSet<ProtoId<RadioChannelPrototype>>();
+        var query = EntityQueryEnumerator<HandheldRadioComponent, RadioMicrophoneComponent>();
+
+        while (query.MoveNext(out var uid, out var handheld, out var microphone))
+        {
+            if (!handheld.MicrophoneEnabled || handheld.SelectedChannel is not { } channel)
+                continue;
+
+            if (GetUser(uid) != args.Source)
+                continue;
+
+            var radioChannel = GetChannelId(channel);
+            if (!sentChannels.Add(radioChannel))
+                continue;
+
+            microphone.BroadcastChannel = radioChannel;
+            Dirty(uid, microphone);
+            _radio.SendRadioMessage(args.Source, args.Message, radioChannel, uid);
+        }
+    }
+
+    private void OnRadioReceive(Entity<HandheldRadioComponent> ent, ref RadioReceiveEvent args)
+    {
+        if (ent.Owner == args.RadioSource)
+            return;
+
+        var receiver = GetUser(ent);
+
+        if (TryComp(receiver, out ActorComponent? actor))
+        {
+            _net.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+
+            if (receiver != args.MessageSource && HasComp<TTSComponent>(args.MessageSource) && !args.Receivers.Contains(receiver))
+                args.Receivers.Add(receiver);
+
+            return;
+        }
+
+        var nameEv = new TransformSpeakerNameEvent(args.MessageSource, Name(args.MessageSource));
+        RaiseLocalEvent(args.MessageSource, nameEv);
+
+        var name = Loc.GetString("speech-name-relay",
+            ("speaker", Name(ent)),
+            ("originalName", nameEv.VoiceName));
+
+        _chat.TrySendInGameICMessage(ent, args.Message, InGameICChatType.Whisper, ChatTransmitRange.GhostRangeLimit, nameOverride: name, checkRadioPrefix: false);
+    }
+
     private void ApplyChannel(Entity<HandheldRadioComponent> ent)
     {
         if (ent.Comp.SelectedChannel is not { } channel)
@@ -76,7 +140,7 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
             return;
         }
 
-        var radioChannel = new ProtoId<RadioChannelPrototype>($"Channel{channel}");
+        var radioChannel = GetChannelId(channel);
 
         if (TryComp(ent, out RadioMicrophoneComponent? microphone))
         {
@@ -135,5 +199,29 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
                 ent.Comp.MaxChannel,
                 ent.Comp.MicrophoneEnabled,
                 ent.Comp.SpeakerEnabled));
+    }
+
+    private ProtoId<RadioChannelPrototype> GetChannelId(int channel)
+    {
+        return new ProtoId<RadioChannelPrototype>($"Channel{channel}");
+    }
+
+    private EntityUid GetUser(EntityUid radio)
+    {
+        var current = radio;
+
+        for (var i = 0; i < 8; i++)
+        {
+            if (!_container.TryGetContainingContainer((current, null, null), out var container))
+                break;
+
+            current = container.Owner;
+
+            if (HasComp<MobStateComponent>(current))
+                return current;
+        }
+
+        var parent = Transform(radio).ParentUid;
+        return parent.IsValid() ? parent : radio;
     }
 }
