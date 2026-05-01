@@ -516,6 +516,9 @@
         },
         {
             "name": "ntmining"
-        }
+        },
+      {
+        "name": "arrivals"
+      }
     ]
 }

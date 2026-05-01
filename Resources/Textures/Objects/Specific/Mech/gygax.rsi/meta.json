@@ -226,6 +226,9 @@
           0.1
         ]
       ]
+    },
+    {
+      "name": "molot-unshaded"
     }
   ]
 }
