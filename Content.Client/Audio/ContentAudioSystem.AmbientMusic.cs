@@ -1,6 +1,8 @@
 using System.Linq;
 using Content.Client.Gameplay;
 using Content.Shared._Scp.Audio;
+using Content.Shared._Scp.Fear;
+using Content.Shared._Scp.Fear.Components;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -84,7 +86,7 @@ public sealed partial class ContentAudioSystem
 
         if (_ambientMusicStream != null && _musicProto != null)
         {
-            _audio.SetVolume(_ambientMusicStream, _musicProto.Sound.Params.Volume + _volumeSlider);
+            _audio.SetVolume(_ambientMusicStream, GetAmbientMusicVolume(_musicProto.Sound.Params.Volume));
         }
     }
 
@@ -220,7 +222,7 @@ public sealed partial class ContentAudioSystem
             track.ToString(),
             Filter.Local(),
             false,
-            AudioParams.Default.WithVolume(_musicProto.Sound.Params.Volume + _volumeSlider));
+            GetAmbientMusicParams(_musicProto.Sound.Params.Volume));
 
         _ambientMusicStream = strim?.Entity;
 
@@ -262,6 +264,45 @@ public sealed partial class ContentAudioSystem
 
         _sawmill.Warning($"Unable to find fallback ambience track");
         return null;
+    }
+
+    private AudioParams GetAmbientMusicParams(float baseVolume)
+    {
+        var tension = GetLocalFearTension();
+
+        // The ambient music lane is intentionally routed through a procedural profile.
+        // The low-level mixer applies a slow pitch descent, mild saturation, and gain
+        // drift as tension rises, which keeps long ambient beds from feeling static.
+        return AudioParams.Default
+            .WithVolume(GetAmbientMusicVolume(baseVolume))
+            .WithBus(AudioBus.Music)
+            .WithPsychoacousticProfile(PsychoacousticProfile.ProceduralMusic, tension)
+            .WithAcousticMaterial(AcousticMaterialProfile.OpenField);
+    }
+
+    private float GetAmbientMusicVolume(float baseVolume)
+    {
+        var tension = GetLocalFearTension();
+
+        // The music bus remains conservative at low fear, then opens extra headroom
+        // for drones and aleatoric layers when the player is already primed.
+        return baseVolume + _volumeSlider + tension * 1.5f;
+    }
+
+    private float GetLocalFearTension()
+    {
+        var player = _player.LocalEntity;
+
+        if (player == null || !TryComp<FearComponent>(player.Value, out var fear))
+            return 0f;
+
+        return fear.State switch
+        {
+            FearState.Anxiety => 0.33f,
+            FearState.Fear => 0.66f,
+            FearState.Terror => 1f,
+            _ => 0f,
+        };
     }
 
     /// <summary>
@@ -306,7 +347,7 @@ public sealed partial class ContentAudioSystem
             track.ToString(),
             Filter.Local(),
             false,
-            AudioParams.Default.WithVolume(proto.Sound.Params.Volume + _volumeSlider));
+            GetAmbientMusicParams(proto.Sound.Params.Volume));
 
         _ambientMusicStream = strim?.Entity;
 
