@@ -56,7 +56,6 @@ public sealed class LightFlickingSystem : SharedLightFlickingSystem
         return origin * (1 + variation);
     }
 
-    // Мне это написал чатгпт
     private static Color DimColorBasedOnChange(Color color, float firstNumber, float secondNumber)
     {
         // Вычисляем разницу между вторым и первым числом
