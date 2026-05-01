@@ -1,0 +1,799 @@
+From 06d5572eb670421c1242a1c47803212421ebba70 Mon Sep 17 00:00:00 2001
+From: C# <r14n0070@gmail.com>
+Date: Thu, 30 Apr 2026 22:58:36 -0400
+Subject: [PATCH] Rework point light visibility
+
+---
+ Resources/Shaders/Internal/light-hard.swsl    |   9 -
+ Resources/Shaders/Internal/light-soft.swsl    |  68 ---
+ Resources/Shaders/Internal/light_shared.swsl  | 111 +++--
+ .../Graphics/Clyde/Clyde.LightRendering.cs    | 407 +++++++++++++++---
+ 4 files changed, 433 insertions(+), 162 deletions(-)
+
+diff --git a/Resources/Shaders/Internal/light-hard.swsl b/Resources/Shaders/Internal/light-hard.swsl
+index 7998888a8..fe670210b 100644
+--- a/Resources/Shaders/Internal/light-hard.swsl
++++ b/Resources/Shaders/Internal/light-hard.swsl
+@@ -1,11 +1,2 @@
+ #include "/Shaders/Internal/light_shared.swsl"
+ 
+-highp float createOcclusion(highp vec2 diff)
+-{
+-    highp float ourDist = length(diff);
+-
+-    highp vec2 occlDist = occludeDepth(diff, shadowMap, lightIndex);
+-
+-    return smoothstep(0.1, 1.0, ChebyshevUpperBound(occlDist, ourDist));
+-}
+-
+diff --git a/Resources/Shaders/Internal/light-soft.swsl b/Resources/Shaders/Internal/light-soft.swsl
+index 79cfaeeeb..fe670210b 100644
+--- a/Resources/Shaders/Internal/light-soft.swsl
++++ b/Resources/Shaders/Internal/light-soft.swsl
+@@ -1,70 +1,2 @@
+ #include "/Shaders/Internal/light_shared.swsl"
+ 
+-highp vec4 calcGaussianWeights(highp float sigma, highp vec4 offset)
+-{
+-    highp vec4 eExp = offset * offset / (2.0 * sigma * sigma);
+-    return exp(-eExp) / (sigma * sqrt(2.0 * PI));
+-}
+-
+-highp float createOcclusion(highp vec2 diff)
+-{
+-    // Calculate vector perpendicular to light vector.
+-    // So we can sample it to get a decent soft shadow?
+-    highp vec2 perpendicular = normalize(cross(vec3(diff, 0.0), vec3(0.0, 0.0, 1.0)).xy) * 1.0 / 32.0;
+-
+-    highp float ourDist = length(diff);
+-
+-    // Sample 7 points on a line perpendicular to the light source.
+-    // Depending on the closest point, we change the gaussian weights down below
+-    // to change the "narrowness" of the samples.
+-    perpendicular *= lightSoftness * 1.5;
+-
+-    // Get all the samples we need.
+-    highp vec2 sample1 = occludeDepth(diff, shadowMap, lightIndex);
+-    highp vec2 sample2 = occludeDepth(diff + perpendicular, shadowMap, lightIndex);
+-    highp vec2 sample3 = occludeDepth(diff - perpendicular, shadowMap, lightIndex);
+-    highp vec2 sample4 = occludeDepth(diff + perpendicular * 2.0, shadowMap, lightIndex);
+-    highp vec2 sample5 = occludeDepth(diff - perpendicular * 2.0, shadowMap, lightIndex);
+-    highp vec2 sample6 = occludeDepth(diff + perpendicular * 3.0, shadowMap, lightIndex);
+-    highp vec2 sample7 = occludeDepth(diff - perpendicular * 3.0, shadowMap, lightIndex);
+-
+-    highp float mindist =
+-        min(sample1.x,
+-        min(sample2.x,
+-        min(sample3.x,
+-        min(sample4.x,
+-        min(sample5.x,
+-        min(sample6.x,
+-            sample7.x))))));
+-
+-    mindist = max(0.001, mindist);
+-
+-    // Change soft shadow size based on distance from primary occluder.
+-    highp float distRatio = (ourDist - mindist);
+-
+-    // Sigma can never be zero so make sure to clamp.
+-    // TODO: Scaling the dist ratio here in a more sane way might make shadows look better buuuut I'm lazy.
+-    // Shadows look pretty nice already.
+-    highp float sigma = max(0.001, distRatio * 0.75);
+-    highp vec4 weights = calcGaussianWeights(sigma, vec4(0.0, 1.0, 2.0, 3.0));
+-
+-    // Calculation of gaussian weights here is broken because it doesn't add up to 1.
+-    // Fixing this is hard and if I had to guess too expensive for GPU shaders.
+-    // So instead we add up the total weights and scale the result with that,
+-    // so that we still end up with 0-1.
+-    highp float totalWeigths = weights.x + weights.y * 2.0 + weights.z * 2.0 + weights.w * 2.0;
+-
+-    highp float occlusion = 0.0;
+-
+-    // Calculate actual occlusion with new weights.
+-    occlusion += ChebyshevUpperBound(sample1, ourDist) * weights.x;
+-    occlusion += ChebyshevUpperBound(sample2, ourDist) * weights.y;
+-    occlusion += ChebyshevUpperBound(sample3, ourDist) * weights.y;
+-    occlusion += ChebyshevUpperBound(sample4, ourDist) * weights.z;
+-    occlusion += ChebyshevUpperBound(sample5, ourDist) * weights.z;
+-    occlusion += ChebyshevUpperBound(sample6, ourDist) * weights.w;
+-    occlusion += ChebyshevUpperBound(sample7, ourDist) * weights.w;
+-
+-    return occlusion / totalWeigths;
+-}
+-
+diff --git a/Resources/Shaders/Internal/light_shared.swsl b/Resources/Shaders/Internal/light_shared.swsl
+index e101e4aa5..b0157868f 100644
+--- a/Resources/Shaders/Internal/light_shared.swsl
++++ b/Resources/Shaders/Internal/light_shared.swsl
+@@ -1,10 +1,8 @@
+ preset raw;
+ 
+-#include "/Shaders/Internal/shadow_cast_shared.swsl"
+-
++const highp float PI = 3.1415926535897932384626433;
+ const highp float LIGHTING_HEIGHT = 1.0;
+-
+-const highp float g_MinVariance = 0.0;
++const highp int VOLUMETRIC_STEPS = 8;
+ 
+ varying highp vec2 worldPosition;
+ 
+@@ -16,8 +14,9 @@ uniform highp float lightPower;
+ uniform highp float lightSoftness;
+ uniform highp float lightFalloff;
+ uniform highp float lightCurveFactor;
++// Negative means the light is intentionally shadowless. Non-negative lights are
++// clipped by the CPU visibility fan before this fragment shader runs.
+ uniform highp float lightIndex;
+-uniform sampler2D shadowMap;
+ 
+ void vertex()
+ {
+@@ -28,40 +27,102 @@ void vertex()
+     VERTEX = transformed.xy;
+ }
+ 
+-highp float shadowContrib(highp vec2 diff)
++highp float hash12(highp vec2 p)
++{
++    highp vec3 p3 = fract(vec3(p.xyx) * 0.1031);
++    p3 += dot(p3, p3.yzx + 33.33);
++    return fract((p3.x + p3.y) * p3.z);
++}
++
++highp float valueNoise(highp vec2 p)
+ {
+-    highp float dist = length(diff);
++    highp vec2 i = floor(p);
++    highp vec2 f = fract(p);
++    f = f * f * (3.0 - 2.0 * f);
+ 
+-    return smoothstep(0.0, 1.0, ChebyshevUpperBound(occludeDepth(diff, shadowMap, lightIndex), dist));
++    highp float a = hash12(i);
++    highp float b = hash12(i + vec2(1.0, 0.0));
++    highp float c = hash12(i + vec2(0.0, 1.0));
++    highp float d = hash12(i + vec2(1.0, 1.0));
++
++    return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+ }
+ 
+-void fragment()
++highp vec2 distortedMaskUv(highp vec2 uv, highp vec2 world, highp float sourceSeed)
+ {
+-    highp float mask = zTexture(UV).r;
++    // Procedural mask drift makes moving shadows feel agentive while staying
++    // bounded to sub-texel scale for ordinary station lighting. The distortion is
++    // intentionally low frequency: plausible enough to be read as electrical or
++    // optical instability, but not as a decorative screen filter.
++    highp float emotionalGain = clamp(lightSoftness * 0.08 + lightCurveFactor * 0.04, 0.0, 0.16);
++    highp vec2 flow = vec2(
++        valueNoise(world * 1.7 + vec2(TIME * 0.19 + sourceSeed, sourceSeed)),
++        valueNoise(world * 1.3 + vec2(sourceSeed, TIME * -0.23 - sourceSeed)));
++
++    return uv + (flow - 0.5) * emotionalGain;
++}
+ 
+-    highp vec2 diff = worldPosition - lightCenter;
++highp float psychophysicalFlicker(highp float sourceSeed)
++{
++    // Small luminance fluctuations are most unsettling when they remain in the
++    // range of faulty fixtures rather than becoming an obvious strobe. Three bands
++    // are layered: slow mains drift, visible shimmer, and rare micro dropouts.
++    highp float slow = sin(TIME * (0.65 + sourceSeed * 0.21) + sourceSeed * 6.0) * 0.018;
++    highp float shimmer = sin(TIME * (7.0 + sourceSeed * 5.0) + sourceSeed * 17.0) * 0.010;
++    highp float dropoutNoise = valueNoise(vec2(sourceSeed * 31.0, TIME * 3.7));
++    highp float dropout = smoothstep(0.965, 1.0, dropoutNoise) * (0.035 + lightSoftness * 0.012);
++
++    return clamp(1.0 + slow + shimmer - dropout, 0.82, 1.14);
++}
+ 
+-    // Totally not hacky PCF on top of VSM.
+-    highp float occlusion = lightIndex < 0.0 ? 1.0 : createOcclusion(diff);
++highp float volumetricMarch(highp vec2 diff, highp float normalizedDistance, highp float sourceSeed)
++{
++    highp vec2 stepVector = diff / float(VOLUMETRIC_STEPS);
++    highp vec2 p = lightCenter;
++    highp float transmittance = 1.0;
++    highp float accumulated = 0.0;
+ 
+-    if (occlusion == 0.0)
++    for (int i = 0; i < VOLUMETRIC_STEPS; i++)
+     {
+-        discard;
++        p += stepVector;
++        highp float fog = valueNoise(p * 0.55 + vec2(sourceSeed * 13.0, TIME * 0.07));
++        fog = smoothstep(0.34, 1.0, fog);
++
++        highp float phase = pow(1.0 - normalizedDistance, 1.6);
++        highp float density = fog * (0.010 + lightSoftness * 0.005) * phase;
++        accumulated += density * transmittance;
++        transmittance *= 1.0 - density;
+     }
+ 
+-    // this implementation of light attenuation primarily adapted from
+-    // https://lisyarus.github.io/blog/posts/point-light-attenuation.html
+-    highp float sqr_dist = dot(diff, diff) + LIGHTING_HEIGHT;
++    return clamp(accumulated, 0.0, 0.25);
++}
++
++void fragment()
++{
++    highp vec2 diff = worldPosition - lightCenter;
++    highp float distSquared = dot(diff, diff);
++    highp float dist = sqrt(distSquared + LIGHTING_HEIGHT);
++    highp float sourceSeed = hash12(lightCenter + vec2(lightRange, lightPower));
++
++    highp vec2 maskUv = distortedMaskUv(UV, worldPosition, sourceSeed);
++    highp float mask = zTexture(maskUv).r;
+ 
+-    highp float s = clamp(sqrt(sqr_dist) / lightRange, 0.0, 1.0);
++    highp float s = clamp(dist / lightRange, 0.0, 1.0);
+     highp float s2 = s * s;
+-    // controls curve by lerping between two variants (inverse-shape and inversequadratic-shape)
+     highp float curveFactor = mix(s, s2, clamp(lightCurveFactor, 0.0, 1.0));
+-    highp float val = clamp(((1.0 - s2) * (1.0 - s2)) / (1.0 + lightFalloff * curveFactor), 0.0, 1.0);
++    highp float attenuation = clamp(((1.0 - s2) * (1.0 - s2)) / (1.0 + lightFalloff * curveFactor), 0.0, 1.0);
+ 
+-    val *= lightPower;
+-    val *= mask;
++    // The CPU fan provides binary geometric visibility. This edge term models
++    // light source area at the receiver: larger softness yields a wider falloff
++    // near the fixture boundary without reintroducing wall leaks.
++    highp float areaEdge = 1.0 - smoothstep(clamp(1.0 - lightSoftness * 0.035, 0.75, 0.999), 1.0, s);
++    highp float flicker = psychophysicalFlicker(sourceSeed);
++    highp float volume = volumetricMarch(diff, s, sourceSeed);
+ 
+-    COLOR = vec4(lightColor.rgb, val * occlusion);
+-}
++    highp float val = attenuation * lightPower * mask * flicker;
++    highp vec3 shiftedColor = lightColor.rgb;
++    shiftedColor.r += (flicker - 1.0) * 0.15;
++    shiftedColor.b -= (flicker - 1.0) * 0.10;
+ 
++    COLOR = vec4(max(shiftedColor, vec3(0.0)), val * areaEdge + volume * lightPower * mask);
++}
+diff --git a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+index cbc2da3e1..f07a2086a 100644
+--- a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
++++ b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+@@ -3,6 +3,7 @@ using System.Collections.Generic;
+ using System.Buffers;
+ using System.Diagnostics.Contracts;
+ using System.Numerics;
++using System.Runtime.InteropServices;
+ using OpenToolkit.Graphics.OpenGL4;
+ using Robust.Client.GameObjects;
+ using Robust.Client.ResourceManagement;
+@@ -28,13 +29,17 @@ namespace Robust.Client.Graphics.Clyde
+ 
+     internal partial class Clyde
+     {
+-        // Horizontal width, in pixels, of the shadow maps used to render regular lights.
+-        private const int ShadowMapSize = 512;
+-
+         // Horizontal width, in pixels, of the shadow maps used to render FOV.
+         // I figured this was more accuracy sensitive than lights so resolution is significantly higher.
+         private const int FovMapSize = 2048;
+ 
++        private const float LightingTau = MathF.PI * 2f;
++        private const float LightingRayEpsilon = 0.0001f;
++        private const float LightingAngularEpsilon = 0.00075f;
++        private const int LightingCircleSegments = 96;
++        private const int LightingAngularBins = 512;
++        private const int LightingVisibilityInitialVertexCapacity = 4096;
++
+         private ClydeShaderInstance _fovDebugShaderInstance = default!;
+ 
+         // Various shaders used in the light rendering process.
+@@ -82,15 +87,8 @@ namespace Robust.Client.Graphics.Clyde
+         // For depth calculation for FOV.
+         private RenderTexture _fovRenderTarget = default!;
+ 
+-        // For depth calculation of lighting shadows.
+-        private RenderTexture _shadowRenderTarget = default!;
+-
+-        // Used because otherwise a MaxLightsPerScene change callback getting hit on startup causes interesting issues (read: bugs)
+-        private bool _shadowRenderTargetCanInitializeSafely = false;
+-
+         // Proxies to textures of the above render targets.
+         private ClydeTexture FovTexture => _fovRenderTarget.Texture;
+-        private ClydeTexture ShadowTexture => _shadowRenderTarget.Texture;
+ 
+         private (PointLightComponent light, Vector2 pos, float distanceSquared, Angle rot)[] _lightsToRenderList = default!;
+ 
+@@ -99,6 +97,15 @@ namespace Robust.Client.Graphics.Clyde
+ 
+         private float _maxLightRadius;
+ 
++        private GLBuffer _lightVisibilityVbo = default!;
++        private GLHandle _lightVisibilityVao;
++
++        private readonly List<LightOccluderSegment> _lightOccluderSegments = new(2048);
++        private readonly List<LightVisibilityCandidate> _lightVisibilityCandidates = new(2048);
++        private readonly List<int>[] _lightVisibilityAngularBins = CreateLightVisibilityAngularBins();
++        private readonly List<float> _lightVisibilityAngles = new(4096);
++        private readonly List<Vertex2D> _lightVisibilityVertices = new(LightingVisibilityInitialVertexCapacity);
++
+         private unsafe void InitLighting()
+         {
+             _cfg.OnValueChanged(CVars.MaxLightRadius, val => { _maxLightRadius = val;}, true);
+@@ -157,6 +164,33 @@ namespace Robust.Client.Graphics.Clyde
+                 CheckGlError();
+             }
+ 
++            {
++                // Exact light visibility VAO.
++                //
++                // The previous per-light path rendered occluder depth into a 1D polar
++                // variance shadow map and recovered visibility probabilistically in the
++                // light shader. That is fast, but it can leak light whenever moments are
++                // filtered across unrelated blockers. For horror scenes this is the wrong
++                // failure mode: a sealed doorway must remain black.
++                //
++                // This buffer receives a triangle fan generated on the CPU from exact
++                // ray/segment intersections. The fragment shader then only shades pixels
++                // that are geometrically visible from the light source.
++                _lightVisibilityVao = new GLHandle(GenVertexArray());
++                BindVertexArray(_lightVisibilityVao.Handle);
++                CheckGlError();
++
++                ObjectLabelMaybe(ObjectLabelIdentifier.VertexArray, _lightVisibilityVao, nameof(_lightVisibilityVao));
++
++                _lightVisibilityVbo = new GLBuffer(this, BufferTarget.ArrayBuffer, BufferUsageHint.DynamicDraw,
++                    sizeof(Vertex2D) * LightingVisibilityInitialVertexCapacity,
++                    nameof(_lightVisibilityVbo));
++                GL.BindBuffer(BufferTarget.ArrayBuffer, _lightVisibilityVbo.ObjectHandle);
++                SetupVAOLayout();
++
++                CheckGlError();
++            }
++
+             // FOV FBO.
+             _fovRenderTarget = CreateRenderTarget((FovMapSize, 2),
+                 new RenderTargetFormatParameters(
+@@ -174,9 +208,9 @@ namespace Robust.Client.Graphics.Clyde
+                 CheckGlError();
+             }
+ 
+-            // Shadow FBO.
+-            _shadowRenderTargetCanInitializeSafely = true;
+-            MaxShadowcastingLightsChanged(_maxShadowcastingLights);
++            // The FOV path still uses the legacy polar depth map because gameplay FOV
++            // needs the "see into walls" double-pass semantics. Point-light shadows no
++            // longer allocate a variance shadow map; they are resolved by CPU geometry.
+         }
+ 
+         private void LoadLightingShaders()
+@@ -369,28 +403,6 @@ namespace Robust.Client.Graphics.Clyde
+                 return;
+             }
+ 
+-            using (DebugGroup("Draw shadow depth"))
+-            using (_prof.Group("Draw shadow depth"))
+-            {
+-                PrepareDepthDraw(RtToLoaded(_shadowRenderTarget));
+-                GL.CullFace(CullFaceMode.Back);
+-                CheckGlError();
+-
+-                if (_lightManager.DrawShadows)
+-                {
+-                    for (var i = 0; i < count; i++)
+-                    {
+-                        var (light, lightPos, _, _) = _lightsToRenderList[i];
+-
+-                        if (!light.CastShadows) continue;
+-
+-                        DrawOcclusionDepth(lightPos, ShadowMapSize, light.Radius, i);
+-                    }
+-                }
+-
+-                FinalizeDepthDraw();
+-            }
+-
+             IsStencilling = true;
+ 
+             var (lightW, lightH) = GetLightMapSize(viewport.Size);
+@@ -434,10 +446,7 @@ namespace Robust.Client.Graphics.Clyde
+                 .Program;
+             lightShader.Use();
+ 
+-            SetupGlobalUniformsImmediate(lightShader, ShadowTexture);
+-
+-            SetTexture(TextureUnit.Texture1, ShadowTexture);
+-            lightShader.SetUniformTextureMaybe("shadowMap", TextureUnit.Texture1);
++            SetupGlobalUniformsImmediate(lightShader, viewport.LightRenderTarget.Texture);
+ 
+             GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.One);
+             CheckGlError();
+@@ -455,7 +464,7 @@ namespace Robust.Client.Graphics.Clyde
+             var lastCurveFactor = float.NaN;
+             Texture? lastMask = null;
+ 
+-            using (_prof.Group("Draw Lights"))
++            using (_prof.Group("Draw exact lights"))
+             {
+                 for (var i = 0; i < count; i++)
+                 {
+@@ -479,6 +488,7 @@ namespace Robust.Client.Graphics.Clyde
+                     {
+                         SetTexture(TextureUnit.Texture0, maskTexture);
+                         lastMask = maskTexture;
++                        SetupGlobalUniformsImmediate(lightShader, (ClydeTexture) maskTexture);
+                         lightShader.SetUniformTextureMaybe(UniIMainTexture, TextureUnit.Texture0);
+                     }
+ 
+@@ -500,7 +510,7 @@ namespace Robust.Client.Graphics.Clyde
+                         lightShader.SetUniformMaybe("lightColor", lastColor);
+                     }
+ 
+-                    if (_enableSoftShadows && !MathHelper.CloseToPercent(lastSoftness, component.Softness))
++                    if (!MathHelper.CloseToPercent(lastSoftness, component.Softness))
+                     {
+                         lastSoftness = component.Softness;
+                         lightShader.SetUniformMaybe("lightSoftness", lastSoftness);
+@@ -519,8 +529,7 @@ namespace Robust.Client.Graphics.Clyde
+                     }
+ 
+                     lightShader.SetUniformMaybe("lightCenter", lightPos);
+-                    lightShader.SetUniformMaybe("lightIndex",
+-                        component.CastShadows ? (i + 0.5f) / ShadowTexture.Height : -1);
++                    lightShader.SetUniformMaybe("lightIndex", component.CastShadows ? 1.0f : -1.0f);
+ 
+                     var offset = new Vector2(component.Radius, component.Radius);
+ 
+@@ -537,7 +546,14 @@ namespace Robust.Client.Graphics.Clyde
+ 
+                     (matrix.M31, matrix.M32) = lightPos;
+ 
+-                    _drawQuad(-offset, offset, matrix, lightShader);
++                    if (_lightManager.DrawShadows && component.CastShadows)
++                    {
++                        DrawExactLightFan(component, lightPos, rotation, lightShader);
++                    }
++                    else
++                    {
++                        _drawQuad(-offset, offset, matrix, lightShader);
++                    }
+                 }
+             }
+ 
+@@ -567,6 +583,263 @@ namespace Robust.Client.Graphics.Clyde
+             Array.Clear(_lightsToRenderList, 0, count);
+         }
+ 
++        private void DrawExactLightFan(
++            PointLightComponent component,
++            Vector2 lightPos,
++            Angle maskRotation,
++            GLShaderProgram lightShader)
++        {
++            BuildExactLightFan(component, lightPos, maskRotation);
++
++            if (_lightVisibilityVertices.Count < 4)
++                return;
++
++            _lightVisibilityVbo.Reallocate(CollectionsMarshal.AsSpan(_lightVisibilityVertices));
++
++            BindVertexArray(_lightVisibilityVao.Handle);
++            CheckGlError();
++
++            lightShader.SetUniformMaybe(UniIModelMatrix, Matrix3x2.Identity);
++
++            GL.DrawArrays(PrimitiveType.TriangleFan, 0, _lightVisibilityVertices.Count);
++            CheckGlError();
++            _debugStats.LastGLDrawCalls += 1;
++        }
++
++        private void BuildExactLightFan(PointLightComponent component, Vector2 lightPos, Angle maskRotation)
++        {
++            _lightVisibilityVertices.Clear();
++            _lightVisibilityAngles.Clear();
++            _lightVisibilityCandidates.Clear();
++            ClearLightVisibilityAngularBins();
++
++            var radius = component.Radius;
++            var radiusSquared = radius * radius;
++
++            _lightVisibilityVertices.Add(new Vertex2D(lightPos, new Vector2(0.5f, 0.5f), Color.White));
++
++            // Base angular samples keep the fan stable when a light has no nearby
++            // blockers and bound the maximum triangle size. Endpoint samples below
++            // are what make the visibility exact at occluder silhouettes.
++            for (var i = 0; i < LightingCircleSegments; i++)
++            {
++                _lightVisibilityAngles.Add(i * LightingTau / LightingCircleSegments);
++            }
++
++            for (var i = 0; i < _lightOccluderSegments.Count; i++)
++            {
++                var segment = _lightOccluderSegments[i];
++                if (!SegmentCanAffectLight(segment, lightPos, radiusSquared))
++                    continue;
++
++                AddLightVisibilityCandidate(i, segment, lightPos);
++
++                AddEndpointAngles(segment.A, lightPos);
++                AddEndpointAngles(segment.B, lightPos);
++            }
++
++            _lightVisibilityAngles.Sort();
++
++            var lastAngle = float.NaN;
++            for (var i = 0; i < _lightVisibilityAngles.Count; i++)
++            {
++                var angle = NormalizeAngle(_lightVisibilityAngles[i]);
++                if (!float.IsNaN(lastAngle) && MathF.Abs(angle - lastAngle) < LightingAngularEpsilon * 0.5f)
++                    continue;
++
++                lastAngle = angle;
++                var direction = new Vector2(MathF.Cos(angle), MathF.Sin(angle));
++                var distance = CastLightRay(lightPos, direction, radius);
++                var world = lightPos + direction * distance;
++                _lightVisibilityVertices.Add(new Vertex2D(world, LightMaskUv(world, lightPos, radius, maskRotation), Color.White));
++            }
++
++            if (_lightVisibilityVertices.Count > 2)
++            {
++                _lightVisibilityVertices.Add(_lightVisibilityVertices[1]);
++            }
++        }
++
++        private void AddEndpointAngles(Vector2 endpoint, Vector2 lightPos)
++        {
++            var diff = endpoint - lightPos;
++            if (diff.LengthSquared() <= LightingRayEpsilon)
++                return;
++
++            var angle = MathF.Atan2(diff.Y, diff.X);
++            _lightVisibilityAngles.Add(NormalizeAngle(angle - LightingAngularEpsilon));
++            _lightVisibilityAngles.Add(NormalizeAngle(angle));
++            _lightVisibilityAngles.Add(NormalizeAngle(angle + LightingAngularEpsilon));
++        }
++
++        private void AddLightVisibilityCandidate(int segmentIndex, LightOccluderSegment segment, Vector2 lightPos)
++        {
++            var angleA = NormalizeAngle(MathF.Atan2(segment.A.Y - lightPos.Y, segment.A.X - lightPos.X));
++            var angleB = NormalizeAngle(MathF.Atan2(segment.B.Y - lightPos.Y, segment.B.X - lightPos.X));
++
++            var delta = NormalizeAngle(angleB - angleA);
++            var start = angleA;
++            var end = angleB;
++
++            if (delta > MathF.PI)
++            {
++                start = angleB;
++                end = angleA;
++            }
++
++            start = NormalizeAngle(start - LightingAngularEpsilon);
++            end = NormalizeAngle(end + LightingAngularEpsilon);
++
++            var candidate = new LightVisibilityCandidate(segmentIndex, start, end, start > end);
++            var candidateIndex = _lightVisibilityCandidates.Count;
++            _lightVisibilityCandidates.Add(candidate);
++            AddLightVisibilityCandidateToAngularBins(candidateIndex, candidate);
++        }
++
++        private float CastLightRay(Vector2 lightPos, Vector2 direction, float radius)
++        {
++            var best = radius;
++            var angle = NormalizeAngle(MathF.Atan2(direction.Y, direction.X));
++            var bin = _lightVisibilityAngularBins[AngleToLightingBin(angle)];
++
++            for (var i = 0; i < bin.Count; i++)
++            {
++                var candidate = _lightVisibilityCandidates[bin[i]];
++                if (!candidate.Contains(angle))
++                    continue;
++
++                var segment = _lightOccluderSegments[candidate.SegmentIndex];
++                if (!RayIntersectsSegment(lightPos, direction, segment.A, segment.B, best, out var distance))
++                    continue;
++
++                best = distance;
++            }
++
++            return best;
++        }
++
++        private void AddLightVisibilityCandidateToAngularBins(int candidateIndex, LightVisibilityCandidate candidate)
++        {
++            if (candidate.Wraps)
++            {
++                AddLightVisibilityCandidateToAngularBinRange(candidateIndex, candidate.StartAngle, LightingTau);
++                AddLightVisibilityCandidateToAngularBinRange(candidateIndex, 0f, candidate.EndAngle);
++                return;
++            }
++
++            AddLightVisibilityCandidateToAngularBinRange(candidateIndex, candidate.StartAngle, candidate.EndAngle);
++        }
++
++        private void AddLightVisibilityCandidateToAngularBinRange(int candidateIndex, float startAngle, float endAngle)
++        {
++            var startBin = AngleToLightingBin(startAngle);
++            var endBin = endAngle >= LightingTau
++                ? LightingAngularBins - 1
++                : AngleToLightingBin(endAngle);
++
++            for (var bin = startBin; bin <= endBin; bin++)
++            {
++                _lightVisibilityAngularBins[bin].Add(candidateIndex);
++            }
++        }
++
++        private void ClearLightVisibilityAngularBins()
++        {
++            for (var i = 0; i < _lightVisibilityAngularBins.Length; i++)
++            {
++                _lightVisibilityAngularBins[i].Clear();
++            }
++        }
++
++        private static int AngleToLightingBin(float angle)
++        {
++            var normalized = NormalizeAngle(angle);
++            var bin = (int) (normalized / LightingTau * LightingAngularBins);
++            return Math.Clamp(bin, 0, LightingAngularBins - 1);
++        }
++
++        private static List<int>[] CreateLightVisibilityAngularBins()
++        {
++            var bins = new List<int>[LightingAngularBins];
++            for (var i = 0; i < bins.Length; i++)
++            {
++                bins[i] = new List<int>(32);
++            }
++
++            return bins;
++        }
++
++        private static bool SegmentCanAffectLight(LightOccluderSegment segment, Vector2 lightPos, float radiusSquared)
++        {
++            var closest = ClosestPointOnSegment(lightPos, segment.A, segment.B);
++            return Vector2.DistanceSquared(lightPos, closest) <= radiusSquared;
++        }
++
++        private static Vector2 ClosestPointOnSegment(Vector2 point, Vector2 a, Vector2 b)
++        {
++            var ab = b - a;
++            var lengthSquared = ab.LengthSquared();
++            if (lengthSquared <= LightingRayEpsilon)
++                return a;
++
++            var t = Vector2.Dot(point - a, ab) / lengthSquared;
++            return a + ab * Math.Clamp(t, 0f, 1f);
++        }
++
++        private static bool RayIntersectsSegment(
++            Vector2 origin,
++            Vector2 direction,
++            Vector2 a,
++            Vector2 b,
++            float maxDistance,
++            out float distance)
++        {
++            distance = 0f;
++
++            var segment = b - a;
++            var denominator = Cross(direction, segment);
++            if (MathF.Abs(denominator) < LightingRayEpsilon)
++                return false;
++
++            var originToA = a - origin;
++            var t = Cross(originToA, segment) / denominator;
++            var u = Cross(originToA, direction) / denominator;
++
++            if (t <= LightingRayEpsilon || t > maxDistance || u < 0f || u > 1f)
++                return false;
++
++            distance = t;
++            return true;
++        }
++
++        private static Vector2 LightMaskUv(Vector2 world, Vector2 lightPos, float radius, Angle rotation)
++        {
++            var local = world - lightPos;
++
++            if (rotation != Angle.Zero)
++            {
++                var theta = -(float) rotation.Theta;
++                var sin = MathF.Sin(theta);
++                var cos = MathF.Cos(theta);
++                local = new Vector2(local.X * cos - local.Y * sin, local.X * sin + local.Y * cos);
++            }
++
++            return new Vector2(
++                0.5f + local.X / (radius * 2f),
++                0.5f - local.Y / (radius * 2f));
++        }
++
++        private static float NormalizeAngle(float angle)
++        {
++            angle %= LightingTau;
++            return angle < 0f ? angle + LightingTau : angle;
++        }
++
++        private static float Cross(Vector2 a, Vector2 b)
++        {
++            return a.X * b.Y - a.Y * b.X;
++        }
++
+         private static bool LightQuery(ref (
+             Clyde clyde,
+             int count,
+@@ -972,6 +1245,7 @@ namespace Robust.Client.Graphics.Clyde
+             var amiMax = _maxOccluders * 4;
+ 
+             var xforms = _entityManager.GetEntityQuery<TransformComponent>();
++            _lightOccluderSegments.Clear();
+ 
+             try
+             {
+@@ -1049,6 +1323,19 @@ namespace Robust.Client.Graphics.Clyde
+                         var eo = (occluder.Occluding & OccluderDir.East) != 0;
+                         var wo = (occluder.Occluding & OccluderDir.West) != 0;
+ 
++                        // Exact light shadows use only exposed occluder boundaries.
++                        // Interior wall-to-wall edges are intentionally skipped; otherwise
++                        // the CPU visibility fan would create false supernatural slivers
++                        // where two solid cells touch.
++                        if (!no)
++                            _lightOccluderSegments.Add(new LightOccluderSegment(tl, tr));
++                        if (!eo)
++                            _lightOccluderSegments.Add(new LightOccluderSegment(tr, br));
++                        if (!so)
++                            _lightOccluderSegments.Add(new LightOccluderSegment(br, bl));
++                        if (!wo)
++                            _lightOccluderSegments.Add(new LightOccluderSegment(bl, tl));
++
+                         // Do visibility tests for occluders (described above).
+                         static bool CheckFaceEyeVis(Vector2 a, Vector2 b)
+                         {
+@@ -1237,22 +1524,6 @@ namespace Robust.Client.Graphics.Clyde
+         {
+             _maxShadowcastingLights = newValue;
+             DebugTools.Assert(_maxLights >= _maxShadowcastingLights);
+-
+-            // This guard is in place because otherwise the shadow FBO is initialized before GL is initialized.
+-            if (!_shadowRenderTargetCanInitializeSafely)
+-                return;
+-
+-            if (_shadowRenderTarget != null)
+-            {
+-                DeleteRenderTexture(_shadowRenderTarget.Handle);
+-            }
+-
+-            // Shadow FBO.
+-            _shadowRenderTarget = CreateRenderTarget((ShadowMapSize, _maxShadowcastingLights),
+-                new RenderTargetFormatParameters(
+-                    _hasGLFloatFramebuffers ? RenderTargetColorFormat.RG32F : RenderTargetColorFormat.Rgba8, true),
+-                new TextureSampleParameters { WrapMode = TextureWrapMode.Repeat, Filter = true },
+-                nameof(_shadowRenderTarget));
+         }
+ 
+         private void SoftShadowsChanged(bool newValue)
+@@ -1271,5 +1542,21 @@ namespace Robust.Client.Graphics.Clyde
+             _lightsToRenderList = new (PointLightComponent, Vector2, float , Angle)[value];
+             DebugTools.Assert(_maxLights >= _maxShadowcastingLights);
+         }
++
++        private readonly record struct LightOccluderSegment(Vector2 A, Vector2 B);
++
++        private readonly record struct LightVisibilityCandidate(
++            int SegmentIndex,
++            float StartAngle,
++            float EndAngle,
++            bool Wraps)
++        {
++            public bool Contains(float angle)
++            {
++                return Wraps
++                    ? angle >= StartAngle || angle <= EndAngle
++                    : angle >= StartAngle && angle <= EndAngle;
++            }
++        }
+     }
+ }
+-- 
+2.53.0.windows.2
+
