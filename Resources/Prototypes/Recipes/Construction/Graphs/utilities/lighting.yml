@@ -14,7 +14,7 @@
               icon:
                 sprite: Objects/Materials/Shards/crystal.rsi
                 state: shard1
-                color: #52ff39
+                color: "#52ff39"
               doAfter: 1
     - node: icon
       entity: LightTubeCrystalCyan
@@ -175,7 +175,7 @@
         icon:
           sprite: Objects/Materials/Shards/crystal.rsi
           state: shard1
-          color: #52ff39
+          color: "#52ff39"
         doAfter: 1
   - node: icon
     entity: LightBulbCrystalCyan
