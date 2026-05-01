@@ -1,0 +1,301 @@
+From f701f2793d5d814b4fcb6aacaaa853f15ac18556 Mon Sep 17 00:00:00 2001
+From: C# <r14n0070@gmail.com>
+Date: Thu, 30 Apr 2026 23:55:34 -0400
+Subject: [PATCH] Finalize cached light visibility pipeline
+
+---
+ .../Graphics/Clyde/Clyde.LightRendering.cs    | 154 ++++++++++++------
+ Robust.Client/Graphics/Clyde/Clyde.cs         |   1 +
+ 2 files changed, 102 insertions(+), 53 deletions(-)
+
+diff --git a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+index cb5d966b8..e65efb434 100644
+--- a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
++++ b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+@@ -37,6 +37,8 @@ namespace Robust.Client.Graphics.Clyde
+         private const float LightingRayEpsilon = 0.0001f;
+         private const float LightingAngularEpsilon = 0.00075f;
+         private const int LightingCircleSegments = 96;
++        private const int LightingCircleSegmentsMedium = 64;
++        private const int LightingCircleSegmentsLow = 32;
+         private const int LightingAngularBins = 512;
+         private const int LightingVisibilityInitialVertexCapacity = 4096;
+         private const float LightingSpatialBucketSize = 4f;
+@@ -99,9 +101,6 @@ namespace Robust.Client.Graphics.Clyde
+ 
+         private float _maxLightRadius;
+ 
+-        private GLBuffer _lightVisibilityVbo = default!;
+-        private GLHandle _lightVisibilityVao;
+-
+         private readonly List<LightOccluderSegment> _lightOccluderSegments = new(2048);
+         private readonly List<LightVisibilityCandidate> _lightVisibilityCandidates = new(2048);
+         private readonly List<int>[] _lightVisibilityAngularBins = CreateLightVisibilityAngularBins();
+@@ -174,33 +173,6 @@ namespace Robust.Client.Graphics.Clyde
+                 CheckGlError();
+             }
+ 
+-            {
+-                // Exact light visibility VAO.
+-                //
+-                // The previous per-light path rendered occluder depth into a 1D polar
+-                // variance shadow map and recovered visibility probabilistically in the
+-                // light shader. That is fast, but it can leak light whenever moments are
+-                // filtered across unrelated blockers. For horror scenes this is the wrong
+-                // failure mode: a sealed doorway must remain black.
+-                //
+-                // This buffer receives a triangle fan generated on the CPU from exact
+-                // ray/segment intersections. The fragment shader then only shades pixels
+-                // that are geometrically visible from the light source.
+-                _lightVisibilityVao = new GLHandle(GenVertexArray());
+-                BindVertexArray(_lightVisibilityVao.Handle);
+-                CheckGlError();
+-
+-                ObjectLabelMaybe(ObjectLabelIdentifier.VertexArray, _lightVisibilityVao, nameof(_lightVisibilityVao));
+-
+-                _lightVisibilityVbo = new GLBuffer(this, BufferTarget.ArrayBuffer, BufferUsageHint.DynamicDraw,
+-                    sizeof(Vertex2D) * LightingVisibilityInitialVertexCapacity,
+-                    nameof(_lightVisibilityVbo));
+-                GL.BindBuffer(BufferTarget.ArrayBuffer, _lightVisibilityVbo.ObjectHandle);
+-                SetupVAOLayout();
+-
+-                CheckGlError();
+-            }
+-
+             // FOV FBO.
+             _fovRenderTarget = CreateRenderTarget((FovMapSize, 2),
+                 new RenderTargetFormatParameters(
+@@ -479,7 +451,7 @@ namespace Robust.Client.Graphics.Clyde
+             {
+                 for (var i = 0; i < count; i++)
+                 {
+-                    var (component, lightPos, _, rot) = _lightsToRenderList[i];
++                    var (component, lightPos, distanceSquared, rot) = _lightsToRenderList[i];
+ 
+                     Texture? mask = null;
+                     var rotation = Angle.Zero;
+@@ -559,7 +531,7 @@ namespace Robust.Client.Graphics.Clyde
+ 
+                     if (_lightManager.DrawShadows && component.CastShadows)
+                     {
+-                        DrawExactLightFan(component, lightPos, rotation, lightShader);
++                        DrawExactLightFan(component, lightPos, rotation, distanceSquared, lightShader);
+                     }
+                     else
+                     {
+@@ -598,45 +570,71 @@ namespace Robust.Client.Graphics.Clyde
+             PointLightComponent component,
+             Vector2 lightPos,
+             Angle maskRotation,
++            float distanceSquared,
+             GLShaderProgram lightShader)
+         {
+-            var cacheKey = CreateLightVisibilityCacheKey(component, lightPos, maskRotation);
++            var baseSampleCount = SelectLightVisibilityBaseSamples(component, distanceSquared);
++            var cacheKey = CreateLightVisibilityCacheKey(component, lightPos, maskRotation, baseSampleCount);
+             if (_lightVisibilityCache.TryGetValue(cacheKey, out var cached))
+             {
+                 cached.LastUsedFrame = _lightVisibilityFrameIndex;
+-                DrawLightVisibilityVertices(cached.Vertices.AsSpan(), lightShader);
++                DrawLightVisibilityBuffer(cached, lightShader);
+                 return;
+             }
+ 
+-            BuildExactLightFan(component, lightPos, maskRotation);
++            BuildExactLightFan(component, lightPos, maskRotation, baseSampleCount);
+ 
+             if (_lightVisibilityVertices.Count < 4)
+                 return;
+ 
+             var vertices = CollectionsMarshal.AsSpan(_lightVisibilityVertices);
+-            _lightVisibilityCache[cacheKey] = new LightVisibilityCacheEntry(vertices.ToArray(), _lightVisibilityFrameIndex);
++            var entry = CreateLightVisibilityCacheEntry(vertices);
++            _lightVisibilityCache[cacheKey] = entry;
+             EvictLightVisibilityCache();
+ 
+-            DrawLightVisibilityVertices(vertices, lightShader);
++            DrawLightVisibilityBuffer(entry, lightShader);
+         }
+ 
+-        private void DrawLightVisibilityVertices(Span<Vertex2D> vertices, GLShaderProgram lightShader)
++        private LightVisibilityCacheEntry CreateLightVisibilityCacheEntry(Span<Vertex2D> vertices)
+         {
+-            if (vertices.Length < 4)
++            var vertexArray = new GLHandle(GenVertexArray());
++            BindVertexArray(vertexArray.Handle);
++            CheckGlError();
++
++            ObjectLabelMaybe(ObjectLabelIdentifier.VertexArray, vertexArray, nameof(LightVisibilityCacheEntry));
++
++            var vertexBuffer = new GLBuffer(
++                this,
++                BufferTarget.ArrayBuffer,
++                BufferUsageHint.StaticDraw,
++                MemoryMarshal.AsBytes(vertices),
++                nameof(LightVisibilityCacheEntry));
++            SetupVAOLayout();
++            CheckGlError();
++
++            return new LightVisibilityCacheEntry(vertexArray, vertexBuffer, vertices.Length, _lightVisibilityFrameIndex);
++        }
++
++        private void DrawLightVisibilityBuffer(LightVisibilityCacheEntry entry, GLShaderProgram lightShader)
++        {
++            if (entry.VertexCount < 4)
+                 return;
+ 
+-            _lightVisibilityVbo.Reallocate(vertices);
+-            BindVertexArray(_lightVisibilityVao.Handle);
++            BindVertexArray(entry.VertexArray.Handle);
+             CheckGlError();
+ 
+             lightShader.SetUniformMaybe(UniIModelMatrix, Matrix3x2.Identity);
+ 
+-            GL.DrawArrays(PrimitiveType.TriangleFan, 0, vertices.Length);
++            GL.DrawArrays(PrimitiveType.TriangleFan, 0, entry.VertexCount);
+             CheckGlError();
+             _debugStats.LastGLDrawCalls += 1;
+         }
+ 
+-        private void BuildExactLightFan(PointLightComponent component, Vector2 lightPos, Angle maskRotation)
++        private void BuildExactLightFan(
++            PointLightComponent component,
++            Vector2 lightPos,
++            Angle maskRotation,
++            int baseSampleCount)
+         {
+             _lightVisibilityVertices.Clear();
+             _lightVisibilityAngles.Clear();
+@@ -651,9 +649,9 @@ namespace Robust.Client.Graphics.Clyde
+             // Base angular samples keep the fan stable when a light has no nearby
+             // blockers and bound the maximum triangle size. Endpoint samples below
+             // are what make the visibility exact at occluder silhouettes.
+-            for (var i = 0; i < LightingCircleSegments; i++)
++            for (var i = 0; i < baseSampleCount; i++)
+             {
+-                _lightVisibilityAngles.Add(i * LightingTau / LightingCircleSegments);
++                _lightVisibilityAngles.Add(i * LightingTau / baseSampleCount);
+             }
+ 
+             QueryLightOccluderSegments(lightPos, radius);
+@@ -743,7 +741,7 @@ namespace Robust.Client.Graphics.Clyde
+ 
+             _lightOccluderGeometryHash = geometryHash;
+             _lightOccluderGeometryVersion++;
+-            _lightVisibilityCache.Clear();
++            ClearLightVisibilityCache();
+ 
+             _lightOccluderSpatialBuckets.Clear();
+ 
+@@ -778,14 +776,54 @@ namespace Robust.Client.Graphics.Clyde
+         private LightVisibilityCacheKey CreateLightVisibilityCacheKey(
+             PointLightComponent component,
+             Vector2 lightPos,
+-            Angle maskRotation)
++            Angle maskRotation,
++            int baseSampleCount)
+         {
+             return new LightVisibilityCacheKey(
+                 _lightOccluderGeometryVersion,
+                 FloatBits(lightPos.X),
+                 FloatBits(lightPos.Y),
+                 FloatBits(component.Radius),
+-                FloatBits((float) maskRotation.Theta));
++                FloatBits((float) maskRotation.Theta),
++                baseSampleCount);
++        }
++
++        private static int SelectLightVisibilityBaseSamples(PointLightComponent component, float distanceSquared)
++        {
++            // Endpoint rays still preserve exact hard silhouettes. The base ring only
++            // bounds triangle size and the round light perimeter, so it can be scheduled
++            // perceptually without making sealed walls leak.
++            var distance = MathF.Sqrt(distanceSquared + 1f);
++            var salience = component.Radius * MathF.Max(component.Energy, 0.1f) / distance;
++
++            if (component.Radius >= 9f || salience >= 1.6f)
++                return LightingCircleSegments;
++
++            if (component.Radius >= 5f || salience >= 0.55f)
++                return LightingCircleSegmentsMedium;
++
++            return LightingCircleSegmentsLow;
++        }
++
++        private void ClearLightVisibilityCache()
++        {
++            foreach (var entry in _lightVisibilityCache.Values)
++            {
++                DeleteLightVisibilityCacheEntry(entry);
++            }
++
++            _lightVisibilityCache.Clear();
++        }
++
++        private void DeleteLightVisibilityCacheEntry(LightVisibilityCacheEntry entry)
++        {
++            DeleteVertexArray(entry.VertexArray.Handle);
++            entry.VertexBuffer.Delete();
++        }
++
++        private void ShutdownLighting()
++        {
++            ClearLightVisibilityCache();
+         }
+ 
+         private void EvictLightVisibilityCache()
+@@ -804,7 +842,8 @@ namespace Robust.Client.Graphics.Clyde
+                     oldestKey = pair.Key;
+                 }
+ 
+-                _lightVisibilityCache.Remove(oldestKey);
++                if (_lightVisibilityCache.Remove(oldestKey, out var entry))
++                    DeleteLightVisibilityCacheEntry(entry);
+             }
+         }
+ 
+@@ -1735,16 +1774,25 @@ namespace Robust.Client.Graphics.Clyde
+             int LightX,
+             int LightY,
+             int Radius,
+-            int MaskRotation);
++            int MaskRotation,
++            int BaseSampleCount);
+ 
+         private sealed class LightVisibilityCacheEntry
+         {
+-            public readonly Vertex2D[] Vertices;
++            public readonly GLHandle VertexArray;
++            public readonly GLBuffer VertexBuffer;
++            public readonly int VertexCount;
+             public uint LastUsedFrame;
+ 
+-            public LightVisibilityCacheEntry(Vertex2D[] vertices, uint lastUsedFrame)
++            public LightVisibilityCacheEntry(
++                GLHandle vertexArray,
++                GLBuffer vertexBuffer,
++                int vertexCount,
++                uint lastUsedFrame)
+             {
+-                Vertices = vertices;
++                VertexArray = vertexArray;
++                VertexBuffer = vertexBuffer;
++                VertexCount = vertexCount;
+                 LastUsedFrame = lastUsedFrame;
+             }
+         }
+diff --git a/Robust.Client/Graphics/Clyde/Clyde.cs b/Robust.Client/Graphics/Clyde/Clyde.cs
+index a3dfb0572..3a2f14edb 100644
+--- a/Robust.Client/Graphics/Clyde/Clyde.cs
++++ b/Robust.Client/Graphics/Clyde/Clyde.cs
+@@ -602,6 +602,7 @@ namespace Robust.Client.Graphics.Clyde
+ 
+         public void Shutdown()
+         {
++            ShutdownLighting();
+             _glContext?.Shutdown();
+             ShutdownWindowing();
+         }
+-- 
+2.53.0.windows.2
+
