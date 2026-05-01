@@ -1,0 +1,367 @@
+From 55470378cf1850679d157fc2a267f5ebb40563d3 Mon Sep 17 00:00:00 2001
+From: C# <r14n0070@gmail.com>
+Date: Thu, 30 Apr 2026 23:34:05 -0400
+Subject: [PATCH] Add cached spatial light visibility
+
+---
+ Resources/Shaders/Internal/light_shared.swsl  |  22 +-
+ .../Graphics/Clyde/Clyde.LightRendering.cs    | 214 +++++++++++++++++-
+ 2 files changed, 226 insertions(+), 10 deletions(-)
+
+diff --git a/Resources/Shaders/Internal/light_shared.swsl b/Resources/Shaders/Internal/light_shared.swsl
+index b0157868f..a0698da81 100644
+--- a/Resources/Shaders/Internal/light_shared.swsl
++++ b/Resources/Shaders/Internal/light_shared.swsl
+@@ -2,7 +2,7 @@ preset raw;
+ 
+ const highp float PI = 3.1415926535897932384626433;
+ const highp float LIGHTING_HEIGHT = 1.0;
+-const highp int VOLUMETRIC_STEPS = 8;
++const highp int VOLUMETRIC_STEPS = 5;
+ 
+ varying highp vec2 worldPosition;
+ 
+@@ -77,21 +77,27 @@ highp float psychophysicalFlicker(highp float sourceSeed)
+ 
+ highp float volumetricMarch(highp vec2 diff, highp float normalizedDistance, highp float sourceSeed)
+ {
++    if (normalizedDistance >= 1.0)
++    {
++        return 0.0;
++    }
++
+     highp vec2 stepVector = diff / float(VOLUMETRIC_STEPS);
+-    highp vec2 p = lightCenter;
++    highp float phase = pow(1.0 - normalizedDistance, 1.6);
++    highp float jitter = hash12(floor(worldPosition * 8.0) + vec2(sourceSeed, sourceSeed * 7.0));
++    highp vec2 p = lightCenter + stepVector * jitter;
+     highp float transmittance = 1.0;
+     highp float accumulated = 0.0;
+ 
+     for (int i = 0; i < VOLUMETRIC_STEPS; i++)
+     {
+-        p += stepVector;
+         highp float fog = valueNoise(p * 0.55 + vec2(sourceSeed * 13.0, TIME * 0.07));
+         fog = smoothstep(0.34, 1.0, fog);
+ 
+-        highp float phase = pow(1.0 - normalizedDistance, 1.6);
+-        highp float density = fog * (0.010 + lightSoftness * 0.005) * phase;
++        highp float density = fog * (0.012 + lightSoftness * 0.004) * phase;
+         accumulated += density * transmittance;
+         transmittance *= 1.0 - density;
++        p += stepVector;
+     }
+ 
+     return clamp(accumulated, 0.0, 0.25);
+@@ -101,6 +107,12 @@ void fragment()
+ {
+     highp vec2 diff = worldPosition - lightCenter;
+     highp float distSquared = dot(diff, diff);
++    highp float rangeSquared = lightRange * lightRange;
++    if (distSquared > rangeSquared)
++    {
++        discard;
++    }
++
+     highp float dist = sqrt(distSquared + LIGHTING_HEIGHT);
+     highp float sourceSeed = hash12(lightCenter + vec2(lightRange, lightPower));
+ 
+diff --git a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+index f07a2086a..cb5d966b8 100644
+--- a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
++++ b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+@@ -39,6 +39,8 @@ namespace Robust.Client.Graphics.Clyde
+         private const int LightingCircleSegments = 96;
+         private const int LightingAngularBins = 512;
+         private const int LightingVisibilityInitialVertexCapacity = 4096;
++        private const float LightingSpatialBucketSize = 4f;
++        private const int LightingVisibilityCacheMaxEntries = 768;
+ 
+         private ClydeShaderInstance _fovDebugShaderInstance = default!;
+ 
+@@ -105,6 +107,14 @@ namespace Robust.Client.Graphics.Clyde
+         private readonly List<int>[] _lightVisibilityAngularBins = CreateLightVisibilityAngularBins();
+         private readonly List<float> _lightVisibilityAngles = new(4096);
+         private readonly List<Vertex2D> _lightVisibilityVertices = new(LightingVisibilityInitialVertexCapacity);
++        private readonly List<int> _lightVisibilitySegmentQuery = new(2048);
++        private readonly Dictionary<LightingSpatialBucket, List<int>> _lightOccluderSpatialBuckets = new(512);
++        private readonly Dictionary<LightVisibilityCacheKey, LightVisibilityCacheEntry> _lightVisibilityCache = new(256);
++        private int[] _lightVisibilitySegmentMarks = Array.Empty<int>();
++        private int _lightVisibilityQueryStamp;
++        private int _lightOccluderGeometryVersion;
++        private ulong _lightOccluderGeometryHash;
++        private uint _lightVisibilityFrameIndex;
+ 
+         private unsafe void InitLighting()
+         {
+@@ -463,6 +473,7 @@ namespace Robust.Client.Graphics.Clyde
+             var lastFalloff = float.NaN;
+             var lastCurveFactor = float.NaN;
+             Texture? lastMask = null;
++            _lightVisibilityFrameIndex++;
+ 
+             using (_prof.Group("Draw exact lights"))
+             {
+@@ -589,19 +600,38 @@ namespace Robust.Client.Graphics.Clyde
+             Angle maskRotation,
+             GLShaderProgram lightShader)
+         {
++            var cacheKey = CreateLightVisibilityCacheKey(component, lightPos, maskRotation);
++            if (_lightVisibilityCache.TryGetValue(cacheKey, out var cached))
++            {
++                cached.LastUsedFrame = _lightVisibilityFrameIndex;
++                DrawLightVisibilityVertices(cached.Vertices.AsSpan(), lightShader);
++                return;
++            }
++
+             BuildExactLightFan(component, lightPos, maskRotation);
+ 
+             if (_lightVisibilityVertices.Count < 4)
+                 return;
+ 
+-            _lightVisibilityVbo.Reallocate(CollectionsMarshal.AsSpan(_lightVisibilityVertices));
++            var vertices = CollectionsMarshal.AsSpan(_lightVisibilityVertices);
++            _lightVisibilityCache[cacheKey] = new LightVisibilityCacheEntry(vertices.ToArray(), _lightVisibilityFrameIndex);
++            EvictLightVisibilityCache();
++
++            DrawLightVisibilityVertices(vertices, lightShader);
++        }
++
++        private void DrawLightVisibilityVertices(Span<Vertex2D> vertices, GLShaderProgram lightShader)
++        {
++            if (vertices.Length < 4)
++                return;
+ 
++            _lightVisibilityVbo.Reallocate(vertices);
+             BindVertexArray(_lightVisibilityVao.Handle);
+             CheckGlError();
+ 
+             lightShader.SetUniformMaybe(UniIModelMatrix, Matrix3x2.Identity);
+ 
+-            GL.DrawArrays(PrimitiveType.TriangleFan, 0, _lightVisibilityVertices.Count);
++            GL.DrawArrays(PrimitiveType.TriangleFan, 0, vertices.Length);
+             CheckGlError();
+             _debugStats.LastGLDrawCalls += 1;
+         }
+@@ -626,13 +656,16 @@ namespace Robust.Client.Graphics.Clyde
+                 _lightVisibilityAngles.Add(i * LightingTau / LightingCircleSegments);
+             }
+ 
+-            for (var i = 0; i < _lightOccluderSegments.Count; i++)
++            QueryLightOccluderSegments(lightPos, radius);
++
++            for (var i = 0; i < _lightVisibilitySegmentQuery.Count; i++)
+             {
+-                var segment = _lightOccluderSegments[i];
++                var segmentIndex = _lightVisibilitySegmentQuery[i];
++                var segment = _lightOccluderSegments[segmentIndex];
+                 if (!SegmentCanAffectLight(segment, lightPos, radiusSquared))
+                     continue;
+ 
+-                AddLightVisibilityCandidate(i, segment, lightPos);
++                AddLightVisibilityCandidate(segmentIndex, segment, lightPos);
+ 
+                 AddEndpointAngles(segment.A, lightPos);
+                 AddEndpointAngles(segment.B, lightPos);
+@@ -660,6 +693,121 @@ namespace Robust.Client.Graphics.Clyde
+             }
+         }
+ 
++        private void QueryLightOccluderSegments(Vector2 lightPos, float radius)
++        {
++            _lightVisibilitySegmentQuery.Clear();
++
++            if (_lightOccluderSegments.Count == 0)
++                return;
++
++            if (_lightVisibilitySegmentMarks.Length < _lightOccluderSegments.Count)
++                Array.Resize(ref _lightVisibilitySegmentMarks, _lightOccluderSegments.Count);
++
++            _lightVisibilityQueryStamp++;
++            if (_lightVisibilityQueryStamp == int.MaxValue)
++            {
++                Array.Clear(_lightVisibilitySegmentMarks);
++                _lightVisibilityQueryStamp = 1;
++            }
++
++            var minBucketX = LightingBucketCoordinate(lightPos.X - radius);
++            var maxBucketX = LightingBucketCoordinate(lightPos.X + radius);
++            var minBucketY = LightingBucketCoordinate(lightPos.Y - radius);
++            var maxBucketY = LightingBucketCoordinate(lightPos.Y + radius);
++
++            for (var y = minBucketY; y <= maxBucketY; y++)
++            {
++                for (var x = minBucketX; x <= maxBucketX; x++)
++                {
++                    if (!_lightOccluderSpatialBuckets.TryGetValue(new LightingSpatialBucket(x, y), out var bucket))
++                        continue;
++
++                    for (var i = 0; i < bucket.Count; i++)
++                    {
++                        var segmentIndex = bucket[i];
++                        if (_lightVisibilitySegmentMarks[segmentIndex] == _lightVisibilityQueryStamp)
++                            continue;
++
++                        _lightVisibilitySegmentMarks[segmentIndex] = _lightVisibilityQueryStamp;
++                        _lightVisibilitySegmentQuery.Add(segmentIndex);
++                    }
++                }
++            }
++        }
++
++        private void RebuildLightOccluderSpatialIndex()
++        {
++            var geometryHash = HashLightOccluderGeometry(_lightOccluderSegments);
++            if (geometryHash == _lightOccluderGeometryHash)
++                return;
++
++            _lightOccluderGeometryHash = geometryHash;
++            _lightOccluderGeometryVersion++;
++            _lightVisibilityCache.Clear();
++
++            _lightOccluderSpatialBuckets.Clear();
++
++            if (_lightVisibilitySegmentMarks.Length < _lightOccluderSegments.Count)
++                Array.Resize(ref _lightVisibilitySegmentMarks, _lightOccluderSegments.Count);
++
++            for (var i = 0; i < _lightOccluderSegments.Count; i++)
++            {
++                var segment = _lightOccluderSegments[i];
++                var minX = LightingBucketCoordinate(MathF.Min(segment.A.X, segment.B.X));
++                var maxX = LightingBucketCoordinate(MathF.Max(segment.A.X, segment.B.X));
++                var minY = LightingBucketCoordinate(MathF.Min(segment.A.Y, segment.B.Y));
++                var maxY = LightingBucketCoordinate(MathF.Max(segment.A.Y, segment.B.Y));
++
++                for (var y = minY; y <= maxY; y++)
++                {
++                    for (var x = minX; x <= maxX; x++)
++                    {
++                        var bucketKey = new LightingSpatialBucket(x, y);
++                        if (!_lightOccluderSpatialBuckets.TryGetValue(bucketKey, out var bucket))
++                        {
++                            bucket = new List<int>(8);
++                            _lightOccluderSpatialBuckets.Add(bucketKey, bucket);
++                        }
++
++                        bucket.Add(i);
++                    }
++                }
++            }
++        }
++
++        private LightVisibilityCacheKey CreateLightVisibilityCacheKey(
++            PointLightComponent component,
++            Vector2 lightPos,
++            Angle maskRotation)
++        {
++            return new LightVisibilityCacheKey(
++                _lightOccluderGeometryVersion,
++                FloatBits(lightPos.X),
++                FloatBits(lightPos.Y),
++                FloatBits(component.Radius),
++                FloatBits((float) maskRotation.Theta));
++        }
++
++        private void EvictLightVisibilityCache()
++        {
++            while (_lightVisibilityCache.Count > LightingVisibilityCacheMaxEntries)
++            {
++                var oldestFrame = uint.MaxValue;
++                var oldestKey = default(LightVisibilityCacheKey);
++
++                foreach (var pair in _lightVisibilityCache)
++                {
++                    if (pair.Value.LastUsedFrame >= oldestFrame)
++                        continue;
++
++                    oldestFrame = pair.Value.LastUsedFrame;
++                    oldestKey = pair.Key;
++                }
++
++                _lightVisibilityCache.Remove(oldestKey);
++            }
++        }
++
+         private void AddEndpointAngles(Vector2 endpoint, Vector2 lightPos)
+         {
+             var diff = endpoint - lightPos;
+@@ -769,6 +917,40 @@ namespace Robust.Client.Graphics.Clyde
+             return bins;
+         }
+ 
++        private static int LightingBucketCoordinate(float coordinate)
++        {
++            return (int) MathF.Floor(coordinate / LightingSpatialBucketSize);
++        }
++
++        private static int FloatBits(float value)
++        {
++            // Collapse negative zero so cache keys remain stable across equivalent transforms.
++            return BitConverter.SingleToInt32Bits(value == 0f ? 0f : value);
++        }
++
++        private static ulong HashLightOccluderGeometry(List<LightOccluderSegment> segments)
++        {
++            const ulong fnvOffset = 14695981039346656037UL;
++            const ulong fnvPrime = 1099511628211UL;
++
++            unchecked
++            {
++                var hash = fnvOffset;
++                hash = (hash ^ (uint) segments.Count) * fnvPrime;
++
++                for (var i = 0; i < segments.Count; i++)
++                {
++                    var segment = segments[i];
++                    hash = (hash ^ (uint) FloatBits(segment.A.X)) * fnvPrime;
++                    hash = (hash ^ (uint) FloatBits(segment.A.Y)) * fnvPrime;
++                    hash = (hash ^ (uint) FloatBits(segment.B.X)) * fnvPrime;
++                    hash = (hash ^ (uint) FloatBits(segment.B.Y)) * fnvPrime;
++                }
++
++                return hash;
++            }
++        }
++
+         private static bool SegmentCanAffectLight(LightOccluderSegment segment, Vector2 lightPos, float radiusSquared)
+         {
+             var closest = ClosestPointOnSegment(lightPos, segment.A, segment.B);
+@@ -1448,6 +1630,7 @@ namespace Robust.Client.Graphics.Clyde
+                 ArrayPool<ushort>.Shared.Return(indexMaskBuffer);
+             }
+ 
++            RebuildLightOccluderSpatialIndex();
+             _debugStats.Occluders += ami / 4;
+         }
+ 
+@@ -1545,6 +1728,27 @@ namespace Robust.Client.Graphics.Clyde
+ 
+         private readonly record struct LightOccluderSegment(Vector2 A, Vector2 B);
+ 
++        private readonly record struct LightingSpatialBucket(int X, int Y);
++
++        private readonly record struct LightVisibilityCacheKey(
++            int GeometryVersion,
++            int LightX,
++            int LightY,
++            int Radius,
++            int MaskRotation);
++
++        private sealed class LightVisibilityCacheEntry
++        {
++            public readonly Vertex2D[] Vertices;
++            public uint LastUsedFrame;
++
++            public LightVisibilityCacheEntry(Vertex2D[] vertices, uint lastUsedFrame)
++            {
++                Vertices = vertices;
++                LastUsedFrame = lastUsedFrame;
++            }
++        }
++
+         private readonly record struct LightVisibilityCandidate(
+             int SegmentIndex,
+             float StartAngle,
+-- 
+2.53.0.windows.2
+
