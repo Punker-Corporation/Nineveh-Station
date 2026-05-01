@@ -85,7 +85,7 @@
       endValue: 2.0
       isLooped: true
       reverseWhenFinished: true
-      interpolate: Sine
+      interpolate: Cubic
   - type: ToggleableVisuals
     spriteLayer: light
     inhandVisuals:
