@@ -50,6 +50,21 @@
                   0.25
                 ]
               ]
-        }
+        },
+      {
+        "name": "ball"
+      },
+      {
+        "name": "blast120-inhand-left"
+      },
+      {
+        "name": "blast120-inhand-right"
+      },
+      {
+        "name": "blast120mm"
+      },
+      {
+        "name": "blastball"
+      }
     ]
 }

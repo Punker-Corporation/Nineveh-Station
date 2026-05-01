@@ -112,14 +112,18 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
 
         foreach (var addr in serverList.Split(','))
         {
+            var trimmed = addr.Trim();
+            if (string.IsNullOrWhiteSpace(trimmed))
+                continue;
+
             try
             {
-                var ipAddress = IPAddress.Parse(addr.Trim());
+                var ipAddress = IPAddress.Parse(trimmed);
                 ips.Add(ipAddress);
             }
             catch (FormatException)
             {
-                _sawmill.Warning($"Invalid IP address format: {addr}");
+                _sawmill.Warning($"Invalid IP address format: {trimmed}");
             }
         }
 

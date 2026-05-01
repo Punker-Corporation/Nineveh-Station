@@ -868,7 +868,6 @@ SupermatterSliver: null
 CartridgePistol: null
 AtmosDeviceFanTinyDev: AtmosDeviceFanTiny
 AtmosDeviceFanDirectionalDev: AtmosDeviceFanDirectional
-GasMinerPlasma: null # Temporary Sunrise migration entry until GasMinerPlasma is removed from all maps.
 MagazineBR64Extended: null
 MagazineBR64: null
 MagazineAR18Extended: null
@@ -2141,7 +2140,6 @@ LockerWarden: null
 LockerWardenFilled: null
 LockerWardenFilledHardsuit: null
 LockerSecurity: null
-LockerSecurityFilled: null
 LockerBluespaceStation: null
 LockerClown: null
 LockerMime: null
@@ -2155,7 +2153,6 @@ ClosetJanitorBomb: null
 # Настенные шкафы(не нужны)
 LockerWallMedicalFilled: null
 LockerWallMedicalDoctorFilled: null
-ClosetWallEmergencyFilledRandom: null
 ClosetWallEmergencyN2FilledRandom: null
 ClosetWallFireFilledRandom: null
 ClosetWallMaintenanceFilledRandom: null
@@ -2273,7 +2270,6 @@ KeyCardAnomabiologyResearcher: null
 
 # Растения из будущего
 PottedPlantRandom: ScpPottedPlantRandom
-PottedPlantBioluminscent: null
 PottedPlant3: null
 PottedPlant7: null
 PottedPlant13: null
@@ -2326,7 +2322,6 @@ PosterLegitBarDrinks: null
 PosterContrabandTheBigGasTruth: null
 PosterLegitDejaVu: null
 PosterContrabandFreeDrone: null
-PosterContrabandAtmosiaDeclarationIndependence: null
 PosterContrabandTheGriffin: null
 PosterContrabandGreyTide: null
 PosterContrabandPunchShit: null
@@ -2334,7 +2329,6 @@ PosterContrabandVoteWeh: null
 PosterContrabandHighEffectEngineering: null
 PosterContrabandSyndicateRecruitment: null
 PosterLegitEnlist: null
-PosterLegitJustAWeekAway: null
 PosterContrabandExoAcid: null
 PosterLegitNTTGC: null
 PosterContrabandRIPBadger: null
@@ -2427,7 +2421,6 @@ PlushieDiona: null
 PlushieNar: null
 ToyAmongPequeno: null
 PlushieThrongler: null
-PlushieArachind: null
 PlushieHolocarp: null
 PlushieMagicarp: null
 PlushieRainbowCarp: null
@@ -2633,7 +2626,6 @@ ComputerRadar: ScpComputerRadar
 ComputerResearchAndDevelopment: ScpComputerResearchAndDevelopment
 ComputerRoboticsControl: ScpComputerRoboticsControl
 ComputerSaleConsole: ScpComputerSaleConsole
-ComputerSalvageExpedition: null
 ComputerScienceSaleConsole: ScpComputerScientificServiceSaleConsole
 ComputerSecuritySaleConsole: ScpComputerSecuritySaleConsole
 ComputerSensorMonitoring: ScpComputerSensorMonitoring

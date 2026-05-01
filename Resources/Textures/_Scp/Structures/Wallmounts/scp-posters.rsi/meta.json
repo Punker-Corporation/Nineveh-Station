@@ -1,4 +1,4 @@
-﻿{
+{
     "version": 1,
     "license": "CLA",
     "copyright": "SUNRISE",
@@ -24,6 +24,9 @@
         { "name": "scp969" },
         { "name": "scp999" },
         { "name": "scp612" },
-        { "name": "scp939" }
+        { "name": "scp939" },
+      {
+        "name": "scp079"
+      }
     ]
 }
