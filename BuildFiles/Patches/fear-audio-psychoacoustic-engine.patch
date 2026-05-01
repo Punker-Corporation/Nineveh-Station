@@ -1,56 +1,3 @@
-diff --git a/Robust.Client/Audio/AudioManager.cs b/Robust.Client/Audio/AudioManager.cs
-index cc5c9d7d8..a90a521d4 100644
---- a/Robust.Client/Audio/AudioManager.cs
-+++ b/Robust.Client/Audio/AudioManager.cs
-@@ -15,6 +15,9 @@ namespace Robust.Client.Audio;
- 
- internal sealed partial class AudioManager : IAudioInternal
- {
-+    private const int AlcHrtfSoft = 0x1992;
-+    private const int AlcTrue = 1;
-+
-     [Shared.IoC.Dependency] private readonly IConfigurationManager _cfg = default!;
-     [Shared.IoC.Dependency] private readonly ILogManager _logMan = default!;
-     [Shared.IoC.Dependency] private readonly IReloadManager _reload = default!;
-@@ -48,7 +51,29 @@ internal sealed partial class AudioManager : IAudioInternal
-     {
-         unsafe
-         {
--            _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
-+            if (HasAlDeviceExtension("ALC_SOFT_HRTF"))
-+            {
-+                Span<int> attributes = stackalloc int[]
-+                {
-+                    AlcHrtfSoft, AlcTrue,
-+                    0,
-+                };
-+
-+                fixed (int* ptr = attributes)
-+                {
-+                    _openALContext = ALC.CreateContext(_openALDevice, ptr);
-+                }
-+
-+                if (_openALContext == ALContext.Null)
-+                {
-+                    OpenALSawmill.Warning("OpenAL HRTF context creation failed; falling back to the default context.");
-+                    _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
-+                }
-+            }
-+            else
-+            {
-+                _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
-+            }
-         }
- 
-         ALC.MakeContextCurrent(_openALContext);
-@@ -65,6 +90,7 @@ internal sealed partial class AudioManager : IAudioInternal
-         OpenALSawmill.Debug("OpenAL Vendor: {0}", AL.Get(ALGetString.Vendor));
-         OpenALSawmill.Debug("OpenAL Renderer: {0}", AL.Get(ALGetString.Renderer));
-         OpenALSawmill.Debug("OpenAL Version: {0}", AL.Get(ALGetString.Version));
-+        OpenALSawmill.Info("OpenAL HRTF request: {0}", HasAlDeviceExtension("ALC_SOFT_HRTF") ? "enabled" : "driver extension unavailable");
-     }
- 
-     private bool _audioOpenDevice()
 diff --git a/Robust.Client/Audio/AudioSystem.Limits.cs b/Robust.Client/Audio/AudioSystem.Limits.cs
 index 9373e5ba5..d1a8e6582 100644
 --- a/Robust.Client/Audio/AudioSystem.Limits.cs
@@ -139,7 +86,7 @@ index 9373e5ba5..d1a8e6582 100644
      {
          if (!_playingCount.TryGetValue(sound, out var count))
 diff --git a/Robust.Client/Audio/AudioSystem.cs b/Robust.Client/Audio/AudioSystem.cs
-index d9f29054d..ad4d25495 100644
+index d9f29054d..e5ed863bf 100644
 --- a/Robust.Client/Audio/AudioSystem.cs
 +++ b/Robust.Client/Audio/AudioSystem.cs
 @@ -253,7 +253,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
@@ -151,15 +98,41 @@ index d9f29054d..ad4d25495 100644
          {
              var newSource = _audio.CreateAudioSource(audioResource);
  
-@@ -391,6 +391,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -291,6 +291,11 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         {
+             component.PlaybackPosition = offset;
+         }
++
++        // Replicated one-shots, like emotes, arrive through component startup instead
++        // of the immediate local PlayEntity/PlayStatic path. Process them once now
++        // so short transient sounds do not wait up to an audio tick before starting.
++        ProcessStream(entity.Owner, component, Transform(entity.Owner), GetListenerCoordinates());
+     }
+ 
+     private void OnAudioShutdown(EntityUid uid, AudioComponent component, ComponentShutdown args)
+@@ -374,11 +379,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         // TODO:
+         // I Originally tried to be fancier here but it caused audio issues so just trying
+         // to replicate the old behaviour for now.
+-        if (!component.Started)
+-        {
+-            component.Started = true;
+-            component.StartPlaying();
+-        }
++        var startPlayback = !component.Started;
+ 
+         // If it's global but on another map (that isn't nullspace) then stop playing it.
+         if (component.Global)
+@@ -391,6 +392,8 @@ public sealed partial class AudioSystem : SharedAudioSystem
  
              // Resume playing.
              component.Volume = component.Params.Volume;
 +            ApplyPsychoacousticMix(component, 0f, 0f);
++            StartPlaybackIfNeeded(component, startPlayback);
              return;
          }
  
-@@ -436,18 +437,19 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -436,18 +439,19 @@ public sealed partial class AudioSystem : SharedAudioSystem
          }
  
          // Update audio occlusion
@@ -182,10 +155,23 @@ index d9f29054d..ad4d25495 100644
  
          // Make race cars go NYYEEOOOOOMMMMM
          if (_physicsQuery.TryGetComponent(parentUid, out var physicsComp))
-@@ -459,6 +461,30 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -457,6 +461,41 @@ public sealed partial class AudioSystem : SharedAudioSystem
+             var velocity = _physics.GetMapLinearVelocity(parentUid, physicsComp);
+             component.Velocity = velocity;
          }
-     }
- 
++
++        StartPlaybackIfNeeded(component, startPlayback);
++    }
++
++    private static void StartPlaybackIfNeeded(AudioComponent component, bool startPlayback)
++    {
++        if (!startPlayback)
++            return;
++
++        component.Started = true;
++        component.StartPlaying();
++    }
++
 +    private void ApplyPsychoacousticMix(AudioComponent component, float distance, float rawOcclusion)
 +    {
 +        var parameters = component.Params;
@@ -208,12 +194,10 @@ index d9f29054d..ad4d25495 100644
 +        component.Source.PsychoacousticGain = mix.Gain;
 +        component.Pitch = parameters.Pitch * mix.Pitch;
 +        component.Occlusion = mix.Occlusion;
-+    }
-+
+     }
+ 
      /// <summary>
-     /// Gets the audio occlusion from the target audio entity to the listener's position.
-     /// </summary>
-@@ -769,10 +795,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -769,10 +808,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
      {
          source.Pitch = audioParams.Pitch;
          source.Volume = audioParams.Volume;
@@ -560,7 +544,7 @@ index 2cb473984..2fb24cd64 100644
      /// </summary>
 diff --git a/Robust.Shared/Audio/PsychoacousticAudio.cs b/Robust.Shared/Audio/PsychoacousticAudio.cs
 new file mode 100644
-index 000000000..5c3aac824
+index 000000000..fae7c204f
 --- /dev/null
 +++ b/Robust.Shared/Audio/PsychoacousticAudio.cs
 @@ -0,0 +1,275 @@
@@ -774,7 +758,7 @@ index 000000000..5c3aac824
 +        {
 +            case PsychoacousticProfile.NonlinearVocalization:
 +                gain *= 1f + 0.20f * safeFear;
-+                pitch *= 1f + 0.035f * MathF.Sin(seconds * 91f + safeFear * 13f);
++                pitch *= 1f + 0.018f * safeFear;
 +                priority += 0.10f;
 +                break;
 +            case PsychoacousticProfile.InfrasoundCarrier:
@@ -784,7 +768,7 @@ index 000000000..5c3aac824
 +                break;
 +            case PsychoacousticProfile.RoughnessStinger:
 +                gain *= 1f + 0.33f * safeFear;
-+                pitch *= 1f + 0.018f * MathF.Sin(seconds * 38f);
++                pitch *= 1f + 0.010f * safeFear;
 +                priority += 0.18f;
 +                break;
 +            case PsychoacousticProfile.LoomingThreat:
@@ -824,7 +808,7 @@ index 000000000..5c3aac824
 +                break;
 +            case PsychoacousticProfile.VentResonance:
 +                gain *= 0.72f;
-+                pitch *= 1f + 0.02f * MathF.Sin(seconds * SpeedOfSound / 8f);
++                pitch *= 0.99f;
 +                rawOcclusion += 0.45f;
 +                priority += 0.05f;
 +                break;
