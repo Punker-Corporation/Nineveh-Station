@@ -56,6 +56,14 @@
       "directions": 4
 	},
     {
+      "name": "ravage_tail",
+      "directions": 4
+	},
+    {
+      "name": "neo_tail",
+      "directions": 4
+	},
+    {
 	  "name": "tail_wagging",
 	  "directions": 4,
       "delays": [

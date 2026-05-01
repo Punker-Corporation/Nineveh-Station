@@ -1,0 +1,930 @@
+From 4fef156898f3a438d1198e21c74e320895ba04da Mon Sep 17 00:00:00 2001
+From: C# <r14n0070@gmail.com>
+Date: Fri, 1 May 2026 00:19:06 -0400
+Subject: [PATCH] FEAR-AUDIO: Complete psychoacoustic overhaul of sound system
+ (scientifically validated horror design)
+
+---
+ Robust.Client/Audio/AudioManager.cs           |  28 +-
+ Robust.Client/Audio/AudioSystem.Limits.cs     |  60 +++-
+ Robust.Client/Audio/AudioSystem.cs            |  41 ++-
+ .../Audio/Sources/BaseAudioSource.cs          |  53 +++-
+ .../Audio/PsychoacousticAudioModel_Test.cs    |  81 ++++++
+ Robust.Shared/Audio/AudioParams.cs            |  72 ++++-
+ .../Audio/Components/AudioComponent.cs        |  20 ++
+ Robust.Shared/Audio/PsychoacousticAudio.cs    | 275 ++++++++++++++++++
+ .../Audio/PsychoacousticAudioCommands.cs      |  43 +++
+ .../Audio/Sources/DummyAudioSource.cs         |   6 +
+ Robust.Shared/Audio/Sources/IAudioSource.cs   |  10 +
+ 11 files changed, 669 insertions(+), 20 deletions(-)
+ create mode 100644 Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs
+ create mode 100644 Robust.Shared/Audio/PsychoacousticAudio.cs
+ create mode 100644 Robust.Shared/Audio/PsychoacousticAudioCommands.cs
+
+diff --git a/Robust.Client/Audio/AudioManager.cs b/Robust.Client/Audio/AudioManager.cs
+index cc5c9d7d8..a90a521d4 100644
+--- a/Robust.Client/Audio/AudioManager.cs
++++ b/Robust.Client/Audio/AudioManager.cs
+@@ -15,6 +15,9 @@ namespace Robust.Client.Audio;
+ 
+ internal sealed partial class AudioManager : IAudioInternal
+ {
++    private const int AlcHrtfSoft = 0x1992;
++    private const int AlcTrue = 1;
++
+     [Shared.IoC.Dependency] private readonly IConfigurationManager _cfg = default!;
+     [Shared.IoC.Dependency] private readonly ILogManager _logMan = default!;
+     [Shared.IoC.Dependency] private readonly IReloadManager _reload = default!;
+@@ -48,7 +51,29 @@ internal sealed partial class AudioManager : IAudioInternal
+     {
+         unsafe
+         {
+-            _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++            if (HasAlDeviceExtension("ALC_SOFT_HRTF"))
++            {
++                Span<int> attributes = stackalloc int[]
++                {
++                    AlcHrtfSoft, AlcTrue,
++                    0,
++                };
++
++                fixed (int* ptr = attributes)
++                {
++                    _openALContext = ALC.CreateContext(_openALDevice, ptr);
++                }
++
++                if (_openALContext == ALContext.Null)
++                {
++                    OpenALSawmill.Warning("OpenAL HRTF context creation failed; falling back to the default context.");
++                    _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++                }
++            }
++            else
++            {
++                _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++            }
+         }
+ 
+         ALC.MakeContextCurrent(_openALContext);
+@@ -65,6 +90,7 @@ internal sealed partial class AudioManager : IAudioInternal
+         OpenALSawmill.Debug("OpenAL Vendor: {0}", AL.Get(ALGetString.Vendor));
+         OpenALSawmill.Debug("OpenAL Renderer: {0}", AL.Get(ALGetString.Renderer));
+         OpenALSawmill.Debug("OpenAL Version: {0}", AL.Get(ALGetString.Version));
++        OpenALSawmill.Info("OpenAL HRTF request: {0}", HasAlDeviceExtension("ALC_SOFT_HRTF") ? "enabled" : "driver extension unavailable");
+     }
+ 
+     private bool _audioOpenDevice()
+diff --git a/Robust.Client/Audio/AudioSystem.Limits.cs b/Robust.Client/Audio/AudioSystem.Limits.cs
+index 9373e5ba5..d1a8e6582 100644
+--- a/Robust.Client/Audio/AudioSystem.Limits.cs
++++ b/Robust.Client/Audio/AudioSystem.Limits.cs
+@@ -1,4 +1,6 @@
+ using System.Collections.Generic;
++using Robust.Shared.Audio;
++using Robust.Shared.Audio.Components;
+ using System.Runtime.InteropServices;
+ using Robust.Shared;
+ using Robust.Shared.GameObjects;
+@@ -25,7 +27,7 @@ public sealed partial class AudioSystem
+         _maxConcurrent = obj;
+     }
+ 
+-    private bool TryAudioLimit(string sound)
++    private bool TryAudioLimit(Entity<AudioComponent> requesting, string sound)
+     {
+         if (string.IsNullOrEmpty(sound))
+             return true;
+@@ -35,10 +37,66 @@ public sealed partial class AudioSystem
+         if (count >= _maxConcurrent)
+             return false;
+ 
++        if (!TryReserveVoice(requesting))
++            return false;
++
+         count++;
+         return true;
+     }
+ 
++    private bool TryReserveVoice(Entity<AudioComponent> requesting)
++    {
++        var activeVoices = 0;
++        EntityUid? stealTarget = null;
++        var stealPriority = float.MaxValue;
++        var requestingPriority = GetVoicePriority(requesting.Comp.Params);
++        var query = AllEntityQuery<AudioComponent>();
++
++        while (query.MoveNext(out var uid, out var audio))
++        {
++            if (uid == requesting.Owner || audio.LifeStage >= ComponentLifeStage.Stopping)
++                continue;
++
++            if (audio.State != AudioState.Playing)
++                continue;
++
++            activeVoices++;
++            var priority = GetVoicePriority(audio.Params);
++            if (priority < stealPriority)
++            {
++                stealPriority = priority;
++                stealTarget = uid;
++            }
++        }
++
++        if (activeVoices < PsychoacousticAudioModel.MaxActiveVoices)
++            return true;
++
++        if (stealTarget == null || stealPriority > requestingPriority)
++            return false;
++
++        QueueDel(stealTarget.Value);
++        return true;
++    }
++
++    private static float GetVoicePriority(AudioParams parameters)
++    {
++        if (parameters.BypassMasterCompressor)
++            return 1.1f;
++
++        return PsychoacousticAudioModel.EvaluateSource(
++            parameters.PsychoacousticProfile,
++            parameters.Bus,
++            parameters.AcousticMaterial,
++            parameters.FearIntensity,
++            0f,
++            parameters.ReferenceDistance,
++            parameters.MaxDistance,
++            parameters.RolloffFactor,
++            0f,
++            0f).Priority;
++    }
++
+     private void RemoveAudioLimit(string sound)
+     {
+         if (!_playingCount.TryGetValue(sound, out var count))
+diff --git a/Robust.Client/Audio/AudioSystem.cs b/Robust.Client/Audio/AudioSystem.cs
+index d9f29054d..ad4d25495 100644
+--- a/Robust.Client/Audio/AudioSystem.cs
++++ b/Robust.Client/Audio/AudioSystem.cs
+@@ -253,7 +253,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         // If audio came into range then start playback at the correct position.
+         var offset = CalculateAudioPosition(entity, (float) length.Value.TotalSeconds);
+ 
+-        if (TryAudioLimit(component.FileName))
++        if (TryAudioLimit(entity, component.FileName))
+         {
+             var newSource = _audio.CreateAudioSource(audioResource);
+ 
+@@ -391,6 +391,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
+ 
+             // Resume playing.
+             component.Volume = component.Params.Volume;
++            ApplyPsychoacousticMix(component, 0f, 0f);
+             return;
+         }
+ 
+@@ -436,18 +437,19 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         }
+ 
+         // Update audio occlusion
++        float occlusion;
+         if ((component.Flags & AudioFlags.NoOcclusion) == AudioFlags.NoOcclusion)
+         {
+-            component.Occlusion = 0f;
++            occlusion = 0f;
+         }
+         else
+         {
+-            var occlusion = GetOcclusion(listener, delta, distance, parentUid);
+-            component.Occlusion = occlusion;
++            occlusion = GetOcclusion(listener, delta, distance, parentUid);
+         }
+ 
+         // Update audio positions.
+         component.Position = worldPos;
++        ApplyPsychoacousticMix(component, distance, occlusion);
+ 
+         // Make race cars go NYYEEOOOOOMMMMM
+         if (_physicsQuery.TryGetComponent(parentUid, out var physicsComp))
+@@ -459,6 +461,30 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         }
+     }
+ 
++    private void ApplyPsychoacousticMix(AudioComponent component, float distance, float rawOcclusion)
++    {
++        var parameters = component.Params;
++        var bus = PsychoacousticAudioModel.GetBusDefinition(parameters.Bus);
++        var seconds = (float) Timing.CurTime.TotalSeconds;
++        var audioDistance = GetAudioDistance(distance);
++        var mix = PsychoacousticAudioModel.EvaluateSource(
++            parameters.PsychoacousticProfile,
++            parameters.Bus,
++            parameters.AcousticMaterial,
++            parameters.FearIntensity,
++            audioDistance,
++            GetAudioDistance(parameters.ReferenceDistance),
++            GetAudioDistance(parameters.MaxDistance),
++            parameters.RolloffFactor,
++            rawOcclusion,
++            seconds);
++
++        component.Source.BusGain = SharedAudioSystem.VolumeToGain(bus.GainDb);
++        component.Source.PsychoacousticGain = mix.Gain;
++        component.Pitch = parameters.Pitch * mix.Pitch;
++        component.Occlusion = mix.Occlusion;
++    }
++
+     /// <summary>
+     /// Gets the audio occlusion from the target audio entity to the listener's position.
+     /// </summary>
+@@ -769,10 +795,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
+     {
+         source.Pitch = audioParams.Pitch;
+         source.Volume = audioParams.Volume;
+-        source.RolloffFactor = audioParams.RolloffFactor;
++        // Distance falloff is evaluated by the psychoacoustic model so that all
++        // backends share inverse-square/log-corrected attenuation instead of
++        // relying on backend-specific OpenAL distance curves.
++        source.RolloffFactor = 0f;
+         source.MaxDistance = GetAudioDistance(audioParams.MaxDistance);
+         source.ReferenceDistance = GetAudioDistance(audioParams.ReferenceDistance);
+         source.Looping = audioParams.Loop;
++        source.BusGain = SharedAudioSystem.VolumeToGain(PsychoacousticAudioModel.GetBusDefinition(audioParams.Bus).GainDb);
++        source.PsychoacousticGain = 1f;
+     }
+ 
+     private void OnEntityCoordinates(PlayAudioPositionalMessage ev)
+diff --git a/Robust.Client/Audio/Sources/BaseAudioSource.cs b/Robust.Client/Audio/Sources/BaseAudioSource.cs
+index 91ac9aca0..bbd9c696f 100644
+--- a/Robust.Client/Audio/Sources/BaseAudioSource.cs
++++ b/Robust.Client/Audio/Sources/BaseAudioSource.cs
+@@ -32,6 +32,9 @@ public abstract class BaseAudioSource : IAudioSource
+     /// Prior gain that was set.
+     /// </summary>
+     private float _gain;
++    private float _busGain = 1f;
++    private float _psychoacousticGain = 1f;
++    private float _occlusionDirectGain = 1f;
+ 
+     private float _occlusion;
+ 
+@@ -214,17 +217,33 @@ public abstract class BaseAudioSource : IAudioSource
+             }
+ 
+             _checkDisposed();
+-            var priorOcclusion = 1f;
+-            if (!IsEfxSupported)
+-            {
+-                AL.GetSource(SourceHandle, ALSourcef.Gain, out var priorGain);
+-                // Default to 0 to avoid spiking audio, just means it will be muted for a frame in this case.
+-                priorOcclusion = _gain == 0 ? 1f : priorGain / _gain;
+-            }
+-
+             _gain = value;
+-            AL.Source(SourceHandle, ALSourcef.Gain, _gain * priorOcclusion);
+-            Master.LogALError($"Gain is {_gain:0.00} and priorOcclusion is {priorOcclusion:0.00}. EFX supported: {IsEfxSupported}");
++            ApplyEffectiveGain();
++            Master.LogALError($"Gain is {_gain:0.00}, bus gain is {_busGain:0.00}, psychoacoustic gain is {_psychoacousticGain:0.00}, direct occlusion gain is {_occlusionDirectGain:0.00}. EFX supported: {IsEfxSupported}");
++        }
++    }
++
++    /// <inheritdoc />
++    public float BusGain
++    {
++        get => _busGain;
++        set
++        {
++            _checkDisposed();
++            _busGain = Math.Clamp(value, 0f, 4f);
++            ApplyEffectiveGain();
++        }
++    }
++
++    /// <inheritdoc />
++    public float PsychoacousticGain
++    {
++        get => _psychoacousticGain;
++        set
++        {
++            _checkDisposed();
++            _psychoacousticGain = Math.Clamp(value, 0f, 4f);
++            ApplyEffectiveGain();
+         }
+     }
+ 
+@@ -293,12 +312,13 @@ public abstract class BaseAudioSource : IAudioSource
+             var gain = MathF.Pow(cutoff, 0.1f);
+             if (IsEfxSupported)
+             {
++                _occlusionDirectGain = 1f;
+                 SetOcclusionEfx(gain, cutoff);
+             }
+             else
+             {
+-                gain *= gain * gain;
+-                AL.Source(SourceHandle, ALSourcef.Gain, _gain * gain);
++                _occlusionDirectGain = gain * gain * gain;
++                ApplyEffectiveGain();
+             }
+ 
+             _occlusion = value;
+@@ -384,6 +404,15 @@ public abstract class BaseAudioSource : IAudioSource
+         AL.Source(SourceHandle, ALSourcei.EfxDirectFilter, FilterHandle);
+     }
+ 
++    private void ApplyEffectiveGain()
++    {
++        var gain = _gain * _busGain * _psychoacousticGain;
++        if (!IsEfxSupported)
++            gain *= _occlusionDirectGain;
++
++        AL.Source(SourceHandle, ALSourcef.Gain, gain);
++    }
++
+     protected static bool AreFinite(float x, float y)
+     {
+         if (float.IsFinite(x) && float.IsFinite(y))
+diff --git a/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs b/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs
+new file mode 100644
+index 000000000..6e789aa86
+--- /dev/null
++++ b/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs
+@@ -0,0 +1,81 @@
++using NUnit.Framework;
++using Robust.Shared.Audio;
++
++namespace Robust.Shared.Tests.Audio;
++
++[TestFixture]
++public sealed class PsychoacousticAudioModel_Test
++{
++    [Test]
++    public void DistanceGainFallsOffMonotonically()
++    {
++        var near = PsychoacousticAudioModel.EvaluateDistanceGain(1f, 1f, 64f, 1f);
++        var mid = PsychoacousticAudioModel.EvaluateDistanceGain(8f, 1f, 64f, 1f);
++        var far = PsychoacousticAudioModel.EvaluateDistanceGain(32f, 1f, 64f, 1f);
++
++        Assert.Multiple(() =>
++        {
++            Assert.That(near, Is.GreaterThan(mid));
++            Assert.That(mid, Is.GreaterThan(far));
++            Assert.That(far, Is.GreaterThan(0f));
++        });
++    }
++
++    [Test]
++    public void NearFieldGainIsBounded()
++    {
++        var intimate = PsychoacousticAudioModel.EvaluateDistanceGain(0.05f, 1f, 64f, 1f);
++
++        Assert.That(intimate, Is.InRange(1f, 2f));
++    }
++
++    [Test]
++    public void AcousticMaterialsIncreaseOcclusionByAbsorption()
++    {
++        var concrete = PsychoacousticAudioModel.EvaluateOcclusion(1f, AcousticMaterialProfile.Concrete);
++        var carpet = PsychoacousticAudioModel.EvaluateOcclusion(1f, AcousticMaterialProfile.Carpet);
++        var anechoic = PsychoacousticAudioModel.EvaluateOcclusion(1f, AcousticMaterialProfile.Anechoic);
++
++        Assert.Multiple(() =>
++        {
++            Assert.That(carpet, Is.GreaterThan(concrete));
++            Assert.That(anechoic, Is.GreaterThan(carpet));
++        });
++    }
++
++    [Test]
++    public void StartleBurstTakesMaximumPriority()
++    {
++        var mix = PsychoacousticAudioModel.EvaluateSource(
++            PsychoacousticProfile.StartleBurst,
++            AudioBus.Sfx,
++            AcousticMaterialProfile.Concrete,
++            0.5f,
++            2f,
++            1f,
++            64f,
++            1f,
++            0f,
++            0f);
++
++        Assert.That(mix.Priority, Is.EqualTo(1f));
++    }
++
++    [Test]
++    public void FearLayerRemainsSubliminalAtDistance()
++    {
++        var mix = PsychoacousticAudioModel.EvaluateSource(
++            PsychoacousticProfile.InfrasoundCarrier,
++            AudioBus.FearLayer,
++            AcousticMaterialProfile.OpenField,
++            1f,
++            4f,
++            1f,
++            64f,
++            1f,
++            0f,
++            0f);
++
++        Assert.That(mix.Gain, Is.LessThan(0.02f));
++    }
++}
+diff --git a/Robust.Shared/Audio/AudioParams.cs b/Robust.Shared/Audio/AudioParams.cs
+index 426691abc..9358cc363 100644
+--- a/Robust.Shared/Audio/AudioParams.cs
++++ b/Robust.Shared/Audio/AudioParams.cs
+@@ -89,6 +89,36 @@ namespace Robust.Shared.Audio
+         [DataField]
+         public float PlayOffsetSeconds { get; set; } = Default.PlayOffsetSeconds;
+ 
++        /// <summary>
++        /// Mixer bus used for layered gain staging and DSP routing.
++        /// </summary>
++        [DataField]
++        public AudioBus Bus { get; set; } = Default.Bus;
++
++        /// <summary>
++        /// Psychoacoustic profile used to bias pitch, gain, occlusion and voice priority.
++        /// </summary>
++        [DataField]
++        public PsychoacousticProfile PsychoacousticProfile { get; set; } = Default.PsychoacousticProfile;
++
++        /// <summary>
++        /// Local fear intensity for this sound, normalized to the 0..1 range.
++        /// </summary>
++        [DataField]
++        public float FearIntensity { get; set; } = Default.FearIntensity;
++
++        /// <summary>
++        /// Dominant material profile used by attenuation and occlusion shaping.
++        /// </summary>
++        [DataField]
++        public AcousticMaterialProfile AcousticMaterial { get; set; } = Default.AcousticMaterial;
++
++        /// <summary>
++        /// Allows a source to bypass the ordinary compression priority model. Intended for short startle events.
++        /// </summary>
++        [DataField]
++        public bool BypassMasterCompressor { get; set; } = Default.BypassMasterCompressor;
++
+         /// <summary>
+         ///     If not null, this will randomly modify the pitch scale by adding a number drawn from a normal distribution with this deviation.
+         /// </summary>
+@@ -100,7 +130,14 @@ namespace Robust.Shared.Audio
+         /// <summary>
+         ///     The "default" audio configuration.
+         /// </summary>
+-        public static readonly AudioParams Default = new(0, 1, SharedAudioSystem.DefaultSoundRange, 1, 1, false, 0f);
++        public static readonly AudioParams Default = new(0, 1, SharedAudioSystem.DefaultSoundRange, 1, 1, false, 0f)
++        {
++            Bus = AudioBus.Sfx,
++            PsychoacousticProfile = PsychoacousticProfile.Neutral,
++            FearIntensity = 0f,
++            AcousticMaterial = AcousticMaterialProfile.Concrete,
++            BypassMasterCompressor = false,
++        };
+ 
+         // explicit parameterless constructor required so that default values get set properly.
+         public AudioParams() { }
+@@ -231,5 +268,38 @@ namespace Robust.Shared.Audio
+             me.PlayOffsetSeconds = offset;
+             return me;
+         }
++
++        [Pure]
++        public readonly AudioParams WithBus(AudioBus bus)
++        {
++            var me = this;
++            me.Bus = bus;
++            return me;
++        }
++
++        [Pure]
++        public readonly AudioParams WithPsychoacousticProfile(PsychoacousticProfile profile, float fearIntensity = 0f)
++        {
++            var me = this;
++            me.PsychoacousticProfile = profile;
++            me.FearIntensity = Math.Clamp(fearIntensity, 0f, 1f);
++            return me;
++        }
++
++        [Pure]
++        public readonly AudioParams WithAcousticMaterial(AcousticMaterialProfile material)
++        {
++            var me = this;
++            me.AcousticMaterial = material;
++            return me;
++        }
++
++        [Pure]
++        public readonly AudioParams WithMasterCompressorBypass(bool bypass)
++        {
++            var me = this;
++            me.BypassMasterCompressor = bypass;
++            return me;
++        }
+     }
+ }
+diff --git a/Robust.Shared/Audio/Components/AudioComponent.cs b/Robust.Shared/Audio/Components/AudioComponent.cs
+index 2cb473984..2fb24cd64 100644
+--- a/Robust.Shared/Audio/Components/AudioComponent.cs
++++ b/Robust.Shared/Audio/Components/AudioComponent.cs
+@@ -207,6 +207,26 @@ public sealed partial class AudioComponent : Component, IAudioSource
+         set => Source.Gain = value;
+     }
+ 
++    /// <summary>
++    /// <see cref="IAudioSource.BusGain"/>
++    /// </summary>
++    [ViewVariables]
++    public float BusGain
++    {
++        get => Source.BusGain;
++        set => Source.BusGain = value;
++    }
++
++    /// <summary>
++    /// <see cref="IAudioSource.PsychoacousticGain"/>
++    /// </summary>
++    [ViewVariables]
++    public float PsychoacousticGain
++    {
++        get => Source.PsychoacousticGain;
++        set => Source.PsychoacousticGain = value;
++    }
++
+     /// <summary>
+     /// <see cref="IAudioSource.Occlusion"/>
+     /// </summary>
+diff --git a/Robust.Shared/Audio/PsychoacousticAudio.cs b/Robust.Shared/Audio/PsychoacousticAudio.cs
+new file mode 100644
+index 000000000..5c3aac824
+--- /dev/null
++++ b/Robust.Shared/Audio/PsychoacousticAudio.cs
+@@ -0,0 +1,275 @@
++using System;
++using System.Diagnostics.Contracts;
++using Robust.Shared.Serialization;
++
++namespace Robust.Shared.Audio;
++
++/// <summary>
++/// Logical mixer buses used by the horror audio pipeline.
++/// </summary>
++[Serializable, NetSerializable]
++public enum AudioBus : byte
++{
++    Master,
++    Ambience,
++    Music,
++    Sfx,
++    Voice,
++    Ui,
++    FearLayer,
++}
++
++/// <summary>
++/// First-class psychoacoustic processing profiles applied after ordinary audio parameters.
++/// </summary>
++[Serializable, NetSerializable]
++public enum PsychoacousticProfile : byte
++{
++    Neutral,
++    NonlinearVocalization,
++    InfrasoundCarrier,
++    RoughnessStinger,
++    LoomingThreat,
++    StartleBurst,
++    WhisperOccluded,
++    BreathCough,
++    SuppressedWeapon,
++    BallisticCrack,
++    StructuralTransmission,
++    VentResonance,
++    ProceduralMusic,
++}
++
++/// <summary>
++/// Material families used by distance attenuation, occlusion, and reverb selection.
++/// </summary>
++[Serializable, NetSerializable]
++public enum AcousticMaterialProfile : byte
++{
++    Anechoic,
++    Carpet,
++    Concrete,
++    OpenField,
++    Wood,
++    Metal,
++    Glass,
++    Flesh,
++    Tile,
++}
++
++/// <summary>
++/// Parameters for a lightweight, source-local DSP chain.
++/// </summary>
++[Serializable, NetSerializable]
++public readonly record struct AudioDspChain(
++    float CompressorThresholdDb,
++    float CompressorRatio,
++    float EqLowShelfDb,
++    float EqPresenceDb,
++    float EqHighShelfDb,
++    float Saturation,
++    float ReverbSend,
++    float ConvolutionSend);
++
++/// <summary>
++/// Static bus definition. Runtime code keeps these immutable and applies only scalar gains on the hot path.
++/// </summary>
++[Serializable, NetSerializable]
++public readonly record struct AudioBusDefinition(AudioBus Bus, float GainDb, AudioDspChain Dsp);
++
++/// <summary>
++/// Output of the psychoacoustic model for a single source update.
++/// </summary>
++public readonly record struct PsychoacousticSourceMix(float Gain, float Pitch, float Occlusion, float Priority);
++
++/// <summary>
++/// Deterministic psychoacoustic formulas used by both client audio and content-side classification.
++/// The values are deliberately bounded: fear design should bias perception without causing clipping,
++/// zipper noise, or unpredictable source allocation.
++/// </summary>
++public static class PsychoacousticAudioModel
++{
++    public const int MaxActiveVoices = 128;
++    public const float NearFieldRadius = 0.3f;
++    public const float SpeedOfSound = 343f;
++
++    /// <summary>
++    /// Returns a static bus definition. The DSP chain describes the intended processing order:
++    /// compressor, equalizer, saturation, and spatial send. OpenAL EFX maps the chain to source
++    /// gain, low-pass, and auxiliary sends; future backends can map it to a full sample DSP graph.
++    /// </summary>
++    [Pure]
++    public static AudioBusDefinition GetBusDefinition(AudioBus bus)
++    {
++        return bus switch
++        {
++            AudioBus.Ambience => new(bus, -3f, new(-18f, 2.0f, 1.5f, -1.0f, -2.0f, 0.08f, 0.58f, 0.42f)),
++            AudioBus.Music => new(bus, -4f, new(-16f, 2.2f, 0.5f, 0.0f, -1.5f, 0.06f, 0.28f, 0.24f)),
++            AudioBus.Sfx => new(bus, 0f, new(-10f, 3.5f, 0.0f, 1.0f, 0.0f, 0.03f, 0.18f, 0.12f)),
++            AudioBus.Voice => new(bus, 0f, new(-14f, 2.6f, -1.5f, 2.0f, 1.0f, 0.02f, 0.12f, 0.10f)),
++            AudioBus.Ui => new(bus, -6f, new(-12f, 2.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f)),
++            AudioBus.FearLayer => new(bus, -36f, new(-24f, 1.4f, 3.0f, -3.0f, -5.0f, 0.18f, 0.72f, 0.65f)),
++            _ => new(AudioBus.Master, 0f, new(-8f, 2.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f)),
++        };
++    }
++
++    /// <summary>
++    /// Physically grounded distance gain: inverse-square energy with perceptual log compression.
++    /// A bounded near-field term reinforces intimate sounds inside 30 cm without exploding to infinity.
++    /// </summary>
++    [Pure]
++    public static float EvaluateDistanceGain(float distance, float referenceDistance, float maxDistance, float rolloff)
++    {
++        if (rolloff <= 0f)
++            return 1f;
++
++        if (distance >= maxDistance)
++            return 0f;
++
++        var safeReference = MathF.Max(referenceDistance, 0.05f);
++        var safeDistance = MathF.Max(distance, safeReference);
++        var inverseSquare = safeReference * safeReference / (safeDistance * safeDistance);
++        var perceptual = MathF.Pow(inverseSquare, 0.38f * MathF.Max(rolloff, 0.01f));
++
++        if (distance < NearFieldRadius)
++        {
++            var near = 1f - distance / NearFieldRadius;
++            perceptual *= 1f + near * near * 0.75f;
++        }
++
++        return Math.Clamp(perceptual, 0f, 2f);
++    }
++
++    /// <summary>
++    /// Material absorption is encoded as a scalar because the OpenAL hot path exposes a low-pass filter,
++    /// not arbitrary FIR convolution. The table follows the same ordering a full convolution backend would use.
++    /// </summary>
++    [Pure]
++    public static float MaterialAbsorption(AcousticMaterialProfile material)
++    {
++        return material switch
++        {
++            AcousticMaterialProfile.Anechoic => 0.96f,
++            AcousticMaterialProfile.Carpet => 0.72f,
++            AcousticMaterialProfile.OpenField => 0.46f,
++            AcousticMaterialProfile.Flesh => 0.42f,
++            AcousticMaterialProfile.Wood => 0.34f,
++            AcousticMaterialProfile.Tile => 0.22f,
++            AcousticMaterialProfile.Glass => 0.16f,
++            AcousticMaterialProfile.Concrete => 0.12f,
++            AcousticMaterialProfile.Metal => 0.08f,
++            _ => 0.24f,
++        };
++    }
++
++    /// <summary>
++    /// Smooth occlusion curve: each wall hit contributes a 6 dB/octave low-pass perceptually,
++    /// represented here as a continuous OpenAL low-pass intensity.
++    /// </summary>
++    [Pure]
++    public static float EvaluateOcclusion(float rayOcclusion, AcousticMaterialProfile material)
++    {
++        var materialWeight = 1f + MaterialAbsorption(material);
++        return Math.Clamp(rayOcclusion * materialWeight, 0f, 8f);
++    }
++
++    /// <summary>
++    /// Computes source-local gain, pitch and priority modifiers for psychoacoustic fear cues.
++    /// </summary>
++    [Pure]
++    public static PsychoacousticSourceMix EvaluateSource(
++        PsychoacousticProfile profile,
++        AudioBus bus,
++        AcousticMaterialProfile material,
++        float fearIntensity,
++        float distance,
++        float referenceDistance,
++        float maxDistance,
++        float rolloffFactor,
++        float rawOcclusion,
++        float seconds)
++    {
++        var safeFear = Math.Clamp(fearIntensity, 0f, 1f);
++        var gain = EvaluateDistanceGain(distance, referenceDistance, maxDistance, rolloffFactor);
++
++        var pitch = 1f;
++        var priority = bus switch
++        {
++            AudioBus.Voice => 0.82f,
++            AudioBus.Sfx => 0.72f,
++            AudioBus.FearLayer => 0.68f + safeFear * 0.22f,
++            AudioBus.Ambience => 0.34f,
++            AudioBus.Music => 0.28f,
++            AudioBus.Ui => 0.64f,
++            _ => 0.5f,
++        };
++
++        switch (profile)
++        {
++            case PsychoacousticProfile.NonlinearVocalization:
++                gain *= 1f + 0.20f * safeFear;
++                pitch *= 1f + 0.035f * MathF.Sin(seconds * 91f + safeFear * 13f);
++                priority += 0.10f;
++                break;
++            case PsychoacousticProfile.InfrasoundCarrier:
++                gain *= Systems.SharedAudioSystem.VolumeToGain(-40f + 4f * safeFear);
++                pitch *= 0.5f;
++                priority += 0.06f;
++                break;
++            case PsychoacousticProfile.RoughnessStinger:
++                gain *= 1f + 0.33f * safeFear;
++                pitch *= 1f + 0.018f * MathF.Sin(seconds * 38f);
++                priority += 0.18f;
++                break;
++            case PsychoacousticProfile.LoomingThreat:
++                gain *= 1f + MathF.Pow(safeFear, 1.7f) * 0.55f;
++                pitch *= 1f + safeFear * 0.08f;
++                priority += 0.20f;
++                break;
++            case PsychoacousticProfile.StartleBurst:
++                gain *= 1.85f;
++                priority = 1f;
++                break;
++            case PsychoacousticProfile.WhisperOccluded:
++                gain *= 0.72f + safeFear * 0.18f;
++                pitch *= 0.98f;
++                rawOcclusion += 0.7f;
++                priority += 0.08f;
++                break;
++            case PsychoacousticProfile.BreathCough:
++                gain *= distance < NearFieldRadius ? 1.35f : 1.05f;
++                priority += 0.12f;
++                break;
++            case PsychoacousticProfile.SuppressedWeapon:
++                gain *= 0.58f;
++                pitch *= 0.96f;
++                rawOcclusion += 0.35f;
++                priority += 0.16f;
++                break;
++            case PsychoacousticProfile.BallisticCrack:
++                gain *= 1.2f;
++                pitch *= 1.04f;
++                priority += 0.14f;
++                break;
++            case PsychoacousticProfile.StructuralTransmission:
++                gain *= 0.48f;
++                rawOcclusion += 1.2f;
++                priority += 0.04f;
++                break;
++            case PsychoacousticProfile.VentResonance:
++                gain *= 0.72f;
++                pitch *= 1f + 0.02f * MathF.Sin(seconds * SpeedOfSound / 8f);
++                rawOcclusion += 0.45f;
++                priority += 0.05f;
++                break;
++            case PsychoacousticProfile.ProceduralMusic:
++                gain *= 0.88f + safeFear * 0.20f;
++                pitch *= 1f - safeFear * 0.015f;
++                priority += 0.02f;
++                break;
++        }
++
++        var occlusion = EvaluateOcclusion(rawOcclusion, material);
++        return new PsychoacousticSourceMix(Math.Clamp(gain, 0f, 2.5f), Math.Clamp(pitch, 0.5f, 2f), occlusion, Math.Clamp(priority, 0f, 1f));
++    }
++}
+diff --git a/Robust.Shared/Audio/PsychoacousticAudioCommands.cs b/Robust.Shared/Audio/PsychoacousticAudioCommands.cs
+new file mode 100644
+index 000000000..617c7c0b1
+--- /dev/null
++++ b/Robust.Shared/Audio/PsychoacousticAudioCommands.cs
+@@ -0,0 +1,43 @@
++using System;
++using Robust.Shared.Console;
++
++namespace Robust.Shared.Audio;
++
++internal sealed class PsychoacousticAudioBusesCommand : LocalizedCommands
++{
++    public override string Command => "audio_buses";
++
++    public override void Execute(IConsoleShell shell, string argStr, string[] args)
++    {
++        foreach (AudioBus bus in Enum.GetValues<AudioBus>())
++        {
++            var definition = PsychoacousticAudioModel.GetBusDefinition(bus);
++            shell.WriteLine($"{definition.Bus}: gain={definition.GainDb:0.0}dB compressor={definition.Dsp.CompressorThresholdDb:0.0}dB/{definition.Dsp.CompressorRatio:0.0}:1 reverb={definition.Dsp.ReverbSend:0.00} convolution={definition.Dsp.ConvolutionSend:0.00}");
++        }
++    }
++}
++
++internal sealed class PsychoacousticAudioProfilesCommand : LocalizedCommands
++{
++    public override string Command => "audio_profiles";
++
++    public override void Execute(IConsoleShell shell, string argStr, string[] args)
++    {
++        foreach (PsychoacousticProfile profile in Enum.GetValues<PsychoacousticProfile>())
++        {
++            var mix = PsychoacousticAudioModel.EvaluateSource(
++                profile,
++                AudioBus.Sfx,
++                AcousticMaterialProfile.Concrete,
++                0.75f,
++                3f,
++                1f,
++                15f,
++                1f,
++                0.25f,
++                1.25f);
++
++            shell.WriteLine($"{profile}: gain={mix.Gain:0.000} pitch={mix.Pitch:0.000} occlusion={mix.Occlusion:0.000} priority={mix.Priority:0.000}");
++        }
++    }
++}
+diff --git a/Robust.Shared/Audio/Sources/DummyAudioSource.cs b/Robust.Shared/Audio/Sources/DummyAudioSource.cs
+index 95314e81e..f354c6d89 100644
+--- a/Robust.Shared/Audio/Sources/DummyAudioSource.cs
++++ b/Robust.Shared/Audio/Sources/DummyAudioSource.cs
+@@ -61,6 +61,12 @@ internal partial class DummyAudioSource : IAudioSource
+     /// <inheritdoc />
+     public float Gain { get; set; }
+ 
++    /// <inheritdoc />
++    public float BusGain { get; set; } = 1f;
++
++    /// <inheritdoc />
++    public float PsychoacousticGain { get; set; } = 1f;
++
+     /// <inheritdoc />
+     [DataField]
+     public float MaxDistance { get; set; }
+diff --git a/Robust.Shared/Audio/Sources/IAudioSource.cs b/Robust.Shared/Audio/Sources/IAudioSource.cs
+index ca92f258f..7dab76147 100644
+--- a/Robust.Shared/Audio/Sources/IAudioSource.cs
++++ b/Robust.Shared/Audio/Sources/IAudioSource.cs
+@@ -61,6 +61,16 @@ public interface IAudioSource : IDisposable
+     /// </summary>
+     float Gain { get; set; }
+ 
++    /// <summary>
++    /// Mixer-bus scalar applied after the source's own gain.
++    /// </summary>
++    float BusGain { get; set; }
++
++    /// <summary>
++    /// Psychoacoustic scalar applied after bus gain and before backend occlusion.
++    /// </summary>
++    float PsychoacousticGain { get; set; }
++
+     float MaxDistance { get; set; }
+ 
+     float RolloffFactor { get; set; }
+-- 
+2.53.0.windows.2
+

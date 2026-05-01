@@ -667,6 +667,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         );
 
         RaiseLocalEvent(gun, ref ev);
+        ev.SoundGunshot = WithBallisticGunshotProfile(ev.SoundGunshot);
 
         if (comp.SoundGunshotModified != ev.SoundGunshot)
         {
@@ -721,6 +722,28 @@ public abstract partial class SharedGunSystem : EntitySystem
             comp.ProjectileSpeedModified = ev.ProjectileSpeed;
             DirtyField(gun, nameof(GunComponent.ProjectileSpeedModified));
         }
+    }
+
+    private static SoundSpecifier? WithBallisticGunshotProfile(SoundSpecifier? sound)
+    {
+        if (sound == null)
+            return null;
+
+        var parameters = sound.Params;
+        if (parameters.PsychoacousticProfile == PsychoacousticProfile.Neutral)
+        {
+            parameters = parameters
+                .WithBus(AudioBus.Sfx)
+                .WithPsychoacousticProfile(PsychoacousticProfile.BallisticCrack, 0.45f)
+                .WithAcousticMaterial(AcousticMaterialProfile.Metal);
+        }
+
+        return sound switch
+        {
+            SoundPathSpecifier path => new SoundPathSpecifier(path.Path, parameters),
+            SoundCollectionSpecifier collection => new SoundCollectionSpecifier(collection.Collection ?? string.Empty, parameters),
+            _ => sound,
+        };
     }
 
     protected abstract void CreateEffect(EntityUid gunUid, MuzzleFlashEvent message, EntityUid? user = null);

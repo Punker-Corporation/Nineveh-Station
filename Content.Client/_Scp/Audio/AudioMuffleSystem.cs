@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Client._Scp.Audio.Components;
+using Content.Shared._Scp.Audio;
 using Content.Shared._Scp.ScpCCVars;
 using Content.Shared.Silicons.StationAi;
 using Robust.Client.Audio;
@@ -63,6 +64,7 @@ public sealed partial class AudioMuffleSystem : EntitySystem
     /// Cached query used to exempt Station AI listeners from client-side muffling.
     /// </summary>
     private EntityQuery<StationAiHeldComponent> _aiQuery;
+    private EntityQuery<MuffleComponent> _muffleQuery;
 
     #region CCvar events
 
@@ -84,6 +86,7 @@ public sealed partial class AudioMuffleSystem : EntitySystem
         Subs.CVar(_cfg, ScpCCVars.AudioMufflingEffectClearOcclusionThreshold, value => _muffleEffectClearOcclusionThreshold = value, true);
 
         _aiQuery = GetEntityQuery<StationAiHeldComponent>();
+        _muffleQuery = GetEntityQuery<MuffleComponent>();
         InitializeOcclusion();
     }
 
@@ -152,7 +155,7 @@ public sealed partial class AudioMuffleSystem : EntitySystem
                 continue;
 
             UpdateMuffleEffect(uid, audioComp, localEffects, canMuffle);
-            ApplyOcclusionGain(audioComp, canMuffle);
+            ApplyOcclusionGain(uid, audioComp, canMuffle);
             _resolver.Reconcile(uid, audioComp, localEffects);
         }
     }
@@ -189,9 +192,10 @@ public sealed partial class AudioMuffleSystem : EntitySystem
     /// The engine may already mute the source because of distance, map mismatch, nullspace, or built-in occlusion.
     /// This method therefore clamps downward only and never increases <see cref="AudioComponent.Gain"/>.
     /// </remarks>
-    private void ApplyOcclusionGain(AudioComponent audioComp, bool canMuffle)
+    private void ApplyOcclusionGain(EntityUid uid, AudioComponent audioComp, bool canMuffle)
     {
         var occlusion = audioComp.Occlusion;
+        var muffle = GetLocalMuffle(uid);
 
         float gainFactor;
         if (!canMuffle || occlusion <= 0f)
@@ -210,12 +214,33 @@ public sealed partial class AudioMuffleSystem : EntitySystem
                 gainFactor = 0f;
         }
 
+        if (muffle != null)
+        {
+            var wet = Math.Clamp(muffle.Wet, 0f, 1f);
+            var absorption = Math.Clamp(muffle.AirAbsorption, 0f, 1f);
+            var cutoff = Math.Clamp(muffle.Cutoff, 0.05f, 1f);
+            var resonance = Math.Clamp(muffle.Resonance, 0f, 1f);
+            var muffleGain = cutoff * (1f - absorption * 0.65f) + resonance * 0.08f;
+            gainFactor *= 1f + (muffleGain - 1f) * wet;
+        }
+
         var targetGain = SharedAudioSystem.VolumeToGain(audioComp.Params.Volume) * gainFactor;
 
         // AudioSystem may already have muted this source for distance/map/nullspace.
         // Only ever attenuate further, never restore gain above the engine's current value.
         if (audioComp.Gain > targetGain)
             audioComp.Gain = targetGain;
+    }
+
+    private MuffleComponent? GetLocalMuffle(EntityUid uid)
+    {
+        if (_muffleQuery.TryComp(uid, out var localMuffle))
+            return localMuffle;
+
+        var parent = Transform(uid).ParentUid;
+        return _muffleQuery.TryComp(parent, out var parentMuffle)
+            ? parentMuffle
+            : null;
     }
 
     /// <summary>

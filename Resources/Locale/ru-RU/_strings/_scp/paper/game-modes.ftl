@@ -1,5 +1,5 @@
-document-difficulty-mode-summary = relatório de segurança automático
-document-meta-garbage-summary = conclusão da comissão sanitária
+document-difficulty-mode-summary = автоматический отчет службы безопасности
+document-meta-garbage-summary = заключение санитарной комиссии
 paper-neutralized-mode-info =
     ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: NOMINAL[/bold]
     

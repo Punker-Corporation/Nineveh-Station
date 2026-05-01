@@ -18,7 +18,12 @@ public sealed partial class GunComponent : Component
     /// The base sound to use when the gun is fired.
     /// </summary>
     [DataField]
-    public SoundSpecifier? SoundGunshot = new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/smg.ogg");
+    public SoundSpecifier? SoundGunshot = new SoundPathSpecifier(
+        "/Audio/Weapons/Guns/Gunshots/smg.ogg",
+        AudioParams.Default
+            .WithBus(AudioBus.Sfx)
+            .WithPsychoacousticProfile(PsychoacousticProfile.BallisticCrack, 0.45f)
+            .WithAcousticMaterial(AcousticMaterialProfile.Metal));
 
     /// <summary>
     /// The sound to use when the gun is fired.
@@ -28,7 +33,12 @@ public sealed partial class GunComponent : Component
     public SoundSpecifier? SoundGunshotModified;
 
     [DataField]
-    public SoundSpecifier? SoundEmpty = new SoundPathSpecifier("/Audio/Weapons/Guns/Empty/empty.ogg");
+    public SoundSpecifier? SoundEmpty = new SoundPathSpecifier(
+        "/Audio/Weapons/Guns/Empty/empty.ogg",
+        AudioParams.Default
+            .WithBus(AudioBus.Sfx)
+            .WithPsychoacousticProfile(PsychoacousticProfile.SuppressedWeapon, 0.20f)
+            .WithAcousticMaterial(AcousticMaterialProfile.Metal));
 
     /// <summary>
     /// Sound played when toggling the <see cref="SelectedMode"/> for this gun.
