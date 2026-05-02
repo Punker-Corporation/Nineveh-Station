@@ -10,5 +10,10 @@ public sealed partial class MumbleAccentComponent : Component
     /// By default, it reduces the volume and distance of emote sounds.
     /// </summary>
     [DataField]
-    public AudioParams EmoteAudioParams = AudioParams.Default.WithVolume(-8f).WithMaxDistance(5);
+    public AudioParams EmoteAudioParams = AudioParams.Default
+        .WithVolume(-8f)
+        .WithMaxDistance(7f)
+        .WithBus(AudioBus.Voice)
+        .WithPsychoacousticProfile(PsychoacousticProfile.WhisperOccluded, 0.25f)
+        .WithAcousticMaterial(AcousticMaterialProfile.Flesh);
 }
