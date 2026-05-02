@@ -13,3 +13,7 @@ generic-hours = horas
 generic-minutes = minutos
 generic-playtime-title = Hora do jogo
 generic-confirm = Confirmar
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+generic-seconds = segundos

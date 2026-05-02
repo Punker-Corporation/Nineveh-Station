@@ -52,3 +52,21 @@ ent-ClothingOuterArmorMilitaryLocus = { ent-ClothingOuterArmorMilitary } com mó
 ent-ClothingOuterArmorMilitaryHeavyLocus = { ent-ClothingOuterArmorMilitaryHeavy } com módulo locus
     .desc = { ent-ClothingOuterArmorMilitaryHeavy.desc } O módulo de proteção Locus também é construído aqui, bloqueando os efeitos de teletransporte de SCP-106.
     .suffix = FTM | Local
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingOuterArmorNTF = colete de armadura
+    .desc = Um colete de protecção preto reforçado. Seu design minimalista e construção durável transmitem uma sensação de confiabilidade.
+    .suffix = MTF
+
+ent-MTFCommanderVest = Colete de armadura do comandante
+    .desc = Um colete de protecção preto reforçado. Seu design minimalista e construção durável transmitem uma sensação de confiabilidade. Ele apresenta aparar mais formal e tem uma aparência autoritária.
+    .suffix = MTF
+
+ent-ClothingOuterHardsuitMH = hardsuit
+    .desc = Um equipamento de protecção selado com nós de ligação maciços. Os materiais são resistentes a ambientes hostis.
+    .suffix = MTF
+
+ent-ClothingOuterHardsuitMHLeader = O traje do comandante.
+    .desc = Um equipamento de protecção selado com nós de ligação maciços. Os materiais são resistentes a ambientes hostis. Distingue-se por elementos mais expressivos.
+    .suffix = MTF

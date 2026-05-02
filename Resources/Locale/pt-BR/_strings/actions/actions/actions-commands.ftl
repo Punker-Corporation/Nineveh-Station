@@ -12,3 +12,7 @@ upgradeaction-command-entity-does-not-exist = Esta entidade não existe; o coman
 upgradeaction-command-entity-is-not-action = Esta essência não possui um componente de aprimoramento de ação, portanto não pode ser aumentada de nível.
 upgradeaction-command-cannot-level-up = Esta ação não pode ser aumentada de nível.
 upgradeaction-command-description = Aumenta o nível de ação em um ou para o nível especificado, se possível.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+upgradeaction-command-help = Uso: upgradeaction <entityUid> [level]

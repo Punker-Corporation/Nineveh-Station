@@ -1,7 +1,9 @@
 ent-BaseScrap = sucata
-    .desc = Lixo inútil. Embora, talvez, alguns materiais possam ser obtidos a partir dele.
+    .desc = Lixo inútil. Você provavelmente poderia obter alguns materiais fora dele embora.
+    .suffix = Sucata
 ent-BaseScrapLarge = sucata
-    .desc = Lixo inútil. Embora, talvez, alguns materiais possam ser obtidos a partir dele.
+    .desc = Lixo inútil. Você provavelmente poderia obter alguns materiais fora dele embora.
+    .suffix = Sucata
 ent-ScrapSteel = pilha explodida de aço
     .desc = Uma pilha de aço soldada sob calor extremo. No geral, é um tamanho decente e você pode obter algumas folhas dele.
 ent-ScrapGlass = circuitos defeituosos

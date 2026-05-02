@@ -1,7 +1,7 @@
-ent-ArrowRouletteEros = flecha de Eros
-    .desc = 
-        Стрела рулетка, созданная для качественного рандома в ваших любовных играх.
-        Производитель не несет ответственности при использовании стрелы не по назначению.
+ent-ArrowRouletteEros = Seta de Eros
+    .desc =
+        Uma seta roleta projetado para trazer aleatoriedade de qualidade para seus jogos de amor.
+        O fabricante não é responsável por qualquer desvio da seta.
 
 ent-ArrowRouletteErot = flecha de Eros
     .desc = { ent-ArrowRouletteEros.desc }

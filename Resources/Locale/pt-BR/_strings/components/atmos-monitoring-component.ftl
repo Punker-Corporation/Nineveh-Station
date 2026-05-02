@@ -11,4 +11,4 @@ atmos-monitoring-window-show-pipe-network = Rede de tubulação
 atmos-monitoring-window-show-gas-pipe-sensors = Sensores de tubulação de gás
 atmos-monitoring-window-label-gases = Gases presentes
 atmos-monitoring-window-flavor-left = Contate um técnico atmosférico para obter assistência.
-atmos-monitoring-window-flavor-right = v1.1
+atmos-monitoring-window-flavor-right = v1. 1

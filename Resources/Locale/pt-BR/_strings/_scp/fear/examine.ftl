@@ -7,15 +7,15 @@ examine-fear-state-fear-dead = [color=lightblue]Um momento consciente foi impres
 examine-fear-state-terror-dead = [color=lightblue]{ CAPITALIZE(gender-based-third-form-case) } boca congelada em um grito silencioso e olhos olhando para o vazio que ninguém deveria ter visto[/color]
 gender-based-third-form =
     { GENDER($target) ->
-    [male] Ele
-    [female] Ela
-    [epicene] они
-   *[neuter] Elu
- }
+        [male] ele
+        [female] ela
+        [epicene] eles
+       *[neuter] ele
+    }
 gender-based-third-form-case =
     { GENDER($target) ->
-    [male] Dele
-    [female] Dela
-    [epicene] их
-   *[neuter] Delu
- }
+        [male] sua
+        [female] ela
+        [epicene] seus
+       *[neuter] sua
+    }

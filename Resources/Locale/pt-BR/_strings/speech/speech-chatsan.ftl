@@ -112,7 +112,7 @@ chatsan-replacement-etcetera = etcétera
 chatsan-word-41 = wyd
 chatsan-replacement-41 = o que você tá fazendo
 
-chatsan-word-42 = ofc
+chatsan-word-42 = dec
 chatsan-replacement-42 = é claro
 
 chatsan-word-43 = pdc
@@ -331,3 +331,16 @@ chatsan-replacement-118 = Chefe da Segurança
 
 chatsan-word-119 = hop
 chatsan-replacement-119 = Gerente de RH
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+chatsan-replacement-53 = Onde estás?
+
+
+chatsan-replacement-54 = com certeza
+
+
+chatsan-replacement-58 = O que é bom?
+
+
+chatsan-replacement-59 = erro meu

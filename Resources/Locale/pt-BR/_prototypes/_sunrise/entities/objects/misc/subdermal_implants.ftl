@@ -9,3 +9,20 @@ ent-DeathRattleImplantFreelance = Implante do chocalho da morte de Freelance
 ent-ScramImplantProto = { ent-ScramImplant }
     .suffix = protótipo
     .desc = { ent-ScramImplant.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ProtoAdrenalImplant = implante proto-adrenal
+    .desc = Injeta uma pequena dose de efedrina e epinefrina quando ativada.
+
+ent-AdrenalImplant = implante adrenal
+    .desc = Injeta uma dose forte de efedrina e epinefrina quando ativada.
+
+ent-StimpackImplant = implante de estimulante
+    .desc = Injeta uma grande dose de estimulantes quando ativados.
+
+ent-NutrimentImplant = implante de nutrientes
+    .desc = Injeta um complexo de nutrientes quando ativado. Entra em estado crítico: injeta automaticamente.
+
+ent-ReviverImplant = implante do reanimador
+    .desc = Estimula uma onda de adrenalina com uma descarga focada no coração e um coquetel de reagentes.

@@ -32,3 +32,8 @@ ent-ClothingBackpackWhite = mochila branca
     .desc = É só uma mochila, mas é linda.
 ent-ClothingBackpackYellow = mochila amarela
     .desc = É só uma mochila, mas é linda.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackRandomColorSpawner = mochila (cor aleatória)
+    .desc = Uma mochila de cor aleatória.

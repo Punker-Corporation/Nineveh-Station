@@ -24,18 +24,8 @@ emergency-shuttle-extended = O horário de lançamento de { " " } foi estendido 
 # Emergency shuttle console popup / announcement
 emergency-shuttle-console-no-early-launches = Lançamento antecipado desativado
 # Emergency shuttle console popup / announcement
-emergency-shuttle-console-auth-left = 
-    { $remaining } { $remaining -> 
-    [one] авторизация осталась
-    [few] авторизации остались
-   *[other] авторизации остались
- } для досрочного запуска транспортника.
-emergency-shuttle-console-auth-revoked = 
-    Авторизации на досрочный запуск транспортника отозваны, { $remaining } { $remaining -> 
-    [one] авторизация необходима
-    [few] авторизации необходимы
-   *[other] авторизации необходимы
- }.
+emergency-shuttle-console-auth-left = {$remaining} autorizações necessárias até o shuttle é lançado cedo.
+emergency-shuttle-console-auth-revoked = Autorização de lançamento antecipada revogada, autorizações {$remaining} necessárias.
 emergency-shuttle-console-denied = Acesso negado
 # UI
 emergency-shuttle-console-window-title = Console de transporte
@@ -51,3 +41,21 @@ emergency-shuttle-ui-remaining = Restante: { $remaining }
 # Map Misc.
 map-name-centcomm = Sede da O4
 map-name-terminal = Terminal de desembarque
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-delayroundend-desc = Para o temporizador que termina a ronda quando o vaivém de emergência sai do hiperespaço.
+
+cmd-delayroundend-help = Uso: layroundend
+
+cmd-dockemergencyshuttle-desc = Chama o vaivém de emergência e atraca-o para a estação... se puder.
+
+cmd-dockemergencyshuttle-help = Uso: dockemergencyshuttle
+
+## Lançar o transporte de emergência
+
+cmd-launchemergencyshuttle-desc = Lança o vaivém de emergência se possível.
+
+cmd-launchemergencyshuttle-help = Uso: launchemergencyshuttle
+
+# Vaivém de emergência

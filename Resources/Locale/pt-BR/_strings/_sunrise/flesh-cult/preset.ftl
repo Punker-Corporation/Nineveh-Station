@@ -1,8 +1,8 @@
 flesh-cult = Culto à carne
-flesh-cult-round-end-result = 
-    { $cultistsCount -> 
-    [one] Был один культист плоти.
-   *[other] Было { $cultistsCount } культистов плоти.
+flesh-cult-round-end-result =
+    { $cultistsCount ->
+    [one] Havia um culto à carne.
+   *[other] Havia { $cultistsCount } de cultos de carne.
  }
 flesh-cult-and-traitor-title = Culto à Carne e Traidores
 flesh-cult-and-traitor-description = Há simultaneamente um culto à carne e traidores operando na estação.
@@ -25,8 +25,8 @@ flesh-cult-user-was-a-cultist-leader-with-objectives = [color=gray]{ $user }[/co
 flesh-cult-user-was-a-cultist-leader-with-objectives-named = [color=White]{ $name }[/color] ([color=gray]{ $user }[/color]) era o líder de um culto à carne com os seguintes objetivos:
 flesh-cult-was-a-cultist-leader-with-objectives-named = [color=White]{ $name }[/color] era o líder de um culto à carne com os seguintes objetivos:
 flesh-cult-round-end-leader = [bold]O líder do culto à carne era: [color=White]{ $name }[/color] ([color=gray]{ $username }[/color])[/bold]
-preset-flesh-cult-objective-issuer-flesh-cult = [cor = #e0106a]Культ плоти[/color]
-objective-issuer-flesh-cult = [cor = #e0106a]Культ плоти[/color]
+preset-flesh-cult-objective-issuer-flesh-cult = [cor = #e0106a] Flesh Cult [/color]
+objective-issuer-flesh-cult = [cor = #e0106a] Flesh Cult [/color]
 # Shown at the end of a round of Traitor
 flesh-cult-objective-condition-success = { $condition } | [color=green]Sucesso![/color]
 # Shown at the end of a round of Traitor
@@ -36,34 +36,34 @@ flesh-cult-description = Um culto apareceu na estação e quer assumir o control
 flesh-cult-not-enough-ready-players = Poucos jogadores estão prontos para jogar! Dos { $minimumPlayers } jogadores necessários, { $readyPlayersCount } estão prontos.
 flesh-cult-no-one-ready = Não há jogadores prontos! Falha ao iniciar o modo Flesh Cult.
 # TraitorRole
-flesh-cult-role-greeting = 
-    Вы - участник культа плоти.
-        Ваши цели и соратники указаны в меню персонажа.
-        Поедайте существ из плоти чтобы получить новые навыки, оставайтесь в тени и готовите пришествие плоти на станцию.
-flesh-cult-role-cult-members = 
-    Ваши соратники:
+flesh-cult-role-greeting =
+    Fazes parte de um culto à carne.
+        Seus objetivos e associados estão listados no menu de caracteres.
+        Comer criaturas de carne para aprender novas habilidades, ficar nas sombras e preparar a vinda da carne para a estação.
+flesh-cult-role-cult-members =
+    Os seus associados:
                 { $cultMembers }
-                Не позволяйте им умереть напрасно.
+                Não os deixes morrer por nada.
 # TraitorRole
-flesh-cult-role-greeting-leader = 
-    Вы - лидер культа плоти.
-            Ваши цели и соратники указаны в меню персонажа.
-            Поедайте существ из плоти чтобы получить новые навыки, оставайтесь в тени и готовите пришествие плоти на станцию.
-            Убедитесь что никто из участников вашего культа не погибнет напрасно.
-flesh-cult-round-end-count-create-flesh-hearts = 
-    { $heartsCount -> 
-    [one] Было создано одно сердце плоти.
-   *[other] Было создано { $heartsCount } сердец плоти.
+flesh-cult-role-greeting-leader =
+    És o líder de uma seita de carne.
+            Seus objetivos e associados estão listados no menu de caracteres.
+            Comer criaturas de carne para aprender novas habilidades, ficar nas sombras e preparar a vinda da carne para a estação.
+            Certifica-te que nenhum membro do teu culto morre em vão.
+flesh-cult-round-end-count-create-flesh-hearts =
+    { $heartsCount ->
+    [one] Um coração da carne foi criado.
+   *[other] Os corações { $heartsCount } da carne foram criados.
  }
-flesh-cult-round-end-count-activate-flesh-hearts = 
-    { $heartsCount -> 
-    [one] Было пробуждено одно сердце плоти.
-   *[other] Было пробуждено { $heartsCount } сердец плоти.
+flesh-cult-round-end-count-activate-flesh-hearts =
+    { $heartsCount ->
+    [one] Um coração da carne foi despertado.
+   *[other] Os corações { $heartsCount } da carne foram despertados.
  }
 flesh-cult-round-end-count-no-activate-flesh-hearts = Nem um único coração de carne foi despertado.
-flesh-cult-round-end-count-destroy-flesh-hearts = 
-    { $heartsCount -> 
-    [one] Было уничтожено одно сердце плоти.
-   *[other] Было уничтожено { $heartsCount } сердец плоти.
+flesh-cult-round-end-count-destroy-flesh-hearts =
+    { $heartsCount ->
+    [one] Um coração da carne foi destruído.
+   *[other] Os corações { $heartsCount } da carne foram destruídos.
  }
 flesh-cult-round-end-count-no-destroy-flesh-hearts = Nenhum coração de carne foi destruído.

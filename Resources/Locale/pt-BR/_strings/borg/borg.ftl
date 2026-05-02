@@ -59,3 +59,9 @@ borg-type-peace-transponder = pacificador ciborgue
 borg-type-security-name = Guarda de segurança
 borg-type-security-desc = Proteja a tripulação e a propriedade do complexo patrulhando os corredores e respondendo a emergências. Equipado com sistemas avançados de detecção de ameaças e equipamentos de proteção.
 borg-type-security-transponder = segurança ciborgue
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+borg-module-action-name = Activar {$moduleName}
+
+borg-module-action-description = Selecione o {$moduleName}, permitindo que você use as ferramentas que ele fornece.

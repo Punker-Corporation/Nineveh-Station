@@ -1,6 +1,7 @@
 ent-BaseMagazineBoxLightRifle = caixa de cartuchos (7,62)
     .desc = { ent-BaseItem.desc }
-ent-MagazineBoxLightRifleBig = caixa de cartuchos (7,62)
+ent-MagazineBoxLightRifleBig = Caixa de munições (.30 rifle)
+    .suffix = Grande
     .desc = { ent-BaseMagazineBoxLightRifle.desc }
 ent-MagazineBoxLightRifleSP = caixa de cartuchos (7,62 SP)
     .desc = { ent-BaseMagazineBoxLightRifle.desc }

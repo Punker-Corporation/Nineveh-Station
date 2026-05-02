@@ -1,12 +1,12 @@
 guidebook-microwave-ingredients-header = Ingredientes
 guidebook-microwave-cook-time-header = Tempo de cozimento
-guidebook-microwave-cook-time = 
-    { $time -> 
-    [0] Мгновенно
-    [1] [bold]1[/bold] секунда
-    [few] [bold]{ $time }[/bold] секунды
-   *[other] [bold]{ $time }[/bold] секунд
- }
+guidebook-microwave-cook-time =
+    { $time ->
+        [0] Instantânea
+        [1] [bold] 1 [/bold] segundo
+       *[other] [bold] {$time} [/bold] segundos
+    }
+
 guidebook-microwave-reagent-color-display = [color={ $color }]■[/color]
 guidebook-microwave-reagent-name-display = [bold]{ $reagent }[/bold]
 guidebook-microwave-reagent-quantity-display = × { $amount }unidades

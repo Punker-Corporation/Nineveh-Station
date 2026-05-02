@@ -1,2 +1,2 @@
-news-discord-footer = Servidor: { $server } | Redondo: #{ $round } | Автор: { $author } | Время: { $time }
+news-discord-footer = Servidor: {$server} Rodada: # {$round} Autor: {$author} Hora: {$time}
 news-discord-unknown-author = Desconhecido

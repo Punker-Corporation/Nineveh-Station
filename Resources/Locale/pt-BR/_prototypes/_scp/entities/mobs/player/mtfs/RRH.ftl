@@ -13,3 +13,23 @@ ent-SpawnerMTFSquadRRHSpawnOnTrigger = { ent-SpawnerMTFSquadRRH }
 ent-RandomHumanoidSpawnerRRHCadet = { ghost-role-information-mtf-cadet-RRH-name }
     .suffix = FTM | Alfa-1
     .desc = { ghost-role-information-mtf-cadet-description }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-IDCardRRHLeader = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardRRHSpecialist = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardRRHCadet = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-RRHLeaderPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-RRHSpecialistPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-RRHCadetPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }

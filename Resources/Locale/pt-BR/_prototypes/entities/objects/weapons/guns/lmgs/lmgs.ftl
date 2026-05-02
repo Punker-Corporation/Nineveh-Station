@@ -5,3 +5,8 @@ ent-WeaponLightMachineGunL6 = L6 SERRA
     .suffix = Metralhadora
 ent-WeaponLightMachineGunL6C = LINHA L6C
     .desc = L6 SAW para ciborgues. Cria cartuchos de 5,56 x 45 mm dinamicamente a partir do fabricante de munição com carregamento automático integrado.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponLightMachineGunL6Max = { ent-WeaponLightMachineGunL6 }
+    .desc = { ent-WeaponLightMachineGunL6.desc }

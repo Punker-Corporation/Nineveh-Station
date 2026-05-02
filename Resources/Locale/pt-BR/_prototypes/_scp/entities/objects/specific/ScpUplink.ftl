@@ -51,3 +51,23 @@ ent-BaseUplinkHightLeader = Tablet de pedido de equipamento do comandante Elite 
 ent-BaseUplinkHightSpecialist = Tablet para pedidos de equipamentos Elite MTF
     .desc = { ent-BaseUplinkMTF.desc }
     .suffix = Preenchido
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BaseUplinkRRH = { ent-BaseUplinkMTF }
+    .desc = { ent-BaseUplinkMTF.desc }
+
+ent-BaseUplinkRRHLeader = { ent-BaseUplinkRRH }
+    .desc = { ent-BaseUplinkRRH.desc }
+
+ent-BaseUplinkRRHSpecialist = { ent-BaseUplinkRRH }
+    .desc = { ent-BaseUplinkRRH.desc }
+
+ent-BaseUplinkLLH = { ent-BaseUplinkMTF }
+    .desc = { ent-BaseUplinkMTF.desc }
+
+ent-BaseUplinkLLHLeader = { ent-BaseUplinkLLH }
+    .desc = { ent-BaseUplinkLLH.desc }
+
+ent-BaseUplinkLLHSpecialist = { ent-BaseUplinkLLH }
+    .desc = { ent-BaseUplinkLLH.desc }

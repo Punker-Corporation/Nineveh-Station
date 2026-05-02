@@ -19,3 +19,9 @@ strip-verb-get-data-text = Procurar
 
 strippable-bound-user-interface-stripping-menu-title = Estoque { $ownerName }
 strippable-bound-user-interface-stripping-menu-ensnare-button = Restrições de pernas
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+strip-all-verb-get-data-text = Tirar tudo
+
+## UI

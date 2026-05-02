@@ -46,7 +46,6 @@ public sealed partial class MiscTab : Control
         var languageEntries = new List<OptionDropDownCVar<string>.ValueOption>
         {
             new(ContentLocalizationManager.PortugueseCulture, Loc.GetString("ui-options-language-portuguese")),
-            new(ContentLocalizationManager.RussianCulture, Loc.GetString("ui-options-language-russian")),
         };
 
         // O canal pode ser nulo em replays.

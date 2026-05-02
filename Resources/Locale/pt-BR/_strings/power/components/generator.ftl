@@ -26,11 +26,10 @@ portable-generator-ui-network-stats-value = { POWERWATTS($supply) } / { POWERWAT
 portable-generator-ui-network-stats-not-connected = Não conectado
 power-switchable-generator-examine = A energia gerada é direcionada para { $voltage }.
 power-switchable-generator-switched = Saída alterada para { $voltage }!
-power-switchable-voltage = 
-    { $voltage -> 
-    [HV] [color=laranja]BB[/color]
-    [MV] [color=amarelo]NE[/color]
-   *[LV] [color=verde]НВ[/color]
- }
+power-switchable-voltage = { $voltage ->
+    [HV] [color=orange] HV ZXQ1XZ
+    [MV] [color=yellow] MV [/color]
+    *[LV] ZXQ0QZ LV [/color]
+}
 power-switchable-switch-voltage = Mudar para { $voltage }
 fuel-generator-verb-disable-on = Desligue o gerador primeiro!

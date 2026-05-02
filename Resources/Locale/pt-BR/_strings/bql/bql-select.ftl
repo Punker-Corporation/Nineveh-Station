@@ -1,7 +1,7 @@
 cmd-bql_select-desc = Mostrar resultados da consulta BQL na janela do cliente
-cmd-bql_select-help = 
-    Использование: bql_select <bql запрос>
-    Открытое окно позволяет телепортироваться к или просматривать переменные результирующих сущностей.
+cmd-bql_select-help = Uso: bql select <bql query>
+    A janela aberta permite- lhe teletransportar ou visualizar as variáveis das entidades resultantes.
+
 cmd-bql_select-err-server-shell = Não pode ser executado a partir da linha de comando do servidor
 cmd-bql_select-err-rest = Atenção: parte não utilizada após consulta BQL: "{ $rest }"
 ui-bql-results-title = Resultados BQL

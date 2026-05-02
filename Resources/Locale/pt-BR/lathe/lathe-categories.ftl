@@ -42,3 +42,25 @@ lathe-category-command = Equipe de comando
 lathe-category-hats = Chapéus
 lathe-category-jumpsuits = Macacões
 lathe-category-neck = No pescoço
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+lathe-category-circuit-tile = Circuito
+
+lathe-category-concrete-tile = Concreto
+
+lathe-category-dark-tile = Escuro
+
+lathe-category-faux-tile = Falsificação
+
+lathe-category-maints-tile = Principais
+
+lathe-category-marble = Mármore
+
+lathe-category-steel-tile = Aço
+
+lathe-category-white-tile = Branco
+
+lathe-category-wood-tile = Madeira
+
+# Ciência

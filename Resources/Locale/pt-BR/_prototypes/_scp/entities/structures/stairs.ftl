@@ -10,3 +10,11 @@ ent-StairScpSteel = { ent-Stairs }
 ent-StairScpSteelStage = { ent-Stairs }
     .suffix = Aço
     .desc = { ent-Stairs.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-StairScpWood = { ent-StairWood }
+    .desc = { ent-StairWood.desc }
+
+ent-StairScpWoodStage = { ent-StairStageWood }
+    .desc = { ent-StairStageWood.desc }

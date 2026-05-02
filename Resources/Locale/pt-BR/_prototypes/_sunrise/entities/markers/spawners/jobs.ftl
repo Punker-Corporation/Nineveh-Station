@@ -93,3 +93,17 @@ ent-SpawnPointBlueShield = Oficial Escudo Azul
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointPrisoner = prisioneiro
     .desc = { ent-SpawnPointJobBase.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-SpawnPointCommaid = comando maid
+    .desc = { ent-SpawnPointJobBase.desc }
+
+ent-SpawnPointMailCarrier = Transportador de correio
+    .desc = { ent-SpawnPointJobBase.desc }
+
+ent-SpawnPointRoboticist = robótico
+    .desc = { ent-SpawnPointJobBase.desc }
+
+ent-SpawnPointSecurityPilot = piloto de segurança
+    .desc = { ent-SpawnPointJobBase.desc }

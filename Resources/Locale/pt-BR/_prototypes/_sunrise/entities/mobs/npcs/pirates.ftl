@@ -350,3 +350,188 @@ ent-MobPirateT3BossTimed = { ent-MobPirateT3Boss }
     .desc = { ent-MobPirateT3Boss.desc }
 
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-MobBasePirateMonkey = macaco
+    .desc = Nova igreja de neo-darwinistas realmente acreditam que cada animal evoluiu de um macaco. Sabe a porco, e matá-los é divertido e relaxante.
+
+
+ent-MobPirateT2JuggernautMG = { ent-MobPirateT2Juggernaut }
+    .suffix = Artilheiro
+    .desc = { ent-MobPirateT2Juggernaut.desc }
+
+
+ent-MobPirateT1LCG = Armadilha de sucata
+    .desc = Um pirata com uma arma de corrente leve, bem armado e adequadamente perigoso.
+
+ent-MobPirateT1KnifeEMP = { ent-MobPirateT1Knife }
+    .suffix = EMP
+    .desc = { ent-MobPirateT1Knife.desc }
+
+ent-MobPirateT2Medic = Médico pirata
+    .desc = Um médico pirata de combate mais bem equipado. Mantém a onda de assalto viva com mais apoio restaurador.
+
+ent-MobPirateT3Medic = Médico de combate soldado
+    .desc = Um médico contratado. Mãos rápidas, estimulantes melhores, e poder de fogo suficiente para permanecer relevante.
+
+ent-PirateSquadT1LMG = desova de pelotão pirata (LMG)
+    .desc = Spawns um esquadrão pirata T1 com apoio da LMG.
+
+ent-PirateSquadT1Breach = desova do esquadrão pirata (prejuízo)
+    .desc = Spawns um esquadrão pirata T1.
+
+ent-PirateSquadT1Assault = desova do esquadrão pirata (agressão)
+    .desc = O Spawns é um esquadrão de ataque pirata T1.
+
+ent-PirateSquadT1Heavy = desova do esquadrão pirata (pesado)
+    .desc = Spawns um esquadrão de piratas T1.
+
+ent-PirateSquadT1Infiltrator = desova de pelotão pirata (infiltrador)
+    .desc = Spawns um esquadrão de piratas T1.
+
+ent-PirateSquadT1Monkey = Pelotão pirata (macacos)
+    .desc = Spawns um esquadrão de piratas T1.
+
+ent-PirateSquadT1Random = desova do esquadrão pirata (random T1)
+    .desc = Spawns um esquadrão pirata T1.
+
+ent-PirateSquadT2LMG = desova de pelotão pirata (T2 LMG)
+    .desc = Spawns um esquadrão pirata T2 com apoio LMG.
+
+ent-PirateSquadT2Breach = Desova do esquadrão pirata (violação T2)
+    .desc = Spawns um esquadrão pirata T2.
+
+ent-PirateSquadT2Assault = desova do esquadrão pirata (ataque T2)
+    .desc = O Spawns é um esquadrão pirata T2.
+
+ent-PirateSquadT2Heavy = desova do esquadrão pirata (T2 pesado)
+    .desc = O Spawns é um esquadrão de piratas T2.
+
+ent-PirateSquadT2Infiltrator = desova do esquadrão pirata (infiltrador T2)
+    .desc = Spawns um esquadrão de piratas T2.
+
+ent-PirateSquadT2Control = desova do esquadrão pirata (controlo T2)
+    .desc = O Spawns é um esquadrão pirata T2.
+
+ent-PirateSquadT2AntiCrowd = desova do esquadrão pirata (T2 anti-multidão)
+    .desc = O Spawns é um esquadrão pirata T2.
+
+ent-PirateSquadT2Random = Pelotão pirata (random T2)
+    .desc = O Spawns é um esquadrão pirata T2.
+
+ent-PirateSquadT3LMG = desova de pelotão pirata (T3 LMG)
+    .desc = Spawns um esquadrão pirata T3 com apoio da LMG.
+
+ent-PirateSquadT3Breach = desova do esquadrão pirata (violação do T3)
+    .desc = Spawns, um esquadrão de piratas T3.
+
+ent-PirateSquadT3Assault = desova do esquadrão pirata (T3 assalto)
+    .desc = Spawns é um esquadrão de ataque pirata T3.
+
+ent-PirateSquadT3Heavy = desova de pelotão pirata (T3 pesado)
+    .desc = Spawns um esquadrão de piratas T3.
+
+ent-PirateSquadT3Infiltrator = desova de pelotão pirata (infiltrador T3)
+    .desc = Spawns um esquadrão pirata T3 infiltrado.
+
+ent-PirateSquadT3ShieldPhalanx = desova de pelotão pirata (falange de escudo T3)
+    .desc = O Spawns é um esquadrão pirata T3.
+
+ent-PirateSquadT3Suppressor = desova do esquadrão pirata (supressor T3)
+    .desc = O Spawns é um esquadrão de supressão pirata T3.
+
+ent-PirateSquadT3Universal = desova de pelotão pirata (T3 universal)
+    .desc = Spawns um esquadrão pirata universal T3.
+
+ent-PirateSquadT3Random = Pelotão pirata (random T3)
+    .desc = Spawns um esquadrão pirata T3 aleatório.
+
+
+ent-MobPirateT1ExpeditionSpawner = Caçador de expedição pirata T1
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 1.
+
+ent-MobPirateT2ExpeditionSpawner = Caçador de expedição pirata T2
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 2.
+
+ent-MobPirateT3ExpeditionSpawner = desova de expedição pirata T3
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 3.
+
+ent-MobPirateAllTiersExpeditionSpawner = Caçador de expedição pirata T1-T3
+    .desc = Desencadeia aleatoriamente um desova de expedição pirata de qualquer nível.
+
+ent-MobPirateMonkeyAnyExpeditionSpawner = desova de expedição de macaco pirata
+    .desc = Cria aleatoriamente uma unidade de expedição de macacos piratas.
+
+ent-MobPirateT1RandomUnitExpeditionSpawner = pirata T1 unidade de expedição aleatória desova
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 1.
+
+ent-MobPirateT2RandomUnitExpeditionSpawner = pirata T2 unidade de expedição aleatória desova
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 2.
+
+ent-MobPirateT3RandomUnitExpeditionSpawner = pirata T3 unidade de expedição aleatória desova
+    .desc = Cria aleatoriamente uma unidade de expedição pirata de nível 3.
+
+
+ent-OrganLootSpawner = pirata órgão saque desova
+    .desc = Espalha a mesa de pilhagem de órgãos piratas.
+
+ent-MobPirateBase = pirata (base)
+
+ent-MobPirateMonkey = macaco pirata (base)
+
+ent-MobPirateBaseT2 = pirata T2 (base)
+
+ent-MobPirateBaseT2Ranged = pirata T2 (base interligada)
+
+ent-MobPirateBaseT2Melee = pirata T2 (base melee)
+
+ent-MobPirateBaseT3 = pirata T3 (base)
+
+ent-MobPirateBaseT3Ranged = pirata T3 (base alargada)
+
+ent-MobPirateBaseT3Melee = pirata T3 (base melee)
+
+ent-MobPirateSparkEffectBase = efeito de faísca pirata (base)
+
+ent-MobPirateBorgBase = borg pirata (base)
+
+ent-MobPirateT1Spawner = desova pirata T1
+    .desc = Cria aleatoriamente um pirata de nível 1.
+
+ent-MobPirateT2Spawner = Desova pirata T2
+    .desc = Cria aleatoriamente um pirata de nível 2.
+
+ent-MobPirateT3Spawner = desova pirata T3
+    .desc = Cria aleatoriamente um pirata de nível 3.
+
+ent-MobPirateAllTiersSpawner = Desova pirata T1-T3
+    .desc = Cria aleatoriamente um pirata de qualquer nível entre T1 e T3.
+
+
+ent-MobPirateT1KnifeBola = rompedor de sucata
+    .desc = Um destruidor de sucata equipado com uma bola.
+
+ent-MobPirateT1KnifeStinger = rompedor de sucata
+    .desc = Um destruidor de sucata com granadas.
+
+ent-MobPirateT1KnifeTearGas = rompedor de sucata
+    .desc = Um destruidor de sucata que transporta gás lacrimogéneo.
+
+ent-MobPirateT2BorgAssault = assalto borg
+    .desc = Um ataque pirata reforçado.
+
+ent-MobPirateT3BorgAssault = assalto borg
+    .desc = Um pirata de elite agredir borg.
+
+
+action-speech-pirate-grenade-stinger = Ilumina-te!
+
+action-speech-pirate-grenade-shrapnel = Estilhaços!
+
+action-speech-pirate-grenade-incendiary = Incendiário!
+
+action-speech-pirate-grenade-fuze-ball = Âncora no rabo!
+
+action-speech-pirate-grenade-glass-shrapnel = Bomba de lixo!
+
+action-speech-pirate-grenade-firebomb = Bola de fogo!

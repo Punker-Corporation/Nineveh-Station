@@ -8,3 +8,7 @@ construction-recipe-curtains-pink = cortinas (rosa)
 construction-recipe-curtains-purple = cortinas (roxas)
 construction-recipe-curtains-red = cortinas (vermelhas)
 construction-recipe-curtains-white = cortinas (brancas)
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+construction-recipe-curtains-sky-blue = cortinas (azul celeste)

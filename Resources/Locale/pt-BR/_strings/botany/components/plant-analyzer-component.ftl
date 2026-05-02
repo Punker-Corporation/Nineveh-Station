@@ -9,43 +9,39 @@ plant-analyzer-component-weeds = Ervas daninhas:
 plant-analyzer-component-alive = [color=green]AO VIVO[color]
 plant-analyzer-component-dead = [color=red]MORTO[color]
 plant-analyzer-component-unviable = [color=red]GENE DA MORTE[color]
-plant-analyzer-component-mutating = [cor = #00ff5f]МУТИРУЕТ[color]
-plant-analyzer-component-kudzu = [color=red]KUDZU[color]
+plant-analyzer-component-mutating = [color=#00ff5f] MUTAR [color]
+plant-analyzer-component-kudzu = ZXQ0QZ KUDZU [color]
 plant-analyzer-soil = Existem produtos químicos não absorvidos neste { $holder }: [color=white]{ $chemicals }[/color].
 plant-analyzer-soil-empty = Não há produtos químicos não absorvidos neste { $holder }.
 plant-analyzer-component-environemt = Este [color=green]{ $seedName }[/color] requer uma atmosfera a um nível de pressão de [color=lightblue]{ $kpa }kPa ± { $kpaTolerance }kPa[/color], uma temperatura de [color=lightsalmon]{ $temp }°k ± { $tempTolerance }°k[/color] e um nível de luz de [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
 plant-analyzer-component-environemt-void = Este [color=green]{ $seedName }[/color] deve ser cultivado [bolditalic]no vácuo do espaço[/bolditalic] a um nível de luz de [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
 plant-analyzer-component-environemt-gas = Este [color=green]{ $seedName }[/color] requer uma atmosfera contendo [bold]{ $gases }[/bold] a um nível de pressão de [color=lightblue]{ $kpa }kPa ± { $kpaTolerance }kPa[/color], uma temperatura de [color=lightsalmon]{ $temp }°k ± { $tempTolerance }°k[/color] e um nível de luz de [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
 plant-analyzer-produce-plural = { $thing }
-plant-analyzer-output = 
-    { $yield -> 
-    [0] 
-            { $gasCount -> 
-    [0] Единственное, что оно, похоже, делает, это потребляет воду и питательные вещества.
-   *[other] Единственное, что оно, похоже, делает, это превращает воду и питательные вещества в [bold]{ $gases }[/bold].
- }
-   *[other] 
-            Оно имеет [color=verde claro]{ $yield } { $potency }[/color]{ $seedless -> 
-    [true] { " " }но [color=vermelho]sem sementes[/color]
-   *[false] { $nothing }
- }{ " " }{ $yield -> 
-    [one] цветок
-   *[other] цветков
- }{ " " }который{ $gasCount -> 
-    [0] { $nothing }
-   *[other] 
-                    { $yield -> 
-    [one] { " " }выделяет
-   *[other] { " " }выделяют
- }{ " " }[bold]{ $gases }[/bold] и
- }{ " " }превратится в{ $yield -> 
-    [one] { " " }{ INDEFINITE($firstProduce) } [color=#a4885c]{ $produce }[/color]
-   *[other] { " " }[color=#a4885c]{ $producePlural }[/color]
- }.{ $chemCount -> 
-    [0] { $nothing }
-   *[other] { " " }В его стебле обнаружены следовые количества [color=branco]{ $chemicals }[/color].
- }
- }
+plant-analyzer-output = {$yield ->
+    [0]{$gasCount ->
+        [0]A única coisa que parece fazer é consumir água e nutrientes.
+        *[other]A única coisa que parece fazer é transformar água e nutrientes em [bold] {$gases} [/bold].
+    }
+    *[other]Tem [color=lightgreen] {$yield} {$potency} [/color] {$seedless ->
+        [true]{" "} mas [color=red] sem sementes [/color]
+        *[false]{$nothing}
+    }{" "}{$yield ->
+        [one]flor
+        *[other]flores
+    }{" "}that{$gasCount ->
+        [0]{$nothing}
+        *[other]{$yield ->
+            [one]{" "} emite
+            *[other]{" "} emite
+        } {" "} [bold] ZXQ2QZ [/bold] e
+    }{" "}will turn into{$yield ->
+        [one]{" "} {INDEFINITE($firstProduce)} [color=#a4885c] {$produce} [/color]
+        *[other]{" "} ZXQ1QZ {$producePlural} [/color]
+    }.{$chemCount ->
+        [0]{$nothing}
+        *[other]{" "} Existem vestígios de [color=white] {$chemicals} [/color] no seu caule.
+    }
+}
 plant-analyzer-potency-tiny = microscópico
 plant-analyzer-potency-small = pequeno
 plant-analyzer-potency-below-average = tamanho abaixo da média
@@ -58,43 +54,43 @@ plant-analyzer-potency-ludicrous = ridiculamente grande
 plant-analyzer-potency-immeasurable = imensamente grande
 plant-analyzer-print = Selo
 plant-analyzer-printout-missing = N / D
-plant-analyzer-printout = 
-    { "[color=#9FED58][head=2]Отчет анализатора растений[/head][/color]" }
+plant-analyzer-printout =
+    {"[color=#9FED58][head=2]Plant Analyzer Report[/head][/color]"}
     ──────────────────────────────
-    { "[bullet/]" } Вид: { $seedName }
-    { "    " }[bullet/] Пригодность: { $viable -> 
-    [no] [color=vermelho]Não[/color]
-    [yes] [color=verde]Sim[/color]
-   *[other] { LOC("plant-analyzer-printout-missing") }
- }
-    { "    " }[bullet/] Выносливость: { $endurance }
-    { "    " }[bullet/] Продолжительность жизни: { $lifespan }
-    { "    " }[bullet/] Продукт: [color=#a4885c]{ $produce }[/color]
-    { "    " }[bullet/] Кудзу: { $kudzu -> 
-    [no] [color=verde]Não[/color]
-    [yes] [color=vermelho]Sim[/color]
-   *[other] { LOC("plant-analyzer-printout-missing") }
- }
-    { "[bullet/]" } Профиль роста:
-    { "    " }[bullet/] Вода: [color=ciano]{ $water }[/color]
-    { "    " }[bullet/] Питательные вещества: [color=laranja]{ $nutrients }[/color]
-    { "    " }[bullet/] Токсины: [color=amareloverde]{ $toxins }[/color]
-    { "    " }[bullet/] Вредители: [color=magenta]{ $pests }[/color]
-    { "    " }[bullet/] Сорняки: [color=vermelho]{ $weeds }[/color]
-    { "[bullet/]" } Профиль окружающей среды:
-    { "    " }[bullet/] Состав: [bold]{ $gasesIn }[/bold]
-    { "    " }[bullet/] Давление: [color=azul claro]{ $kpa }kPa ± { $kpaTolerance }kPa[/color]
-    { "    " }[bullet/] Температура: [color=salmão claro]{ $temp }°k ± { $tempTolerance }°k[/color]
-    { "    " }[bullet/] Освещение: [color=cinza][bold]{ $lightLevel } ± { $lightTolerance }[/bold][/color]
-    { "[bullet/]" } Цветы: { $yield -> 
-    [-1] { LOC("plant-analyzer-printout-missing") }
-    [0] [color=vermelho]0[/color]
-   *[other] [color=verde claro]{ $yield } { $potency }[/color]
- }
-    { "[bullet/]" } Семена: { $seeds -> 
-    [no] [color=vermelho]Não[/color]
-    [yes] [color=verde]Sim[/color]
-   *[other] { LOC("plant-analyzer-printout-missing") }
- }
-    { "[bullet/]" } Химические вещества: [color=cinza][bold]{ $chemicals }[/bold][/color]
-    { "[bullet/]" } Выбросы: [bold]{ $gasesOut }[/bold]
+    Espécie {"[bullet/]"}: {$seedName}
+    {"    "}[bullet/] Viable: {$viable ->
+        [no][color=red] Sem [/color]
+        [yes][color=green] Sim [/color]
+        *[other]{LOC("plant-analyzer-printout-missing")}
+    }
+    ZXQ0QZ [bullet/] Endurance: {$endurance}
+    {" "} [bullet/] Lifespan: {$lifespan}
+    {" "} [bullet/] Produto: [color=#a4885c] {$produce} [/color]
+    {"    "}[bullet/] Kudzu: {$kudzu ->
+        [no][color=green] Sem [/color]
+        [yes][color=red] Sim [/color]
+        *[other]{LOC("plant-analyzer-printout-missing")}
+    }
+    {"[bullet/]"} Perfil de crescimento:
+    {" "} [bullet/] Água: [color=cyan] {$water} [/color]
+    {" "} [bullet/] Nutrição: [color=orange] {$nutrients} [/color]
+    {" "} [bullet/] Toxinas: [color=yellowgreen] ZXQ3QZ [/color]
+    {" "} [bullet/] Pestes: [color=magenta] {$pests} [/color]
+    {" "} [bullet/] Ervas daninhas: [color=red] {$weeds} [/color]
+    {"[bullet/]"} Perfil ambiental:
+    {" "} [bullet/] Composição: [bold] {$gasesIn} [/bold]
+    {" "} [bullet/] Pressão: [color=lightblue] {$kpa} kPa ± {$kpaTolerance} kPa [/color]
+    {" "} [bullet/] Temperatura: [color=lightsalmon] {$temp} K ± {$tempTolerance} K [/color]
+    {" "} [bullet/] Luz: [color=gray] [bold] {$lightLevel} ± {$lightTolerance} [/bold] [/color]
+    {"[bullet/]"} Flowers: {$yield ->
+        [-1]{LOC("plant-analyzer-printout-missing")}
+        [0][color=red] 0 [/color]
+        *[other][color=lightgreen] ZXQ1QZ {$potency} [/color]
+    }
+    {"[bullet/]"} Seeds: {$seeds ->
+        [no][color=red] Sem [/color]
+        [yes][color=green] Sim [/color]
+        *[other]{LOC("plant-analyzer-printout-missing")}
+    }
+    {"[bullet/]"} Produtos químicos: [color=gray] [bold] {$chemicals} [/bold] [/color]
+    {"[bullet/]"} Emissões: [bold] {$gasesOut} [/bold]

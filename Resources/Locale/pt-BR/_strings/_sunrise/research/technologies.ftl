@@ -30,3 +30,16 @@ research-technology-cloning = Sistema de clonagem
 research-technology-compact-defibrilation = Desfibrilação compacta
 research-technology-advanced-compact-defibrilation = Desfibrilação avançada
 research-technology-dna-injector = Manipulação de DNA
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+research-technology-bluespace-ammo = Bluespace Seringegun Munição
+
+research-technology-biochemical-implants = Implantes bioquímicos
+
+research-technology-advanced-implants = Implantes Avançados
+
+
+research-technology-slop-dispenser = Nutritivo, ponto final
+
+research-technology-bluespace-gas-tanks = Tanques de Gás Bluespace

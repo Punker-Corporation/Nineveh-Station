@@ -9,3 +9,9 @@ deployable-turret-component-is-broken = A torre está fortemente danificada e de
 deployable-turret-component-cannot-access-wires = Você não pode acessar o painel de manutenção enquanto a torre estiver ativa
 # Turret notification for station AI
 station-ai-turret-is-attacking-warning = { CAPITALIZE($source) } atacou um alvo hostil.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+station-ai-turret-component-name = {$name} ( {$address} )
+
+station-ai-turret-component-is-attacking-warning = O {CAPITALIZE($source)} atacou um alvo hostil.

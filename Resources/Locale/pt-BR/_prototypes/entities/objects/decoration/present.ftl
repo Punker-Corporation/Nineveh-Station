@@ -24,3 +24,7 @@ ent-PresentRandomAsh = { ent-PresentBase }
     .suffix = Cheio, Cinza
     .desc = { ent-PresentBase.desc }
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-PresentMasksHM = 50 Blessings Gift set
+    .desc = Para agentes que querem esconder sua identidade em estilo, com amor por Egor Semenov.

@@ -74,3 +74,11 @@ ent-ClothingOuterLeatherCoatOpened = jaqueta de couro
     .desc = Ótimo para apresentações!
 ent-ClothingOuterAerostaticBomberJacketArmored = jaqueta bomber aerostática blindada
     .desc = Jaqueta usada pelas brigadas aéreas revolucionárias durante a Revolução Mundial. Existem alguns bolsos internos, principalmente para guardar blocos de notas e bússolas.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingOuterCoatArbiter = pele de árbitro
+    .desc = Uma enorme construção de painéis pretos com fivelas de ouro. Parece monumental, mas em um corredor de biblioteca estreita transforma-se em uma armadilha traiçoeira: o importante é não emaranhar em suas próprias bainhas e plantar seu rosto em uma prateleira.
+
+ent-ClothingOuterCoatRedMist = revestimento vermelho de névoa
+    .desc = Um longo casaco em tecido escuro com fechos de prata e trabalho de alça exposta. Mais artigo de campanha do que decoração.

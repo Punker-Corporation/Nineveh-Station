@@ -5,28 +5,31 @@ salvage-system-announcement-arrived = Os destroços foram recolhidos para descar
 salvage-asteroid-name = Asteróide
 salvage-magnet-window-title = Ímã de detritos
 salvage-expedition-window-progression = Progresso
-salvage-magnet-resources = 
-    { $resource -> 
-    [OreIron] Железо
-    [OreCoal] Уголь
-    [OreQuartz] Кварц
-    [OreGold] Золото
-    [OreDiamond] Алмазы
-    [OreSilver] Серебро
-    [OrePlasma] Плазма
-    [OreUranium] Уран
-   *[other] { $resource }
- }
-salvage-magnet-resources-count = 
-    { $count -> 
-    [1] (Мало)
-    [2] (Средне)
-    [3] (Средне)
-    [4] (Много)
-    [5] (Много)
-   *[other] (Изобилие)
- }
-# Debris
+salvage-magnet-resources = {$resource ->
+    [OreIron] Ferro
+    [OreCoal] Carvão
+    [OreQuartz] Quartzo
+    [OreSalt] Sal
+    [OreGold] Ouro
+    [OreDiamond] Diamante
+    [OreSilver] Prata
+    [OrePlasma] Plasma
+    [OreUranium] Urânio
+    [OreArtifactFragment] Fragmentos de artefactos
+    [OreBananium] Banânio
+    *[other] {$resource}
+}
+
+salvage-magnet-resources-count = {$contagem ->
+    [1] (Pobre)
+    [2] (Moderar)
+    [3] (Moderar)
+    [4] (Rich)
+    [5] (Rich)
+    *[other] (Extraordinário)
+}
+
+# Detritos
 salvage-magnet-debris-ChunkDebris = Detritos espaciais
 # Asteroids
 dungeon-config-proto-BlobAsteroid = Matriz de asteróides

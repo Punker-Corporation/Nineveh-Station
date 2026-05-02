@@ -11,6 +11,7 @@ accent-italian-words-1 = assistente
 accent-italian-words-replace-1 = goumbach
 accent-italian-words-2 = assistentes
 accent-italian-words-replace-2 = goombahs
+
 accent-italian-words-3 = Bebê
 accent-italian-words-replace-3 = bebê
 accent-italian-words-4 = ruim
@@ -77,6 +78,7 @@ accent-italian-words-34 = coisa
 accent-italian-words-replace-34 = uma cabra
 accent-italian-words-35 = traidor
 accent-italian-words-replace-35 = mafioso
+
 accent-italian-words-36 = traidores
 accent-italian-words-replace-36 = mafioso
 accent-italian-words-37 = usar

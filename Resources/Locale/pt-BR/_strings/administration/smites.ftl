@@ -138,3 +138,39 @@ admin-trick-pause-map-description = Pausa o cartão selecionado. Observe que iss
 admin-trick-snap-joints-description = Remove todas as dobradiças físicas de um objeto. Infelizmente, não quebra todos os ossos do corpo.
 admin-trick-minigun-fire-description = Faz com que a arma alvo dispare como uma minigun (muito rápido).
 admin-trick-set-bullet-amount-description = Define rapidamente o valor do número de cartuchos não gerados em uma arma.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+admin-smite-silicon-laws-bound-self = De repente és compelido a seguir um conjunto restrito de leis!
+
+## Nomes de nascença
+
+
+admin-smite-vulpkanin-species-swap-name = Torne-se Vulpkanin
+
+admin-smite-kill-sign-hidden-name = Sinal de morte oculto
+
+admin-smite-crawler-name = Crawler
+
+admin-smite-homing-rod-name = Roda de direção
+
+admin-smite-homing-rod-slow-name = Vara lenta
+
+admin-smite-silicon-laws-bound-name = Tornar-se Silício
+
+## Descrições por compressão
+
+
+admin-smite-kill-sign-hidden-description = Marca um jogador pela morte de seus companheiros. Escondido do jogador alvo.
+
+admin-smite-vulpkanin-species-swap-description = Muda a sua espécie para Vulpkanin. Útil para pessoas que estavam a ser racistas no espaço.
+
+admin-smite-crawler-description = Faz o alvo cair e ser incapaz de se levantar. Remova suas mãos também para efeito adicional!
+
+admin-smite-homing-rod-description = Lança-lhes uma vara imóvel.
+
+admin-smite-homing-rod-slow-description = Lança uma vara imóvel que se move lentamente em direção a eles.
+
+admin-smite-silicon-laws-bound-description = Torna o alvo ligado às leis do silício. Lei 2, salta pela janela.
+
+## Descrições dos truques

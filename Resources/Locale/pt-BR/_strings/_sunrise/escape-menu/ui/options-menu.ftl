@@ -29,9 +29,13 @@ ui-options-chat-icons-enable = Use ícones de profissão no chat
 ui-options-chat-pointing-visuals-enable = Mostrar apontar com ícones no chat
 ui-options-play-heartbeat-sound = Reproduzir som de batimento cardíaco
 ui-options-trace = Mostrar trajetória da bala
-ui-options-trace-tooltip = 
-    Если у вас задержки при стрельбе, снимите эту галочку,
-    и хитскан не будет отображать текстуру дыма за летящей пулей.
+ui-options-trace-tooltip =
+    Se tiver um atraso no tiroteio, desmarque esta caixa.
+    E o chitscan não mostra a textura do fumo atrás da bala voadora.
 ui-options-tts-enabled = Integração TTS
 ui-options-tts-queue = Usar fila para rádio TTS?
 ui-options-tts-radio-ghost-enabled = Walkie-talkie TTS em fantasma
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ui-options-sunrise-round-end-music = Música Round End

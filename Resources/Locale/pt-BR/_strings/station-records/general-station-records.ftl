@@ -15,3 +15,9 @@ general-station-record-dna-filter = ADN
 general-station-record-console-search-records = Procurar
 general-station-record-console-reset-filters = Reiniciar
 general-station-record-console-delete = Excluir
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+general-station-record-job-filter = Trabalho
+
+general-station-record-species-filter = Espécie

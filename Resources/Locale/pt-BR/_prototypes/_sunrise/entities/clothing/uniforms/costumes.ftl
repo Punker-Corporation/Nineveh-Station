@@ -56,3 +56,11 @@ ent-UniformSchoolgirlBlazerTan = uniforme escolar com jaqueta bege
     .desc = Pronto para a escola com estilo moderno. Este conjunto vem com uma jaqueta bege.
 ent-ClothingUniformSchoolGakuranBlack = gakuran
     .desc = Uniforme escolar elegante.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformShortDress = vestido curto
+    .desc = Um vestido curto para ocasiões casuais.
+
+ent-ClothingUniformShortDressRed = vestido curto vermelho
+    .desc = Um vestido curto para ocasiões casuais.

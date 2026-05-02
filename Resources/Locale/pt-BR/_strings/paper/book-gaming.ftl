@@ -1,32 +1,31 @@
-book-text-gaming1 = 
-    Не могу остаться на игру.
-    Инженеры попросили меня приглядывать за СМЭСами сингулярности.
-    Оставляю это здесь, чтобы ты знал, что к чему.
-    Прости.
-     - Александр
-book-text-gaming2 = 
-    Джони Клув
-    Класс: Друид
-    Мировоззрение: Нейтральный Добрый
-    СИЛ: 1,294,139
-    ЛОВ: 4,102,103
-    ВЫН: 9,522,913
-    ИНТ: 528,491
-    МУД: 1
-    ХАР: 1
-    Где возраст?
-    Почему твои характеристики такие абсурдные?
-    Чего ты вообще добиваешься, Лия? - Твой дружелюбный ДМ
-book-text-gaming3 = 
-    ГИГАНТСКАЯ КОСМИЧЕСКАЯ МУХА ИЗ КОСМОСА
-    Сессия 1: Им нужно будет узнать, что происходит в мире и что вообще за Гигантская Космическая Муха.
-    Сессия 2: Им нужно будет узнать о сейсмических искажениях в Совете Волшебников.
-    Сессия 3: На пути в подземное логово.
-    Сессия 4: Встреча с Архитектором Мух.
-    О Господи Боже, они тупо начали убивать всех подряд.
-book-text-gaming4 = 
-    Не смогу прийти на встречу, химик снова подорвал медотсек.
-    Пятый раз за эту смену.
-    Это невероятно.
-    Но не в хорошем смысле.
-    Здоровья погибшим, - Ариэль
+book-text-gaming1 = Não posso ficar para o jogo.
+      A Engenharia quer que eu fique de olho nas SMESes de singularidade.
+      Deixando isto para que saibas o que se passa.
+      Desculpa.
+       - Alexander.
+
+book-text-gaming2 = Johny Clowe
+      Classe: Druida
+      Alinhamento: Bem neutro
+      Str: 1.294.139
+      Dex: 4.102,103
+      Contra: 9.522.913
+      Int: 528.491
+      Wis: 1
+      Cha: 1
+      Onde está a idade?
+      Porque é que essas pontuações são tão ridículas?
+      O que estás a tentar fazer aqui, Leah? - O seu amigo DM
+
+book-text-gaming3 = O espaço gigante voa do espaço
+      Sessão 1: Eles deveriam ter acabado de aprender o que está acontecendo com o mundo e a Mosca Espacial Gigante.
+      Sessão 2: Eles devem saber para perguntar ao Tribunal do Mágico sobre distorções sísmicas.
+      Sessão 3: A caminho do covil subterrâneo.
+      Sessão 4: Encontrei o Arquiteto das Moscas.
+      Meu Deus, começaram a matar toda a gente aleatoriamente.
+
+book-text-gaming4 = Não vai poder vir ao encontro, o químico explodiu o hospital outra vez.
+      Quinta vez neste turno.
+      É incrível.
+      Mas não no bom sentido.
+      Saúde, Arielle.

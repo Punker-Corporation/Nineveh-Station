@@ -1,4 +1,6 @@
-ent-WeaponMechIndustrialTrashgun = Canhão de Lixo Mech
-    .desc = Feito de lixo e peças sobressalentes de alguma coisa. Atira detritos em longas distâncias. Parece que pode explodir a qualquer momento.....
-ent-WeaponMechIndustrialTrashLasergun = Canhão laser caseiro para mechs
-    .desc = Feito de lixo e peças sobressalentes de alguma coisa. Provavelmente dispara um laser...
+ent-WeaponMechIndustrialTrashgun = exosuit lixo arma
+    .desc = Montado de lixo e peças de reposição. Dispara lixo à curta distância.
+    .suffix = Arma Mech, Arma, Industrial, Arma de Lixo
+ent-WeaponMechIndustrialTrashLasergun = exosuit lasergun improvisado
+    .desc = Montado de lixo e peças de reposição. Dispara um laser... talvez...
+    .suffix = Arma Mech, Arma, Industrial, LaserGun

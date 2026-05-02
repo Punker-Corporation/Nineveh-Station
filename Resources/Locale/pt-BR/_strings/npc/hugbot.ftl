@@ -1,7 +1,7 @@
 hugbot-start-hug-1 = DÉFICIT DE ABRAÇO NÍVEL 5 DETECTADO!
 hugbot-start-hug-2 = Parece que você precisa de um abraço.
 hugbot-start-hug-3 = Ahhh, alguém precisa de um abraço!
-hugbot-start-hug-4 = Alvo detectado ; запускаю процедуру объятий.
+hugbot-start-hug-4 = Alvo adquirido; Iniciando rotina de abraço.
 hugbot-start-hug-5 = Por favor, fique parado.
 hugbot-start-hug-6 = Abraços!
 hugbot-start-hug-7 = Solto um ABRAÇO.

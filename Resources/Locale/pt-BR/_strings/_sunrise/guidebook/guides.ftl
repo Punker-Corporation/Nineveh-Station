@@ -55,3 +55,7 @@ guide-entry-sr-rule-excep-10 = Exceção/súmula 10
 guide-entry-sr-rule-cep = Política de escalada de conflitos
 guide-entry-sr-rule-ccp = Política de Criação de Personagem
 guide-entry-sr-rule-pana = Prevenindo a prisão por não antagonistas
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+guide-entry-expedition-soviets = Comunistas

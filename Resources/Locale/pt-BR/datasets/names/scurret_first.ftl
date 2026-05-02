@@ -1,4 +1,4 @@
-# У скерретов с планеты Вава имя состоит из двух частей: выбранная и качественная.
+# Skerrets do planeta Vava nome consiste em duas partes: selecionado e qualidade.
 
 names-scurret-first-dataset-1 = Vai
 names-scurret-first-dataset-2 = Calma

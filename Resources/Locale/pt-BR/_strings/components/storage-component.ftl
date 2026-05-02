@@ -10,3 +10,7 @@ comp-storage-window-weight = { $weight }/{ $maxWeight }, máx. tamanho: { $size 
 comp-storage-window-slots = Slots: { $itemCount }/{ $maxCount }, máx. tamanho: { $size }
 comp-storage-verb-open-storage = Cofre aberto
 comp-storage-verb-close-storage = Fechar armazenamento
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+comp-storage-window-dummy = Tolo

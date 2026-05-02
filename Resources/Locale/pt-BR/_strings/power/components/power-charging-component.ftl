@@ -1,6 +1,6 @@
 ## UI field names
 
-power-charge-window-status = Status:
+power-charge-window-status = Estado:
 power-charge-window-power = Poder:
 power-charge-window-eta = Hora prevista de chegada:
 power-charge-window-charge = Cobrar:

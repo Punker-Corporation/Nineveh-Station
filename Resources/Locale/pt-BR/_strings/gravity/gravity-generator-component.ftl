@@ -29,3 +29,7 @@ gravity-generator-window-power-label = { $draw } / { $max } W
 
 gravity-generator-window-eta-none = N / D
 gravity-generator-window-eta-value = { TOSTRING($left, "m\\:ss") }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+gravity-generator-unanchoring-failed = Não consigo desacoplar um gerador de gravidade activo.

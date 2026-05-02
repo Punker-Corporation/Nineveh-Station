@@ -17,3 +17,21 @@ ent-HeadHatCapChaosMedic = leva um médico rebelde
 ent-ClothingEyesGlassesThermalChaos = scanner térmico óptico
     .desc = Um scanner que enxerga melhor que a base.
     .suffix = Caos
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BaseChaosPDA = { ent-BotanistPDA }
+    .desc = { ent-BotanistPDA.desc }
+
+ent-ChaosLeaderPDA = { ent-BaseChaosPDA }
+    .desc = { ent-BaseChaosPDA.desc }
+
+ent-ChaosMedicPDA = { ent-BaseChaosPDA }
+    .desc = { ent-BaseChaosPDA.desc }
+
+ent-ChaosPDA = { ent-BaseChaosPDA }
+    .desc = { ent-BaseChaosPDA.desc }
+
+ent-ChaosAgentIDCard = { ent-NukieAgentIDCard }
+    .suffix = CHAOS
+    .desc = { ent-NukieAgentIDCard.desc }

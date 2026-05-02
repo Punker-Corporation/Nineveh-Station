@@ -24,13 +24,9 @@ gun-ballistic-transfer-target-full = { CAPITALIZE($entity) } já está totalment
 gun-cartridge-spent = Está [color=red]usado[/color].
 gun-cartridge-unspent = É [color=lime]não usado[/color].
 # BatteryAmmoProvider
-gun-battery-examine = 
-    Заряда хватит на [color={ $color }]{ $count }[/color] { $contagem -> 
-    [one] выстрел
-    [few] выстрела
-   *[other] выстрелов
- }.
-# CartridgeAmmoProvider
+gun-battery-examine = Tem carga suficiente para tiros [color={$color}] {$count} [/color].
+
+# CartuchoAmmoProvider
 gun-chamber-bolt-ammo = A veneziana não está fechada
 gun-chamber-bolt = Portão [color={ $color }]{ $bolt }[/color].
 gun-chamber-bolt-closed = Obturador fechado
@@ -41,13 +37,8 @@ gun-chamber-bolt-closed-state = abrir
 gun-chamber-bolt-open-state = fechado
 gun-chamber-rack = Puxe o obturador
 # MagazineAmmoProvider
-gun-magazine-examine = 
-    Тут [color={ $color }]{ $count }[/color] { $contagem -> 
-    [one] выстрел
-    [few] выстрела
-   *[other] выстрелов
- }.
-# 🌟Starlight - Start🌟
+gun-magazine-examine = Tem [color={$color}] {$count} [/color] tiros restantes.
+# Starlight - Iniciar
 gun-magazine-ammo-type = Contém [color={ $color }]{ $type }[/color].
 gun-magazine-empty = A loja está vazia.
 # 🌟Starlight - End🌟
@@ -59,3 +50,11 @@ gun-revolver-insert = Cobrado
 gun-revolver-spin = Gire o tambor
 gun-revolver-spun = O tambor gira
 gun-speedloader-empty = O Speedloader está vazio
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+examine-gun-spread-modifier-reduction = O spread foi reduzido por [color=yellow] {$percentage} % [/color].
+
+examine-gun-spread-modifier-increase = O spread foi aumentado por [color=yellow] {$percentage} % [/color].
+
+examine-weapon-dismantle-on-shoot = Esta arma pode desmoronar-se quando disparada ( [color=yellow] {$chance} % [/color] ).

@@ -75,3 +75,24 @@ marking-LizardChestBackspikes = Unath, peito, espinhos nas costas (Quatro)
 marking-LizardSnoutSplotch = Unath, focinho de rosto (Spot)
 marking-LizardSnoutSplotch-snout_splotch_primary = Focinho
 marking-LizardSnoutSplotch-snout_splotch_secondary = Nariz
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+marking-LizardTailAquatic-tail_aquatic = Cauda de lagarto (Aquático)
+
+marking-LizardTailAquatic = Cauda de lagarto (Aquático)
+
+
+marking-LizardChestFin-body_fin = Lagartixa
+
+marking-LizardChestFin = Lagartixa
+
+
+marking-LizardSnoutVisageSharp = Visagem de lagartos (Sharp)
+
+marking-LizardSnoutVisageSharp-visage_sharp = Visagem de lagartos (Sharp)
+
+
+marking-LizardSnoutVisageRound = Viagem de lagartos (Round)
+
+marking-LizardSnoutVisageRound-visage_round = Viagem de lagartos (Round)

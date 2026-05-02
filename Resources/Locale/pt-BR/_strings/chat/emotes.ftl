@@ -1,4 +1,4 @@
-# Имена
+# Nomes
 chat-emote-name-scream = Gritar
 chat-emote-name-laugh = Rir
 chat-emote-name-honk = Buzinar
@@ -37,7 +37,8 @@ chat-emote-name-snarl = Mostre seus dentes
 chat-emote-name-whine = Lamentar
 chat-emote-name-howl = Uivo
 chat-emote-name-growl = Rosnar
-# Сообщение
+
+# Mensagem
 chat-emote-msg-scream = grita!
 chat-emote-msg-laugh = ri
 chat-emote-msg-honk = buzina

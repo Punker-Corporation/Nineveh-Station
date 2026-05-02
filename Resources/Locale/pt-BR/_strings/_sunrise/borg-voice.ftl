@@ -11,3 +11,7 @@ action-description-change-borg-voice = Alterar voz TTS. Os ciborgues podem falar
 borg-voice-popup-sponsor-only = Esta voz está disponível apenas para patrocinadores!
 borg-voice-popup-changed = Voz alterada para { $voice }!
 borg-voice-popup-invalid = Uma voz inexistente foi escolhida!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+borg-voice-window-voice-label = Voz:

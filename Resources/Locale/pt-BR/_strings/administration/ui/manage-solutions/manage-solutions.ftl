@@ -8,3 +8,13 @@ admin-solutions-window-heat-capacity-label = Capacidade de calor: { $heatCapacit
 admin-solutions-window-temperature-label = Temperatura (K):
 admin-solutions-window-thermal-energy-label = Energia térmica (J):
 admin-solutions-window-thermals = Propriedades térmicas
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+admin-solutions-window-solution-button = Solução
+
+admin-solutions-window-solution-button-tooltip = Abre a instância correspondente Solução do lado do servidor no ViewVariables. Útil para depurar problemas de previsão.
+
+admin-solutions-window-vv-button = VV
+
+admin-solutions-window-vv-button-tooltip = Abre a entidade de solução correspondente no ViewVariables.

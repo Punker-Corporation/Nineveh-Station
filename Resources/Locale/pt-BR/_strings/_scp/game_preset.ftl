@@ -38,3 +38,9 @@ scp-description-thaumiel =
     | Seguro: SIM
     | Euclid: SIM
     | Keter: SIM
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+scp-title = SCP
+
+scp-description = Apenas eventos de lore. Ótimo para turnos padrão envolvendo objetos SCP.

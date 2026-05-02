@@ -7,5 +7,5 @@ advertisement-magivend-6 = HONK!
 advertisement-magivend-7 = EI NATH
 advertisement-magivend-8 = Destrua a estação!
 advertisement-magivend-9 = Equipamento para dobrar espaço e tempo!
-advertisement-magivend-10 = 1234 LOONIES LOL!
+advertisement-magivend-10 = 1234 Loonies Lool!
 advertisement-magivend-11 = NAR'SI, ACORDA!!!

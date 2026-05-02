@@ -79,11 +79,12 @@ ent-CableDetStack = cabo de explosão
     .desc = Cordão explosivo para remover qualquer coisa que atrapalhe.
     .suffix = Completo
 ent-CableDetStack10 = { ent-CableDetStack }
-    .desc = { ent-CableDetStack.desc }
     .suffix = 10
-ent-CableDetStack1 = { ent-CableDetStack }
     .desc = { ent-CableDetStack.desc }
+
+ent-CableDetStack1 = { ent-CableDetStack }
     .suffix = 1
+    .desc = { ent-CableDetStack.desc }
 
 ent-ParcelWrapAdmeme = invólucro de espaço azul
     .desc = Papel para embalar itens durante o transporte. Este parece ser capaz de esconder uma quantidade suspeitamente grande de espaço interno.

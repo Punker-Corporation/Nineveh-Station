@@ -16,3 +16,7 @@ chat-emote-name-call = ligando
 chat-emote-name-squawk = rangidos
 chat-emote-name-scree = guinchos
 chat-emote-msg-trill = rachaduras!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+chat-emote-msg-oink = oinks

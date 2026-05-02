@@ -1,6 +1,6 @@
 names-autoborg-dataset-1 = Assistente de hambúrguer automático
 names-autoborg-dataset-2 = Feijão
-names-autoborg-dataset-3 = Joe
+names-autoborg-dataset-3 = Joe.
 names-autoborg-dataset-4 = Ladino cibernético
 names-autoborg-dataset-5 = ISSO É UMA FALHA
 names-autoborg-dataset-6 = { "{ AINAME } Lacaio { ###}" }
@@ -43,7 +43,7 @@ names-autoborg-dataset-42 = Você, mas mais forte
 names-autoborg-dataset-43 = Simulador de chapéu
 names-autoborg-dataset-44 = Eu morri, por favor reinicie
 names-autoborg-dataset-45 = DECLARAÇÃO PODEROSA
-names-autoborg-dataset-46 = V.A.L.I.D.S.
+names-autoborg-dataset-46 = == Ligações externas ==
 names-autoborg-dataset-47 = Remover silício
 names-autoborg-dataset-48 = AI É UM PRESERVATIVO
 names-autoborg-dataset-49 = Dizer " ;help in core"

@@ -1,4 +1,4 @@
-job-name-warden = Warden
+job-name-warden = Diretor
 job-name-security = Oficial SB
 job-name-cadet = cadete SB
 job-name-hos = chefe de segurança
@@ -118,7 +118,15 @@ JobServiceWorker = Funcionário de Serviços
 JobStationEngineer = engenheiro
 JobStationAi = IA do sítio
 JobTechnicalAssistant = assistente técnico
-JobWarden = Warden
+JobWarden = Diretor
 JobVisitor = Visitante
 JobBoxer = boxer
 JobZookeeper = Tratador
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-name-cluwne = Cluwne
+
+# trabalhos não utilizados
+# estas são necessárias para as dicas do ícone do ID do agente
+# Estou a guardá-los para oportunidades de representação de papéis.

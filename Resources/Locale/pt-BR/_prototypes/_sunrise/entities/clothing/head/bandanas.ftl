@@ -8,3 +8,8 @@ ent-ClothingHeadBandWhite = bandana branca
     .desc = { ent-ClothingHeadBandBase.desc }
 ent-ClothingHeadBandPurple = bandana roxa
     .desc = { ent-ClothingHeadBandBase.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingHeadBandRandomColorSpawner = bandana (cor aleatória)
+    .desc = Uma bandana de uma cor aleatória.

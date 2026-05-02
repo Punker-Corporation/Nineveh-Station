@@ -20,3 +20,9 @@ permissions-eui-edit-admin-rank-button = Editar
 permissions-eui-edit-admin-rank-window-title = Editando a classificação do administrador
 permissions-eui-edit-admin-window-save-button = Salvar
 permissions-eui-edit-admin-window-remove-flag-button = Excluir
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-permissions-desc = Abre o painel de permissões do administrador.
+
+cmd-permissions-help = Uso: permissões

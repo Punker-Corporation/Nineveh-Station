@@ -62,3 +62,14 @@ ent-ClothingOuterCoatBlueshield = capa de escudo azul
     .desc = Um manto um tanto real que protege seu dono.
 ent-ClothingNeckCloakContrib = capa de contribuidor
     .desc = Esta estação repousa sobre este gato.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingNeckCloakLegacyRd = capa do diretor de pesquisa
+    .desc = Um manto branco com listras violetas, mostrando seu status como árbitro da tecnologia de ponta.
+
+ent-ClothingNeckCloakLegacyCe = Capa de engenheiro-chefe
+    .desc = Um manto verde escuro com ornamentos azuis claros, dado àqueles que provaram dominar a arte precisa da engenharia.
+
+ent-ClothingNeckCloakArbiter = capa de árbitro
+    .desc = Um manto denso com ouro. Quando desenhado em torno de você, ele faz um distintamente "caro" farfalhar, criando um bolso de proteção contra danos e ruído. O principal perigo neste casulo aconchegante é dormir no meio de uma reunião chata.

@@ -38,7 +38,7 @@ signal-port-name-med-scanner-receiver = Scanner médico
 signal-port-description-med-scanner-receiver = Receptor de sinal de scanner médico
 signal-port-name-hold-open = Segurar
 signal-port-description-hold-open = Desativa o fechamento automático.
-signal-port-name-artifact-analyzer-sender = Console
+signal-port-name-artifact-analyzer-sender = Consola
 signal-port-description-artifact-analyzer-sender = Transmissor de sinal de console analítico
 signal-port-name-artifact-analyzer-receiver = Plataforma
 signal-port-description-artifact-analyzer-receiver = Receptor de sinal do analisador de artefato
@@ -59,3 +59,14 @@ signal-port-description-logic-input = Uma porta de entrada que aceita apenas ní
 signal-port-description-logic-memory-input = Sinal para carregar em um local de memória quando habilitado.
 signal-port-name-logic-enable = Ligar
 signal-port-description-logic-enable = Carrega o sinal de entrada em um local de memória somente quando estiver em nível HIGH.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+signal-port-name-trigger-receiver = Trigger
+
+signal-port-description-trigger-receiver = Ativa algum mecanismo no dispositivo.
+
+
+signal-port-name-logic-random-input = Sinal de entrada
+
+signal-port-description-logic-random-input = Recebe qualquer sinal para desencadear uma saída aleatória.

@@ -13,3 +13,24 @@ ent-DeathRattleImplanterFreelance = { ent-Implanter }
 ent-ScramImplanterProto = { ent-ScramImplanter }
     .suffix = protótipo de fuga
     .desc = { ent-ScramImplanter.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ProtoAdrenalImplanter = { ent-BaseImplantOnlyImplanterSyndi }
+    .suffix = proto-adrenal
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+
+ent-AdrenalImplanter = { ent-BaseImplantOnlyImplanterSyndi }
+    .suffix = adrenal
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+
+ent-StimpackImplanter = { ent-BaseImplantOnlyImplanterSyndi }
+    .suffix = estimpack
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+
+ent-NutrimentImplanter = { ent-BaseImplantOnlyImplanterSyndi }
+    .suffix = nutrição
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+
+ent-ReviverImplanter = implante de reanimador
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }

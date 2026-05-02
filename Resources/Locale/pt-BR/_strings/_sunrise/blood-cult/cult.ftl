@@ -1,9 +1,9 @@
-cult-role-greeting = 
-    Вы - член культа!
-        Ваши цели перечислены в меню персонажа.
-        В ваш рюкзак были добавлены предметы, которые помогут вам.
-        И помните - вы не единственный.
-        Слава Нар`си!
+cult-role-greeting =
+    És um membro do culto!
+        Seus objetivos estão listados no menu de caracteres.
+        Itens foram adicionados à sua mochila para ajudá-lo.
+        E lembra-te, não és o único.
+        Glória a Nar'si!
 cult-cond-cultwin = O culto venceu
 cult-cond-cultfailure = A tripulação destruiu o culto
 cultists-list-start = Os cultistas eram:
@@ -12,11 +12,11 @@ soul-shard-name = Alma { $soul }
 soul-shard-description = Esta pedra contém a alma de { $soul }
 cult-too-much-empowers = Muitas habilidades
 cult-duplicated-empowers = Você já tem essa habilidade
-cult-started-drawing-rune-end = 
-    Образы внепространственного бога из неизвестного измерения собираются воедино { $location }.
-    Сорвите ритуал любой ценой, пока станция не была уничтожена!
-    Действие космического закона и стандартных рабочих процедур приостановлено.
-    Весь экипаж должен уничтожать культистов на месте.
+cult-started-drawing-rune-end =
+    Imagens de um deus extradimensional de uma dimensão desconhecida são reunidas por { $location }.
+    Quebre o ritual a todo custo antes que a estação seja destruída!
+    Lei espacial e procedimentos operacionais padrão foram suspensos.
+    Toda a tripulação deve destruir os cultistas no local.
 centcomm-cult-alert = Divisão de Assuntos de Dimensões Superiores do Comando Central
 cult-started-erasing-rune = Você começou a apagar a runa.
 cult-erased-rune = Você apagou a runa.
@@ -48,10 +48,10 @@ chat-manager-send-cult-chat-wrap-message = [bold]\[{ $channelName }\] { $player 
 hud-chatbox-select-channel-Cult = Culto
 # Objectivies
 objective-condition-cult-kill-target = { $targetName } ({ CAPITALIZE($job) }) - { $status }
-objective-condition-cult-kill-title = 
-    Жертвы:
+objective-condition-cult-kill-title =
+    Vítimas
     { $targets }
-summon-button-label = { $label } ({ $mobState } ; { $distance } м)
+summon-button-label = { $label } ({ $mobState }; { $distance } m)
 teleport-button-label = { $label } ({ $distance }m)
 revived-cultist-desc = Um cultista do sangue cuja alma pereceu na escuridão eterna.
 tile-has-rune = Esta peça já tem uma runa!

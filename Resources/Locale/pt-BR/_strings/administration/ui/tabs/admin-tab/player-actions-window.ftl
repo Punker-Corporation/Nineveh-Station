@@ -8,3 +8,7 @@ admin-player-actions-window-shuttle = Transporte de chamada/rechamada
 admin-player-actions-window-admin-logs = Registros de administrador
 admin-player-actions-window-admin-notes = Notas de administração
 admin-player-actions-window-admin-fax = Fax administrativo
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+admin-player-actions-window-admin-chat = Conversa de administração

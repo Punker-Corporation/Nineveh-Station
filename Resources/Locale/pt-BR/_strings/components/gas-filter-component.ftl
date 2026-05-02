@@ -1,4 +1,4 @@
-comp-gas-filter-ui-filter-status = Status:
+comp-gas-filter-ui-filter-status = Estado:
 comp-gas-filter-ui-status-enabled = Sobre
 comp-gas-filter-ui-status-disabled = Desligado
 comp-gas-filter-ui-filter-transfer-rate = Taxa de alimentação (L/seg):

@@ -1,12 +1,12 @@
 whitelist-not-whitelisted = Você não está na lista de permissões.
 # proper handling for having a min/max or not
-whitelist-playercount-invalid = 
-    { $min -> 
-    [0] Вайтлист для этого сервера применяется только для числа игроков ниже { $max }.
-   *[other] 
-            Вайтлист для этого сервера применяется только для числа игроков выше { $min } { $max -> 
-    [2147483647] ->  так что, возможно, вы сможете присоединиться позже.
-   *[other] ->  и ниже { $max } игроков, так что, возможно, вы сможете присоединиться позже.
+whitelist-playercount-invalid =
+    { $min ->
+    [0] A lista branca para este servidor aplica-se apenas ao número de jogadores abaixo do { $max }.
+   *[other]
+            A lista branca para este servidor aplica-se apenas ao número de jogadores acima do { $min } { $max ->
+    [2147483647] Então talvez possas juntar-te a nós mais tarde.
+   *[other] -> e abaixo de jogadores { $max }, então talvez você possa participar mais tarde.
  }
  }
 whitelist-not-whitelisted-rp = Você não está na lista de permissões. Para entrar na lista de permissões, visite nosso Discord (o link pode ser encontrado em https://discord.station14.ru).
@@ -16,12 +16,14 @@ cmd-whitelistadd-existing = { $username } já está na lista de permissões!
 cmd-whitelistadd-added = { $username } adicionado à lista de permissões
 cmd-whitelistadd-not-found = Não foi possível encontrar o jogador '{ $username }'
 cmd-whitelistadd-arg-player = [player]
+
 cmd-whitelistremove-desc = Remova um jogador da lista de permissões do servidor.
 cmd-whitelistremove-help = Uso: whitelistremove <username>
 cmd-whitelistremove-existing = { $username } não está na lista de permissões!
 cmd-whitelistremove-removed = { $username } removido da lista de permissões
 cmd-whitelistremove-not-found = Não foi possível encontrar o jogador '{ $username }'
 cmd-whitelistremove-arg-player = [player]
+
 cmd-kicknonwhitelisted-desc = Expulse todos os jogadores que não estão na lista de permissões do servidor.
 cmd-kicknonwhitelisted-help = Uso: kicknonwhitelisted
 ban-banned-permanent = Esta proibição só pode ser apelada.
@@ -44,22 +46,20 @@ cmd-blacklistadd-help = Uso: lista negradd <username>
 cmd-blacklistadd-existing = { $username } já está na lista negra!
 cmd-blacklistadd-added = { $username } adicionado à lista negra
 cmd-blacklistadd-not-found = Não foi possível encontrar '{ $username }'
-cmd-blacklistadd-arg-player = [игрок]
+cmd-blacklistadd-arg-player = [player]
+
 cmd-blacklistremove-desc = Remove um jogador com o nome de usuário especificado da lista negra do servidor.
-cmd-blacklistremove-help = Uso: blacklistremove <имя пользователя>
+cmd-blacklistremove-help = Uso: blacklistremove <username>
 cmd-blacklistremove-existing = { $username } não está na lista negra!
 cmd-blacklistremove-removed = { $username } removido da lista negra
 cmd-blacklistremove-not-found = Não foi possível encontrar '{ $username }'
-cmd-blacklistremove-arg-player = [игрок]
+cmd-blacklistremove-arg-player = [player]
+
 panic-bunker-account-denied = Este servidor está no modo "Bunker", frequentemente usado como precaução contra ataques. Novas conexões de contas que não atendam a determinados requisitos não serão aceitas temporariamente. Por favor, tente novamente mais tarde
 panic-bunker-account-denied-reason = Este servidor está no modo "Bunker", frequentemente usado como precaução contra ataques. Novas conexões de contas que não atendam a determinados requisitos não serão aceitas temporariamente. Tente novamente mais tarde Motivo: "{ $reason }"
 panic-bunker-account-reason-account = Sua conta da Estação Espacial 14 é muito nova. Deve ter mais de { $minutes } minutos
-panic-bunker-account-reason-overall = 
-    Необходимо минимальное отыгранное Вами время на сервере — { $minutes } { $minutes -> 
-    [one] минута
-    [few] минуты
-   *[other] минут
- }.
+panic-bunker-account-reason-overall = Seu tempo de jogo global no servidor deve ser maior do que {$minutes} $minutos
+
 baby-jail-account-denied = Este servidor é destinado a iniciantes e àqueles que desejam ajudá-los. Novas conexões de contas muito antigas ou que não estejam na lista de permissões não serão aceitas. Experimente outros servidores e veja o que mais a Estação Espacial 14 tem a oferecer. Boa sorte!
 baby-jail-account-denied-reason = Este servidor é destinado a iniciantes e àqueles que desejam ajudá-los. Novas conexões de contas muito antigas ou que não estejam na lista de permissões não serão aceitas. Experimente outros servidores e veja o que mais a Estação Espacial 14 tem a oferecer. Boa sorte! Motivo: "{ $reason }"
 baby-jail-account-reason-account = Sua conta da Estação Espacial 14 é muito antiga. Deve ter menos de { $minutes } minutos.

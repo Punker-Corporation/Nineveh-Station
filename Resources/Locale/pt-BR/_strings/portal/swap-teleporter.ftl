@@ -9,9 +9,7 @@ swap-teleporter-popup-teleport-fail = { CAPITALIZE($entity) } é ativado, mas n�
 swap-teleporter-verb-destroy-link = Quebre a ligação quântica
 swap-teleporter-examine-link-present = [color=forestgreen]Há uma conexão quântica com outro dispositivo.[/color] Clique com a tecla Alt pressionada para interromper a conexão quântica.
 swap-teleporter-examine-link-absent = [color=yellow]Sem Quantum Link.[/color] Use em outro dispositivo para estabelecer Quantum Link.
-swap-teleporter-examine-time-remaining = 
-    Время до перезарядки: [color=roxo]{ $second } { $segundo -> 
-    [one] секунда.
-    [few] секунды.
-   *[other] секунд.
- }[/color]
+swap-teleporter-examine-time-remaining = Tempo restante para recarregar: [color=purple] {$second} segundo {$segundo ->
+    [one].
+    *[other]s.
+}[/color]

@@ -19,3 +19,23 @@ stat-item-price = Tamanho
 stat-drawrate-values = Nível de consumo de LCP
 stat-drawrate-id = EU IA
 stat-drawrate-rate = Nível de consumo (W)
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+stat-melee-values = Dano da arma Melee
+
+stat-melee-id = ID
+
+stat-melee-base-damage = Danos à base
+
+stat-melee-wield-damage = Danos causados por fios
+
+stat-melee-attack-rate = Taxa de ataque
+
+stat-melee-dps = DPS
+
+stat-melee-structural-damage = Danos na estrutura
+
+stat-melee-structural-wield-damage = Dano da estrutura wielded
+
+# Torno

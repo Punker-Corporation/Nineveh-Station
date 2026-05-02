@@ -34,9 +34,7 @@ shuttle-console-ftl-state-Cooldown = Recarregar
 shuttle-console-ftl-state-Invalid = Fracassado
 shuttle-console-map-settings = Configurações
 shuttle-console-ftl-button = Universidade Federal do Rio Grande do Sul
-shuttle-console-map-rebuild = 
-    Сканировать на
-    наличие объектов
+shuttle-console-map-rebuild = Procurar por objectos
 shuttle-console-map-beacons = Mostrando faróis
 shuttle-console-no-signal = Sem sinal
 shuttle-console-map-objects = Objetos do setor

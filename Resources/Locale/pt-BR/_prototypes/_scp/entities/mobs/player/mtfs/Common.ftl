@@ -50,3 +50,32 @@ ent-CrateAdministrationAmnesiacC = Caixa de tubos amnésticos Classe C
 ent-CrateAdministrationAmnesiacD = caixa de tubos amnésticos Classe D
     .desc = Contém uma caixa de tubos de ensaio. Efeitos amnésticos: { reagent-amnesiac-d-desc }
     .suffix = Preenchido
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-CrateAdministrationRecontainment049 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-CrateAdministrationRecontainment035 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-CrateAdministrationRecontainment173 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-CrateAdministrationRecontainment939 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-CrateAdministrationRecontainment106 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-CrateAdministrationRecontainment096 = { ent-CrateAdministrationSecure }
+    .suffix = Preenchido
+    .desc = { ent-CrateAdministrationSecure.desc }
+
+ent-BaseMTFPDA = { ent-AdjutantPDA }
+    .desc = { ent-AdjutantPDA.desc }

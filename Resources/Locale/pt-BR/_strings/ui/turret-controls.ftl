@@ -3,7 +3,7 @@ turret-controls-window-turret-status-label = Dispositivos conectados [{ $count }
 turret-controls-window-armament-controls-label = Configurações de arma
 turret-controls-window-targeting-controls-label = Pessoal Autorizado
 # Status reports
-turret-controls-window-no-turrets = <! Нет подключенных устройств !>
+turret-controls-window-no-turrets = <! Nenhum dispositivo ligado!>
 turret-controls-window-turret-status = » { $device } - Status: { $status }
 turret-controls-window-turret-disabled = ***OFF-LINE***
 turret-controls-window-turret-retracted = INATIVO

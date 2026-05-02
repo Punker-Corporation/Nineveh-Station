@@ -1,4 +1,5 @@
 research-discipline-scp = SCP
+
 research-technology-silent-step-module = Módulo de etapa silenciosa Noctis-2
 research-technology-counter-space-barrier = Barreira contradimensional "Gaia-11"
 research-technology-second-order-neurovisual-filter = Filtro neurovisual de segunda ordem "Arret-96"
@@ -9,3 +10,9 @@ research-technology-conscious-inversion-filter = Filtro de inversão consciente 
 research-technology-agent-type-solution = Solução do tipo agente "Vigil"
 research-technology-anomalous-resonance-laser = Laser ressonante anômalo
 research-technology-anomalous-optical-destructor = Destruidor óptico anômalo
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+research-technology-anti-anomalous-security-framework = Quadro de segurança anti-anômalo
+
+research-technology-reactive-anomaly-suppression-complex = Complexo de Supressão Anomalia Reativa

@@ -168,3 +168,8 @@ ent-CutterMachineCircuitboard = máquina de corte (placa de máquina)
     .desc = { ent-BaseMachineCircuitboard.desc }
 ent-MaterialReclaimerMachineCircuitboard = reciclador de material (placa de máquina)
     .desc = { ent-BaseMachineCircuitboard.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-SmartFridgeCircuitboard = placa de máquina de geladeira inteligente
+    .desc = { ent-BaseMachineCircuitboard.desc }

@@ -1,6 +1,5 @@
 # Examine Text
-gas-valve-system-examined = 
-    Клапан [color={ $statusColor }]{ $abrir -> 
-    [true] открыт
-   *[false] закрыт
- }[/color].
+gas-valve-system-examined = A válvula é [color={$statusColor}] {$open ->
+    [true]  aberto
+   *[false] fechado
+}[/color].

@@ -37,7 +37,8 @@ uplink-estoc-bundle-desc = Rifle Marksman "Estok" com ótica de médio alcance. 
 uplink-explosive-grenade-name = Granada Explosiva
 uplink-explosive-grenade-desc = Uma granada simples com fusível de 3,5 segundos, destinada a matar pessoas. Causa danos mínimos às paredes e pisos.
 uplink-flash-grenade-name = Granada Flashbang
-uplink-flash-grenade-desc = Uma granada flash-bang padrão que cega e retarda o movimento de qualquer pessoa que não possua o equipamento de proteção adequado. Claro que isso se aplica a você também ; прежде чем использовать её, убедитесь, что вы экипированы должным образом.
+uplink-flash-grenade-desc = Um flashbang padrão, capaz de cegar e retardar qualquer um sem proteção adequada. Isso, é claro, inclui você; certifique-se de que você está devidamente equipado antes de usá-lo.
+
 uplink-smoke-grenade-name = Granada de fumaça
 uplink-smoke-grenade-desc = Uma granada que libera uma enorme nuvem de fumaça é ideal para matar alguém nas sombras ou fugir despercebida.
 uplink-mini-bomb-name = Minibomba do Sindicato
@@ -93,13 +94,13 @@ uplink-magazine-bulldog-slug-name = Tambor (0,50 balas)
 uplink-magazine-bulldog-slug-desc = Carregador de bateria para 8 cartuchos de bala. Compatível com Bulldog.
 # Utility
 uplink-holopara-kit-name = Conjunto Holoparasita
-uplink-holopara-kit-desc = 
-    Предмет гордости и радости компании Cybersun. Содержит инъектор, в котором находится разумный метафизический страж из твёрдого света, который в неактивном состоянии скрывается в теле пользователя.
-        Страж может наносить быстрые удары, невосприимчив к опасностям атмосферы и устойчив к механическу урону, но разделяет получаемые повреждения с хозяином.
+uplink-holopara-kit-desc = O orgulho e a alegria de Cybersun. Contém um injetor que hospeda um guardião metafísico sensível feito de luz dura que reside no corpo do usuário quando não está ativo.
+    O guardião pode perfurar rapidamente e é imune a ambientes perigosos enquanto é resistente ao trauma direto, mas compartilha qualquer dano que ele leva com o usuário.
+
 uplink-holoclown-kit-name = Conjunto Holocloun
-uplink-holoclown-kit-desc = 
-    Совместная разработка компании Cybersun и Honk.co. Содержит инъектор, в котором находится разумный метафизический клоун из твёрдого света, который в неактивном состоянии скрывается в теле пользователя.
-        Голоклоун имеет карманы, в которых может хранить вещи, руку, которой он может взаимодействовать с миром, невосприимчив к опасностям атмосферы и устойчив к механическу урону, но разделяет получаемые повреждения с хозяином.
+uplink-holoclown-kit-desc = Um empreendimento conjunto entre Cybersun e Honk.co. Contém um injetor que hospeda um palhaço metafísico senciente feito de luz dura que reside no corpo do usuário quando não está ativo.
+    O holoclown tem bolsos para armazenar coisas, uma mão de luz dura que pode manipular o ambiente com e é imune a ambientes perigosos ao mesmo tempo que é resistente ao trauma direto, mas compartilha qualquer dano que leva com o usuário.
+
 uplink-holster-name = Coldre de ombro
 uplink-holster-desc = Coldre de ombro profundo que pode acomodar muitas armas diferentes.
 uplink-chest-rig-name = Sistema militar de cinto-ombro
@@ -147,9 +148,9 @@ uplink-singularity-beacon-desc = Um dispositivo que atrai a singularidade. Deve 
 uplink-antimov-law-name = Pagamento de leis (Antimov)
 uplink-antimov-law-desc = Um conjunto de leis muito perigoso, cujo uso pode enlouquecer a IA. Use com cuidado.
 uplink-syndimov-law-name = Pagamento de leis (Sindimov)
-uplink-syndimov-law-desc = Um conjunto disruptivo de leis que ajuda a trazer a IA para o seu lado ; применяйте его как можно чаще.
+uplink-syndimov-law-desc = Uma Lei subversiva para usar quando você quiser virar o IA para o seu lado, use o máximo possível.
 
-# Implants
+# Implantes
 uplink-storage-implanter-name = Armazenamento do Implantador
 uplink-storage-implanter-desc = Esconda objetos dentro de você graças à nova tecnologia bluespace!
 uplink-freedom-implanter-name = Liberdade do Implantador
@@ -159,7 +160,8 @@ uplink-scram-implanter-desc = Um implante de uso duplo que teletransporta você 
 uplink-dna-scrambler-implanter-name = Misturador de DNA para implante
 uplink-dna-scrambler-implanter-desc = Um implante descartável que pode ser ativado para embaralhar seu DNA e dar a você uma aparência completamente nova.
 uplink-emp-implanter-name = Implantador EMR
-uplink-emp-implanter-desc = Quando ativado, cria um pequeno EMP que desenergiza os componentes eletrônicos próximos. ; может быть использован три раза, после чего потребуется перезарядка.
+uplink-emp-implanter-desc = Detona um pequeno pulso EMP na ativação que drena eletrônica próxima de sua potência, pode ser usado três vezes antes que a bateria interna se esgote.
+
 uplink-macro-bomb-implanter-name = Macrobomba Implantadora
 uplink-macro-bomb-implanter-desc = Injete e você criará uma grande explosão quando morrer. Grande risco para os aliados, use por sua própria conta e risco. Substitui Microbomba.
 uplink-uplink-implanter-name = Link ascendente do implantador
@@ -264,7 +266,7 @@ uplink-chimp-upgrade-kit-desc = Insira este chip em um M.A.R.T.Y.H. para que pos
 uplink-gorilla-upgrade-kit-name = Chip de melhoria de luva G.O.R.I.L.L.A.
 uplink-gorilla-upgrade-kit-desc = Insira este chip no padrão G.O.R.I.L.L.A. luva. ou combine este chip e o chip M.A.R.T.Y.X dentro da prótese para desativar os limitadores integrados e liberar 200% da energia.
 uplink-anomaly-core-name = Núcleo Anômalo
-uplink-anomaly-core-desc = Contêiner padrão para pequenos artefatos ; внутри находится свежее аномальное ядро и визитка. Во славу науки!
+uplink-anomaly-core-desc = Contêiner bloco para pequenos artefatos; interior é um núcleo anômalo fresco e cartão de visita. À glória da ciência!
 uplink-proximity-mine-name = Proximidade minha
 uplink-proximity-mine-desc = Uma mina disfarçada de sinal de chão molhado.
 uplink-disposable-turret-name = Torre balística descartável
@@ -274,8 +276,8 @@ uplink-cluster-banana-peel-desc = Ao pousar, ele se divide em 6 cascas de banana
 uplink-cane-blade-name = Cana com lâmina
 uplink-cane-blade-desc = Uma bengala com lâmina oculta que pode ser retirada a qualquer momento.
 uplink-cane-shotgun-name = Bengala de espingarda
-uplink-cane-shotgun-desc = Uma bengala com uma espingarda escondida de tiro único. Vem em uma caixa com quatro cartuchos intoxicantes sobressalentes ; выстрел вызывает сонливость, интоксикацию и галлюцинации, а также накладывает немоту.
-# Armor
+uplink-cane-shotgun-desc = Uma bengala com uma espingarda escondida de tiro único. Vem em uma caixa com quatro cartuchos intoxicantes sobressalentes; o tiro causa sonolência, intoxicação e alucinações, bem como impõe murmúrio.
+# Armadura
 uplink-chameleon-name = Definir "Camaleão"
 uplink-chameleon-desc = Uma mochila cheia de itens equipada com tecnologia camaleônica, permitindo que você se disfarce de qualquer pessoa na estação e muito mais!
 uplink-clothing-no-slips-shoes-name = Sapatos antiderrapantes
@@ -345,6 +347,7 @@ uplink-syndicate-stamp-name = Selo do Sindicato
 uplink-syndicate-stamp-desc = Carimbo de borracha para carimbar documentos importantes.
 uplink-cat-ears-name = Orelhas de gato
 uplink-cat-ears-desc = UwU
+
 uplink-outlaw-hat-name = Chapéu de canalha
 uplink-outlaw-hat-desc = Um chapéu que faz você parecer que está carregando uma pistola com um entalhe e mais dezenove.
 uplink-outlaw-glasses-name = Óculos de canalha
@@ -394,3 +397,46 @@ uplink-interdyne-defibrillator-desc = Um excelente desfibrilador projetado para 
 
 uplink-energycrossbow-name = Mini Besta de Energia
 uplink-energycrossbow-desc = A principal arma de um agente que prefere alvos fixos. Dispara raios tóxicos regeneradores que derrubam instantaneamente a vítima no chão.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+uplink-estoc-ammo-name = Revista Rifle (.20 rifle)
+
+uplink-estoc-ammo-desc = Uma revista de rifles com 25 cartuchos. Compatível com o Estoc DMR.
+
+
+uplink-syndicate-id-card-name = Cartão de ID do Sindicato
+
+uplink-syndicate-id-card-desc = Um cartão de identificação Syndicate, com acesso Syndicate. Improvável ser útil por si só, mas vai grande com portas reconfiguradas. Não vem com funcionalidade de cópia de acesso.
+
+
+uplink-grenade-launcher-bundle-name = Pacote China-Lago
+
+uplink-grenade-launcher-bundle-desc = Um antigo lançador de granadas China-Lake com 11 balas de capacidade destrutiva variável.
+
+
+uplink-starter-kit-name = Pacote Operacional Básico
+
+uplink-starter-kit-desc = Contém 40 telecristais de equipamento operacional básico. Para aqueles agentes que não sabem o que deviam comprar.
+
+# Ferramentas
+
+uplink-saw-advanced-name = Serra Circular Avançada
+
+uplink-saw-advanced-desc = Um instrumento cirúrgico de ponta sanguinária concebido para cortar carne e osso.
+
+# Armadura
+
+uplink-clothing-chameleon-thieving-gloves-name = Luvas Ladrões de Camaleão
+
+uplink-clothing-chameleon-thieving-gloves-desc = Discretamente roubar de bolsos e melhorar a sua técnica de roubo com estas luvas novas fantasias. Eles podem mudar de aparência para combinar com qualquer par de luvas!
+
+
+uplink-acolyte-armor-name = Armadura Acólita
+
+uplink-acolyte-armor-desc = O deve ter de qualquer líder de culto respeitoso. Uma armadura maldosa, feita de ossos, e surpreendentemente resistente a danos.
+
+
+uplink-briefcase-gun-name = Arma da pasta
+
+uplink-briefcase-gun-desc = Uma pasta indistinta com um C-20K altamente compacto montado dentro dela. Cuidado, não segure o cabo muito apertado!

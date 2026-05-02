@@ -172,3 +172,8 @@ ent-SyndiCorpsmanPDA = PDA do Sindicato Médico
 ent-SyndiOperativePDA = PDA Operativo do Sindicato
     .desc = Morte ao NT!
     .suffix = Operativo Nuclear
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-SyndiAgentPDA = Sindicalista PDA
+    .desc = Para aqueles dias em que curar sindicatos normais não são suficientes, tente curar agentes nucleares em vez disso!

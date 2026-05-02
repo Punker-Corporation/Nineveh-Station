@@ -63,3 +63,19 @@ steal-target-groups-animal-morty = Morty
 steal-target-groups-animal-renault = Alice
 steal-target-groups-animal-shiva = Shiva
 steal-target-groups-animal-tropico = Trópico
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+steal-target-groups-clothing-hands-knuckledusters-qm = dunas douradas
+
+steal-target-groups-weapon-energy-magnum = energia magnum
+
+# Colecção de Ladrão
+
+steal-target-groups-officer-handguns = A pistola do oficial de segurança
+
+steal-target-groups-belt-ce = Cinto de ferramentas do engenheiro chefe
+
+steal-target-groups-captain-sword = sabre do capitão
+
+# Estruturas de ladrões

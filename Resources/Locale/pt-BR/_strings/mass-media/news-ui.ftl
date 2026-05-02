@@ -6,7 +6,7 @@ news-read-ui-default-title = Notícias complexas
 news-read-ui-not-found-text = Nenhum artigo encontrado
 news-read-ui-time-prefix-text = Tempo de publicação:
 news-reader-ui-mute-tooltip = Desativar notificações
-news-read-ui-notification-off = ̶♫̶
+news-read-ui-notification-off =  ̶♫̶
 news-read-ui-notification-on = ♫
 news-read-ui-no-author = Anônimo
 news-read-ui-author-prefix = Autor:
@@ -19,26 +19,21 @@ news-write-ui-cancel-text = Cancelar
 news-write-ui-save-text = Salvar
 news-write-ui-preview-text = Visualização
 news-write-ui-article-count-0 = 0 artigos
-news-write-ui-article-count-text = 
-    { $count } { $count -> 
-    [one] статья
-    [few] статьи
-   *[other] статей
- }
-news-write-ui-footer-text = Gerente do sistema de gerenciamento de notícias #Новостей™
+news-write-ui-article-count-text = Artigos {$count}
+news-write-ui-footer-text = Notícias#ManagerTM Authoring System
 news-write-ui-new-article = Novo artigo
 news-write-ui-article-name-label = Cabeçalho:
 news-write-no-access-popup = Sem acesso
 news-writer-text-length-exceeded = O texto excede o tamanho máximo
-news-write-ui-richtext-tooltip = 
-    Новостные статьи поддерживают формат Rich Text
-    Поддерживаются следующие теги Rich Text:
-    { "[color=Cinza][bullet/]título \\[size=1-3\\]" }
-    { "[bullet/]bold" }
-    { "[bullet/]italic" }
-    { "[bullet/]bolditalic" }
-    { "[bullet/]color" }
-    { "[bullet/]bullet[/color]" }
+news-write-ui-richtext-tooltip = Artigos de notícias suportam texto rico
+    As seguintes etiquetas de texto ricas são suportadas:
+    {"[color=Gray][bullet/]heading \\[size=1-3\\]"}
+    {"[bullet/]bold"}
+    {"[bullet/]italic"}
+    {"[bullet/]bolditalic"}
+    {"[bullet/]color"}
+    {"[bullet/]bullet[/color]"}
+
 news-pda-notification-header = Nova notícia
 news-publish-admin-announcement = { $actor } publicou um artigo de notícias { $title } de autoria de { $author }
 news-write-ui-photos-label = Fotos:

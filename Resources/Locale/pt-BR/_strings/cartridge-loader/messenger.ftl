@@ -1,69 +1,64 @@
-messenger-status-connecting = Conexão...
+messenger-status-connecting = Conectando...
 messenger-status-disconnected = Servidor indisponível
-messenger-status-connected = Conectado
+messenger-status-connected = Ligado
 messenger-search-placeholder = Procurar...
 messenger-tab-personal = Pessoal
 messenger-tab-groups = Grupos
-messenger-tab-invites = Convites
+messenger-tab-invites = Convidações
 messenger-no-invites = Sem convites
-messenger-create-group-button = Crie um grupo
-messenger-chat-select = Selecione bate-papo
+messenger-create-group-button = Criar grupo
+messenger-chat-select = Selecionar chat
 messenger-mute-tooltip = Mudo
-messenger-members-toggle-show = Mostrar participantes
-messenger-members-toggle-hide = Ocultar participantes
-messenger-emoji-button-tooltip = Selecione emoticons
-messenger-message-placeholder = Digite sua mensagem...
+messenger-members-toggle-show = Mostrar os membros
+messenger-members-toggle-hide = Esconder os membros
+messenger-emoji-button-tooltip = Selecionar emojis
+messenger-message-placeholder = Indique a mensagem...
 messenger-send-button = Enviar
-messenger-members-header = Participantes:
-messenger-member-owner = { $name } (Proprietário)
+messenger-members-header = Membros:
+messenger-member-owner = { $name } (Propriedade)
 messenger-remove-member-tooltip = Remover do grupo
-messenger-no-members = Nenhum participante
+messenger-no-members = Sem membros
 messenger-add-member-button = Adicionar
-messenger-create-group-title = Crie um grupo
+messenger-create-group-title = Criar grupo
 messenger-create-group-label = Nome do grupo:
-messenger-create-group-placeholder = Digite um nome
+messenger-create-group-placeholder = Digite o nome
 messenger-create-group-button-create = Criar
 messenger-create-group-button-cancel = Cancelar
-messenger-add-user-title = Adicionar um participante
-messenger-add-user-to-group-title = Adicionar um membro a { $groupName }
-messenger-no-users-available = Não há usuários disponíveis para adicionar
+messenger-add-user-title = Adicionar membro
+messenger-add-user-to-group-title = Adicionar membro ao { $groupName }
+messenger-no-users-available = Nenhum usuário disponível para adicionar
 messenger-add-user-search = Procurar:
-messenger-add-user-placeholder = Digite seu nome de usuário
+messenger-add-user-placeholder = Digite o nome do usuário
 messenger-add-user-cancel = Cancelar
-messenger-emoji-picker-title = Selecione emoticons
-messenger-connection-label = 
-    Статус подключения: { $status -> 
+messenger-emoji-picker-title = Selecionar emojis
+messenger-connection-label = { $status ->
     [connecting] { messenger-status-connecting }
     [disconnected] { messenger-status-disconnected }
-   *[connected] { messenger-status-connected }
- }
-messenger-system-user-added = adicionou { $userName } ao grupo
-messenger-system-user-removed = removeu { $userName } do grupo
-messenger-system-user-added-by = { $adderName } adicionou { $userName } ao grupo
-messenger-system-user-removed-by = { $removerName } removeu { $userName } do grupo
+    *[connected] { messenger-status-connected }
+}
+messenger-system-user-added = adicionado { $userName } ao grupo
+messenger-system-user-removed = removido { $userName } do grupo
+messenger-system-user-added-by = { $adderName } adicionado { $userName } ao grupo
+messenger-system-user-removed-by = { $removerName } removido { $userName } do grupo
 messenger-emoji-recent-title = Usado recentemente
-messenger-emoji-recent-empty-hint = Os emoticons usados ​​recentemente serão mostrados aqui.
+messenger-emoji-recent-empty-hint = Emojis usados recentemente aparecerão aqui
 messenger-emoji-favorite-title = Favoritos
-messenger-emoji-favorite-hint = RMB na lista geral para adicionar.
-    ПКМ по избранным для удаления.
-messenger-emoji-all-title = Todos os emoticons
+messenger-emoji-favorite-hint = PKM na lista geral a adicionar.
+    PKM no selecionado para remoção.
+messenger-emoji-all-title = Todos emojis
 
-messenger-notification-message = Nova mensagem de { $name }
-messenger-group-notification-message = Nova mensagem no grupo { $name }
-messenger-invite-notification-message = Você foi convidado para o grupo { $name }
+messenger-notification-message = Nova mensagem de PH000P H
+messenger-group-notification-message = Nova mensagem no grupo PH000P H
+messenger-invite-notification-message = Você foi convidado para se juntar ao grupo PH000P. H
 messenger-user-unknown = Desconhecido
 messenger-system-name = Sistema
-messenger-leave-group = Sair do grupo
+messenger-leave-group = Deixar o grupo
 messenger-invite-member-button = Convidar
-messenger-invites-header = Convites
+messenger-invites-header = Convidações
 messenger-invite-info = { $inviter } convida você
 messenger-invite-accept = Aceitar
-messenger-invite-decline = Rejeitar
+messenger-invite-decline = Recusar
 messenger-invite-user-to-group-title = Convidar para { $groupName }
-messenger-delete-message = Excluir mensagem
-messenger-system-user-joined = { $userName } entrou no grupo
-messenger-system-user-left = { $userName } saiu do grupo
-messenger-photo-button-tooltip = Envie uma foto
-messenger-photo-picker-title = Selecione uma foto
-messenger-image-preview-title = Ver imagem
-messenger-photo-flash-label = Clarão
+messenger-delete-message = Apagar a mensagem
+messenger-system-user-joined = { $userName } juntou-se ao grupo
+messenger-system-user-left = { $userName } deixou o grupo

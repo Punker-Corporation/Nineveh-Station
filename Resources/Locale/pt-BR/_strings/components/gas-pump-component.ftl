@@ -1,4 +1,4 @@
-comp-gas-pump-ui-pump-status = Status:
+comp-gas-pump-ui-pump-status = Estado:
 comp-gas-pump-ui-status-enabled = Sobre
 comp-gas-pump-ui-status-disabled = Desligado
 comp-gas-pump-ui-pump-set-rate = Instalar

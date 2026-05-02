@@ -1,9 +1,7 @@
 ent-Lockbox = mala protegida
     .desc = Uma mala altamente segura projetada para guardar documentos e itens importantes.
-ent-LockboxCaptain = mala protegida
-    .desc = Uma mala altamente segura projetada para guardar documentos e itens importantes.
-
-## Базовые кейсы
+ent-LockboxCaptain = { ent-Lockbox }
+    .desc = { ent-Lockbox.desc }
 ent-BaseImplantCase = Caso
     .desc = Uma pequena maleta com fechadura de identificação, dentro há um implante cibernético.
 
@@ -68,4 +66,3 @@ ent-ImplantCaseGrenadeThrower = Caso protegido: Cyberarm "Grunt"
 
 ent-ImplantCaseMantisBladeMaxGuard = Estojo protegido: Cyber ​​​​Arm "Mantis Blades MaxGuard"
     .desc = Estojo protegido com cadeado. O rótulo diz: Cyber ​​​​Arm Mantis Blades MaxGuard.
-

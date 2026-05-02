@@ -83,7 +83,8 @@ petting-failure-medical-cyborg = Você estende a mão para o animal de estimaç�
 petting-failure-service-cyborg = Você procura o animal de estimação { $target }, mas { $target } está ocupado servindo a tripulação!
 petting-failure-syndicate-cyborg = Você procura o animal de estimação { $target }, mas a natureza traiçoeira de { $target } faz você mudar de ideia.
 petting-failure-derelict-cyborg = Você estende a mão para o animal de estimação { THE(target) }, mas a aparência enferrujada e irregular de { POSS-ADJ(target) } faz você reconsiderar.
-petting-failure-station-ai = Você estende a mão para acariciar { THE($target) }, mas { SUBJECT($target) } { CONJUGATE-BASIC($target, "отпугивает", "отпугивают") } dá um choque em sua mão!
+petting-failure-station-ai = Você estende para pet {THE($target)}, mas {SUBJECT($target)} {CONJUGATE-BASIC($target, "zap", "zaps")} sua mão longe.
+
 petting-success-station-ai-others = { CAPITALIZE(THE($user)) } traça { THE($target) } na tela quadrada fria { POSS-ADJ($target) }.
 hugging-success-generic = Você abraça { $target }.
 hugging-success-generic-others = { CAPITALIZE($user) } abraços { $target }.
@@ -93,3 +94,12 @@ petting-success-tesla = Você acaricia { $target }, quebrando simultaneamente as
 petting-failure-tesla = Você estende a mão para acariciar { $target }, mas a descarga faz com que você retire a mão.
 petting-success-mail-teleporter = Você acaricia { THE($target) } sobre { POSS-ADJ($target) } superfície fria e executiva.
 petting-failure-mail-teleporter = Você entra em contato com o animal de estimação { THE($target) }, mas { SUBJECT($target) } { CONJUGATE-BE($target) } está ocupado classificando a correspondência!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+petting-success-scurret = Você acaricia {THE($target)} em {POSS-ADJ($target)} cabeça legalmente distinta.
+
+
+petting-failure-scurret = Você chegar para pet {THE($target)}, mas {SUBJECT($target)} faz um retrocesso!
+
+## Silícios para petting

@@ -47,3 +47,19 @@ trait-moldovan-desc = Darei cigana yn spacia cósmica!
 trait-formal-name = Sotaque formal
 trait-formal-desc = Você fala muito formalmente, expandindo as abreviações para significados completos.
 # Fish-edit-end
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+trait-monochromacy-name = Monocromia
+
+trait-monochromacy-desc = Você é totalmente daltônico, tudo que você percebe varia de pretos a brancos.
+
+
+trait-hemophilia-name = Hemofilia
+
+trait-hemophilia-desc = O seu corpo não consegue fazer coágulos de sangue.
+
+
+trait-impaired-mobility-name = Mobilidade prejudicada
+
+trait-impaired-mobility-desc = Você tem dificuldade em se mover sem uma ajuda de mobilidade.

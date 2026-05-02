@@ -53,3 +53,20 @@ ent-ScpVendingMachineO5Drobe = Máquina de venda automática de equipamentos do 
     .desc = { ent-VendingMachineCentDrobe.desc }
 ent-ScpVendingMachineChemicals = { ent-VendingMachineChemicals }
     .desc = { ent-VendingMachineChemicals.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpVendingMachineDinnerwareClassD = { ent-VendingMachineDinnerware }
+    .desc = { ent-VendingMachineDinnerware.desc }
+
+ent-ScpVendingMachineNutriClassD = { ent-VendingMachineNutri }
+    .desc = { ent-VendingMachineNutri.desc }
+
+ent-ScpVendingMachineSeedsClassD = { ent-VendingMachineSeeds }
+    .desc = { ent-VendingMachineSeeds.desc }
+
+ent-ScpVendingMachineHydrobeClassD = { ent-VendingMachineHydrobe }
+    .desc = { ent-VendingMachineHydrobe.desc }
+
+ent-ScpVendingMachineChefDrobeClassD = { ent-VendingMachineChefDrobe }
+    .desc = { ent-VendingMachineChefDrobe.desc }

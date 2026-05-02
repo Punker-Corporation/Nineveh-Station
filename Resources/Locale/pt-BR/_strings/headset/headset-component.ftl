@@ -49,7 +49,8 @@ chat-radio-channel-33 = 33
 chat-radio-channel-34 = 34
 chat-radio-channel-35 = 35
 chat-radio-channel-36 = 36
-# not headset but whatever
+
+# não fones de ouvido, mas qualquer coisa
 chat-radio-handheld = Portátil
 chat-radio-binary = Binário
 chat-radio-xenoborg = Xenoborg

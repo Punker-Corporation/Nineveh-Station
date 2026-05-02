@@ -1,6 +1,6 @@
 cmd-tippy-desc = Envie uma mensagem em nome de Tippy the Clown.
 cmd-tippy-help = Uso: tippy <user | all> <message> [entity prototype] [speak time] [slide time] [waddle interval]
-cmd-tippy-auto-1 = <user | all>
+cmd-tippy-auto-1 = <usuário > todos>
 cmd-tippy-auto-2 = texto
 cmd-tippy-auto-3 = protótipo de entidade
 cmd-tippy-auto-4 = tempo da mensagem, em segundos

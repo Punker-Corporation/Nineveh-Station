@@ -6,15 +6,15 @@ station-beacon-gateway = Portão
 station-beacon-captain = Capitão
 station-beacon-hop = HoP
 station-beacon-security = Segurança
-station-beacon-brig = Brig
-station-beacon-brig-med = Brig Med
-station-beacon-warden = Warden
+station-beacon-brig = Brigadeiro
+station-beacon-brig-med = Brigadeiro Med
+station-beacon-warden = Diretor
 station-beacon-hos = HoS
 station-beacon-armory = Arsenal
 station-beacon-perma-brig = Perma Brig
 station-beacon-detective = Detetive
 station-beacon-courtroom = Tribunal
-station-beacon-law = Law Office
+station-beacon-law = Escritório de advocacia
 station-beacon-security-checkpoint = Checkpoint da Segurança
 station-beacon-medical = Departamento médico
 station-beacon-medbay = Enfermaria
@@ -51,7 +51,7 @@ station-beacon-tech-vault = Armazenamento tecnológico
 station-beacon-anchor = Âncora da estação
 station-beacon-service = Instalações de serviço
 station-beacon-kitchen = Cozinha
-station-beacon-bar = Bar
+station-beacon-bar = Barra
 station-beacon-botany = Hidroponia
 station-beacon-janitor = Armário do Faxineiro
 station-beacon-ai = IA
@@ -74,3 +74,37 @@ station-beacon-cryosleep = Sono criogênico
 station-beacon-escape-pod = Cápsula de resgate
 station-beacon-vox = Sala de descanso Vox
 station-beacon-blueshield = Escudo azul
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+station-beacon-solars-N = Solares N
+
+station-beacon-solars-NE = Solares NE
+
+station-beacon-solars-E = Solares E
+
+station-beacon-solars-SE = Solares SE
+
+station-beacon-solars-S = Solares S
+
+station-beacon-solars-SW = Solares SW
+
+station-beacon-solars-W = Solares W
+
+station-beacon-solars-NW = Solares NW
+
+station-beacon-escape-pod-N = Escapar do Pod N
+
+station-beacon-escape-pod-NE = Escapar do Pod NE
+
+station-beacon-escape-pod-E = Escapar do Pod E
+
+station-beacon-escape-pod-SE = Escapar do Pod SE
+
+station-beacon-escape-pod-S = Escapar do Pod S
+
+station-beacon-escape-pod-SW = Escapar Pod SW
+
+station-beacon-escape-pod-W = Escapar do Pod W
+
+station-beacon-escape-pod-NW = Escapar do Pod NW

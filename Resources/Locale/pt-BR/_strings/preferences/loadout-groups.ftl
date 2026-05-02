@@ -166,3 +166,22 @@ loadout-group-reporter-jumpsuit = Repórter, macacão
 loadout-group-psychologist-jumpsuit = Psicólogo, macacão
 loadout-group-boxer-jumpsuit = Boxer, macacão
 loadout-group-boxer-gloves = Boxer, luvas
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+loadout-group-jobtrinkets = Trinkets de trabalho
+
+loadout-group-survival-military = Veja linha 14, ninguém nunca vai ver isso assim:3
+
+loadout-group-bartender-shaker = Barman
+
+
+loadout-group-chaplain-bible = Livro Sagrado
+
+
+loadout-group-cargo-technician-id = Identificação do técnico de carga
+
+
+loadout-group-medical-glasses = Óculos médicos
+
+# Wildcards

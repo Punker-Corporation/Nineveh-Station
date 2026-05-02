@@ -24,3 +24,7 @@ access-name-mtf = Força-Tarefa Móvel
 access-name-chaos-insurgency = Insurgência do Caos
 access-name-third-party = Terceiros
 access-name-o5 = Conselho O5
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+access-name-bunker = Bunker

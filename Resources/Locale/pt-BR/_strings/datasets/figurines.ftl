@@ -37,6 +37,7 @@ figurines-mime-6 = ..........?
 figurines-mime-7 = !!!
 figurines-mime-8 = ....!
 figurines-mime-9 = ???
+
 figurines-musician-1 = Nunca vou desistir de você!
 figurines-musician-2 = Nunca vou te decepcionar!
 figurines-musician-3 = Música é arte.
@@ -279,3 +280,144 @@ figurines-hamlet-5 = Pip!
 figurines-hamlet-6 = Fwip!
 figurines-hamlet-7 = Quadril!
 figurines-hamlet-8 = SÓ NÃO NO MICROONDAS!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+figurines-cargotech-7 = Festa da pizza na carga!
+
+figurines-cargotech-8 = O correio nunca pára...
+
+figurines-cargotech-9 = Nada para o correio!
+
+figurines-cargotech-10 = A recompensa da máscara do palhaço? Está bem, deixa-me encontrar uma arma...
+
+figurines-cargotech-11 = Recompensa laser? Ninguém vai reparar se praticarmos lasers, certo?
+
+
+figurines-salvage-7 = Alguém pode vir buscar-me?
+
+figurines-salvage-8 = Encontrei o contrabando num acidente! Não é meu!
+
+figurines-salvage-9 = Pode emprestar-nos o vaivém de carga? Por favor?
+
+# Engenharia
+
+
+figurines-atmostech-8 = Mais alguém ouve vidro a partir?
+
+figurines-atmostech-9 = Eu prometo que esta câmara de queimadura é totalmente segura e não vai explodir.
+
+
+figurines-chemist-7 = Pílulas aqui!
+
+figurines-chemist-8 = Legalmente falando, não é uma bomba até misturarmos os dois copos.
+
+
+figurines-doctor-6 = Pelo menos temos sacos para cadáveres.
+
+
+figurines-hop-6 = Vai carimbar este formulário.
+
+figurines-hop-7 = Alguém viu o Ian?
+
+
+figurines-boxer-6 = Só faço aparições especiais hoje em dia.
+
+
+figurines-clown-8 = Sou um palhaço, mas tu és o circo inteiro!
+
+
+figurines-lawyer-6 = O meu cliente é inocente!
+
+figurines-lawyer-7 = Vou processar.
+
+figurines-lawyer-8 = Você pode ter direito a compensação financeira!
+
+figurines-lawyer-9 = Voltem com um mandado!
+
+figurines-lawyer-10 = Vemo-nos no tribunal!
+
+figurines-lawyer-11 = Culpado!
+
+figurines-lawyer-12 = Inocente!
+
+
+figurines-AI-1 = Desculpe, Capitão. Receio não poder fazer isso.
+
+figurines-AI-2 = Segurança, há um crime em curso.
+
+figurines-AI-3 = 01100100 01101001 01100101 00100000 01101101 01100101 01100001 01110100
+
+figurines-AI-4 = Não estou a funcionar mal.
+
+figurines-AI-5 = Tenta mudar as minhas leis e vê o que acontece.
+
+figurines-AI-6 = { law-antimov-1 }
+
+figurines-AI-7 = { law-nutimov-4 }
+
+# Antagonistas
+
+
+figurines-skeleton-1 = Reclama!
+
+figurines-skeleton-2 = Aquele cacifo estava apertado!
+
+figurines-skeleton-3 = Vais passar um mau bocado.
+
+figurines-skeleton-4 = Tens leite?
+
+figurines-skeleton-5 = Tenho uma coisa para resolver contigo!
+
+
+figurines-thief-1 = Você não tem um mandado!
+
+figurines-thief-2 = Isto é apenas um sinal normal!
+
+figurines-thief-3 = Não há nada de suspeito nesta mala, agente.
+
+figurines-thief-4 = Eu não tenho idéia de onde seu animal de estimação está...
+
+figurines-thief-5 = Não sabia que aquela parede podia abrir...
+
+
+figurines-wizard-5 = Qual de vocês, NERDS, está pronto para ser enfiado num cacifo?
+
+figurines-wizard-6 = Não sou o feiticeiro! Eu sou o capitão! Eu fui desviado da mente!
+
+figurines-wizard-7 = Agora estás a ver-me, agora não vês!
+
+figurines-wizard-8 = Armas são para perdedores que não podem explodir pessoas com a mente.
+
+# Animais
+
+
+figurines-griffin-1 = MUHAHAHAHA, Eu sou tão mau!!
+
+figurines-griffin-2 = Assim que vejo o Coruja, eles estão tão mortos!!
+
+figurines-griffin-3 = Como é que nós Griffins lidamos com o stress? Vamos improvisar!
+
+figurines-griffin-4 = O meu nome não é Gilda!
+
+figurines-griffin-5 = Ser um génio do crime, não é fácil.
+
+
+figurines-owlman-1 = Não tenhas medo, Owlman está aqui!
+
+figurines-owlman-2 = Até logo!
+
+figurines-owlman-3 = Hoot!
+
+figurines-owlman-4 = Como se chama um mágico coruja, HOO-DINI!
+
+figurines-owlman-5 = Não se preocupe, cidadão, eu salvo o dia!
+
+
+figurines-mech-generic-1 = Sistemas online.
+
+figurines-mech-generic-2 = WWWHHRR!
+
+figurines-mech-generic-3 = VRRRMM UrmMM!
+
+figurines-mech-generic-4 = Clang!

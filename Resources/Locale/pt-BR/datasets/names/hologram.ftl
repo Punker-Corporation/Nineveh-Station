@@ -1,5 +1,5 @@
 names-hologram-dataset-1 = Apolo
-names-hologram-dataset-2 = Data
+names-hologram-dataset-2 = Dados
 names-hologram-dataset-3 = LUMINOSIDADE
 names-hologram-dataset-4 = El Roy
 names-hologram-dataset-5 = Hefesto

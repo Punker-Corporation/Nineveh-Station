@@ -1,14 +1,12 @@
 sensor-monitoring-window-title = Console de monitoramento de sensores
-sensor-monitoring-value-display = 
-    { $unit -> 
+sensor-monitoring-value-display = {$unidade ->
     [PressureKpa] { PRESSURE($value) }
     [PowerW] { POWERWATTS($value) }
     [EnergyJ] { POWERJOULES($value) }
     [TemperatureK] { TOSTRING($value, "N3") } K
     [Ratio] { NATURALPERCENT($value) }
-    [Moles] { TOSTRING($value, "N3") } моль
-   *[Other] { $value }
- }
+    [Moles] { TOSTRING($value, "N3") } mol
+    *[Other] { $value }
+}
 
-# ({ TOSTRING(SUB($value, 273.15), "N3") } °C)
-
+# ( { TOSTRING(SUB($value, 273.15), "N3") } °C)

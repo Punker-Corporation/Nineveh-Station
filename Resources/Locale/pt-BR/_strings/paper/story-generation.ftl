@@ -23,7 +23,8 @@ story-gen-book-genre10 = filme de ação
 story-gen-book-genre11 = romance histórico
 story-gen-book-genre12 = biografia
 story-gen-book-genre13 = história de aventura
-story-gen-book-genre14 = drama
+story-gen-book-genre14= drama
+
 story-gen-book-appearance1 = ancestral
 story-gen-book-appearance2 = gasto
 story-gen-book-appearance3 = imundo

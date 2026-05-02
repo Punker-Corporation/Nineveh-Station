@@ -5,10 +5,9 @@ random-sentience-event-data-2 = nossos sofisticados modelos estatísticos de pro
 random-sentience-event-data-3 = nossa onipotência
 random-sentience-event-data-4 = tráfego de comunicação da sua estação
 random-sentience-event-data-5 = explosões de energia que descobrimos
-random-sentience-event-data-6 = [УДАЛЕНО]
+random-sentience-event-data-6 = [REDACTED]
 
-## Phrases used to describe the level of intelligence, though it doesn't actually affect anything.
-
+## Frases usadas para descrever o nível de inteligência, embora na verdade não afete nada.
 random-sentience-event-strength-1 = pessoa
 random-sentience-event-strength-2 = macacos
 random-sentience-event-strength-3 = média
@@ -20,15 +19,14 @@ random-sentience-event-strength-8 = IA
 
 ## Announcement text
 
-station-event-random-sentience-announcement = 
-    Опираясь на { $data }, стало известно что некоторые { $amount -> 
+station-event-random-sentience-announcement = Baseado em { $data }, acreditamos que alguns da estação { $amount ->
     [1] { $kind1 }
-    [2] { $kind1 } и { $kind2 }
-    [3] { $kind1 }, { $kind2 }, и { $kind3 }
-   *[other] { $kind1 }, { $kind2 }, { $kind3 }, и т.д.
- } обрели интеллект уровня { $strength }, а также способность к общению.
+    [2] { $kind1 } e { $kind2 }
+    [3] { $kind1 }, { $kind2 } e { $kind3 }
+    *[other] { $kind1 }, { $kind2 }, { $kind3 }, etc.
+} beings have developed { $strength } level intelligence, and the ability to communicate.
 
-## Ghost role description
+## Descrição do papel fantasma
 
 station-event-random-sentience-role-description = Você é um { $name } senciente trazido à vida pela magia cósmica.
 # Flavors

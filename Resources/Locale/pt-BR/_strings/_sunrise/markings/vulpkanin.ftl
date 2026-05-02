@@ -63,7 +63,7 @@ marking-VulpPointsFeet = Patas Vulpcanas
 marking-VulpPointsHands = As mãos de Vulpcano
 
 
-# Ears (слои)
+# Orelhas (camadas)
 marking-VulpEar-vulp = Orelhas Vulpcan (base)
 marking-VulpEar-vulp-inner = Orelhas de Vulpcan (dentro)
 marking-VulpEarFade-vulp = Orelhas Vulpcan (base)
@@ -87,7 +87,7 @@ marking-VulpEarOtie-otie-inner = Orelhas Oti (dentro)
 marking-VulpEarShock-shock = Orelhas estreitas (base)
 marking-VulpEarShock-shock-inner = Orelhas estreitas (dentro)
 
-# Snout (слои)
+# Focinho (camadas)
 marking-VulpSnout-snout = Focinho
 marking-VulpSnoutNose-snout-nose = Nariz
 marking-VulpSnoutVulpine-vulpine = Raposa
@@ -99,9 +99,8 @@ marking-VulpSnoutPatch-patch = Correção
 marking-VulpSnoutSpots-face_spots = Manchas
 marking-VulpSnoutTop = Focinho Vulpcan (topo)
 marking-VulpSnoutVulpineLines = Rosto Vulpcan (linhas de raposa)
-marking-VulpSnoutSpots = Focinho Vulpcan (manchas)
+marking-VulpSnoutSpots = Pontos de Focinho Vulpkanin
 
-# Head (слои)
 marking-VulpHeadBlaze-blaze = Ver
 marking-VulpHeadMask-mask = Máscara
 marking-VulpPatch-patch = Correção
@@ -117,7 +116,7 @@ marking-VulpStripes1 = Vulpcanina (tiras 1)
 marking-VulpStripes2 = Vulpcanina (tiras 2)
 marking-VulpVulpine = Vulpcanina (nariz)
 
-# Tails (слои)
+# Coroa (camadas)
 marking-VulpTailFennec-fennec = Cauda Fennec (base)
 marking-VulpTailFennec-fennec-tip = Cauda Fennec (ponta)
 marking-VulpTailFluffy-fluffy = Cauda fofa (base)
@@ -134,7 +133,7 @@ marking-VulpTailVulpFade-vulp-fade = Cauda de Vulpcan (transição suave)
 marking-VulpTailVulp = Cauda de Vulcano
 marking-VulpTailVulpFade = Cauda de Vulpcan (transição suave)
 
-# Chest (слои)
+# Peito (camadas)
 marking-VulpBellyCrest-belly_crest = Estômago
 marking-VulpBellyFull-belly_full = Estômago
 marking-VulpBellyFox-belly_fox = Estômago

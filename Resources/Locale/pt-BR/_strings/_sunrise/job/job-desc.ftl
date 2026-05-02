@@ -43,3 +43,7 @@ job-description-ntrg = Você é o apoio e proteção do Departamento Jurídico, 
 job-description-ntrofficer = Você é o apoio e proteção do Departamento Jurídico, cumprindo as decisões e ordens do Magistrado e do próprio Representante da Fundação!
 job-description-usspcaptain = Controle o melhor lugar no espaço. A Pátria está chamando!
 job-description-miningspec = Fique na estação e enriqueça-a com materiais usando seu ímã de recuperação, cápsula de mineração e processador de minério.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-description-commaid = Empregada especialmente treinada para limpeza prioritária de pontos de comando.

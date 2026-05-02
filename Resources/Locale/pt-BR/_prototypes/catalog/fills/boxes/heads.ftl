@@ -1,0 +1,19 @@
+ent-BoxCaptainCircuitboards = ponte circuito tote
+    .desc = Uma tota com placas de circuito de ponte.
+ent-BoxCECircuitboards = tote de circuito de engenharia
+    .desc = Uma tota com placas de engenharia.
+ent-BoxCMOCircuitboards = circuito médico tote
+    .desc = Uma tota com circuitos médicos.
+ent-BoxHoPCircuitboards = chefe de circuito pessoal tote
+    .desc = Uma tote com serviço e placas de identificação.
+ent-BoxHoSCircuitboards = circuito de segurança tote
+    .desc = Um monte de circuitos de segurança.
+ent-BoxQMCircuitboards = Tota de circuito de carga
+    .desc = Um monte de circuitos de carga e salvamento.
+ent-BoxRDCircuitboards = circuito de ciência tote
+    .desc = Um monte de circuitos científicos.
+
+ent-BoxHoPStamps = Caixa de carimbo do chefe do pessoal
+    .desc = Uma caixa com carimbos de serviço para o Chefe de Pessoal.
+ent-BoxQMStamps = caixa de selo do contramestre
+    .desc = Uma caixa com selos de carga para o Quartermaster.

@@ -4,7 +4,7 @@ guardian-created = Você se sente... obcecado.
 guardian-already-present-invalid-creation = Você NÃO vai reviver essa obsessão!
 guardian-no-actions-invalid-creation = Você não tem a capacidade de conter um guarda dentro de você!
 guardian-activator-empty-invalid-creation = O injetor está esgotado.
-guardian-activator-empty-examine = [cor = #ba1919]Инъектор израсходован.[/color].
+guardian-activator-empty-examine = [color=#ba1919] O injector está gasto. [/color]
 guardian-activator-invalid-target = Apenas humanóides são adequados para injeção!
 guardian-no-soul = Seu guardião não tem alma.
 guardian-available = Seu guardião agora tem uma alma.

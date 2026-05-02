@@ -1,7 +1,7 @@
-news-dataset-1 = Árvore presa em tajaran ; пожарные в замешательстве.
+news-dataset-1 = Árvore presa em tajaran; bombeiros perplexos.
 news-dataset-2 = Os tatus estão pedindo que os tamanduás sejam retirados do dicionário, alegando que eles vieram primeiro.
-news-dataset-3 = O anjo dançando na cabeça de um alfinete recebeu ordem de parar ; оштрафован за нарушение общественного порядка.
-news-dataset-4 = Letras afirmam ser melhores que números ; «Всегда были».
+news-dataset-3 = Angel encontrou dança em cabeça de alfinete ordenado para parar; citado por incômodo público.
+news-dataset-4 = Cartas afirmam que são melhores do que número; "Sempre foram".
 news-dataset-5 = Canetas declaram lápis obsoletos: “O chumbo está morto”.
 news-dataset-6 = Rock and Paper processa tesoura por discriminação.
 news-dataset-7 = Steak admite em um livro franco que nunca gostou de sentar ao lado de batatas.
@@ -9,12 +9,12 @@ news-dataset-8 = A marmota parou de contar quantas vezes jogou a árvore: “Nun
 news-dataset-9 = "Beijo-beijo" não é mais o método preferido de busca de tajarans.
 news-dataset-10 = Homem viaja 7.000 anos-luz para devolver lenço perdido: “Era meu favorito.”
 news-dataset-11 = Uma nova pista de boliche que atira minimeteoros nos jogadores se tornou muito popular.
-news-dataset-12 = Skrell se casou com um computador ; на свадьбе присутствовали 100 модемов.
+news-dataset-12 = Skrell se casa com computador; casamento assistido por 100 modems.
 news-dataset-13 = Um chef relata sucesso ao usar uma gaita como ralador de queijo.
 news-dataset-14 = A fundação inventou um lenço que diz “Deus te abençoe” depois que você espirra.
 news-dataset-15 = O clone é acusado de posar para outros clones em uma foto da escola.
 news-dataset-16 = O clone é acusado de roubar o prêmio de Funcionário do Mês dos demais clones.
-news-dataset-17 = Mulher assalta estação com secador de cabelo ; экипажу понравился новый стиль.
+news-dataset-17 = Mulher rouba estação com secador de cabelo; tripulantes amam novo estilo.
 news-dataset-18 = Este lugar é para alugar.
 news-dataset-19 = O cientista Skrell descobriu que o ábaco pode ser usado para secar toalhas.
 news-dataset-20 = Enquete: Cheese Louise é eleita a melhor pizzaria de Tau Ceti.
@@ -45,7 +45,7 @@ news-dataset-44 = Do escritório de Sage Sammy: Ler melhora a mente e eleva o es
 news-dataset-45 = Do escritório de Sage Sammy: É melhor mirar alto e errar do que mirar baixo e acertar.
 news-dataset-46 = Do escritório de Sage Sammy: Os meteoros costumam atingir o mesmo local mais de uma vez.
 news-dataset-47 = Tommy B. Seif diz: Olhe para os dois lados antes de embarcar no ônibus.
-news-dataset-48 = Tommy B. Seif diz: Aguente firme ; внезапные остановки иногда необходимы.
+news-dataset-48 = Tommy B. Saif Sez: Segure-se; Súbita pára às vezes necessário
 news-dataset-49 = Tommy B. Seif diz: Mantenha os dedos longe dos painéis móveis.
 news-dataset-50 = Tommy B. Seif diz: Não há conversão à esquerda, exceto para ônibus.
 news-dataset-51 = Tommy B. Seif diz: Retorne os assentos e as bandejas para a posição vertical correta.
@@ -84,4 +84,3 @@ news-dataset-62 = Brócolis acaba sendo uma colônia de pequenos alienígenas co
 # Boy Saves Tajaran From Tree on {{AFFECTED}}, Thousands Cheer
 # Shipment Of Apples Overturns, {{AFFECTED}} Diner Offers Applesauce Special
 # Spotted Owl Spotted on {{AFFECTED}}
-
