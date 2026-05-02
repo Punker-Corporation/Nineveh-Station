@@ -34,14 +34,29 @@
     enabled: false
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-    radius: 3.5
-    energy: 0.8
+    radius: 7.5
+    energy: 2.35
+    softness: 0.55
+    falloff: 8.4
     color: "#E0C090"
     castShadows: true
     netsync: false
   - type: HandheldLight
     addPrefix: false
     wattage: 1.2
+  - type: FlashlightMaintenance
+    focus: 0.84
+    wideRadius: 4.5
+    focusedRadius: 9.25
+    wideEnergy: 1.25
+    focusedEnergy: 2.95
+    heatPerSecond: 5.3
+    focusHeatMultiplier: 2.6
+    batteryFocusCost: 0.95
+    lensIntegrity: 0.94
+    emitterIntegrity: 0.91
+    contactIntegrity: 0.86
+    heatSinkIntegrity: 0.88
   - type: LightBehaviour
     behaviours:
     - !type:ColorCycleBehaviour
@@ -56,8 +71,8 @@
       id: intensity_wobble
       property: Energy
       maxDuration: 3.5
-      startValue: 0.8
-      endValue: 0.4
+      startValue: 2.35
+      endValue: 1.25
       isLooped: true
       reverseWhenFinished: true
       interpolate: Cubic
@@ -67,7 +82,7 @@
       interpolate: Nearest
       maxDuration: 2.0
       startValue: 0.0
-      endValue: 0.8
+      endValue: 2.35
       isLooped: false
     - !type:PulseBehaviour
       id: contact_flicker
@@ -75,14 +90,14 @@
       interpolate: Nearest
       maxDuration: 0.15
       startValue: 0.0
-      endValue: 0.8
+      endValue: 2.35
       isLooped: true
     - !type:FadeBehaviour
       id: focus_breathing
       property: Radius
       maxDuration: 7.0
-      startValue: 3.5
-      endValue: 2.0
+      startValue: 7.5
+      endValue: 4.5
       isLooped: true
       reverseWhenFinished: true
       interpolate: Cubic
@@ -96,6 +111,12 @@
       - state: inhand-right-light
         shader: unshaded
   - type: ItemTogglePointLight
+  - type: ActivatableUI
+    key: enum.FlashlightMaintenanceUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.FlashlightMaintenanceUiKey.Key:
+        type: FlashlightMaintenanceBoundUserInterface
   - type: Appearance
   - type: StaticPrice
     price: 15

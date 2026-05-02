@@ -6,8 +6,23 @@
   components:
     - type: HandheldLight
       addPrefix: true
+      wattage: 1.05
       blinkingBehaviourId: blinking
       radiatingBehaviourId: radiating
+    - type: FlashlightMaintenance
+      focus: 0.62
+      wideRadius: 4.25
+      focusedRadius: 7.5
+      wideEnergy: 1.35
+      focusedEnergy: 2.45
+      heatPerSecond: 3.8
+      focusHeatMultiplier: 1.9
+      coolingPerSecond: 10.5
+      batteryFocusCost: 0.72
+      lensIntegrity: 0.97
+      emitterIntegrity: 0.95
+      contactIntegrity: 0.93
+      heatSinkIntegrity: 0.96
     - type: LightBehaviour
       behaviours:
       - !type:FadeBehaviour
@@ -39,14 +54,24 @@
       delay: 1
     - type: PointLight
       enabled: false
-      radius: 3
-      energy: 2.5
+      mask: /Textures/Effects/LightMasks/cone.png
+      autoRot: true
+      radius: 6.25
+      energy: 2.2
+      softness: 0.7
+      falloff: 6.9
       color: "#FFC458"
       netsync: false
     - type: Appearance
     - type: ToggleableVisuals
       spriteLayer: light
     - type: ItemTogglePointLight
+    - type: ActivatableUI
+      key: enum.FlashlightMaintenanceUiKey.Key
+    - type: UserInterface
+      interfaces:
+        enum.FlashlightMaintenanceUiKey.Key:
+          type: FlashlightMaintenanceBoundUserInterface
     - type: PowerCellSlot
       cellSlotId: cell_slot
     - type: ItemSlots
