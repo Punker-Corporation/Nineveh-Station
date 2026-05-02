@@ -1,7 +1,8 @@
-add-uplink-command-description = Создаёт аплинк в выбранном предмете и привязывает его к аккаунту игрока
-add-uplink-command-help = Использование: adduplink [username] [item-id]
-add-uplink-command-completion-1 = Username (по-умолчанию это вы сами)
-add-uplink-command-completion-2 = Uplink uid (по-умолчанию это КПК)
-add-uplink-command-completion-3 = Включены ли скидки аплинка? (true/false)
-add-uplink-command-error-1 = Выбранный игрок не имеет подконтрольную сущность
-add-uplink-command-error-2 = Не удалось добавить аплинк игроку
+cmd-adduplink-desc = Создает ссылку на выбранный элемент и связывает его с учетной записью пользователя
+cmd-adduplink-help = Использование: Adduplink s0s s1s s2s
+
+add-uplink-command-completion-1 = Имя пользователя (по умолчанию)
+add-uplink-command-completion-2 = Uplink uid (по умолчанию PDA)
+add-uplink-command-completion-3 = Включена скидка uplink
+add-uplink-command-error-1 = Выбранный игрок не контролирует какую-либо сущность
+add-uplink-command-error-2 = Не удалось добавить ссылку на игрока

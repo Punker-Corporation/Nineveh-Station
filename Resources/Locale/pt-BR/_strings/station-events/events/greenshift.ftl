@@ -1,1 +1,1 @@
-station-event-greenshift = Graças aos esforços incansáveis ​​dos nossos departamentos de Serviços de Segurança, atualmente não existem ameaças credíveis à Estação Espacial 14. Boa mudança!
+station-event-greenshift = Os relatórios de segurança não registram ameaça ativa em Nineveh. A ausência de sinal não garante ausência de risco.

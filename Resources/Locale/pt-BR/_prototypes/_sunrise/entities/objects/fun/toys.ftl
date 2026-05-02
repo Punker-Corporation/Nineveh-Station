@@ -137,7 +137,7 @@ ent-PlushieAlice = Alice de pelúcia
 ent-PlushieKaioshi = Pelúcia Kayoshi De Le Greatide
     .desc = Bartender.. com uma motosserra na mão?..
 ent-PlushieRaisya = Pelúcia Raizya Fivullina
-    .desc = Moura! Miau! Nya! suas palavras favoritas UwU
+    .desc = Um registro sonoro degradado. A trilha original foi substituída por ruído e estática.
 ent-GoldenWeh = { "" }
     .desc = { "" }
 ent-LegendaryGoldenWeh = Veh dourado lendário
@@ -184,4 +184,3 @@ PlushieVelma = Pelúcia Eustáquio Gorky
     .desc = Pesquisador ligeiramente talentoso. Às vezes, à noite, ele repete: “Você viu Kaynara?”
 PlushieSeyaa = Pelúcia Seiya-Tanaka
     .desc = Um Vulpcano de pelúcia comum com pelo escuro, mas parece estar observando você.
-

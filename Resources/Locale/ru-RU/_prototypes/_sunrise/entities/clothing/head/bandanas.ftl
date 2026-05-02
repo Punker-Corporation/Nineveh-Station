@@ -1,10 +1,12 @@
-ent-ClothingHeadBandOrange = оранжевая бандана
+ent-ClothingHeadBandOrange = Оранжевая банда
     .desc = { ent-ClothingHeadBandBase.desc }
-ent-ClothingHeadBandYellow = желтая бандана
+ent-ClothingHeadBandYellow = желтая банда
     .desc = { ent-ClothingHeadBandBase.desc }
-ent-ClothingHeadBandCyan = голубая бандана
+ent-ClothingHeadBandCyan = Джан Бандана
     .desc = { ent-ClothingHeadBandBase.desc }
-ent-ClothingHeadBandWhite = белая бандана
+ent-ClothingHeadBandWhite = белая банда
     .desc = { ent-ClothingHeadBandBase.desc }
-ent-ClothingHeadBandPurple = фиолетовая бандана
+ent-ClothingHeadBandPurple = фиолетовый бандан
     .desc = { ent-ClothingHeadBandBase.desc }
+ent-ClothingHeadBandRandomColorSpawner = Бандана (случайный цвет)
+    .desc = Бандана случайного цвета.

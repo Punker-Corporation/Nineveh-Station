@@ -1,6 +1,6 @@
-ent-BaseBulletStarlight = Базовая пуля
-    .desc = Если вы это видите, вы, вероятно, мертвы!
-ent-BulletAdvTaser = разряд тазера
+ent-BaseBulletStarlight = Бюллетень
+    .desc = Если вы видите это, то вы, вероятно, мертвы.
+ent-BulletAdvTaser = болт тазера
     .desc = { ent-BaseBulletStarlight.desc }
 ent-BaseBulletRubber = { ent-BaseBulletStarlight }
     .desc = { ent-BaseBulletStarlight.desc }
@@ -8,3 +8,5 @@ ent-BulletEnergyCrossbow = { ent-BaseBullet }
     .desc = { ent-BaseBullet.desc }
 ent-BulletMiniEnergyCrossbow = { ent-BulletEnergyCrossbow }
     .desc = { ent-BulletEnergyCrossbow.desc }
+ent-BulletGrenadeCleanadeSyndicate = Зловещая граната вокруг
+    .desc = Уборка синдикатного класса, наполненная агрессивной пеной для чистки.

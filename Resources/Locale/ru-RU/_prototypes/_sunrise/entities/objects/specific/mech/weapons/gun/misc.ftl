@@ -1,4 +1,6 @@
-ent-WeaponMechIndustrialTrashgun = Мусорная пушка для мехов
-    .desc = Собрана из мусора и запчастей от чего-то. Стреляет мусором на дальние дистанции. Выглядит так, будто может взорваться в любой момент.....
-ent-WeaponMechIndustrialTrashLasergun = Самодельная лазерная пушка для мехов
-    .desc = Собрана из мусора и запчастей от чего-то. Стреляет лазером, наверное...
+ent-WeaponMechIndustrialTrashgun = истребитель для мусора
+    .desc = Сборка из мусора и запасных частей. Пожар мусора на небольшом расстоянии.
+    .suffix = Mech Weapon, Gun, Industrial, Trashgun
+ent-WeaponMechIndustrialTrashLasergun = самодельный лазерный пистолет
+    .desc = Сборка из мусора и запасных частей. Пожарный лазер, возможно...
+    .suffix = Mech Weapon, Gun, Industrial, LaserGun

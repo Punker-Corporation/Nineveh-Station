@@ -1,1 +1,1 @@
-launcher-server-name = Gaby SCP
+launcher-server-name = Nineveh Station

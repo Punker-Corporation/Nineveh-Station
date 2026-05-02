@@ -1,33 +1,42 @@
-hud-chatbox-info = { $talk-key } чтобы говорить, { $cycle-key } для переключения каналов.
-hud-chatbox-info-talk = { $talk-key } чтобы говорить.
-hud-chatbox-info-cycle = Нажмите здесь чтобы говорить, { $cycle-key } для переключения каналов.
-hud-chatbox-info-unbound = Нажмите здесь чтобы говорить.
-hud-chatbox-select-name-prefixed = { $prefix } { $name }
-hud-chatbox-select-channel-Admin = Админ
+hud-chatbox-info = .0. для разговоров,.1. для циклических каналов.
+hud-chatbox-info-talk = .0. говорить.
+hud-chatbox-info-cycle = Нажмите здесь, чтобы поговорить,.0. на каналы цикла.
+hud-chatbox-info-unbound = Нажмите здесь, чтобы поговорить.
+
+hud-chatbox-select-name-prefixed = {$prefix} {$name}
+hud-chatbox-select-channel-Admin = администратор
 hud-chatbox-select-channel-Console = Консоль
-hud-chatbox-select-channel-Dead = Мёртвые
-hud-chatbox-select-channel-Emotes = Эмоции
-hud-chatbox-select-channel-Local = Рядом
-hud-chatbox-select-channel-Whisper = Шёпот
-hud-chatbox-select-channel-LOOC = LOOC
-hud-chatbox-select-channel-OOC = OOC
-hud-chatbox-select-channel-Damage = Повреждения
-hud-chatbox-select-channel-Visual = Действия
-hud-chatbox-select-channel-Radio = Рация
-hud-chatbox-select-channel-CollectiveMind = Коллективный разум
-hud-chatbox-channel-Admin = Админ Разное
-hud-chatbox-channel-AdminAlert = Админ Уведомления
-hud-chatbox-channel-AdminChat = Админ Чат
-hud-chatbox-channel-Chat = Чат
-hud-chatbox-channel-Dead = Мёртвые
-hud-chatbox-channel-Emotes = Эмоции
-hud-chatbox-channel-Local = Рядом
-hud-chatbox-channel-Whisper = Шёпот
-hud-chatbox-channel-LOOC = LOOC
-hud-chatbox-channel-OOC = OOC
-hud-chatbox-channel-Radio = Рация
+hud-chatbox-select-channel-Dead = мертвый
+hud-chatbox-select-channel-Emotes = Эмот
+hud-chatbox-select-channel-Local = местный
+hud-chatbox-select-channel-Whisper = шепотом
+hud-chatbox-select-channel-LOOC = Помощь
+hud-chatbox-select-channel-OOC = ООК
+hud-chatbox-select-channel-Damage = ущерб
+hud-chatbox-select-channel-Visual = Меры
+hud-chatbox-select-channel-Radio = Радио
+
+hud-chatbox-channel-Admin = Админ Миск
+hud-chatbox-channel-AdminAlert = Предупреждение администратора
+hud-chatbox-channel-AdminChat = Административный чат
+hud-chatbox-channel-Dead = мертвый
+hud-chatbox-channel-Emotes = Эмот
+hud-chatbox-channel-Local = местный
+hud-chatbox-channel-Whisper = шепотом
+hud-chatbox-channel-LOOC = Помощь
+hud-chatbox-channel-OOC = ООК
+hud-chatbox-channel-Radio = Радио
 hud-chatbox-channel-Notifications = Уведомления
-hud-chatbox-channel-Server = Сервер
-hud-chatbox-channel-Visual = Визуальный
-hud-chatbox-channel-Damage = Повреждения
-hud-chatbox-channel-Unspecified = Неопределённый
+hud-chatbox-channel-Server = сервер
+hud-chatbox-channel-Visual = Меры
+hud-chatbox-channel-Damage = ущерб
+hud-chatbox-channel-Unspecified = неопределенный
+
+hud-chatbox-highlights = Основные моменты:
+hud-chatbox-highlights-button = Представить
+hud-chatbox-highlights-tooltip = Слова должны быть разделены новой линией.
+                                 если они обернуты вокруг ", они будут выделены
+                                 только если они разделены пробелами или пунктуацией.
+hud-chatbox-highlights-placeholder = @McHands
+                                     "Судья"
+                                     медицинский

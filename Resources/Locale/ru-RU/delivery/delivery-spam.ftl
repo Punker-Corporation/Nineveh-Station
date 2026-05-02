@@ -1,251 +1,280 @@
+# All spelling mistakes and broken english are intentional!
+# I hate saving paper contents in ftl files
+
+## Headers and reusable elements
+
 -delivery-header-nanotrasen = [color=blue]
-    ╔══════════════════╗
-    ║███░███░░░░██░░░░░║
-    ║░██░████░░░██░░░░░║
-    ║░░█░██░██░░██░█░░░║
-    ║░░░░██░░██░██░██░░║
-    ║░░░░██░░░████░███░║
-    ╚══════════════════╝[/color]
+                                                                      ╔══════════════════╗
+                                                                      ║███░███░░░░██░░░░░║
+                                                                      ║░██░████░░░██░░░░░║
+                                                                      ║░░█░██░██░░██░█░░░║
+                                                                      ║░░░░██░░██░██░██░░║
+                                                                      ║░░░░██░░░████░███░║
+                                                                      ╚══════════════════╝[/color]
+
 -delivery-header-nanotrasen-alternate-timeline = [color=red]
-    ╔══════════════════╗
-    ║███░███░░░░██░░░░░║
-    ║░██░████░░░██░░░░░║
-    ║░░█░██░██░░██░█░░░║
-    ║░░░░██░░██░██░██░░║
-    ║░░░░██░░░████░███░║
-    ╚══════════════════╝[/color]
+                                                                ╔══════════════════╗
+                                                                ║███░███░░░░██░░░░░║
+                                                                ║░██░████░░░██░░░░░║
+                                                                ║░░█░██░██░░██░█░░░║
+                                                                ║░░░░██░░██░██░██░░║
+                                                                ║░░░░██░░░████░███░║
+                                                                ╚══════════════════╝[/color]
+
 -delivery-header-syndicate = [color=#ff0000]
-    ╔══════════════════╗
-    ║░░░░░████████░░░░░║
-    ║░░░░░██░░░░░░░░░░░║
-    ║░░░░░████████░░░░░║
-    ║░░░░░░░░░░░██░░░░░║
-    ║░░░░░████████░░░░░║
-    ╚══════════════════╝[/color]
-delivery-spam-1 = Прочный ящик с инструментами - Специальное предложение!
-    .desc = Реклама прочных ящиков с инструментами.
-    .content = [color=blue][head=1]
-        ░░▄▀░░
-        ░▄█▄▄▀ [head=3]ROBUST - ЯЩИКИ С ИНСТРУМЕНТАМИ И ИНСТРУМЕНТЫ[/head]
-        ██▀░░░ [/head][/color]
-
-        { "[bold]КУПИТЕ ОДИН ЯЩИК С ИНСТРУМЕНТАМИ И ПОЛУЧИТЕ ОДИН НАБОР ИНСТРУМЕНТОВ БЕСПЛАТНО![/bold]" }
-
-        ПОСКОЛЬКУ ВЫ ЯВЛЯЕТЕСЬ ОДНИМ ИЗ НАШИХ УВАЖАЕМЫХ КЛИЕНТОВ, ВЫ ПОЛУЧАЕТЕ КЛИЕНТСКИЙ БОНУС, ВАШИ ИНСТРУМЕНТЫ НЕ СОДЕРЖАТ РЖАВЧИНЫ И СВИНЦА!!! РАЗВЕ ЭТО НЕ УДИВИТЕЛЬНО? ЯЩИК С ИНСТРУМЕНТАМИ, С ДРУГОЙ СТОРОНЫ, ПОСТАВЛЯЕТСЯ С ДОПОЛНИТЕЛЬНЫМ СВИНЦОМ! ПОТРЯСАЮЩЕ ПОДХОДИТ ДЛЯ РАЗДРОБЛЕНИЯ ЧЕРЕПОВ И ОСТАНОВКИ РАДИАЦИИ ОДНОВРЕМЕННО!
-
-        { "[bold]ВСЕ ЭТО И, ВОЗМОЖНО, БОЛЬШЕ ВСЕГО ЗА ОДИН ОРГАН![/bold]" }
-
-        ROBUST - ЯЩИКИ С ИНСТРУМЕНТАМИ И ИНСТРУМЕНТЫ:%
-        -БЕЗ СВИНЦА И АСБЕСТА!
-        -ИЛИ СО СВИНЦОМ И АСБЕСТОМ, ЕСЛИ ВЫ ПРЕДПОЧИТАЕТЕ!
-        -ДЕШЕВО! ВСЕГО ОДИН ОРГАН! ЭТО МЕНЬШЕ, ЧЕМ ДВА ОРГАНА!
-        -НЕ ОБЯЗАТЕЛЬНО ДОЛЖЕН БЫТЬ ВАШ ОРГАН! МЫ НЕ ОСУЖДАЕМ!
-delivery-spam-2 = Причины выбрать Nanotrasen!
-    .desc = Реклама NanoTrasen.
-    .content = { -delivery-header-nanotrasen }
+                                                                          ╔══════════════════╗
+                                                                          ║░░░░░████████░░░░░║
+                                                                          ║░░░░░██░░░░░░░░░░░║
+                                                                          ║░░░░░████████░░░░░║
+                                                                          ║░░░░░░░░░░░██░░░░░║
+                                                                          ║░░░░░████████░░░░░║
+                                                                          ╚══════════════════╝[/color]
 
-        { "[head=2]ТРИ ГЛАВНЫЕ ПРИЧИНЫ, ПО КОТОРЫМ СИНДИКАТ НЕСОСТОЯТЕЛЕН[/head]" }
-
-        { "[bold]ПЕРВАЯ[/bold]" }
-        ИХ АГЕНТЫ-ДИВЕРСАНТЫ НЕСОСТОЯТЕЛЬНЫ! ОНИ ДАЖЕ НЕ МОГУТ УБИТЬ ПАССАЖИРА, ЖЕЛАЮЩЕГО УМЕРЕТЬ!
-
-        { "[bold]ВТОРАЯ[/bold]" }
-        ИХ ГРАЖДАНСКИЕ СЛАБЫ К ПУЛЯМ! ПОВЕРЬТЕ МНЕ, МЫ ПЫТАЛИСЬ! В ОТЛИЧИЕ ОТ ГРАЖДАНСКИХ NANOTRASEN, ГРАЖДАНСКИЕ СИНДИКАТА УМИРАЮТ ОТ ПУЛИ В ЧЕРЕП! ПУЛИ У НАС ЕСТЬ!
-
-        { "[bold]ТРЕТЬЯ[/bold]" }
-        ИХ ЛОГОТИП УЖАСЕН! ОНИ ДУМАЮТ, ЧТО ОНИ КРУТЫ СО СВОИМ ЛОГОТИПОМ! О, ПОСМОТРИТЕ НА МЕНЯ, Я ТАКОЙ КРУТОЙ! О, ЗМЕЯ, КОТОРАЯ ЕЩЕ И S! КАК КРЕАТИВНО! МОЙ ТРЕХЛЕТНИЙ СЫН МОГ БЫ НАРИСОВАТЬ ЛОГОТИП ЛУЧШЕ!
-delivery-spam-3 = Причины выбрать Синдикат!
-    .desc = Реклама Синдиката.
-    .content =
-        { -delivery-header-syndicate }
+## Spam letters
 
-        { "[head=2]ТРИ ГЛАВНЫЕ ПРИЧИНЫ, ПО КОТОРЫМ NANOTRASEN НЕСОСТОЯТЕЛЕН[/head]" }
+delivery-spam-1 =   Robust Toolbox - Special Offer!
+    .desc =         An advertisement for robust toolboxes.
+    .content =      [color=blue][head=1]
+                    ░░▄▀░░
+                    ░▄█▄▄▀ [head=3]ROBUST - TOOLBOXES AND TOOLS[/head]
+                    ██▀░░░ [/head][/color]
 
-        { "[bold]ПЕРВАЯ[/bold]" }
-        ИХ ПУШКИ ОТСТОЙНЫ! У НИХ ДАЖЕ НЕТ СНАЙПЕРСКИХ ВИНТОВОК! ИХ СИЛЫ БЕЗОПАСНОСТИ ДАЖЕ НЕ МОГУТ НОСИТЬ БОЛЬШИЕ ПУШКИ В БОЛЬШИНСТТВЕ СЛУЧАЕВ!
+                    {"[bold]BUY ONE TOOLBOX, GET ONE SET OF TOOLS FOR FREE![/bold]"}
 
-        { "[bold]ВТОРАЯ[/bold]" }
-        ИХ КОМАНДИРЫ? ОНИ УМИРАЮТ ОТ ЕДИНОГО ВЫСТРЕЛА! НИКАКОЙ КРУТОЙ БРОНИ! ПРОСТО БАХ, МЕРТВ! ОТСТОЙ! У НАШИХ КОМАНДИРОВ ЕСТЬ КРУТЫЕ ХАРДСЬЮТЫ!
+                    AS YOU ARE ONE OF OUR VALUED CUSTOMERS, YOU GET A CUSTOMER BONUS, YOUR TOOLS COME RUST AND LEAD-FREE!!! ISN'T THAT AMAZING? THE TOOLBOX ON THE OTHER HAND, COMES WITH EXTRA LEAD! AMAZING FOR SMASHING SKULLS AND STOPPING RADIATION ALIKE!
 
-        { "[bold]ТРЕТЬЯ[/bold]" }
-        ИХ МЕТОДЫ УБИЙСТВ НЕВДОХНОВЛЯЮЩИЕ! ЭТО ПРОСТО ПУШКА! ТАМ НЕТ БРОСАНИЯ ЛЮДЕЙ В ОТКРЫТЫЙ КОСМОС, НЕТ КОРМЛЕНИЯ ЛЮДЕЙ В ПЕРЕРАБАТЫВАЮЩИЕ УСТАНОВКИ С ОТКЛЮЧЕННЫМ БЕЗОПАСНЫМ РЕЖИМОМ, НЕТ ПОДСОСА БОМБ В КАРМАНЫ! ТАК СКУЧНО!
-delivery-spam-4 = Устали от того, что наука взрывается?
-    .desc = Следуйте этим простым шагам, чтобы убедиться, что этого больше никогда не повторится!
-    .content =
-        { "[head=3]Наука полюбит вас за это!!" }
+                    {"[bold]ALL THIS AND POSSIBLY MORE FOR ONLY ONE ORGAN![/bold]"}
 
-        Вы устали от того, что научный отдел вашей станции взрывается, не занимаясь реальной наукой?
-        Что ж, вам повезло![/head]
+                    ROBUST - TOOLBOXES AND TOOLS:%
+                    -LEAD AND ASBESTOS FREE!
+                    -OR WITH LEAD AND ASBESTOS, IF YOU PREFER!
+                    -CHEAP! ONLY ONE ORGAN! THAT'S LESS THAN TWO ORGANS!
+                    -DOESN'T HAVE TO BE YOUR ORGAN! WE DON'T JUDGE!
 
-        Следуйте этому простому руководству, и мы гарантируем, что ваша наука больше никогда не заработает!
+delivery-spam-2 =   Reasons to choose Nanotrasen!
+    .desc =         An advertisement for Nanotrasen.
+    .content =      {-delivery-header-nanotrasen}
 
-        Просто сделайте следующее:
-        - Шаг первый: Найдите исследовательский сервер вашего научного отдела
-        - Шаг второй: Открепите исследовательский сервер от земли
-        - Шаг третий: Бросьте исследовательский сервер в космос, желательно в направлении секретного космического додзё клана пауков
-        - Шаг четвертый: Подождите примерно 3-5 рабочих смен
-        - Шаг пятый: Наши работники из Spid-ex Inc будут предоставлять вашей станции один (1) техдиск в неделю.
+                    {"[head=2]TOP THREE REASONS WHY THE SYNDICATE IS INCOMPETENT[/head]"}
 
-        { "[color=lightgray]Примечание: Клан пауков не несет ответственности за какое-либо наказание, вынесенное вашим руководством.[/color]" }
-delivery-spam-5 = БЕСПЛАТНЫЙ ПОЛНЫЙ ДОСТУП!!
-    .desc = Вы когда-нибудь хотели получить бесплатный полный доступ?!
-    .content =
-        { "[head=3]Вы когда-нибудь хотели получить [italic][color=green]бесплатный [bold]полный доступ!?!?[/bold][/color][/italic][/head] "}
-                                { "[head=2]Что ж, ТЕПЕРЬ ВЫ МОЖЕТЕ!![/head]!" }
+                    {"[bold]NUMBER ONE[/bold]"}
+                    THEIR SLEEPER AGENTS ARE INCOMPETENT! THEY CAN'T EVEN KILL A PASSENGER WITH A DEATHWISH!
 
-                                Все, что вам нужно сделать, это позвонить по номеру [color=blue]555-GOUR-LECKSSS[/color] и назвать ID вашей станции !!!
-                                Как только вы это сделаете, мы сможем просто удаленно запросить кошелек грузового отдела вашей станции, извлечь наши необходимые сборы в размере трех [italic]ЛЕГКИХ[/italic] платежей, что позволит вам получить свой
-                                { "[head=2][color=green] [bolditalic] БЕСПЛАТНЫЙ AA!!!!!!!!!![/bolditalic][/color][/head]" }
+                    {"[bold]NUMBER TWO[/bold]"}
+                    THEIR CIVILIANS ARE WEAK TO BULLETS! TRUST ME, WE TRIED! UNLIKE THE NANOTRASEN CIVILIANS, SYNDICATE CIVILIANS DIE FROM A BULLET TO THE SKULL! BULLETS WE HAVE!
 
+                    {"[bold]NUMBER THREE[/bold]"}
+                    THEIR LOGO IS HORRIBLE! THEY THINK THEY'RE COOL WITH THEIR LOGO! OOH, LOOK AT ME, I'M SO COOL! OOH, SNAKE THAT'S ALSO AN S! HOW CREATIVE! MY THREE YEAR OLD SON COULD DRAW A BETTER LOGO!
 
-                                { "[color=gray]" }
-                                { "[bullet/]Примечание: идентификатор станции должен быть указан в формате NT/NX-### " }
-        { "[bullet/]Примечание: платежи, внесенные в грузовой отдел станции клиента, составляют примерно 5000 спесо за транзакцию, не включая индивидуальные сборы за обработку" }
-                            { "[bullet/]Примечание: мы в Gour-Lecksss LMT. не несем ответственности, если HoP вашей станции заставит вас заполнить ФАКТИЧЕСКУЮ форму бесплатного AA, если они узнают об этом письме" }
-                            { "[/color]" }
-delivery-spam-6 = УВЕДОМЛЕНИЕ ОТ NANOTRASN!!
-    .desc = Официальное уведомление от генерального директора NanoTrasn?!
-    .content = [color=red] ЭТО ОФИЦИАЛЬНОЕ УВЕДОМЛЕНИЕ ОТ ГЛАВЫ [color=blue]NANOTRASN[/color][/color]
+delivery-spam-3 =   Reasons to choose The Syndicate!
+    .desc =         An advertisement for The Syndicate.
+    .content =      {-delivery-header-syndicate}
 
-        Уважаемый господин, госпожа или другой незначительный персонал станции
+                    {"[head=2]TOP THREE REASONS WHY NANOTRASEN IS INCOMPETENT[/head]"}
 
-        Если вы не хотите, чтобы эта станция была объявлена нерентабельной в глазах
-        { "[head=2][italic] Наша Великая и Славная [color=blue]NanoTrasen[/color][/head]" }
-        Тогда вы должны организовать отправку трех [color=blue]Nt[/color] Стандартных Стопок [color=blue]nt[/color] Стандартных Слитков Золота на выездные торговые точки вашей станции в течение 5 [color=blue]nT[/color] Стандартных рабочих смен.
+                    {"[bold]NUMBER ONE[/bold]"}
+                    THEIR GUNS SUCK! THEY DON'T EVEN HAVE SNIPER RIFLES! THEIR SECURITY FORCES CAN'T EVEN CARRY BIG GUNS IN MOST SITUATIONS!
 
-        { "[head=2][color=red]ИГНОРИРУЙТЕ ЭТОТ ПРИКАЗ ПОД УГРОЗОЙ ВОЗМЕЗДИЯ ОТ [color=green]CENTCO[/color]!!!!![/head][/color]" }
-delivery-spam-7 = Отправьте подкрепление!
-    .desc = Официальное уведомление из... альтернативной временной линии?
-    .content = { -delivery-header-nanotrasen-alternate-timeline }
-        { "[head=2]Это официальное уведомление от [color=red]начальника службы безопасности[/color] на космической станции 15 NanoTrasen.[/head]" }
+                    {"[bold]NUMBER TWO[/bold]"}
+                    THEIR COMMANDERS? THEY DIE FROM A SINGLE SHOT! NO COOL ARMOR! JUST BANG, DEAD! LAME! OUR COMMANDERS GET COOL HARDSUITS!
 
-        Всем, кто получит это письмо. Я сержант Ригель. Моя должность - начальник службы безопасности. Нам нужна немедленная помощь.
+                    {"[bold]NUMBER THREE[/bold]"}
+                    THEIR MURDER METHODS ARE UNINSPIRED! IT'S JUST GUN! THERE'S NO THROWING PEOPLE INTO DEEP SPACE, NO FEEDING PEOPLE INTO RECYCLERS WITH SAFETY MODE DISENGAGED, NO SLIPPING BOMBS INTO POCKETS! SO BORING!
 
-        Наша станция в настоящее время подвергается нападению атомных агентов, это письмо брошено в дестабилизированную блюспейс-аномалию, созданную нашим [color=purple]главой исследовательского отдела[/color].
+delivery-spam-4 =   Tired of science blowing up?
+    .desc =         Follow these simple steps to ensure it never happens again!
+    .content =      [head=3]Science will LOVE you for this!!
 
-        В настоящее время я заперт на мостике, если вы получите это сообщение, пожалуйста, немедленно пришлите помощь. Я не знаю, сколько еще мы сможем продержаться.
+                    are [bold]YOU[/bold] Tired of your Station's Science Department blowing up withoutdoing any actual science?
+                    Well Your in luck![/head]
 
-        Слава NanoTrasen.
-delivery-spam-8 = Дети Нар'Си
-    .desc = Местный культ ищет новобранцев.
-    .content = [color=#134975][head=2]Дети Нар'Си[/head][/color]
-                                        Начало Новой Эры
-        { "[bold]══──══──══──══──══──══──══──══──══──══──══[/bold]" }
+                    Folow this simple guide, and we'll ensure your Science [italic]Never Works Again![/italic]
 
-        { "[head=3]Вы чувствуете себя потерянным в необъятности нашей вселенной?[/head]" }
-        В современную эпоху заблудшим душам легко почувствовать себя винтиками в механизме огромных корпораций.
+                    Simply do the following:
+                    - Step One: Locate your Science Department's Research Server
+                    - Step Two: Un-anchor the Research Server from the ground
+                    - Step Three: Hurl the Research Server into space, preferably in the direction of the Spider Clan Super Secret Space Dojo
+                    - Step Four: Wait appproximately 3-5 Business Shifts
+                    - Step Five: Our Workers at Spid-ex Inc will provide your station with one (1) techdisk per week.
 
-        { "[head=3]Вы чувствуете, что созданы для лучшей цели?[/head]" }
-        Вам надоела жизнь обыденности, навязанная вам? Мыть полы, доставлять коробки или заполнять бесконечные бумаги?
+                    {"[color=lightgray]Note: Spider Clan is not responsible for any punishment issued by your supervisors.[/color]"}
 
-        { "[head=3]Вы хотите сделать галактику лучше?[/head]" }
+delivery-spam-5 =   FREE ALL AXCESS!!
+    .desc =         Did you ever want free all access?!
+    .content =      [head=3]Have You ever wanted to have [italic][color=green]Free [bold]All Axcess!?!?[/bold][/color][/italic][/head]
+                    {"[head=2]Well NOW YOU CAN!![/head]!"}
 
+                    All you need to do is call [color=blue]555-GOUR-LECKSSS[/color] and state your Staton ID# !!!
+                    Once youve done that,  we can simply remotely query the wallet of Yourstation's Cargo department, extacting our required fees of three [italic] EASY[/italic] payments, allowing you to claim your
+                    {"[head=2][color=green] [bolditalic] FREE AA!!!!!!!!!![/bolditalic][/color][/head]"}
 
-        Если вы ответили "Да" на любой из этих вопросов, то свяжитесь с одним из наших представителей сегодня! У нас есть члены на станциях по всей галактике, стремящиеся приветствовать новых членов в нашей стае. Будьте одним из клинков, который поможет приветствовать Геометра Крови в нашей вселенной, чтобы все могли познать его блаженство!
 
-        Все, что вам нужно сделать, это сказать [color=#FF0000][italic]"Sas'so c'arta forbici!"[/italic][/color]
-delivery-spam-9 = Хотите сражаться?!
-    .desc = Реклама местного бойцовского клуба.
-    .content = [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
-                                    { "[bold][head=1]КЛЕТКА ЯРОСТИ[/head][/bold]" }
-        { "[color=#aaaaaa]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[/color]" }
-        { "[bold][color=#FF0000][head=3]ХОТИТЕ ДРАТЬСЯ?[/head][/color][/bold]" }
-        { "[bold][color=#FF0000][head=3]ХОТИТЕ ПОБЕЖДАТЬ?[/head][/color][/bold]" }
-        { "[bold][color=#FF0000][head=3]ХОТИТЕ ДОМИНИРОВАТЬ?![/head][/color][/bold]" }
+                    {"[color=gray]"}
+                    {"[bullet/]Note: station ID must be stated in the format of \"NT/NX - ###\""}
+                    {"[bullet/]Note: Payments lodged to the client's station's cargo department amount to roughly $5000 spesos per transaction, not including individual processing fees"}
+                    {"[bullet/]Note: We at Gour-Lecksss LMT. are not responsible if your station's HoP forces you to fill out an ACTUAL Free AA form if they find out about this letter"}
+                    {"[/color]"}
 
+delivery-spam-6 =   NOTICE FROM NANOTRASN!!
+    .desc =         An official notice from the CEO of Nanotrasn?!
+    .content =      [color=red] THIS IS AN OFICAL NOTICE FROM THE HEAD OF [color=blue]NANOTRASN[/color][/color]
 
+                    Dear Sir, Madam, or Other Insignificat station personell
 
-        Тогда приходите в... [color=#FF0000][bold][head=2]КЛЕТКУ ЯРОСТИ[/head][/bold][/color]
+                    If you do not wish for this station to be declared Unprofitable in the eyes of
+                    {"[head=2][italic] Our Great and Glorious [color=blue]Nanotransen[[/color][/head]"}
+                    Then you must organize for three [color=blue]Nt[/color] Standard Stacks of [color=blue]nt[/color] Standard Gold Ingots to be sent to your station's Away Trade Outpots within 5 [color=blue]nT[/color] Standard work shifts.
 
+                    {"[head=2][color=red]IGNORE THIS ORDER AT RISK OF RETRIBUTON FROM [color=green]CENTCO[/color]!!!!![/head][/color]"}
 
+delivery-spam-7 =   Send reinforcements!
+    .desc =         An official notice from... an alternate timeline?
+    .content =      {-delivery-header-nanotrasen-alternate-timeline}
+                    {"[head=2]This is an official notice from the [color=red]Chief Security Officer[/color] at a Nanotrasen's Space Station 15.[/head]"}
 
-        Скрытая в глубинах вашей местной станции NanoTrasen запатентованная [color=#FF0000][bold]КЛЕТКА ЯРОСТИ[/bold][/color]. Электрифицированная боевая арена, предназначенная только для самых сильных бойцов, [color=#FF0000][bold]КЛЕТКА ЯРОСТИ[/bold][/color] отделяет слабаков от воинов, новичков от солдат и неудачников от победителей.
-        ──────────────────────────────────────────
-        В [color=#FF0000][bold]КЛЕТКЕ ЯРОСТИ[/bold][/color] есть только одно правило: [italic]Два бойца входят. Один боец уходит.[/italic]
-        ──────────────────────────────────────────
-        Никакого оружия, никакой брони, просто чистый, неразбавленный [bold]БОЙ[/bold]. Не упустите возможность и не будьте [bold]СЛАБАКОМ[/bold]. Завоюйте славу самого сильного бойца вашей станции в [color=#FF0000][bold]КЛЕТКЕ ЯРОСТИ[/bold][/color] уже сегодня!
-delivery-spam-10 = НЕ ОТКРЫВАЙТЕ ЭТО ПИСЬМО
-    .desc = Вы прокляты!
-    .content = [color=#FF0000][bold][head=2]СТОП[/head][/bold][/color]
+                    To whoever receives this letter. I am Sergeant Rigel. My occupation is the CSO. We need immediate assistance.
 
-        Если вы читаете это письмо...[color=#FF0000][head=3]ВЫ УЖЕ ПРОКЛЯТЫ!!![/head][/color]
+                    Our station is currently under attack by Atomic Agents, this letter is being thrown into a destabilized bluespace anomaly created by our [color=purple]Head of Research[/color].
 
-        Мне жаль, что я делаю это с вами, но я должен предупредить вас о:
+                    I am currently bolted in the Bridge, if you receive this message, please send aid immediately. I don't know how much longer we can last.
 
-                { "[color=#FF0000][head=1]Призраке Кровавой Ящерицы[/head][/color]" }
+                    Glory to Nanotrasen.
 
-        Все началось, когда я тоже получил письмо: это было страшное изображение плюшевой ящерицы с КРОВАВЫМИ ГЛАЗАМИ, пристально смотрящими ПРЯМО НА МЕНЯ. В письме говорилось, что я проклят... и если я не отправлю это письмо 30 людям в течение 30 дней, то Кровавая Ящерица придет посреди ночи...
+delivery-spam-8 =   The Children of Nar'Sie
+    .desc =         A local cult is looking for recruits.
+    .content =      [color=#134975][head=2]The Children of Nar'Sie[/head][/color]
+                                                    The Beginning of a New Era
+                    {"[bold]══──══──══──══──══──══──══──══──══──══──══[/bold]"}
 
-        { "[italic]и УБЬЕТ МЕНЯ.[/italic]" }
+                    {"[head=3]Do you feel lost in the vastness of our cosmos?[/head]"}
+                    In the modern era, it's easy for wayward souls to feel like cogs in the machine of vast corporations.
 
-        Извините......но вы один из 30 человек, которым я должен это отправить..и теперь вы тоже прокляты...
+                    {"[head=3]Do you feel as if you're made for a better purpose?[/head]"}
+                    Do you tire of the life of mundanity forced upon you? Mopping floors, delivering boxes, or filling out endless paperwork?
 
-        Пожалуйста, отправьте это письмо 30 другим людям, чтобы остановить проклятие! Вы все еще можете спасти себя! Еще есть время! Не позволяйте кровавой ящерице добраться и до вас, и возьмите эту штуковину! Она защитит вас от темных духов...[head=3]ПОКА ЧТО[/head]
+                    {"[head=3]Do you want to make the galaxy a better place?[/head]"}
 
 
+                    If you answered "Yes" to any of these questions, then contact one of our representatives today! We have members across stations all over the galaxy eager to welcome new members into our flock. Be one of the blades that helps welcome the Geometer of Blood into our universe so that all may know his bliss!
 
+                    All you have to do is say [color=#FF0000][italic]"Sas'so c'arta forbici!"[/italic][/color]
 
-        { "[head=1]О НЕТ, ВОТ ОНА!!!!!!!![/head]" }
+delivery-spam-9 =   Do you want to fight?!
+    .desc =         Advertisement for a local fighting club.
+    .content =      [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
+                                                {"[bold][head=1]THE RAGE CAGE[/head][/bold]"}
+                    {"[color=#aaaaaa]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[/color]"}
+                    {"[bold][color=#FF0000][head=3]DO YOU WANT TO FIGHT?[/head][/color][/bold]"}
+                    {"[bold][color=#FF0000][head=3]DO YOU WANT TO WIN?[/head][/color][/bold]"}
+                    {"[bold][color=#FF0000][head=3]DO YOU WANT TO DOMINATE?![/head][/color][/bold]"}
 
-        ░░░░░░░░░█░░[color=#67CC40]████████[/color]█[color=#67CC40]███[/color]░░░░░░░░░░
-        ░░░░░░[color=#FF0000]████[/color]█[color=#6EC543]█[/color][color=#67CC40]███████[/color]█[color=#FF0000]██████[/color]░░░░░░░░
-        ░░░░[color=#FF0000]████[/color][color=#6EC543]██[/color][color=#67CC40]████████[/color][color=#FF0000]██████[/color][color=#FFFFFF]██[/color][color=#FF0000]█[/color][color=#B53737]█[/color]░░░░░░
-        ░░░░[color=#FF0000]██[/color][color=#6EC543]██[/color][color=#67CC40]██████████[color=#FF0000]████████[/color][color=#B53737]██[/color]░░░░░░
-        ░░[color=#6EC543]██████[/color][color=#67CC40]██████████[/color][color=#FF0000]███████[/color][color=#B53737]███[/color]░░░░░░
-        { "[color=#6EC543]██████[/color][color=#67CC40]██████████████[/color][color=#FF0000]███[/color][color=#B53737]███[/color]░░░░░░░░" }
-        { "[color=#6EC543]██████[/color][color=#67CC40]██████████████[/color][color=#FF0000]█[/color][color=#6EC543]█████[/color]░░░░░░░░" }
-        { "[color=#6EC543]██████████[/color][color=#67CC40]██████████[/color][color=#FF0000]█[/color][color=#67CC40]███[/color]░░░░░░░░░░" }
-        ░░[color=#6EC543]██[/color][color=#FF2020]██[/color][color=#FF3D3D]██[/color][color=#6EC543]████████[/color][color=#67CC40]████[/color][color=#86E158]██[/color]░░░░░░░░░░░░
-        ░░░░[color=#FF2020]██[/color][color=#FF3D3D]██[/color]░░░░[color=#86E158]████████[/color][color=#6EC543]██[/color][color=#61D034]██[/color]░░░░░░░░[color=#56B037]██[/color]
-        ░░░░[color=#FF2020]██[/color]░░░░[color=#A8EB7A]██[/color][color=#B5EE85]██████[/color][color=#A8EB7A]██[/color][color=#6EC543]████[/color][color=#61D034]██[/color]░░░░[color=#56B037]██[/color][color=#48A926]██[/color]
-        ░░░░░░░░[color=#A8EB7A]██[/color][color=#B5EE85]██████████[/color][color=#A8EB7A]██[/color][color=#6EC543]████[/color][color=#56B037]██[/color][color=#48A926]██████[/color]
-        ░░░░[color=#6EC543]██[/color][color=#61D034]██[/color][color=#A8EB7A]██[/color][color=#B5EE85]██████████[/color][color=#A8EB7A]██[/color][color=#48A926]████████████[/color]
-        ░░░░[color=#6EC543]████[/color][color=#86E158]██[/color][color=#A8EB7A]██[/color][color=#B5EE85]████[/color][color=#A8EB7A]██[/color][color=#86E158]██[/color][color=#61D034]████[/color][color=#6EC543]██[/color][color=#48A926]████[/color][color=#52A037]██[/color]░░
-        ░░░░[color=#6EC543]████[/color][color=#61D034]██[/color][color=#86E158]████████[/color][color=#61D034]██[/color][color=#6EC543]██████[/color][color=#52A037]████[/color]░░░░
-        ░░░░░░[color=#6EC543]████[/color]░░░░░░░░[color=#6EC543]████████[/color]░░░░░░░░
-        ░░░░░░░░░░░░░░░░░░░░[color=#6EC543]████[/color]░░░░░░░░░░
-delivery-spam-11 = Помогите маме и папе!
-    .desc = Родители нуждаются в финансовой поддержке.
-    .content = [bold]Привет, дитя,[/bold]
-        Это пишут тебе твои родители: нам нужны деньги! Наша налоговая декларация была проверена, и мы должны правительству 100 000 спесо! Пожалуйста, помоги! Им нужны только подарочные карты, поэтому тебе нужно отправить нам 100 подарочных карт Bisa по 1000 спесо.
 
-        Пожалуйста, отправь по адресу:
-        50192 Spess Lane
-        Station City, Ignius 40195-243
-        Гамма-квадрант
-        Система Guilimin
 
-        Если мы не получим эти деньги в течение 10 дней, правительство придет забрать дом нашего детства, и мы станем бездомными.
+                    Then come on down to... [color=#FF0000][bold][head=2]THE RAGE CAGE[/head][/bold][/color]
 
-        { "[bold]Спасибо, и мы любим тебя,[/bold]" }
-        { "[italic]родители[/italics]" }
-delivery-spam-12 = Присоединяйтесь к нам в первом плавании!
-    .desc = Реклама расслабляющего путешествия.
-    .content =
-        { "[head=2]Присоединяйтесь к нам в первом плавании...[/head]" }
 
-            ░█▀▀░█▀▀░░░█▀▄░█▀▀░█░░░█▀█░█░█░█▀█░█▀▄
-            ░▀▀█░▀▀█░░░█▀▄░█▀▀░█░░░█▀█░▄▀▄░█░█░█▀▄
-            ░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀
 
+                    Hidden in the depths of your local Nanotrasen station is the patented [color=#FF0000][bold]RAGE CAGE[/bold][/color]. An electrified fighting arena designed for only the strongest of fighters, the [color=#FF0000][bold]RAGE CAGE[/bold][/color] seperates the Wimps from the Warriors, the Scrubs from the Soldiers, and the Losers from the Winners.
+                    ──────────────────────────────────────────
+                    In the [color=#FF0000][bold]RAGE CAGE[/bold][/color] there is only one rule: [italic]Two fighters enter. One fighter leaves. [/italic]
+                    ──────────────────────────────────────────
+                    No weapons, no armor, just pure unadulterated [bold]COMBAT[/bold]. Don't lose out and be a [bold]WIMP[/bold]. Win the glory of being your station's most robust fighter in the [color=#FF0000][bold]RAGE CAGE[/bold][/color] today!
 
-        { "[bold]══════════════════════════════════════════[/bold]" }
+delivery-spam-10 =  DO NOT OPEN THIS MAIL
+    .desc =         You have been cursed!
+    .content =      [color=#FF0000][bold][head=2]STOP[/head][/bold][/color]
 
-        Новейшие технологии Comfortech™ и самые красивые достопримечательности по эту сторону системы Иракси! [italic]SS Relaxor[/italic] - это современный роскошный крейсер, который проведет вас в путешествии всей вашей жизни!
+                    If yore reading this letter...[color=#FF0000][head=3]YOUR ALRAEDY CURSED!!![/head][/color]
 
-        { "[head=3]Оцените фосфорные озера Галимара* из комфорта наших LuxuCabins™ со всеми современными удобствами, о которых вы только можете пожелать![/head]" }
+                    Im sorry to do this to you but I have to warn you about:
 
-        { "[head=3]Полюбуйтесь ошеломляющим Оком Космоса**, наслаждаясь блюдами от наших пятизвездочных шеф-поваров Galaxy![/head]" }
+                            {"[color=#FF0000][head=1]The Ghost of The Bloody Lizardd[/head][/color]"}
 
-        { "[head=3]Исследуйте руины Агатара***, теперь открытые для публики при содействии ведущих ученых NanoTrasen. Все тайны древней агатарской цивилизации раскопаны и выставлены для вашего удовольствия![/head]" }
+                    It all started when i to got a letter in the mail: it was a scary image of a lizard plushie with BLOODY EYES staring RIGHT AT ME. the letter said I was cursed...and if I didn't send this letter to 30 people within 30 days then the Blood Lizard would come in the middle of the night...
 
-        За низкую цену в 5 000 спесо за ночь шестимесячный роскошный круиз может стать вашим отпуском вашей мечты! Позвоните нам сегодня по номеру [color=#00FF00]RELAX-NOW[/color], чтобы забронировать свой круиз. Не ждите! Действуйте сейчас!
+                    {"[italic]and KILL ME.[/italic]"}
 
+                    im sorry......but your one of the 30 people i have to send this too..and now yoor cursed too...
 
+                    please send this letter to 30 other people to stop the curse! you can still save yorself! theres still time! don't let the bloody lizard get you too, and take this thingie! it will keep you safe from dark spiirts...[head=3]FOR NOW[/head]
 
 
 
 
-        { "[italic]*В фосфорных озерах нельзя плавать, вы отказываетесь от всех прав на юридическое представительство с Relaxination Destinations по прибытии на Галимар.[/italic]" }
-        { "[italic]**На Око Космоса нельзя смотреть дольше пяти секунд за раз. Вы не слышите зов Ока.[/italic]" }
-        { "[italic]***Необходимо подписать отказ от ответственности за безопасность перед высадкой, Relaxination Destinations не гарантирует безопасность руин Агатара. Исчезновение туристических групп снижено до приемлемого уровня в 0,23% от всех туристических групп, посещающих руины.[/italic]" }
+                    {"[head=1]OH NO THERE IT IS!!!!!!!![/head]"}
+
+                    ░░░░░░░░░█░░[color=#67CC40]████████[/color]█[color=#67CC40]███[/color]░░░░░░░░░░
+                    ░░░░░░[color=#FF0000]████[/color]█[color=#6EC543]█[/color][color=#67CC40]███████[/color]█[color=#FF0000]██████[/color]░░░░░░░░
+                    ░░░░[color=#FF0000]████[/color][color=#6EC543]██[/color][color=#67CC40]████████[/color][color=#FF0000]██████[/color][color=#FFFFFF]██[/color][color=#FF0000]█[/color][color=#B53737]█[/color]░░░░░░
+                    ░░░░[color=#FF0000]██[/color][color=#6EC543]██[/color][color=#67CC40]██████████[color=#FF0000]████████[/color][color=#B53737]██[/color]░░░░░░
+                    ░░[color=#6EC543]██████[/color][color=#67CC40]██████████[/color][color=#FF0000]███████[/color][color=#B53737]███[/color]░░░░░░
+                    {"[color=#6EC543]██████[/color][color=#67CC40]██████████████[/color][color=#FF0000]███[/color][color=#B53737]███[/color]░░░░░░░░"}
+                    {"[color=#6EC543]██████[/color][color=#67CC40]██████████████[/color][color=#FF0000]█[/color][color=#6EC543]█████[/color]░░░░░░░░"}
+                    {"[color=#6EC543]██████████[/color][color=#67CC40]██████████[/color][color=#FF0000]█[/color][color=#67CC40]███[/color]░░░░░░░░░░"}
+                    ░░[color=#6EC543]██[/color][color=#FF2020]██[/color][color=#FF3D3D]██[/color][color=#6EC543]████████[/color][color=#67CC40]████[/color][color=#86E158]██[/color]░░░░░░░░░░░░
+                    ░░░░[color=#FF2020]██[/color][color=#FF3D3D]██[/color]░░░░[color=#86E158]████████[/color][color=#6EC543]██[/color][color=#61D034]██[/color]░░░░░░░░[color=#56B037]██[/color]
+                    ░░░░[color=#FF2020]██[/color]░░░░[color=#A8EB7A]██[/color][color=#B5EE85]██████[/color][color=#A8EB7A]██[/color][color=#6EC543]████[/color][color=#61D034]██[/color]░░░░[color=#56B037]██[/color][color=#48A926]██[/color]
+                    ░░░░░░░░[color=#A8EB7A]██[/color][color=#B5EE85]██████████[/color][color=#A8EB7A]██[/color][color=#6EC543]████[/color][color=#56B037]██[/color][color=#48A926]██████[/color]
+                    ░░░░[color=#6EC543]██[/color][color=#61D034]██[/color][color=#A8EB7A]██[/color][color=#B5EE85]██████████[/color][color=#A8EB7A]██[/color][color=#48A926]████████████[/color]
+                    ░░░░[color=#6EC543]████[/color][color=#86E158]██[/color][color=#A8EB7A]██[/color][color=#B5EE85]████[/color][color=#A8EB7A]██[/color][color=#86E158]██[/color][color=#61D034]████[/color][color=#6EC543]██[/color][color=#48A926]████[/color][color=#52A037]██[/color]░░
+                    ░░░░[color=#6EC543]████[/color][color=#61D034]██[/color][color=#86E158]████████[/color][color=#61D034]██[/color][color=#6EC543]██████[/color][color=#52A037]████[/color]░░░░
+                    ░░░░░░[color=#6EC543]████[/color]░░░░░░░░[color=#6EC543]████████[/color]░░░░░░░░
+                    ░░░░░░░░░░░░░░░░░░░░[color=#6EC543]████[/color]░░░░░░░░░░
+
+delivery-spam-11 =  Help mom and dad!
+    .desc =         Parents in need of financial support.
+    .content =      [bold]Hello Child,[/bold]
+                    This is your Parents writing to you: we are in need of money! Our taxes have been audited and we owe $100,000 in spesos to governnment! please help! they only want gift cards so you will need to send us 100 $1000 spesos Bisa gift cards.
+
+                    please mail to:
+                    50192 Spess Lane
+                    Station City, Ignius 40195-243
+                    Gamma Quadrant
+                    Guilimin System
+
+                    if we do not get this money in 10 days then the govertment will come to take away childhood home and we will be homeless.
+
+                    {"[bold]thank you and we love you,[/bold]"}
+                    {"[italic]parents[/italic]"}
+
+delivery-spam-12 =  Join us on the maiden voyage!
+    .desc =         Advertisement for a relaxing voyage.
+    .content =      [head=2]Join us on the maiden voyage of the...[/head]
+
+                        ░█▀▀░█▀▀░░░█▀▄░█▀▀░█░░░█▀█░█░█░█▀█░█▀▄
+                        ░▀▀█░▀▀█░░░█▀▄░█▀▀░█░░░█▀█░▄▀▄░█░█░█▀▄
+                        ░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀
+
+
+                    {"[bold]══════════════════════════════════════════[/bold]"}
+
+                    The latest in Comfortech™ and the most beautiful sights this side of the Iraxsi System! The [italic]SS Relaxor[/italic] is a state of the art luxury Cruiser taking you on the journey of a lifetime!
+
+                    {"[head=3]Experience the phosphorous lakes of Galimar* from the comfort of our LuxuCabins™ with the all the modern amenities you could ever wish for![/head]"}
+
+                    {"[head=3]Gaze in awe at the Eye of the Cosmos** while enjoying meals from our Five Star Galaxy class chefs![/head]"}
+
+                    {"[head=3]Explore the ruins of Agathar***, now open to the public with the assistance of Nanotrasen's top Scientists. All the mysteries of the old Agatharian civilization are excavated and displayed for your viewing pleasure![/head]"}
+
+                    For the low, low cost of $5,000 spesos a night, the six month luxury cruise could be yours for the vacation of your dreams! Call us today at [color=#00FF00]RELAX-NOW[/color] to book your cruise. Don't wait! Act now!
+
+
+
+
+
+
+                    {"[italic]*Phosphorus lakes are not for swimming, you waive all rights to legal representations with Relaxination Destinations upon landing on Galimar.[/italic]"}
+                    {"[italic]**Eye of the Cosmos must not be looked at for longer than five seconds at a time. You do not hear the call of the Eye.[/italic]"}
+                    {"[italic]***Must sign safety waiver before landing, Relaxination Destinations does not guarantee the safety of the Agatharian ruins. Disappearances of tour groups are down to an acceptable margin of 0.23% of all tour groups that visit the ruins.[/italic]"}
+
+delivery-spam-13 =  paper
+    .desc =         A letter to the editor.
+    .content =      To whom it may concern,
+
+                    The famous Adventures of Ian and Renault book series is one that is enjoyed by young children and at least one severely dyslexic lizard (don't worry, I got better). However, there was an error in the publication, as Ian and Renault would never make a mistake writing. It appears that in The Adventures of Ian and Renault: An Arctic Journey of Courage and Friendship, two lines from The Adventures of Ian and Renault: Exploring the City were used.
+                    This made no sense. How did Ian and Renault find a little kitten in the Arctic? What was the little kitten doing there? Why were Ian and Renault doing more than average today? And the worst offender is the second misplaced line, which is "As the day turned to night, they were exhausted abut happy from their adventure in the city" (Ian and Renault, 1). OH, SORRY!!! I'M NOT AWARE THAT THERE'S A CITY IN THE ARCTIC!!! THAT THEY JUST STOPPED AT. YOU KNOW. FOR A COFFEE. OH WAIT!! COFFEE KILLS DOGS AND FOXES!!!!!!!!! WHO WOULD PUBLISH THIS!!!!! YOU'VE JUST KILLED IAN AND RENAULT!!!!!!!!!!!!!!!!!!! HOW COULD YOU!!!!!!!!!!!!!!!!!!! YOU MONSTER!!!!!!!!!!!!!!!!!
+                    And what did you get for killing Ian and Renault. Hmm? A slightly longer book? You need that longer book, don't you? Longer books sell for more, do they? You wanted to make more money?
+                    LOOK AT WHERE THAT GOT YOU. YOU'VE KILLED THE TWO. CONGRATS.
+                    THERE WILL BE NO MORE SEQUELS NOW.
+                    HOW'S THAT FOR MAKING MONEY???? IT SUCKS????
+                    {"["}bold]WELL YOU SHOULDN'T HAVE KILLED THEM!!!!!!!!!!!!!!![/bold]

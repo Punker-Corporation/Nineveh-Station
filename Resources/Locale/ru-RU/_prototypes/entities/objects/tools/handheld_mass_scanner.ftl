@@ -1,10 +1,11 @@
-ent-HandHeldMassScanner = ручной сканер массы
-    .desc = Портативный сканер массы.
+ent-HandHeldMassScanner = ручной масс-сканер
+    .desc = ручной масс-сканер.
 ent-HandHeldMassScannerEmpty = { ent-HandHeldMassScanner }
-    .suffix = Пустой
+    .suffix = пустой
     .desc = { ent-HandHeldMassScanner.desc }
 ent-HandHeldMassScannerBorg = { ent-HandHeldMassScanner }
     .suffix = Борг
     .desc = { ent-HandHeldMassScanner.desc }
-ent-HandHeldMassScannerUnpowered = сканер массы киборга
-    .desc = Ручной сканер массы, работающий от ваших собственных элементов питания.
+ent-HandHeldMassScannerUnpowered = ручной масс-сканер
+    .desc = Ручной сканер массы, который не требует питания.
+    .suffix = Ручной, всегда приводимый в движение

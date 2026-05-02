@@ -1,9 +1,10 @@
-advertisement-nanomed-1 = Иди и спаси несколько жизней!
-advertisement-nanomed-2 = Лучшее снаряжение для вашего медотдела.
+advertisement-nanomed-1 = Спасите несколько жизней!
+advertisement-nanomed-2 = Лучшие вещи для вашего медбая.
 advertisement-nanomed-3 = Только лучшие инструменты.
-advertisement-nanomed-4 = Натуральные химикаты!
-advertisement-nanomed-5 = Эти штуки спасают жизни.
-advertisement-nanomed-6 = Может сами примете?
+advertisement-nanomed-4 = Природные химикаты!
+advertisement-nanomed-5 = Эта штука спасает жизни.
+advertisement-nanomed-6 = Не хочешь немного?
 advertisement-nanomed-7 = Пинг!
-advertisement-nanomed-8 = Не допускайте передозировки!
-advertisement-nanomed-9 = Пора допускать передозировку!
+advertisement-nanomed-8 = Убедитесь, что вы не передозировали людей!
+advertisement-nanomed-9 = Отправляйтесь к людям с передозировкой!
+advertisement-nanomed-10 = Я гражданский! Я гражданский!!!
