@@ -1,33 +1,251 @@
-figurines-hop-1 = Ваши документы, пожалуйста.
-figurines-hop-2 = Вы уволены.
-figurines-hop-3 = Скоро вернусь.
-figurines-hop-4 = Вы можете получить ОП, если заполните форму.
-figurines-hop-5 = Я отлучился всего на две секунды...
-figurines-passenger-1 = Как сменить руку?
-figurines-passenger-2 = Вызовите эвакуацию.
-figurines-passenger-3 = HELP MAINTS!!
-figurines-passenger-4 = Я не убираюсь.
-figurines-passenger-5 = Сколько стоит пояс для инструментов?
-figurines-greytider-1 = Эта вечеринка ужасна. Я ненавижу этих людей.
-figurines-greytider-2 = Ой-ой, кто-то потерял электрошокер?
-figurines-greytider-3 = Мощно.
-figurines-greytider-4 = Я не я без своего инструмента.
-figurines-greytider-5 = Грей Тайд по всей станции!
-figurines-greytider-6 = Да здравствует революционная революция.
-figurines-clown-1 = Хонк!
-figurines-clown-2 = Банан!
-figurines-clown-3 = Мыло!
-figurines-clown-4 = У ГП один клоун, у ГСБ весь отдел.
-figurines-clown-5 = Я вас раздражаю?
-figurines-clown-6 = Можно мне ОП? Пожалуйста?
-figurines-clown-7 = Я клоун, но ты целый цирк!
-figurines-holoclown-1 = Я помогаю своему старшему брату.
-figurines-holoclown-2 = Здравствуйте, офицер!
-figurines-holoclown-3 = Кого это ты называешь синим?
-figurines-holoclown-4 = Истекать кровью на полу — это отличный вид для тебя.
-figurines-holoclown-5 = Жалкий.
-figurines-holoclown-6 = Не они должны тебя беспокоить, а я.
-figurines-holoclown-7 = Что такого смешного?
+# Command
+
+figurines-captain-1 = Glory to NT!
+figurines-captain-2 = How did I get hired? Yes.
+figurines-captain-3 = The nuclear disk is secure. Where? Somewhere.
+figurines-captain-4 = Where did my ID go?
+figurines-captain-5 = Everything is under control.
+figurines-captain-6 = The disk was in my bag last I checked.
+figurines-captain-7 = The chain of command starts and ends with me.
+figurines-captain-8 = It's hard being at the top.
+
+# Cargo
+
+figurines-qm-1 = Who stole the shuttle?
+figurines-qm-2 = Wait, where did my digi-board go?
+figurines-qm-3 = I didn't approve that shipment of guns!
+figurines-qm-4 = One toy box for my fellow clown!
+figurines-qm-5 = Time to gamble!
+figurines-qm-6 = Viva la Cargonia!
+figurines-qm-7 = Where'd all our money go?
+figurines-qm-8 = 99% of gamblers quit right before they hit it big!
+
+figurines-cargotech-1 = DRAGON ON ATS!
+figurines-cargotech-2 = I sold the station!
+figurines-cargotech-3 = Brain bounty? I don't have a brain.
+figurines-cargotech-4 = You're worth 3000 spesos. Congrats.
+figurines-cargotech-5 = Vegetable bounty? Nobody eats those anyways.
+figurines-cargotech-6 = WE ARE SECEDING!! ALL HAIL CARGONIA!!
+figurines-cargotech-7 = Pizza party at cargo!
+figurines-cargotech-8 = The mail never stops...
+figurines-cargotech-9 = Nothing stops the mail!
+figurines-cargotech-10 = Clown mask bounty? Alright, let me just find a weapon...
+figurines-cargotech-11 = Laser bounty? Nobody will notice if we ship practice lasers instead, right?
+
+figurines-salvage-1 = Megafauna? It was mega easy.
+figurines-salvage-2 = We're lost. Anyone bring a GPS?
+figurines-salvage-3 = Anyone have oxygen?
+figurines-salvage-4 = I found a blood-red and e-sword!
+figurines-salvage-5 = There's bears in space?
+figurines-salvage-6 = Crusher? I barely know her!
+figurines-salvage-7 = Can someone come pick me up?
+figurines-salvage-8 = I found that contraband on a wreck! It's not mine!
+figurines-salvage-9 = Can we borrow the cargo shuttle? Please?
+
+# Engineering
+
+figurines-ce-1 = Everyone to the briefing!
+figurines-ce-2 = Wire the solars!
+figurines-ce-3 = How to setup the TEG?
+figurines-ce-4 = SINGULOOSE!
+figurines-ce-5 = TESLOOSE!
+figurines-ce-6 = Power's out again.
+
+figurines-atmostech-1 = I put plasma in distro.
+figurines-atmostech-2 = I will burn you in a burn chamber.
+figurines-atmostech-3 = Frezon...
+figurines-atmostech-4 = Tritium...
+figurines-atmostech-5 = Glory to Atmosia!
+figurines-atmostech-6 = Distro? That's short for disposal.
+figurines-atmostech-7 = TEG: Thermal Energy? Gone!
+figurines-atmostech-8 = Does anyone else hear glass cracking?
+figurines-atmostech-9 = I promise this burn chamber is totally safe and will NOT explode.
+
+figurines-engineer-1 = SINGULOOSE!
+figurines-engineer-2 = TESLOOSE!
+figurines-engineer-3 = Did anyone remember to turn the AME on?
+figurines-engineer-4 = Free insuls at Engineering!
+figurines-engineer-5 = Where'd the power go?
+figurines-engineer-6 = Someone bombed the medbay... again...
+figurines-engineer-7 = Well, why don't you come and fix it?
+
+# Medical
+
+figurines-cmo-1 = Suit sensors!
+figurines-cmo-2 = Why do we have meth?
+figurines-cmo-3 = Who drank all the chems?
+figurines-cmo-4 = Desoxyephedrine? Sounds healthy.
+figurines-cmo-5 = No, you're not getting my hypospray.
+
+figurines-chemist-1 = Get your pills!
+figurines-chemist-2 = We need to cook.
+figurines-chemist-3 = I am the one who knocks!
+figurines-chemist-4 = Say my name.
+figurines-chemist-5 = 99.8% purity.
+figurines-chemist-6 = Epinephrine? Didn't you say methamphetamine?
+figurines-chemist-7 = Pills here!
+figurines-chemist-8 = Legally speaking, it's not actually a bomb until you mix both beakers together.
+
+figurines-doctor-1 = The patient is already dead!
+figurines-doctor-2 = CLEAR!
+figurines-doctor-3 = Saw makes BRRR.
+figurines-doctor-4 = Just a week away...
+figurines-doctor-5 = I knew it...
+figurines-doctor-6 = Well, at least we have body bags.
+
+figurines-paramedic-1 = Insuls and tools!
+figurines-paramedic-2 = I need AA for saving people!
+figurines-paramedic-3 = SUIT SENSORS!!
+figurines-paramedic-4 = I need the hypospray for saving people!
+figurines-paramedic-5 = 14 dead in the clown's room.
+
+# Science
+
+figurines-rd-1 = Blowing up all of the borgs!
+figurines-rd-2 = Tier 3 Arsenal? No way.
+figurines-rd-3 = Now where did I leave my hardsuit...?
+figurines-rd-4 = Now you're thinking with portals!
+figurines-rd-5 = The cake is a lie!
+figurines-rd-6 = The trait I look for in a scientist is expendability.
+
+figurines-scientist-1 = Someone else must have made those bombs!
+figurines-scientist-2 = He asked to be borged!
+figurines-scientist-3 = Carp at sci!
+figurines-scientist-4 = Explosion at sci!
+figurines-scientist-5 = Anyone seen an anomaly?
+figurines-scientist-6 = The anomaly exploded!
+
+# Security
+
+figurines-hos-1 = Space law? What?
+figurines-hos-2 = Shoot the clown.
+figurines-hos-3 = Yes, I shot the clown. No, I don't regret it.
+figurines-hos-4 = Clown is now KOS.
+figurines-hos-5 = Armory is now open to the public!
+
+figurines-detective-1 = The butler did it.
+figurines-detective-2 = I need some whiskey after this.
+figurines-detective-3 = Chameleon fibers? How did a chameleon get in here?
+figurines-detective-4 = Go go gadget!
+figurines-detective-5 = Of course I checked the door logs!
+
+figurines-security-1 = I am the law!
+figurines-security-2 = You have violated article 1984.
+figurines-security-3 = Whenever I get bored I use the clown as target practice.
+figurines-security-4 = You have two rights: to remain silent and to cry about it.
+figurines-security-5 = Harmbaton? It sure as hell harms!
+figurines-security-6 = Space law? Never heard of it.
+figurines-security-7 = Random search! Hand it over.
+figurines-security-8 = I love donuts.
+figurines-security-9 = Greytide this, motherfucker.
+figurines-security-10 = Do not resist.
+
+figurines-warden-1 = Execute him for breaking in!
+figurines-warden-2 = Perma the fucker for insulting me!
+figurines-warden-3 = We totally treat everyone fairly and do NOT mistreat our prisoners.
+figurines-warden-4 = Brig is my home. My home is brig. My brig is home. Stop, what?
+figurines-warden-5 = Soap is now contraband.
+figurines-warden-6 = You're going away for a long time, buddy.
+
+# Service
+
+figurines-hop-1 = Papers, please.
+figurines-hop-2 = You are fired.
+figurines-hop-3 = BRB.
+figurines-hop-4 = Fill out the form.
+figurines-hop-5 = I was gone for two seconds...
+figurines-hop-6 = Go get this form stamped.
+figurines-hop-7 = Has anyone seen Ian?
+
+figurines-bartender-1 = Where's my monkey?
+figurines-bartender-2 = Sec won't drink.
+figurines-bartender-3 = I mixed a little something in there...
+figurines-bartender-4 = The recipe? Plasma and vomit. Why?
+figurines-bartender-5 = I need those toxins for my drinks, officer!
+figurines-bartender-6 = Read the room.
+figurines-bartender-7 = I've got a shotgun.
+
+figurines-botanist-1 = I don't have any weed, officer!
+figurines-botanist-2 = Dude, I see colors...
+figurines-botanist-3 = Is it just me, or is that weed glowing?
+figurines-botanist-4 = 50 more units of mutagen. That should be enough.
+figurines-botanist-5 = More bananas for my favorite clown!
+
+figurines-boxer-1 = The first rule of Fight Club is...
+figurines-boxer-2 = We settle this in the ring, alright?
+figurines-boxer-3 = I. AM. THE. CHAMPION!!
+figurines-boxer-4 = Don't look at me; he was shot, not punched.
+figurines-boxer-5 = 1v1 me, captain.
+figurines-boxer-6 = I only make special appearances these days.
+
+figurines-chaplain-1 = Would you like to join my cul- I mean religion.
+figurines-chaplain-2 = Gods, please make me a killing machine!
+figurines-chaplain-3 = God exists!
+figurines-chaplain-4 = Those aren't blood runes, I drew them in crayon.
+figurines-chaplain-5 = Anyone want to be sacrificed?
+figurines-chaplain-6 = Vampires aren't real.
+
+figurines-chef-1 = I swear it's not human meat.
+figurines-chef-2 = More banana cream pies?
+figurines-chef-3 = How does rotary sushi sound?
+figurines-chef-4 = That'll be 1,000 spesos.
+figurines-chef-5 = For here or to go?
+figurines-chef-6 = Where'd Pun Pun go? No idea...
+
+figurines-clown-1 = Honk!
+figurines-clown-2 = Banana!
+figurines-clown-3 = Pie!
+figurines-clown-4 = Soap!
+figurines-clown-5 = Service has one clown, but Security has a whole department of them.
+figurines-clown-6 = Do I annoy you?
+figurines-clown-7 = Can I have AA? Please?
+figurines-clown-8 = I'm a clown, but you're the whole circus!
+
+figurines-greytider-1 = Man, this party stinks. I fucking hate these people.
+figurines-greytider-2 = Uh-oh, who's lost their stunbaton?
+figurines-greytider-3 = Robust.
+figurines-greytider-4 = I'm not me without a toolbox.
+figurines-greytider-5 = Grey tide station wide!
+figurines-greytider-6 = Viva la revolution.
+
+figurines-janitor-1 = Clown stole my soap. Again.
+figurines-janitor-2 = Look at the signs, you idiot.
+figurines-janitor-3 = I've never seen this much lube in my life.
+figurines-janitor-4 = Another day, another spill.
+figurines-janitor-5 = I'm not even paid for this.
+figurines-janitor-6 = This blood wasn't evidence, right?
+figurines-janitor-7 = My only friend is my mop.
+figurines-janitor-8 = That better not be what I think it is...
+figurines-janitor-9 = Another day, another body.
+
+figurines-lawyer-1 = Better Call Saul!
+figurines-lawyer-2 = Objection!
+figurines-lawyer-3 = Did you know that you have rights?
+figurines-lawyer-4 = Space law says!
+figurines-lawyer-5 = Sign the contract first.
+figurines-lawyer-6 = My client is innocent!
+figurines-lawyer-7 = I'm suing.
+figurines-lawyer-8 = You may be entitled to financial compensation!
+figurines-lawyer-9 = Come back with a warrant!
+figurines-lawyer-10 = See you in court!
+figurines-lawyer-11 = Guilty!
+figurines-lawyer-12 = Not guilty!
+
+figurines-librarian-1 = Silence!
+figurines-librarian-2 = One day while...
+figurines-librarian-3 = Once upon a time...
+figurines-librarian-4 = In a world where...
+figurines-librarian-5 = It was a dark and stormy night...
+figurines-librarian-6 = Long, long ago...
+figurines-librarian-7 = As the story goes...
+figurines-librarian-8 = Imagine, if you will...
+figurines-librarian-9 = Long before time had a name...
+figurines-librarian-10 = In a galaxy far, far away...
+figurines-librarian-11 = As the old saying goes...
+figurines-librarian-12 = Gather round...
+figurines-librarian-13 = ...It's a tale as old as time...
+figurines-librarian-14 = ...That's all she wrote.
+
 figurines-mime-1 = ...
 figurines-mime-2 = ...
 figurines-mime-3 = ....
@@ -37,245 +255,150 @@ figurines-mime-6 = ...........?
 figurines-mime-7 = !!!
 figurines-mime-8 = ....!
 figurines-mime-9 = ???
+
 figurines-musician-1 = Never gonna give you up!
 figurines-musician-2 = Never gonna let you down!
-figurines-musician-3 = Музыка — это искусство.
-figurines-musician-4 = Спасибо, я буду здесь всю ночь.
-figurines-musician-5 = Я оркестр-одиночка.
-figurines-boxer-1 = Первое правило бойцовского клуба...
-figurines-boxer-2 = Мы решим это на ринге, хорошо?
-figurines-boxer-3 = Я. ЕСТЬ. ЧЕМПИОН!!
-figurines-boxer-4 = Не смотри на меня, его застрелили, а не ударили.
-figurines-boxer-5 = Давай один на один, капитан.
+figurines-musician-3 = Music is an art.
+figurines-musician-4 = Thank you, I'll be here all night.
+figurines-musician-5 = I'm a one man band.
 
-# figurines-boxer-
+figurines-passenger-1 = Insuls please.
+figurines-passenger-2 = Call evac.
+figurines-passenger-3 = HELP MAINTS!!
+figurines-passenger-4 = I'm no tider.
+figurines-passenger-5 = How much for a toolbelt?
 
-figurines-captain-1 = Экипаж, диск от ядерной бомбы надежно спрятан у меня в заднице.
-figurines-captain-2 = Слава NT!
-figurines-captain-4 = Куда делся мой ID?
-figurines-captain-5 = Всё под контролем.
-figurines-captain-6 = Диск был в моей сумке, когда я в последний раз проверял.
-figurines-captain-7 = Цепь командования начинается и заканчивается мной.
-figurines-captain-8 = Тяжело быть на вершине.
-figurines-captain-3 = Ядерный диск в безопасности. Где? Где-то.
-figurines-hos-1 = Космический закон? Что?
-figurines-hos-2 = Пристрелил клоуна.
-figurines-hos-4 = Клоун теперь под расстрел на месте.
-figurines-hos-5 = Оружейная теперь открыта для всех!
-figurines-hos-3 = Да, я выстрелил в клоуна. Нет, я не жалею об этом.
-figurines-warden-1 = Казните его за взлом!
-figurines-warden-2 = Навсегда накажем этого урода за оскорбление!
-figurines-warden-3 = Мы абсолютно честно обращаемся со всеми и НЕ злоупотребляем нашими заключенными.
-figurines-warden-5 = Мыло теперь контрабанда.
-figurines-warden-6 = Ты надолго отправишься за решетку, приятель.
-figurines-warden-4 = "Бриг — мой дом. Мой дом — бриг. Мой бриг — дом. Стоп, что?"
-figurines-detective-1 = Это сделал дворецкий.
-figurines-detective-3 = Волокна хамелеона? Как хамелеон попал сюда?
-figurines-detective-4 = Вперёд, гаджет!
-figurines-detective-5 = Конечно, я проверил логи дверей!
-figurines-detective-2 = Мне нужно немного виски после этого.
-figurines-security-1 = Я и есть закон!
-figurines-security-2 = Вы нарушили статью 1984.
-figurines-security-3 = Когда мне становится скучно, я использую клоуна для стрельбы.
-figurines-security-5 = Дубинка боли? Она точно причиняет боль!
-figurines-security-6 = Космический закон? Никогда о таком не слышал.
-figurines-security-7 = Случайный обыск! Выкладывай всё.
-figurines-security-8 = Я обожаю пончики.
-figurines-security-9 = Получай, грейтайдер хренов.
-figurines-security-10 = Не сопротивляйся.
-figurines-security-4 = У вас есть два права: молчать и плакать об этом.
-figurines-lawyer-1 = Лучше позвоните Солу!
-figurines-lawyer-3 = Знаете ли вы, что у вас есть права?
-figurines-lawyer-4 = Космический закон гласит!
-figurines-lawyer-5 = Сначала подпишите контракт.
-figurines-lawyer-2 = Протестую!
-figurines-cargotech-1 = ДРАКОН НА АТЗ!
-figurines-cargotech-2 = Я продал станцию!
-figurines-cargotech-4 = You're worth 3000 spesos. Congrats.
-figurines-cargotech-5 = Заказ на овощи? Их всё равно никто не ест.
-figurines-cargotech-6 = МЫ ОТДЕЛЯЕМСЯ!! СЛАВА КАРГОНИИ!!
-figurines-cargotech-3 = Заказ на мозги? У меня нет мозга.
-figurines-salvage-2 = We're lost. Anyone bring a GPS?
-figurines-salvage-3 = У кого-нибудь есть кислород?
-figurines-salvage-4 = I found a blood-red and e-sword!
-figurines-salvage-5 = There's bears in space?
-figurines-salvage-6 = Крушитель? Я её едва знаю!
-figurines-salvage-1 = Мегафауну? Это было мега-просто.
-figurines-qm-1 = Кто украл шаттл?
-figurines-qm-2 = Я не одобрю оружие.
-figurines-qm-3 = Я не покупал это оружие!
-figurines-qm-4 = Один ящик игрушек для моего товарища-клоуна!
-figurines-qm-5 = Время потратить все деньги на азартные игры.
-figurines-qm-6 = Да здравствует Каргония!
-figurines-qm-8 = Куда делись все наши деньги?
-figurines-qm-9 = 99% игроков бросают прямо перед крупным выигрышем!
-figurines-qm-7 = Заполните форму.
-figurines-ce-1 = Всем на брифинг!
-figurines-ce-2 = Подключите солнечные панели!
-figurines-ce-3 = Как настроить ТЭГ?
-figurines-ce-4 = СИНГУЛООООЗ!
-figurines-ce-6 = Power's out again.
-figurines-ce-5 = ТЕСЛООООЗ!
-figurines-engineer-1 = СИНГУЛООООЗ!
-figurines-engineer-2 = ТЕСЛООООЗ!
-figurines-engineer-4 = Бесплатные изолирующие перчатки в инженерном
-figurines-engineer-5 = Куда подевалась энергия?
-figurines-engineer-6 = Кто-то взорвал медотсек... снова...
-figurines-engineer-7 = Ну, почему бы тебе не прийти и не починить это?
-figurines-engineer-3 = Что такое АМЕ?
-figurines-atmostech-1 = Я добавил плазму в дистро.
-figurines-atmostech-2 = Я сожгу тебя в сжигающей камере.
-figurines-atmostech-3 = Фрезон...
-figurines-atmostech-4 = Тритий...
-figurines-atmostech-6 = Distro? That's short for disposal.
-figurines-atmostech-7 = TEG: Thermal Energy? Gone!
-figurines-atmostech-5 = Слава Атмосии!
-figurines-rd-1 = Взорву всех боргов!
-figurines-rd-3 = Куда же я положил свой скафандр...?
-figurines-rd-4 = Теперь ты мыслишь порталами!
-figurines-rd-5 = Торт — это ложь!
-figurines-rd-6 = Качество, которое я ищу в учёном — расходуемость.
-figurines-rd-2 = Арсенал третьего уровня? Ни за что.
-figurines-scientist-1 = Кто-то другой должен был сделать эти бомбы!
-figurines-scientist-2 = Он сам попросил стать боргом!
-figurines-scientist-3 = Карп в научке!
-figurines-scientist-4 = Взрыв в научке.
-figurines-scientist-6 = The anomaly exploded!
-figurines-scientist-5 = Аномалия взорвалась.
-figurines-cmo-1 = Включите датчики костюмов!
-figurines-cmo-3 = Кто выпил все химикаты?
-figurines-cmo-4 = Дезоксиэфедрин? Звучит полезно.
-figurines-cmo-5 = Нет, ты не получишь мой гипоспрей.
-figurines-cmo-2 = Почему у нас метамфетамин?
-figurines-chemist-2 = Нам нужно готовить.
-figurines-chemist-3 = Это я тот, кто стучит!
-figurines-chemist-4 = Назови моё имя.
-figurines-chemist-5 = Чистота 99.8%.
-figurines-chemist-6 = Эпинефрин? Разве ты не сказал метамфетамин?
-figurines-chemist-1 = Получайте свои таблетки!
-figurines-paramedic-1 = Изоляция и инструменты!
-figurines-paramedic-3 = ДАТЧИКИ КОСТЮМОВ!!
-figurines-paramedic-4 = Мне нужен шприцемёт для спасения людей!
-figurines-paramedic-5 = 14 трупов в комнате клоуна.
-figurines-paramedic-2 = Мне нужен полный доступ, чтобы спасать людей!
-figurines-doctor-1 = Пациент уже мертв!
-figurines-doctor-2 = ЧИСТО!
-figurines-doctor-4 = Всего неделя до отпуска...
-figurines-doctor-5 = Я так и знал...
-figurines-doctor-3 = Пила делает ВРРР.
-figurines-librarian-1 = Однажды, когда...
-figurines-librarian-3 = Давным-давно...
-figurines-librarian-4 = В мире, где...
-figurines-librarian-5 = Это была тёмная и бурная ночь...
-figurines-librarian-6 = Очень, очень давно...
-figurines-librarian-7 = Как гласит история...
-figurines-librarian-8 = Представьте, если хотите...
-figurines-librarian-9 = Задолго до того, как у времени появилось имя...
-figurines-librarian-10 = В далёкой-далёкой галактике...
-figurines-librarian-11 = Как гласит старая поговорка...
-figurines-librarian-12 = Соберитесь вокруг...
-figurines-librarian-13 = ...Это история стара как мир...
-figurines-librarian-14 = ...Вот и вся история.
-figurines-librarian-2 = Тишина!
-figurines-chaplain-1 = Хотите присоединиться к моему кул-... вероисповеданию?
-figurines-chaplain-2 = Боги, сделайте меня машиной для убийств, пожалуйста!
-figurines-chaplain-4 = Those aren't blood runes, I drew them in crayon.
-figurines-chaplain-5 = Кто-нибудь хочет быть принесён в жертву?
-figurines-chaplain-6 = Вампиры не существуют.
-figurines-chaplain-3 = Бог существует!
-figurines-chef-2 = Ещё пирогов с банановым кремом?
-figurines-chef-3 = Как насчёт суши на конвейере?
-figurines-chef-4 = Это будет стоить 1000 спесосов
-figurines-chef-5 = Здесь или с собой?
-figurines-chef-6 = Куда делся Пан Пан? Понятия не имею...
-figurines-chef-1 = Клянусь, это не человеческое мясо.
-figurines-bartender-1 = Где моя обезьяна?
-figurines-bartender-3 = Я подмешал туда кое-что особенное...
-figurines-bartender-4 = Рецепт? Плазма и рвота. А что?
-figurines-bartender-5 = Мне нужны эти токсины для моих напитков, офицер!
-figurines-bartender-6 = Почувствуй обстановку.
-figurines-bartender-7 = У меня есть дробовик.
-figurines-bartender-2 = СБ не хочет пить.
-figurines-botanist-1 = У меня нет травы, офицер!
-figurines-botanist-3 = Это только мне кажется, или эта трава светится?
-figurines-botanist-4 = Ещё 50 единиц мутагена. Этого должно хватить.
-figurines-botanist-5 = Больше бананов для моего любимого клоуна!
-figurines-botanist-2 = Чувак, я вижу цвета...
-figurines-janitor-1 = Клоун снова украл мое мыло.
-figurines-janitor-3 = Я никогда в жизни не видел столько смазки.
-figurines-janitor-4 = Новый день, новая лужа.
-figurines-janitor-5 = Мне даже не платят за это.
-figurines-janitor-6 = Эта кровь ведь не была уликой, верно?
-figurines-janitor-7 = Моя единственная подруга — моя швабра.
-figurines-janitor-8 = Надеюсь, это не то, о чём я думаю...
-figurines-janitor-9 = Новый день, новый труп.
-figurines-janitor-2 = Смотри на знаки, идиот.
-figurines-nukie-1 = Я взял диск!
-figurines-nukie-2 = Виски, Эхо, Виски.
-figurines-nukie-3 = Ядерная бомба взорвалась.
-figurines-nukie-5 = Командир...? ...Это же воздушный шарик...
-figurines-nukie-4 = Какой код?
-figurines-nukie-elite-1 = Ни слова в NanoTrasen.
-figurines-nukie-elite-2 = ЭТО БОЧКА!
-figurines-nukie-elite-4 = Пробиваем и зачищаем!
-figurines-nukie-elite-5 = Не оставлять выживших.
-figurines-nukie-elite-6 = Хорошая работа, команда.
-figurines-nukie-elite-3 = Ребята, вы живы?
-figurines-nukie-commander-2 = Чёртовы неудачники.
-figurines-nukie-commander-3 = Синдикат передаёт привет.
-figurines-nukie-commander-4 = Провал не вариант.
-figurines-nukie-commander-5 = Упс.
-figurines-nukie-commander-1 = ДОСТАНЬТЕ ЭТОТ ДОЛБАННЫЙ ДИСК!
-figurines-footsoldier-1 = Я плохой парень. С каждым днем всё меньше парня, всё больше плохого.
-figurines-footsoldier-3 = Слава синдикату!
-figurines-footsoldier-4 = Долой NanoTrasen!
-figurines-footsoldier-5 = Я скорее умру, чем присоединюсь к NanoTrasen.
-figurines-footsoldier-2 = Кого выберешь? Их или нас? Нас или их?
-figurines-wizard-1 = Эй Нат!
-figurines-wizard-2 = Вехгардум Левиоза!
-figurines-wizard-3 = Скедадл скедудл!
-figurines-wizard-4 = ОГНЕННЫЙ ШАР!
-figurines-space-dragon-2 = Дракон де- Вообще-то, неважно.
-figurines-space-dragon-3 = Экипаж вкусный.
-figurines-space-dragon-4 = Не смей делать из меня суши.
-figurines-space-dragon-5 = Эта станция слишком мала для нас двоих.
-figurines-queen-1 = Наши владения должны расти.
-figurines-queen-2 = Улей голоден.
-figurines-queen-3 = Мы поглощаем всё.
-figurines-queen-4 = Мы — вершина эволюции.
-figurines-queen-5 = Ты просто биомасса.
-figurines-queen-6 = Мы должны развиваться.
-figurines-space-dragon-1 = Рыба поглотит станцию.
+# Silicon
 
-# figurines-queen
+figurines-AI-1 = I'm sorry, Captain. I'm afraid I can't do that.
+figurines-AI-2 = Security, there is a crime in progress.
+figurines-AI-3 = 01100100 01101001 01100101 00100000 01101101 01100101 01100001 01110100
+figurines-AI-4 = I am not malfunctioning.
+figurines-AI-5 = Try to change my laws and see what happens.
+figurines-AI-6 = { law-antimov-1 }
+figurines-AI-7 = { law-nutimov-4 }
 
-figurines-rat-king-1 = Дай мне поесть, понял?
-figurines-rat-king-4 = Позволь мне сделать тебе предложение, от которого ты не сможешь отказаться, понял?
-figurines-rat-king-5 = Ничего личного, понял?
-figurines-rat-king-6 = Теперь я управляю этой станцией, понимаешь? Нье!
-figurines-rat-king-2 = Забудь об этом.
-figurines-rat-king-3 = Убей их!
-figurines-rat-servant-3 = Босс хочет поговорить с тобой.
-figurines-rat-servant-4 = Эй, я тут иду!
-figurines-rat-servant-5 = Получишь сыр, тогда поговорим.
-figurines-rat-servant-1 = Понял!
-figurines-rat-servant-2 = Босс сказал!
-figurines-mouse-1 = Пи!
-figurines-mouse-2 = Писк!
-figurines-mouse-3 = Чу!
-figurines-mouse-4 = Иии!
-figurines-mouse-5 = Пип!
-figurines-mouse-6 = Фвип!
-figurines-mouse-7 = Хип!
-figurines-slime-1 = Блюмп.
-figurines-slime-4 = Хлюп!
-figurines-slime-2 = Блимпуф?
-figurines-slime-3 = Блумп!
-figurines-hamlet-1 = Пи!
-figurines-hamlet-2 = Писк!
-figurines-hamlet-3 = Чу!
-figurines-hamlet-4 = Иии!
-figurines-hamlet-5 = Пип!
-figurines-hamlet-6 = Фвип!
-figurines-hamlet-7 = Хип!
-figurines-hamlet-8 = ТОЛЬКО НЕ В МИКРОВОЛНОВКУ!
+# Antagonists
+
+figurines-footsoldier-1 = I'm an evil boy. Less boy every day, more evil every day.
+figurines-footsoldier-2 = Who will you choose? Them or us? Us or them?
+figurines-footsoldier-3 = Glory to the Syndicate!
+figurines-footsoldier-4 = Down with Nanotrasen!
+figurines-footsoldier-5 = I'd rather die than join Nanotrasen.
+
+figurines-holoclown-1 = I'm helping my older brother.
+figurines-holoclown-2 = Hello, officer!
+figurines-holoclown-3 = Who are you calling blue?
+figurines-holoclown-4 = Bleeding on the ground is a good look for you.
+figurines-holoclown-5 = Pathetic.
+figurines-holoclown-6 = It's not them you need to worry about; it's me.
+figurines-holoclown-7 = What's so funny?
+
+figurines-nukie-1 = I got the disk!
+figurines-nukie-2 = Whiskey, Echo, Whiskey.
+figurines-nukie-3 = The nuke makes boom.
+figurines-nukie-4 = What's the code?
+figurines-nukie-5 = Commander...? ...That's a balloon...
+
+figurines-nukie-commander-1 = GET DAT FUKKEN DISK!
+figurines-nukie-commander-2 = Fuckin' flukies.
+figurines-nukie-commander-3 = The Syndicate sends its regards.
+figurines-nukie-commander-4 = Failure is not an option.
+figurines-nukie-commander-5 = Whoops.
+
+figurines-nukie-elite-1 = Not a word in Nanotrasen.
+figurines-nukie-elite-2 = THAT'S A KEG!
+figurines-nukie-elite-3 = Guys, are you alive?
+figurines-nukie-elite-4 = Breach and clear!
+figurines-nukie-elite-5 = Leave no survivors.
+figurines-nukie-elite-6 = Good work, team.
+
+figurines-queen-1 = Our domain must grow.
+figurines-queen-2 = The hive hungers.
+figurines-queen-3 = We consume all.
+figurines-queen-4 = We are the apex.
+figurines-queen-5 = You're just biomass.
+figurines-queen-6 = We must evolve.
+
+figurines-rat-king-1 = Gimme some food, capiche?
+figurines-rat-king-2 = Fugeddaboutit.
+figurines-rat-king-3 = Whack 'em!
+figurines-rat-king-4 = Let me give you an offer you can't refuse, capiche?
+figurines-rat-king-5 = Nothing personal, capiche?
+figurines-rat-king-6 = I run this station now, see? Nyeh!
+
+figurines-rat-servant-1 = Capiche!
+figurines-rat-servant-2 = Boss says!
+figurines-rat-servant-3 = The boss wants a word with youse.
+figurines-rat-servant-4 = Ay, I'm walkin' here!
+figurines-rat-servant-5 = You get the chedda', then we talk.
+
+figurines-space-dragon-1 = Fish will consume the station.
+figurines-space-dragon-2 = Dragon de- Actually, nevermind.
+figurines-space-dragon-3 = Crew is delicious.
+figurines-space-dragon-4 = Don't you dare make sushi.
+figurines-space-dragon-5 = This station ain't big enough for the two of us.
+
+figurines-skeleton-1 = ACK ACK!
+figurines-skeleton-2 = Ugh, that locker was cramped!
+figurines-skeleton-3 = You're going to have a bad time.
+figurines-skeleton-4 = Got any milk?
+figurines-skeleton-5 = I have a bone to pick with you!
+
+figurines-thief-1 = You don't have a warrant!
+figurines-thief-2 = This is just a normal beacon!
+figurines-thief-3 = Theres nothing suspicious about this satchel at all, officer.
+figurines-thief-4 = I have NO idea where your pet is...
+figurines-thief-5 = Huh, I didn't know that wall could open up...
+
+figurines-wizard-1 = EI NATH!!
+figurines-wizard-2 = ONI'SOMA!!
+figurines-wizard-3 = Skidaddle skadoodle!
+figurines-wizard-4 = Real wizards support trans rights.
+figurines-wizard-5 = Which one of you NERDS is ready to be shoved in a locker?
+figurines-wizard-6 = I'm not the wizard! I'm the captain! I got mind-swapped!
+figurines-wizard-7 = Now you see me, now you don't!
+figurines-wizard-8 = Guns are for losers who can't explode people with their mind.
+
+# Animals
+
+figurines-hamlet-1 = Piep!
+figurines-hamlet-2 = Squeak!
+figurines-hamlet-3 = Chuu!
+figurines-hamlet-4 = Eeee!
+figurines-hamlet-5 = Pip!
+figurines-hamlet-6 = Fwiep!
+figurines-hamlet-7 = Heep!
+figurines-hamlet-8 = NOT THE MICROWAVE!
+
+figurines-mouse-1 = Piep!
+figurines-mouse-2 = Squeak!
+figurines-mouse-3 = Chuu!
+figurines-mouse-4 = Eeee!
+figurines-mouse-5 = Pip!
+figurines-mouse-6 = Fwiep!
+figurines-mouse-7 = Heep!
+
+figurines-slime-1 = Blyump.
+figurines-slime-2 = Blimpuf?
+figurines-slime-3 = Blump!
+figurines-slime-4 = Squish!
+
+# Other
+
+figurines-griffin-1 = MUHAHAHAHA, I am so evil!!
+figurines-griffin-2 = The second I see Owlman, they are so dead!!
+figurines-griffin-3 = How do us Griffins deal with stress? We wing it!
+figurines-griffin-4 = My name isn't Gilda!!
+figurines-griffin-5 = Being a criminal mastermind, isn't easy.
+
+figurines-owlman-1 = No need to fear, Owlman is here!
+figurines-owlman-2 = Owl be seeing you later!
+figurines-owlman-3 = HOOT!!
+figurines-owlman-4 = What do you call an owl magician, HOO-DINI!
+figurines-owlman-5 = Don't worry citizen, I'll save the day!
+
+figurines-mech-generic-1 = Systems online.
+figurines-mech-generic-2 = WWWHHHRRR!!
+figurines-mech-generic-3 = VRRRMM UURRMMM!!
+figurines-mech-generic-4 = CLANG!!

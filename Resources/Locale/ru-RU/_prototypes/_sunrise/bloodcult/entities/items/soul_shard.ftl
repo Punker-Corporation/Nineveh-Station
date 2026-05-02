@@ -1,4 +1,5 @@
-ent-SoulShard = камень душ
-    .desc = Мистический светящийся осколок.
-ent-SoulShardGhost = камень душ
-    .desc = Мистический светящийся осколок.
+ent-SoulShard = осколок души
+    .desc = Таинственный светящийся осколок.
+ent-SoulShardGhost = { ent-SoulShard }
+    .suffix = Роль призрака
+    .desc = { ent-SoulShard.desc }

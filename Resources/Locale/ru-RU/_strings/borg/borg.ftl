@@ -1,61 +1,65 @@
-borg-player-not-allowed = Мозг не помещается!
-borg-player-not-allowed-eject = Мозг был извлечён из корпуса!
+borg-player-not-allowed = Мозг не подходит!
+borg-player-not-allowed-eject = Мозг был исключен из шасси!
+
 borg-panel-not-open = Панель киборга не открыта...
-borg-mind-added = { CAPITALIZE($name) } включается!
-borg-mind-removed = { CAPITALIZE($name) } выключается!
-borg-module-too-many = Для ещё одного модуля не хватает места...
-borg-module-duplicate = Этот модуль уже установлен в этого киборга.
-borg-module-whitelist-deny = Этот модуль не подходит для данного типа киборгов...
-borg-construction-guide-string = Конечности и туловище киборга должны быть прикреплены к эндоскелету.
-borg-ui-menu-title = Интерфейс киборга
-borg-ui-charge-label = Заряд: { $charge }%
+
+borg-mind-added = Включено!
+borg-mind-removed = 0   отключить!
+
+borg-module-too-many = Не хватает места для другого модуля...
+borg-module-duplicate = Этот модуль уже установлен в этом киборге.
+borg-module-whitelist-deny = Этот модуль не вписывается в этот тип киборга.
+
+borg-module-action-name = Активировать  0
+borg-module-action-description = Выберите.0., что позволит вам использовать инструменты, которые он предоставляет.
+
+borg-construction-guide-string = Киборговые конечности и туловище должны быть прикреплены к эндоскелету.
+
+borg-ui-menu-title = Интерфейс Cyborg
+borg-ui-charge-label = Зарядка:  0 %
 borg-ui-no-brain = Мозг отсутствует
-borg-ui-remove-battery = Извлечь
+borg-ui-remove-battery = Удалить
 borg-ui-modules-label = Модули:
-borg-ui-module-counter = { $actual }/{ $max }
+borg-ui-module-counter = {$actual}/{$max}
+
 # Transponder
-borg-transponder-disabled-popup = Мозг вылетает из верхушки { $name }!
-borg-transponder-disabling-popup = Ваш транспондер начинает отсоединять вас от шасси!
-borg-transponder-destroying-popup = Система самоуничтожения { $name } начинает пикать!
-borg-transponder-emagged-disabled-popup = Огни вашего транспондера погасли!
-borg-transponder-emagged-destroyed-popup = Предохранитель вашего транспондера перегорел!
+borg-transponder-disabled-popup = Мозг стреляет сверху!
+borg-transponder-disabling-popup = Ваш транспондер начинает блокировать вас с шасси!
+borg-transponder-destroying-popup = Самоуничтожение  The0 The начинает кричать!
+borg-transponder-emagged-disabled-popup = Свет от транспондера погас!
+borg-transponder-emagged-destroyed-popup = Твой транспондер взрывается!
 
 ## Borg type selection UI.
-
-borg-select-type-menu-title = Выбор типа шасси
+borg-select-type-menu-title = Выберите тип шасси
 borg-select-type-menu-bottom-text = Выбор шасси необратим
 borg-select-type-menu-available = Доступные типы
 borg-select-type-menu-information = Информация
 borg-select-type-menu-select-type = Выберите тип для просмотра информации
 borg-select-type-menu-confirm = Подтвердить выбор
-borg-select-type-menu-guidebook = Руководство
+borg-select-type-menu-guidebook = Путеводитель
 
 ## Borg type information
 
-borg-type-generic-name = Универсальный
-borg-type-generic-desc = Мастер на все руки, но ни в чём не специалист. Выполняет различные задачи в комплекса или помогает научному отделу, который его создал.
-borg-type-generic-transponder = универсальный киборг
-borg-type-engineering-name = Инженерный
-borg-type-engineering-desc = Помогает инженерному отделу в строительстве комплекса, ремонте повреждений или устранении проблем с электричеством и атмосферой.
+borg-type-generic-name = общий
+borg-type-generic-desc = Джек всех профессий, мастер ни одной. Выполняйте различные случайные задачи на станции или, возможно, помогите научному отделу, который вас построил.
+borg-type-generic-transponder = общий киборг
+
+borg-type-engineering-name = Инженерное дело
+borg-type-engineering-desc = Помогите инженерной команде в строительстве станции, ремонте повреждений или устранении электрических и атмосферных проблем.
 borg-type-engineering-transponder = инженерный киборг
-borg-type-mining-name = Утилизационный
-borg-type-mining-desc = Присоединяйтесь к утилизаторам и помогайте им добывать материалы, обыскивать обломки и сражаться с враждебной фауной.
-borg-type-mining-transponder = утилизационный киборг
+
+borg-type-mining-name = спасение
+borg-type-mining-desc = Присоединяйтесь к спасению и помогите им добывать материалы, собирать обломки и бороться с враждебной дикой природой.
+borg-type-mining-transponder = спасательный киборг
+
 borg-type-janitor-name = Уборщик
-borg-type-janitor-desc = Поддерживайте комплекс в чистоте и порядке, убирайте разливы, собирайте и правильно утилизируйте мусор, оставленный ленивыми членами экипажа.
-borg-type-janitor-transponder = киборг-уборщик
-borg-type-medical-name = Медицинский
-borg-type-medical-desc = Оказывайте медицинскую помощь нуждающимся членам экипажа, как в медотсеке, так и в опасных зонах комплекса, недоступных обычным парамедикам.
+borg-type-janitor-desc = Держите станцию красивой и опрятной, убирайте разливы, собирайте и правильно утилизируйте мусор, оставленный ленивыми членами экипажа.
+borg-type-janitor-transponder = уборщик киборг
+
+borg-type-medical-name = медицинский
+borg-type-medical-desc = Оказывать медицинскую помощь экипажу, который в ней нуждается, либо в медбае, либо в опасных зонах обычные фельдшеры не могут.
 borg-type-medical-transponder = медицинский киборг
-borg-type-service-name = Сервисный
-borg-type-service-desc = Помогайте с широким спектром услуг для экипажа: от подачи закусок и напитков до ботаники и развлечений.
+
+borg-type-service-name = Сервис
+borg-type-service-desc = Помогите с широким спектром услуг экипажа, начиная от подачи закусок и напитков до ботаники и развлечений.
 borg-type-service-transponder = сервисный киборг
-borg-type-clown-name = Клоун
-borg-type-clown-desc = Развлекайте экипаж комплекса, используя встроенные инструменты для создания веселья. ХОНК! Идеальное сочетание комедии и кибернетики.
-borg-type-clown-transponder = киборг-клоун
-borg-type-peace-name = Миротворец
-borg-type-peace-desc = Поддерживайте мир и порядок в комплексе, используя ненасильственные методы. Оснащён специальными модулями для деэскалации конфликтов и защиты гражданских.
-borg-type-peace-transponder = киборг-миротворец
-borg-type-security-name = Охранник
-borg-type-security-desc = Защищайте экипаж и имущество комплекса, патрулируя коридоры и реагируя на чрезвычайные ситуации. Оснащён передовыми системами обнаружения угроз и защитным оборудованием.
-borg-type-security-transponder = киборг-охранник

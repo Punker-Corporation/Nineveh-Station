@@ -1,2 +1,4 @@
-ent-GhostChangeTheme = Сменить тему призрака
-    .desc = Позволяет вам изменить скин призрака.
+ent-GhostChangeTheme = Изменить тему призрака
+    .desc = Позволяет изменить кожу призрака.
+ent-StopFollowAction = { "" }
+    .desc = { "" }

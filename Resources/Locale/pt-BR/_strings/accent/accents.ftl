@@ -1,5 +1,5 @@
 # Cat accent
-accent-words-cat-1 = Miau!
+accent-words-cat-1 = Mrr.
 accent-words-cat-2 = Miau.
 accent-words-cat-3 = Purrrr!
 accent-words-cat-4 = Ahhhhhh!

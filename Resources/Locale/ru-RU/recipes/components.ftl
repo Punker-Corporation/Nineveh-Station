@@ -1,7 +1,8 @@
-construction-graph-component-any-computer-circuit-board = любая плата компьютера
-construction-graph-component-door-electronics-circuit-board = плата электроники двери
-construction-graph-component-flash = вспышка
-construction-graph-component-second-flash = вторая вспышка
-construction-graph-component-power-cell = батарея
-construction-graph-component-apc-electronics = электроника ИБП
-construction-graph-component-payload-trigger = триггер
+construction-graph-component-any-computer-circuit-board = any computer circuit board
+construction-graph-component-door-electronics-circuit-board = door electronics circuit board
+construction-graph-component-flash = flash
+construction-graph-component-second-flash = second flash
+construction-graph-component-power-cell = power cell
+construction-graph-component-apc-electronics = APC electronics
+construction-graph-component-payload-trigger = trigger
+construction-graph-component-borg-brain = MMI or positronic brain

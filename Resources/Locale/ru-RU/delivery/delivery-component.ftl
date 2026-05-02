@@ -1,24 +1,34 @@
-delivery-recipient-examine = Это предназначено для { $recipient }, { $job }.
-delivery-already-opened-examine = Это уже было открыто.
-delivery-earnings-examine = Доставка этого принесет комплексу [color=yellow]{ $spesos }[/color] денег.
-delivery-recipient-no-name = Безымянный
-delivery-recipient-no-job = Неизвестно
-delivery-unlocked-self = Вы разблокировали { $delivery } своим отпечатком пальца.
-delivery-opened-self = Вы открыли { $delivery }.
-delivery-unlocked-others = { CAPITALIZE($recipient) } разблокировал { $delivery } { POSS-ADJ($possadj) } отпечатком пальца.
-delivery-opened-others = { CAPITALIZE($recipient) } открыл { $delivery }.
-delivery-unlock-verb = Разблокировать
-delivery-open-verb = Открыть
-delivery-slice-verb = Открыто
+delivery-recipient-examine = This one is meant for {$recipient}, {$job}.
+delivery-already-opened-examine = It was already opened.
+delivery-earnings-examine = Delivering this will earn the station [color=yellow]{$spesos}[/color] spesos.
+delivery-recipient-no-name = Unnamed
+delivery-recipient-no-job = Unknown
+
+delivery-unlocked-self = You unlock the {$delivery} with your fingerprint.
+delivery-opened-self = You open the {$delivery}.
+delivery-unlocked-others = {CAPITALIZE($recipient)} unlocked the {$delivery} with {POSS-ADJ($possadj)} fingerprint.
+delivery-opened-others = {CAPITALIZE($recipient)} opened the {$delivery}.
+
+delivery-unlock-verb = Unlock
+delivery-open-verb = Open
+delivery-slice-verb = Slice open
+
 delivery-teleporter-amount-examine =
     { $amount ->
-        [one] Содержит [color=yellow]{ $amount }[/color] посылку.
-       *[other] Содержит [color=yellow]{ $amount }[/color] посылок.
+        [one] It contains [color=yellow]{$amount}[/color] delivery.
+        *[other] It contains [color=yellow]{$amount}[/color] deliveries.
     }
-delivery-teleporter-empty = { $entity } пуст.
-delivery-teleporter-empty-verb = заберите посылки
+delivery-teleporter-empty = The {$entity} is empty.
+delivery-teleporter-empty-verb = Take mail
+
+
 # modifiers
-delivery-priority-examine = [color=orange]В ПРИОРИТЕТЕ![/color]. У вас осталось [color=orange]{ $time }[/color] чтобы получить бонус.
-delivery-priority-expired-examine = [color=orange]В ПРИОРИТЕТЕ![/color]. Кажется, у вас закончилось время..
-delivery-fragile-examine = [color=red]ОСТОРОЖНО ХРУПКОЕ![/color]. Принесите в сохраности чтобы получить бонус.
-delivery-fragile-broken-examine = [color=red]ОСТОРОЖНО ХРУПКОЕ![/color]. Кажется там что-то уже разбилось...
+delivery-priority-examine = This is a [color=orange]priority {$type}[/color]. You have [color=orange]{$time}[/color] left to deliver it to get a bonus.
+delivery-priority-delivered-examine = This is a [color=orange]priority {$type}[/color]. It got delivered on time.
+delivery-priority-expired-examine = This is a [color=orange]priority {$type}[/color]. It ran out of time.
+
+delivery-fragile-examine = This is a [color=red]fragile {$type}[/color]. Deliver it intact for a bonus.
+delivery-fragile-broken-examine = This is a [color=red]fragile {$type}[/color]. It looks badly damaged.
+
+delivery-bomb-examine = This is a [color=purple]bomb {$type}[/color]. Oh no.
+delivery-bomb-primed-examine = This is a [color=purple]bomb {$type}[/color]. Reading this is a bad use of your time.

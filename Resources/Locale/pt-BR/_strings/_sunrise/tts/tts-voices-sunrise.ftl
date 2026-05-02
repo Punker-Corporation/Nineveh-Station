@@ -1,4 +1,4 @@
-tts-voice-name-minkir = [SS14] Minkir
+tts-voice-name-minkir = [Nineveh] Minkir
 tts-voice-name-jirinovskiy = Zhirinovsky
 tts-voice-name-maksim-poltavskiy = Maxim Poltavsky
 tts-voice-name-sb-squidward = Squidward 2, 0
@@ -18,7 +18,7 @@ tts-voice-name-scp-079 = SCP-079
 tts-voice-name-ludvig = Ludwig A.
 tts-voice-name-icarus-revenge = [Lust-Moderador] IcarusRevenge
 tts-voice-name-hearthstone-thrud = [Hearthstone] Negociação
-tts-voice-name-kendrick = [SS14]Kendrick
+tts-voice-name-kendrick = [Nineveh] Kendrick
 tts-voice-name-splikzerys = [SUNRISE] SplikZerys
 tts-voice-name-dota2-riki = [Dota 2]Ricky
 tts-voice-name-dota2-pudge = [Dota 2] Pudim

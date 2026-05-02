@@ -1,6 +1,11 @@
 ent-ScpAirlockExit = { ent-ScpAirlockRCDResistant }
-    .suffix = { access-name-exit }
+    .suffix = SCP, выход
     .desc = { ent-ScpAirlockRCDResistant.desc }
 ent-ScpAirlockExitGlass = { ent-ScpAirlockExit }
-    .suffix = { access-name-exit }, стеклянный
+    .suffix = SCP Glass, выход
     .desc = { ent-ScpAirlockExit.desc }
+ent-ScpAirlockExternal = { ent-ScpAirlockRCDResistant }
+    .desc = { ent-ScpAirlockRCDResistant.desc }
+ent-ScpAirlockExternalGlass = { ent-ScpAirlockExternal }
+    .suffix = Стекло SCP, внешнее
+    .desc = { ent-ScpAirlockExternal.desc }

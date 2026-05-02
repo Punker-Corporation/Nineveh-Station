@@ -1,8 +1,8 @@
 - type: entity
-  name: lanterna de instabilidade quântica
+  name: lanterna tática de inspeção
   parent: BaseItem
   id: QuantumInstabilityFlashlight
-  description: Um dispositivo de iluminação experimental. A luz parece viva e perturbada.
+  description: Um módulo óptico de campo com foco cônico, dissipação térmica e contatos sensíveis. A luz não promete conforto; ela apenas revela o que já estava perto.
   components:
   - type: Sprite
     sprite: Objects/Tools/flashlight.rsi

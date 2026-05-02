@@ -1,13 +1,10 @@
-ent-MobHellspawnBossSpawn = { ent-MobHellspawn }
-    .desc = { ent-MobHellspawn.desc }
 ent-MobHellspawnBoss = { ent-MobHellspawn }
+    .suffix = Босс
     .desc = { ent-MobHellspawn.desc }
-ent-ComputerBossTravel = алтарь битвы с боссом
+ent-ComputerBossTravel = Боевой алтарь
     .desc = { ent-AltarFangs.desc }
 ent-HellSpawnCultist = { ent-MobHuman }
     .desc = { ent-MobHuman.desc }
-ent-HellSpawnCultistDummy = { ent-MobHuman }
-    .desc = { ent-MobHuman.desc }
-ent-BulletSkyFlare = шар пламени
+ent-BulletSkyFlare = небесная вспышка
     .suffix = Босс
     .desc = { ent-BaseBulletIncendiary.desc }

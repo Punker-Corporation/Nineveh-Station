@@ -1,5 +1,4 @@
-set-mind-command-description = Перемещает сознание в указанную сущность. Сущность должна иметь { $requiredComponent }. По умолчанию это заставит разум, который в данный момент посещает другие сущности, вернуться обратно (т.е. вернуть призрака в своё основное тело).
-set-mind-command-help-text = Использование: { $command } <entityUid> <username> [unvisit]
-set-mind-command-target-has-no-content-data-message = Целевой игрок не имеет данных о содержимом (wtf?)
-set-mind-command-target-has-no-mind-message = Целевая сущность не обладает разумом (вы забыли сделать её разумной?)
-cmd-mind-command-hint = имя пользователя
+cmd-setmind-desc = Переносит ум в указанную сущность. Предприятие должно иметь.0.. По умолчанию это заставит умы, которые в настоящее время посещают другие сущности, вернуться (т.е. вернуть призрак в свое основное тело).
+cmd-setmind-help = Использование: s0s <entityUid> <username>  1
+cmd-setmind-command-target-has-no-content-data-message = У целевого игрока нет данных контента (wtf?)
+cmd-setmind-command-target-has-no-mind-message = Целевая сущность не имеет разума (забыли ли вы сделать разумным?)

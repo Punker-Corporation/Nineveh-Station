@@ -57,12 +57,12 @@ cmd-blacklistremove-arg-player = [player]
 
 panic-bunker-account-denied = Este servidor está no modo "Bunker", frequentemente usado como precaução contra ataques. Novas conexões de contas que não atendam a determinados requisitos não serão aceitas temporariamente. Por favor, tente novamente mais tarde
 panic-bunker-account-denied-reason = Este servidor está no modo "Bunker", frequentemente usado como precaução contra ataques. Novas conexões de contas que não atendam a determinados requisitos não serão aceitas temporariamente. Tente novamente mais tarde Motivo: "{ $reason }"
-panic-bunker-account-reason-account = Sua conta da Estação Espacial 14 é muito nova. Deve ter mais de { $minutes } minutos
+panic-bunker-account-reason-account = Sua conta Nineveh ainda é recente demais para atravessar o bloqueio. Ela precisa ter mais de { $minutes } minutos.
 panic-bunker-account-reason-overall = Seu tempo de jogo global no servidor deve ser maior do que {$minutes} $minutos
 
-baby-jail-account-denied = Este servidor é destinado a iniciantes e àqueles que desejam ajudá-los. Novas conexões de contas muito antigas ou que não estejam na lista de permissões não serão aceitas. Experimente outros servidores e veja o que mais a Estação Espacial 14 tem a oferecer. Boa sorte!
-baby-jail-account-denied-reason = Este servidor é destinado a iniciantes e àqueles que desejam ajudá-los. Novas conexões de contas muito antigas ou que não estejam na lista de permissões não serão aceitas. Experimente outros servidores e veja o que mais a Estação Espacial 14 tem a oferecer. Boa sorte! Motivo: "{ $reason }"
-baby-jail-account-reason-account = Sua conta da Estação Espacial 14 é muito antiga. Deve ter menos de { $minutes } minutos.
+baby-jail-account-denied = Este servidor está em regime de contenção para novos jogadores e equipe de apoio. Conexões fora desse perfil não serão aceitas durante o playtest.
+baby-jail-account-denied-reason = Este servidor está em regime de contenção para novos jogadores e equipe de apoio. Conexões fora desse perfil não serão aceitas durante o playtest. Motivo: "{ $reason }"
+baby-jail-account-reason-account = Sua conta excede a janela permitida para este regime de contenção. Ela precisa ter menos de { $minutes } minutos.
 baby-jail-account-reason-overall = Seu tempo total de jogo no servidor deve ser inferior a { $minutes } minutos.
 hwid-required = Seu cliente recusou-se a enviar o ID do hardware. Entre em contato com a equipe administrativa para obter mais assistência.
 generic-misconfigured = O servidor não está configurado corretamente e não aceita jogadores. Entre em contato com o proprietário do servidor e tente novamente mais tarde.

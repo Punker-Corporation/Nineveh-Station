@@ -1,3 +1,4 @@
-salvage-faction-scrappers = Мусорщики
-salvage-faction-pirates = Пираты
-salvage-faction-freelancers = Фрилансеры
+salvage-faction-scrappers = Щелкуны
+salvage-faction-pirates = пират
+salvage-faction-freelancers = внештатный
+salvage-faction-soviets = Коммунизм

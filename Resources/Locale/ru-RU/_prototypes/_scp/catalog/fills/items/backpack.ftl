@@ -1,4 +1,6 @@
-ent-MtfTacticalBackpackFilled = { ent-MtfTacticalBackpack }
-    .desc = { ent-MtfTacticalBackpack.desc }
-ent-MtfTacticalBackpackMedFilled = { ent-MtfTacticalBackpackMed }
-    .desc = { ent-MtfTacticalBackpackMed.desc }
+ent-MtfTacticalBackpackFilled = тактический рюкзак
+    .desc = Просторный тактический контейнер с усиленными швами. Конструкция предназначена для длительного использования в полевых условиях.
+    .suffix = MTF заполнено
+ent-MtfTacticalBackpackMedFilled = тактический рюкзак
+    .desc = Просторный тактический контейнер с усиленными швами. Конструкция предназначена для длительного использования в полевых условиях.
+    .suffix = MTF заполнено

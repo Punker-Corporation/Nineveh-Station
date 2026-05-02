@@ -1,30 +1,30 @@
 ## General stuff
 
-ui-options-title = Configurações do jogo
-ui-options-tab-accessibility = Disponibilidade
-ui-options-tab-admin = Administrador
+ui-options-title = Ajustes de Nineveh
+ui-options-tab-accessibility = Acessibilidade
+ui-options-tab-admin = Administração
 ui-options-tab-graphics = Gráficos
-ui-options-tab-controls = Controlar
+ui-options-tab-controls = Controles
 ui-options-tab-audio = Áudio
-ui-options-tab-network = Líquido
-ui-options-tab-misc = Básico
+ui-options-tab-network = Rede
+ui-options-tab-misc = Sistema
 ui-options-apply = Salvar e aplicar
 ui-options-reset-all = Redefinir alterações
-ui-options-default = Redefinir para as configurações padrão
+ui-options-default = Restaurar perfil padrão
 ui-options-value-percent = { TOSTRING($value, "P0") }
-ui-options-language = Idioma do pesadelo:
-ui-options-language-portuguese = Português — diário de ruína
-ui-options-language-russian = Russo - Protocolo Frio
+ui-options-language = Idioma:
+ui-options-language-portuguese = Português do Brasil
+ui-options-language-russian = Russo
 
 # Menu /General Diversos
 
 ui-options-discordrich = Ativar presença rica no Discord
-ui-options-general-ui-style = Interface e língua
-ui-options-general-discord = Discórdia
+ui-options-general-ui-style = Interface e idioma
+ui-options-general-discord = Integração externa
 ui-options-general-cursor = Cursor
 ui-options-general-speech = Discurso
 ui-options-general-storage = Inventário
-ui-options-general-accessibility = Disponibilidade
+ui-options-general-accessibility = Acessibilidade
 
 ## Audio menu
 
@@ -65,8 +65,9 @@ ui-options-fullscreen = Tela cheia
 ui-options-lighting-label = Qualidade de iluminação:
 ui-options-lighting-very-low = Muito baixo
 ui-options-lighting-low = Baixo
-ui-options-lighting-medium = Média
+ui-options-lighting-medium = Médio
 ui-options-lighting-high = Alto
+ui-options-lighting-extreme = Extremo Nineveh
 ui-options-scale-label = Escala da IU:
 ui-options-scale-auto = Automático ({ TOSTRING($scale, "P0") })
 ui-options-scale-75 = 75%
@@ -83,22 +84,18 @@ ui-options-hud-theme-clockwork = Mecanismo
 ui-options-hud-theme-retro = Retrô
 ui-options-hud-theme-minimalist = Minimalismo
 ui-options-hud-theme-ashen = Cinzas
-ui-options-hud-layout-default = Regular (para Virgem)
-ui-options-hud-layout-separated = Separado (para Chade)
+ui-options-hud-layout-default = Regular
+ui-options-hud-layout-separated = Separado
 ui-options-vp-stretch = Estique a imagem para caber na janela do jogo
 ui-options-vp-scale = Escala fixa da janela do jogo:
 ui-options-vp-scale-value = x { $scale }
 ui-options-vp-integer-scaling = Use escala inteira (pode causar barras pretas/recortes)
-ui-options-vp-integer-scaling-tooltip = Se esta opção estiver habilitada, a janela será dimensionada usando um valor inteiro
-                                        em resoluções específicas. Enquanto isso resulta em texturas nítidas, também muitas vezes
-                                        significa que barras pretas aparecem no topo /bottom da tela ou dessa parte
-                                        do viewport não é visível.
-ui-options-vp-vertical-fit = Ajustando a viewport verticalmente
-ui-options-vp-vertical-fit-tooltip = Quando activada, a janela principal irá ignorar o eixo horizontal completamente quando
-                                     ajuste ao seu ecrã. Se o seu ecrã é menor que o viewport, então isto
-                                     fará com que o viewport seja cortado no eixo horizontal.
-ui-options-vp-low-res = Imagem de baixa resolução
-ui-options-parallax-low-quality = Paralaxe de baixa qualidade (fundo)
+ui-options-vp-integer-scaling-tooltip = Quando ativo, a janela usa escala inteira. A imagem fica mais nítida,
+                                        mas pode criar barras pretas ou cortes em resoluções fora do alvo.
+ui-options-vp-vertical-fit = Ajuste vertical da viewport
+ui-options-vp-vertical-fit-tooltip = Quando ativo, a viewport prioriza o eixo vertical e pode cortar laterais em monitores estreitos.
+ui-options-vp-low-res = Renderização interna em alta resolução
+ui-options-parallax-low-quality = Reduzir qualidade da paralaxe
 ui-options-fps-counter = Mostrar contador de FPS
 ui-options-vp-width = Largura da janela do jogo:
 ui-options-hud-layout = Tipo de HUD:
@@ -133,7 +130,7 @@ ui-options-function-move-up = Subir
 ui-options-function-move-left = Mover para a esquerda
 ui-options-function-move-down = Mover para baixo
 ui-options-function-move-right = Mover para a direita
-ui-options-function-walk = Ir
+ui-options-function-walk = Andar
 ui-options-function-camera-rotate-left = Vire à esquerda
 ui-options-function-camera-rotate-right = Vire para a direita
 ui-options-function-camera-reset = Redefinir câmera
@@ -184,7 +181,7 @@ ui-options-function-open-character-menu = Abrir menu de personagens
 ui-options-function-open-context-menu = Abrir menu de contexto
 ui-options-function-open-crafting-menu = Abrir menu de construção
 ui-options-function-open-inventory-menu = Equipamento aberto
-ui-options-function-open-a-help = Abra a ajuda do administrador
+ui-options-function-open-a-help = Abrir canal de suporte administrativo
 ui-options-function-open-abilities-menu = Abrir menu de ação
 ui-options-function-open-emotes-menu = Abrir menu de emotes
 ui-options-function-toggle-round-end-summary-window = Alternar janela de resumo redondo
@@ -192,8 +189,8 @@ ui-options-function-open-entity-spawn-window = Abrir menu de geração de entida
 ui-options-function-open-sandbox-window = Abra o menu da área restrita
 ui-options-function-open-tile-spawn-window = Abrir menu de geração de blocos
 ui-options-function-open-decal-spawn-window = Abrir menu de geração de decalques
-ui-options-function-open-admin-menu = Abra o menu de administração
-ui-options-function-open-guidebook = Guia aberto
+ui-options-function-open-admin-menu = Abrir console administrativo
+ui-options-function-open-guidebook = Abrir guia
 ui-options-function-window-close-all = Feche todas as janelas
 ui-options-function-window-close-recent = Fechar janela atual
 ui-options-function-show-escape-menu = Alternar menu do jogo
@@ -210,7 +207,7 @@ ui-options-function-editor-flip-object = Virar
 ui-options-function-editor-copy-object = Cópia
 ui-options-function-show-debug-console = Abrir console
 ui-options-function-show-debug-monitors = Mostrar informações de depuração
-ui-options-function-inspect-entity = Estude a essência
+ui-options-function-inspect-entity = Inspecionar entidade
 ui-options-function-hide-ui = Ocultar interface
 ui-options-function-hotbar1 = 1 slot para barra quente
 ui-options-function-hotbar2 = 2 slots para hotbar

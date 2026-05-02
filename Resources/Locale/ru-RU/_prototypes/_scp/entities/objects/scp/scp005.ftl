@@ -1,2 +1,3 @@
-ent-Scp005 = старинный ключ
-    .desc = Витиеватый ключ, по характеристикам не отличающийся от серийно выпускаемых ключей 1920-х годов.
+ent-Scp005 = { ent-BaseItemScp }
+    .suffix = SCP-005
+    .desc = { ent-BaseItemScp.desc }

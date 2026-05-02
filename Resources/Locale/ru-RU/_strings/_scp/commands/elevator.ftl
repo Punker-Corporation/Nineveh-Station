@@ -1,0 +1,17 @@
+elevator-manage-floors-desc = Управляет этажами указанного лифта: добавлять, удалять, перемещать или перечислять.
+elevator-manage-floors-help = Использование: s0s <elevator id> <action> s1s s2s\nДействия: добавьте <floor name>, удалите <floor name>, переместите <floor name> <direction>, перечислите\nНаправления для перемещения: вверх, вниз или индексный номер
+elevator-manage-floors-not-found = Лифт с идентификатором «.0.» не найден.
+elevator-manage-floors-floor-exists = Пол «.0.» уже существует в лифте «.1.».
+elevator-manage-floors-added = Добавлен пол '.0.' к лифту '.1.'. Текущие этажи: s2s
+elevator-manage-floors-floor-not-exists = Пол «.0.» не существует в лифте «.1.».
+elevator-manage-floors-cannot-remove-current = Невозможно убрать текущий пол «.0.» с лифта «.1.».
+elevator-manage-floors-removed = Снятый пол ".0." с лифта ".1.". Текущие этажи: s2s
+elevator-manage-floors-list = Полы для лифта ' 0 ':  1 \n Текущий пол:  2 
+elevator-manage-floors-move-help = Для действия «move» укажите имя и направление: )0) <elevator id> move <floor name> <direction>\nDirections: up, down, or index number (0-based)
+elevator-manage-floors-already-top = Пол «.0.» уже на вершине.
+elevator-manage-floors-already-bottom = Пол «.0.» уже на дне.
+elevator-manage-floors-invalid-index = Недействительный индекс «.0.». Должно быть от 0 до 1.
+elevator-manage-floors-unknown-direction = Неизвестное направление «.0.». Используйте «вверх», «вниз» или действительный индексный номер.
+elevator-manage-floors-moved = Перемещение пола '.0.' в положение.1.. Текущие этажи: s2s
+elevator-manage-floors-unknown-action = Неизвестное действие «.0.». Действительные действия: добавлять, удалять, перемещать, перечислять.
+elevator-manage-floors-args-error = Ожидалось не менее 2 аргументов: elevator id и action.
