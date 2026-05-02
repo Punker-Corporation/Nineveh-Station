@@ -14,6 +14,7 @@ namespace Content.Shared.Localizations
         [Dependency] private readonly IConfigurationManager _cfg = default!;
 
         public const string PortugueseCulture = "pt-BR";
+        public const string RussianCulture = "ru-RU";
 
         /// <summary>
         /// Formatos aceitos para tempos minutos:segundos no painel de administração.
@@ -50,7 +51,11 @@ namespace Content.Shared.Localizations
 
         private static string NormalizeCultureName(string cultureName)
         {
-            return PortugueseCulture;
+            return cultureName switch
+            {
+                RussianCulture => RussianCulture,
+                _ => PortugueseCulture
+            };
         }
 
         private void EnsureCultureLoaded(CultureInfo culture)
@@ -136,12 +141,14 @@ namespace Content.Shared.Localizations
         /// </summary>
         public static string FormatList(List<string> list)
         {
+            var separator = IsRussianCulture() ? " и " : " e ";
+
             return list.Count switch
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} e {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))} e {list[^1]}"
+                2 => $"{list[0]}{separator}{list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}{separator}{list[^1]}"
             };
         }
 
@@ -150,12 +157,14 @@ namespace Content.Shared.Localizations
         /// </summary>
         public static string FormatListToOr(List<string> list)
         {
+            var separator = IsRussianCulture() ? " или " : " ou ";
+
             return list.Count switch
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} ou {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))} ou {list[^1]}"
+                2 => $"{list[0]}{separator}{list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}{separator}{list[^1]}"
             };
         }
 
@@ -163,6 +172,11 @@ namespace Content.Shared.Localizations
         {
             var loc = IoCManager.Resolve<ILocalizationManager>();
             return loc.DefaultCulture ?? CultureInfo.GetCultureInfo(PortugueseCulture);
+        }
+
+        private static bool IsRussianCulture()
+        {
+            return GetCurrentCulture().Name == RussianCulture;
         }
 
         /// <summary>
