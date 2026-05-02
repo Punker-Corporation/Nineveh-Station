@@ -58,5 +58,5 @@ ent-SignScpHead = Sinal de "Chefe de Departamento"
     .desc = Aparentemente, na sua frente está a sala do chefe de algum departamento, um funcionário de alto escalão do complexo SCP.
 ent-SignScpCSS = assinar "Recrutar com inteligência artificial"
     .desc = Aparentemente, este é um centro de hospedagem e gerenciamento de inteligência artificial.
-ent-SignScpDLawBoardHyperLink = conselho jurídico classe D
-    .desc = Quadro com documentação anexa sobre o código legal da classe D. Há um livro pendurado ao lado para completa familiarização com o códice. [Нажмите Е для открытия Wiki]
+ent-SignScpDLawBoardHyperLink = Conselho de Direito da Classe D
+    .desc = Uma placa com documentação anexa sobre o código legal de classe D. Um livro fica de lado para uma completa familiarização com o código. [Press E to open Wiki]

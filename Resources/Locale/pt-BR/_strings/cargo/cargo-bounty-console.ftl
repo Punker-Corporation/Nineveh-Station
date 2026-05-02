@@ -4,8 +4,8 @@ bounty-console-skip-button-text = Pular
 bounty-console-time-label = Hora: [color=orange]{ $time }[/color]
 bounty-console-reward-label = Recompensa: [color=limegreen]${ $reward }[/color]
 bounty-console-manifest-label = Manifesto: [color=orange]{ $item }[/color]
-bounty-console-manifest-entry = 
-    { $amount -> 
+bounty-console-manifest-entry =
+    { $amount ->
     [1] { $item }
    *[other] { $item } x{ $amount }
  }
@@ -14,6 +14,7 @@ bounty-console-description-label = [color=gray]{ $description }[/color]
 bounty-console-id-label = EU IA #{ $id }
 bounty-console-flavor-left = Consultas recebidas de comerciantes locais sem escrúpulos.
 bounty-console-flavor-right = v1.4
+
 bounty-manifest-header = [font size=14][bold]Manifesto de solicitação oficial[/bold] (ID #{ $id })[/font]
 bounty-manifest-list-start = Manifesto:
 bounty-console-tab-available-label = Disponível

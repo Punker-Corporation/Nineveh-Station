@@ -111,3 +111,14 @@ ent-ScpLockerThirdParty = { ent-LockerBase }
     .desc = { ent-LockerBase.desc }
 ent-ScpLockerPrisoner = armário do prisioneiro
     .desc = Um armário seguro para os pertences pessoais de um prisioneiro durante sua estada na prisão.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpLockerAdministration = armário de administração
+    .desc = { ent-BaseAdministrationLocker.desc }
+
+ent-LockerExternalAdministrativeZoneFieldDoctor = eaz campo médico armário
+    .desc = { ent-LockerBaseSecure.desc }
+
+ent-LockerHeavyContainmentZoneFieldDoctor = hcz armário médico campo
+    .desc = { ent-LockerBaseSecure.desc }

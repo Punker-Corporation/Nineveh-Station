@@ -15,3 +15,25 @@ loadout-group-storage = Com você
 loadout-group-weapon = Arma de serviço
 loadout-group-weapon-secondary = Armas Adicionais
 loadout-group-mask = Máscara
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+loadout-group-contributors = Contribuidores
+
+loadout-group-pants = Calças
+
+loadout-group-bra = Sutiã
+
+loadout-group-socks = Meias
+
+loadout-group-security-trinkets = Trinkets de segurança
+
+loadout-group-cargo-trinkets = Trinkets de carga
+
+loadout-group-engineering-trinkets = Trinkets de Engenharia
+
+loadout-group-medical-trinkets = Trinkets Médicos
+
+loadout-group-prison-trinkets = Trinkets de prisão
+
+loadout-group-bodycam = Câmara Corporal

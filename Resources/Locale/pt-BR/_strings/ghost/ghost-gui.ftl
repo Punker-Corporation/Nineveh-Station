@@ -17,18 +17,16 @@ ghost-target-window-warp-to-most-followed = Teletransporte-se para o mais seguid
 ghost-roles-window-title = Papéis fantasmas
 ghost-roles-window-available-button = Disponível ({ $rolesCount })
 ghost-roles-window-join-raffle-button = Participe do sorteio
-ghost-roles-window-raffle-in-progress-button = 
-    Участвовать в лотерее (Осталось { $time }, { $players -> 
-    [one] { $players } игрок
-    [few] { $players } игрока
-   *[other] { $players } игроков
- })
-ghost-roles-window-leave-raffle-button = 
-    Покинуть (Осталось { $time }, { $players -> 
-    [one] { $players } игрок
-    [few] { $players } игрока
-   *[other] { $players } игроков
- })
+ghost-roles-window-raffle-in-progress-button =
+    Join raffle ({$time} left, { $players ->
+         [one] Jogador {$players}
+        *[other] Jogadores de {$players}
+    })
+ghost-roles-window-leave-raffle-button =
+    Leave raffle ({$time} left, { $players ->
+         [one] Jogador {$players}
+        *[other] Jogadores de {$players}
+    })
 ghost-roles-window-request-role-button = Solicitar
 ghost-roles-window-request-role-button-timer = Solicitação ({ $time }seg.)
 ghost-roles-window-rules-role-button = Regras

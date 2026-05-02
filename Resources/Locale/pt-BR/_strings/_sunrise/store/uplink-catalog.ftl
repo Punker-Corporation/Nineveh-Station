@@ -130,7 +130,7 @@ uplink-goldendeagle-name = Águia Sobremesa Dourada
 uplink-goldendeagle-desc = Usa um cartucho magnum calibre .45. Gravado: "Tudo o que me resta dele são duas Desert Eagles calibre .45 banhadas a ouro."
 uplink-mini-energy-crossbow-name = besta de energia biocodificada
 uplink-mini-energy-crossbow-desc = A principal arma de um agente que prefere alvos fixos. Dispara raios tóxicos regeneradores que derrubam instantaneamente a vítima no chão. Opção com biocodificação.
-uplink-pistoltec9-name = Tac-Tec
+uplink-pistoltec9-name = Tac- Tec
 uplink-pistoltec9-desc = Muito barato de produzir e muito fácil de usar, confiável como o SKM-24.
 uplink-grenade-launcher-m79-name = M79
 uplink-grenade-launcher-m79-desc = Um antigo lançador de granadas de tiro único com três granadas cronometradas contra a infantaria.
@@ -249,3 +249,46 @@ uplink-syndicate-teleporter-desc = Dispositivo experimental de teletransporte ma
 
 ## Disruption
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+uplink-exploding-syndicate-empbomb-desc = Uma bomba EMP grande e ancorada que aleija a electrónica, se não desactivada no tempo. Temporizador ajustável com uma configuração mínima de 180 segundos; perfeito para derrubar a infraestrutura.
+## Revistas
+
+
+uplink-grenade-frag-name = Granada de fragmentação
+
+uplink-grenade-frag-desc = Uma granada de estilhaços. Compatível com China-Lake.
+
+uplink-grenade-blast-name = Granada de alta explosão
+
+uplink-grenade-blast-desc = Granada altamente explosiva. Compatível com China-Lake.
+
+uplink-cornivoregloves-name = Luvas de colheita escarlate Cornívoros
+
+uplink-cornivoregloves-desc = Não sabemos se tens sede de sangue. Mas estas luvas são mesmo. Cada garra é uma ferramenta cirúrgica de sangria, preenchendo o seu alvo com o nosso cocktail químico. A sua vítima expirará, expirará e expirará. Enquanto pensas na próxima incisão. Lembra-te, o vermelho é o novo preto. E está sempre na moda.
+
+uplink-proto-adrenal-implanter-name = Implante proto-adrenal
+
+uplink-proto-adrenal-implanter-desc = Injeta uma pequena dose de efedrina e epinefrina na ativação.
+
+uplink-adrenal-implanter-name = Implante Adrenal
+
+uplink-adrenal-implanter-desc = Injeta uma dose forte de efedrina e epinefrina na ativação.
+
+uplink-stimpack-implanter-name = Implante Stimack
+
+uplink-stimpack-implanter-desc = Injeta uma grande dose de estimulantes na ativação.
+
+uplink-nutriment-implanter-name = Implante de Nutrição
+
+uplink-nutriment-implanter-desc = Injeta vitaminas, soro fisiológico e nutrientes na ativação.
+
+
+uplink-cleaner-kit-name = Kit de limpeza da máfia
+
+uplink-cleaner-kit-desc = Limpe qualquer prova, certifique-se que não pode ser rastreada até si.
+
+
+uplink-homerun-bat-name = Morcego de Homerun
+
+uplink-homerun-bat-desc = Manda os teus inimigos voarem. Ei bate bate bate bate swing bate!

@@ -102,3 +102,9 @@ reagent-desc-paloma = Cowboys no topo. Abaixo estão as maracas. O que escolher?
 
 reagent-name-boyarsky = boiardo
 reagent-desc-boyarsky = O que fazer se você está cansado da vida? MISTURE VODCA!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+reagent-name-vodkizine = vodkizina
+
+reagent-desc-vodkizine = Medicamento medicamentoso à base de vodka, com a receita mantida em segredo.

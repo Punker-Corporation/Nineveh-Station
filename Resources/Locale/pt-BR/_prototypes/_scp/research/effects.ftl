@@ -72,3 +72,8 @@ ent-ScpEffectIgnite = { ent-BaseScpArtifactEffect }
     .desc = { artifact-effect-hint-data-deleted }
 ent-ScpEffectServantSpawn035 = { ent-BaseScpArtifactEffect }
     .desc = { artifact-effect-hint-data-deleted }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpEffectSpawnEvilTwin = { ent-BaseScpArtifactEffect }
+    .desc = artefato-efeito-hint-dados-eliminados

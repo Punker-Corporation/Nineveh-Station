@@ -41,7 +41,7 @@ spray-painter-color-white = branco
 spray-painter-color-black = preto
 
 # Categories (tabs)
-spray-painter-tab-category-airlocks = Airlocks
+spray-painter-tab-category-airlocks = Compressores de ar
 spray-painter-tab-category-canisters = Vasilhas
 spray-painter-tab-category-crates = Caixas
 spray-painter-tab-category-lockers = Armários
@@ -67,7 +67,7 @@ spray-painter-style-airlockstandard-cargo = Carga
 spray-painter-style-airlockstandard-chemistry = Química
 spray-painter-style-airlockstandard-command = Comando
 spray-painter-style-airlockstandard-engineering = Engenharia
-spray-painter-style-airlockstandard-freezer = Freezer
+spray-painter-style-airlockstandard-freezer = Congelador
 spray-painter-style-airlockstandard-hydroponics = Hidroponia
 spray-painter-style-airlockstandard-maintenance = Técnico
 spray-painter-style-airlockstandard-medical = Médico

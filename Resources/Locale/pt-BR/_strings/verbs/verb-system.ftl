@@ -30,3 +30,7 @@ verb-common-close = Fechar
 verb-common-open = Abrir
 verb-common-close-ui = Fechar IU
 verb-common-open-ui = Abrir IU
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+verb-categories-adjust = Ajustar

@@ -6,3 +6,7 @@ tech-disk-ui-name = Terminal de disco de tecnologia
 tech-disk-ui-total-label = O servidor selecionado possui { $amount } pontos
 tech-disk-ui-cost-label = Cada disco custa { $amount } pontos para imprimir
 tech-disk-ui-print-button = Imprimir disco
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+tech-disk-name-format = {$baseName} ( {$technology} )

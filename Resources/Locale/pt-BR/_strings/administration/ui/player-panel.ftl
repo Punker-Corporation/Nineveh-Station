@@ -20,3 +20,9 @@ player-panel-delete = Excluir
 player-panel-rejuvenate = Ressuscitar
 player-panel-false = Não
 player-panel-true = Sim
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+player-panel-follow = Seguir
+
+player-panel-camera = Câmera

@@ -7,7 +7,7 @@ role-type-silicon-name = Silicone
 role-type-silicon-antagonist-name = Silicone hostil
 role-type-update-message = Sua função: [color = { $color }]{ $role }[/color]
 # If you change a color here, you might want to also change it in role_types.yml
-role-type-crew-aligned-color = #eeeeee
+role-type-crew-aligned-color = #eeeeeeee
 role-type-crew-aligned-alternate-color = #008000
 role-type-solo-antagonist-color = #d82000
 role-type-team-antagonist-color = #d82000
@@ -15,7 +15,8 @@ role-type-free-agent-color = #ffff00
 role-type-familiar-color = #6495ed
 role-type-silicon-color = #6495ed
 role-type-silicon-antagonist-color = #c832e6
-# Ideally, subtype names should be short
+
+# Idealmente, os nomes dos subtipos devem ser curtos
 role-subtype-traitor = Traidor
 role-subtype-thief = Ladrão
 role-subtype-ninja = Ninja
@@ -32,3 +33,7 @@ role-subtype-paradox-clone = Paradoxo
 role-subtype-wizard = Mago
 role-subtype-xenoborg = Xenoborg
 role-subtype-xenoborg-core = Núcleo de Xenoborg
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+role-subtype-changeling = Mudança

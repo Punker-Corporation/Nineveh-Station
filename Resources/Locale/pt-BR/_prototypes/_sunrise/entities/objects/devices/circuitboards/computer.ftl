@@ -44,3 +44,8 @@ ent-ShipyardComputerCircuitboard = placa de computador para estaleiro
     .desc = Placa de circuito impresso de computador para computador de estaleiro.
 ent-CommandConsoleCircuitboard = { ent-BaseComputerCircuitboard }
     .desc = { ent-BaseComputerCircuitboard.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ComputerGunneryCircuitboard = placa de console de artilharia
+    .desc = Uma placa de circuito impresso por computador para uma consola de artilharia.

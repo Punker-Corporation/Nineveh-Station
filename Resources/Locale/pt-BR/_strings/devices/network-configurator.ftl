@@ -23,12 +23,8 @@ network-configurator-title-saved-devices = Dispositivos salvos
 network-configurator-title-device-configuration = Configuração do dispositivo
 # ui
 network-configurator-ui-clear-button = Claro
-network-configurator-ui-count-label = 
-    { $count } { $count -> 
-    [one] устройство
-    [few] устройства
-   *[other] устройств
- }.
+network-configurator-ui-count-label = Dispositivos {$count}
+
 network-configurator-name-set = Instalar
 network-configurator-name-add = Adicionar
 network-configurator-name-edit = Mudar
@@ -48,6 +44,25 @@ network-configurator-examine-mode-list = [color=green]Lista[/color]
 network-configurator-examine-current-mode = Modo atual: { $mode }
 network-configurator-examine-switch-modes = Pressione { $key } para mudar de modo
 # item status
-network-configurator-item-status-label = 
-    Режим: { $mode }
-    Переключить: { $keybinding }
+network-configurator-item-status-label = Modo: {$mode}
+    Mudança: {$keybinding}
+
+# comando
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+network-configurator-text-set = Definir
+
+network-configurator-text-add = Adicionar
+
+network-configurator-text-clear = Limpar
+
+network-configurator-text-copy = Copiar
+
+network-configurator-text-show = Mostrar
+
+# dicas
+
+cmd-clearnetworklinkoverlays-desc = Limpar todas as sobreposições da ligação de rede.
+
+cmd-clearnetworklinkoverlays-help = Uso: clearnetworklinkoverlays

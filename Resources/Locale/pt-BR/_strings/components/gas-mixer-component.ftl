@@ -1,4 +1,4 @@
-comp-gas-mixer-ui-mixer-status = Status:
+comp-gas-mixer-ui-mixer-status = Estado:
 comp-gas-mixer-ui-status-enabled = Sobre
 comp-gas-mixer-ui-status-disabled = Desligado
 comp-gas-mixer-ui-mixer-output-pressure = Pressão de saída (kPa):

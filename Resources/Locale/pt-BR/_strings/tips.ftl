@@ -48,7 +48,7 @@ tips-dataset-47 = Como um necrófago, você pode usar um acelerador protocinéti
 tips-dataset-48 = Como necrófago, não se esqueça de cavar em busca de minério! O minério pode ser vendido em carga por um bom dinheiro, usado para construção e também por cientistas para tecnologias sofisticadas.
 tips-dataset-49 = Como reciclador, experimente pedir aos cientistas uma arma gravitacional. Ele pode ser usado para mover objetos de detritos com extrema eficiência!
 tips-dataset-50 = Como reciclador, experimente pedir aos cientistas um gancho. Ele pode ser usado para mover-se sobre detritos.
-tips-dataset-51 = Conselho #51 не существует и никогда не существовал. Игнорируйте любые слухи об обратном.
+tips-dataset-51 = A dica #51 não existe e nunca existiu. Ignorar os rumores em contrário.
 tips-dataset-52 = Como reciclador, considere trabalhar com transportadores. Eles podem solicitar uma ampla variedade de itens úteis para você, incluindo aqueles que podem ser difíceis de obter de outra forma, como armas laser e materiais de construção de naves espaciais.
 tips-dataset-53 = Como carregador, tente perguntar aos cientistas sobre o AVP de Ripley. Combinado com uma garra hidráulica, você pode coletar itens de manutenção valiosos, como tanques de combustível, com muito mais facilidade e fazer entregas rapidamente.
 tips-dataset-54 = Como transportador, tente manter um excedente de materiais. Isto é extremamente útil quando cientistas ou engenheiros precisam deles com urgência.
@@ -135,3 +135,9 @@ tips-dataset-134 = Você pode determinar se uma área com eclusas contra incênd
 tips-dataset-135 = Em vez de pegá-lo, você pode clicar com a tecla Alt pressionada na comida para comê-la. Isto também funciona para ratos e outras criaturas sem braços.
 tips-dataset-136 = Se você estiver trancado atrás de uma porta energizada: desligue o APC ou jogue o cartão de identificação na porta para evitar choque elétrico!
 tips-dataset-137 = Se a IA energizou a porta e você tem luvas isoladas, corte e repare o fio de alimentação para reiniciar a eletrificação!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+tips-dataset-138 = Se você quiser impedir seu prisioneiro de escapar da cela logo após ser desamparado, ligue o modo de combate enquanto desampara - isso vai empurrar o prisioneiro para baixo.
+
+tips-dataset-139 = Certifique-se de limpar seus implantes ilegais com um sabão depois de usá-los! Os detectives podem analisar implantes usados em busca de provas incriminadoras de ADN, mas não se foram limpos.

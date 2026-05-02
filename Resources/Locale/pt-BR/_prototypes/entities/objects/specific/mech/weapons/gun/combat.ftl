@@ -49,3 +49,9 @@ ent-WeaponMechCombatMissileRack6 = Lançador de mísseis BRM-6
 ent-WeaponMechCombatFlashbangLauncher = Lançador de granadas flash-bang SGL-6
     .desc = Lança mísseis revolucionários voando baixo, projetados para explodir apenas ao atingir um alvo difícil.
     .suffix = Armas Mech, Combate à Distância, Combate, Cegueira
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponMechCombatMissileRack8Frag = BRM-8 Rack de mísseis
+    .desc = Os tubos devem ser recarregados por fora.
+    .suffix = Arma Mech, Arma, Combate, Mísseis

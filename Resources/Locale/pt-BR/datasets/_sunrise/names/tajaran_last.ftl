@@ -82,7 +82,7 @@ names-tajaran-last-dataset-78 = Khirey-Khantar
 names-tajaran-last-dataset-79 = Sa'ten-Khantar
 names-tajaran-last-dataset-80 = Reishi-Hantar
 
-# статусы без дома / вне системы
+# Estado dos sem-abrigo/fora
 
 names-tajaran-last-dataset-81 = Caersida
 names-tajaran-last-dataset-82 = Ker'sai

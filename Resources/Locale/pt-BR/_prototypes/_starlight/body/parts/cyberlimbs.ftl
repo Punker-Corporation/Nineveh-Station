@@ -42,3 +42,37 @@ ent-LeftArmCyberMantisBlade = Braço esquerdo da lâmina cibernética de Mantis
 ent-RightArmCyberMantisBlade = Braço direito da lâmina cibernética do Mantis
     .suffix = Sindicato
     .desc = { ent-PartCyber.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-LeftArmCyberMantisBladeMaxGuard = braço esquerdo da lâmina de Max-Guard
+    .desc = { ent-PartCyber.desc }
+
+ent-RightArmCyberMantisBladeMaxGuard = braço direito da lâmina de Max-Guard
+    .desc = { ent-PartCyber.desc }
+
+ent-LeftArmCyberGorilla = braço esquerdo G.O.R.I.L.L.A.
+    .desc = { ent-PartCyber.desc }
+
+ent-RightArmCyberGorilla = braço direito G.O.R.I.L.L.A.
+    .desc = { ent-PartCyber.desc }
+
+ent-LeftArmCyberGorillaUpgraded = { ent-LeftArmCyberGorilla }
+    .suffix = Actualizado
+    .desc = { ent-PartCyber.desc }
+
+ent-RightArmCyberGorillaUpgraded = { ent-RightArmCyberGorilla }
+    .suffix = Actualizado
+    .desc = { ent-PartCyber.desc }
+
+ent-LeftArmCyberLaserEmitter = braço de emissor de baluarte esquerdo
+    .desc = { ent-PartCyber.desc }
+
+ent-RightArmCyberLaserEmitter = braço de emissor de baluarte direito
+    .desc = { ent-PartCyber.desc }
+
+ent-LeftArmCyberGrenadeThrower = braço esquerdo do lançador de hefesto
+    .desc = { ent-PartCyber.desc }
+
+ent-RightArmCyberGrenadeThrower = braço direito do lançador de hefesto
+    .desc = { ent-PartCyber.desc }

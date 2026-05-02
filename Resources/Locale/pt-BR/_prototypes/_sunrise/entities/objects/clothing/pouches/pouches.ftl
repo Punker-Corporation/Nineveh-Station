@@ -13,3 +13,9 @@ ent-PouchAmmoFilledSMG = bolsa de revista
 ent-PouchAmmoFilledPistol40 = bolsa de revista
     .suffix = Pistola .40 cheia
     .desc = { ent-PouchAmmo.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-PouchAmmoFilledLightRifle = bolsa de munição
+    .suffix = Rifle de luz preenchido
+    .desc = { ent-PouchAmmo.desc }

@@ -34,3 +34,11 @@ ent-SpeedLoaderHeavyRifleRFMJ = clipe (7,62 mmR FMJ)
     .desc = { ent-BaseItem.desc }
 ent-CartridgeRifleHeavyArtillery = cartucho (0,308 cosmos)
     .desc = { ent-BaseCartridgeRifleHeavy.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-SpeedLoaderHeavyRifleRAP = carregador de velocidade (7.62mmR AP)
+    .desc = { ent-BaseItem.desc }
+
+ent-SpeedLoaderHeavyRifleRIncendiary = carregador de velocidade (7.62mmR incendiário)
+    .desc = { ent-BaseItem.desc }

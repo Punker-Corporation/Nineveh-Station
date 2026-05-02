@@ -2,9 +2,8 @@ ent-ScpFacilityBeacon = faról de navegação
     .desc = Um pequeno dispositivo que transmite informações aos cartões das instituições. Pode ser configurado.
     .suffix = em geral
 ent-ScpFacilityBeaconUnanchored = { ent-ScpFacilityBeacon }
-    .suffix = geral, solto
+    .suffix = Geral, Unanchored
     .desc = { ent-ScpFacilityBeacon.desc }
-# Родительские
 ent-ScpFacilityBeaconAdministration = { ent-ScpFacilityBeacon }
     .suffix = Administração
     .desc = { ent-ScpFacilityBeacon.desc }
@@ -30,9 +29,8 @@ ent-ScpFacilityBeaconLowAccessPersonnel = { ent-ScpFacilityBeacon }
     .suffix = classe D
     .desc = { ent-ScpFacilityBeacon.desc }
 ent-ScpFacilityBeaconScpContainment = { ent-ScpFacilityBeacon }
-    .suffix = Contenção SCP
+    .suffix = Contenção de SCP
     .desc = { ent-ScpFacilityBeacon.desc }
-# Кабинеты
 ent-ScpFacilityBeaconFacilityDirectorOffice = { ent-ScpFacilityBeaconAdministration }
     .suffix = Gabinete do Diretor
     .desc = { ent-ScpFacilityBeaconAdministration.desc }
@@ -67,9 +65,8 @@ ent-ScpFacilityBeaconAmnesticologistOffice = { ent-ScpFacilityBeaconMedicalServi
     .suffix = Gabinete do Amnesticista
     .desc = { ent-ScpFacilityBeaconMedicalService.desc }
 ent-ScpFacilityBeaconParapsychologistOffice = { ent-ScpFacilityBeaconScientificService }
-    .suffix = Gabinete do Parapsicólogo
+    .suffix = Escritório de Parapsicólogo
     .desc = { ent-ScpFacilityBeaconScientificService.desc }
-# Камеры SCP
 ent-ScpFacilityBeaconScp173Containment = { ent-ScpFacilityBeaconScpContainment }
     .suffix = SCP-173
     .desc = { ent-ScpFacilityBeaconScpContainment.desc }
@@ -110,9 +107,8 @@ ent-ScpFacilityBeaconScpItemContainment = { ent-ScpFacilityBeaconScpContainment 
     .suffix = itens SCP
     .desc = { ent-ScpFacilityBeaconScpContainment.desc }
 ent-ScpFacilityBeaconScpHumanoidContainment = { ent-ScpFacilityBeaconScpContainment }
-    .suffix = SCP humanoides
+    .suffix = Contenção Humanóide SCP
     .desc = { ent-ScpFacilityBeaconScpContainment.desc }
-# Отделы
 ent-ScpFacilityBeaconCommandantSquad = { ent-ScpFacilityBeaconSecurity }
     .suffix = Departamento de Segurança
     .desc = { ent-ScpFacilityBeaconSecurity.desc }
@@ -126,9 +122,8 @@ ent-ScpFacilityBeaconClassDContainmentZone = { ent-ScpFacilityBeaconLowAccessPer
     .suffix = Zona Classe D
     .desc = { ent-ScpFacilityBeaconLowAccessPersonnel.desc }
 ent-ScpFacilityBeaconLifeSupport = { ent-ScpFacilityBeaconEngineeringTechnicalService }
-    .suffix = suporte de vida
+    .suffix = Suporte à Vida
     .desc = { ent-ScpFacilityBeaconEngineeringTechnicalService.desc }
-# Специальное
 ent-ScpFacilityBeaconCheckpointEntranceToLightA = { ent-ScpFacilityBeacon }
     .suffix = Checkpoint leve A
     .desc = { ent-ScpFacilityBeacon.desc }

@@ -6,6 +6,7 @@ cargo-account-medical-name = Fundo de saúde da tripulação
 cargo-account-medical-code = MEL
 cargo-account-science-name = Financiamento para o desenvolvimento interestelar
 cargo-account-science-code = RND
+
 cargo-account-security-name = Reservas de defesa da estação
 cargo-account-security-code = OHR
 cargo-account-service-name = Ativos de serviço coletivo

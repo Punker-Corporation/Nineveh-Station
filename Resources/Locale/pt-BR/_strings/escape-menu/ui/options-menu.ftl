@@ -14,9 +14,9 @@ ui-options-default = Redefinir para as configurações padrão
 ui-options-value-percent = { TOSTRING($value, "P0") }
 ui-options-language = Idioma do pesadelo:
 ui-options-language-portuguese = Português — diário de ruína
-ui-options-language-russian = Русский — холодный протокол
+ui-options-language-russian = Russo - Protocolo Frio
 
-# Misc/General menu
+# Menu /General Diversos
 
 ui-options-discordrich = Ativar presença rica no Discord
 ui-options-general-ui-style = Interface e língua
@@ -42,12 +42,14 @@ ui-options-admin-sounds = Música de administrador
 ui-options-bwoink-sound = Tocar um som de notificação de ajuda
 ui-options-volume-label = Volume
 
-## Graphics menu
+## Menu Gráficos
 
 ui-options-display-label = Mostrar
 ui-options-quality-label = Qualidade
 ui-options-misc-label = Variado
 ui-options-interface-label = Interface
+
+
 ui-options-auto-fill-highlights = Preencher seleções automaticamente com informações do personagem
 ui-options-highlights-color = Cor de descarga:
 ui-options-highlights-color-example = Este é um texto destacado!
@@ -85,18 +87,16 @@ ui-options-hud-layout-default = Regular (para Virgem)
 ui-options-hud-layout-separated = Separado (para Chade)
 ui-options-vp-stretch = Estique a imagem para caber na janela do jogo
 ui-options-vp-scale = Escala fixa da janela do jogo:
-ui-options-vp-scale-value = x{ $scale }
+ui-options-vp-scale-value = x { $scale }
 ui-options-vp-integer-scaling = Use escala inteira (pode causar barras pretas/recortes)
-ui-options-vp-integer-scaling-tooltip = 
-    Если эта опция включена, область просмотра будет масштабироваться,
-        используя целочисленное значение при определённых разрешениях. Хотя это и
-        приводит к чётким текстурам, это часто означает, что сверху/снизу экрана будут
-        чёрные полосы или что часть окна не будет видна.
+ui-options-vp-integer-scaling-tooltip = Se esta opção estiver habilitada, a janela será dimensionada usando um valor inteiro
+                                        em resoluções específicas. Enquanto isso resulta em texturas nítidas, também muitas vezes
+                                        significa que barras pretas aparecem no topo /bottom da tela ou dessa parte
+                                        do viewport não é visível.
 ui-options-vp-vertical-fit = Ajustando a viewport verticalmente
-ui-options-vp-vertical-fit-tooltip = 
-    Когда функция включена, основное окно просмотра не будет учитывать горизонтальную ось
-        при подгонке под ваш экран. Если ваш экран меньше, чем окно просмотра,
-        то это приведёт к его обрезанию по горизонтальной оси.
+ui-options-vp-vertical-fit-tooltip = Quando activada, a janela principal irá ignorar o eixo horizontal completamente quando
+                                     ajuste ao seu ecrã. Se o seu ecrã é menor que o viewport, então isto
+                                     fará com que o viewport seja cortado no eixo horizontal.
 ui-options-vp-low-res = Imagem de baixa resolução
 ui-options-parallax-low-quality = Paralaxe de baixa qualidade (fundo)
 ui-options-fps-counter = Mostrar contador de FPS
@@ -299,36 +299,34 @@ ui-options-function-text-complete-prev = Selecione a adição anterior
 
 ui-options-net-predict = Adivinhação do lado do cliente
 ui-options-net-interp-ratio = Suavização de rede
-ui-options-net-interp-ratio-tooltip = 
-    Увеличение этого параметра, как правило, делает игру
-        более устойчивой к потере пакетов, однако при этом
-        это так же добавляет немного больше задержки и
-        требует от клиента предсказывать больше будущих тиков.
+ui-options-net-interp-ratio-tooltip = Aumentar isso geralmente fará o jogo mais resistente
+                                      para server->client packet-loss, no entanto ao fazê-lo
+                                      efetivamente adiciona um pouco mais de latência e requer
+                                      cliente para prever mais carrapatos futuros.
+
 ui-options-net-predict-tick-bias = Erro de tick de previsão
-ui-options-net-predict-tick-bias-tooltip = 
-    Увеличение этого параметра, как правило, делает игру более устойчивой
-        к потере пакетов между клиентом и сервером, однако при этом
-        немного возрастает задержка, и клиенту требуется предугадывать
-        больше будущих тиков.
+ui-options-net-predict-tick-bias-tooltip = Aumentar isso geralmente fará o jogo mais resistente
+                                           para cliente->servidor de perda de pacotes, no entanto ao fazê-lo
+                                           efetivamente adiciona um pouco mais de latência e requer
+                                           cliente para prever mais carrapatos futuros.
+
 ui-options-net-pvs-spawn = Limitar a aparência de entidades PVS
-ui-options-net-pvs-spawn-tooltip = 
-    Ограничение частоты отправки новых появившихся сущностей сервером на клиент.
-        Снижение этого параметра может помочь уменьшить "захлёбывания",
-        вызываемые спавном сущностей, но может привести к их резкому появлению.
+ui-options-net-pvs-spawn-tooltip = Isto limita a taxa à qual o servidor enviará o novo
+                                       entidades ao cliente. Baixar isso pode ajudar a reduzir
+                                       gagueira devido à desova da entidade, mas pode levar ao pop-in.
+
 ui-options-net-pvs-entry = Limite de entidades PVS
-ui-options-net-pvs-entry-tooltip = 
-    Ограничение частоты отправки новых видимых сущностей сервером на клиент.
-        Снижение этого параметра может помочь уменьшить "захлёбывания",
-        вызываемые спавном сущностей, но может привести к их резкому появлению.
+ui-options-net-pvs-entry-tooltip = Isto limita a taxa à qual o servidor irá enviar o novo visível
+                                       entidades ao cliente. Baixar isso pode ajudar a reduzir
+                                       gagueira, mas pode levar ao pop-in.
+
 ui-options-net-pvs-leave = Frequência de remoção de PVS
-ui-options-net-pvs-leave-tooltip = 
-    Ограничение частоты, с которой клиент будет удалять
-        сущности вне поля зрения. Снижение этого параметра может помочь
-        уменьшить "захлёбывания" при ходьбе, но иногда может
-        привести к неправильным предугадываниям и другим проблемам.
+ui-options-net-pvs-leave-tooltip = Isto limita a taxa à qual o cliente irá remover
+                                       entidades fora de vista. Baixar isso pode ajudar a reduzir
+                                       gagueira ao andar, mas poderia ocasionalmente
+                                       levar a equívocos e outras questões.
 
-## Toggle window console command
-
+## Comutar o comando da consola da janela
 cmd-options-desc = Abre um menu de opções, opcionalmente com uma guia especificamente selecionada.
 cmd-options-help = Uso: opções [tab]
 
@@ -377,3 +375,32 @@ ui-options-admin-enable-overlay-starting-job = Mostrar profissão inicial
 ui-options-admin-overlay-merge-distance = Distância de agrupamento de pilha
 ui-options-admin-overlay-ghost-fade-distance = Sobreposição fantasma desaparece distância do mouse
 ui-options-admin-overlay-ghost-hide-distance = Ocultar a distância da sobreposição fantasma do mouse
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ui-options-filter-label = Filtro de escala:
+
+ui-options-filter-nearest = Mais próximo (sem suavização)
+
+ui-options-filter-bilinear = Bilinear (suave)
+
+ui-options-ambient-occlusion = Mostrar a Oclusão Ambiental
+
+ui-options-function-toggle-knockdown = Alternar o Rastejamento
+
+
+ui-options-function-smart-equip-suit-storage = Smart-equip para o armazenamento adequado
+
+ui-options-function-smart-equip-pocket1 = Smart-equip para bolso 1
+
+ui-options-function-smart-equip-pocket2 = Smart-equip para bolso 2
+
+ui-options-function-inspect-entity-tooltip = Abra uma janela ViewVariables para a entidade sobre a qual o mouse está atualmente pairando.
+
+ui-options-function-inspect-server-component = Inspecionar o Componente do Servidor
+
+ui-options-function-inspect-server-component-tooltip = Abra uma janela ViewVariables com o componente servidor definido pelo comando "quickinspect" para a entidade sobre a qual o mouse está atualmente pairando.
+
+ui-options-function-inspect-client-component = Inspecionar o Componente do Cliente
+
+ui-options-function-inspect-client-component-tooltip = Abra uma janela ViewVariables com o componente cliente definido pelo comando "quickinspect" para a entidade sobre a qual seu mouse está atualmente pairando.

@@ -15,3 +15,8 @@ ent-ClothingUniformJumpskirtPrisonWorker = saia de macacão de faz-tudo da pris�
 
 ent-ClothingUniformJumpskirtPrisonTrainee = saia macacão para estagiário de prisão
     .desc = Um uniforme normal com caimento perfeito, representando os recrutas aprendendo que neste trabalho os erros podem ter consequências permanentes.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformJumpskirtPrisonRegularBase = prisão regular salto saia
+    .desc = Um uniforme de saia padrão usado pelo pessoal da prisão em suas tarefas diárias.

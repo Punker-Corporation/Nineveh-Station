@@ -8,7 +8,8 @@ materials-steel = aço
 materials-gold = ouro
 materials-silver = prata
 materials-plasteel = plasteel
-# Other
+
+# Outros
 materials-biomass = biomassa
 materials-cardboard = cartão
 materials-cloth = têxtil
@@ -35,3 +36,15 @@ materials-raw-uranium = minério de urânio
 materials-raw-bananium = Minério de banânio
 materials-raw-salt = sal-gema
 materials-raw-diamond = diamantes brutos
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+materials-uranium-glass = vidro de urânio
+
+materials-reinforced-uranium-glass = vidro de urânio reforçado
+
+# Metais
+
+materials-cotton = algodão
+
+# Minérios

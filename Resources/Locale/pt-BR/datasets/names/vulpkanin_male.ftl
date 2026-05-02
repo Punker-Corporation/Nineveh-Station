@@ -7,7 +7,7 @@ names-vulpkanin-male-dataset-6 = Antônio
 names-vulpkanin-male-dataset-7 = Bakir
 names-vulpkanin-male-dataset-8 = Baris
 names-vulpkanin-male-dataset-9 = Baxter
-# Wolf in Welsh
+# Lobo em galês
 names-vulpkanin-male-dataset-10 = Sangramento
 names-vulpkanin-male-dataset-11 = Branimir
 names-vulpkanin-male-dataset-12 = Bruno
@@ -44,7 +44,7 @@ names-vulpkanin-male-dataset-42 = Casper
 names-vulpkanin-male-dataset-43 = Krreor
 names-vulpkanin-male-dataset-44 = Xavier
 names-vulpkanin-male-dataset-45 = Libor
-# Lobomir misspelled on purpose
+# Lobomir escreveu mal de propósito
 names-vulpkanin-male-dataset-46 = Lobomir
 names-vulpkanin-male-dataset-47 = Licaão
 names-vulpkanin-male-dataset-48 = Mahir
@@ -55,7 +55,7 @@ names-vulpkanin-male-dataset-52 = Nero
 names-vulpkanin-male-dataset-53 = Nestor
 names-vulpkanin-male-dataset-54 = Nico
 names-vulpkanin-male-dataset-55 = Otaviano
-names-vulpkanin-male-dataset-56 = Oliver
+names-vulpkanin-male-dataset-56 = Oliver.
 names-vulpkanin-male-dataset-57 = Lagosta
 names-vulpkanin-male-dataset-58 = Óscar
 names-vulpkanin-male-dataset-59 = Peter
@@ -67,14 +67,14 @@ names-vulpkanin-male-dataset-64 = Slawomir
 names-vulpkanin-male-dataset-65 = Silvestre
 names-vulpkanin-male-dataset-66 = Téo
 names-vulpkanin-male-dataset-67 = Tibor
-names-vulpkanin-male-dataset-68 = Travis
+names-vulpkanin-male-dataset-68 = Travis.
 names-vulpkanin-male-dataset-69 = Ulrik
 names-vulpkanin-male-dataset-70 = Valter
 names-vulpkanin-male-dataset-71 = Vasílio
 names-vulpkanin-male-dataset-72 = Verso
 names-vulpkanin-male-dataset-73 = Vencedor
 names-vulpkanin-male-dataset-74 = Vladimir
-# Wolf in Polish
+# Lobo em polonês
 names-vulpkanin-male-dataset-75 = Wilk
 names-vulpkanin-male-dataset-76 = Xander
 names-vulpkanin-male-dataset-77 = Zachary

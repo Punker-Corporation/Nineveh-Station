@@ -46,6 +46,7 @@ chat-speech-verb-suffix-question = ?
 chat-speech-verb-default = fala
 chat-speech-verb-suffix-stutter = -
 chat-speech-verb-suffix-mumble = ..
+
 chat-speech-verb-name-none = Não
 chat-speech-verb-name-default = Padrão
 chat-speech-verb-name-exclamation = Exclamação
@@ -124,3 +125,29 @@ chat-speech-verb-name-electricity = Eletricidade
 chat-speech-verb-electricity-1 = estalos
 chat-speech-verb-electricity-2 = zumbido
 chat-speech-verb-electricity-3 = rangidos
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+chat-manager-send-hook-admin-wrap-message = [/bold]
+
+
+chat-speech-verb-vulpkanin-1 = rawrs
+
+chat-speech-verb-vulpkanin-2 = cascas
+
+chat-speech-verb-vulpkanin-3 = rurs
+
+chat-speech-verb-vulpkanin-4 = yaps
+
+chat-speech-verb-vulpkanin = Vulpkanina
+
+
+chat-speech-verb-name-wawa = Wawa
+
+chat-speech-verb-wawa-1 = inatos
+
+chat-speech-verb-wawa-2 = estados
+
+chat-speech-verb-wawa-3 = declara
+
+chat-speech-verb-wawa-4 = pondera

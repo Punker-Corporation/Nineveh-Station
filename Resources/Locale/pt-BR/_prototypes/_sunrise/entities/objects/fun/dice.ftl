@@ -1,5 +1,4 @@
 ent-hyperDice = Hipercubo
-    .desc = 
-        Настраиваемый многомерный сингулярный гиперкуб для числовой генерации
-        от 1 до 1 000 000. Последнее слово техники в области настольных игр.
-        Один куб, чтоб править всеми.
+    .desc =
+        Um hipercubo singular multidimensional personalizável para geração numérica. A mais recente tecnologia em jogos de tabuleiro.
+        Um cubo para governar todos.

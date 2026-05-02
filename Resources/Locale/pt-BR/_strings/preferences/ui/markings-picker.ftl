@@ -29,3 +29,20 @@ markings-category-Legs = Pernas
 markings-category-Tail = Cauda
 markings-category-Overlay = Sobreposição
 markings-category-Back = Voltar
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+humanoid-marking-modifier-force = Forçar
+
+humanoid-marking-modifier-ignore-species = Ignorar Espécies
+
+humanoid-marking-modifier-base-layers = Camadas de base
+
+humanoid-marking-modifier-enable = Activar
+
+humanoid-marking-modifier-prototype-id = ID do protótipo:
+
+# Categorias
+
+
+markings-category-SnoutCover = Focinho (Cover)

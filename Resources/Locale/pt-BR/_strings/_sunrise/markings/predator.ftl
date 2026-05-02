@@ -1,0 +1,13 @@
+marking-PredatorDreadlocksShort1 = Dreadlocks curtos
+marking-PredatorDreadlocksShort2 = dreadlocks curtos (dlt)
+marking-PredatorDreadlocksShoulderLength = Tranças de comprimento do ombro
+marking-PredatorDreadLong = Dradlocks longos
+marking-PredatorDreadlocksTailDown = Cauda para baixo
+marking-PredatorDreadlocksTailUp = Cauda para cima
+marking-PredatorBodySpots = Pontos
+marking-PredatorBodyStripes = Listras
+marking-PredatorArmsSpots = Pontos
+marking-PredatorArmsStripes = Listras
+marking-PredatorLegsStripes = Listras
+marking-PredatorRings1 = Anéis
+marking-PredatorRings2 = Anéis (alto)

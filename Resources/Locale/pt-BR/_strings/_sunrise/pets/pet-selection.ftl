@@ -1,4 +1,4 @@
-# Меню выбора питомцев
+# Menu de seleção de animais de estimação
 
 pet-selection-menu-title = Escolhendo um animal de estimação
 pet-selection-menu-available-pets = Animais de estimação disponíveis
@@ -12,7 +12,7 @@ pet-selection-select-lobby = Mudar animal de estimação
 pet-selection-summary-name = Este é { $name }, seu animal de estimação.
 pet-selection-summary-no-select = Animal de estimação não selecionado
 pet-selection-summary-invalid = Animal de estimação desconhecido
-# Названия питомцев
+# Nomes dos animais de estimação
 pet-selection-rabbit-name = Fofinho
 pet-selection-anteater-name = Intrometido
 pet-selection-octopus-name = Tentáculos
@@ -35,7 +35,7 @@ pet-selection-goose-name = Sibilando Gosha
 pet-selection-clown-goblin-name = Coringa Gremlin
 pet-selection-corgi-ian-pup-name = Pequeno Ienchik
 pet-selection-parrot-name = Kesha tagarela
-# Описания питомцев
+# Descrições de animais de estimação
 pet-selection-rabbit-description = Coelhinho fofo e fofo
 pet-selection-anteater-description = Tamanduá de nariz comprido
 pet-selection-octopus-description = Polvo de oito braços

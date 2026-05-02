@@ -108,7 +108,7 @@ seeds-soybeans-name = soja
 seeds-soybeans-display-name = soja
 seeds-spacemans-trumpet-name = cachimbo de astronauta
 seeds-spacemans-trumpet-display-name = cachimbo de astronauta
-seeds-koibean-name = koibeans
+seeds-koibean-name = koibeanos
 seeds-koibean-display-name = koibeans
 seeds-watermelon-name = melancia
 seeds-watermelon-display-name = melancia
@@ -134,7 +134,7 @@ seeds-cotton-name = algodão
 seeds-cotton-display-name = arbusto de algodão
 seeds-pyrotton-name = piroalgodão
 seeds-pyrotton-display-name = arbusto de piroalgodão
-seeds-capfruit-name = capfruit
+seeds-capfruit-name = Capfruit
 seeds-capfruit-display-name = árvore de capfruit
 seeds-cherry-name = cereja
 seeds-cherry-display-name = cerejeira
@@ -146,3 +146,9 @@ seeds-coffee-arabica-name = Café arábica
 seeds-coffee-arabica-display-name = Arbusto de café arábica
 seeds-coffee-robust-name = café robusto
 seeds-coffee-robust-display-name = arbusto de café robusta
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+seeds-bloonion-name = bloonion
+
+seeds-bloonion-display-name = bolbos de bloonion

@@ -1,4 +1,4 @@
-ent-BaseMagazineAsh12 = armazenar АШ-12
+ent-BaseMagazineAsh12 = revista Ash-12 (.50 slug)
     .desc = { ent-BaseItem.desc }
 ent-MagazineAsh12Slug = Carregador de bala ASH-12
     .desc = { ent-BaseMagazineAsh12.desc }

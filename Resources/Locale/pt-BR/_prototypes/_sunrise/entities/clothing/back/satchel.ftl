@@ -26,9 +26,8 @@ ent-ClothingBackpackSatchelRed = bolsa vermelha
     .desc = Com esta bolsa você fica muito estiloso.
 ent-ClothingBackpackSatchelWhite = bolsa branca
     .desc = Com esta bolsa você fica muito estiloso.
-ent-ClothingBackpackSatchelYellow = bolsa amarela
-    .desc = Com esta bolsa você fica muito estiloso.
-# сумки Метус
+ent-ClothingBackpackSatchelYellow = saco amarelo
+    .desc = Ficas muito elegante com esta mala.
 ent-ClothingBackpackSatchelHeadOfPrisonMetus = bolsa de diretor
     .desc = Couro velho com rachaduras, o cinto muito apertado, cheiro de poeira e metal misturado, como uma lembrança de anos atrás de portas fechadas.
 ent-ClothingBackpackSatchelPrisonInspectorMetus = bolsa de inspetor de prisão
@@ -45,3 +44,9 @@ ent-ClothingBackpackSatchelPrisonWorkerMetus = bolsa de faz-tudo da prisão
     .desc = Folgado e pesado, meio desgastado pelas constantes trocas de ferramentas.
 ent-ClothingBackpackSatchelPrisonTraineeMetus = bolsa para estagiário de prisão
     .desc = Novo e limpo, ainda com traços de um recomeço, com detalhes em laranja marcando o caminho do aprendizado.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackSatchelRandomColorSpawner = saco (cor aleatória)
+    .desc = Uma bolsa de uma cor aleatória.
+# Sacos de quaisquer dimensões

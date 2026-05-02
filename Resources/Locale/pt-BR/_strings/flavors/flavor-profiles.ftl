@@ -333,3 +333,49 @@ flavor-complex-bottledlightning = como um raio em uma garrafa
 flavor-complex-punishment = como punição
 flavor-weh = que marco
 flavor-hew = como Hugh
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+flavor-base-trashy = lixo
+
+flavor-base-motivating = motivador
+
+# Sabores complexos. Coloque um sabor aqui quando você quer algo que é mais
+# específico.
+
+
+flavor-complex-dog-food = como comida de cão
+
+flavor-complex-canned-tuna = como atum em conserva
+
+# Sabores específicos para bebidas.
+
+## Álcool genérico sabor /soda. Isto deve ser substituído por um perfil de sabor real.
+
+flavor-complex-crush-depth = como a Zona Hadal
+
+flavor-complex-electric-shark = como Shark Week nos trópicos
+
+flavor-complex-tortuga = como chá doce
+
+flavor-complex-jack-rose = como um testemunho
+
+flavor-complex-jungle-bird = como você está em um aviário tropical
+
+flavor-complex-kalimotxo = como cola espetada chique
+
+flavor-complex-vampiro = frutado, salgado e picante
+
+flavor-complex-bronx = como fruta alcoólica levemente doce
+
+flavor-complex-monkey-business = como um macaco
+
+flavor-complex-alien-brain-hemorrhage = como uma lesão extraterrestre
+
+flavor-complex-eggnog = como creme derretido
+
+flavor-complex-dark-and-stormy = como ginger ale picou com rum
+
+flavor-complex-radler = como limonada espigada
+
+flavor-complex-artifact-glue = como artefatos esmagados

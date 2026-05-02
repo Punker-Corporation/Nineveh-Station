@@ -4,7 +4,7 @@ hud-chatbox-info-cycle = Clique aqui para falar, { $cycle-key } para mudar de ca
 hud-chatbox-info-unbound = Clique aqui para falar.
 hud-chatbox-select-name-prefixed = { $prefix } { $name }
 hud-chatbox-select-channel-Admin = Administrador
-hud-chatbox-select-channel-Console = Console
+hud-chatbox-select-channel-Console = Consola
 hud-chatbox-select-channel-Dead = Morto
 hud-chatbox-select-channel-Emotes = Emoções
 hud-chatbox-select-channel-Local = Aproximar
@@ -31,3 +31,17 @@ hud-chatbox-channel-Server = Servidor
 hud-chatbox-channel-Visual = Visual
 hud-chatbox-channel-Damage = Dano
 hud-chatbox-channel-Unspecified = Incerto
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+hud-chatbox-highlights = Destaques:
+
+hud-chatbox-highlights-button = Enviar
+
+hud-chatbox-highlights-tooltip = As palavras precisam ser separadas por uma nova linha,
+                                 se enrolados em torno " eles serão destacados
+                                 apenas se separados por espaços ou pontuação.
+
+hud-chatbox-highlights-placeholder = @McHands
+                                     "Juiz"
+                                     Médico

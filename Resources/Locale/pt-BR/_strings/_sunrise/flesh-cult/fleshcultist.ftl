@@ -79,10 +79,10 @@ flesh-cultist-throw-hugger-evolution-desc = Ganhe a habilidade de criar e lança
 flesh-cultist-acid-spit-evolution-name = Cuspe ácido
 flesh-cultist-acid-spit-evolution-desc = Ganhe a habilidade de cuspir ácido em seus inimigos.
 flesh-cultist-create-flesh-heart-evolution-name = Fazendo um coração de carne
-flesh-cultist-create-flesh-heart-evolution-desc = 
-    Получите возможность создать сердце из плоти.
-    Его создание и пробуждение - ваша ключевая задача на станции.
-    Для пробуждения потребуется три тела развитых существ из плоти. После активации будьте готовы защищать его от любой угрозы.
+flesh-cultist-create-flesh-heart-evolution-desc =
+    Tenha a oportunidade de criar um coração fora da carne.
+    Sua criação e despertar é sua tarefa chave na estação.
+    Serão necessários três corpos de seres humanos evoluídos para despertar. Uma vez activada, preparem-se para protegê-la de qualquer ameaça.
 flesh-cultist-absorb-blood-pool-evolution-name = Absorvendo uma poça de sangue
 flesh-cultist-absorb-blood-pool-evolution-desc = Permite absorver poças de sangue para cura.
 flesh-cultist-insulated-immunity-evolution-name = Resistência

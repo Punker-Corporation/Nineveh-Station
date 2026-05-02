@@ -44,3 +44,51 @@ names-wizard-last-dataset-43 = Branco
 names-wizard-last-dataset-44 = Sábio
 names-wizard-last-dataset-45 = Zobe
 names-wizard-last-dataset-46 = Eu sou Sagoz
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+names-wizard-last-dataset-47 = o Imperador
+
+names-wizard-last-dataset-48 = O Brilhante
+
+names-wizard-last-dataset-49 = o Cinzento
+
+names-wizard-last-dataset-50 = o Grande
+
+names-wizard-last-dataset-51 = o Curador
+
+names-wizard-last-dataset-52 = o Lich
+
+names-wizard-last-dataset-53 = o Mágico
+
+names-wizard-last-dataset-54 = O Poderoso
+
+names-wizard-last-dataset-55 = o Corvo
+
+names-wizard-last-dataset-56 = o Vermelho
+
+names-wizard-last-dataset-57 = o Remorso
+
+names-wizard-last-dataset-58 = a Semente
+
+names-wizard-last-dataset-59 = O Brilhante
+
+names-wizard-last-dataset-60 = o Sorcelador
+
+names-wizard-last-dataset-61 = o Rei Espiral
+
+names-wizard-last-dataset-62 = O Sem Fim
+
+names-wizard-last-dataset-63 = o Imparável
+
+names-wizard-last-dataset-64 = o Choro
+
+names-wizard-last-dataset-65 = o Branco
+
+names-wizard-last-dataset-66 = O Sábio
+
+names-wizard-last-dataset-67 = a quem
+
+names-wizard-last-dataset-68 = Xobeh
+
+names-wizard-last-dataset-69 = Ym Sagoz

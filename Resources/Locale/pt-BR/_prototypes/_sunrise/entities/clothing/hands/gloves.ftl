@@ -26,3 +26,15 @@ ent-InsulatedGlovesAtmos = Luvas Atmos Isoladas
     .desc = Luvas isoladas feitas especificamente para técnicos atmosféricos.
 ent-ClothingHandsGlovesCombatCQC = luvas de combate
     .desc = Estas luvas táticas de alta qualidade são resistentes ao fogo e ao impacto.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingHandsGlovesCombatFingerless = Luvas de combate sem dedos
+    .desc = Luvas táticas que podem não protegê-lo de queimaduras de dedo, mas vai torná-lo mais fresco.
+
+ent-CornivoreGloves = as luvas de colheita carmesim de cornívoro
+    .desc = Não podemos dizer se você deseja sangue... mas estas luvas certamente querem. Cada talão é uma ferramenta cirúrgica de sangria, semeando seu alvo com nossa mistura química proprietária. A sua vítima vai sangrar, sangrar e sangrar... enquanto pensa na sua próxima incisão. Lembre-se: vermelho é o novo preto. E está eternamente na moda.
+
+ent-ClothingHandsTacticalMaidGlovesFake = luvas de empregada tática
+    .suffix = Falso
+    .desc = Luvas táticas de empregada, todas as empregadas devem ser capazes de eliminar discretamente seus objetivos.

@@ -18,3 +18,23 @@ ent-MagazineDl6902 = caixa para revistas DL6902
     .desc = { ent-BaseMagazineLightRifle.desc }
 ent-MagazineLightRifleImprovised = loja (7,62 caseiro)
     .desc = Carregador curvo de pilha dupla de 30 cartuchos para rifles de combate. Projetado para cartuchos caseiros.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-MagazineVP70 = Revista VP70
+    .desc = { ent-BaseItem.desc }
+
+ent-MagazinePistolSubMachineGunCaselessExtended = revista estendida (sem processo)
+    .desc = { ent-BaseMagazineLightRifle.desc }
+
+ent-MagazineChainGun = tambor de munição chaingun
+    .desc = Bateria de munição pesada para corrente de cinto alimentado.
+
+ent-MagazineChainGun300 = tambor de munição chaingun
+    .desc = { ent-MagazineChainGun.desc }
+
+ent-MagazineChainGun200 = tambor de munição chaingun
+    .desc = { ent-MagazineChainGun.desc }
+
+ent-MagazineChainGun100 = tambor de munição chaingun
+    .desc = { ent-MagazineChainGun.desc }

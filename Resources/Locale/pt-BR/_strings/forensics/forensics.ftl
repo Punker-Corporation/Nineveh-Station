@@ -26,3 +26,9 @@ forensics-verb-text = Limpar evidências
 forensics-verb-message = Remova impressões digitais e DNA do objeto!
 forensics-cleaning = Você começa a limpar as evidências de { $target }...
 forensics-cleaning-cannot-clean = Nada pode ser limpo { $target }!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+forensic-pad-no-access-due = Não consigo aceder à impressão digital devido ao {THE($entity)}.
+
+forensic-pad-no-access = Não consigo aceder à impressão digital.

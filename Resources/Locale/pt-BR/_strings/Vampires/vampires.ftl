@@ -59,43 +59,36 @@ vampire-passive-deathsembrace-description = Aceite a morte e ela passará por vo
 
 vampire-mutation-menu-ui-window-name = Menu de mutação
 vampire-mutation-none-info = Nada selecionado
-vampire-mutation-hemomancer-info = 
-    Гемомансер
-    
-    Фокусируеться на кровавой магии и манипуляции крови вокруг себя.
-    
-    Способности:
-    
-    - Визг
-    - Кража крови
-vampire-mutation-umbrae-info = 
-    Тень
-    
-    Фокусируется на темноте, стелсе, мобильности.
-    
-    Способности:
-    
-    - Блик
-    - Плащ тьмы
-vampire-mutation-gargantua-info = 
-    Гаргантюа
-    
-    Фокусируется на ближнем уроне и стойкости.
-    
-    Способности:
-    
-    - Нечестивая сила
-    - Сверхъестественная сила
-vampire-mutation-bestia-info = 
-    Бестия
-    
-    Фокусируется на превращении и собирании трофеев
-    
-    Способности:
-    
-    - Форма летучей мыши
-    - Мышиная форма
-# Alerts
+vampire-mutation-hemomancer-info =
+    Focada na magia do sangue e manipulação do sangue ao seu redor.
+
+    Capacidades:
+
+    - Screech
+    - Roubar Sangue
+vampire-mutation-umbrae-info =
+    Concentrado na escuridão, furtividade e mobilidade.
+
+    Capacidades:
+
+    - Brilho
+    - Cloak of Darkness
+vampire-mutation-gargantua-info =
+    Focada em danos e durabilidade.
+
+    Capacidades:
+
+    - Força profana
+    - Força sobrenatural
+vampire-mutation-bestia-info =
+    Focada na transformação e coleção de troféus.
+
+    Capacidades:
+
+    - Forma de morcego
+    - Forma do rato
+
+# Alertas
 alerts-vampire-blood-name = Sangue
 alerts-vampire-blood-desc = Nível sanguíneo de vampiro.
 alerts-vampire-stellar-weakness-name = Fraqueza à luz

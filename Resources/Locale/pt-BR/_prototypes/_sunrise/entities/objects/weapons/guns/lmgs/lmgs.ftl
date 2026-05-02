@@ -8,3 +8,17 @@ ent-WeaponDL6902 = Metralhadora DL6902
     .desc = Metralhadora pesada Cybersun. A melhor versão da lendária metralhadora L6 SAW usa um cartucho calibre 7,62x39mm
 ent-WeaponLightMachineGunPirateCannon = lançador de bala de canhão pirata
     .desc = Canhão pirata portátil com alimentação por cinto..núcleos. Das páginas das aventuras mais selvagens da Ilha do Tesouro. A combination of pirate magic and ingenuity. Não tente realmente entender como isso funciona...
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponMachineGunLCG = pistola de corrente de luz
+    .desc = Metralhadora leve com alta taxa de fogo e baixo recuo. Eficaz para disparar em movimento e suprimir esquadrões em avanço. A alta taxa de fogo e calor reduzem a precisão, e a queima prolongada aumenta a chance de interferência.
+
+ent-WeaponMachineGunLCGEmpty = pistola de corrente de luz
+    .desc = { ent-WeaponMachineGunLCG.desc }
+
+ent-MagazineChainGunRandomSpawner = tambor de munição de chaingun aleatório
+    .desc = { ent-MagazineChainGun.desc }
+
+ent-MagazineChainGunLooseAmmoSpawner = munições soltas aleatórias da corrente
+    .desc = { ent-BaseItem.desc }

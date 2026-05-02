@@ -2,6 +2,7 @@ accent-pirate-prefix-1 = Argh
 accent-pirate-prefix-2 = Garr
 accent-pirate-prefix-3 = Yarr
 accent-pirate-prefix-4 = Yarrgh
+
 accent-pirate-replaced-1 = meu
 accent-pirate-replacement-1 = para mim
 accent-pirate-replaced-2 = Você

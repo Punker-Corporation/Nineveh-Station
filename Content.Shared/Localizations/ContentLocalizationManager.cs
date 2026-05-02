@@ -16,8 +16,6 @@ namespace Content.Shared.Localizations
         public const string PortugueseCulture = "pt-BR";
         public const string RussianCulture = "ru-RU";
 
-        private const string FallbackCulture = "en-US";
-
         /// <summary>
         /// Formatos aceitos para tempos minutos:segundos no painel de administração.
         /// </summary>
@@ -42,19 +40,13 @@ namespace Content.Shared.Localizations
                 _cfg.SetCVar(CVars.LocCultureName, normalized);
 
             var culture = new CultureInfo(normalized);
-            var alternateCulture = new CultureInfo(normalized == PortugueseCulture ? RussianCulture : PortugueseCulture);
-            var fallbackCulture = new CultureInfo(FallbackCulture);
 
             EnsureCultureLoaded(culture);
-            EnsureCultureLoaded(alternateCulture);
-            EnsureCultureLoaded(fallbackCulture);
 
             _loc.SetCulture(culture);
-            _loc.SetFallbackCluture(alternateCulture, fallbackCulture);
+            _loc.SetFallbackCluture();
 
             RegisterSharedFunctions(culture);
-            RegisterSharedFunctions(alternateCulture);
-            RegisterEnglishFallbackFunctions(fallbackCulture);
         }
 
         private static string NormalizeCultureName(string cultureName)
@@ -85,13 +77,7 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(culture, "NATURALPERCENT", FormatNaturalPercent);
             _loc.AddFunction(culture, "PLAYTIME", FormatPlaytime);
             _loc.AddFunction(culture, "MANY", FormatMany);
-        }
-
-        private void RegisterEnglishFallbackFunctions(CultureInfo culture)
-        {
             _loc.AddFunction(culture, "MAKEPLURAL", FormatMakePlural);
-            _loc.AddFunction(culture, "MANY", FormatMany);
-            _loc.AddFunction(culture, "NATURALFIXED", FormatNaturalFixed);
             _loc.AddFunction(culture, "LOC", FormatLoc);
         }
 

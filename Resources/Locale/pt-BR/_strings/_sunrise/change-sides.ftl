@@ -9,5 +9,5 @@ ui-sides-amount-end-placeholder = Geração até:
 ui-sides-amount-apply = Aplicar alterações
 
 ui-sides-amount-bottom-text = Entretenimento inofensivo garante probabilidade quase zero
- возникновения сингулярности при использовании гиперкуба.
- Попытка осознания принципа работы гиперкуба может привести вас к безумию.
+ A singularidade ocorre quando se usa um hipercubo.
+ Tentar entender o princípio do hipercubo pode levá-lo à loucura.

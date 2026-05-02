@@ -67,3 +67,30 @@ scp-wall-scp096-containment-damaged-engineering-3 = Destruição parcial de mód
 scp-wall-scp096-containment-damaged-engineering-4 = Perturbação grave da estrutura acústica. Precisa de reparos.
 scp-wall-scp096-containment-damaged-engineering-5 = Perda quase completa das propriedades de absorção de som no segmento. São necessários reparos urgentes.
 scp-wall-scp096-containment-damaged-engineering-6 = O design não consegue lidar com a carga acústica. São necessárias medidas de emergência imediatas.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+scp-wall-wood-damaged-1 = As tábuas parecem intactas, sem quase nenhum desgaste visível.
+
+scp-wall-wood-damaged-2 = Arranhões leves e algumas lascas apareceram na superfície.
+
+scp-wall-wood-damaged-3 = As rachaduras correm ao longo do grão, e a madeira começou a se dividir em lugares.
+
+scp-wall-wood-damaged-4 = Várias tábuas são gravemente rachadas, e fraturas profundas são visíveis através da parede.
+
+scp-wall-wood-damaged-5 = A madeira se separou ao longo das juntas, e algumas tábuas estão deformadas e mal se aguentam juntas.
+
+scp-wall-wood-damaged-6 = A parede está perto do colapso: as tábuas são divididas e os parafusos estão falhando.
+
+
+scp-wall-wood-damaged-engineering-1 = Estrutura nominal. As tábuas e os parafusos estão intactos, e a capacidade de suporte de carga está inalterada.
+
+scp-wall-wood-damaged-engineering-2 = Arranhões superficiais e pequenos chips detectados. Os danos permanecem dentro dos limites aceitáveis.
+
+scp-wall-wood-damaged-engineering-3 = Rachamento de grãos e delaminação localizada detectada. Recomendam-se reparações cosméticas.
+
+scp-wall-wood-damaged-engineering-4 = Vários elementos são visivelmente rachados, e várias articulações enfraqueceram. São necessárias reparações.
+
+scp-wall-wood-damaged-engineering-5 = As tábuas de carga estão parcialmente divididas e as articulações estão separadas. Reforço urgente ou substituição de seção é necessária.
+
+scp-wall-wood-damaged-engineering-6 = Condição crítica. A rigidez estrutural foi perdida e o colapso pode ocorrer a qualquer momento.

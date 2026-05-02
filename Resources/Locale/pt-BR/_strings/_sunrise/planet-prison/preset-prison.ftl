@@ -4,9 +4,9 @@ planet-prison-select-biome = O bioma escolhido aleatoriamente para a prisão foi
 planet-prisoner-round-end-name = prisioneiro
 planet-prisoner-role-greeting = Você é um prisioneiro - sua tarefa é escapar o mais longe possível do complexo prisional.
 planet-prison-round-end = { $count } prisioneiros escaparam da prisão.
-planet-prison-round-end-result = 
-    { $count -> 
-    [one] Из тюрьмы сбежал лишь один заключённый.
-    [few] Из тюрьмы сбежало { $count } заключённых.
-   *[other] Из тюрьмы сбежали { $count } заключённых.
- }
+planet-prison-round-end-result =
+    { $count ->
+        [one] Apenas um prisioneiro escapou da prisão.
+        [few] Os prisioneiros { $count } fugiram da prisão.
+       *[other] Os prisioneiros { $count } fugiram da prisão.
+    }

@@ -5,4 +5,4 @@ names-cargo-shuttle-dataset-4 = Entrega-Carga
 names-cargo-shuttle-dataset-5 = Schüttel
 names-cargo-shuttle-dataset-6 = Ônibus McShuttleface
 names-cargo-shuttle-dataset-7 = Transporte
-names-cargo-shuttle-dataset-8 = Urist McShuttle
+names-cargo-shuttle-dataset-8 = Urista McShuttle

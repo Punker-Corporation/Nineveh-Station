@@ -1,14 +1,15 @@
 # ban
 cmd-ban-desc = Bane alguém
-cmd-ban-help = Uso: banimento <name or user ID> <reason> [продолжительность в минутах, без указания или 0 для пермабана]
+cmd-ban-help = Uso: ban <name or user ID> <razão> [duration in minutes, leave out or 0 for permanent ban]
 cmd-ban-player = Não foi possível encontrar um jogador com esse nome.
 cmd-ban-invalid-minutes = { $minutes } não é um número válido de minutos!
 cmd-ban-invalid-severity = { $severity } não é um peso aceitável!
 cmd-ban-invalid-arguments = Número inválido de argumentos
-cmd-ban-hint = <name/user ID>
-cmd-ban-hint-reason = <reason>
+cmd-ban-hint = <nome /user ID>
+cmd-ban-hint-reason = <razão>
 cmd-ban-hint-severity = [severity]
-cmd-ban-hint-duration = [продолжительность]
+
+cmd-ban-hint-duration = [duration]
 cmd-ban-hint-duration-1 = Para sempre
 cmd-ban-hint-duration-2 = 1 dia
 cmd-ban-hint-duration-3 = 3 dias
@@ -16,7 +17,7 @@ cmd-ban-hint-duration-4 = 1 semana
 cmd-ban-hint-duration-5 = 2 semanas
 # ban panel
 cmd-banpanel-desc = Painel de proibições abertas
-cmd-banpanel-help = Uso: banpanel [имя или guid игрока]
+cmd-banpanel-help = Uso: banpanel [name or user guid]
 cmd-banpanel-server = Isso não pode ser usado através do console do servidor
 cmd-banpanel-player-err = O jogador especificado não foi encontrado
 cmd-ban-hint-duration-6 = 1 mês
@@ -26,16 +27,17 @@ cmd-banlist-help = Uso: lista de banimentos <name or user ID>
 cmd-banlist-empty = Não há banimentos ativos para o usuário { $user }
 cmd-banlistF-hint = <name/user ID>
 cmd-ban_exemption_update-desc = Defina uma exceção para tipos de banimento de jogadores.
-cmd-ban_exemption_update-help = 
-    Использование: ban_exemption_update <player> <flag> [<flag> [...]]
-    Укажите несколько флагов, чтобы дать игроку исключение из нескольких типов банов.
-    Чтобы удалить все исключения, выполните эту команду и укажите единственным флагом "None".
+cmd-ban_exemption_update-help = Utilização: ban exemption update <player> <flag> [<flag> [...]]
+    Especifique várias bandeiras para dar a um jogador múltiplas bandeiras de isenção de ban.
+    Para remover todas as isenções, execute este comando e dê "Nenhum" como única bandeira.
+
 cmd-ban_exemption_update-nargs = Pelo menos 2 argumentos eram esperados
 cmd-ban_exemption_update-locate = Não foi possível encontrar o jogador '{ $player }'.
 cmd-ban_exemption_update-invalid-flag = Sinalizador inválido '{ $flag }'.
 cmd-ban_exemption_update-success = Flags de exceção de banimento atualizados para '{ $player }' ({ $uid }).
-cmd-ban_exemption_update-arg-player = <player>
-cmd-ban_exemption_update-arg-flag = <flag>
+cmd-ban_exemption_update-arg-player = <jogador>
+cmd-ban_exemption_update-arg-flag = <Flag>
+
 cmd-ban_exemption_get-desc = Mostrar exceções de banimento para um jogador específico.
 cmd-ban_exemption_get-help = Uso: ban_exemption_get <player>
 cmd-ban_exemption_get-nargs = Esperava exatamente 1 argumento
@@ -74,9 +76,19 @@ ban-panel-erase = Apagar mensagens de bate-papo e jogador da rodada
 server-ban-string-never = nunca
 server-ban-string-no-pii = { $admin } definiu um banimento de servidor de gravidade { $severity }, que expirará { $expires } em { $name } com motivo: { $reason }, rodada: { $round }
 server-ban-unknown-round = Desconhecido
-cmd-ban_exemption_get-arg-player = <player>
-# Antag Bans
+cmd-ban_exemption_get-arg-player = <jogador>
+
+# Painel de banimento
 ban-panel-role-selection-antag = Antagonista
 ban-panel-role-selection-antag-all-option = Todos
 # Kick on ban
 ban-kick-reason = Você foi banido
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-banlist-hint = <nome /user ID>
+
+
+ban-panel-expiry-error = error
+
+# Texto de banimento

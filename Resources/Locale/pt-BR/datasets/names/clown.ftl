@@ -1,7 +1,7 @@
 names-clown-dataset-1 = Smeshkiton
 names-clown-dataset-2 = Honkel III
 names-clown-dataset-3 = Ganso McSunny
-names-clown-dataset-4 = Toodles Sharperton
+names-clown-dataset-4 = Adeus Sharperton
 names-clown-dataset-5 = Doodle Dinky
 names-clown-dataset-6 = Honkerbel
 names-clown-dataset-7 = Bo Bo Sassi
@@ -46,7 +46,7 @@ names-clown-dataset-45 = Senhor Macarrão
 names-clown-dataset-46 = Yuko
 names-clown-dataset-47 = Buggy
 names-clown-dataset-48 = Rindo
-names-clown-dataset-49 = Yorick
+names-clown-dataset-49 = Yorick.
 names-clown-dataset-50 = Cortador
 names-clown-dataset-51 = Guloso
 names-clown-dataset-52 = Pogo

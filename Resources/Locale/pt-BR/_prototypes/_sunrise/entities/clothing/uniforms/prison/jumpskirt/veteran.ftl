@@ -15,3 +15,8 @@ ent-ClothingUniformJumpskirtPrisonTraineeVeteran = saia de macacão para estagi�
 
 ent-ClothingUniformJumpskirtPrisonWorkerVeteran = Saia de macacão para faz-tudo de prisão veterana
     .desc = Um venerado uniforme de saia de trabalho para mestres artesãos que passaram décadas aperfeiçoando seu ofício nas profundezas, suas mãos calejadas e tecido desgastado contam histórias de incontáveis ​​mudanças nas impiedosas minas.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformJumpskirtPrisonVeteranBase = prisão veterano salto saia
+    .desc = Um distinto uniforme de saia usado por experientes funcionários da prisão que provaram sua dedicação durante anos de serviço.

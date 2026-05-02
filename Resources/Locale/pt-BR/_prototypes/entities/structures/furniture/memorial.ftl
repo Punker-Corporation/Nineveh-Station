@@ -1,11 +1,11 @@
 ent-Memorial = monumento
     .desc = Perpetua algo ou alguém.
-ent-SS13Memorial = Tumba do Colaborador Desconhecido
-    .desc = 
-        Здесь покоится неизвестный сотрудник
-        Неизвестный по имени и званию
-        Чьи деяния не будут забыты
-ent-Monolith = monólito
-    .desc = 
-        Черт возьми, современное искусство.
-        Держу пари, это стоит целое состояние.
+ent-SS13Memorial = túmulo do funcionário desconhecido
+    .desc =
+        Aqui descansa um funcionário desconhecido
+        Desconhecido pelo nome ou classificação
+        Cujos actos não serão esquecidos
+ent-Monolith = monolito
+    .desc =
+        C'um caraças, arte moderna.
+        Aposto que vale uma fortuna.

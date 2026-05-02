@@ -14,3 +14,9 @@ store-preset-name-spellbook = Livro de Feitiços
 store-preset-name-ntuplink = Visionário
 store-preset-name-exchanger = Permutador
 store-preset-name-blackmarket = Mercado negro
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+store-ui-refund-text = Montante das restituições
+
+store-preset-name-changeling = Armazenamento de DNA

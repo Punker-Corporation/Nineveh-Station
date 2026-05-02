@@ -1,0 +1,10 @@
+ent-BaseMobClown = palhaço aberrante
+    .desc = Uma massa escorregadia de matéria hilariante, animada através da energia honktacular.
+ent-MobClownJared = { ent-BaseMobClown }
+    .desc = { ent-BaseMobClown.desc }
+ent-MobClownGolem = { ent-BaseMobClown }
+    .desc = { ent-BaseMobClown.desc }
+ent-MobClownClamp = { ent-BaseMobClown }
+    .desc = { ent-BaseMobClown.desc }
+ent-MobClownLover = { ent-BaseMobClown }
+    .desc = { ent-BaseMobClown.desc }

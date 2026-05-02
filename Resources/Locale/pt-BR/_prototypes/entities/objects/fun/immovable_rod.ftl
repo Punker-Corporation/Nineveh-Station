@@ -1,8 +1,8 @@
 ent-ImmovableRod = haste fixa
     .desc = Você sente que ele está com fome. Isso geralmente é um mau sinal.
 ent-ImmovableRodDespawn = { ent-ImmovableRod }
+    .suffix = Desesperar
     .desc = { ent-ImmovableRod.desc }
-    .suffix = Despawn
 ent-ImmovableRodSlow = { ent-ImmovableRod }
     .suffix = Lento
     .desc = { ent-ImmovableRod.desc }

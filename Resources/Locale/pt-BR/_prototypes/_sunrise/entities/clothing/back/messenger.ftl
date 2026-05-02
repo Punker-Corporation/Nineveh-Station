@@ -14,3 +14,12 @@ ent-ClothingBackpackMessengerArcadia = Bolsa mensageiro Arcádia
     .desc = { ent-ClothingBackpackMessengerPassenger.desc }
 ent-ClothingBackpackMessengerPirate = bolsa mensageiro pirata
     .desc = Bolsa mensageiro durável para crimes de guerra. Yarrr.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackMessengerPirateBundleSKM24Scrap = Pacote de sucata SKM-24
+    .desc = Contém a espingarda de assalto mais barata.
+
+
+ent-ClothingBackpackMessengerMercenaryBundleARG = Pacote ARG
+    .desc = Contém a espingarda de assalto padrão.

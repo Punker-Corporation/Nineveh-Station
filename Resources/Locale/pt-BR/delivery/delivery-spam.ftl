@@ -56,7 +56,7 @@ delivery-spam-2 = Razões para escolher Nanotrasen!
         O LOGOTIPO DELES É HORRÍVEL! ELES ACHAM QUE SÃO INCRÍVEIS COM AQUELE LOGO! "OLHEM PRA MIM, COMO SOU LEGAL!" AH, UMA COBRA EM FORMA DE S! QUE CRIATIVO! MEU FILHO DE TRÊS ANOS FARIA UM LOGO MELHOR!
 delivery-spam-3 = Razões para escolher o Syndicate!
     .desc = Publicidade para o Sindicato.
-    .content = 
+    .content =
         { -delivery-header-syndicate }
 
         { "[head=2] TRÊS RAZÕES PRINCIPAIS PELAS QUAIS O NANOTRASEN É INSANO[/head]" }
@@ -71,7 +71,7 @@ delivery-spam-3 = Razões para escolher o Syndicate!
         OS MÉTODOS DE MATAR DELES NÃO TÊM NADA DE INSPIRADOR! É SÓ UMA ARMA! NÃO TEM JOGAR GENTE NO ESPAÇO ABERTO, NÃO TEM ALIMENTAR PESSOAS EM TRITURADORES COM O MODO DE SEGURANÇA DESLIGADO, NÃO TEM ENFIAR BOMBAS NOS BOLSOS DOS OUTROS! QUE TÉDIO!
 delivery-spam-4 = Cansado da ciência explodir?
     .desc = Siga estas etapas simples para garantir que isso nunca aconteça novamente!
-    .content = 
+    .content =
         { "[head=3]A ciência vai adorar você por isso!!" }
 
         Você está cansado de ver o departamento científico da sua estação explodir sem fazer ciência de verdade?
@@ -89,7 +89,7 @@ delivery-spam-4 = Cansado da ciência explodir?
         { "[color=cinza claro]Nota: O Clã Aranha não se responsabiliza por qualquer punição imposta por sua liderança.[/color]" }
 delivery-spam-5 = ACESSO COMPLETO GRATUITO!!
     .desc = Você já quis ter acesso completo e gratuito?!
-    .content = 
+    .content =
         { "[head=3]Você já quis obter acesso [italic][color=green]gratuito [bold]total!?!?[/bold][/color][/italic][/head] " }
                                 { "[head=2]Bem, AGORA VOCÊ PODE!![/head]!" }
 
@@ -221,7 +221,7 @@ delivery-spam-11 = Ajude mamãe e papai!
         { "[italic]seus pais[/italics]" }
 delivery-spam-12 = Junte-se a nós em nossa viagem inaugural!
     .desc = Anúncio para uma viagem relaxante.
-    .content = 
+    .content =
         { "[head=2] Junte-se a nós em nossa primeira viagem...[/head]" }
 
             ░█▀▀░█▀▀░░░█▀▄░█▀▀░█░░░█▀█░█░█░█▀█░█▀▄
@@ -249,3 +249,17 @@ delivery-spam-12 = Junte-se a nós em nossa viagem inaugural!
         { "[italic]*Não é permitido nadar nos lagos de fósforo; ao chegar a Galimar, você abre mão de qualquer direito a representação legal contra a Relaxination Destinations.[/italic]" }
         { "[italic]**Não olhe para o Olho do Cosmos por mais de cinco segundos de cada vez. Você não ouve o chamado do Olho.[/italic]" }
         { "[italic]***É necessário assinar um termo de isenção antes do desembarque. A Relaxination Destinations não garante a segurança das ruínas de Agatar. O desaparecimento de grupos turísticos foi reduzido para um nível aceitável de 0,23% de todos os grupos que visitam as ruínas.[/italic]" }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+delivery-spam-13 =  papel
+    .desc =         Uma carta para o editor.
+    .content =      A quem possa interessar,
+
+                    A famosa série de livros Adventures of Ian e Renault é uma que é apreciada por crianças pequenas e pelo menos um lagarto disléxico severamente (não se preocupe, eu melhorei). No entanto, houve um erro na publicação, pois Ian e Renault nunca cometeriam um erro de escrita. Parece que em As Aventuras de Ian e Renault: Uma Viagem Ártica de Coragem e Amizade, foram usadas duas linhas de As Aventuras de Ian e Renault: Explorando a Cidade.
+                    Isto não fazia sentido. Como é que o Ian e a Renault encontraram um gatinho no Árctico? O que fazia lá o gatinho? Por que Ian e Renault estavam fazendo mais do que a média hoje? E o pior criminoso é a segunda linha extraviada, que é "Quando o dia virou para a noite, eles estavam exaustos, mas felizes de sua aventura na cidade" (Ian e Renault, 1). Oh, desculpe!!! Eu não estou ciente de que há uma cidade no Ártico!!! Que acabaram de parar. Tu sabes. Para um café. Espera! CAFÉ MATE CãES E CAIXAS!!!!!!!!! QUEM PUBLICARIA ESTA!!!! Você acabou de matar Ian e renault!!!!!!!!!!!!!!!!!!!!!!! Como você pode!!!!!!!!!!!!!!!!!! VOCÊ MONSTER!!!!!!!!!!!!!!!
+                    E o que ganhaste por matar o Ian e a Renault? Hmm? Um livro um pouco mais longo? Precisas daquele livro mais longo, não precisas? Livros mais longos vendem por mais? Querias ganhar mais dinheiro?
+                    Olha para onde isso te levou. Mataste os dois. Parabéns.
+                    Não haverá mais sessões agora.
+                    Como isso é para fazer dinheiro???? É uma merda?
+                    {"["} bold]WELL você não deveria tê-los matado!!!!!!!!!!!! [/bold]

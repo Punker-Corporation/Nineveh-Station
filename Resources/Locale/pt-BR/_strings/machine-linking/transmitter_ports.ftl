@@ -4,7 +4,7 @@ signal-port-name-on-transmitter = Sobre
 signal-port-description-on-transmitter = Esta porta é habilitada sempre que o transmissor é ligado.
 signal-port-name-off-transmitter = Desligado
 signal-port-description-off-transmitter = Esta porta é habilitada sempre que o transmissor é desligado.
-signal-port-name-status-transmitter = Status
+signal-port-name-status-transmitter = Estado
 signal-port-description-status-transmitter = Esta porta é aumentada ou baixa dependendo do estado do transmissor.
 signal-port-name-left = Esquerda
 signal-port-description-left = Esta porta é ativada sempre que a alavanca é movida para a posição mais à esquerda.
@@ -46,3 +46,14 @@ signal-port-name-power-charging = Carregador
 signal-port-description-power-charging = Esta porta é ativada com um nível de sinal alto quando a bateria está carregando e um sinal baixo quando não está.
 signal-port-name-power-discharging = Descarga
 signal-port-description-power-discharging = Esta porta é ativada com um nível de sinal alto quando a bateria está fraca e com um sinal baixo quando não está.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+signal-port-name-trigger-sender = Trigger
+
+signal-port-description-trigger-sender = Esta porta é invocada sempre que o dispositivo dispara.
+
+
+signal-port-name-item-detected = Detectado
+
+signal-port-description-item-detected = Esta porta é invocada sempre que o transmissor detecta um item.

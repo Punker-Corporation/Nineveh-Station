@@ -26,11 +26,7 @@ bloodcult-listtargets-help = Exibe todos os alvos atuais do Culto de Sangue com 
 bloodcult-listtargets-usage = Uso: bloodcult_listtargets
 bloodcult-listtargets-system-not-found = O sistema Blood Cult não foi encontrado.
 bloodcult-listtargets-no-targets = Nenhum alvo de culto encontrado.
-bloodcult-listtargets-header = { $contagem -> 
-    [1] Текущая цель культа ({ $count }):
-    [few] Текущие цели культа ({ $count }):
-   *[other] Текущие цели культа ({ $count }):
- }
+bloodcult-listtargets-header = Alvos atuais do culto ( { $count }):
 bloodcult-listtargets-sacrificed = Sacrificado
 bloodcult-listtargets-alive = Vivo
 bloodcult-listtargets-target = { $name } ({ $uid }) - { $status }

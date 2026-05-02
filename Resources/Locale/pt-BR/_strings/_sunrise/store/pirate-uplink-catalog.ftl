@@ -28,7 +28,7 @@ uplink-piratedeathrattle-implant-desc = Uma caixa contendo implantes Deathrattle
 # Wearables
 uplink-messenger-random-name = Bolsa espaçosa
 uplink-messenger-random-desc = A bolsa é um compromisso entre capacidade e facilidade de armazenamento para roubos e crimes de guerra!
-uplink-eva-bundle-name = Скафандр EVA "Мусорщиков"
+uplink-eva-bundle-name = Trashman da EVA
 uplink-eva-bundle-desc = Um terno surrado, coberto com fita adesiva, mas protetor. A melhor coisa por esse preço.
 uplink-eva-armored-bundle-name = Fato de embarque em EVA Scavenger
 uplink-eva-armored-bundle-desc = Um terno surrado, coberto de fita adesiva e remendos. Uma armadura macia é colocada por cima, é igualmente cheia de buracos, mas ainda pode resistir a um golpe.

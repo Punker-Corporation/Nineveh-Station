@@ -3,13 +3,11 @@ pai-system-off = PII não está instalado.
 pai-system-still-searching = Ainda em busca de IDE.
 pai-system-searching = Procurando IDE...
 pai-system-role-name = IA pessoal
-pai-system-role-description = 
-    Станьте чьим-то персональным Искуственным Интеллектом!
-    (Воспоминания *не* прилагаются.)
+pai-system-role-description = Sê amigo electrónico de alguém!
+                              (Memórias * não incluídas.)
 pai-system-role-name-syndicate = IA pessoal do Sindicato
-pai-system-role-description-syndicate = 
-    Станьте чьим-нибудь приятелем из Синдиката!
-    (Воспоминания *не* прилагаются.)
+pai-system-role-description-syndicate = Sê amigo do Sindicato de alguém!
+                                        (Memórias * não incluídas.)
 pai-system-role-name-potato = Inteligência Artificial de Batata
 pai-system-role-description-potato = Este é um brinquedo infantil. E agora você mora nele.
 pai-system-wipe-device-verb-text = Excluir FII

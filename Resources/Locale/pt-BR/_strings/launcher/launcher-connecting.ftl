@@ -12,9 +12,8 @@ connecting-disconnected = Desconectado do servidor:
 connecting-tip = Miau!
 connecting-window-tip = Dica { $numberTip }
 connecting-version = versão 0.1
-connecting-fail-reason = 
-    Не удалось подключиться к серверу:
-    { $reason }
+connecting-fail-reason = Não foi possível ligar ao servidor:
+                         { $reason }
 connecting-state-NotConnecting = Não conectado
 connecting-state-ResolvingHost = Definição de host
 connecting-state-EstablishingConnection = Estabelecendo uma conexão

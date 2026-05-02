@@ -1,90 +1,90 @@
-book-text-demonomicon1 = 
-    Как Вызвать Демона
-    - автор Дж.Дж. Визджеральд
+book-text-demonomicon1 = Como convocar um demônio
+          - por J.G. Wizgerald
 
-    1. закончить написание руководства по вызову демона
-book-text-demonomicon2 = 
-    Как Вызвать Димона
-    - автор Дж.Дж. Визджеральд
+          1. ado terminar de escrever guia de invocação demoníaca
 
-    1. закончить написание руководства по вызову димона
-    2. СТоп. Опечатка. Чёрт. Простите чуваки
-book-text-demonomicon3 = 
-    Найденные Мною Крутые Имена Демонов
-    - автор мисс Моссрок
+book-text-demonomicon2 = Como chamar um limão
+          - por J.G. Wizgerald
 
-    Абраксас
-    Нефилим
-    Баал
-    Левиафан
-    Гэри
-    Молох
-    Сцилла
-    Фенекс
-book-text-chemistry-insane = 
-    РУКОВОДСТВО ПО ХИМИИ ИГОРЯ ХИМИКА
+          1. todo terminar de escrever limão guia de convocação
+          2. Wait. Typo. Merda. Desculpem, rapazes.
 
-    НАЗВАНИЕ: РУКОВОДСТВО ПО ХИМИИ
+book-text-demonomicon3 = Nomes de demônios legais que encontrei
+      - pela Sra. Mossrock
 
-    АННОТАЦИЯ: РУКОВОДСТВО ПО ХИМИИ
+      Abraxas
+      Nefilim
+      Baal
+      Leviatã
+      Gary.
+      Moloch
+      Scylla
+      Fenex
 
-    РАЗДЕЛ: МУДРЫЕ СЛОВА ИГОРЯ ХИМИКА
+book-text-chemistry-insane = GUIA DE QUIMIDADE IGOR
 
-    МОЙ СОВЕТ НОМЕР ОДИН. ВСЕГДА ВЕСЕЛИСЬ. НИКОГДА НЕ ЗНАЕШЬ, КОГДА ВСЁ ЗАКОНЧИТСЯ.
-    ТАК ЧТО ПРОСТО ПРОДОЛЖАЙ!!!
+      TÍTULO: GUIA DA QUÍMICA
 
-    МОЙ СОВЕТ НОМЕР ДВА. Я ПРОСТО НЕ МОГУ БЛЯТЬ ПЕРЕСТАТЬ ПЕРЕМАЛЫВАТЬ КОМБИНЕЗОНЫ В ИЗМЕЛЬЧИТЕЛЕ. МОИ Т.Н. "КОЛЛЕГИ" (агенты) ПОСТОЯННО КРИЧАТ НА МЕНЯ
-    ЧТОБЫ Я ПЕРЕСТАЛ И ЧТО "их стоимость вычтут из нашей зарплаты", НО ОНИ ТАК ХОРОШИ. Я ПРЯМО ГЕНИЙ ДИЗАЙНА ИНТЕРЬЕРА.
-    САКСОФОНЫ И БАТАРЕИ ОТВЛЕКАЮТ МЕНЯ, НО Я ВСЕГДА ВОЗВРАЩАЮСЬ К КОМБИНЕЗОНАМ. ИИИ-ХАА.
+      RESUMO: GUIA PARA A QUÍMICA
 
-    МОЙ СОВЕТ НОМЕР ТРИ. СПАСИБО, ЧТО ПРОЧИТАЛИ!!! ИГОРЬ ХИМИК
+      SECÇÃO: PALAVRAS SÁBIDAS DA QUIMIDADE IGOR
 
-    ВЫВОДЫ: ИГОРЬ ХИМИК
-book-text-botanics = ** Aplicação prática de amostras de flora encontradas em áreas NanoTrasen **
+      A minha primeira dica. É sempre divertir-se. Nunca se sabe quando tudo vai acabar.
+      Então, apenas continue!
 
-    Многие растения, будучи измельчёнными, образуют полезные химические вещества. К. (тут и далее - космический) мак и к. алоэ вера
-    известны благодаря своим целебным свойствам.
+      O meu número dois. Não consigo parar de fazer jumpsuits. Os meus "colagues" continuam a gritar para mim.
+      Para parar e que vai sair do nosso salário, mas as coisas são tão boas. Sou como um génio de decoração interna.
+      Saxofones e baterias tiram-me a cabeça, mas estou sempre de volta aos saltos. Hoowee.
 
-    К. трутовик, он же линчжи, известен потенциальной возможностью спасать находящихся при смерти от токсинов.
-    Однако чрезмерное его употребление может привести к неблагоприятным последствиям.
+      Obrigado por leres! QUIMIDADE IGOR
 
-    К. мухомор, чрезвычайно ядовитый гриб (Покойтесь с миром, сэр Алакастер), и к. галакточертополох,
-    казалось бы, обычный антитоксин, оказывается, имеют какое-то отношение друг к другу.
+      CONCLUSÃO: QUÍMTICA IGOR
 
-    В настоящее время проводятся специальные исследования сочетаний обсуждаемых лекарственных растений, которые могут оказаться плодотворными.
+book-text-botanics = ** Aplicações de Espécimes Botânicos Encontradas em Territórios NanoTrasen **
 
-    ----
+      Muitas plantas, quando moídas, produzem produtos químicos úteis. S. (spessmens) papaver e S. aloe vera
+      são conhecidos pelas suas propriedades curativas básicas.
 
-    - авторы Джеймс Алакастер и Голзук Амарант
-book-text-gnome = 
-    Да Здравствует Гномий Король
+      S. lucidum, ou lingzhi, é conhecido por sua potente capacidade de salvar aqueles perto da morte de toxinas. Comer demais.
+      é conhecido por causar efeitos adversos.
 
-    Он есть Великий Картограф, что поместил наш народ в мир Острова!
+      S. amanita, um espécime poderosamente venenoso (Rest In Peace Sir Alacaster), e S. galactica, a
+      aparentemente antitoxina comum, parecem ter algum tipo de relação entre si.
 
-    Тот, кто любит обладателей самых пышных шляп!
+      Algumas pesquisas estão sendo feitas sobre combinações das plantas medicinais discutidas, e podem ser frutíferas.
 
-    Сражённый злопыхателями, не способными признать наш род!
+      ----
 
-    Наша месть свершится сполна! Он восстанет вновь! Хии хуу!
-book-text-fishing = 
-    Когда я вырасту, я хочу стать одним из собирателей космического моря!
+      - escrito por James Alacaster e Golzuk Amaranth
 
-    Я надеюсь, что до конца своих дней успею поймать легендарную космическую рыбу!
+book-text-gnome = Salve o nosso Rei do Gnome
 
-    Я как маленькая крыска, плывущая по сырному морю! Ублюдки явятся чтобы прикончить меня, но я хитёр как кот, и также удачлив!
+      Aquele que é o grande cartógrafo que colocou a nossa espécie no mundo da ilha!
 
-    Зажмите <L БАМПЕР> и <R БАМПЕР>, чтобы активировать мини-игру "Рыбалка".
+      Aquele que ama aqueles com o maior dos Chapéus!
 
-    - Сержант Джон Бейкер Аклополи
-book-text-detective = 
-    ГЛАВА 1: МАЛЕНЬКИЙ ПЕРЕПОЛОХ НА БОЛЬШОЙ СТАНЦИИ
+      Atingidos pelos malfeitores que não podem apreciar a nossa espécie!
 
-    Эта станция тонула в преступности и грязи...
+      A nossa vingança será tratada na íntegra! Ele vai subir mais uma vez! Hee Hoo!
 
-    Я был на Багеле, играл в мяч, когда услышал вскрик и лазерный выстрел. Я зашёл под стоящий рядом стол, намереваясь спрятаться, но второго выстрела не прозвучало.
+book-text-fishing = Quando crescer, quero ser uma das colhedoras do mar espacial!
 
-    Снаружу, двое синдов, которым удалось пронести опасную контрабанду, напали на главу инженерии. Того, что от него осталось, не хватило бы на похороны в открытом гробу.
+      Acho que antes dos meus dias acabarem quero apanhar os fabled peixes espaciais!
 
-    Здесь всегда всё идёт наперекосяк... Я никогда больше не буду относиться к клоунам как раньше.
+      Sou como um rato a navegar pelos mares de queijo! Os sacanas vêm acabar comigo, mas sou tão astuto como um gato e sortudo como eles!
 
-    Вопрос в том... Кто это сделал на самом деле?
+      Pressione o <L BUMPER> e <R TRIGGER> para ativar o minijogo de pesca.
+
+      - Sargento John Baker Aclopoly
+
+book-text-detective = CAPÍTULO 1: Pequenas aventuras numa grande estação
+
+      Esta estação está cheia de crime e sujeira...
+
+      Estava a atirar em Bagel quando ouvi um grito e um tiro laser. Andei debaixo da mesa para me esconder, mas não houve um segundo tiro.
+
+      Lá fora, o chefe de engenharia foi atingido por dois Syndies ligados a um contrabando feroz. Não havia suficiente para um funeral aberto.
+
+      As coisas correm sempre mal aqui. Nunca mais olharei para palhaços.
+
+      A questão é... Quem foi?

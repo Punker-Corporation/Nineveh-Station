@@ -1,6 +1,7 @@
 ent-MobHellspawnBossSpawn = { ent-MobHellspawn }
     .desc = { ent-MobHellspawn.desc }
 ent-MobHellspawnBoss = { ent-MobHellspawn }
+    .suffix = Chefe
     .desc = { ent-MobHellspawn.desc }
 ent-ComputerBossTravel = altar de luta contra chefe
     .desc = { ent-AltarFangs.desc }

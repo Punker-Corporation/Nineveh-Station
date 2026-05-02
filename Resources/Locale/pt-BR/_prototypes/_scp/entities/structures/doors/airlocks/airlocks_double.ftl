@@ -50,3 +50,37 @@ ent-ScpDoubleGlassAirlockLifeSupport = { ent-ScpDoubleGlassAirlock }
 ent-ScpDoubleGlassAirlockLogistics = { ent-ScpDoubleGlassAirlock }
     .suffix = { access-name-logistics }
     .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpDoubleGlassAirlockAtmospherics = { ent-ScpDoubleGlassAirlock }
+    .suffix = Atmosféricos SCP
+    .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+ent-ScpDoubleGlassAirlockCargo = { ent-ScpDoubleGlassAirlock }
+    .suffix = Carga SCP
+    .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+ent-ScpDoubleGlassAirlockCommand = { ent-ScpDoubleGlassAirlock }
+    .suffix = Comando SCP
+    .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+ent-ScpDoubleGlassAirlockCentralCommand = { ent-ScpDoubleGlassAirlock }
+    .suffix = Comando Central SCP
+    .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+ent-ScpDoubleAirlockAtmospherics = { ent-ScpDoubleGlassAirlock }
+    .suffix = Atmosféricos SCP
+    .desc = { ent-ScpDoubleGlassAirlock.desc }
+
+ent-ScpDoubleAirlockCargo = { ent-ScpDoubleAirlock }
+    .suffix = Carga SCP
+    .desc = { ent-ScpDoubleAirlock.desc }
+
+ent-ScpDoubleAirlockCommand = { ent-ScpDoubleAirlock }
+    .suffix = Comando SCP
+    .desc = { ent-ScpDoubleAirlock.desc }
+
+ent-ScpDoubleAirlockCentralCommand = { ent-ScpDoubleAirlock }
+    .suffix = Comando Central SCP
+    .desc = { ent-ScpDoubleAirlock.desc }

@@ -76,3 +76,23 @@ ent-ActionToggleRootable = Crie raízes
     .desc = Comece ou pare de ficar preso ao chão.
 ent-ActionChameleonController = Mude suas roupas
     .desc = Troque de roupa rapidamente
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ActionActivateProtoAdrenalImplant = Ativar proto-adrenal
+    .desc = Injeta uma pequena dose de efedrina e epinefrina.
+
+ent-ActionActivateAdrenalImplant = Activar adrenal
+    .desc = Injeta uma dose forte de efedrina e epinefrina.
+
+ent-ActionActivateStimpackImplant = Activar o estimulante
+    .desc = Injeta uma grande dose de estimulantes.
+
+ent-ActionActivateNutrimentImplant = Activar a nutrição
+    .desc = Injeta nutrientes complexos.
+
+ent-ActionActivateReviverImplant = Activar o reanimador
+    .desc = Activa uma onda de adrenalina com uma descarga concentrada no coração e um cocktail de reagentes.
+
+ent-ActionWhistle = Assobio
+    .desc = Pare aí mesmo!

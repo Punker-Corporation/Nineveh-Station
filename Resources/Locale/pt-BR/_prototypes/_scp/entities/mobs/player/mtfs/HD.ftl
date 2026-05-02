@@ -13,3 +13,23 @@ ent-SpawnerMTFSquadHD = { spawner-squad-name } FTM Nu-7
 ent-SpawnerMTFSquadHDSpawnOnTrigger = { ent-SpawnerMTFSquadHD }
     .desc = { ent-SpawnerMTFSquadHD.desc }
     .suffix = { ent-SpawnerMTFSquadHD.suffix }, { spawner-on-trigger-suffix }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-IDCardHDLeader = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardHDSpecialist = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardHDCadet = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-HDLeaderPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-HDSpecialistPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-HDCadetPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }

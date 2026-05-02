@@ -1,5 +1,5 @@
 names-borg-dataset-1 = Feijão
-names-borg-dataset-2 = Joe
+names-borg-dataset-2 = Joe.
 names-borg-dataset-3 = Bip
 names-borg-dataset-4 = Bip II
 names-borg-dataset-5 = Caixa de som
@@ -26,7 +26,7 @@ names-borg-dataset-25 = Keller
 names-borg-dataset-26 = Xenos
 names-borg-dataset-27 = Eco
 names-borg-dataset-28 = Vetor
-names-borg-dataset-29 = B-0-RG
+names-borg-dataset-29 = B- 0- RG
 names-borg-dataset-30 = Megabyte
 names-borg-dataset-31 = Ass-Bot
 names-borg-dataset-32 = Deceptiburgo

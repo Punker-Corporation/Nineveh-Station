@@ -6,7 +6,7 @@ machine-upgrade-decreased-by-percentage = O parâmetro [color=yellow]{ $upgraded
 machine-upgrade-increased-by-amount = O parâmetro [color=yellow]{ $upgraded }[/color] foi aumentado em { $difference }.
 machine-upgrade-decreased-by-amount = O parâmetro [color=yellow]{ $upgraded }[/color] foi reduzido em { $difference }.
 machine-upgrade-not-upgraded = O parâmetro [color=yellow]{ $upgraded }[/color] não melhorou.
-machine-part-name-capacitor = Capacitor
+machine-part-name-capacitor = Condensador
 machine-part-name-manipulator = Manipulador
 machine-part-name-matter-bin = Capacidade de matéria
 machine-part-name-power-cell = Bateria

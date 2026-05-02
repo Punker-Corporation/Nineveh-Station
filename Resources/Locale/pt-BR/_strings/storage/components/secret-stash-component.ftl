@@ -18,3 +18,7 @@ comp-secret-stash-verb-open = Abrir
 secret-stash-plant = plantar
 secret-stash-toilet = cisterna da privada
 secret-stash-plushie = brinquedo de pelúcia
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+secret-stash-cake = bolo

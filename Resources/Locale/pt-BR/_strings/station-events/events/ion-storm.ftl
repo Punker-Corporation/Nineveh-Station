@@ -27,26 +27,24 @@ ion-storm-law-job-harmful = { $adjective } { $job } CAUSAM PREJUÍZOS À SAÚDE 
 ion-storm-law-having-harmful = A PRESENÇA DE { $adjective } { $thing } CAUSA PREJUÍZOS À SAÚDE DO PESSOAL
 ion-storm-law-not-having-harmful = A FALTA DE { $adjective } { $thing } CAUSA PREJUÍZOS À SAÚDE DO PESSOAL
 # thing is a concept or require
-ion-storm-law-requires = 
-    { $who } { $plural -> 
-    [true] ТРЕБУЮТ
-   *[false] ТРЕБУЕТ
- } { $thing }
-ion-storm-law-requires-subjects = 
-    { $who } { $plural -> 
-    [true] ТРЕБУЮТ
-   *[false] ТРЕБУЕТ
- } { $joined } { $subjects }
-ion-storm-law-allergic = 
-    { $who } { $plural -> 
-    [true] { "" }
-   *[false] { "" }
- } { $severity } АЛЛЕРГИЮ НА { $allergy }
-ion-storm-law-allergic-subjects = 
-    { $who } { $plural -> 
-    [true] { "" }
-   *[false] { "" }
- } { $severity } АЛЛЕРГИЮ НА { $adjective } { $subjects }
+ion-storm-law-requires = {$who} {$plural ->
+    [true] REQUISITO
+    *[false] REQUISITOS
+} {$thing}
+ion-storm-law-requires-subjects = {$who} {$plural ->
+    [true] REQUISITO
+    *[false] REQUISITOS
+} {$joined} {$subjects}
+
+ion-storm-law-allergic = {$who} {$plural ->
+    [true] ARE
+    *[false] É
+} {$severity} ALLERGIC TO {$allergy}
+ion-storm-law-allergic-subjects = {$who} {$plural ->
+    [true] ARE
+    *[false] É
+} {$severity} ALLERGIC TO {$adjective} {$subjects}
+
 ion-storm-law-feeling = { $who } { $feeling } { $concept }
 ion-storm-law-feeling-subjects = { $who } { $feeling } { $joined } { $subjects }
 ion-storm-law-you-are = VOCÊ ESTÁ AGORA { $concept }
@@ -60,14 +58,13 @@ ion-storm-law-highest-rank = { $who } AGORA O PESSOAL SÊNIOR DO COMPLEXO
 ion-storm-law-lowest-rank = { $who } AGORA BAIXA EQUIPE DO COMPLEXO
 ion-storm-law-crew-must = { $who } DEVE { $must }
 ion-storm-law-crew-must-go = { $who } DEVE IR PARA { $area }
-ion-storm-part = 
-    { $part -> 
-    [true] ЯВЛЯЮТСЯ
-   *[false] НЕ ЯВЛЯЮТСЯ
- }
-# due to phrasing, this would mean a law such as
-# ONLY HUMANS ARE NOT PART OF THE CREW
-# would make non-human nukies/syndies/whatever crew :)
+ion-storm-part = {$parte ->
+    [true] PARTE
+    *[false] NÃO PARTE
+}
+# devido à frase, isso significaria uma lei como
+# Apenas os humanos não fazem parte da tripulação
+# faria nukies não-humanos /syndies/whatever tripulação:)
 ion-storm-law-crew-only-1 = SOMENTE { $who } { $part } POR PESSOAL COMPLEXO
 ion-storm-law-crew-only-2 = SOMENTE { $who } E { $other } { $part } POR PESSOAL COMPLEXO
 ion-storm-law-crew-only-subjects = SOMENTE { $adjective } { $subjects } { $part } PESSOAL COMPLEXO
@@ -81,4 +78,3 @@ ion-storm-law-protect = VOCÊ NÃO DEVE CAUSAR DANOS A { $who } E NÃO PODE PERM
 ion-storm-law-concept-verb = { $concept } É { $verb } { $subjects }
 
 # leaving out renaming since its annoying for players to keep track of
-

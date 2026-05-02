@@ -74,3 +74,14 @@ ent-ClothingThighUk = Meias até a coxa com bandeira britânica
     .desc = { ent-ClothingSocksBaseButcherable.desc }
 ent-ClothingThighChristmas = meias altas de natal
     .desc = { ent-ClothingSocksBaseButcherable.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingStockingsWhiteSheer = meias brancas puras
+    .desc = Branco puro.
+
+ent-ClothingStockingsBlackSheer = preto puro meias
+    .desc = Puro preto.
+
+ent-ClothingStockingsGarter = Meias-liga
+    .desc = Com ligas.

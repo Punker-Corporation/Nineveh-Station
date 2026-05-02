@@ -28,10 +28,10 @@ ent-ClothingBeltMilitaryWebbingMedRaidFilled = Invasor RPS do Exército
     .desc = O sistema tático de cinto-ombro usado pelos agentes Raider possui um revestimento adicional de tecido durot para proteger produtos químicos em condições de combate.
 ent-ClothingAbductorBelt = cinto abdutor
     .desc = Pode armazenar várias NOSSAS coisas.
-ent-TrashBagAmmo = bolsa de cinto de cartucho
-    .suffix = CosmoBatalha
-    .desc = Uma bolsa durável para especialistas em armas de transporte transportarem um grande número de cartuchos. Quando preso a um cinto, ele atrai magneticamente qualquer cartucho vazio próximo.
-# пояса Метус
+ent-TrashBagAmmo = saco de cinto de munições
+    .suffix = Batalha de Vaivém
+    .desc = Um saco robusto para especialistas em armas de transporte para transportar grandes quantidades de revestimento. Magnetiza qualquer cassing vazio próximo quando ligado a um cinto.
+# Cinto Metus
 ent-ClothingBeltPrisonGuardianMetus = { ent-ClothingBeltSecurity }
     .desc = { ent-ClothingBeltSecurity.desc }
 ent-ClothingBeltHeadOfPrisonMetus = cinto de diretor
@@ -50,3 +50,18 @@ ent-ClothingBeltPrisonWorkerMetus = cinto de faz-tudo da prisão
     .desc = Pesado e áspero, vestígios de pancadas e pele queimada, tudo o que se acumulou no trabalho em diferentes pontos da prisão.
 ent-ClothingBeltPrisonTraineeMetus = Cinto de Estagiário Prisional
     .desc = Fresco e novo, ainda aprendendo a suportar o peso da responsabilidade, marcado em laranja, mostrando o caminho a seguir.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBeltSovietMarineWebbing = SSF plataforma torácica marinha
+    .desc = Um conjunto de tramas tácticas usadas pelos icónicos fuzileiros da elite soviética.
+
+ent-ClothingBeltSovietMarineWebbingFilled = { ent-ClothingBeltSovietMarineWebbing }
+    .suffix = Preenchido
+    .desc = { ent-ClothingBeltSovietMarineWebbing.desc }
+
+ent-ClothingBeltLightSovietMarineWebbing = Plataforma torácica leve SSF
+    .desc = Um conjunto de cintas de luz usadas por soldados soviéticos.
+
+ent-ClothingBeltSalvageMercWebbing = Esfregadeiras
+    .desc = Ideal para armazenar tudo de ferramentas, munição e salvamento.

@@ -1,4 +1,4 @@
-salvage-job-rank-title-0 = [color=gray]Scavenger[/color]
+salvage-job-rank-title-0 = [color=gray] Scavenger [/color]
 salvage-job-rank-title-1 = [color=white]Coletor[/color]
 salvage-job-rank-title-2 = [color=yellow]Especialista[/color]
 salvage-job-rank-title-MAX = [color=gold]Colecionador Supremo[/color]
@@ -6,15 +6,15 @@ job-board-radio-announce = A classificação do colecionador aumentou para [bold
 job-board-ui-window-title = Quadro de avisos
 job-board-ui-label-rank = [bold]Classificação:[/bold]
 job-board-ui-label-items = Alvo: [color=red]{ $item }[/color]
-job-board-label-text = 
-    { "[head=2]Carga para descarte[/head]" }
-    { "[italic]Для использования только при официальных внестанционных грузах для утилизации.[/italic]" }
+job-board-label-text = [head=2] Envio de trabalho de salvação [/head]
+    {"[italic]For use only on official off-station salvage shipments.[/italic]"}
 
-    { "[bold]Цель:[/bold]" } { $target }
-    { "[bold]Награда:[/bold]" } ${ $reward }
+    ZXQ0QZ {$target}
+    {"[bold]Reward:[/bold]"} $ {$reward}
 
 
-    { "[italic]Грузы подлежат проверке корпорацией Donk[/italic]" }
+    {"[italic]Shipments are subject to inspection by the Donk corporation[/italic]"}
+
 salv-job-board-name-BountyTeethSpaceCarp = Carpa espacial
 salv-job-board-name-BountySalvageScrap = Detritos espaciais do fundo do mar
 salv-job-board-name-BountySalvageOreGold = Ouro (minério)

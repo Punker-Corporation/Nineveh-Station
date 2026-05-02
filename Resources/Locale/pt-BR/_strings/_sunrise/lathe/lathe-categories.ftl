@@ -10,3 +10,7 @@ lathe-category-orders = Pedidos
 lathe-category-evidence = Evidência
 lathe-category-conclusions-and-decisions = Conclusões e decisões
 lathe-category-error = Erro
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+lathe-category-implants = Implantes

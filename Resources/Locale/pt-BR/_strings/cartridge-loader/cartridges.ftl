@@ -27,28 +27,27 @@ navigator-program-name = Navegador
 navigator-cartridge-loading = Carregando mapa...
 
 photo-program-name = FlashSnap
-
 med-tek-program-name = Tecnologia Médica
 # Wanted list cartridge
 wanted-list-program-name = Desejado
-nano-task-ui-heading-high-priority-tasks = 
-    { $amount -> 
-    [zero] Нет задач высокого приоритета
-    [one] 1 задача высокого приоритета
-   *[other] { $amount } задач высокого приоритета
- }
-nano-task-ui-heading-medium-priority-tasks = 
-    { $amount -> 
-    [zero] Нет задач среднего приоритета
-    [one] 1 задача среднего приоритета
-   *[other] { $amount } задач среднего приоритета
- }
-nano-task-ui-heading-low-priority-tasks = 
-    { $amount -> 
-    [zero] Нет задач низкого приоритета
-    [one] 1 задача низкого приоритета
-   *[other] { $amount } задач низкого приоритета
- }
+nano-task-ui-heading-high-priority-tasks =
+    { $amount ->
+        [zero] Sem tarefas de alta prioridade
+        [one] 1 Tarefa Alta Prioridade
+       *[other] Tarefas de Alta Prioridade {$amount}
+    }
+nano-task-ui-heading-medium-priority-tasks =
+    { $amount ->
+        [zero] Nenhuma Tarefa Prioritária Média
+        [one] 1 Tarefa Prioritária Média
+       *[other] Tarefas de Prioridade Média do {$amount}
+    }
+nano-task-ui-heading-low-priority-tasks =
+    { $amount ->
+        [zero] Sem tarefas de baixa prioridade
+        [one] 1 Tarefa Prioritária Baixa
+       *[other] Tarefas de baixa prioridade do {$amount}
+    }
 nano-task-ui-done = Feito
 nano-task-ui-revert-done = Cancelar
 nano-task-ui-priority-low = Curto
@@ -79,14 +78,17 @@ wanted-list-reason-label = [color=darkgray]Motivo:[/color] [color=white]{ $reaso
 wanted-list-unknown-reason-label = razão desconhecida
 wanted-list-initiator-label = [color=darkgray]Iniciador:[/color] [color=white]{ $initiator }[/color]
 wanted-list-unknown-initiator-label = iniciador desconhecido
-wanted-list-status-label = [color=darkgray]Status:[/color] { $status -> 
-    [suspected] [color=amarelo]suspeito[/color]
-    [wanted] [color=vermelho] procurado[/color]
-    [detained] [color=#b18644]задержан[/color]
-    [paroled] [color=verde]em liberdade condicional[/color]
-    [discharged] [color=verde]lançado[/color]
-   *[other] нет данных
- }
+wanted-list-status-label = Estado de [color=darkgray]: [/color] {$status ->
+        [suspected] [color=yellow] suspeita de [/color]
+        [wanted] [color=red] queria [/color]
+        [detained] [color=#b18644] detido [/color]
+        [paroled] [color=green] em condicional [/color]
+        [discharged] [color=green] descarregado [/color]
+        [hostile] [color=darkred] hostil [/color]
+        [eliminated] [color=gray] eliminado [/color]
+        *[other] nenhum
+    }
+
 wanted-list-history-table-time-col = Tempo
 wanted-list-history-table-reason-col = Violação
 wanted-list-history-table-initiator-col = Iniciador

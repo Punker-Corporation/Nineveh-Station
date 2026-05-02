@@ -2,6 +2,7 @@ cmd-jobwhitelist-job-does-not-exist = A posição { $job } não existe.
 cmd-jobwhitelist-player-not-found = Jogador { $player } não encontrado.
 cmd-jobwhitelist-hint-player = [player]
 cmd-jobwhitelist-hint-job = [job]
+
 cmd-jobwhitelistadd-desc = Permite que o jogador jogue em uma posição de lista de permissões.
 cmd-jobwhitelistadd-help = Uso: jobwhitelistadd <username> <job>
 cmd-jobwhitelistadd-already-whitelisted = { $player } já está na lista de permissões para a posição { $jobId } .({ $jobName }).

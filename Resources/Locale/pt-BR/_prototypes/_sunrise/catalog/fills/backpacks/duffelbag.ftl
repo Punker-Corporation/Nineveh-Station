@@ -64,3 +64,14 @@ ent-ClothingBackpackDuffelSyndicateSuperAmmoFilled = Conjunto de loja de armas
     .desc = Munição grande para todo o esquadrão! Inclui uma caixa de cartuchos C-20r, uma caixa de tambores Bulldog, uma caixa de cartuchos L6 SAW e munição solta, uma caixa de cartuchos DL6902 e munição extra solta, uma caixa de cartuchos Estoc, uma caixa de cartuchos Dragunov e uma caixa de munição sem caixa.
 ent-ClothingBackpackDuffelWeaponRifleAsh12 = Conjunto ASH-12
     .desc = ASh-12, 5 revistas e desenho.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackDuffelSyndicateFilledDragunov = Pacote Dragunov
+    .desc = O rifle icônico da revista Dragunov com 2 revistas raspy no set.
+
+ent-ClothingBackpackDuffelMilitaryBundlePirateEva = Pacote EVA pirata
+    .desc = Contém o velho fato EVA pirata.
+
+ent-ClothingBackpackDuffelMilitaryBundleScaf = Pacote de caf
+    .desc = Contém o velho fato EVA de combate.

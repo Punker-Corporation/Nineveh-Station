@@ -22,3 +22,7 @@ scp096-photo-not-triggered = A imagem parece borrada e danificada, você mal con
 scp096-photo-not-in-details-range = Você olha atentamente para a foto, mas não consegue ver os detalhes. Vale a pena se aproximar.
 
 scp096-only-in-containment-chamber = Você não pode fazer isso fora de uma cela de contenção.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+scp096-non-agro-attack-attempt = Não quero fazer isto.

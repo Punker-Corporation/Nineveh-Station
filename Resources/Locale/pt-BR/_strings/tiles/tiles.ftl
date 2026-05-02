@@ -48,7 +48,7 @@ tiles-blue-tile = telhas azuis
 tiles-mining-tile = telha de mineiro
 tiles-mining-dark-tile = azulejo mineiro escuro
 tiles-mining-light-tile = telha de mineiro leve
-tiles-freezer = freezer
+tiles-freezer = congelador
 tiles-showroom-floor = piso do salão de exposições
 tiles-lime-floor = piso de cal
 tiles-hydro-floor = piso hidro
@@ -133,3 +133,39 @@ tiles-wood-large = piso de madeira grande
 tiles-light-fancy-wood = lindo piso de madeira
 tiles-lattice-diagonal = grade diagonal
 tiles-xenoborg-floor = azulejo xenoborg
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+tiles-techmaint-floor-dark = piso techmaint escuro
+
+tiles-asteroid-sand-borderless = areia do asteróide sem borda
+
+tiles-asteroid-ironsand-borderless = Ironsand asteróide sem fronteiras
+
+tiles-dirt-planet-floor = terra chão planeta
+
+tiles-dark-astro-grass = Astro- grama escura
+
+tiles-light-astro-grass = Astro- grama leve
+
+tiles-astro-asteroid-sand-borderless = Astro-areia de asteróides sem fronteiras
+
+tiles-desert-astro-sand = Astro-areia do deserto
+
+tiles-xeno-floor = xeno chão
+
+tiles-xeno-steel = telha de aço xeno
+
+tiles-xeno-steel-corner = telha de canto de aço xeno
+
+tiles-xeno-maint = xeno techmaint
+
+tiles-dark-squiggly = azulejo de aço escuro esquiggly
+
+tiles-white-marble = azulejo de mármore branco
+
+tiles-dark-marble = azulejo de mármore escuro
+
+tiles-plasma-marble = azulejo plasmarble
+
+tiles-uranium-marble = azulejo de mármore de urânio

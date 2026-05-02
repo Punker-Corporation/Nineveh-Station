@@ -14,3 +14,24 @@ crew-monitoring-user-interface-no-department = Desconhecido
 crew-monitoring-user-interface-flavor-left = Em caso de emergência, contacte imediatamente o seu médico. pessoal complexo.
 crew-monitoring-user-interface-flavor-right = v1.7
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+crew-monitoring-ui-title = Consola de Monitoramento da Tripulação
+
+
+crew-monitoring-ui-filter-line-placeholder = Filtro
+
+
+crew-monitoring-ui-job-label = Trabalho:
+
+crew-monitoring-ui-no-server-label = Servidor não encontrado
+
+
+crew-monitoring-ui-no-department-label = Desconhecido
+
+crew-monitoring-ui-no-station-label = Estação desconhecida
+
+
+crew-monitoring-ui-flavor-left-label = Em caso de emergência, contactar imediatamente o pessoal médico da estação
+
+crew-monitoring-ui-flavor-right-label = v1.7

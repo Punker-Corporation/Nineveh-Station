@@ -14,3 +14,7 @@ job-name-senior-logistics-officer = Intendente Logístico
 job-description-senior-logistics-officer = Responsável por equipar a instituição com os materiais necessários.
 job-supervisors-O5-command = conselho O5
 job-supervisors-director = Diretor do Sitio
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-supervisors-regional-administration = administração regional

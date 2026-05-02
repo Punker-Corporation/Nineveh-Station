@@ -15,3 +15,13 @@ interaction-icon-name-friendly-shoulder-massage-icon = Massagem nas costas
 interaction-icon-name-friendly-tail-hug-icon = Caudas entrelaçadas
 interaction-icon-name-friendly-tail-icon = Rabo de cavalo
 interaction-icon-name-friendly-pat-horns-icon = Acariciando os chifres
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+interaction-icon-name-wing-pat = Alas para animais
+
+interaction-icon-name-wing-scratch = Asas de coçar
+
+interaction-icon-name-wing = Asas
+
+interaction-icon-name-wing-pull = Puxar asas

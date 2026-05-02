@@ -9,3 +9,10 @@ loadouts-max-limit = Máx. quantidade: { $count }
 loadouts-points-limit = Pontos: { $count } / { $max }
 loadouts-points-restriction = Não há pontos suficientes
 loadout-group-sex-restriction = Não disponível para este gênero
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+loadouts-count-items-in-group = {$item} e {$count} outros {$contagem ->
+[1] item
+*[other] itens
+}

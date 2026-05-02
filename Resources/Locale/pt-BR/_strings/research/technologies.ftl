@@ -90,3 +90,7 @@ research-technology-quantum-fiber-weaving = Tecelagem de fibra quântica
 research-technology-bluespace-cargo-transport = Transporte de carga Bluespace
 research-technology-advance-secborgs-combat = Módulos de combate avançados das Forças de Segurança Borg
 research-technology-milira-equipment = Equipamento Milir
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+research-technology-clowning-utilities = Utilitários de Limpeza

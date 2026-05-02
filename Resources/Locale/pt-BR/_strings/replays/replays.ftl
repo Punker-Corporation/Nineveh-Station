@@ -6,9 +6,8 @@ replay-loading-processing = Processamento de arquivos
 replay-loading-spawning = Geração de Entidade
 replay-loading-initializing = Inicializando Entidades
 replay-loading-starting = Entidades em execução
-replay-loading-failed = 
-    Не удалось загрузить повтор. Ошибка:
-    { $reason }
+replay-loading-failed = Falha ao carregar a repetição. Erro:
+                        {$reason}
 replay-loading-retry = Tente carregar com uma tolerância de exceção maior - PODE CAUSAR BUGS!
 replay-loading-cancel = Rejeitar
 # Main Menu
@@ -21,7 +20,7 @@ replay-menu-none = Nenhuma duplicata encontrada.
 replay-info-title = Informações de repetição
 replay-info-none-selected = Repetir não selecionado
 replay-info-invalid = [color=red]Repetição inválida selecionada[/color]
-replay-info-info = 
+replay-info-info =
     { "[" }color=cinza]Selecionado:[/color] { $name } ({ $file })
     { "[" }color=cinza]Hora:[/color] { $time }
     { "[" }color=cinza]ID da rodada:[/color] { $roundId }
@@ -36,7 +35,7 @@ replay-menu-select-title = Selecione repetir
 # Replay related verbs
 replay-verb-spectate = Observar
 # command
-cmd-replay-spectate-help = Uso: replay_spectate [сущность (опционально)]
+cmd-replay-spectate-help = replay spectate [optional entity]
 cmd-replay-spectate-desc = Anexa ou cancela a atribuição de um player local ao uid da entidade especificada.
 cmd-replay-spectate-hint = EntityUid opcional
 cmd-replay-toggleui-desc = Mude a interface do usuário de controle de reprodução.

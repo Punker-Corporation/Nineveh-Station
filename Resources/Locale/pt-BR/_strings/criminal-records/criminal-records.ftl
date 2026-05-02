@@ -9,7 +9,7 @@ criminal-records-console-show-all = Todos
 
 ## Status
 
-criminal-records-console-status = Status
+criminal-records-console-status = Estado
 criminal-records-status-none = Não
 criminal-records-status-wanted = Desejado
 criminal-records-status-detained = Preso
@@ -40,9 +40,9 @@ criminal-records-console-released = { $name } ({ $job }) foi liberado pelo funci
 criminal-records-console-not-wanted = O oficial { $officer } removeu o status de procurado de { $name } ({ $job }).
 criminal-records-console-paroled = { $name } ({ $job }) foi libertado em liberdade condicional pelo policial { $officer }.
 criminal-records-console-not-parole = O oficial { $officer } removeu o status de liberdade condicional de { $name } ({ $job }).
-criminal-records-console-unknown-officer = <неизвестный офицер>
+criminal-records-console-unknown-officer = <desconhecido>
 
-## Filters
+## Filtros
 
 criminal-records-filter-placeholder = Digite o texto e pressione "Enter"
 criminal-records-name-filter = Nome
@@ -52,4 +52,25 @@ criminal-records-dna-filter = ADN
 ## Arrest auto history lines
 
 criminal-records-console-auto-history = PRESO: { $reason }
-criminal-records-console-unspecified-reason = <причина не указана>
+criminal-records-console-unspecified-reason = <razão não especificada>
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+criminal-records-status-hostile = Hostil
+
+criminal-records-status-eliminated = Eliminado
+
+
+criminal-records-console-hostile = {$name} ({$job} ) foi marcado como hostil por {$officer} para: {$reason}.
+
+criminal-records-console-not-hostile = {$name} ( {$job} ) já não é marcado como hostil por {$officer}.
+
+criminal-records-console-eliminated = {$name} ( {$job} ) foi marcado como eliminado pelo {$officer}.
+
+criminal-records-console-not-eliminated = {$name} ( {$job} ) já não está marcado como eliminado pelo {$officer}.
+
+criminal-records-job-filter = Trabalho
+
+criminal-records-species-filter = Espécie
+
+## Prender linhas de histórico automático

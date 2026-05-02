@@ -23,10 +23,10 @@ admin-notes-hide = Esconder
 admin-notes-delete-confirm = Tem certeza?
 admin-notes-edited = Última alteração de { $author } para { $date }
 admin-notes-unbanned = { $admin } não banido para { $date }
-admin-notes-message-desc = [color=white]Você recebeu { $count -> 
-    [1] новое сообщение от администрации
-   *[other] новых сообщений от администрации
- } с момента последней игры на сервере.[/color]
+admin-notes-message-desc = [color=white] Você recebeu { $count ->
+    [1] uma mensagem administrativa
+    *[other] mensagens administrativas
+} since the last time you played on this server.[/color]
 admin-notes-message-admin = De [bold]{ $admin }[/bold], datado de { TOSTRING($date, "f") }:
 admin-notes-message-wait = Os botões estarão disponíveis após { $time } segundos.
 admin-notes-message-accept = Esconda-se para sempre
@@ -75,10 +75,11 @@ admin-note-editor-submit-confirm = Tem certeza?
 # Watchlist and message login
 admin-notes-watchlist = Observação de { $player }: { $message }
 admin-notes-new-message = Você recebeu uma mensagem administrativa de { $admin }: { $message }
-admin-notes-fallback-admin-name = [Система]
-# Admin remarks
+admin-notes-fallback-admin-name = [System]
+
+# Observações da administração
 admin-remarks-command-description = Abra a página de comentários do administrador
 admin-remarks-command-error = Os comentários do administrador foram desativados
 admin-remarks-title = Comentários do administrador
 # Misc
-system-user = [Система]
+system-user = [System]

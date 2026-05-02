@@ -3,9 +3,9 @@
 hypospray-all-mode-text = Somente entrada
 hypospray-mobs-only-mode-text = Entrada e entrada
 hypospray-invalid-text = Erro
-hypospray-volume-label = 
-    Объём: [color=branco]{ $currentVolume }/{ $totalVolume } unidades[/color]
-    Режим: [color=branco]{ $modeString }[/color]
+hypospray-volume-label =
+    Volume: [color=branco] { $currentVolume } / { $totalVolume } unidades [/color]
+    Modo: [color=branco] { $modeString } [/color]
 
 ## Entity
 

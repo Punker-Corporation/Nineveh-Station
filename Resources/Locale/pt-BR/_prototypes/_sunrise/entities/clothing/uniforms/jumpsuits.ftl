@@ -1,7 +1,7 @@
 ent-ClothingUniformJumpsuitSuperstarCop = uniforme policial superstar
     .desc = Calças largas e uma camisa suja que poderia ter sido estilosa até alguém fazer xixi nas axilas. Estas são roupas de superstar.
-ent-ClothingUniformJumpsuitAerostatic = fantasia de balão
-    .desc = Terno fresco e bem passado ; профессиональный, удобный и удивительно авторитетный.
+ent-ClothingUniformJumpsuitAerostatic = Naipe aerostático
+    .desc = Fato crocante e bem comprimido; profissional, confortável e curiosamente autoritário.
 ent-ClothingUniformJumpsuitCentcomOfficerBlack = uniforme de oficial de operações especiais
     .desc = Uniforme preto de Oficial de Operações Especiais, nada disso. Embora... Se você tiver tempo para ler isso, então é tarde demais...
 ent-ClothingUniformJumpsuitCentcomAdmiral = uniforme de almirante
@@ -89,3 +89,23 @@ ent-ClothingUniformJumpsuitCaptainBlack = macacão preto de capitão
 ent-ClothingUniformPunksuit = fantasia punk
     .desc = Desafie seu guarda-roupa!
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformJumpsuitArbiter = uniforme de árbitro
+    .desc = Uma túnica preta com costura dourada. É tão apertado que sua postura vai reta como a espinha de um novo livro. O principal problema é que é quase impossível respirar nele ou dobrar para uma caneta caiu sem arriscar as costuras.
+
+ent-ClothingUniformJumpsuitRedMist = Naipe de névoa vermelha
+    .desc = Roupa de combate equipada em pano escuro com acentos de metal pálido. Construído para movimento, não para tranquilizar.
+
+
+ent-ClothingUSSPMarine = fato-macaco espacial USSP
+    .desc = Uma camiseta listrada e calças simples dos fuzileiros espaciais USSP. Usado sob um traje espacial de combate, porque até a armadura deve saber quem está dentro dele.
+
+
+
+
+ent-ClothingUniformJumpsuitSoviet = Macacão soviético
+    .desc = Um macacão padrão usado por militares soviéticos.
+
+ent-ClothingUniformUndershirt = undershirt
+    .desc = Vestido diário simples.

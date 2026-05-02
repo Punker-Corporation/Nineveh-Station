@@ -9,7 +9,7 @@ gas-canister-popup-denied = Acesso negado
 
 # window
 
-gas-canister-window-ok-text = OK
+gas-canister-window-ok-text = Está bem.
 gas-canister-window-edit-text = Editar
 gas-canister-window-label-label = Rótulo:
 gas-canister-window-pressure-label = Pressão:

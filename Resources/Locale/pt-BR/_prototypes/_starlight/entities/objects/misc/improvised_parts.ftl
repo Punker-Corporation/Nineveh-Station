@@ -46,3 +46,8 @@ ent-UnfinishedClothingHeadHelmetForged = peças de capacete forjadas
     .desc = Alguma montagem é necessária, bem como soldagem.
 ent-UnfinishedClothingHeadHelmetPaladin = peças de capacete de paladino
     .desc = Nenhum paladino de RPG seria bom sem um capacete! Soldagem necessária.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-AssortedForgeParts = Peças de forja sortidas
+    .desc = Uma pequena pilha de componentes para fazer uma forja para uma bigorna, contém uma ignição e válvulas.

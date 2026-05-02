@@ -20,3 +20,9 @@ admin-verb-text-make-thief = Faça um ladrão
 admin-verb-text-make-vampire = Faça um vampiro
 admin-verb-text-make-changeling = Faça dele um genestealer
 admin-overlay-antag-classic = ANTAGONISTA
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+admin-verb-make-wizard = Tornar o alvo num Feiticeiro.
+
+admin-verb-text-make-wizard = Assistente de Fazer

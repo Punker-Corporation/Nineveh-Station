@@ -6,3 +6,9 @@ node-scanner-artifact-state-ready = Artifak está pronto para interagir
 node-scanner-artifact-state-unlocking = O artefato ressoa com suas ações
 node-scanner-artifact-state-cooldown = O artefato está descansando
 node-scanner-artifact-scanned-time-none = Digitalize o artefato para ver sua condição
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+node-scanner-artifact-connected = Analisando o artefato
+
+node-scanner-artifact-non-connected = Artefacto não encontrado ou fora do alcance

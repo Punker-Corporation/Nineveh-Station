@@ -15,9 +15,10 @@ alerts-too-cold-desc = Você está [color=cyan]congelando[/color]! Vá para um l
 alerts-too-hot-name = [color=red]Muito quente[/color]
 alerts-too-hot-desc = Está [color=red]muito quente aqui[/color]! Vá para uma área mais fria, use roupas com isolamento térmico, como um traje espacial, ou pelo menos afaste-se do fogo.
 alerts-weightless-name = Ausência de peso
-alerts-weightless-desc = 
-    Гравитация перестала воздействовать на вас, и вы свободно парите. Найдите за что можно ухватиться, или метните или выстрелите чем-нибудь в противоположном направлении.
-    Магнитные ботинки и джетпак помогут вам передвигаться с большей эффективностью.
+alerts-weightless-desc =
+    A gravidade deixou de te afectar e estás a flutuar sem rumo. Encontre algo robusto para segurar, ou atirar ou atirar em algo em uma direção oposta a você.
+    Mag-boots ou jetpacks iria ajudá-lo a mover com mais controle.
+
 alerts-walking-name = Andando
 alerts-walking-desc = Você está andando em um ritmo lento.
 alerts-stunned-name = [color=yellow]Atordoado[/color]
@@ -80,3 +81,19 @@ alerts-changeling-chemicals-name = Produtos Químicos
 alerts-changeling-chemicals-desc = Consuma produtos químicos para usar suas habilidades. Regenere-se lentamente.
 alerts-changeling-biomass-name = Biomassa
 alerts-changeling-biomass-desc = Esta é a sua saúde. Se chegar a 0, é [color=red]game over[/color]. Absorva humanóides para restaurar parte dele.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+alerts-knockdown-name = [color=yellow] derrubado [/color]
+
+alerts-knockdown-desc = Você é [color=yellow] derrubado [/color]! Alguma coisa escorregou ou empurrou-te, sobrecarregando o teu movimento.
+
+
+alerts-rooted-name = Enraizados
+
+alerts-rooted-desc = Estás preso ao chão. Não podes escorregar, mas absorves fluidos debaixo de ti.
+
+
+alerts-stealthy-name = Pegador de carteiras
+
+alerts-stealthy-desc = Se você está ou não a roubar. Clique para alternar.

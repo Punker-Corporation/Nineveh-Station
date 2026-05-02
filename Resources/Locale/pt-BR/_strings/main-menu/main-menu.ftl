@@ -1,10 +1,8 @@
-main-menu-invalid-username-with-reason = 
-    Неверное имя пользователя:
-    { $invalidReason }
+main-menu-invalid-username-with-reason = Utilizador inválido:
+                                         {$invalidReason}
 main-menu-invalid-username = Nome de usuário inválido
-main-menu-failed-to-connect = 
-    Не удалось подключиться:
-    { $reason }
+main-menu-failed-to-connect = Não foi possível ligar:
+                              {$reason}
 main-menu-username-label = Nome de usuário:
 main-menu-username-text = Nome de usuário
 main-menu-address-label = Endereço do servidor:

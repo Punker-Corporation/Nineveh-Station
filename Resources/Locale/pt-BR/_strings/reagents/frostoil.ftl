@@ -1,0 +1,3 @@
+### Mensagens que aparecem quando metabolizam a Frost Oil.
+
+frost-oil-effect-light-cold = Sentes um ligeiro frio na garganta...

@@ -16,3 +16,8 @@ ent-MagazineCaselessRifleShort = revista curta (0,25 sem caixa)
     .desc = { ent-BaseMagazineCaselessRifleShort.desc }
 ent-MagazineCaselessRifleShortPractice = revista curta (0,25 treinamento sem caso)
     .desc = { ent-BaseMagazineCaselessRifleShort.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-MagazineCaselessRifle10x24 = Revista caixa (.25 sem caixa)
+    .desc = { ent-BaseMagazineCaselessRifle.desc }

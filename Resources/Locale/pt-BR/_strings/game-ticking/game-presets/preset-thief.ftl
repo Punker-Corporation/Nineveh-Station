@@ -1,14 +1,14 @@
-thief-role-greeting-human = 
-    Вы - преступное отродье, клептоман, ранее
-    судимый за мелкую кражу, и досрочно освобождённый.
-    Вам необходимо пополнить свою коллекцию.
-thief-role-greeting-animal = 
-    Вы - клептоманящее животное.
-    Воруйте всё, что вам нравится.
-thief-role-greeting-equipment = 
-    У вас есть ящик воровских инструментов
-    и воровские перчатки-хамелеоны.
-    Выберите стартовое снаряжение,
-    и незаметно делайте свою работу.
-objective-issuer-thief = [cor = #746694]Преступник[/color]
+thief-role-greeting-human =
+    És um criminoso, um cleptomaníaco preso e em liberdade condicional por furto. Você precisa adicionar mais à sua coleção.
+    Foi-lhe dado um implante de pacifismo à força após a sua última detenção, mas isso não pode impedi-lo de obter a sua dose de qualquer forma necessária.
+
+thief-role-greeting-animal =
+    És um animal cleptomaníaco.
+    Roubar coisas de que gostas.
+
+thief-role-greeting-equipment =
+    Você tem uma bolsa de ferramentas de ladrões e possui a habilidade inata de roubar sem aviso prévio. Escolha seu equipamento inicial, e faça seu trabalho furtivamente.
+
+objective-issuer-thief = [color=#746694] Criminal [/color]
+
 thief-round-end-agent-name = ladrão

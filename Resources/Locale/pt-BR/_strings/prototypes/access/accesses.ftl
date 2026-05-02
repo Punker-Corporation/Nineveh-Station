@@ -20,7 +20,7 @@ id-card-access-level-paramedic = Paramédico
 id-card-access-level-quartermaster = Intendente
 id-card-access-level-cargo = Carga
 id-card-access-level-salvage = Salvamento
-id-card-access-level-bar = Bar
+id-card-access-level-bar = Barra
 id-card-access-level-kitchen = Cozinha
 id-card-access-level-hydroponics = Hidroponia
 id-card-access-level-service = Serviço
@@ -38,3 +38,9 @@ id-card-access-level-station-ai = Inteligência artificial
 id-card-access-level-borg = Ciborgue
 id-card-access-level-basic-silicon = Robô
 id-card-access-level-basic-xenoborg = Xenoborg
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+id-card-access-level-genpop-enter = Digite o Genpop
+
+id-card-access-level-genpop-leave = Deixar o Genpop

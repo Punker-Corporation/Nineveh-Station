@@ -189,13 +189,13 @@ messenger-spam-weapons-sender-4 = Armas grandes para caras grandes
 messenger-spam-weapons-sender-5 = Fabricação "Bobby's"
 
 messenger-spam-weapons-message-1 = A maior seleção de armas de fogo do setor. De pistolas femininas a um rifle de precisão! É necessária uma licença de arma para fazer uma compra.
-messenger-spam-weapons-message-2 = O melhor do Sindicato. A pistola %REDACTED%, a %REDACTED% adormecida, a perfuradora de paredes %REDACTED% e até a lendária espada %REDACTED%. Descontos para agentes, funcionários do NT gratuitos...9e%8%?3Р1... ATENÇÃO! Mensagem hostil interceptada. Deixa para lá. Volte ao trabalho. Glória a Nanotrasen!
+messenger-spam-weapons-message-2 = O melhor do Sindicato. A pistola %REDACTED%, a %REDACTED% adormecida, a perfuradora de paredes %REDACTED% e até a concessão espada %REDACTED%. Os descontos para agentes, funcionários do NT são gratuitos....9e%8%?3P1... Mensagem hostil interceptada. Deixa para lá. Volta ao trabalho. Glória a NanoTrasen!
 messenger-spam-weapons-message-3 = Precisa de algo especial? Que tal uma magnum que faz um buraco numa parede de plasteel? Pistola de guarda-chuva pneumática? Um palhaço inflável com explosivos dentro? Se você está pensando nisso, nós conseguimos.
 messenger-spam-weapons-message-4 = Vamos ao que interessa. Você precisa de uma arma? Meu nome é Boris e tenho armas para você. Não pergunte de onde vem, apenas compre.
 messenger-spam-weapons-message-5 = Granadas. Bombas de fumaça. TNT. Bombas. Conchas. Minas. C4. Foguetes. Armas biológicas. Ogivas nucleares. Oferta! Apresse-se antes que eles o peguem! Sem licenças, apenas dinheiro!
 
 # Error
-messenger-spam-error-sender-1 = SO ;Б…;кА
+messenger-spam-error-sender-1 = SO;B...; ka
 messenger-spam-error-sender-2 = 25-j*%...o1q
 messenger-spam-error-sender-3 = FALHA NO SISTEMA DE MENSAGENS
 messenger-spam-error-sender-4 = ERRO

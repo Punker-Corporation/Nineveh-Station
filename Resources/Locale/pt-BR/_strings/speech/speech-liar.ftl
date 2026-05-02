@@ -143,3 +143,23 @@ liar-word-27 = saudável
 liar-word-replacement-27 = ferido
 liar-word-28 = saudável
 liar-word-replacement-28 = ferido
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+liar-word-5-2 = Sim
+
+liar-word-7-2 = Sim.
+
+liar-word-7-3 = yis
+
+liar-word-14-2 = não foi
+
+liar-word-16-2 = não é
+
+liar-word-18-2 = não
+
+liar-word-20-2 = não posso
+
+liar-word-22-2 = não deveria
+
+liar-word-37-2 = não são

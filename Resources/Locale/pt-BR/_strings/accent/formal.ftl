@@ -103,3 +103,16 @@ accent-formal-words-148 = nru
 accent-formal-words-replace-148 = diretor de pesquisa
 # Fish-edit-end
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+accent-formal-words-103 = pop
+
+accent-formal-words-replace-103 = médico
+
+accent-formal-words-104 = ver
+
+accent-formal-words-replace-104 = engenheiro
+
+accent-formal-words-105 = coruja
+
+accent-formal-words-replace-105 = pesquisador

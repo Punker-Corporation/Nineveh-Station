@@ -1,0 +1,3 @@
+ent-AnomalyClown = { ent-BaseAnomaly }
+    .suffix = Palhaço
+    .desc = É um carro normal que parece dobrar o espaço dentro dele. Você sente que as criaturas dentro estão vindo para fazer você rir a todo custo...

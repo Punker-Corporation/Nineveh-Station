@@ -41,7 +41,7 @@ wires-board-name-flatpacker = Empacotador
 wires-board-name-spaceheater = Termostato
 wires-board-name-jukebox = Jogador
 wires-board-name-computer = Computador
-wires-board-name-holopad = Holopad
+wires-board-name-holopad = Holopade
 wires-board-name-barsign = Sinal de barra
 
 # names that get displayed in the wire hacking hud & admin logs.
@@ -71,3 +71,11 @@ wire-name-bomb-bolt = PARAFUSO
 wire-name-speech = DNMK
 wire-name-listen = MICR
 wire-name-log = REGISTRO
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+wires-board-name-weapon-energy-turret = Torre de sentinela
+
+wires-board-name-turret-controls = Painel de controle da torre de sentinela
+
+# nomes que são exibidos nos logs hud & admin hacking de arame.
