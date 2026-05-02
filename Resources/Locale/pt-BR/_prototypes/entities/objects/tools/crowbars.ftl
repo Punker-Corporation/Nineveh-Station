@@ -1,12 +1,12 @@
 ent-BaseCrowbar = sucata
     .desc = { ent-BaseItem.desc }
 ent-Crowbar = { ent-BaseCrowbar }
-    .desc = Uma ferramenta multifuncional para arrombar portas e combater invasores interdimensionais.
+    .desc = Uma barra fria, marcada por portas arrombadas e unhas quebradas. Serve para abrir metal, madeira e escolhas desesperadas.
 ent-CrowbarRed = sucata de emergência
-    .desc = Um pé-de-cabra de bolso projetado para arrombar portas e travas de fogo durante quedas de energia.
+    .desc = Pequena o bastante para sumir no bolso, pesada o bastante para deixar uma marca funda no que tentar impedir sua fuga.
 ent-CrowbarGreen = { ent-BaseCrowbar }
-    .desc = Uma ferramenta multifuncional para arrombar portas e combater invasores interdimensionais, impressa em autolat.
+    .desc = Metal impresso às pressas, ainda com cheiro de oficina quente. Não foi feito para heroísmo, só para entrada forçada.
 ent-CrowbarOrange = { ent-BaseCrowbar }
-    .desc = Uma multiferramenta para arrombar portas e combater invasores interdimensionais, encontrada em caixas de ferramentas.
+    .desc = Veio de uma caixa de ferramentas, mas parece mais honesto na mão de alguém encurralado.
 ent-CrowbarYellow = { ent-BaseCrowbar }
-    .desc = Pé-de-cabra de bolso projetado para arrombar portas e fechaduras corta-fogo durante quedas de energia, emitido pela engenharia.
+    .desc = Pintura amarela gasta, bordas comidas pelo uso e um cabo que lembra quantas saídas precisaram ser forçadas.

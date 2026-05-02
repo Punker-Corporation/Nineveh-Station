@@ -15,9 +15,9 @@ namespace Content.Client.Options.UI
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
 
-            // Sunrise-Start
+            // Nomes das abas precisam seguir a cultura ativa.
             SetTabsName();
-            // Sunrise-End
+            MiscTab.Control.Applied += SetTabsName;
 
             UpdateTabs();
         }
