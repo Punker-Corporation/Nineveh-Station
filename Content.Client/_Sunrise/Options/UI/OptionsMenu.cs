@@ -6,7 +6,9 @@ public sealed partial class OptionsMenu
 
     private void SetTabsName()
     {
-        // Fire edit start
+        Title = _loc.GetString("ui-options-title");
+
+        // Início das abas customizadas.
         Tabs.SetTabTitle(0, Loc.GetString("ui-options-tab-scp"));
 
 
@@ -17,6 +19,6 @@ public sealed partial class OptionsMenu
         Tabs.SetTabTitle(5, _loc.GetString("ui-options-tab-audio"));
         Tabs.SetTabTitle(6, _loc.GetString("ui-options-tab-accessibility"));
         Tabs.SetTabTitle(7, _loc.GetString("ui-options-tab-admin"));
-        // Fire edit end
+        // Fim das abas customizadas.
     }
 }

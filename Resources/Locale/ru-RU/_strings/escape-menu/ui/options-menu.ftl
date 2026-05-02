@@ -12,11 +12,14 @@ ui-options-apply = Сохранить и применить
 ui-options-reset-all = Сброс изменений
 ui-options-default = Сброс к настройкам по умолчанию
 ui-options-value-percent = { TOSTRING($value, "P0") }
+ui-options-language = Язык кошмара:
+ui-options-language-portuguese = Português — diário de ruína
+ui-options-language-russian = Русский — холодный протокол
 
 # Misc/General menu
 
 ui-options-discordrich = Включить Discord Rich Presence
-ui-options-general-ui-style = Стиль UI
+ui-options-general-ui-style = Интерфейс и язык
 ui-options-general-discord = Дискорд
 ui-options-general-cursor = Курсор
 ui-options-general-speech = Речь

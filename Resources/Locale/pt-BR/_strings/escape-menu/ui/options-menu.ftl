@@ -12,11 +12,14 @@ ui-options-apply = Salvar e aplicar
 ui-options-reset-all = Redefinir alterações
 ui-options-default = Redefinir para as configurações padrão
 ui-options-value-percent = { TOSTRING($value, "P0") }
+ui-options-language = Idioma do pesadelo:
+ui-options-language-portuguese = Português — diário de ruína
+ui-options-language-russian = Русский — холодный протокол
 
 # Misc/General menu
 
 ui-options-discordrich = Ativar presença rica no Discord
-ui-options-general-ui-style = Estilo da IU
+ui-options-general-ui-style = Interface e língua
 ui-options-general-discord = Discórdia
 ui-options-general-cursor = Cursor
 ui-options-general-speech = Discurso

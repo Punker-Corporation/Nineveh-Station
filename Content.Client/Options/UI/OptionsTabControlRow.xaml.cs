@@ -10,8 +10,7 @@ using Robust.Shared.Configuration;
 namespace Content.Client.Options.UI;
 
 /// <summary>
-/// Control used on all tabs of the in-game options menu,
-/// contains the "save" and "reset" buttons and controls the entire logic.
+/// Linha de controle usada pelas abas de opções para salvar, desfazer e restaurar ajustes.
 /// </summary>
 /// <remarks>
 /// <para>
@@ -52,6 +51,8 @@ public sealed partial class OptionsTabControlRow : Control
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     private ValueList<BaseOption> _options;
+
+    public event Action? Applied;
 
     public OptionsTabControlRow()
     {
@@ -241,6 +242,7 @@ public sealed partial class OptionsTabControlRow : Control
         }
 
         _cfg.SaveToFile();
+        Applied?.Invoke();
         UpdateButtonState();
     }
 

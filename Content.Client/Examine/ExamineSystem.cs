@@ -177,22 +177,17 @@ namespace Content.Client.Examine
         }
 
         /// <summary>
-        ///     Opens the tooltip window and sets spriteview/name/etc, but does
-        ///     not fill it with information. This is done when the server sends examine info/verbs,
-        ///     or immediately if it's entirely clientside.
+        ///     Abre o dossiê visual antes de preencher os detalhes vindos do cliente e do servidor.
         /// </summary>
         public void OpenTooltip(EntityUid player, EntityUid target, bool centeredOnCursor=true, bool openAtOldTooltip=true, bool knowTarget = true)
         {
-            // Close any examine tooltip that might already be opened
-            // Before we do that, save its position. We'll prioritize opening any new popups there if
-            // openAtOldTooltip is true.
+            // Mantém a posição anterior para que exames consecutivos pareçam uma inspeção contínua.
             ScreenCoordinates? oldTooltipPos = _examineTooltipOpen != null ? _popupPos : null;
             CloseTooltip();
 
-            // cache entity for Update function
             _examinedEntity = target;
 
-            const float minWidth = 300;
+            const float minWidth = 340;
 
             if (openAtOldTooltip && oldTooltipPos != null)
             {
@@ -208,12 +203,11 @@ namespace Content.Client.Examine
                 _popupPos = _userInterfaceManager.ScreenToUIPosition(_popupPos);
             }
 
-            // Actually open the tooltip.
-            _examineTooltipOpen = new Popup { MaxWidth = 400 };
+            _examineTooltipOpen = new Popup { MaxWidth = 460 };
             _userInterfaceManager.ModalRoot.AddChild(_examineTooltipOpen);
             var panel = new PanelContainer() { Name = "ExaminePopupPanel" };
             panel.AddStyleClass(StyleClassEntityTooltip);
-            panel.ModulateSelfOverride = Color.LightGray.WithAlpha(0.90f);
+            panel.ModulateSelfOverride = Color.FromHex("#111015").WithAlpha(0.96f);
             _examineTooltipOpen.AddChild(panel);
 
             var vBox = new BoxContainer
@@ -224,11 +218,19 @@ namespace Content.Client.Examine
             };
             panel.AddChild(vBox);
 
+            var dossierLabel = new RichTextLabel
+            {
+                Margin = new Thickness(8, 6, 8, 2)
+            };
+            dossierLabel.SetMessage(FormattedMessage.FromMarkupPermissive(
+                $"[color=#b94747][bold]{Loc.GetString("examine-ui-title")}[/bold][/color]"));
+            vBox.AddChild(dossierLabel);
+
             var hBox = new BoxContainer
             {
                 Orientation = LayoutOrientation.Horizontal,
                 SeparationOverride = 5,
-                Margin = new Thickness(6, 0, 6, 0)
+                Margin = new Thickness(8, 0, 8, 4)
             };
 
             vBox.AddChild(hBox);
@@ -238,7 +240,7 @@ namespace Content.Client.Examine
                 var spriteView = new SpriteView
                 {
                     OverrideDirection = Direction.South,
-                    SetSize = new Vector2(32, 32)
+                    SetSize = new Vector2(42, 42)
                 };
                 spriteView.SetEntity(target);
                 hBox.AddChild(spriteView);
@@ -255,9 +257,27 @@ namespace Content.Client.Examine
             else
             {
                 var label = new RichTextLabel();
-                label.SetMessage(FormattedMessage.FromMarkupOrThrow("[bold]???[/bold]"));
+                label.SetMessage(FormattedMessage.FromMarkupPermissive(
+                    $"[bold]{Loc.GetString("examine-ui-unknown")}[/bold]"));
                 hBox.AddChild(label);
             }
+
+            var contentPanel = new PanelContainer
+            {
+                Name = "ExamineContentPanel",
+                Margin = new Thickness(8, 2, 8, 8),
+            };
+            contentPanel.ModulateSelfOverride = Color.FromHex("#070709").WithAlpha(0.86f);
+            vBox.AddChild(contentPanel);
+
+            var contentBox = new BoxContainer
+            {
+                Name = "ExamineContentVbox",
+                Orientation = LayoutOrientation.Vertical,
+                Margin = new Thickness(8, 6, 8, 8),
+                MaxWidth = _examineTooltipOpen.MaxWidth - 24
+            };
+            contentPanel.AddChild(contentBox);
 
             panel.Measure(Vector2Helpers.Infinity);
             var size = Vector2.Max(new Vector2(minWidth, 0), panel.DesiredSize);
@@ -266,7 +286,7 @@ namespace Content.Client.Examine
         }
 
         /// <summary>
-        ///     Fills the examine tooltip with a message and buttons if applicable.
+        ///     Preenche o dossiê com observações físicas e verbos contextuais.
         /// </summary>
         public void UpdateTooltipInfo(EntityUid player, EntityUid target, FormattedMessage message, List<Verb>? verbs=null, bool getVerbs = true)
         {
@@ -276,6 +296,16 @@ namespace Content.Client.Examine
                 return;
             }
 
+            var contentBox = vBox.Children.FirstOrDefault(c => c.Name == "ExamineContentVbox") as BoxContainer;
+            contentBox ??= (BoxContainer)vBox;
+            ClearChildren(contentBox);
+
+            contentBox.AddChild(BuildSectionLabel("examine-ui-observations"));
+            var summaryLabel = new RichTextLabel { Margin = new Thickness(0, 2, 0, 6) };
+            summaryLabel.SetMessage(BuildObservationSummary(player, target));
+            contentBox.AddChild(summaryLabel);
+
+            var pushedDescription = false;
             foreach (var msg in message.Nodes)
             {
                 if (msg.Name != null)
@@ -286,10 +316,20 @@ namespace Content.Client.Examine
                 if (string.IsNullOrWhiteSpace(text))
                     continue;
 
-                var richLabel = new RichTextLabel() { Margin = new Thickness(4, 4, 0, 4)};
+                contentBox.AddChild(BuildSectionLabel("examine-ui-physical-record"));
+                var richLabel = new RichTextLabel() { Margin = new Thickness(0, 2, 0, 4)};
                 richLabel.SetMessage(message);
-                vBox.AddChild(richLabel);
+                contentBox.AddChild(richLabel);
+                pushedDescription = true;
                 break;
+            }
+
+            if (!pushedDescription)
+            {
+                var emptyLabel = new RichTextLabel { Margin = new Thickness(0, 2, 0, 4) };
+                emptyLabel.SetMessage(FormattedMessage.FromMarkupPermissive(
+                    $"[color=#888888]{Loc.GetString("examine-ui-no-visible-details")}[/color]"));
+                contentBox.AddChild(emptyLabel);
             }
 
             var totalVerbs = _verbSystem.GetLocalVerbs(target, player, typeof(ExamineVerb));
@@ -317,6 +357,46 @@ namespace Content.Client.Examine
             }
 
             AddVerbsToTooltip(totalVerbs);
+        }
+
+        private FormattedMessage BuildObservationSummary(EntityUid player, EntityUid target)
+        {
+            var distance = (Transform(target).WorldPosition - Transform(player).WorldPosition).Length();
+            var distanceKey = distance switch
+            {
+                <= 1.25f => "examine-ui-distance-touch",
+                <= 3.0f => "examine-ui-distance-close",
+                <= 7.0f => "examine-ui-distance-mid",
+                _ => "examine-ui-distance-far"
+            };
+
+            var detailKey = IsInDetailsRange(player, target)
+                ? "examine-ui-details-rich"
+                : "examine-ui-details-poor";
+
+            var summary = new FormattedMessage();
+            summary.AddMarkupPermissive(
+                $"[color=#c9c0b8]{Loc.GetString(distanceKey)}[/color]\n[color=#8d8580]{Loc.GetString(detailKey)}[/color]");
+            return summary;
+        }
+
+        private RichTextLabel BuildSectionLabel(string locId)
+        {
+            var label = new RichTextLabel
+            {
+                Margin = new Thickness(0, 4, 0, 1)
+            };
+            label.SetMessage(FormattedMessage.FromMarkupPermissive(
+                $"[color=#b94747][bold]{Loc.GetString(locId)}[/bold][/color]"));
+            return label;
+        }
+
+        private static void ClearChildren(Control control)
+        {
+            foreach (var child in control.Children.ToArray())
+            {
+                child.Dispose();
+            }
         }
 
         private void AddVerbsToTooltip(IEnumerable<Verb> verbs)

@@ -1,6 +1,9 @@
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Robust.Shared;
+using Robust.Shared.Configuration;
+using Robust.Shared.IoC;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Localizations
@@ -8,13 +11,15 @@ namespace Content.Shared.Localizations
     public sealed class ContentLocalizationManager
     {
         [Dependency] private readonly ILocalizationManager _loc = default!;
+        [Dependency] private readonly IConfigurationManager _cfg = default!;
 
-        // If you want to change your codebase's language, do it here.
-        private const string Culture = "pt-BR"; // Russian-Localization
-        private const string FallbackCulture = "en-US"; // Russian-Localization
+        public const string PortugueseCulture = "pt-BR";
+        public const string RussianCulture = "ru-RU";
+
+        private const string FallbackCulture = "en-US";
 
         /// <summary>
-        /// Custom format strings used for parsing and displaying minutes:seconds timespans.
+        /// Formatos aceitos para tempos minutos:segundos no painel de administração.
         /// </summary>
         public static readonly string[] TimeSpanMinutesFormats = new[]
         {
@@ -26,16 +31,52 @@ namespace Content.Shared.Localizations
 
         public void Initialize()
         {
-            var culture = new CultureInfo(Culture);
-            var fallbackCulture = new CultureInfo(FallbackCulture); // Russian-Localization
+            _cfg.OverrideDefault(CVars.LocCultureName, PortugueseCulture);
+            ApplyCulture(_cfg.GetCVar(CVars.LocCultureName));
+        }
 
-            _loc.LoadCulture(culture);
-            _loc.LoadCulture(fallbackCulture); // Russian-Localization
-            _loc.SetFallbackCluture(fallbackCulture); // Russian-Localization
+        public void ApplyCulture(string cultureName)
+        {
+            var normalized = NormalizeCultureName(cultureName);
+            if (_cfg.GetCVar(CVars.LocCultureName) != normalized)
+                _cfg.SetCVar(CVars.LocCultureName, normalized);
+
+            var culture = new CultureInfo(normalized);
+            var alternateCulture = new CultureInfo(normalized == PortugueseCulture ? RussianCulture : PortugueseCulture);
+            var fallbackCulture = new CultureInfo(FallbackCulture);
+
+            EnsureCultureLoaded(culture);
+            EnsureCultureLoaded(alternateCulture);
+            EnsureCultureLoaded(fallbackCulture);
+
+            _loc.SetCulture(culture);
+            _loc.SetFallbackCluture(alternateCulture, fallbackCulture);
+
+            RegisterSharedFunctions(culture);
+            RegisterSharedFunctions(alternateCulture);
+            RegisterEnglishFallbackFunctions(fallbackCulture);
+        }
+
+        private static string NormalizeCultureName(string cultureName)
+        {
+            return cultureName switch
+            {
+                RussianCulture => RussianCulture,
+                _ => PortugueseCulture
+            };
+        }
+
+        private void EnsureCultureLoaded(CultureInfo culture)
+        {
+            if (!_loc.HasCulture(culture))
+                _loc.LoadCulture(culture);
+        }
+
+        private void RegisterSharedFunctions(CultureInfo culture)
+        {
             _loc.AddFunction(culture, "PRESSURE", FormatPressure);
             _loc.AddFunction(culture, "POWERWATTS", FormatPowerWatts);
             _loc.AddFunction(culture, "POWERJOULES", FormatPowerJoules);
-            // NOTE: ENERGYWATTHOURS() still takes a value in joules, but formats as watt-hours.
             _loc.AddFunction(culture, "ENERGYWATTHOURS", FormatEnergyWattHours);
             _loc.AddFunction(culture, "UNITS", FormatUnits);
             _loc.AddFunction(culture, "TOSTRING", args => FormatToString(culture, args));
@@ -43,20 +84,15 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(culture, "NATURALFIXED", FormatNaturalFixed);
             _loc.AddFunction(culture, "NATURALPERCENT", FormatNaturalPercent);
             _loc.AddFunction(culture, "PLAYTIME", FormatPlaytime);
-            _loc.AddFunction(culture, "MANY", FormatMany); // TODO: Temporary fix for MANY() fluent errors. Remove after resolve errors.
+            _loc.AddFunction(culture, "MANY", FormatMany);
+        }
 
-
-            /*
-             * The following language functions are specific to the english localization. When working on your own
-             * localization you should NOT modify these, instead add new functions specific to your language/culture.
-             * This ensures the english translations continue to work as expected when fallbacks are needed.
-             */
-            var cultureEn = new CultureInfo("en-US");
-
-            _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
-            _loc.AddFunction(cultureEn, "MANY", FormatMany);
-            _loc.AddFunction(cultureEn, "NATURALFIXED", FormatNaturalFixed);
-            _loc.AddFunction(cultureEn, "LOC", FormatLoc);
+        private void RegisterEnglishFallbackFunctions(CultureInfo culture)
+        {
+            _loc.AddFunction(culture, "MAKEPLURAL", FormatMakePlural);
+            _loc.AddFunction(culture, "MANY", FormatMany);
+            _loc.AddFunction(culture, "NATURALFIXED", FormatNaturalFixed);
+            _loc.AddFunction(culture, "LOC", FormatLoc);
         }
 
         private ILocValue FormatMany(LocArgs args)
@@ -77,7 +113,7 @@ namespace Content.Shared.Localizations
         {
             var number = ((LocValueNumber) args.Args[0]).Value * 100;
             var maxDecimals = (int)Math.Floor(((LocValueNumber) args.Args[1]).Value);
-            var formatter = (NumberFormatInfo)NumberFormatInfo.GetInstance(CultureInfo.GetCultureInfo(Culture)).Clone();
+            var formatter = (NumberFormatInfo)NumberFormatInfo.GetInstance(GetCurrentCulture()).Clone();
             formatter.NumberDecimalDigits = maxDecimals;
             return new LocValueString(string.Format(formatter, "{0:N}", number).TrimEnd('0').TrimEnd(char.Parse(formatter.NumberDecimalSeparator)) + "%");
         }
@@ -86,7 +122,7 @@ namespace Content.Shared.Localizations
         {
             var number = ((LocValueNumber) args.Args[0]).Value;
             var maxDecimals = (int)Math.Floor(((LocValueNumber) args.Args[1]).Value);
-            var formatter = (NumberFormatInfo)NumberFormatInfo.GetInstance(CultureInfo.GetCultureInfo(Culture)).Clone();
+            var formatter = (NumberFormatInfo)NumberFormatInfo.GetInstance(GetCurrentCulture()).Clone();
             formatter.NumberDecimalDigits = maxDecimals;
             return new LocValueString(string.Format(formatter, "{0:N}", number).TrimEnd('0').TrimEnd(char.Parse(formatter.NumberDecimalSeparator)));
         }
@@ -114,37 +150,51 @@ namespace Content.Shared.Localizations
             }
         }
 
-        // TODO: allow fluent to take in lists of strings so this can be a format function like it should be.
         /// <summary>
-        /// Formats a list as per english grammar rules.
+        /// Formata listas de texto usando a cultura ativa do cliente/servidor.
         /// </summary>
         public static string FormatList(List<string> list)
         {
+            var separator = IsRussianCulture() ? " и " : " e ";
+
             return list.Count switch
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} and {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, and {list[^1]}"
+                2 => $"{list[0]}{separator}{list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}{separator}{list[^1]}"
             };
         }
 
         /// <summary>
-        /// Formats a list as per english grammar rules, but uses or instead of and.
+        /// Formata listas alternativas usando a cultura ativa do cliente/servidor.
         /// </summary>
         public static string FormatListToOr(List<string> list)
         {
+            var separator = IsRussianCulture() ? " или " : " ou ";
+
             return list.Count switch
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} or {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, or {list[^1]}"
+                2 => $"{list[0]}{separator}{list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}{separator}{list[^1]}"
             };
         }
 
+        private static CultureInfo GetCurrentCulture()
+        {
+            var loc = IoCManager.Resolve<ILocalizationManager>();
+            return loc.DefaultCulture ?? CultureInfo.GetCultureInfo(PortugueseCulture);
+        }
+
+        private static bool IsRussianCulture()
+        {
+            return GetCurrentCulture().Name == RussianCulture;
+        }
+
         /// <summary>
-        /// Formats a direction struct as a human-readable string.
+        /// Formata uma direção como texto legível.
         /// </summary>
         public static string FormatDirection(Direction dir)
         {
@@ -152,7 +202,7 @@ namespace Content.Shared.Localizations
         }
 
         /// <summary>
-        /// Formats playtime as hours and minutes.
+        /// Formata tempo de jogo como horas e minutos.
         /// </summary>
         public static string FormatPlaytime(TimeSpan time)
         {
@@ -186,7 +236,7 @@ namespace Content.Shared.Localizations
             string mode,
             Func<double, double>? transformValue = null)
         {
-            const int maxPlaces = 5; // Matches amount in _lib.ftl
+            const int maxPlaces = 5; // Mantém paridade com a quantidade declarada em _lib.ftl.
             var pressure = ((LocValueNumber) args.Args[0]).Value;
 
             if (transformValue != null)
@@ -252,10 +302,10 @@ namespace Content.Shared.Localizations
 
             fargs[^1] = Loc.GetString($"units-{mu.Unit.ToLower()}");
 
-            // Before anyone complains about "{"+"${...}", at least it's better than MS's approach...
+            // Esta composição preserva especificadores de formato sem depender das regras frágeis
+            // de escape de chaves do formatador composto da Microsoft.
             // https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting#escaping-braces
-            //
-            // Note that the closing brace isn't replaced so that format specifiers can be applied.
+            // A chave final permanece intacta para permitir especificadores de formato.
             var res = String.Format(
                 fmtstr.Replace("{UNIT", "{" + $"{fargs.Length - 1}"),
                 fargs
