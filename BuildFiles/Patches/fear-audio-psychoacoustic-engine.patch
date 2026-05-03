@@ -1096,3 +1096,196 @@ index ca92f258f..7dab76147 100644
      float MaxDistance { get; set; }
  
      float RolloffFactor { get; set; }
+
+diff --git a/Resources/Shaders/Internal/light_shared.swsl b/Resources/Shaders/Internal/light_shared.swsl
+index a0698da81..6282b7cf0 100644
+--- a/Resources/Shaders/Internal/light_shared.swsl
++++ b/Resources/Shaders/Internal/light_shared.swsl
+@@ -50,11 +50,10 @@ highp float valueNoise(highp vec2 p)
+ 
+ highp vec2 distortedMaskUv(highp vec2 uv, highp vec2 world, highp float sourceSeed)
+ {
+-    // Procedural mask drift makes moving shadows feel agentive while staying
+-    // bounded to sub-texel scale for ordinary station lighting. The distortion is
+-    // intentionally low frequency: plausible enough to be read as electrical or
+-    // optical instability, but not as a decorative screen filter.
+-    highp float emotionalGain = clamp(lightSoftness * 0.08 + lightCurveFactor * 0.04, 0.0, 0.16);
++    // Keep optical drift extremely small. Cone masks are high-contrast, so even a
++    // modest UV offset can pull bright texels outside the beam and create visible
++    // side lobes instead of a living edge.
++    highp float emotionalGain = clamp(lightSoftness * 0.003 + lightCurveFactor * 0.002, 0.0, 0.006);
+     highp vec2 flow = vec2(
+         valueNoise(world * 1.7 + vec2(TIME * 0.19 + sourceSeed, sourceSeed)),
+         valueNoise(world * 1.3 + vec2(sourceSeed, TIME * -0.23 - sourceSeed)));
+@@ -116,8 +115,11 @@ void fragment()
+     highp float dist = sqrt(distSquared + LIGHTING_HEIGHT);
+     highp float sourceSeed = hash12(lightCenter + vec2(lightRange, lightPower));
+ 
++    highp float baseMask = zTexture(UV).r;
+     highp vec2 maskUv = distortedMaskUv(UV, worldPosition, sourceSeed);
+-    highp float mask = zTexture(maskUv).r;
++    highp float driftedMask = zTexture(maskUv).r;
++    highp float maskEdge = smoothstep(0.035, 0.22, baseMask) * (1.0 - smoothstep(0.72, 0.96, baseMask));
++    highp float mask = mix(baseMask, driftedMask, maskEdge * 0.18);
+ 
+     highp float s = clamp(dist / lightRange, 0.0, 1.0);
+     highp float s2 = s * s;
+@@ -129,12 +131,12 @@ void fragment()
+     // near the fixture boundary without reintroducing wall leaks.
+     highp float areaEdge = 1.0 - smoothstep(clamp(1.0 - lightSoftness * 0.035, 0.75, 0.999), 1.0, s);
+     highp float flicker = psychophysicalFlicker(sourceSeed);
+-    highp float volume = volumetricMarch(diff, s, sourceSeed);
++    highp float volume = volumetricMarch(diff, s, sourceSeed) * maskEdge * 0.28;
+ 
+     highp float val = attenuation * lightPower * mask * flicker;
+     highp vec3 shiftedColor = lightColor.rgb;
+     shiftedColor.r += (flicker - 1.0) * 0.15;
+     shiftedColor.b -= (flicker - 1.0) * 0.10;
+ 
+-    COLOR = vec4(max(shiftedColor, vec3(0.0)), val * areaEdge + volume * lightPower * mask);
++    COLOR = vec4(max(shiftedColor, vec3(0.0)), val * areaEdge + volume * lightPower);
+ }
+diff --git a/Robust.Client/GameObjects/EntitySystems/PointLightSystem.cs b/Robust.Client/GameObjects/EntitySystems/PointLightSystem.cs
+index 6db848821..ad20de832 100644
+--- a/Robust.Client/GameObjects/EntitySystems/PointLightSystem.cs
++++ b/Robust.Client/GameObjects/EntitySystems/PointLightSystem.cs
+@@ -32,6 +32,7 @@ namespace Robust.Client.GameObjects
+             component.Falloff = state.Falloff;
+             component.CurveFactor = state.CurveFactor;
+             component.CastShadows = state.CastShadows;
++            component.MaskScale = state.MaskScale;
+             component.Energy = state.Energy;
+             component.Radius = state.Radius;
+             component.Color = state.Color;
+diff --git a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+index e65efb434..e925a81e8 100644
+--- a/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
++++ b/Robust.Client/Graphics/Clyde/Clyde.LightRendering.cs
+@@ -524,7 +524,8 @@ namespace Robust.Client.Graphics.Clyde
+                     else
+                     {
+                         // Only apply rotation if a mask is said, because else it doesn't matter.
+-                        matrix = Matrix3Helpers.CreateRotation(rotation);
++                        matrix = Matrix3Helpers.CreateScale(component.MaskScale) *
++                                 Matrix3Helpers.CreateRotation(rotation);
+                     }
+ 
+                     (matrix.M31, matrix.M32) = lightPos;
+@@ -682,7 +683,7 @@ namespace Robust.Client.Graphics.Clyde
+                 var direction = new Vector2(MathF.Cos(angle), MathF.Sin(angle));
+                 var distance = CastLightRay(lightPos, direction, radius);
+                 var world = lightPos + direction * distance;
+-                _lightVisibilityVertices.Add(new Vertex2D(world, LightMaskUv(world, lightPos, radius, maskRotation), Color.White));
++                _lightVisibilityVertices.Add(new Vertex2D(world, LightMaskUv(world, lightPos, radius, maskRotation, component.MaskScale), Color.White));
+             }
+ 
+             if (_lightVisibilityVertices.Count > 2)
+@@ -785,6 +786,8 @@ namespace Robust.Client.Graphics.Clyde
+                 FloatBits(lightPos.Y),
+                 FloatBits(component.Radius),
+                 FloatBits((float) maskRotation.Theta),
++                FloatBits(component.MaskScale.X),
++                FloatBits(component.MaskScale.Y),
+                 baseSampleCount);
+         }
+ 
+@@ -1033,7 +1036,7 @@ namespace Robust.Client.Graphics.Clyde
+             return true;
+         }
+ 
+-        private static Vector2 LightMaskUv(Vector2 world, Vector2 lightPos, float radius, Angle rotation)
++        private static Vector2 LightMaskUv(Vector2 world, Vector2 lightPos, float radius, Angle rotation, Vector2 maskScale)
+         {
+             var local = world - lightPos;
+ 
+@@ -1045,9 +1048,16 @@ namespace Robust.Client.Graphics.Clyde
+                 local = new Vector2(local.X * cos - local.Y * sin, local.X * sin + local.Y * cos);
+             }
+ 
++            maskScale.X = MathF.Max(maskScale.X, 0.05f);
++            maskScale.Y = MathF.Max(maskScale.Y, 0.05f);
++
++            var uv = new Vector2(
++                0.5f + local.X / (radius * 2f * maskScale.X),
++                0.5f - local.Y / (radius * 2f * maskScale.Y));
++
+             return new Vector2(
+-                0.5f + local.X / (radius * 2f),
+-                0.5f - local.Y / (radius * 2f));
++                Math.Clamp(uv.X, 0f, 1f),
++                Math.Clamp(uv.Y, 0f, 1f));
+         }
+ 
+         private static float NormalizeAngle(float angle)
+@@ -1775,6 +1785,8 @@ namespace Robust.Client.Graphics.Clyde
+             int LightY,
+             int Radius,
+             int MaskRotation,
++            int MaskScaleX,
++            int MaskScaleY,
+             int BaseSampleCount);
+ 
+         private sealed class LightVisibilityCacheEntry
+diff --git a/Robust.Shared/GameObjects/Components/Light/PointLightComponentState.cs b/Robust.Shared/GameObjects/Components/Light/PointLightComponentState.cs
+index 9aacc404f..282f051da 100644
+--- a/Robust.Shared/GameObjects/Components/Light/PointLightComponentState.cs
++++ b/Robust.Shared/GameObjects/Components/Light/PointLightComponentState.cs
+@@ -25,4 +25,6 @@ public sealed class PointLightComponentState : ComponentState
+     public float Radius;
+ 
+     public Vector2 Offset;
++
++    public Vector2 MaskScale;
+ }
+diff --git a/Robust.Shared/GameObjects/Components/Light/SharedPointLightComponent.cs b/Robust.Shared/GameObjects/Components/Light/SharedPointLightComponent.cs
+index a1c9d0806..2a1d5098b 100644
+--- a/Robust.Shared/GameObjects/Components/Light/SharedPointLightComponent.cs
++++ b/Robust.Shared/GameObjects/Components/Light/SharedPointLightComponent.cs
+@@ -121,6 +121,14 @@ namespace Robust.Shared.GameObjects
+         [Animatable]
+         public Angle Rotation { get; set; }
+ 
++        /// <summary>
++        ///     Non-uniform scale for the light mask. This lets masked lights behave like
++        ///     adjustable optics without requiring a separate texture for every beam width.
++        /// </summary>
++        [ViewVariables(VVAccess.ReadWrite)]
++        [DataField("maskScale")]
++        public Vector2 MaskScale = Vector2.One;
++
+         /// <summary>
+         /// The resource path to the mask texture the light will use.
+         /// </summary>
+diff --git a/Robust.Shared/GameObjects/Systems/SharedPointLightSystem.cs b/Robust.Shared/GameObjects/Systems/SharedPointLightSystem.cs
+index 38102e1d1..1193feb2c 100644
+--- a/Robust.Shared/GameObjects/Systems/SharedPointLightSystem.cs
++++ b/Robust.Shared/GameObjects/Systems/SharedPointLightSystem.cs
+@@ -1,3 +1,4 @@
++using System.Numerics;
+ using System.Diagnostics.CodeAnalysis;
+ using Robust.Shared.GameStates;
+ using Robust.Shared.Maths;
+@@ -107,6 +108,15 @@ public abstract class SharedPointLightSystem : EntitySystem
+         Dirty(uid, comp);
+     }
+ 
++    public void SetMaskScale(EntityUid uid, Vector2 value, SharedPointLightComponent? comp = null)
++    {
++        if (!ResolveLight(uid, ref comp) || comp.MaskScale.EqualsApprox(value))
++            return;
++
++        comp.MaskScale = value;
++        Dirty(uid, comp);
++    }
++
+     protected static void OnLightGetState(
+         EntityUid uid,
+         SharedPointLightComponent component,
+@@ -123,6 +133,7 @@ public abstract class SharedPointLightSystem : EntitySystem
+             Falloff = component.Falloff,
+             CurveFactor = component.CurveFactor,
+             CastShadows = component.CastShadows,
++            MaskScale = component.MaskScale,
+         };
+     }
+ }
