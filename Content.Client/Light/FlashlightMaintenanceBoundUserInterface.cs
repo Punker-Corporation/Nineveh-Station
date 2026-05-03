@@ -19,7 +19,7 @@ public sealed class FlashlightMaintenanceBoundUserInterface : BoundUserInterface
         _window.OnClose += Close;
         _window.OpenCentered();
         _window.OnFocusChanged += focus => SendMessage(new FlashlightSetFocusMessage(focus));
-        _window.OnServiceModule += module => SendMessage(new FlashlightServiceModuleMessage(module));
+        _window.OnServiceModule += (module, calibration) => SendMessage(new FlashlightServiceModuleMessage(module, calibration));
         Reload();
     }
 
@@ -42,6 +42,7 @@ public sealed class FlashlightMaintenanceBoundUserInterface : BoundUserInterface
             comp.EmitterIntegrity,
             comp.ContactIntegrity,
             comp.HeatSinkIntegrity,
+            comp.CalibrationTarget,
             MathHelper.Lerp(comp.WideRadius, comp.FocusedRadius, comp.Focus),
             MathHelper.Lerp(comp.WideEnergy, comp.FocusedEnergy, comp.Focus)));
     }

@@ -5,16 +5,18 @@ verb-self-target-pronoun = Você
 
 # verb categories & common verbs. These appear across multiple systems, so they may as well go here.
 
-verb-categories-admin = Administrador
-verb-categories-debug = Depurar
+view-variables = Variáveis internas
+
+verb-categories-admin = Administração
+verb-categories-debug = Diagnóstico
 verb-categories-examine = Inspecionar
 verb-categories-eject = Extrair
 verb-categories-insert = Inserir
-verb-categories-buckle = Aperte o cinto
-verb-categories-unbuckle = Desaperte
-verb-categories-rotate = Vez
-verb-categories-smite = Punir
-verb-categories-tricks = Truques
+verb-categories-buckle = Prender
+verb-categories-unbuckle = Soltar
+verb-categories-rotate = Girar
+verb-categories-smite = Intervenção
+verb-categories-tricks = Ferramentas
 verb-categories-transfer = Quantidade movida
 verb-categories-split = Dividir
 verb-categories-instrument-style = Estilo de instrumento
@@ -28,8 +30,8 @@ verb-categories-power-level = Nível de potência
 verb-common-toggle-light = Interruptor de luz
 verb-common-close = Fechar
 verb-common-open = Abrir
-verb-common-close-ui = Fechar IU
-verb-common-open-ui = Abrir IU
+verb-common-close-ui = Fechar interface
+verb-common-open-ui = Abrir interface
 
 # Chaves adicionadas para impedir qualquer fallback de localiza??o.
 

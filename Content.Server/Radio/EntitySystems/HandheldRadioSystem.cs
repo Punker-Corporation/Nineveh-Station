@@ -84,6 +84,9 @@ public sealed class HandheldRadioSystem : SharedRadioDeviceSystem
 
     private void OnEntitySpoke(EntitySpokeEvent args)
     {
+        if (args.Channel != null)
+            return;
+
         var sentChannels = new HashSet<ProtoId<RadioChannelPrototype>>();
         var query = EntityQueryEnumerator<HandheldRadioComponent, RadioMicrophoneComponent>();
 

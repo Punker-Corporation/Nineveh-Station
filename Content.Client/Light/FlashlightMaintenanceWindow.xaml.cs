@@ -9,23 +9,28 @@ namespace Content.Client.Light;
 public sealed partial class FlashlightMaintenanceWindow : FancyWindow
 {
     public event Action<float>? OnFocusChanged;
-    public event Action<FlashlightModule>? OnServiceModule;
+    public event Action<FlashlightModule, float>? OnServiceModule;
 
     public FlashlightMaintenanceWindow()
     {
         RobustXamlLoader.Load(this);
 
         FocusSlider.OnReleased += _ => OnFocusChanged?.Invoke(FocusSlider.Value / 100f);
-        LensButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Lens);
-        EmitterButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Emitter);
-        ContactsButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Contacts);
-        HeatSinkButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.HeatSink);
+        CalibrationSlider.OnValueChanged += range => CalibrationValue.Text = $"{(int)MathF.Round(range.Value)}%";
+        LensButton.OnPressed += _ => Service(FlashlightModule.Lens);
+        EmitterButton.OnPressed += _ => Service(FlashlightModule.Emitter);
+        ContactsButton.OnPressed += _ => Service(FlashlightModule.Contacts);
+        HeatSinkButton.OnPressed += _ => Service(FlashlightModule.HeatSink);
     }
 
     public void UpdateState(FlashlightMaintenanceBoundUserInterfaceState state)
     {
         FocusSlider.SetValueWithoutEvent(state.Focus * 100f);
         FocusValue.Text = $"{Percent(state.Focus)}%";
+        CalibrationValue.Text = $"{Percent(CalibrationSlider.Value / 100f)}%";
+        CalibrationHintLabel.Text = Loc.GetString(
+            "flashlight-maintenance-window-calibration-target",
+            ("target", Percent(state.CalibrationTarget)));
         ProjectionLabel.Text = Loc.GetString(
             "flashlight-maintenance-window-projection",
             ("radius", state.ProjectedRadius.ToString("0.0")),
@@ -45,5 +50,10 @@ public sealed partial class FlashlightMaintenanceWindow : FancyWindow
     private static int Percent(float value)
     {
         return (int) MathF.Round(Math.Clamp(value, 0f, 1f) * 100f);
+    }
+
+    private void Service(FlashlightModule module)
+    {
+        OnServiceModule?.Invoke(module, CalibrationSlider.Value / 100f);
     }
 }

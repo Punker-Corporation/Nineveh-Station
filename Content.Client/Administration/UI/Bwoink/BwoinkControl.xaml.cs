@@ -80,10 +80,6 @@ namespace Content.Client.Administration.UI.Bwoink
                     sb.Append(' ');
                 }
 
-                // Mark antagonists with symbol
-                if (info.Antag && info.ActiveThisRound)
-                    sb.Append(new Rune(0x1F5E1)); // 🗡
-
                 // Mark new players with symbol
                 if (IsNewPlayer(info))
                     sb.Append(new Rune(0x23F2)); // ⏲
@@ -131,7 +127,7 @@ namespace Content.Client.Administration.UI.Bwoink
                 if (a.Connected != b.Connected)
                     return a.Connected ? -1 : 1;
 
-                // Sort connected players by whether they have joined the round, then by New Player status, then by Antag status
+                // Sort connected players by whether they have joined the round, then by new-player status.
                 if (a.Connected && b.Connected)
                 {
                     var aNewPlayer = IsNewPlayer(a);
@@ -145,9 +141,6 @@ namespace Content.Client.Administration.UI.Bwoink
                     if (aNewPlayer != bNewPlayer)
                         return aNewPlayer ? -1 : 1;
 
-                    //  Within all four previous groups, antagonists will be listed first.
-                    if (a.Antag != b.Antag)
-                        return a.Antag ? -1 : 1;
                 }
 
                 // Sort disconnected players by participation in the round
@@ -274,9 +267,6 @@ namespace Content.Client.Administration.UI.Bwoink
                     sb.Append(new Rune(0x2639)); // ☹
                 sb.Append(' ');
             }
-
-            if (pl.Antag)
-                sb.Append(new Rune(0x1F5E1)); // 🗡
 
             if (pl.OverallPlaytime <= TimeSpan.FromMinutes(_cfg.GetCVar(CCVars.NewPlayerThreshold)))
                 sb.Append(new Rune(0x23F2)); // ⏲

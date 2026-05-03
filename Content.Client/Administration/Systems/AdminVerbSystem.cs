@@ -1,6 +1,5 @@
 using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
-using Content.Shared.Mind.Components;
 using Content.Shared.Verbs;
 using Robust.Client.Console;
 using Robust.Shared.Utility;
@@ -45,17 +44,8 @@ namespace Content.Client.Administration.Systems
             if (_admin.HasAdminFlag(args.User, AdminFlags.Admin))
                 args.ExtraCategories.Add(VerbCategory.Admin);
 
-            if (_admin.HasAdminFlag(args.User, AdminFlags.Fun) && HasComp<MindContainerComponent>(args.Target))
-                args.ExtraCategories.Add(VerbCategory.Antag);
-
             if (_admin.HasAdminFlag(args.User, AdminFlags.Debug))
                 args.ExtraCategories.Add(VerbCategory.Debug);
-
-            if (_admin.HasAdminFlag(args.User, AdminFlags.Fun))
-                args.ExtraCategories.Add(VerbCategory.Smite);
-
-            if (_admin.HasAdminFlag(args.User, AdminFlags.Admin))
-                args.ExtraCategories.Add(VerbCategory.Tricks);
         }
     }
 }

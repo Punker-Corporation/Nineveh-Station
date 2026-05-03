@@ -7,7 +7,6 @@
             <Label Name="PlayerCount" HorizontalExpand="True" SizeFlagsStretchRatio="0.15"/>
             <!-- Sunrise-Sponsors-Start -->
             <Label Name="SponsorCount" HorizontalExpand="True" SizeFlagsStretchRatio="0.15"/>
-            <Label Name="AntagCount" HorizontalExpand="True" SizeFlagsStretchRatio="0.15"/>
             <!-- Sunrise-Sponsors-End -->
             <LineEdit Name="SearchLineEdit" HorizontalExpand="True"
                       PlaceHolder="{Loc player-tab-filter-line-edit-placeholder}" SizeFlagsStretchRatio="0.25"/>

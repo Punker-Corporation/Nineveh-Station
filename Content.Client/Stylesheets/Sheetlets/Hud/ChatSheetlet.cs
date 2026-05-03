@@ -15,8 +15,11 @@ public sealed class ChatSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet, I
     {
         IButtonConfig btnCfg = sheet;
 
-        var chatColor = sheet.SecondaryPalette.Background.WithAlpha(221.0f / 255.0f);
-        var chatBg = new StyleBoxFlat(chatColor);
+        var chatBg = new StyleBoxFlat(Color.FromHex("#080706F0"))
+        {
+            BorderColor = Color.FromHex("#33201B"),
+            BorderThickness = new Thickness(1),
+        };
 
         var chatChannelButtonTex =
             sheet.GetTextureOr(btnCfg.RoundedButtonBorderedPath, NanotrasenStylesheet.TextureRoot);
