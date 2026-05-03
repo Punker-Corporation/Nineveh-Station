@@ -154,6 +154,8 @@ namespace Content.Server.Light.EntitySystems
         {
             var toRemove = new RemQueue<Entity<HandheldLightComponent>>();
 
+            _flashlightMaintenance.UpdateInactiveLights(frameTime);
+
             foreach (var handheld in _activeLights)
             {
                 if (handheld.Comp.Deleted)
@@ -217,7 +219,10 @@ namespace Content.Server.Light.EntitySystems
             if (!_flashlightMaintenance.CanTurnOn(uid))
             {
                 _audio.PlayPvs(_audio.ResolveSound(component.TurnOnFailSound), uid);
-                _popup.PopupEntity(Loc.GetString("flashlight-maintenance-overheated-popup"), uid, user);
+                var blocker = _flashlightMaintenance.GetTurnOnBlocker(uid);
+                _popup.PopupEntity(Loc.GetString(string.IsNullOrEmpty(blocker)
+                    ? "flashlight-maintenance-overheated-popup"
+                    : blocker), uid, user);
                 return false;
             }
 

@@ -1,13 +1,21 @@
 handheld-radio-channel-null = null
 handheld-radio-channel-set = Canal do rádio definido como {$channel}.
 
-ui-handheld-radio-title = Alterar canal do rádio
+ui-handheld-radio-title = Sintonizador de rádio portátil
 ui-handheld-radio-current = Atual: {$channel}
 ui-handheld-radio-current-null = Atual: null
-ui-handheld-radio-mic = Mic
+ui-handheld-radio-mic = Microfone
 ui-handheld-radio-speaker = Alto-falante
 ui-handheld-radio-line-edit-placeholder = Canal ou null
 ui-handheld-radio-apply = Definir canal
-ui-handheld-radio-null = null
+ui-handheld-radio-null = Desvincular canal
 ui-handheld-radio-min = Mín.: {$channel}
 ui-handheld-radio-max = Máx.: {$channel}
+ui-handheld-radio-frequency = Frequência: {$frequency} MHz
+ui-handheld-radio-frequency-null = Frequência: sem vínculo
+ui-handheld-radio-congestion = Congestionamento: {$value}%
+ui-handheld-radio-signal = Qualidade do sinal: {$value}%
+ui-handheld-radio-adjacent = Canais adjacentes: inferior {$low}% / superior {$high}% congestionados
+ui-handheld-radio-drift = Desvio: {$value} kHz
+ui-handheld-radio-static-clear = Leito de estática: limpo o bastante.
+ui-handheld-radio-static-phrase = Leito de estática: "{$phrase}"

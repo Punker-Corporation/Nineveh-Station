@@ -1,22 +1,39 @@
 <DefaultWindow xmlns="https://spacestation14.io"
                Title="{Loc 'ui-handheld-radio-title'}"
+               SetSize="520 430"
                Resizable="False">
-    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinSize="240 128">
-        <Label Name="CurrentChannel" Access="Public" HorizontalExpand="True" />
+    <BoxContainer Orientation="Vertical" SeparationOverride="7" Margin="8">
+        <Label Name="CurrentChannel" Access="Public" HorizontalExpand="True" StyleClasses="LabelKeyText" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+            <Label Name="FrequencyLabel" Access="Public" HorizontalExpand="True" />
+            <Label Name="DriftLabel" Access="Public" />
+        </BoxContainer>
+
+        <Label Name="SignalLabel" Access="Public" HorizontalExpand="True" />
+        <ProgressBar Name="SignalBar" Access="Public" MinValue="0" MaxValue="1" HorizontalExpand="True" />
+        <Label Name="CongestionLabel" Access="Public" HorizontalExpand="True" />
+        <ProgressBar Name="CongestionBar" Access="Public" MinValue="0" MaxValue="1" HorizontalExpand="True" />
+        <Label Name="AdjacentLabel" Access="Public" HorizontalExpand="True" />
+
+        <PanelContainer HorizontalExpand="True" MinSize="0 58">
+            <BoxContainer Orientation="Vertical" Margin="6 4" HorizontalExpand="True">
+                <Label Name="StaticPhraseLabel" Access="Public" HorizontalExpand="True" ClipText="True" />
+            </BoxContainer>
+        </PanelContainer>
+
         <BoxContainer Orientation="Horizontal" SeparationOverride="4">
             <Button Name="MicButton" Access="Public" ToggleMode="True" Text="{Loc 'ui-handheld-radio-mic'}" HorizontalExpand="True" />
             <Button Name="SpeakerButton" Access="Public" ToggleMode="True" Text="{Loc 'ui-handheld-radio-speaker'}" HorizontalExpand="True" />
         </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
+
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
             <LineEdit Name="ChannelLineEdit" Access="Public" HorizontalExpand="True" PlaceHolder="{Loc 'ui-handheld-radio-line-edit-placeholder'}" />
+            <Button Name="ApplyButton" Access="Public" Text="{Loc 'ui-handheld-radio-apply'}" MinWidth="110" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
             <Label Name="MinimumChannel" Access="Public" HorizontalExpand="True" />
             <Label Name="MaximumChannel" Access="Public" />
         </BoxContainer>
-        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
-            <Button Name="NullButton" Access="Public" Text="{Loc 'ui-handheld-radio-null'}" HorizontalExpand="True" />
-            <Button Name="ApplyButton" Access="Public" Text="{Loc 'ui-handheld-radio-apply'}" HorizontalExpand="True" />
-        </BoxContainer>
+        <Button Name="NullButton" Access="Public" Text="{Loc 'ui-handheld-radio-null'}" HorizontalExpand="True" />
     </BoxContainer>
 </DefaultWindow>

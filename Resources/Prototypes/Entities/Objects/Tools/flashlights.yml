@@ -1,8 +1,8 @@
 - type: entity
-  name: lanterna tática de inspeção
+  name: tactical inspection flashlight
   parent: BaseItem
   id: QuantumInstabilityFlashlight
-  description: Um módulo óptico de campo com foco cônico, dissipação térmica e contatos sensíveis. A luz não promete conforto; ela apenas revela o que já estava perto.
+  description: A field optical module with cone focus, thermal dissipation, and sensitive contacts. The light does not promise comfort; it only reveals what was already close.
   components:
   - type: Sprite
     sprite: Objects/Tools/flashlight.rsi
@@ -50,8 +50,9 @@
     focusedRadius: 9.25
     wideEnergy: 1.25
     focusedEnergy: 2.95
-    heatPerSecond: 5.3
-    focusHeatMultiplier: 2.6
+    heatPerSecond: 1.8
+    focusHeatMultiplier: 1.25
+    coolingPerSecond: 7.5
     batteryFocusCost: 0.95
     lensIntegrity: 0.94
     emitterIntegrity: 0.91

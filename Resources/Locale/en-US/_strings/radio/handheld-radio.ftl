@@ -1,7 +1,7 @@
 handheld-radio-channel-null = null
 handheld-radio-channel-set = Radio channel set to {$channel}.
 
-ui-handheld-radio-title = Change Radio Channel
+ui-handheld-radio-title = Handheld radio tuner
 ui-handheld-radio-current = Current: {$channel}
 ui-handheld-radio-current-null = Current: null
 ui-handheld-radio-mic = Mic
@@ -11,3 +11,11 @@ ui-handheld-radio-apply = Set Channel
 ui-handheld-radio-null = null
 ui-handheld-radio-min = Min: {$channel}
 ui-handheld-radio-max = Max: {$channel}
+ui-handheld-radio-frequency = Frequency: {$frequency} MHz
+ui-handheld-radio-frequency-null = Frequency: unbound
+ui-handheld-radio-congestion = Congestion: {$value}%
+ui-handheld-radio-signal = Signal quality: {$value}%
+ui-handheld-radio-adjacent = Adjacent channels: lower {$low}% / upper {$high}% congestion
+ui-handheld-radio-drift = Drift: {$value} kHz
+ui-handheld-radio-static-clear = Static bed: clear enough.
+ui-handheld-radio-static-phrase = Static bed: "{$phrase}"

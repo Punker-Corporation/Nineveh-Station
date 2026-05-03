@@ -1,4 +1,6 @@
+using System.Numerics;
 using Robust.Shared.GameStates;
+using Robust.Shared.Audio;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Light.Components;
@@ -20,6 +22,15 @@ public sealed partial class FlashlightMaintenanceComponent : Component
 
     [DataField, AutoNetworkedField]
     public bool Overheated;
+
+    [DataField, AutoNetworkedField]
+    public bool FaultLatched;
+
+    [DataField, AutoNetworkedField]
+    public FlashlightFault LastFault = FlashlightFault.None;
+
+    [DataField, AutoNetworkedField]
+    public FlashlightCircuitStep CircuitStep = FlashlightCircuitStep.Stable;
 
     [DataField, AutoNetworkedField]
     public float LensIntegrity = 1f;
@@ -55,13 +66,19 @@ public sealed partial class FlashlightMaintenanceComponent : Component
     public float Softness = 0.62f;
 
     [DataField]
-    public float HeatPerSecond = 4.8f;
+    public Vector2 WideMaskScale = new(1.42f, 0.92f);
 
     [DataField]
-    public float FocusHeatMultiplier = 2.35f;
+    public Vector2 FocusedMaskScale = new(0.46f, 1.18f);
 
     [DataField]
-    public float CoolingPerSecond = 9.5f;
+    public float HeatPerSecond = 1.65f;
+
+    [DataField]
+    public float FocusHeatMultiplier = 1.2f;
+
+    [DataField]
+    public float CoolingPerSecond = 7.25f;
 
     [DataField]
     public float HeatCapacity = 100f;
@@ -77,6 +94,24 @@ public sealed partial class FlashlightMaintenanceComponent : Component
 
     [DataField]
     public float BatteryFocusCost = 0.82f;
+
+    [DataField]
+    public float InactiveCoolingMultiplier = 0.42f;
+
+    [DataField]
+    public float FailureCheckSeconds = 5.5f;
+
+    [DataField]
+    public float FailureCheckTimer;
+
+    [DataField]
+    public SoundSpecifier RepairSound = new SoundPathSpecifier("/Audio/Effects/multitool_pulse.ogg");
+
+    [DataField]
+    public SoundSpecifier FaultSound = new SoundPathSpecifier("/Audio/Effects/sparks2.ogg");
+
+    [DataField]
+    public SoundSpecifier SwitchSound = new SoundPathSpecifier("/Audio/Machines/button.ogg");
 }
 
 [Serializable, NetSerializable]
@@ -95,10 +130,46 @@ public enum FlashlightModule : byte
 }
 
 [Serializable, NetSerializable]
+public enum FlashlightFault : byte
+{
+    None,
+    ContactDropout,
+    ThermalRunaway,
+    EmitterSag,
+    GroundLeak,
+}
+
+[Serializable, NetSerializable]
+public enum FlashlightCircuitStep : byte
+{
+    CheckContinuity,
+    CorrectPolarity,
+    BleedCapacitor,
+    BridgeGround,
+    MatchImpedance,
+    CalibrateEmitter,
+    Stable,
+}
+
+[Serializable, NetSerializable]
+public enum FlashlightCircuitAction : byte
+{
+    ProbeContinuity,
+    ReversePolarity,
+    BleedCapacitor,
+    BridgeGround,
+    TrimResistor,
+    CalibrateEmitter,
+}
+
+[Serializable, NetSerializable]
 public sealed class FlashlightMaintenanceBoundUserInterfaceState(
     float focus,
     float heat,
     bool overheated,
+    bool faultLatched,
+    FlashlightFault lastFault,
+    FlashlightCircuitStep circuitStep,
     float lensIntegrity,
     float emitterIntegrity,
     float contactIntegrity,
@@ -110,6 +181,9 @@ public sealed class FlashlightMaintenanceBoundUserInterfaceState(
     public float Focus = focus;
     public float Heat = heat;
     public bool Overheated = overheated;
+    public bool FaultLatched = faultLatched;
+    public FlashlightFault LastFault = lastFault;
+    public FlashlightCircuitStep CircuitStep = circuitStep;
     public float LensIntegrity = lensIntegrity;
     public float EmitterIntegrity = emitterIntegrity;
     public float ContactIntegrity = contactIntegrity;
@@ -128,4 +202,10 @@ public sealed class FlashlightSetFocusMessage(float focus) : BoundUserInterfaceM
 public sealed class FlashlightServiceModuleMessage(FlashlightModule module) : BoundUserInterfaceMessage
 {
     public FlashlightModule Module { get; } = module;
+}
+
+[Serializable, NetSerializable]
+public sealed class FlashlightCircuitActionMessage(FlashlightCircuitAction action) : BoundUserInterfaceMessage
+{
+    public FlashlightCircuitAction Action { get; } = action;
 }

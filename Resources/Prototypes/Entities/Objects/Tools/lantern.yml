@@ -15,9 +15,9 @@
       focusedRadius: 7.5
       wideEnergy: 1.35
       focusedEnergy: 2.45
-      heatPerSecond: 3.8
-      focusHeatMultiplier: 1.9
-      coolingPerSecond: 10.5
+      heatPerSecond: 1.45
+      focusHeatMultiplier: 1.05
+      coolingPerSecond: 7.0
       batteryFocusCost: 0.72
       lensIntegrity: 0.97
       emitterIntegrity: 0.95
@@ -61,6 +61,7 @@
       softness: 0.7
       falloff: 6.9
       color: "#FFC458"
+      castShadows: true
       netsync: false
     - type: Appearance
     - type: ToggleableVisuals
