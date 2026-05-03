@@ -272,3 +272,9 @@ uplink-sunrise-spray-paint-green-name = Tinta spray (verde)
 uplink-sunrise-spray-paint-orange-name = Tinta spray (laranja)
 uplink-sunrise-spray-paint-purple-name = Tinta spray (roxa)
 uplink-sunrise-spray-paint-white-name = Tinta spray (branca)
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+uplink-sunrise-box-arbiter-bundle-name = Arbiter set
+
+uplink-sunrise-box-redmist-bundle-name = Conjunto de Mist Vermelha

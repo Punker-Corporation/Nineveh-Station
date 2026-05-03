@@ -9,3 +9,7 @@ construction-recipe-table-fancy-purple = mesa requintada (roxo)
 construction-recipe-table-fancy-pink = mesa requintada (rosa)
 construction-recipe-table-fancy-red = mesa requintada (vermelha)
 construction-recipe-table-fancy-white = mesa requintada (branca)
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+construction-recipe-table-fancy-sky-blue = mesa chique (azul celeste)

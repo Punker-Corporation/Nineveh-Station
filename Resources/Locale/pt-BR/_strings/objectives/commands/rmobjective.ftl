@@ -8,4 +8,4 @@ cmd-rmobjective-failed = Falha ao excluir o destino. Talvez o índice esteja for
 cmd-rmobjective-invalid-index = Falha ao analisar o índice { $index } como um número inteiro.
 cmd-rmobjective-invalid-objective-info = VAZIO
 cmd-rmobjective-player-completion = <Player>
-cmd-rmobjective-index-completion = <Index>
+cmd-rmobjective-index-completion = <Índice>

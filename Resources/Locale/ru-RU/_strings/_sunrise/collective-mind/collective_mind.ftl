@@ -1,5 +1,5 @@
-collective-mind-chat-wrap-message = [bold]{ $channel }: { $message }[/bold]
-collective-mind-chat-wrap-message-with-author = [bold]{ $channel } ({ $source }): { $message }[/bold]
+collective-mind-chat-wrap-message = 2 0:  1 3
+collective-mind-chat-wrap-message-with-author = 3 0  ( 1 ):  2 4
 collective-mind-chat-wrap-message-admin = { $source } ({ $channel }): { $message }
 collective-mind-flesh-cult = Плоть
 collective-mind-xeno = Ксено
@@ -10,4 +10,4 @@ collective-mind-carp = Карпы
 collective-mind-zombie = Зомби
 collective-mind-changeling = Генокрад
 collective-mind-blood-cult = Культ Крови
-collective-mind-abductor = Абдукторы
+collective-mind-pirate = Пираты

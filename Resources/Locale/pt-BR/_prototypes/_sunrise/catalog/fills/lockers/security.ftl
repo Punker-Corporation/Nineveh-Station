@@ -86,3 +86,48 @@ ent-SpawnerSafeRifle = Gerador de máquina seguro
 ent-SpawnerSafeSMG = Gerador seguro para metralhadoras
     .suffix = Arsenal, PP
     .desc = { ent-MarkerBase.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-GunSafeLaserGunSMG = seguro
+    .suffix = SMG laser
+    .desc = { ent-GunSafeBaseSecure.desc }
+
+
+ent-GunSafeEnergyGunSMG = seguro
+    .suffix = Energia Tática SMG
+    .desc = { ent-GunSafeBaseSecure.desc }
+
+
+ent-GunSafeRifleM52 = seguro
+    .suffix = M-52, LMG /HAR
+    .desc = { ent-GunSafeBaseSecure.desc }
+
+
+ent-GunSafeSuperweaponSmartGun = SMART seguro
+    .desc = { ent-GunSafeSuperweaponSecureGamma.desc }
+
+
+ent-GunSafeSuperweaponLWAP = LWAP seguro
+    .desc = { ent-GunSafeSuperweaponSecureGamma.desc }
+
+
+ent-GunSafeSuperweaponRocketLauncher = RPG seguro
+    .desc = { ent-GunSafeSuperweaponSecureGamma.desc }
+
+
+ent-GunSafeSuperIonRifle = Cofre de ion-temperatura
+    .desc = { ent-GunSafeSuperweaponBaseSecure.desc }
+
+
+ent-GunSafeSuperDMR = Larker seguro
+    .desc = { ent-GunSafeSuperweaponBaseSecure.desc }
+
+
+ent-GunSafeSuperDMRElite = Segurança SKM-28
+    .desc = { ent-GunSafeSuperweaponBaseSecure.desc }
+
+
+ent-SpawnerSafeEnergyGuns = Armary Spawner Seguro
+    .suffix = Arsenal, Laser /Energy
+    .desc = { ent-MarkerBase.desc }

@@ -84,3 +84,8 @@ ent-ClothingOuterCoatExpensiveOpened = casaco de pele caro (desabotoado)
     .desc = { ent-ClothingOuterStorageFoldableBaseOpened.desc }
 ent-ClothingOuterCoatInspector = casaco de inspetor
     .desc = Um casaco rigoroso de inspetor para inspirar medo durante as inspeções.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingOuterCoatJensenSyndie = { ent-ClothingOuterCoatJensen }
+    .desc = { ent-ClothingOuterCoatJensen.desc }

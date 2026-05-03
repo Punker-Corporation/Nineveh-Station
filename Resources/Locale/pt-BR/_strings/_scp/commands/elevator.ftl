@@ -1,0 +1,17 @@
+elevator-manage-floors-desc = Gerencia pisos do elevador especificado: adicionar, remover, mover ou listar.
+elevator-manage-floors-help = Uso: { $command } <elevator id> <action> [floor_name] [direction] \nActions: add <floor name>, remove <floor name>, move <floor name> <direction>, lista \nDirections para mover: para cima, para baixo ou número de índice
+elevator-manage-floors-not-found = O elevador com ID '{ $elevatorId }' não foi encontrado.
+elevator-manage-floors-floor-exists = O piso { $floorName } já existe no elevador { $elevatorId }.
+elevator-manage-floors-added = Piso adicionado '{ $floorName }' ao elevador '{ $elevatorId }'. Pisos atuais: { $floors }
+elevator-manage-floors-floor-not-exists = O piso { $floorName } não existe no elevador { $elevatorId }.
+elevator-manage-floors-cannot-remove-current = Não é possível remover o piso actual '{ $floorName }' do elevador '{ $elevatorId }'.
+elevator-manage-floors-removed = Piso removido { $floorName } do elevador { $elevatorId }. Pisos atuais: { $floors }
+elevator-manage-floors-list = Pisos para elevador { $elevatorId }: { $floors } \nCurrent piso: { $currentFloor }
+elevator-manage-floors-move-help = Para a ação 'move', forneça o nome do piso e direção: { $command } <elevator id> move <floor name> <direction> \nDirections: para cima, para baixo ou número de índice (0-baseado)
+elevator-manage-floors-already-top = O piso '{ $floorName }' já está no topo.
+elevator-manage-floors-already-bottom = O piso '{ $floorName }' já está no fundo.
+elevator-manage-floors-invalid-index = Índice inválido ' { $index }'. Deve estar entre 0 e { $maxIndex }.
+elevator-manage-floors-unknown-direction = Direção desconhecida ' { $direction }'. Use 'up', 'down' ou um número de índice válido.
+elevator-manage-floors-moved = Piso movido ' { $floorName }' para a posição { $newIndex }. Pisos atuais: { $floors }
+elevator-manage-floors-unknown-action = Acção desconhecida ' { $action }'. Acções válidas: adicionar, remover, mover, listar.
+elevator-manage-floors-args-error = Esperava pelo menos 2 argumentos: elevador id e ação.

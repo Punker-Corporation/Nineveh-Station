@@ -45,8 +45,8 @@ job-name-usspofficer = Oficial SSSP
 job-name-ntrguard = Operativo ISN
 job-name-ntrleader = Comandante ISN
 job-name-ntrofficer = Oficial ISN
-job-name-usspcaptain = capitão da URSS
-# Перевод трекеров времени
+job-name-usspcaptain = Capitão MTSP
+# NTR
 JobCentCommOfficial = Representante Centcom
 JobCentCommOperator = Operadora Centcom
 JobMagistrat = magistrado
@@ -89,3 +89,8 @@ JobClownBorg = palhaço ciborgue
 JobBarber = cabeleireiro
 JobAdjutant = ajudante
 JobMailCarrier = carteiro
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-name-commaid = empregada
+# Tradução do rastreador de tempo

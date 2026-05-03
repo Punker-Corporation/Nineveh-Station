@@ -1,7 +1,7 @@
 ent-FlashlightLantern = lanterna
-    .desc = Ele ilumina o caminho para a liberdade.
+    .desc = Um facho estreito contra corredores grandes demais. A luz treme como se soubesse o que vem depois.
 ent-FlashlightSeclite = lanterna SB
-    .desc = Uma lanterna confiável usada pelo pessoal de segurança.
+    .desc = Corpo rígido, lente arranhada, foco agressivo. Foi feita para procurar ameaça, não conforto.
 ent-EmptyFlashlightLantern = { ent-FlashlightLantern }
     .suffix = Vazio
     .desc = { ent-FlashlightLantern.desc }

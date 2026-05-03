@@ -1,7 +1,7 @@
 ent-BasePercussionInstrument = { ent-BaseHandheldInstrument }
     .desc = { ent-BaseHandheldInstrument.desc }
 ent-GlockenspielInstrument = glockenspiel
-    .desc = { ent-BaseHandheldInstrument.desc }
+    .desc = { ent-BasePercussionInstrument.desc }
 ent-MusicBoxInstrument = caixa de música
     .desc = Sua melodia faz com que você não tenha medo de animatrônicos assustadores.
 ent-XylophoneInstrument = xilofone

@@ -10,3 +10,8 @@ ent-WeaponSniperRepeater = Alavanca H2524
     .desc = Uma espingarda civil de ação de alavanca, preferida pelos cowboys espaciais por sua confiabilidade e poderoso poder de ataque. Usa munição .45 magnum.
 ent-WeaponSniperMosinLubed = Kardashev-Mosin
     .desc = A relíquia do rifle Kardashev-Mosin passou por centenas de guerras, mas ainda é mortal. Fresco, simplesmente não enlatado, generosamente untado com óleo - pronto para uma nova guerra! Usa munição calibre .30.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponRifleType88AMR = Tipo 88
+    .desc = A espingarda anti-materiel padrão da USSP. Tipicamente carregado com balas de 15mm perfurantes numa revista de 7 balas.

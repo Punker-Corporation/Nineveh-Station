@@ -16,3 +16,7 @@ admin-logs-include-non-player = Incluindo não jogadores
 admin-logs-search-logs-placeholder = Pesquisar por registros...
 admin-logs-refresh = Atualizar
 admin-logs-next = Próximo
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+admin-logs-export = Exportação

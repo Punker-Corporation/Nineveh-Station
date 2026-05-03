@@ -1,7 +1,9 @@
 # Agrius
 names-moth-first-male-dataset-1 = Agrius
+
 # Attacus atlas
 names-moth-first-male-dataset-2 = Atlas
+
 # Attacus
 names-moth-first-male-dataset-3 = Atacus
 # Attacus caesar
@@ -10,29 +12,31 @@ names-moth-first-male-dataset-4 = César
 names-moth-first-male-dataset-5 = Hércules
 # Itame brunneata, "Rannoch Looper"
 names-moth-first-male-dataset-6 = Rannoch
+
 # Acosmeryx socrates
 names-moth-first-male-dataset-7 = Sócrates
 # Saturniidae solus
 names-moth-first-male-dataset-8 = Solus
 
-## Other languages
-
-# Hebrew עש "moth"
+## Outras línguas
+# Hebraico
 names-moth-first-male-dataset-9 = Cinzas
 # Persian "fire"
 names-moth-first-male-dataset-10 = Perigo
 # German "emperor" descendant of the Latin caesar
 names-moth-first-male-dataset-11 = Kaiser
-# Latin "king"
+
+# Latim "rei"
 names-moth-first-male-dataset-12 = Rex
-# Sanskrit "darkness" or "dust"
+
+# "Escuridade" ou "pó" em sânscrito
 names-moth-first-male-dataset-13 = Rajas
-# Greek "clothes moth"
+
+# "Mariposa" grega
 names-moth-first-male-dataset-14 = Skoros
 
-## Myth and legend
-
-# Legendary king of the Britons who crafted wings and died in his attempt at flight
+## Mito e lenda
+# Lendário rei dos britânicos que criou asas e morreu na sua tentativa de fuga
 names-moth-first-male-dataset-15 = Folha
 # Father of Icarus
 names-moth-first-male-dataset-16 = Dédalo
@@ -42,11 +46,13 @@ names-moth-first-male-dataset-17 = Érebo
 names-moth-first-male-dataset-18 = Ícaro
 # Hindu figure, similar to Icarus
 names-moth-first-male-dataset-19 = Jatayu
-# Japanese reading of 夸父（こほ）
+
+# Leitura Japonesa de
 names-moth-first-male-dataset-20 = Coho
 # Chinese giant 夸父, similar to Icarus
 names-moth-first-male-dataset-21 = Kuafu
-# More commonly-known fall-from-heaven figure
+
+# Figura mais conhecida da queda do céu
 names-moth-first-male-dataset-22 = Lúcifer
 # Arthurian wizard
 names-moth-first-male-dataset-23 = Merlim
@@ -55,8 +61,7 @@ names-moth-first-male-dataset-24 = Faetonte
 # Rendering of Bladud from the Welsh blaidd "wolf" + iudd "lord"
 names-moth-first-male-dataset-25 = Wolford
 
-## Fun names
-
+## Nomes divertidos
 names-moth-first-male-dataset-26 = Ás
 names-moth-first-male-dataset-27 = Altair
 names-moth-first-male-dataset-28 = Empoeirado

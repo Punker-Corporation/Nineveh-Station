@@ -30,7 +30,8 @@ holopad-window-filter-line-placeholder = Procure um contato
 # Flavor
 holopad-window-flavor-left = ⚠ Não entre enquanto o projetor estiver ativo
 holopad-window-flavor-right = v3.0.9
-# Holograms
+
+# Hologramas
 holopad-hologram-name = holograma { THE($name) }
 # Holopad actions
 holopad-activate-projector-verb = Ativar projetor Holopad

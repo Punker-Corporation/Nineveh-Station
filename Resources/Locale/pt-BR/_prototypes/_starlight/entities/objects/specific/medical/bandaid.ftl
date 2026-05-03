@@ -24,3 +24,8 @@ ent-PatchPackHeat = { ent-PatchPack }
     .desc = { ent-PatchPack.desc }
 ent-BluespacePillPatchCanister = armazenamento de medicamentos no bluespace
     .desc = Um dispositivo tecnologicamente avançado para armazenar medicamentos de pequeno porte, como adesivos e comprimidos. Equipado com dois recipientes de formatos diferentes, unidos por um compartimento central.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-PatchOmni = omni patch
+    .desc = { ent-BasePatch.desc }

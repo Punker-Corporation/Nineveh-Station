@@ -5,7 +5,8 @@ comp-space-heater-ui-status-disabled = Desligado
 comp-space-heater-ui-status-enabled = Sobre
 comp-space-heater-ui-increase-temperature-range = +
 comp-space-heater-ui-decrease-temperature-range = -
-comp-space-heater-mode-Auto = Auto
+
+comp-space-heater-mode-Auto = Automático
 comp-space-heater-mode-Heat = Aquecimento
 comp-space-heater-mode-Cool = Resfriamento
 comp-space-heater-ui-power-consumption = Nível de potência:

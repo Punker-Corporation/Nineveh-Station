@@ -16,3 +16,11 @@ ent-ShellTranquilizer = Tranquilizante calibre 12
     .desc = { ent-BaseShellShotgun.desc }
 ent-ShellShotgunUranium = Tiro de urânio calibre 12
     .desc = { ent-BaseShellShotgun.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BaseShellHitscanShotgun = concha (.50)
+    .desc = { ent-BaseCartridge.desc }
+
+ent-ShellShotgunUraniumSlug = concha (lâmpada de urânio de 50)
+    .desc = { ent-BaseShellHitscanShotgun.desc }

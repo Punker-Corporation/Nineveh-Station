@@ -89,3 +89,41 @@ ent-RandomHumanoidSpawnerERTEngineerAmberEVA = Engenheiro OBR
 ent-RandomHumanoidSpawnerERTEngineerAmberEVAVeteran = Engenheiro OBR
     .suffix = Função OBR, Âmbar, EVA, Veterano
     .desc = { ent-RandomHumanoidSpawnerERTEngineerAmberEVA.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-RandomHumanoidSpawnerERTLeaderAmberLock = Líder da ERT
+    .suffix = ERTROLE, Amber, Lock
+    .desc = { "" }
+
+ent-RandomHumanoidSpawnerERTLeaderRedLock = Líder da ERT
+    .suffix = ERTROLE, Vermelho, Bloqueio
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderAmber.desc }
+
+ent-RandomHumanoidSpawnerERTLeaderGammaLock = { ent-RandomHumanoidSpawnerERTLeaderRed }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTSecurityAmberLock = { ent-RandomHumanoidSpawnerERTSecurityAmber }
+    .suffix = ERTROLE, Amber, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTSecurityGammaLock = { ent-RandomHumanoidSpawnerERTSecurityAmber }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTEngineerAmberLock = { ent-RandomHumanoidSpawnerERTEngineerAmber }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTEngineerGammaLock = { ent-RandomHumanoidSpawnerERTEngineerGamma }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTMedicalAmberLock = { ent-RandomHumanoidSpawnerERTMedicalAmber }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }
+
+ent-RandomHumanoidSpawnerERTMedicalGammaLock = { ent-RandomHumanoidSpawnerERTMedicalGamma }
+    .suffix = ERTROLE, Gamma, Lock
+    .desc = { ent-RandomHumanoidSpawnerERTLeaderRed.desc }

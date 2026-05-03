@@ -27,3 +27,9 @@ ent-GrenadeFrag = granada de fragmentação
     .desc = { ent-BaseGrenade.desc }
 ent-GrenadeEMP = Míssil PEM
     .desc = { ent-BaseGrenade.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-CannonBallAntiMateriel = plasteel cannonball
+    .suffix = Pirata
+    .desc = { ent-BaseCannonBall.desc }

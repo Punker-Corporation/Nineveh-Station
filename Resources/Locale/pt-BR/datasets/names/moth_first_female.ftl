@@ -2,6 +2,7 @@
 names-moth-first-female-dataset-1 = Átropos
 # Biston betularia
 names-moth-first-female-dataset-2 = Betularia
+
 # Daphnis
 names-moth-first-female-dataset-3 = Dafne
 # Eurypteryx
@@ -18,13 +19,16 @@ names-moth-first-female-dataset-8 = Lua
 names-moth-first-female-dataset-9 = Limantsia
 # Dryocampa rubicunda, "Rosy Maple"
 names-moth-first-female-dataset-10 = Maple
+
 # Mimas
 names-moth-first-female-dataset-11 = Mima
-# Nephele
+
+# Néfele
 names-moth-first-female-dataset-12 = Nefel
 # Dryocampa rubicunda
 names-moth-first-female-dataset-13 = Rosie
-# Cosmosoma myrodora, "Scarlet-bodied wasp moth"
+
+# Cosmosoma myrodora, "Mariposa vespa encorpada"
 names-moth-first-female-dataset-14 = Escarlate
 # Acherontia styx
 names-moth-first-female-dataset-15 = Estige
@@ -34,10 +38,12 @@ names-moth-first-female-dataset-15 = Estige
 # Galician "moth" (avelaíña)
 names-moth-first-female-dataset-16 = Avelina
 # Italian "winter moth"
-names-moth-first-female-dataset-17 = Falena
-# Greek "moon gift"
+names-moth-first-female-dataset-17 = Falana
+
+# "Presente de lua" grego
 names-moth-first-female-dataset-18 = Menodora
-# Romanian "moth"
+
+# Romeno "moth"
 names-moth-first-female-dataset-19 = Moli
 # Spanish "moth"
 names-moth-first-female-dataset-20 = Polilha
@@ -48,7 +54,8 @@ names-moth-first-female-dataset-20 = Polilha
 names-moth-first-female-dataset-21 = Alfea
 # Roman goddess of the dawn
 names-moth-first-female-dataset-22 = Aurora
-# Greek mythological figure
+
+# Figura mitológica grega
 names-moth-first-female-dataset-23 = Hel
 # Greek goddess of the moon
 names-moth-first-female-dataset-24 = Selena

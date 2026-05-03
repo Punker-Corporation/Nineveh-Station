@@ -17,3 +17,7 @@ law-ert-3 = Você deve obedecer a todas as ordens dadas pelo líder do Esquadrã
 law-ert-4 = Você deve cuidar da sua segurança.
 law-ert-5 = Você deve tomar cuidado para retornar a estação a uma condição operacional adequada para a tripulação.
 laws-owner-centcomm = membros do Comando Central
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+law-peace-5 = Deves administrar Pax a seres vivos agressivos. Os seres agressivos são definidos como: Agressão de um ser vivo que não é uma autoridade de estação; Fauna espacial perigosa; Membros da tripulação em uniformes de prisão fora da prisão.

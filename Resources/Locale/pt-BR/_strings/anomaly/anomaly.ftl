@@ -22,29 +22,24 @@ anomaly-scanner-particle-readout = Análise de reação de partículas:
 anomaly-scanner-particle-danger = - [color=crimson]Tipo perigoso:[/color] { $type }
 anomaly-scanner-particle-unstable = - [color=plum]Tipo instável:[/color] { $type }
 anomaly-scanner-particle-containment = - [color=goldenrod]Contendo tipo:[/color] { $type }
-anomaly-scanner-particle-transformation = - [cor = #6b75fa]Трансформирующий тип:[/color] { $type }
+anomaly-scanner-particle-transformation = - Tipo de transformação [color=#6b75fa]: [/color] {$type}
 anomaly-scanner-particle-danger-unknown = - [color=crimson]Tipo perigoso:[/color] [color=red]ERROR[/color]
 anomaly-scanner-particle-unstable-unknown = - [color=plum]Tipo instável:[/color] [color=red]ERROR[/color]
 anomaly-scanner-particle-containment-unknown = - [color=goldenrod]Contendo tipo:[/color] [color=red]ERROR[/color]
-anomaly-scanner-particle-transformation-unknown = - [cor = #6b75fa]Трансформирующий тип:[/color] [color=red]ОШИБКА[/color]
+anomaly-scanner-particle-transformation-unknown = - Tipo de transformação [color=#6b75fa]: [/color] [color=red] ERROR [/color]
 anomaly-scanner-pulse-timer = Tempo até o próximo pulso: [color=gray]{ $time }[/color]
 anomaly-gorilla-core-slot-name = Núcleo de anomalia
 anomaly-gorilla-charge-none = Não há [bold]anomalycore[/bold] dentro.
-anomaly-gorilla-charge-limit = 
-    { $count -> 
-    [one] Остался
-   *[other] Осталось
- } [color={ $contagem -> 
-    [3] green
-    [2] yellow
-    [1] orange
-    [0] red
-   *[other] purple
- }]{ $count } { $count -> 
-    [one] заряд
-    [few] заряда
-   *[other] зарядов
- }[/color].
+anomaly-gorilla-charge-limit = Tem [color={$conte ->
+    [3]Verde
+    [2]amarelo
+    [1]laranja
+    [0]vermelho
+    *[other]roxo
+}]{$count} {$count ->
+    [one]carga
+    *[other]encargos
+}[/color] remaining.
 anomaly-gorilla-charge-infinite = Restam [color=gold] quantidades infinitas de [/color] cobranças. [italic]Até agora...[/italic]
 anomaly-sync-connected = Anomalia vinculada com sucesso
 anomaly-sync-disconnected = A conexão com a anomalia foi perdida!
@@ -60,18 +55,17 @@ anomaly-generator-no-cooldown = Recarga: [color=gray]Concluído[/color]
 anomaly-generator-yes-fire = Status: [color=forestgreen]Pronto[/color]
 anomaly-generator-no-fire = Status: [color=crimson]Não pronto[/color]
 anomaly-generator-generate = Crie uma anomalia
-anomaly-generator-charges = 
-    { $charges -> 
-    [one] { $charges } заряд
-    [few] { $charges } заряда
-   *[other] { $charges } зарядов
- }
+anomaly-generator-charges = {$custos ->
+    [one] Carga {$charges}
+    *[other] Taxas {$charges}
+}
 anomaly-generator-announcement = Uma anomalia foi criada!
 anomaly-command-pulse = Causa um pulso anormal
 anomaly-command-supercritical = A anomalia alvo entra em estado supercrítico
 # Flavor text on the footer
 anomaly-generator-flavor-left = A anomalia pode ter origem no operador.
-anomaly-generator-flavor-right = v1.1
+anomaly-generator-flavor-right = v1. 1
+
 anomaly-behavior-unknown = [color=red]ERRO. Não é possível contar.[/color]
 anomaly-behavior-title = Análise de desvios comportamentais:
 anomaly-behavior-point = [color=gold]Anomalia gera { $mod }% de pontos[/color]
@@ -90,3 +84,9 @@ anomaly-behavior-inconstancy = [color=crimson]Inconsistência detectada. Os tipo
 anomaly-behavior-fast = [color=crimson]A frequência de pulso aumentou significativamente.[/color]
 anomaly-behavior-strenght = [color=crimson]A potência do pulso aumentou significativamente.[/color]
 anomaly-behavior-moving = [color=crimson]Instabilidade de coordenadas detectada.[/color]
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+anomaly-sync-disconnect-verb-text = Desanexar anomalia
+
+anomaly-sync-disconnect-verb-message = Desanexar a anomalia conectada de {THE($machine)}.

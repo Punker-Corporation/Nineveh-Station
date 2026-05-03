@@ -26,3 +26,8 @@ ent-VestSecUpgradeHeat = kit (armadura corporal com absorção de calor)
     .desc = Kit de modificação de colete para proteção contra altas temperaturas. Inclui materiais resistentes ao calor e inserções absorventes para reduzir a exposição a lasers e plasma.
 ent-VestSecUpgradeReflective = kit (armadura reflexiva)
     .desc = Kit de atualização de colete. Adiciona um revestimento reflexivo e uma camada de proteção de energia para redirecionar parcialmente os disparos de laser.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-VestSecUpgrade = Kit de Atualização (Segurança)
+    .desc = Um kit de modificação para o colete de segurança padrão. Substitui a fibra protetora barata por um material sintético de alta qualidade, transformando-o em uma versão durável e de alta qualidade. Também adiciona um par de bolsas que não restringem o movimento.

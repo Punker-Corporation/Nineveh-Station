@@ -1,5 +1,5 @@
 ent-ExplosiveCollarBase = colarinho
-    .desc = Um colar de alta tecnologia baseado em um inversor de rotação quântica, usado pelo sindicato para fazer reféns pessoas importantes.
+    .desc = Um colar de coerção com trava eletrônica e carga interna. Foi feito para transformar uma ordem em ameaça física imediata.
 ent-ExplosiveCollarRed = vermelho { ent-ExplosiveCollarBase }
     .desc = { ent-ExplosiveCollarBase.desc }
 ent-ExplosiveCollarWhite = branco { ent-ExplosiveCollarBase }

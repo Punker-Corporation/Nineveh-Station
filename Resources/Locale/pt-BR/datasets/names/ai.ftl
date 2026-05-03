@@ -6,6 +6,7 @@ names-ai-dataset-4 = "790"
 names-ai-dataset-5 = Manipulador Adaptativo
 # Named after the famous soundcard
 names-ai-dataset-6 = Adlib
+
 names-ai-dataset-7 = ALICE
 names-ai-dataset-8 = Computador Mestre União
 names-ai-dataset-9 = Alfa 2
@@ -21,7 +22,8 @@ names-ai-dataset-18 = Android
 names-ai-dataset-19 = Eniel
 # names-ai-dataset-20 = AOL
 names-ai-dataset-21 = Asimov
-# The most influential modem ever, created by the bell system. It still lives on today in certain applications
+
+# O modem mais influente de sempre, criado pelo sistema de sinos. Ainda vive hoje em certas aplicações
 names-ai-dataset-22 = Sino 301
 names-ai-dataset-23 = Bispo
 names-ai-dataset-24 = Blitz
@@ -34,7 +36,8 @@ names-ai-dataset-30 = Chip
 names-ai-dataset-31 = K.R.E.Y.G.
 # Commercial supercomputer from the 70s
 names-ai-dataset-32 = Cray-2
-# If we're going to have AOL we may as well have some of their major competitors
+
+# Se vamos ter AOL podemos também ter alguns dos seus principais concorrentes
 names-ai-dataset-33 = CompSerp
 names-ai-dataset-34 = Computador
 names-ai-dataset-35 = Milash
@@ -44,9 +47,11 @@ names-ai-dataset-38 = Modelo Di
 names-ai-dataset-39 = Modem
 names-ai-dataset-40 = Dorfl
 names-ai-dataset-41 = Dewey
-names-ai-dataset-42 = Emma-2
-# Famous early computer
+names-ai-dataset-42 = Emma-2.
+
+# Famoso computador antigo
 names-ai-dataset-43 = ENIAC
+
 names-ai-dataset-44 = Erasmo
 names-ai-dataset-45 = Absoluto
 names-ai-dataset-46 = Perna-Co-27
@@ -60,10 +65,12 @@ names-ai-dataset-53 = Hadely
 names-ai-dataset-54 = Hélios
 names-ai-dataset-55 = Supermente do HiveBot
 names-ai-dataset-56 = Huey
-# A play on the fad apple spawned of putting "i" infront of your tech products name
+
+# Uma peça sobre a moda de maçã gerada de colocar "i" na frente do seu nome de produtos técnicos
 names-ai-dataset-57 = tudo
 # Hell on earth (web browser)
 names-ai-dataset-58 = I.E. 6
+
 names-ai-dataset-59 = Ícaro
 # If you don't get this one you are too young
 names-ai-dataset-60 = Caramba
@@ -84,11 +91,8 @@ names-ai-dataset-73 = MK ULTRA
 names-ai-dataset-74 = MaMMi
 names-ai-dataset-75 = Ruim3000
 names-ai-dataset-76 = Multivac
-# names-ai-dataset-77 = NCH
-# Обыгрывалась аббревиатура NT (Nanotrasen); после замены на «ФОНД v6.0» шутка утратила актуальность.
 names-ai-dataset-78 = FUNDO v6.0
-names-ai-dataset-79 = Packard Bell
-# names-ai-dataset-80 = PTO
+names-ai-dataset-79 = Campainha Packard
 names-ai-dataset-81 = Projeto Y2K
 names-ai-dataset-82 = Revelação
 names-ai-dataset-83 = RoboDevil
@@ -110,8 +114,7 @@ names-ai-dataset-98 = Turing
 names-ai-dataset-99 = Exatamente
 names-ai-dataset-100 = Ulisses
 names-ai-dataset-101 = V1k1
-names-ai-dataset-102 = ICS-5
-# Изменена нумерация в связи с закоментироваными именами выше
+names-ai-dataset-102 = X-5
 names-ai-dataset-20 = K.S.A.N.A.
 names-ai-dataset-37 = Xerxes
 names-ai-dataset-63 = ZET-1

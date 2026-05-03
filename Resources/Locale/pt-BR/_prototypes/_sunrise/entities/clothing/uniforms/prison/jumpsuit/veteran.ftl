@@ -15,3 +15,8 @@ ent-ClothingUniformJumpsuitPrisonTraineeVeteran = macacão de estagiário de pri
 
 ent-ClothingUniformJumpsuitPrisonWorkerVeteran = macacão de faz-tudo de prisão veterano
     .desc = Um uniforme de trabalho reverenciado para mestres artesãos que passaram décadas aperfeiçoando seu ofício nas profundezas, suas mãos calejadas e tecido desgastado contam histórias de incontáveis ​​mudanças nas impiedosas minas.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformJumpsuitPrisonVeteranBase = uniforme de veterano da prisão
+    .desc = Um uniforme distinto usado por experientes funcionários da prisão que provaram sua dedicação através de anos de serviço.

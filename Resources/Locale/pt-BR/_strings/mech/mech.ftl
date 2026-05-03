@@ -13,3 +13,7 @@ mech-slot-display = Vagas disponíveis: { $amount }
 mech-no-enter = Você não pode pilotá-lo.
 mech-no-access = Você não tem acesso ao piloto.
 mech-eject-pilot-alert = { $user } tira o piloto de { $item }!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+mech-construction-guide-string = Todas as peças de mech devem ser ligadas ao arnês.

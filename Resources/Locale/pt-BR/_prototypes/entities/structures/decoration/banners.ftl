@@ -26,3 +26,23 @@ ent-BannerGreen = bandeira verde
     .desc = A bandeira é verde. Grama, folhas, guacamole.
 ent-BannerUSSP = Bandeira da URSS
     .desc = Bandeira do USSP. Preparem-se para a batalha, CAMARADAS!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BannerWallHammer = bandeira de parede revolucionária
+    .desc = Já se foram os dias da opressão e do tratamento injusto dos empreiteiros! URAA!
+
+ent-BannerWallSoviet = Bandeira de parede USSP
+    .desc = Banner dos Planetas Socialistas Soviéticos Unidos. Desliga. Obedece. Tente não saudar por reflexo.
+
+ent-BannerSovietRegular = Estandarte do USSP
+    .desc = Banner dos Planetas Socialistas Soviéticos Unidos. Apresenta o glorioso martelo e chave inglesa. Símbolos da indústria, progresso, fraternidade e consertar o que você quebrou.
+
+ent-BannerSovietHammer = bandeira revolucionária
+    .desc = Já se foram os dias da opressão e do tratamento injusto dos empreiteiros! URAA!
+
+ent-BannerSNKVD = banner SNKVD soviético
+    .desc = Um passo em falso e és um camarada morto. De vez.
+
+ent-BannerSGKB = banner soviet SKB
+    .desc = Aplicação dos direitos dos trabalhadores. Sim, fazemos isso nas vossas estações. De nada.

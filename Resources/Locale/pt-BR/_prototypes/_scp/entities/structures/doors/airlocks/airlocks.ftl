@@ -72,3 +72,49 @@ ent-ScpAirlockHydroponicsGlass = { ent-AirlockGlass }
 ent-ScpAirlockMaintGlass = { ent-AirlockGlass }
     .suffix = { id-card-access-level-maintenance }
     .desc = { ent-AirlockGlass.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpAirlockLogotype = { ent-ScpAirlock }
+    .suffix = Tipo de logótipo
+    .desc = Com um grande logotipo SCP e um scanner de cartão-chave
+
+ent-ScpAirlockAtmospherics = { ent-ScpAirlockEngineering }
+    .suffix = Atmosféricos SCP
+    .desc = { ent-ScpAirlockEngineering.desc }
+
+ent-ScpAirlockCargo = { ent-ScpAirlock }
+    .suffix = Carga SCP
+    .desc = { ent-ScpAirlock.desc }
+
+ent-ScpAirlockChemistry = { ent-ScpAirlockMedical }
+    .suffix = Química SCP
+    .desc = { ent-ScpAirlockMedical.desc }
+
+ent-ScpAirlockCommand = { ent-ScpAirlock }
+    .suffix = Comando SCP
+    .desc = { ent-ScpAirlock.desc }
+
+ent-ScpAirlockCentralCommand = { ent-ScpAirlockCommand }
+    .suffix = Comando Central SCP
+    .desc = { ent-ScpAirlockCommand.desc }
+
+ent-ScpAirlockAtmosphericsGlass = { ent-ScpAirlockEngineeringGlass }
+    .suffix = Atmosféricos SCP
+    .desc = { ent-ScpAirlockEngineeringGlass.desc }
+
+ent-ScpAirlockCargoGlass = { ent-ScpAirlockGlass }
+    .suffix = Carga SCP
+    .desc = { ent-ScpAirlockGlass.desc }
+
+ent-ScpAirlockChemistryGlass = { ent-ScpAirlockMedicalGlass }
+    .suffix = Química SCP
+    .desc = { ent-ScpAirlockMedicalGlass.desc }
+
+ent-ScpAirlockCommandGlass = { ent-ScpAirlockGlass }
+    .suffix = Comando SCP
+    .desc = { ent-ScpAirlockGlass.desc }
+
+ent-ScpAirlockCentralCommandGlass = { ent-ScpAirlockCommandGlass }
+    .suffix = Comando Central SCP
+    .desc = { ent-ScpAirlockCommandGlass.desc }

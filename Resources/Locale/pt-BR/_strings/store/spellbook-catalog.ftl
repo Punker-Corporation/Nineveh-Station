@@ -1,4 +1,4 @@
-# Заклинания
+# Feitiços
 spellbook-fireball-name = Bola de fogo
 spellbook-fireball-desc = Que a maior parte da tripulação exploda de raiva ao ver a bola de fogo vindo em sua direção!
 spellbook-blink-name = Quicar
@@ -61,3 +61,9 @@ spellbook-upgrade-fireball-name = Atualização da bola de fogo
 spellbook-upgrade-fireball-description = Permite que você atualize sua bola de fogo para o nível máximo 3!
 spellbook-upgrade-jaunt-name = Melhoria da Caminhada Etérea
 spellbook-upgrade-jaunt-description = Permite que você atualize seu Ethereal Walk para o nível máximo 3!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+spellbook-knock-name = Bata.
+
+spellbook-knock-desc = Abre todas as câmaras de ar, caixas e armários nas proximidades.

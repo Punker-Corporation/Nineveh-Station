@@ -34,3 +34,8 @@ ent-WeaponRifleSKM28Syndi = SKM-28
     .desc = Modificação de atirador do padrão SKM-24. Possui cano pesado estendido, enchimento redesenhado e mira óptica instalada. Calibre .308. Boa escolha, nuke.
 ent-WeaponRifleSKM28Nano = SKM-28
     .desc = Modificação de atirador do padrão SKM-24. Possui cano pesado estendido, enchimento redesenhado e mira óptica instalada. Calibre .308. O dinheiro não tem cheiro.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponRifleSKM24ScrapEmpty = { ent-WeaponRifleSKM24Scrap }
+    .desc = { ent-WeaponRifleSKM24Scrap.desc }

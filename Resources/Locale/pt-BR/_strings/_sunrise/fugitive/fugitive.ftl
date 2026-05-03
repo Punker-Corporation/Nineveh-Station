@@ -11,6 +11,6 @@ fugitive-report-sex-f = GÊNERO: F
 fugitive-report-sex-n = GÊNERO: N/A
 fugitive-report-weight = PESO: { $weight } kg
 fugitive-report-age = IDADE: { $age }
-fugitive-report-last-line = Essa pessoa é procurada em todo o setor ; предпочтительно живым.
+fugitive-report-last-line = Essa pessoa é procurada em todo o setor; de preferência viva.
 fugitive-round-end-name = fugitivo
 fugitive-role-greeting = Você é um prisioneiro que escapou da prisão - sua tarefa é escapar em um ônibus de evacuação.

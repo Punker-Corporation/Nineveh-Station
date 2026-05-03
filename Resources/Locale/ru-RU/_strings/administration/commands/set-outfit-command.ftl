@@ -1,4 +1,4 @@
-set-outfit-command-description = Устанавливает наряд указанной сущности. Сущность должна иметь { $requiredComponent }
-set-outfit-command-help-text = Использование: { $command } <entityUid> | { $command } <entityUid> <outfitId>
-set-outfit-command-is-not-player-error = Это не работает из консоли сервера. Вы должны передать также идентификатор наряда.
-set-outfit-command-invalid-outfit-id-error = Неверный идентификатор наряда
+cmd-setoutfit-desc = Устанавливает наряд указанного лица. Предприятие должно иметь  The0 The  The1 The
+cmd-setoutfit-help = Использование: setoutfit <entityUid> | setoutfit <entityUid> <outfitId>
+cmd-setoutfit-is-not-player-error = Эта команда требует, чтобы оба аргумента работали с серверной консоли.
+cmd-setoutfit-invalid-outfit-id-error = Недействительный наряд.

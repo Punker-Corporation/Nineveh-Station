@@ -30,3 +30,14 @@ ent-ClothingHeadsetFreelanceNoKey = { ent-ClothingHeadsetFreelance }
 ent-ClothingHeadsetAltSyndicateNoKey = { ent-ClothingHeadsetAltSyndicate }
     .suffix = Sem chaves
     .desc = { ent-ClothingHeadsetAltSyndicate.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingHeadsetAltDeathSquad = DS de cabeça cheia
+    .desc = Um fone de ouvido pertencente a uma unidade desconhecida, apenas olhando para ele congela o sangue em suas veias, e seu coração congela com medo.
+
+ent-ClothingHeadsetAltERT = ERT de cabeça cheia
+    .desc = O headset, projetado para caças ERT, permite que você ouça claramente as ordens de seus companheiros sem ser distraído da luta.
+
+ent-ClothingHeadsetAltSpecOpsOfficer = SOO de cabeça cheia
+    .desc = O fone de ouvido para um oficial de operações especiais é projetado para gerenciar e coordenar operações especiais no setor, é melhor para você não saber do que eles estão falando neste walkie-talkie.

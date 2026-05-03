@@ -61,3 +61,13 @@ ent-WeaponEnergyCrossbowBiocode = { ent-WeaponEnergyCrossbow }
 ent-WeaponSubMachineGunC40rBiocode = { ent-WeaponSubMachineGunC40r }
     .desc = { ent-WeaponSubMachineGunC40r.desc }
     .suffix = BIOCÓDIGO
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-WeaponLightMachineGunL6MaxBiocode = { ent-WeaponLightMachineGunL6Max }
+    .suffix = BIOCODE
+    .desc = { ent-WeaponLightMachineGunL6Max.desc }
+
+ent-WeaponRifleType88AMRBiocode = { ent-WeaponRifleType88AMR }
+    .suffix = BIOCODE
+    .desc = { ent-WeaponRifleType88AMR.desc }

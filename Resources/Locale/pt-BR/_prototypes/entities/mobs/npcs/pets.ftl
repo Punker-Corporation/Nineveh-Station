@@ -53,4 +53,4 @@ ent-MobMonkeyPunpun = Trocadilho trocadilho
 ent-MobCrabAtmos = Trópico
     .desc = Nobre e inabalável defensor da Atmosia. Viva!
 ent-MobPollyParrot = Polly o papagaio
-    .desc = Especialista em teoria do cracker quântico
+    .desc = Um especialista improvável em criptografia de campo e sabotagem de terminais.

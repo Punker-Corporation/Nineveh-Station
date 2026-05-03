@@ -32,6 +32,6 @@ sponsor-tiers-gui-open-ghost-roles-description = Permite que você ignore os req
 sponsor-tiers-gui-allowed-loadouts = Carregamentos exclusivos
 sponsor-tiers-gui-allowed-loadouts-description = Fornece acesso a itens especificados no carregamento.
 sponsor-tiers-gui-tts-voices = Vozes exclusivas
-sponsor-tiers-gui-tts-voices-description = 
-    Открывает возможность использовать данные голоса для ваших персонажей.
-    Вы можете нажать на любой голос чтобы услышать как он звучит.
+sponsor-tiers-gui-tts-voices-description =
+    Abre a capacidade de usar essas vozes para seus personagens.
+    Você pode clicar em qualquer voz para ouvir o que parece.

@@ -10,11 +10,6 @@ war-declarator-conditions-unknown = Desconhecido
 war-declarator-boost-possible = É possível declarar guerra
 war-declarator-boost-impossible = Impossível declarar guerra
 war-declarator-boost-declared = A guerra foi declarada! O serviço de transporte pode ser desativado por...
-war-declarator-boost-timer = 
-    Оставшееся время: { $time } { $time -> 
-    [one] минута
-    [few] минуты
-   *[other] минут
- }.
+war-declarator-boost-timer = Tempo restante: {$time} minutos.
 war-declarator-default-message = O Syndicate Frontier Force anuncia sua intenção de destruir a estação com um dispositivo nuclear e insta a tripulação a fazer uma tentativa débil de detê-los.
 war-declarator-message-placeholder = Insira o texto do anúncio...

@@ -13,16 +13,7 @@ shell-must-be-attached-to-entity = Você deve estar vinculado a uma entidade par
 ## Arguments
 
 shell-need-exactly-one-argument = Exatamente um argumento é necessário.
-shell-wrong-arguments-number-need-specific = 
-    Нужно { $properAmount } { $properAmount -> 
-    [one] аргумент
-    [few] аргумента
-   *[other] аргументов
- }, было { $currentAmount } { $currentAmount -> 
-    [one] аргумент
-    [few] аргумента
-   *[other] аргументов
- }.
+shell-wrong-arguments-number-need-specific = Precisando de argumentos {$properAmount}, houve {$currentAmount}.
 shell-argument-must-be-number = O argumento deve ser um número.
 shell-argument-must-be-boolean = O argumento deve ser booleano.
 shell-wrong-arguments-number = Número inválido de argumentos.
@@ -53,5 +44,23 @@ shell-argument-station-id-invalid = O argumento { $index } deve ser um ID de est
 shell-argument-map-id-invalid = O argumento { $index } deve ser um ID de mapa válido!
 shell-argument-number-invalid = O argumento { $index } deve ser um número válido!
 # Hints
-shell-argument-username-hint = <username>
+shell-argument-username-hint = <nome de utilizador>
 shell-argument-username-optional-hint = [username]
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+shell-can-only-run-from-pre-round-lobby = Você só pode executar este comando enquanto o jogo está no lobby pré-round.
+
+shell-can-only-run-while-round-is-active = Você só pode executar este comando enquanto o jogo está em uma rodada.
+
+shell-must-have-body = Deve ter um corpo para comandar este comando.
+
+## Argumentos
+
+
+shell-need-exactly-zero-arguments = Este comando toma zero argumentos.
+
+
+shell-missing-required-permission = Você precisa do {$perm} para este comando!
+
+shell-entity-target-lacks-component = A entidade alvo não tem componente {INDEFINITE($componentName)} {$componentName}

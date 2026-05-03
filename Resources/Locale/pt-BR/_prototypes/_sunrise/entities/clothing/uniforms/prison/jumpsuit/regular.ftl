@@ -15,3 +15,8 @@ ent-ClothingUniformJumpsuitPrisonWorker = macacão de faz-tudo da prisão
 
 ent-ClothingUniformJumpsuitPrisonTrainee = macacão de estagiário de prisão
     .desc = Um uniforme recém-lançado com linhas limpas e desgaste mínimo, representando os primeiros passos em um mundo onde a autoridade deve ser conquistada através da vigilância e do aço.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingUniformJumpsuitPrisonRegularBase = uniforme regular da prisão
+    .desc = Um uniforme padrão usado pelo pessoal da prisão nas suas tarefas diárias.

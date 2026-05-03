@@ -41,3 +41,131 @@ command-description-mind-get = Extrai a mente da entidade, se houver.
 command-description-mind-control = Assume o controle de uma entidade com um determinado jogador.
 command-description-addaccesslog = Adiciona um registro de acesso a esta entidade. Observe que isso ignora o limite padrão e pausa a verificação do log.
 command-description-stationevent-simulate = Simula o número N de rodadas em que os eventos ocorrerão e gera a frequência de cada evento depois.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+command-description-bank-accounts =
+    Devolve todas as contas numa estação.
+
+command-description-bank-account =
+    Devolve uma dada conta bancária de uma estação.
+
+command-description-bank-adjust =
+    Ajusta o dinheiro para a conta bancária dada.
+
+command-description-bank-set =
+    Define o dinheiro da conta bancária dada.
+
+command-description-bank-amount =
+    Devolve o dinheiro para a conta bancária dada.
+
+command-description-clone-humanoidappearance =
+    Clona o aspecto humanóide da entidade fornecida a todas as entidades de entrada.
+
+command-description-clone-comps =
+    Clona todos os componentes da entidade fornecida para todas as entidades de entrada. Só funciona para componentes suportados.
+
+command-description-clone-equipment =
+    Clona o equipamento da entidade fornecida a todas as entidades de entrada. Utiliza protótipos de base, o que significa que as mudanças no equipamento não persistirão nas versões clonadas.
+
+command-description-clone-implants =
+    Clona os implantes da entidade fornecida para todas as entidades de entrada. Utiliza protótipos de base, o que significa que as alterações nos implantes não persistirão nas versões clonadas.
+
+command-description-clone-storage =
+    Clona o armazenamento da entidade fornecida para todas as entidades de entrada. Utiliza protótipos de base, o que significa que as alterações no conteúdo não persistirão nas versões clonadas.
+
+command-description-stationevent-lsprobtheoretical =
+    Dado um protótipo BasicStationEventScheduler, contagem de jogadores, e tempo de rodada, lista a probabilidade de diferentes eventos de estação que ocorrem com base no número especificado de jogadores e tempo de rodada.
+
+command-description-xenoartifact-list =
+    Listar todos os EntityUids de artefatos gerados.
+
+command-description-xenoartifact-printMatrix =
+    Imprime matriz que exibe todas as bordas entre nós.
+
+command-description-xenoartifact-totalResearch =
+    Obtém todos os pontos de pesquisa que podem ser extraídos do artefato atualmente.
+
+command-description-xenoartifact-averageResearch =
+    Calcula a quantidade de pontos de pesquisa que o artefato xeno gerado médio irá produzir quando estiver totalmente ativado.
+
+command-description-xenoartifact-unlockAllNodes =
+    Desbloqueia todos os nós do artefacto.
+
+command-description-jobboard-completeJob =
+    Completa um trabalho de salvamento para a estação.
+
+command-description-scale-set =
+    Define o tamanho da imagem de uma entidade para uma determinada escala (sem alterar a sua configuração).
+
+command-description-scale-get =
+    Obtenha a escala de imagens de uma entidade conforme definida pelo ScaleVisualsComponent. Não inclui quaisquer alterações feitas diretamente no SpriteComponent.
+
+command-description-scale-multiply =
+    Multiplique o tamanho da imagem de uma entidade com um determinado fator (sem alterar seu dispositivo).
+
+command-description-scale-multiplyvector =
+    Multiplique o tamanho da imagem de uma entidade com um determinado vetor 2d (sem alterar sua configuração).
+
+command-description-scale-multiplywithfixture =
+    Multiplique o tamanho da imagem de uma entidade com um determinado fator (incluindo seu dispositivo).
+
+command-description-storage-fasttake =
+    Toma o item mais recentemente colocado da entidade de armazenamento piped.
+
+command-description-storage-insert =
+    Insere a entidade canalizada na entidade de armazenamento indicada.
+
+command-description-inventory-getflags =
+    Obtém todas as entidades em slots na entidade de inventário piped correspondente a uma determinada bandeira de slot.
+
+command-description-inventory-getnamed =
+    Obtém todas as entidades em slots na entidade de inventário piped correspondente a um determinado nome de slot.
+
+command-description-inventory-forceput =
+    Coloca uma determinada entidade na primeira entidade que tem um slot correspondente à bandeira indicada, excluindo qualquer item anteriormente nesse slot.
+
+command-description-inventory-forcespawn =
+    Espalha um dado protótipo na primeira entidade que tem um slot correspondente à bandeira indicada, excluindo qualquer item anteriormente nesse slot.
+
+command-description-inventory-put =
+    Coloca uma determinada entidade na primeira entidade que tem um slot correspondente à bandeira indicada, sem igualar qualquer item anteriormente nesse slot.
+
+command-description-inventory-spawn =
+    Espalha um dado protótipo na primeira entidade que tem uma fenda correspondente à bandeira indicada, sem igualar qualquer item anteriormente nesse slot.
+
+command-description-inventory-tryput =
+    Tenta colocar uma determinada entidade na primeira entidade que tem um slot correspondente à bandeira indicada, falhando se algum item estiver presente nesse slot.
+
+command-description-inventory-tryspawn =
+    Tenta gerar um determinado protótipo na primeira entidade que tem um slot correspondente à bandeira indicada, falhando se algum item estiver presente nesse slot.
+
+command-description-inventory-ensure =
+    Coloca uma determinada entidade na primeira entidade que tem um slot correspondente à bandeira indicada se nenhuma existir, passando pelo UID do que quer que esteja no slot até o final.
+
+command-description-inventory-ensurespawn =
+    Espalha um determinado protótipo na primeira entidade que tem um slot correspondente à bandeira indicada se não existir nenhum, passando pelo UID do que quer que esteja no slot até o final.
+
+command-description-dynamicrule-list =
+    Lista todas as regras dinâmicas atualmente ativas, geralmente esta é apenas uma.
+
+command-description-dynamicrule-get =
+    Obtém a regra dinâmica activa de momento.
+
+command-description-dynamicrule-budget =
+    Obtém o orçamento atual da(s) regra(s) dinâmica(s).
+
+command-description-dynamicrule-adjust =
+    Ajusta o orçamento da(s) regra(s) dinâmica(s) canalizada(s) pela quantidade especificada.
+
+command-description-dynamicrule-set =
+    Define o orçamento da(s) regra(s) dinâmica(s) canalizada(s) para o montante especificado.
+
+command-description-dynamicrule-dryrun =
+    Retorna uma lista de regras que poderiam ser ativadas se a regra fosse executada neste momento com todo o contexto atual. Esta não é uma lista completa de todas as regras que poderiam ser executadas, apenas uma amostra das atuais válidas.
+
+command-description-dynamicrule-executenow =
+    Executa a regra dinâmica piped como se tivesse atingido seu tempo de atualização regular.
+
+command-description-dynamicrule-rules =
+    Obtém uma lista de todas as regras geradas pela regra dinâmica piped.

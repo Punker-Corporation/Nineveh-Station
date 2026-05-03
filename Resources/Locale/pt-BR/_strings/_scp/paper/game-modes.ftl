@@ -1,68 +1,46 @@
 document-difficulty-mode-summary = relatório de segurança automático
-document-meta-garbage-summary = conclusão da comissão sanitária
 paper-neutralized-mode-info =
     ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: NOMINAL[/bold]
 
-    De acordo com a avaliação automatizada de riscos, o nível atual de atividade de objetos anômalos no setor é considerado insignificante. Todas as anomalias anteriormente contidas foram neutralizadas, realocadas ou não representam ameaça à segurança.
-    ​[bullet] O regime de trabalho do pessoal é o padrão.
-    ​[bullet] O pessoal é instruído a manter o nível padrão de alerta.
-    ​[bullet] A realização de operações técnicas, de pessoal e científicas planejadas é permitida sem restrições.
+    De acordo com uma avaliação de risco automatizada, o atual nível de atividade anômala do objeto na área é considerado insignificante. Todas as anomalias anteriormente contidas foram neutralizadas, deslocadas ou não representam ameaça de segurança.
+    ​[bullet] Modo operacional do pessoal – normal.
+    ​[bullet] Os funcionários são instruídos a manter um nível padrão de vigilância.
+    ​[bullet] Operações técnicas, de pessoal e científicas programadas são permitidas sem restrições.
 
-    ​[italic]Instrução especial:[/italic] devido à ausência de ameaças atuais, a administração regional pode iniciar testes em larga escala, verificações de protocolos e treinamentos não planejados.
+    ​[italic]Nota especial:[/italic] Devido à ausência de ameaças atuais, a administração regional pode iniciar testes em larga escala, controles de protocolo e exercícios não programados.
 paper-safe-mode-info =
     ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: CONTROLADO[/bold]
 
-    O setor contém uma série de objetos anômalos classificados como Seguros. Um ou mais indivíduos controlados de alto risco podem estar sob observação.
-    ​[bullet] O pessoal do complexo tem o direito de livre circulação pelo setor, com exceção das câmaras de contenção de objetos SCP.
-    ​[bullet] Presença registrada de: objetos de classe Seguro e instâncias controladas do SCP-035 e/ou um de classe "Euclídeo".
-    ​[bullet] Ameaças ao pessoal são consideradas improváveis, desde que os procedimentos padrão sejam seguidos.
+    A área contém uma série de objetos anômalos classificados como seguros. Um ou mais indivíduos de alto risco controlados podem estar sob observação.
+    ​[bullet] O pessoal da instalação é livre de circular pela área, com exceção das câmaras de contenção de objetos SCP.
+    ​[bullet] Presença detectada: objetos seguros e instâncias controladas de SCP-035 e/ou um objeto de classe Euclid.
+    ​[bullet] As ameaças ao pessoal são consideradas improváveis se forem seguidos procedimentos normais.
 
-    ​[italic]Lembrete:[/italic] desvios dos procedimentos aprovados para o manuseio de objetos podem levar a incidentes localizados.
+    ​[italic]Lembrete:[/italic] O desvio de procedimentos de manipulação de objetos aprovados pode levar a incidentes localizados.
 paper-euclid-mode-info =
     ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: ELEVADO[/bold]
 
-    O setor contém indivíduos anômalos ativos, incluindo instâncias tanto previsíveis quanto instáveis.
-    ​[bullet] Recomenda-se que o Serviço de Segurança reforce o controle sobre quaisquer interações com objetos anômalos.
-    ​[bullet] Presença registrada de: objetos de classe "Seguro", um "Euclídeo" e, possivelmente, uma instância de classe "Keter".
-    ​[bullet] O controle da situação exige atenção redobrada.
+    A área contém indivíduos anômalos ativos, incluindo casos previsíveis e instáveis.
+    ​[bullet] A segurança é aconselhada a controlar rigorosamente quaisquer interações com objetos anômalos.
+    ​[bullet] Presença detectada: Objetos de classe segura, um objeto de classe Euclid e, possivelmente, uma instância de classe Keter.
+    ​[bullet] O controle da situação requer maior atenção.
 
-    ​[italic]Instrução especial:[/italic] o pessoal é instruído a agir dentro dos procedimentos aprovados, evitar contato não autorizado com anomalias e relatar imediatamente quaisquer violações das condições de contenção.
+    ​[italic]Nota especial:[/italic] O pessoal é instruído a agir no âmbito de procedimentos aprovados, evitar o contacto não autorizado com anomalias e comunicar imediatamente quaisquer violações das condições de confinamento.
 paper-keter-mode-info =
-    ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: CRÍTICO[/bold]
+    ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: CRITÉRIO[/bold]
 
-    O setor entrou em regime de contenção ampliada. Um ou mais indivíduos anômalos representam uma ameaça séria e imediata aos protocolos de segurança existentes.
-    ​[bullet] O Serviço de Segurança é obrigado a estabelecer regime de plantão junto às câmaras de contenção de objetos SCP ativos.
-    ​[bullet] Confirmada a presença de: pelo menos um objeto de classe «Keter», bem como possíveis instâncias das classes «Euclídeo» e «Seguro».
-    ​[bullet] O risco potencial de perda de controle sobre os objetos é alto.
+    A área passou para modo de contenção estendida. Um ou mais indivíduos anômalos representam uma ameaça grave e imediata aos protocolos de segurança existentes.
+    ​[bullet] É necessária segurança para estabelecer um modo de serviço próximo das câmaras de contenção de objetos SCP ativos.
+    ​[bullet] Presença confirmada: pelo menos um objeto da classe Keter, bem como possíveis instâncias de classes Euclides e Seguros.
+    ​[bullet] O risco potencial de perder o controle sobre objetos é alto.
 
-    ​[italic]Atenção:[/italic] ao receber o sinal de violação das condições de contenção — dirija-se imediatamente à zona de evacuação mais próxima e aguarde novas instruções do comando regional.
+    ​[italic]Atenção:[/italic] Ao receber um sinal de violação das condições de contenção, dirija-se imediatamente para a zona de evacuação mais próxima e aguarde instruções adicionais do comando regional.
 paper-thaumiel-mode-info =
-    ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: INDETERMINADO[/bold]
+    ​[bold]AVALIAÇÃO DO NÍVEL DE AMEAÇA: SEM DETERMINAÇÃO[/bold]
 
-    O setor contém simultaneamente várias anomalias classificadas como objetos de alto controle. Sua contenção simultânea acarreta consequências imprevisíveis.
-    ​[bullet] O Serviço de Segurança é obrigado a estabelecer controle total sobre a interação com objetos SCP. O número de interações simultâneas não deve exceder 1 vez a cada 20 minutos.
-    ​[bullet] Confirmada a presença de: múltiplos objetos das classes «Keter», «Euclídeo» e «Seguro».
-    ​[bullet] A situação é instável, o controle é exercido sob o selo de «Ultrassecreto».
+    A área contém várias anomalias simultaneamente, classificadas como objetos de maior controle. A sua contenção simultânea está associada a consequências imprevisíveis.
+    ​[bullet] A segurança é necessária para estabelecer o controle total sobre a interação com objetos SCP. O número de interações simultâneas não deve exceder mais de uma vez a cada 20 minutos.
+    ​[bullet] Presença confirmada: múltiplos objetos das classes Keter, Euclid e Safe.
+    ​[bullet] A situação é instável, o controle é realizado sob a classificação "Top Secret".
 
-    ​[italic]Instrução especial:[/italic] a maior parte das operações é realizada sob condições de acesso limitado. O pessoal que não possuir o nível de acesso necessário está categoricamente proibido de intervir.
-paper-meta-garbage-successful-info =
-    ​[bold]CONCLUSÃO DA COMISSÃO SANITÁRIA[/bold]
-
-    De acordo com os resultados da inspeção não planejada, foi estabelecido:
-    ​[bullet] Resíduos domésticos (copos de papel, restos de comida, materiais de embalagem) foram encontrados no território do complexo.
-    ​[bullet] Poças de fluido técnico e rastros não limpos foram registrados nas instalações.
-    ​[bullet] Iluminação: parte das lâmpadas está quebrada, fragmentos de vidro não foram removidos.
-    ​[bullet] O nível de manutenção sanitária foi considerado insatisfatório.
-
-    ​[italic]Причина:[/italic] ресурсная группа фонда была полностью задействована в ликвидации последствий инцидента ██-███, уборка не произведена.
-
-  ​[italic]Causa:[/italic] o grupo de recursos da fundação foi totalmente mobilizado na liquidação das consequências do incidente ██-███, a limpeza não foi realizada.
-paper-meta-garbage-failed-info =
-    ​[bold]CONCLUSÃO DA COMISSÃO SANITÁRIA[/bold]
-
-    A inspeção das instalações foi concluída. Não há observações:
-    ​[bullet] Pisos secos, nenhum rastro de contaminação detectado.
-    ​[bullet] A iluminação está funcionando em sua totalidade.
-    ​[bullet] Resíduos domésticos e lixo não foram encontrados.
-
-    ​[italic]Conclusão:[/italic] o estado sanitário do complexo foi considerado satisfatório, não sendo necessária intervenção.
+    ​[italic]Nota especial:[/italic] A maioria das operações são realizadas em condições de acesso limitadas. O pessoal que não tem o nível de acesso exigido é estritamente proibido de interferir.

@@ -10,9 +10,9 @@ wires-component-ui-on-receive-message-cannot-mend-uncut-wire = Você não pode c
 
 wires-menu-name-label = Fios
 wires-menu-dead-beef-text = CARNE MORTA
-wires-menu-help-popup = 
-    Кликните на золотые контакты, держа в руках мультитул, чтобы подать импульс на провод.
-    Кликните на провода, держа в руках кусачки, чтобы разрезать/починить их.
-    
-    Огни вверху показывают состояние машины, и возня с проводами, вероятно, что-то с ними сделает.
-    Схемы проводов различаются каждый раунд, но одинаковы между машинами одного типа.
+wires-menu-help-popup =
+    Clique nos contatos em ouro com uma multitool na mão para pulsar o fio.
+    Clique nos fios com um par de cortadores na mão para cortá-los /mend.
+
+    As luzes no topo mostram o estado da máquina, mexer com fios provavelmente fará coisas com eles.
+    Os layouts de fios são diferentes cada rodada, mas consistentes entre máquinas do mesmo tipo.

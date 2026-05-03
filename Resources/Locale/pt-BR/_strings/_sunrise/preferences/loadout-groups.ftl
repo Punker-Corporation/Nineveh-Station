@@ -116,3 +116,43 @@ loadout-group-prisoner-loot = O esconderijo de Zek
 loadout-group-prison-security-loot = Privilégios de segurança
 
 loadout-group-prison-jumpsuit = Uniforme de trabalho
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+loadout-group-adj-bra = { loadout-group-bra }
+
+loadout-group-adj-pants = { loadout-group-pants }
+
+loadout-group-blueshield-bra = { loadout-group-bra }
+
+loadout-group-blueshield-pants = { loadout-group-pants }
+
+loadout-group-sunrise-injectors = { loadout-group-trinkets }
+
+loadout-group-captain-bra = { loadout-group-bra }
+
+loadout-group-captain-pants = { loadout-group-pants }
+
+loadout-group-hop-bra = { loadout-group-bra }
+
+loadout-group-hop-pants = { loadout-group-pants }
+
+loadout-group-quartermaster-bra = { loadout-group-bra }
+
+loadout-group-quartermaster-pants = { loadout-group-pants }
+
+loadout-group-chief-medical-officer-bra = { loadout-group-bra }
+
+loadout-group-chief-medical-officer-pants = { loadout-group-pants }
+
+loadout-group-chief-engineer-bra = { loadout-group-bra }
+
+loadout-group-chief-engineer-pants = { loadout-group-pants }
+
+loadout-group-research-director-bra = { loadout-group-bra }
+
+loadout-group-research-director-pants = { loadout-group-pants }
+
+loadout-group-head-of-security-bra = { loadout-group-bra }
+
+loadout-group-head-of-security-pants = { loadout-group-pants }

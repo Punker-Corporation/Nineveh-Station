@@ -46,3 +46,80 @@ ent-ClothingPantsWomanChristmas = Calcinha feminina de natal
     .desc = Calcinhas de Natal para mulheres.
 ent-ClothingPantsWomanStrapless = calcinha feminina sem alças
     .desc = Cuecas sem alças para mulheres.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingPantsWomanAdjutant = Fio dental feminino "Adjutante"
+    .desc = Uma tanga em cores ajudantes.
+
+ent-ClothingPantsWomanCMO = fio dental feminino "CMO"
+    .desc = Uma tanga em cores de oficial médico chefe.
+
+ent-ClothingPantsWomanCaptain = "Capitão" da tanga feminina
+    .desc = Uma tanga em cores de capitão.
+
+ent-ClothingPantsWomanCaptainBlack = "Capitão" da tanga negra feminina
+    .desc = Uma tanga preta para o capitão.
+
+ent-ClothingPantsWomanCaptainWhite = fio dental branco feminino "Capitão"
+    .desc = Uma tanga branca para o capitão.
+
+ent-ClothingPantsWomanHeadOfPersonnel = Fio dental feminino "Cabeça do Pessoal"
+    .desc = Uma tanga em cores de pessoal.
+
+ent-ClothingPantsWomanHeadOfSecurity = "Cabeça de Segurança" das mulheres
+    .desc = Uma tanga em cores de segurança.
+
+ent-ClothingPantsWomanQuartermaster = Fio dental feminino "Quartermaster"
+    .desc = Uma tanga em cores de quartermaster.
+
+ent-ClothingPantsWomanResearchDirector = "Diretor de Investigação" de mulheres
+    .desc = Uma tanga em cores de realizador de pesquisa.
+
+ent-ClothingPantsWomanBlueshield = fio dental feminino "Blueshield"
+    .desc = Um fio dental em cores de azul.
+
+ent-ClothingPantsWomanChiefEngineer = Fio dental feminino "Engenheiro Chefe"
+    .desc = Uma tanga em cores de engenheiro-chefe.
+
+ent-ClothingPantsWomanPink = fio dental rosa feminino
+    .desc = Uma tanga rosa.
+
+ent-ClothingPantsWomanPurple = fio dental roxo feminino
+    .desc = Uma tanga roxa.
+
+ent-ClothingPantsWomanBlack = fio dental preto feminino
+    .desc = Uma tanga preta.
+
+ent-ClothingPantsManAdjutant = boxeadores "adjuvante"
+    .desc = Boxers em cores ajudantes.
+
+ent-ClothingPantsManCMO = boxeadores "CMO"
+    .desc = Boxers em cores oficiais médicos.
+
+ent-ClothingPantsManCaptain = Boxers "Capitão"
+    .desc = Boxers em cores capitães.
+
+ent-ClothingPantsManCaptainBlack = Boxers pretos "Capitão"
+    .desc = Boxers pretos para o capitão.
+
+ent-ClothingPantsManCaptainWhite = Boxers brancos "Capitão"
+    .desc = Boxers brancos para o capitão.
+
+ent-ClothingPantsManHeadOfPersonnel = Boxers "Cabeça do Pessoal"
+    .desc = Boxers em cores de pessoal.
+
+ent-ClothingPantsManHeadOfSecurity = boxeadores "Cabeça de Segurança"
+    .desc = Boxers em cores de segurança.
+
+ent-ClothingPantsManQuartermaster = boxeadores "Quartermaster"
+    .desc = Boxers em cores quartermaster.
+
+ent-ClothingPantsManResearchDirector = boxeadores "Diretor de Pesquisa"
+    .desc = Boxers em cores de diretor de pesquisa.
+
+ent-ClothingPantsManBlueshield = boxeadores "Blueshield"
+    .desc = Boxers em cores azul-escudo.
+
+ent-ClothingPantsManChiefEngineer = Boxers "Engenheiro Chefe"
+    .desc = Boxers em cores de engenheiro chefe.

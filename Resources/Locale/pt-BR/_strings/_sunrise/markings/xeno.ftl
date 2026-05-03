@@ -28,3 +28,23 @@ marking-HumanoidXenoHeadCarrierHead = Cabeça de Porteiro
 marking-HumanoidXenoHeadCougarHead = Cabeça de puma
 marking-HumanoidXenoHeadCrusherHead = Triturador de cabeça
 marking-HumanoidXenoHeadWorkerHead = Cabeça de trabalhador
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+marking-HumanoidXenoTailsRavager = Ravager Tail
+
+marking-HumanoidXenoTailsNeomorph = Neomorph Tail
+
+marking-HumanoidXenoChestNeomorph = Peito Neomorfo
+
+marking-HumanoidXenoChestSpitter = Peito de Cuspidor
+
+marking-HumanoidXenoHeadRavager = Cabeça Ravager
+
+marking-HumanoidXenoHeadNeomorph = Cabeça Neomorf
+
+marking-HumanoidXenoArmsPredalien = Armas Predalien
+
+marking-HumanoidXenoLegsPredalien = Pernas de Predalien
+
+marking-HumanoidXenoChestCougar = Peito de cougar

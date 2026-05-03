@@ -1,33 +1,33 @@
-book-text-plasma-trap = 
-    Ихихихихи, ТЕПЕРЬ они ни за что на свете не доберутся до нашего тайника, ясно?
-    В комнате, где лежат наши вещи, я установил температуру в тысячу К.
-    Вы знаете что делать, когда вещи нам понадобятся.
-     - Джей.
-book-text-holoparasite-info = 
-    Спасибо, что выбрали наш набор голопаразита!
-    Мы в компании Cybersun гордимся нашими передовыми военными и промышленными технологиями и очень ценим ваш вклад в наше развитие!
-    Стражи - это разумные и услужливые существа, которые вселяются в ваше тело, и абсолютно невосприимчивы к таким распространённым опасностям, как давление, температура и даже пули!
-    Вы приобрели набор голопаразита, который содержит активатор голопаразита в виде инъектора, брошюру с инструкцией, и нашу фирменную бейсболку!
-    Инструкция по применению:
-    1. Активируйте инъектор голопаразита (желательно в укромном месте).
-    2. Дождитесь покалывания и/или болезненных метафизических ощущений.
-    3. Проверьте своего голопаразита на способность к общению и сотрудничеству, а также на способность понимать ваши приказы.
-    4. Используйте свою способность призыва/отзыва, чтобы призвать или отозвать голопаразита обратно в ваше тело.
-    5. Не позволяйте голопаразиту удаляться от вас на большое расстояние, иначе он будет принудительно отозван!
-    ВНИМАНИЕ: Стражи - существа метафизические, но для своего существования они черпают вашу ЖИЗНЕННУЮ ЭНЕРГИЮ. Прямой урон, наносимый хранителям, будет частично переноситься на вас!
-    Cybersun Ind. не несёт ответственности за тотальную аннигиляцию вызванную неправильным использованием технологии Голопаразита.
-book-text-ame-scribbles = 
-    Я не знаю, прошли ли вы уже обучение, поэтому надеюсь, что это поможет.
-    Контроллеру ДАМ требуется высоковольтный кабель для передачи сгенерированной энергии. Если вы не уверены в наличии кабеля - сковырните пол ломом.
-    Рядом с местом, где вы нашли мою записку, должна быть пустая комната. Эта комната предназначена для ДАМ. ДАМ, а не дам.
-    Но вообще ДАМ можно разместить где угодно, были бы кабеля.
-    Расположите детали ДАМ сеткой 3x3, распакуйте их с применением мультитула. И постарайтесь не "запереть" никого внутри.
-    Контроллер должен соприкасаться ДАМ по горизонтали или вертикали (но не по диагонали).
-    Имея 1 ядро (которое и формируется вышеупомянутой сеткой 3x3), не устанавливайте впрыск выше 2.
-    Золотое правило - 2 впрыска на 1 ядро. В целях экономии топлива можно поставить меньше.
-    Поставите больше - и это приведёт к перегреву ДАМ, что в конечном итоге вызовет взрыв. Давайте без этого.
-    Не забывайте заправлять ДАМ, так как топливо имеет тенденцию заканчиваться в самый неподходящий момент.
-book-text-agrichemkit-manual = 
+book-text-plasma-trap = Heheheheh, nem penses que vão chegar ao nosso esconderijo, pois não?
+      Eu manipulei a área onde as nossas coisas estão para ser mil mil dólares.
+      Sabes drenar quando precisamos.
+       - J.
+
+book-text-holoparasite-info = Obrigado por escolher o nosso pacote holoparasite!
+      No cybersun, nos orgulhamos da tecnologia militar e industrial de ponta, e apreciamos muito sua contribuição para o nosso estabelecimento!
+      Guardiões são seres úteis e inteligentes que se aninham dentro de seu corpo, completamente imunes a perigos comuns, como pressão, temperatura e até balas!
+      Você comprou o pacote holoparasita, que contém um ativador holoparasita, um folheto de instruções, e nossa mercadoria softcap.
+      Instruções de utilização:
+      1. Activar o injector holoparasitário (de preferência numa área isolada).
+      2. Espere pelo formigamento e sensação metafísica dolorosa /or.
+      3. Verifique seu holoparasite para a capacidade de comunicar e cooperar, e capacidade de entender suas ordens.
+      4. Use sua capacidade de recall-manifesto para invocar ou lembrar o holoparasito de volta ao seu corpo.
+      5. Mantenha o holoparasito dentro de uma curta distância de si mesmo, caso contrário ele será lembrado pela força!
+      AVISO: Os Guardiões são seres metafísicos, mas extraem de sua SAÚDE para existir. Danos diretos feitos aos guardiões serão parcialmente transferidos para você!
+      Cybersun inc. não é responsável pela aniquilação completa após o uso indevido da tecnologia Holoparasite.
+
+book-text-ame-scribbles = Não sei se já foste treinado, por isso espero que isto ajude.
+      O controlador AME precisa de energia LV e um fio HV para sair. Verifique a área com um pé de cabra se você não tem certeza.
+      Deve haver um quarto vazio ao lado de onde encontraste isto, aquele quarto está ligado para o EMA.
+      Você pode colocar um AME em qualquer lugar se você pode obter os fios para ele, embora.
+      Grade 3x3 de peças AME, multitool para desempacotar. Cuidado para não "armadilhar" nada.
+      Controlador AME adjacente horizontal ou vertical (não diagonal) a qualquer ponto.
+      Com apenas 1 núcleo (o que uma grade 3x3 vai conseguir), não aumente acima de 2.
+      A regra de ouro é 2 injeções para cada 1 núcleo. Você pode ir mais baixo para economizar combustível.
+      Mais alto vai queimar o motor e eventualmente fazê-lo explodir. Não.
+      Não se esqueça de reabastecê-lo, tende a parar no pior momento possível.
+
+book-text-agrichemkit-manual =
     Thank you for choosing the safe-for-all-ages NanoTrasen Agri-Chem is Fun! chemistry kit, the best learning-adjacent toy of 2468! Be prepared to discover all about the biggest innovations in agriculture since people buried fish with their corn seeds.
 
     Contents:
@@ -53,7 +53,7 @@ book-text-agrichemkit-manual =
     Each individual plant responds to unstable mutagen differently, so you may want to use small doses on multiple crops and try to crossbreed the best traits from each of those. Applying multiple doses to one plant can stack multiple changes and make it harder to single out desirable traits.
     Unstable mutagen is entirely safe when used as a fertilizer, and NanoTrasen takes no responsibility for dead crops, excessive water bills, newly sentient plants asking existential questions, or flora-strangled farmhands that may coincidentally occur while using it.
     Do not drink unstable mutagen. Wash your hands thoroughly after handing. Wash your eyes if you have looked at unstable mutagen for over 30 minutes in a 24 hour period. Store in a dark room between 293–295K. Do not use on corporate holidays. If you begin hearing voices telling you to drink unstable mutagen, please contact your doctor, head of personnel, or exorcist.
-book-text-combat-bakery-kit = 
+book-text-combat-bakery-kit =
     Thank you for choosing our combat bakery kit!
     Enclosed are two (2) CyberSun patented Throwing Croissants, and one (1) patent-pending Baguette Sword.
     The included Donk Co. microwave board can construct a microwave capable of baking more weapons.

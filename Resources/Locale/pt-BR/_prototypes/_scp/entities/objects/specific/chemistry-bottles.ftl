@@ -1,3 +1,3 @@
 ent-ChemistryBottleArtifexium = { ent-BaseChemistryBottleFilled }
-    .suffix = artifexium
+    .suffix = artifexio
     .desc = { ent-BaseChemistryBottleFilled.desc }

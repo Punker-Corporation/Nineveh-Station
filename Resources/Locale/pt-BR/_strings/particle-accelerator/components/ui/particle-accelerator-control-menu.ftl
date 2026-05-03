@@ -8,13 +8,13 @@ particle-accelerator-control-menu-alarm-control-1 = [bold][color=red]PODER DE PA
 particle-accelerator-control-menu-alarm-control-2 = [bold][color=red]FALHA NO LIMITADOR[/bold][/color]
 particle-accelerator-control-menu-scan-parts-button = Digitalizar peças
 particle-accelerator-control-menu-check-containment-field-warning = Certifique-se de que o campo de contenção esteja ativo!
-particle-accelerator-control-menu-status-label = [bold]Status:[/bold]
+particle-accelerator-control-menu-status-label = Estado do [bold]: [/bold]
 particle-accelerator-control-menu-status-unknown = [font="Monospace"][color=red]Sem dados[/color][/bold]
 particle-accelerator-control-menu-status-operational = [font="Monospace"][color=green]Eficiente[/color][/bold]
 particle-accelerator-control-menu-status-incomplete = [font="Monospace"][color=red]Não concluído[/color][/bold]
 particle-accelerator-control-menu-draw = [bold]Potência:[/bold]
 particle-accelerator-control-menu-draw-value = [font="Monospace"]{ $watts }/{ $lastReceive }[/font]
-particle-accelerator-control-menu-draw-not-available = [font="Monospace"][color=gray]N/A[/color][/font]
+particle-accelerator-control-menu-draw-not-available = [font="Monospace"] [color=gray] N /A [/color] [/font]
 particle-accelerator-control-menu-flavor-left = Por favor, mantenha o palhaço longe deste console!
 particle-accelerator-control-menu-flavor-right = versão 1.6
 particle-accelerator-radio-message-on = A fonte de alimentação foi ligada.

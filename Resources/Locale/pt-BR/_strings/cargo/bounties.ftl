@@ -87,7 +87,7 @@ bounty-description-flesh-monster = Recentemente recebemos relatos de uma infesta
 bounty-description-flower = O Comandante Zot realmente quer matar a Oficial Olivia imediatamente. Envie um lote de flores e ele terá prazer em recompensá-lo.
 bounty-description-galaxythistle = Depois de um aumento particularmente desagradável na contrapressão da espuma do purificador, um oficial de alta patente foi gravemente envenenado. Envie-nos um pouco de cardo galáctico para que possamos preparar um remédio homeopático para ele.
 bounty-description-handcuffs = Um grande fluxo de prisioneiros fugitivos chegou ao Comando Central. Agora é a hora de enviar algemas de reposição (ou braçadeiras).
-bounty-description-instrument = Samaya горячая novo grupo na galáxia, "Синди Кейт и Диверсанты", потеряла своё оборудование в результате столкновения грузового шаттла. Envie-lhes um novo conjunto de instrumentos musicais para que possam fazer seu show.
+bounty-description-instrument = A nova banda mais quente da galáxia, Cindy Kate e os Sabotadores, perderam seu equipamento em uma colisão de transporte de carga. Envie-lhes um novo conjunto de instrumentos para que possam tocar o seu programa.
 bounty-description-knife = Um de nossos melhores comandantes ganhou recentemente um novo conjunto de facas no game show oficial da Fundação. Infelizmente não temos esse conjunto em mãos. Envie-nos um monte de objetos pontiagudos para que possamos pensar em algo.
 bounty-description-lemon = O filho do Dr. Jones abre uma barraca de limonada. Pequeno problema: os limões não são entregues a este setor. Corrija-o para obter uma boa recompensa.
 bounty-description-lime = Depois de uma sessão de bebedeira, o Almirante Pastic ficou viciado em rodelas de limão fresco. Envie-nos alguns limões para que possamos fazer dele seu novo lanche favorito.
@@ -135,4 +135,29 @@ bounty-description-cotton-boll = Um enorme enxame de baratas comeu todo o papel 
 bounty-description-microwave-machine-board = O Sr. Hichster decidiu que seria engraçado colocar garfos de metal em todos os micro-ondas da cozinha. Ajude-nos a consertá-los antes que os chefs comecem a cozinhar hambúrgueres de palhaço.
 bounty-description-lasergun = Uma caravana de salvamento solicita um grande carregamento de armas laser para destruir uma colmeia de xenomorfos.
 bounty-description-food = Após a invasão do rei rato, a estação vizinha de Unath ficou sem comida. É necessária uma grande quantidade de pratos de carne.
-bounty-description-flashes = BEM-VINDO \[Станция] PRECISAMOS DE 6 FLASHES PARA ROTINA \[ТренировкаУпражнение] COM PESSOAL DE SEGURANÇA. TODOS \[Нормально].
+bounty-description-flashes = GREETINGS \ [Station] EXIGEMOS 6 FLASHES DEVIDO A UMA NORMAL \ [TrainingExercise] COM SEGURANÇA. Tudo é \ [Normal].
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+bounty-item-diamond = Diamante
+
+bounty-item-ore-bananium = Minério de benânio
+
+bounty-item-ore-gold = Minério de ouro
+
+bounty-item-ore-plasma = Minério plasmático
+
+bounty-item-ore-silver = Minério de prata
+
+bounty-item-ore-uranium = Minério de urânio
+
+bounty-item-scrap = Sucata
+
+bounty-item-ring = Anel
+
+bounty-item-remains = Permanece o Senhor das Colmeias
+
+bounty-item-plates = Golias Escondem Placas
+
+
+bounty-description-ring = Neste dia extraordinário haverá um casamento entre os Gelts, mas o Sr. Gelt perdeu os anéis. Precisam de um novo par.

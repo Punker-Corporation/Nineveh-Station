@@ -1,5 +1,6 @@
 osay-command-description = Faz com que outra entidade tente enviar uma mensagem
-osay-command-help-text = Uso: { $command } <uid> <тип> <сообщение>
+osay-command-help-text = Uso: {$command} <uid> <tipo> <mensagem>
+
 osay-command-arg-uid = uid de destino
 osay-command-arg-type = tipo
 osay-command-arg-message = mensagem

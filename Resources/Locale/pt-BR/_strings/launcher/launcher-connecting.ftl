@@ -1,22 +1,21 @@
-### Connecting dialog when you start up the game
+### Janela de conexão inicial.
 
-connecting-title = Estação Espacial 14
+connecting-title = Nineveh Station
 connecting-exit = Sair
-connecting-retry = Repita
+connecting-retry = Tentar novamente
 connecting-reconnect = Reconectar
 connecting-copy = Copiar mensagem
-connecting-redial = Reiniciar
+connecting-redial = Reiniciar conexão
 connecting-redial-wait = Aguarde: { TOSTRING($time, "G3") }
-connecting-in-progress = Conectando ao servidor...
+connecting-in-progress = Abrindo canal com Nineveh...
 connecting-disconnected = Desconectado do servidor:
-connecting-tip = Miau!
+connecting-tip = O corredor responde antes da porta abrir.
 connecting-window-tip = Dica { $numberTip }
-connecting-version = versão 0.1
-connecting-fail-reason = 
-    Не удалось подключиться к серверу:
-    { $reason }
+connecting-version = protocolo Nineveh 0.1
+connecting-fail-reason = Falha ao estabelecer canal com o servidor:
+                         { $reason }
 connecting-state-NotConnecting = Não conectado
-connecting-state-ResolvingHost = Definição de host
-connecting-state-EstablishingConnection = Estabelecendo uma conexão
-connecting-state-Handshake = Conexão
-connecting-state-Connected = Conectado
+connecting-state-ResolvingHost = Resolvendo host
+connecting-state-EstablishingConnection = Estabelecendo enlace
+connecting-state-Handshake = Sincronizando sessão
+connecting-state-Connected = Canal aberto

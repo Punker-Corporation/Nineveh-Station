@@ -9,3 +9,12 @@ id-card-console-window-job-selection-label = Predefinições de posição (defin
 access-id-card-console-component-no-hands-error = Você não tem mãos.
 id-card-console-privileged-id = ID principal
 id-card-console-target-id = ID de destino
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+id-card-console-window-select-all-button = Conceder tudo
+
+id-card-console-window-deselect-all-button = Revogar tudo
+
+
+id-card-console-damaged = Integridade estrutural comprometida, ejetando conteúdo.

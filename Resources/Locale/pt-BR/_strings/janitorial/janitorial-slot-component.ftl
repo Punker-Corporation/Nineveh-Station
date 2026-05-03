@@ -11,3 +11,7 @@ janitorial-trolley-slot-component-slot-name-spray = Pulverizar
 janitorial-trolley-slot-component-slot-name-bucket = Balde
 janitorial-trolley-slot-component-slot-name-trashbag = Saco de lixo
 janitorial-trolley-slot-component-slot-name-mop = Esfregar
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+janitorial-trolley-slot-component-slot-name-goldenplunger = Mergulhador Dourado

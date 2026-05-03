@@ -1,22 +1,25 @@
-verb-categories-antag = Антагонисты
-admin-verb-make-traitor = Сделать цель предателем.
-admin-verb-make-initial-infected = Сделать цель нулевым пациентом.
-admin-verb-make-zombie = Сделать цель зомби.
-admin-verb-make-nuclear-operative = Сделать цель одиноким Ядерным оперативником.
-admin-verb-make-pirate = Сделать цель пиратом\капером. Учтите, что это не меняет игровой режим.
-admin-verb-make-head-rev = Сделать цель главой революции.
-admin-verb-make-thief = Сделать цель вором.
-admin-verb-make-paradox-clone = Создать призрачную роль парадоксального клона цели.
-admin-verb-make-changeling = Сделать цель генокрадом.
-admin-verb-make-vampire = Сделать цель вампиром.
-admin-verb-text-make-traitor = Сделать предателем
-admin-verb-text-make-initial-infected = Сделать нулевым пациентом
+verb-categories-antag = Antag ctrl
+admin-verb-make-traitor = Сделать из мишени предателя.
+admin-verb-make-initial-infected = Сделайте мишень первоначально зараженной.
+admin-verb-make-zombie = Немедленно зомбируй цель.
+admin-verb-make-nuclear-operative = Превратите цель в одинокую ядерную операцию.
+admin-verb-make-pirate = Превратите цель в пирата. Обратите внимание, что это не настраивает правила игры.
+admin-verb-make-head-rev = Сделайте цель революционером.
+admin-verb-make-thief = Превратите цель в вора.
+admin-verb-make-paradox-clone = Создайте парадоксальную роль клона-призрака.
+admin-verb-make-wizard = Сделайте из мишени волшебника.
+admin-verb-make-changeling = Превратите цель в переменчицу.
+
+
+admin-verb-text-make-traitor = Сделай предателя
+admin-verb-text-make-initial-infected = Сделайте первоначальный зараженный
 admin-verb-text-make-zombie = Сделать зомби
-admin-verb-text-make-nuclear-operative = Сделать ядерным оперативником
-admin-verb-text-make-pirate = Сделать пиратом
-admin-verb-text-make-head-rev = Сделать Главой революции
-admin-verb-text-make-paradox-clone = Создать парадоксального клона
-admin-verb-text-make-thief = Сделать вором
-admin-verb-text-make-vampire = Сделать вампиром
-admin-verb-text-make-changeling = Сделать генокрадом
-admin-overlay-antag-classic = АНТАГОНИСТ
+admin-verb-text-make-nuclear-operative = Сделайте ядерную операцию
+admin-verb-text-make-pirate = Сделать пирата
+admin-verb-text-make-head-rev = Сделать голову Rev
+admin-verb-text-make-thief = Сделай вора
+admin-verb-text-make-paradox-clone = Парадоксальный клон
+admin-verb-text-make-wizard = Сделай волшебника
+admin-verb-text-make-changeling = Make Changeling (WIP)
+
+admin-overlay-antag-classic = АНТАГ

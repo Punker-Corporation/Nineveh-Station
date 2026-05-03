@@ -18,3 +18,9 @@ research-console-prereqs-list-start = Requer:
 research-console-prereqs-list-entry = - [color=orchid]{ $text }[/color]
 research-console-no-access-popup = Sem acesso!
 research-console-unlock-technology-radio-broadcast = Pesquisado: [bold]{ $technology }[/bold], para [bold]{ $amount }[/bold] pontos de pesquisa.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+research-console-menu-server-rediscover-button = Redescover ( {$cost} )
+
+research-console-menu-server-rediscover-tooltip = Refazer a lista de tecnologias para pesquisa

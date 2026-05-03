@@ -7,3 +7,7 @@ advertisement-nanomed-6 = Talvez você mesmo possa aceitar isso?
 advertisement-nanomed-7 = Pingue!
 advertisement-nanomed-8 = Não exagere!
 advertisement-nanomed-9 = É hora de overdose!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+advertisement-nanomed-10 = Sou civil! Sou civil!

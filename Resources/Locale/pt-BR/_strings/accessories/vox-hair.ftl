@@ -22,3 +22,15 @@ marking-VoxHairMange = Vox, Lishay
 marking-VoxHairPony = Vox, pônei
 marking-VoxHairWiseBraid = Vox, Foices Sábias
 marking-VoxHairSpotty = Vox, cabelo manchado
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+marking-VoxHairMadScientist = Cientista Louco Vox
+
+marking-VoxHairHedgehog = Vox Hedgehog
+
+marking-VoxHairBushy = Vox Bushy Quills
+
+marking-VoxHairSlick = Vox Slick Quills
+
+marking-VoxHairCatfish = Peixe-gato Vox

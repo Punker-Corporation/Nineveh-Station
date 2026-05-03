@@ -80,9 +80,7 @@ guide-entry-medical = Departamento médico
 guide-entry-medicaldoctor = Doutor
 guide-entry-chemist = Químico
 guide-entry-medicine = Medicamento
-guide-entry-brute = 
-    Продвинутое лечение
-    механических повреждений
+guide-entry-brute = Medicação bruta avançada
 guide-entry-botanicals = Botânica
 guide-entry-cloning = Clonagem
 guide-entry-cryogenics = Criogenia
@@ -122,7 +120,7 @@ guide-entry-pie-recipes = Tortas e tortas
 guide-entry-barsandcookies-recipes = Barras e biscoitos
 guide-entry-cake-recipes = Bolos
 guide-entry-salad-recipes = Saladas
-guide-entry-medicinal-recipes = Medicinal
+guide-entry-medicinal-recipes = Medicamentos
 guide-entry-other-recipes = Outro
 guide-entry-secret-recipes = Segredo
 guide-entry-antagonists = Antagonistas
@@ -136,6 +134,7 @@ guide-entry-space-ninja = Ninja Espacial
 guide-entry-thieves = Ladrões
 guide-entry-wizard = Mago
 guide-entry-xenoborgs = Xenoborgs
+
 guide-entry-rules = Regras do servidor
 guide-entry-rules-core-only = Conjunto de regras: somente básico
 guide-entry-rules-lrp = Conjunto de regras: padrão
@@ -196,3 +195,20 @@ guide-entry-rules-ban-types = Tipos de proibições
 guide-entry-rules-ban-durations = Duração das proibições
 guide-entry-writing = Layout de carta
 guide-entry-glossary = Glossário de termos
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+guide-entry-ressureregulator = Regulador de pressão
+
+guide-entry-gasrecycling = Reciclagem de Gás
+
+guide-entry-deltapressure = Pressão Delta
+
+guide-entry-xenoarchaeologyunlockingnodes = Desbloquear nós
+
+guide-entry-analysisconsole = Consola de Análise
+
+guide-entry-lawsets = Leis de Silício
+
+
+guide-entry-flesh-cult = Cultivo da Carne

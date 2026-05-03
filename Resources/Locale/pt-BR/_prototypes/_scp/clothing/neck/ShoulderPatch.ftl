@@ -1,0 +1,12 @@
+ent-ClothingNeckShoulderPatchWhite = sistema de ombro branco
+    .desc = Uma ferramenta simples e conveniente para grupos
+ent-ClothingNeckShoulderPatchRed = adesivo vermelho do ombro
+    .desc = Uma ferramenta simples e conveniente para grupos
+ent-ClothingNeckShoulderPatchBlue = patch de ombro azul
+    .desc = Uma ferramenta simples e conveniente para grupos
+ent-ClothingNeckShoulderPatchGreen = patch de ombro verde
+    .desc = Uma ferramenta simples e conveniente para grupos
+ent-ClothingNeckShoulderPatchYellow = sistema de ombro amarelo
+    .desc = Uma ferramenta simples e conveniente para grupos
+ent-BoxCardboardShoulderPatches = caixa com diferentes patches
+    .desc = Uma caixa com as ferramentas mais simples e convenientes para grupos

@@ -21,25 +21,25 @@ traitor-death-match-end-round-description-entry = PDA { $originalName }, com { $
 ## TraitorRole
 
 # TraitorRole
-traitor-role-greeting = 
-    Вы - агент организации { $corporation } на задании [color = vermelho escuro]Sindicato.[/color].
-    Ваши цели и кодовые слова перечислены в меню персонажа.
-    Воспользуйтесь аплинком, встроенным в ваш КПК, чтобы приобрести всё необходимое для выполнения работы.
-    Смерть NanoTrasen!
-traitor-role-codewords = 
-    Кодовые слова следующие: [color = cinza claro]
-    { $codewords }.[/color]
-    Кодовые слова можно использовать в обычном разговоре, чтобы незаметно идентифицировать себя для других агентов Синдиката.
-    Прислушивайтесь к ним и храните их в тайне.
-traitor-role-uplink-code = 
-    Установите рингтон Вашего КПК на [color = lightgray]{ $code }[/color] para bloquear ou desbloquear o uplink.
-    Не забудьте заблокировать его и сменить код, иначе кто угодно из экипажа станции сможет открыть аплинк!
-# don't need all the flavour text for character menu
-traitor-role-codewords-short = 
-    Кодовые слова:
-    { $codewords }.
-traitor-role-uplink-implant = 
-    Ваш имплант аплинка активирован, зайдите в него с хотбара.
-    Подключение безопасно, если только кто-то не удалит его из вашего тела.
+traitor-role-greeting =
+    Você é um agente enviado pela [color = darkred] The Syndicate [/color] em nome da {$corporation}.
+    Seus objetivos e palavras de código estão listados no menu de caracteres. Use seu uplink para comprar as ferramentas que você vai precisar para esta missão.
+    Morte a NanoTrasen!
+traitor-role-codewords =
+    As palavras de código são: [color = lightgray]
+    {$codewords}. [/color]
+    Os codewords podem ser usados na conversação regular para identificar-se discretamente a outros agentes do sindicato.
+    Ouve-os e guarda-os em segredo.
+traitor-role-uplink-code =
+    Defina o seu toque para as notas [color = lightgray] {$code} [/color] para bloquear ou desbloquear o seu uplink.
+    Lembre-se de trancá-lo depois, ou a equipa da estação pode encontrá-lo!
+traitor-role-codewords-short =
+    As palavras de código são:
+    {$codewords}.
+traitor-role-uplink-implant =
+    O seu implante de uplink foi activado, acesse-o da sua barra quente.
+    O uplink é seguro a menos que alguém o remova do seu corpo.
+
+# não precisa de todo o texto de sabor para o menu de caracteres
 traitor-role-uplink-code-short = Seu código de uplink: { $code }. Defina-o como toque do PDA para acessar o uplink.
 traitor-role-uplink-implant-short = Seu uplink foi implantado. Acesse-o na barra de atalho.

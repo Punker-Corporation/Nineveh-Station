@@ -8,5 +8,5 @@ ent-SpawnVehicleMotobike = motocicleta geradora
     .desc = { ent-MarkerBase.desc }
 ent-SpawnVehicleWheelchair = cadeira de rodas reprodutora
     .desc = { ent-MarkerBase.desc }
-ent-SpawnVehicleWheelchairFolded = cadeira de rodas geradora [Сложенный]
+ent-SpawnVehicleWheelchairFolded = Cadeiras de rodas [Folded] Spawner
     .desc = { ent-MarkerBase.desc }

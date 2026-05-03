@@ -2,6 +2,7 @@ accent-pirate-prefix-1 = Argh
 accent-pirate-prefix-2 = Garr
 accent-pirate-prefix-3 = Yarr
 accent-pirate-prefix-4 = Yarrgh
+
 accent-pirate-replaced-1 = meu
 accent-pirate-replacement-1 = para mim
 accent-pirate-replaced-2 = Você
@@ -129,7 +130,7 @@ accent-pirate-replacement-62 = Almirantado
 accent-pirate-replaced-63 = tsk
 accent-pirate-replacement-63 = Almirantado
 accent-pirate-replaced-64 = mulher jovem
-accent-pirate-replacement-64 = Virgem
+accent-pirate-replacement-64 = marinheiro
 accent-pirate-replaced-65 = garotas
 accent-pirate-replacement-65 = virgens
 accent-pirate-replaced-66 = matar

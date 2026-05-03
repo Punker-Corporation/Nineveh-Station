@@ -99,3 +99,7 @@ names-operation-prefix-dataset-99 = Branco
 names-operation-prefix-dataset-100 = Selvagem
 names-operation-prefix-dataset-101 = Inverno
 names-operation-prefix-dataset-102 = Amarelo
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+names-operation-prefix-dataset-85 = A

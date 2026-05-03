@@ -5,10 +5,10 @@ blockgame-menu-label-points = Pontos: { $points }
 # Current game level
 blockgame-menu-label-level = Nível: { $level }
 # Game over information of your round
-blockgame-menu-gameover-info = 
-    Глобальный счёт: { $global }
-    Локальный счёт: { $local }
-    Очки: { $points }
+blockgame-menu-gameover-info = Global: {$global}
+    Local: {$local}
+    Pontos: {$points}
+
 blockgame-menu-title = Tetris
 blockgame-menu-button-new-game = Novo jogo
 blockgame-menu-button-scoreboard = Tabela de classificação

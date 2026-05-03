@@ -22,3 +22,9 @@ tool-quality-rolling-name = Lançamento
 tool-quality-rolling-tool-name = Rolo
 tool-quality-digging-name = Escavação
 tool-quality-digging-tool-name = Pá
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+tool-quality-brushing-name = Pincelagem
+
+tool-quality-brushing-tool-name = Pincel de arame

@@ -7,3 +7,9 @@ job-description-heavy-containment-zone-officer = Oficial das Forças Especiais. 
 job-name-junior-heavy-containment-zone-officer = Recruta do SecDep
 job-description-junior-heavy-containment-zone-officer = Apenas um oficial subalterno de um destacamento de forças especiais que entrou em serviço. Ele ajuda os seus superiores a monitorar as instalações do sitio.
 job-supervisors-heavy-containment-zone-commandant = Tenente do SecDep
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-name-field-medical-specialist = Especialista em Medicina de Campo
+
+job-description-field-medical-specialist = Uma unidade de combate focada em prestar assistência médica ao pessoal de segurança. CLASS C

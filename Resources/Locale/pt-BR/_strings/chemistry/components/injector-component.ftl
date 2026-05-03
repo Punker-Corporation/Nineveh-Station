@@ -1,9 +1,9 @@
 ## UI
 
-injector-volume-transfer-label = Volume: [color=white]{ $currentVolume }/{ $totalVolume } unidades[/color]
-    Режим: [color=branco]{ $modeString }[/color] ([color=white]{ $transferVolume } unidades[/color])
-injector-volume-label = Volume: [color=white]{ $currentVolume }/{ $totalVolume } unidades[/color]
-    Режим: [color=branco]{ $modeString }[/color]
+injector-volume-transfer-label = Volume: [color=white] {$currentVolume} / {$totalVolume} u [/color]
+    Modo: [color=white] {$modeString} [/color] ( [color=white] {$transferVolume} u [/color])
+injector-volume-label = Volume: [color=white] {$currentVolume} / {$totalVolume} u [/color]
+    Modo: [color=white] {$modeString} [/color]
 injector-toggle-verb-text = Alternar modo do injetor
 
 injector-invalid-injector-toggle-mode = Modo errado
@@ -32,3 +32,57 @@ injector-component-injecting-target = { CAPITALIZE($user) } começa a injetar o 
 ## failure
 
 injector-component-failure-hardsuit = Você não conseguirá passar a agulha através de uma camada espessa!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+injector-component-inject-mode-name = Injectar
+
+injector-component-draw-mode-name = Desenhar
+
+injector-component-dynamic-mode-name = Dinâmica
+
+injector-component-mode-changed-text = Agora {$mode}
+
+injector-component-transfer-success-message-self = Você transfere {$amount} u para si mesmo.
+
+injector-component-inject-success-message-self = Injecte {$amount} u em si próprio!
+
+injector-component-draw-success-message-self = Você tira {$amount} u de si mesmo.
+
+## Falhar Mensagens
+
+
+injector-component-target-already-full-message-self = Já estás cheio!
+
+injector-component-target-is-empty-message-self = Estás vazio!
+
+injector-component-cannot-toggle-dynamic-message = Não é possível alternar dinâmica!
+
+injector-component-empty-message = O {CAPITALIZE(THE($injector))} está vazio!
+
+injector-component-blocked-user = O equipamento de protecção bloqueou a injecção!
+
+injector-component-blocked-other = A armadura {CAPITALIZE(THE(POSS-ADJ($target)))} bloqueou a injecção do {THE($user)}!
+
+injector-component-cannot-transfer-message-self = Você não é capaz de se transferir para si mesmo!
+
+injector-component-cannot-inject-message-self = Não consegues injectar-te a ti próprio!
+
+injector-component-cannot-draw-message-self = Você não é capaz de tirar de si mesmo!
+
+injector-component-ignore-mobs = Este injector só pode interagir com os recipientes!
+
+## mob- injectar mensagens doafter
+
+
+injector-component-needle-injecting-user = Começa a injectar a agulha.
+
+injector-component-needle-injecting-target = {CAPITALIZE(THE($user))} está a tentar injectar-lhe uma agulha!
+
+injector-component-needle-drawing-user = Começa a desenhar a agulha.
+
+injector-component-needle-drawing-target = {CAPITALIZE(THE($user))} está a tentar usar uma agulha para extrair de si!
+
+## Mensagens de sucesso no menu de destino
+
+injector-component-feel-prick-message = Sentes uma pica pequena!

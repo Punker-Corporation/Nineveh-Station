@@ -29,3 +29,7 @@ ent-WaffleCoFlippo = Isqueiro Waffle Co flippo.
     .desc = Isqueiro de massa robusto. Logotipo da Waffle Co. Gira a roda de ignição quando apanhada, para que mesmo os usuários mais desajeitados não se queimem.
 
 
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BaseBrandedLighter = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }

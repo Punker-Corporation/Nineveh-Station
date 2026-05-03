@@ -49,3 +49,14 @@ ent-SunriseEffectMagnetUltra = { ent-BaseXenoArtifactEffect }
     .desc = Cria campos magnéticos poderosos
 ent-SunriseEffectShiftedAsciiTableAccent = { ent-BaseXenoArtifactEffect }
     .desc = Torna a fala completamente incoerente e incompreensível
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-XenoArtifactEffectCreationGasBZ = { ent-BaseXenoArtifactEffect }
+    .desc = Expulsa BZ
+
+ent-XenoArtifactEffectCreationGasHealium = { ent-BaseXenoArtifactEffect }
+    .desc = Expulsões de heralium
+
+ent-XenoArtifactEffectCreationGasNitrium = { ent-BaseXenoArtifactEffect }
+    .desc = Expulsões de nitrio

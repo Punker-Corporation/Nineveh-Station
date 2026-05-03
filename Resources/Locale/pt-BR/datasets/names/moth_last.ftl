@@ -8,6 +8,7 @@ names-moth-last-dataset-3 = Imperador
 names-moth-last-dataset-4 = Skorhidwing
 # Temnora
 names-moth-last-dataset-5 = Temnora
+
 # Usta
 names-moth-last-dataset-6 = Boca
 # Thysania agrippina
@@ -21,7 +22,8 @@ names-moth-last-dataset-8 = Inverno
 names-moth-last-dataset-9 = Épilos
 # Conceivably any Old Norse descendant of mǫlr but probably more Danish than anything. "oe" digraph for ø.
 names-moth-last-dataset-10 = Moeller
-# Literal pseudo-translation of German Nachtfalter
+
+# pseudo-tradução literal de Nachtflilter alemão
 names-moth-last-dataset-11 = Nightflyer
 
 ## Myth and legend

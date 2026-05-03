@@ -6,11 +6,16 @@ robotics-console-model = [color=gray]Modelo:[/color] { $name }
 robotics-console-designation = [color=gray]Objetivo:[/color]
 robotics-console-battery = [color=gray]Carga da bateria:[/color] [color={ $color }]{ $charge }[/color]%
 robotics-console-modules = [color=gray]Módulos instalados:[/color] { $count }
-robotics-console-brain = [color=gray]Brain instalado:[/color] [color={ $brain -> 
-    [true] green]Да
-   *[false] red]Нет
- }[/color]
+robotics-console-brain = O cérebro do [color=gray] foi instalado: [/color] [color={$brain ->
+    [true] Verde] Sim.
+    *[false] vermelho] Não
+}[/color]
+
 robotics-console-locked-message = O controle está bloqueado, passe seu cartão de identificação.
 robotics-console-disable = Desativar
 robotics-console-destroy = Destruir
 robotics-console-cyborg-destroying = O processo de destruição remota de { $name } foi iniciado!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+robotics-console-hp = [color=gray] Integridade: [/color] [color={$color}] {$hp} [/color] %

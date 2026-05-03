@@ -14,3 +14,11 @@ cmd-mapping-nullspace = Você não pode inicializar na placa 0.
 cmd-hint-mapping-id = [MapID]
 cmd-hint-mapping-path = [Path]
 cmd-mapping-exists = O mapa { $mapId } já existe.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-mapping-try-grid = Não foi possível carregar o ficheiro como um mapa. Tentando carregar o arquivo como uma grade...
+
+cmd-mapping-success-load-grid = Carregado grade não inicializada do arquivo {$path} para um novo mapa com id {$mapId}.
+
+cmd-mapping-hint-grid = [Grid]

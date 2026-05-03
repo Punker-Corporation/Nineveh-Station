@@ -108,6 +108,7 @@ public sealed partial class GraphicsTab : Control
         private const int QualityLow = 1;
         private const int QualityMedium = 2;
         private const int QualityHigh = 3;
+        private const int QualityExtreme = 4;
 
         private const int QualityDefault = QualityMedium;
 
@@ -120,6 +121,7 @@ public sealed partial class GraphicsTab : Control
             button.AddItem(Loc.GetString("ui-options-lighting-low"), QualityLow);
             button.AddItem(Loc.GetString("ui-options-lighting-medium"), QualityMedium);
             button.AddItem(Loc.GetString("ui-options-lighting-high"), QualityHigh);
+            button.AddItem(Loc.GetString("ui-options-lighting-extreme"), QualityExtreme);
             button.OnItemSelected += OnOptionSelected;
         }
 
@@ -142,37 +144,36 @@ public sealed partial class GraphicsTab : Control
                     _cfg.SetCVar(CVars.LightResolutionScale, 0.125f);
                     _cfg.SetCVar(CVars.LightSoftShadows, false);
                     _cfg.SetCVar(CVars.LightBlur, false);
-                    // Fire added start
                     _cfg.SetCVar(ScpCCVars.LightBloomEnable, false);
                     _cfg.SetCVar(ScpCCVars.FieldOfViewBlurScale, 0.25f);
-                    // Fire added end
                     break;
                 case QualityLow:
                     _cfg.SetCVar(CVars.LightResolutionScale, 0.5f);
                     _cfg.SetCVar(CVars.LightSoftShadows, false);
                     _cfg.SetCVar(CVars.LightBlur, true);
-                    // Fire added start
                     _cfg.SetCVar(ScpCCVars.LightBloomEnable, false);
                     _cfg.SetCVar(ScpCCVars.FieldOfViewBlurScale, 0.4f);
-                    // Fire added end
                     break;
                 default: // = QualityMedium
                     _cfg.SetCVar(CVars.LightResolutionScale, 0.5f);
                     _cfg.SetCVar(CVars.LightSoftShadows, true);
                     _cfg.SetCVar(CVars.LightBlur, true);
-                    // Fire added start
                     _cfg.SetCVar(ScpCCVars.LightBloomEnable, true);
                     _cfg.SetCVar(ScpCCVars.FieldOfViewBlurScale, 0.7f);
-                    // Fire added end
                     break;
                 case QualityHigh:
                     _cfg.SetCVar(CVars.LightResolutionScale, 1);
                     _cfg.SetCVar(CVars.LightSoftShadows, true);
                     _cfg.SetCVar(CVars.LightBlur, true);
-                    // Fire added start
                     _cfg.SetCVar(ScpCCVars.LightBloomEnable, true);
                     _cfg.SetCVar(ScpCCVars.FieldOfViewBlurScale, 0.9f);
-                    // Fire added end
+                    break;
+                case QualityExtreme:
+                    _cfg.SetCVar(CVars.LightResolutionScale, 1.5f);
+                    _cfg.SetCVar(CVars.LightSoftShadows, true);
+                    _cfg.SetCVar(CVars.LightBlur, true);
+                    _cfg.SetCVar(ScpCCVars.LightBloomEnable, true);
+                    _cfg.SetCVar(ScpCCVars.FieldOfViewBlurScale, 1.0f);
                     break;
             }
         }
@@ -196,6 +197,9 @@ public sealed partial class GraphicsTab : Control
         {
             var val = _cfg.GetCVar(CVars.LightResolutionScale);
             var soft = _cfg.GetCVar(CVars.LightSoftShadows);
+            if (val > 1.01f && soft)
+                return QualityExtreme;
+
             if (val <= 0.125)
                 return QualityVeryLow;
 

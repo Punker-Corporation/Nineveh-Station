@@ -1,3 +1,56 @@
+diff --git a/Robust.Client/Audio/AudioManager.cs b/Robust.Client/Audio/AudioManager.cs
+index cc5c9d7d8..a90a521d4 100644
+--- a/Robust.Client/Audio/AudioManager.cs
++++ b/Robust.Client/Audio/AudioManager.cs
+@@ -15,6 +15,9 @@ namespace Robust.Client.Audio;
+ 
+ internal sealed partial class AudioManager : IAudioInternal
+ {
++    private const int AlcHrtfSoft = 0x1992;
++    private const int AlcTrue = 1;
++
+     [Shared.IoC.Dependency] private readonly IConfigurationManager _cfg = default!;
+     [Shared.IoC.Dependency] private readonly ILogManager _logMan = default!;
+     [Shared.IoC.Dependency] private readonly IReloadManager _reload = default!;
+@@ -48,7 +51,29 @@ internal sealed partial class AudioManager : IAudioInternal
+     {
+         unsafe
+         {
+-            _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++            if (HasAlDeviceExtension("ALC_SOFT_HRTF"))
++            {
++                Span<int> attributes = stackalloc int[]
++                {
++                    AlcHrtfSoft, AlcTrue,
++                    0,
++                };
++
++                fixed (int* ptr = attributes)
++                {
++                    _openALContext = ALC.CreateContext(_openALDevice, ptr);
++                }
++
++                if (_openALContext == ALContext.Null)
++                {
++                    OpenALSawmill.Warning("OpenAL HRTF context creation failed; falling back to the default context.");
++                    _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++                }
++            }
++            else
++            {
++                _openALContext = ALC.CreateContext(_openALDevice, (int*) 0);
++            }
+         }
+ 
+         ALC.MakeContextCurrent(_openALContext);
+@@ -65,6 +90,7 @@ internal sealed partial class AudioManager : IAudioInternal
+         OpenALSawmill.Debug("OpenAL Vendor: {0}", AL.Get(ALGetString.Vendor));
+         OpenALSawmill.Debug("OpenAL Renderer: {0}", AL.Get(ALGetString.Renderer));
+         OpenALSawmill.Debug("OpenAL Version: {0}", AL.Get(ALGetString.Version));
++        OpenALSawmill.Info("OpenAL HRTF request: {0}", HasAlDeviceExtension("ALC_SOFT_HRTF") ? "enabled" : "driver extension unavailable");
+     }
+ 
+     private bool _audioOpenDevice()
 diff --git a/Robust.Client/Audio/AudioSystem.Limits.cs b/Robust.Client/Audio/AudioSystem.Limits.cs
 index 9373e5ba5..d1a8e6582 100644
 --- a/Robust.Client/Audio/AudioSystem.Limits.cs
@@ -86,53 +139,52 @@ index 9373e5ba5..d1a8e6582 100644
      {
          if (!_playingCount.TryGetValue(sound, out var count))
 diff --git a/Robust.Client/Audio/AudioSystem.cs b/Robust.Client/Audio/AudioSystem.cs
-index d9f29054d..e5ed863bf 100644
+index d9f29054d..e0fa8e215 100644
 --- a/Robust.Client/Audio/AudioSystem.cs
 +++ b/Robust.Client/Audio/AudioSystem.cs
-@@ -253,7 +253,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -183,6 +183,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
+         var totalLen = GetAudioLengthImpl(entity.Comp.FileName).TotalSeconds;
+         var position = CalculateAudioPosition(entity, (float) totalLen);
+ 
++        if (PsychoacousticAudioModel.ShouldPreserveTransientPlayback(
++                component.Params.PsychoacousticProfile,
++                component.Params.Bus,
++                (float) totalLen,
++                component.Params.Loop))
++        {
++            return;
++        }
++
+         var currentPosition = entity.Comp.Source.PlaybackPosition;
+         var diff = Math.Abs(position - currentPosition);
+ 
+@@ -252,8 +261,16 @@ public sealed partial class AudioSystem : SharedAudioSystem
+ 
          // If audio came into range then start playback at the correct position.
          var offset = CalculateAudioPosition(entity, (float) length.Value.TotalSeconds);
++        if (PsychoacousticAudioModel.ShouldPreserveTransientPlayback(
++                component.Params.PsychoacousticProfile,
++                component.Params.Bus,
++                (float) length.Value.TotalSeconds,
++                component.Params.Loop))
++        {
++            offset = 0f;
++        }
  
 -        if (TryAudioLimit(component.FileName))
 +        if (TryAudioLimit(entity, component.FileName))
          {
              var newSource = _audio.CreateAudioSource(audioResource);
  
-@@ -291,6 +291,11 @@ public sealed partial class AudioSystem : SharedAudioSystem
-         {
-             component.PlaybackPosition = offset;
-         }
-+
-+        // Replicated one-shots, like emotes, arrive through component startup instead
-+        // of the immediate local PlayEntity/PlayStatic path. Process them once now
-+        // so short transient sounds do not wait up to an audio tick before starting.
-+        ProcessStream(entity.Owner, component, Transform(entity.Owner), GetListenerCoordinates());
-     }
- 
-     private void OnAudioShutdown(EntityUid uid, AudioComponent component, ComponentShutdown args)
-@@ -374,11 +379,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
-         // TODO:
-         // I Originally tried to be fancier here but it caused audio issues so just trying
-         // to replicate the old behaviour for now.
--        if (!component.Started)
--        {
--            component.Started = true;
--            component.StartPlaying();
--        }
-+        var startPlayback = !component.Started;
- 
-         // If it's global but on another map (that isn't nullspace) then stop playing it.
-         if (component.Global)
-@@ -391,6 +392,8 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -391,6 +408,7 @@ public sealed partial class AudioSystem : SharedAudioSystem
  
              // Resume playing.
              component.Volume = component.Params.Volume;
 +            ApplyPsychoacousticMix(component, 0f, 0f);
-+            StartPlaybackIfNeeded(component, startPlayback);
              return;
          }
  
-@@ -436,18 +439,19 @@ public sealed partial class AudioSystem : SharedAudioSystem
+@@ -436,18 +454,20 @@ public sealed partial class AudioSystem : SharedAudioSystem
          }
  
          // Update audio occlusion
@@ -149,29 +201,19 @@ index d9f29054d..e5ed863bf 100644
 +            occlusion = GetOcclusion(listener, delta, distance, parentUid);
          }
  
-         // Update audio positions.
-         component.Position = worldPos;
+-        // Update audio positions.
+-        component.Position = worldPos;
++        // Update audio positions. Gain uses true metric distance, while the HRTF position is allowed
++        // to widen slightly for stronger left/right localization in dark rooms.
 +        ApplyPsychoacousticMix(component, distance, occlusion);
++        component.Position = GetPsychoacousticPosition(listener.Position, worldPos, delta, distance, component.Params);
  
          // Make race cars go NYYEEOOOOOMMMMM
          if (_physicsQuery.TryGetComponent(parentUid, out var physicsComp))
-@@ -457,6 +461,41 @@ public sealed partial class AudioSystem : SharedAudioSystem
-             var velocity = _physics.GetMapLinearVelocity(parentUid, physicsComp);
-             component.Velocity = velocity;
+@@ -459,6 +479,49 @@ public sealed partial class AudioSystem : SharedAudioSystem
          }
-+
-+        StartPlaybackIfNeeded(component, startPlayback);
-+    }
-+
-+    private static void StartPlaybackIfNeeded(AudioComponent component, bool startPlayback)
-+    {
-+        if (!startPlayback)
-+            return;
-+
-+        component.Started = true;
-+        component.StartPlaying();
-+    }
-+
+     }
+ 
 +    private void ApplyPsychoacousticMix(AudioComponent component, float distance, float rawOcclusion)
 +    {
 +        var parameters = component.Params;
@@ -194,10 +236,31 @@ index d9f29054d..e5ed863bf 100644
 +        component.Source.PsychoacousticGain = mix.Gain;
 +        component.Pitch = parameters.Pitch * mix.Pitch;
 +        component.Occlusion = mix.Occlusion;
-     }
- 
++    }
++
++    private static Vector2 GetPsychoacousticPosition(
++        Vector2 listener,
++        Vector2 source,
++        Vector2 delta,
++        float distance,
++        AudioParams parameters)
++    {
++        if (distance <= 0.05f || parameters.Bus is AudioBus.Music or AudioBus.Ambience)
++            return source;
++
++        var spread = PsychoacousticAudioModel.EvaluateSpatialSpread(
++            parameters.PsychoacousticProfile,
++            parameters.Bus,
++            parameters.FearIntensity,
++            distance);
++
++        return listener + delta * spread;
++    }
++
      /// <summary>
-@@ -769,10 +808,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
+     /// Gets the audio occlusion from the target audio entity to the listener's position.
+     /// </summary>
+@@ -769,10 +832,15 @@ public sealed partial class AudioSystem : SharedAudioSystem
      {
          source.Pitch = audioParams.Pitch;
          source.Volume = audioParams.Volume;
@@ -215,7 +278,7 @@ index d9f29054d..e5ed863bf 100644
  
      private void OnEntityCoordinates(PlayAudioPositionalMessage ev)
 diff --git a/Robust.Client/Audio/Sources/BaseAudioSource.cs b/Robust.Client/Audio/Sources/BaseAudioSource.cs
-index 91ac9aca0..bbd9c696f 100644
+index 91ac9aca0..02a93d55c 100644
 --- a/Robust.Client/Audio/Sources/BaseAudioSource.cs
 +++ b/Robust.Client/Audio/Sources/BaseAudioSource.cs
 @@ -32,6 +32,9 @@ public abstract class BaseAudioSource : IAudioSource
@@ -272,23 +335,32 @@ index 91ac9aca0..bbd9c696f 100644
          }
      }
  
-@@ -293,12 +312,13 @@ public abstract class BaseAudioSource : IAudioSource
-             var gain = MathF.Pow(cutoff, 0.1f);
+@@ -289,16 +308,19 @@ public abstract class BaseAudioSource : IAudioSource
+         set
+         {
+             _checkDisposed();
+-            var cutoff = MathF.Exp(-value * 1);
+-            var gain = MathF.Pow(cutoff, 0.1f);
++            // Perceptual room separation needs both spectral loss and direct-path loss.
++            // A wall should remove high frequencies first, then reduce the body of the sound.
++            var directGain = Math.Clamp(MathF.Exp(-value * 0.32f), 0.04f, 1f);
++            var highFrequencyGain = Math.Clamp(MathF.Exp(-value * 1.35f), 0.02f, 1f);
              if (IsEfxSupported)
              {
+-                SetOcclusionEfx(gain, cutoff);
 +                _occlusionDirectGain = 1f;
-                 SetOcclusionEfx(gain, cutoff);
++                SetOcclusionEfx(directGain, highFrequencyGain);
              }
              else
              {
 -                gain *= gain * gain;
 -                AL.Source(SourceHandle, ALSourcef.Gain, _gain * gain);
-+                _occlusionDirectGain = gain * gain * gain;
++                _occlusionDirectGain = directGain * MathF.Sqrt(highFrequencyGain);
 +                ApplyEffectiveGain();
              }
  
              _occlusion = value;
-@@ -384,6 +404,15 @@ public abstract class BaseAudioSource : IAudioSource
+@@ -384,6 +406,15 @@ public abstract class BaseAudioSource : IAudioSource
          AL.Source(SourceHandle, ALSourcei.EfxDirectFilter, FilterHandle);
      }
  
@@ -330,10 +402,10 @@ index e662046ee..90a8e78fc 100644
              // E.G you could have atlas 1 RSIs appear *before* you're done seeing atlas 2 RSIs.
 diff --git a/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs b/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs
 new file mode 100644
-index 000000000..6e789aa86
+index 000000000..1400c8da9
 --- /dev/null
 +++ b/Robust.Shared.Tests/Audio/PsychoacousticAudioModel_Test.cs
-@@ -0,0 +1,81 @@
+@@ -0,0 +1,133 @@
 +using NUnit.Framework;
 +using Robust.Shared.Audio;
 +
@@ -374,8 +446,60 @@ index 000000000..6e789aa86
 +
 +        Assert.Multiple(() =>
 +        {
++            Assert.That(concrete, Is.GreaterThan(1.8f));
 +            Assert.That(carpet, Is.GreaterThan(concrete));
 +            Assert.That(anechoic, Is.GreaterThan(carpet));
++        });
++    }
++
++    [Test]
++    public void ShortVoiceEventsPreserveLocalPlayback()
++    {
++        var preserve = PsychoacousticAudioModel.ShouldPreserveTransientPlayback(
++            PsychoacousticProfile.NonlinearVocalization,
++            AudioBus.Voice,
++            1.4f,
++            false);
++
++        var music = PsychoacousticAudioModel.ShouldPreserveTransientPlayback(
++            PsychoacousticProfile.ProceduralMusic,
++            AudioBus.Music,
++            1.4f,
++            false);
++
++        var longVoice = PsychoacousticAudioModel.ShouldPreserveTransientPlayback(
++            PsychoacousticProfile.NonlinearVocalization,
++            AudioBus.Voice,
++            12f,
++            false);
++
++        Assert.Multiple(() =>
++        {
++            Assert.That(preserve, Is.True);
++            Assert.That(music, Is.False);
++            Assert.That(longVoice, Is.False);
++        });
++    }
++
++    [Test]
++    public void FearProfilesWidenSpatialCueWithoutMovingAmbience()
++    {
++        var threat = PsychoacousticAudioModel.EvaluateSpatialSpread(
++            PsychoacousticProfile.LoomingThreat,
++            AudioBus.Sfx,
++            1f,
++            4f);
++
++        var ambience = PsychoacousticAudioModel.EvaluateSpatialSpread(
++            PsychoacousticProfile.ProceduralMusic,
++            AudioBus.Ambience,
++            1f,
++            4f);
++
++        Assert.Multiple(() =>
++        {
++            Assert.That(threat, Is.GreaterThan(1.1f));
++            Assert.That(ambience, Is.EqualTo(1f).Within(0.1f));
 +        });
 +    }
 +
@@ -544,10 +668,10 @@ index 2cb473984..2fb24cd64 100644
      /// </summary>
 diff --git a/Robust.Shared/Audio/PsychoacousticAudio.cs b/Robust.Shared/Audio/PsychoacousticAudio.cs
 new file mode 100644
-index 000000000..fae7c204f
+index 000000000..1d82a141f
 --- /dev/null
 +++ b/Robust.Shared/Audio/PsychoacousticAudio.cs
-@@ -0,0 +1,275 @@
+@@ -0,0 +1,337 @@
 +using System;
 +using System.Diagnostics.Contracts;
 +using Robust.Shared.Serialization;
@@ -642,6 +766,7 @@ index 000000000..fae7c204f
 +    public const int MaxActiveVoices = 128;
 +    public const float NearFieldRadius = 0.3f;
 +    public const float SpeedOfSound = 343f;
++    public const float TransientVocalMaxLength = 8f;
 +
 +    /// <summary>
 +    /// Returns a static bus definition. The DSP chain describes the intended processing order:
@@ -666,6 +791,8 @@ index 000000000..fae7c204f
 +    /// <summary>
 +    /// Physically grounded distance gain: inverse-square energy with perceptual log compression.
 +    /// A bounded near-field term reinforces intimate sounds inside 30 cm without exploding to infinity.
++    /// The exponent is intentionally more selective than ordinary SS14 audio so footsteps and screams
++    /// carry a clearer "distance to danger" gradient during dark-room playtests.
 +    /// </summary>
 +    [Pure]
 +    public static float EvaluateDistanceGain(float distance, float referenceDistance, float maxDistance, float rolloff)
@@ -679,7 +806,7 @@ index 000000000..fae7c204f
 +        var safeReference = MathF.Max(referenceDistance, 0.05f);
 +        var safeDistance = MathF.Max(distance, safeReference);
 +        var inverseSquare = safeReference * safeReference / (safeDistance * safeDistance);
-+        var perceptual = MathF.Pow(inverseSquare, 0.38f * MathF.Max(rolloff, 0.01f));
++        var perceptual = MathF.Pow(inverseSquare, 0.58f * MathF.Max(rolloff, 0.01f));
 +
 +        if (distance < NearFieldRadius)
 +        {
@@ -714,13 +841,72 @@ index 000000000..fae7c204f
 +
 +    /// <summary>
 +    /// Smooth occlusion curve: each wall hit contributes a 6 dB/octave low-pass perceptually,
-+    /// represented here as a continuous OpenAL low-pass intensity.
++    /// represented here as a continuous OpenAL low-pass intensity. The material term is deliberately
++    /// super-linear: one concrete wall should be obvious, while multiple rooms must feel physically
++    /// detached rather than merely quieter.
 +    /// </summary>
 +    [Pure]
 +    public static float EvaluateOcclusion(float rayOcclusion, AcousticMaterialProfile material)
 +    {
-+        var materialWeight = 1f + MaterialAbsorption(material);
++        var materialWeight = 1.75f + MaterialAbsorption(material) * 0.75f;
 +        return Math.Clamp(rayOcclusion * materialWeight, 0f, 8f);
++    }
++
++    /// <summary>
++    /// Short vocal sounds are perceptual events, not synchronized music stems. If a remote emote
++    /// arrives late, seeking to the authoritative elapsed time removes the attack transient and reads
++    /// as "cut audio". These profiles preserve local first-playback continuity instead.
++    /// </summary>
++    [Pure]
++    public static bool ShouldPreserveTransientPlayback(PsychoacousticProfile profile, AudioBus bus, float lengthSeconds, bool loop)
++    {
++        if (loop || lengthSeconds <= 0f || lengthSeconds > TransientVocalMaxLength)
++            return false;
++
++        if (bus == AudioBus.Voice)
++            return true;
++
++        return profile is PsychoacousticProfile.NonlinearVocalization
++            or PsychoacousticProfile.BreathCough
++            or PsychoacousticProfile.WhisperOccluded;
++    }
++
++    /// <summary>
++    /// Expands positional sources slightly in listener space before they reach OpenAL HRTF. Gain still
++    /// uses the real distance, so this only sharpens interaural timing/intensity cues. The result is the
++    /// "8D" player request translated into deterministic spatialization rather than rotating gimmicks.
++    /// </summary>
++    [Pure]
++    public static float EvaluateSpatialSpread(
++        PsychoacousticProfile profile,
++        AudioBus bus,
++        float fearIntensity,
++        float distance)
++    {
++        if (distance <= 0.05f)
++            return 1f;
++
++        var safeFear = Math.Clamp(fearIntensity, 0f, 1f);
++        var nearThreat = Math.Clamp(1f - distance / 14f, 0f, 1f);
++        var busWeight = bus switch
++        {
++            AudioBus.Voice => 0.22f,
++            AudioBus.Sfx => 0.18f,
++            AudioBus.FearLayer => 0.16f,
++            _ => 0.08f,
++        };
++
++        var profileWeight = profile switch
++        {
++            PsychoacousticProfile.LoomingThreat => 0.28f,
++            PsychoacousticProfile.NonlinearVocalization => 0.24f,
++            PsychoacousticProfile.BreathCough => 0.18f,
++            PsychoacousticProfile.WhisperOccluded => 0.14f,
++            PsychoacousticProfile.BallisticCrack => 0.12f,
++            _ => 0f,
++        };
++
++        return Math.Clamp(1f + (busWeight + profileWeight) * (0.35f + safeFear * 0.65f) * nearThreat, 1f, 1.75f);
 +    }
 +
 +    /// <summary>
@@ -758,7 +944,7 @@ index 000000000..fae7c204f
 +        {
 +            case PsychoacousticProfile.NonlinearVocalization:
 +                gain *= 1f + 0.20f * safeFear;
-+                pitch *= 1f + 0.018f * safeFear;
++                pitch *= 1f + 0.035f * MathF.Sin(seconds * 91f + safeFear * 13f);
 +                priority += 0.10f;
 +                break;
 +            case PsychoacousticProfile.InfrasoundCarrier:
@@ -768,7 +954,7 @@ index 000000000..fae7c204f
 +                break;
 +            case PsychoacousticProfile.RoughnessStinger:
 +                gain *= 1f + 0.33f * safeFear;
-+                pitch *= 1f + 0.010f * safeFear;
++                pitch *= 1f + 0.018f * MathF.Sin(seconds * 38f);
 +                priority += 0.18f;
 +                break;
 +            case PsychoacousticProfile.LoomingThreat:
@@ -808,7 +994,7 @@ index 000000000..fae7c204f
 +                break;
 +            case PsychoacousticProfile.VentResonance:
 +                gain *= 0.72f;
-+                pitch *= 0.99f;
++                pitch *= 1f + 0.02f * MathF.Sin(seconds * SpeedOfSound / 8f);
 +                rawOcclusion += 0.45f;
 +                priority += 0.05f;
 +                break;

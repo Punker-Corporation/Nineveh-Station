@@ -16,98 +16,83 @@ stack-reinforced-uranium-glass = vidro de urânio reforçado
 stack-gunpowder = pó
 stack-cardboard = cartão
 stack-phosphorus = pó de fósforo
-stack-bones = 
-    { $amount -> 
-    [1] кость
-   *[other] кости
- }
-stack-cloth = 
-    { $amount -> 
-    [1] ткань
-   *[other] ткани
- }
-stack-lv-cable = 
-    { $amount -> 
-    [1] низковольтный кабель
-   *[other] низковольтные кабели
- }
-stack-mv-cable = 
-    { $amount -> 
-    [1] средневольтный кабель
-   *[other] средневольтные кабели
- }
-stack-hv-cable = 
-    { $amount -> 
-    [1] высоковольтный кабель
-   *[other] высоковольтные кабели
- }
-stack-wood-plank = 
-    { $amount -> 
-    [1] деревянная доска
-   *[other] деревянные доски
- }
-stack-durathread = 
-    { $amount -> 
-    [1] дюранить
-   *[other] дюранити
- }
-stack-rods = 
-    { $amount -> 
-    [1] стержень
-   *[other] стержни
- }
-stack-meat-sheet = 
-    { $amount -> 
-    [1] мясной лист
-   *[other] мясные листы
- }
-stack-space-carp-tooth = 
-    зуб космического карпа { $amount -> 
-    [1] зуб
-   *[other] зубы
- }
-stack-paper = 
-    { $amount -> 
-    [1] бумага
-   *[other] бумага
- }
-stack-diamond = 
-    { $amount -> 
-    [1] алмаз
-   *[other] алмазы
- }
-stack-silk = 
-    { $amount -> 
-    [1] шёлк
-   *[other] шелка
- }
-stack-cotton = 
-    { $amount -> 
-    [1] хлопок
-   *[other] хлопка
- }
-stack-artifact-fragment = 
-    фрагмент { $amount -> 
-    [1] артефакта
-   *[other] артефактов
- }
-# best materials
+stack-bones = {$amount ->
+    [1] osso
+    *[other] ossos
+}
+stack-cloth = {$amount ->
+    [1] pano
+    *[other] panos
+}
+stack-lv-cable = {$amount ->
+    [1] LV cabo
+    *[other] Cabos lv
+}
+stack-mv-cable = {$amount ->
+    [1] cabo mv
+    *[other] Cabos mv
+}
+stack-hv-cable = {$amount ->
+    [1] cabo hv
+    *[other] Cabos hv
+}
+stack-wood-plank = {$amount ->
+    [1] Folha de madeira
+    *[other] tábuas de madeira
+}
+stack-durathread = {$amount ->
+    [1] durathread
+    *[other] durathreads
+}
+stack-rods = {$amount ->
+    [1] to
+    *[other] varetas
+}
+stack-meat-sheet = {$amount ->
+    [1] Folha de carne
+    *[other] folhas de carne
+}
+stack-space-carp-tooth = carpa espacial {$amount ->
+    [1] dente
+    *[other] dentes
+}
+stack-paper = {$amount ->
+    [1] papel
+    *[other] papéis
+}
+stack-diamond = {$amount ->
+    [1] diamante
+    *[other] diamantes
+}
+stack-silk = {$amount ->
+    [1] Seda
+    *[other] Sedas
+}
+stack-cotton = {$amount ->
+    [1] algodão
+    *[other] algodão
+}
+stack-artifact-fragment = artefacto {$amount ->
+    [1] fragmento
+    *[other] fragmentos
+}
+
+# melhores materiais
 stack-ground-tobacco = tabaco moído
 stack-ground-cannabis = cannabis moída
 stack-ground-rainbow-cannabis = cannabis arco-íris moída
 stack-dried-tobacco-leaves = folhas secas de tabaco
 stack-dried-cannabis-leaves = folhas secas de cannabis
 stack-dried-rainbow-cannabis-leaves = folhas secas de cannabis arco-íris
-stack-cigarette-filter = 
-    сигаретный { $amount -> 
-    [1] фильтр
-   *[other] фильтры
- }
-stack-rolling-paper = 
-    { $amount -> 
-    [1] бумага для самокруток
-   *[other] бумага для самокруток
- }
+stack-cigarette-filter = Cigarro {$amount ->
+    [1] filtro
+    *[other] filtros
+}
+stack-rolling-paper = roll {$amount ->
+    [1] papel
+    *[other] papéis
+}
+
 stack-fulton = Fulton
 stack-credit = peso
 stack-plasma = plasma
@@ -132,33 +117,33 @@ stack-ointment = pomada
 stack-aloe-cream = creme de aloe vera
 stack-gauze = gaze
 stack-brutepack = conjunto de força bruta
-stack-blueointment = 
-    { $amount -> 
+stack-blueointment =
+    { $amount ->
     [1] blueointment
    *[other] blueointments
  }
-stack-redointment = 
-    { $amount -> 
+stack-redointment =
+    { $amount ->
     [1] redointment
    *[other] redointments
  }
-stack-redbrutepack = 
-    { $amount -> 
+stack-redbrutepack =
+    { $amount ->
     [1] redbrutepack
    *[other] redbrutepacks
  }
-stack-redpunctpack = 
-    { $amount -> 
+stack-redpunctpack =
+    { $amount ->
     [1] redpunctpack
    *[other] redpunctpacks
  }
-stack-redlacepack = 
-    { $amount -> 
+stack-redlacepack =
+    { $amount ->
     [1] redlacepack
    *[other] redlacepacks
  }
-stack-redbruizpack = 
-    { $amount -> 
+stack-redbruizpack =
+    { $amount ->
     [1] redbruizpack
    *[other] redbruizpacks
  }
@@ -281,3 +266,26 @@ stack-xeno-steel-corner = telha de canto de aço xeno
 stack-xenoborg = azulejo xenoborg
 stack-xeno-maint = zona xeno-tecnologia
 stack-dark-squiggly = telhas onduladas de aço escuro
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+stack-explosive-cord = {$amount ->
+    [1] cabo explosivo
+    *[other] cabos explosivos
+}
+
+stack-black-carpet-tile = azulejo preto do tapete
+
+stack-dark-astro-grass-floor = chão de astro- grama escuro
+
+stack-light-astro-grass-floor = chão de astro- grama leve
+
+stack-desert-astro-sand-floor = piso de areia astronómica do deserto
+
+stack-white-marble-floor = piso de mármore branco
+
+stack-dark-marble-floor = piso de mármore escuro
+
+stack-plasma-marble-floor = piso plasmarble
+
+stack-uranium-marble-floor = piso de mármore de urânio

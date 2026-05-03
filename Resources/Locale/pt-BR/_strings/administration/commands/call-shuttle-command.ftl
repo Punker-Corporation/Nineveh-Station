@@ -2,3 +2,13 @@ call-shuttle-command-description = Chama um trabalhador do transporte de evacua�
 call-shuttle-command-help-text = Uso: { $command } [m:ss]
 recall-shuttle-command-description = O transportador de evacuação está sendo recolhido.
 recall-shuttle-command-help-text = Uso: { $command }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-callshuttle-desc = Chama o vaivém de emergência com uma hora de chegada opcionalmente fornecida.
+
+cmd-callshuttle-help = Uso: callshuttle [m:ss]
+
+cmd-recallshuttle-desc = Chama a nave de emergência.
+
+cmd-recallshuttle-help = Uso: recallshuttle

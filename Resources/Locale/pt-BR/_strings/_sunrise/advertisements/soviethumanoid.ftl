@@ -1,0 +1,16 @@
+advertisement-soviethumanoid-veteran-1 = Esquadrão, mantenham a formação. Nós seguimos a doutrina.
+advertisement-soviethumanoid-veteran-2 = Equipa lidera, confirma sectores e informa.
+advertisement-soviethumanoid-veteran-3 = Primeiro assalto à equipa, segunda cobertura.
+advertisement-soviethumanoid-veteran-4 = Manter a disciplina, sem improvisação.
+advertisement-soviethumanoid-veteran-5 = Alvos prioritários: agente, médico, pesado.
+advertisement-soviethumanoid-veteran-6 = Flancos seguros, avanços centrais.
+advertisement-soviethumanoid-veteran-7 = Preparar fogo cruzado, manter espaçamento.
+advertisement-soviethumanoid-veteran-8 = Rádio tráfego curto: fato, coordenar, tarefa.
+advertisement-soviethumanoid-veteran-9 = Manobra ao meu sinal. Confirmar prontidão.
+advertisement-soviethumanoid-veteran-10 = A equipa médica fica reservada até ser ordenada.
+advertisement-soviethumanoid-veteran-11 = Reforços, segurem o corredor direito.
+advertisement-soviethumanoid-veteran-12 = Aumentar as verificações de canto, limpar os níveis superiores.
+advertisement-soviethumanoid-veteran-13 = Regresso organizado por grupos de capa.
+advertisement-soviethumanoid-veteran-14 = Mantenham a posição até novas ordens.
+advertisement-soviethumanoid-veteran-15 = Pessoal, verifiquem as munições e o estado.
+advertisement-soviethumanoid-veteran-16 = A tarefa mantém-se activa até que o sector esteja plenamente assegurado.

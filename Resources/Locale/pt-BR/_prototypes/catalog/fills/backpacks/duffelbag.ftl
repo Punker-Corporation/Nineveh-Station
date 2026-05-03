@@ -72,3 +72,8 @@ ent-ClothingBackpackDuffelSyndicateOperative = mochila de operativo
     .desc = { ent-ClothingBackpackDuffelSyndicateBundle.desc }
 ent-ClothingBackpackDuffelSyndicateOperativeMedic = mochila de agente médico
     .desc = Bolsa grande para armazenar equipamentos médicos adicionais.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackDuffelSyndicateFilledLMGMax = L6 Conjunto de serras (máx.)
+    .desc = { ent-ClothingBackpackDuffelSyndicateFilledLMG.desc }

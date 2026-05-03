@@ -1,5 +1,5 @@
-ent-ParticleAcceleratorEndCap = tampa final UC
-    .desc = Oficialmente conhecido como Alpha Particle Generation Array. Aqui as partículas alfa são geradas a partir de [УДАЛЕНО].
-ent-ParticleAcceleratorEndCapUnfinished = tampa final UC
-    .desc = Oficialmente conhecido como Alpha Particle Generation Array. Aqui as partículas alfa são geradas a partir de [УДАЛЕНО]. Parece inacabado.
+ent-ParticleAcceleratorEndCap = End-cap PA
+    .desc = Formalmente conhecido como o Array de Geração de Partículas Alfa. É onde as partículas alfa são geradas a partir de [REDACTED].
+ent-ParticleAcceleratorEndCapUnfinished = End-cap PA
+    .desc = Formalmente conhecido como o Array de Geração de Partículas Alfa. É onde as partículas alfa são geradas a partir de [REDACTED]. Parece inacabado.
     .suffix = Inacabado

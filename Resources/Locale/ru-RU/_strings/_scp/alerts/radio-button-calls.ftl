@@ -1,56 +1,57 @@
-﻿# Названия и описания сущностей
-ent-BaseRadioButtonCall = кнопка радиовызова
-    .desc = Простая и удобная кнопка для вызова помощи.
+# Entity Names & Descriptions
+ent-BaseRadioCallButton = Кнопка радиосвязи
+    .desc = Простая и удобная кнопка вызова помощи.
 
-ent-BaseEmergencyRadioButtonCall = аварийная кнопка радиовызова
-    .desc = Кнопка для экстренного вызова помощи.
+ent-CallButtonMedicalService = Медицинская кнопка вызова
+    .desc = Кнопка вызова медицинской помощи.
 
-ent-ButtonCallMedicalService = кнопка вызова медицинской службы
-    .desc = Кнопка для вызова помощи медицинской службы.
-ent-ButtonCallScientificService = кнопка вызова научной службы
-    .desc = Кнопка для вызова помощи научной службы.
-ent-ButtonCallEngineeringTechnicalService = кнопка вызова инженерно-технической службы
-    .desc = Кнопка для вызова помощи инженерно-технической службы.
-ent-ButtonCallSpecialPurposeSquad = кнопка вызова отряда специального назначения
-    .desc = Кнопка для вызова помощи отряда специального назначения.
-ent-ButtonCallFoodAndSanitationService = кнопка вызова службы питания и санитарии
-    .desc = Кнопка для вызова помощи службы питания и санитарии.
-ent-ButtonCallLogisticsService = кнопка вызова службы логистики
-    .desc = Кнопка для вызова помощи службы логистики.
-ent-ButtonCallCommandantSquad = кнопка вызова отряда комендатуры
-    .desc = Кнопка для вызова помощи отряда комендатуры.
-ent-ButtonCallEthicsCommittee = кнопка вызова Комитета по этике
-    .desc = Кнопка для вызова содействия Комитета по этике.
+ent-CallButtonScientificService = Научная кнопка вызова
+    .desc = Кнопка для вызова научной помощи.
 
-ent-ButtonCallDClassRequest = кнопка запроса персонала класса D
-    .desc = Кнопка для запроса персонала класса D.
+ent-CallButtonEngineeringTechnicalService = Инженерно-техническая кнопка вызова
+    .desc = Кнопка вызова технической технической помощи.
 
-ent-ButtonCallEmergencyMedicalService = кнопка экстренного вызова медицинской службы
-    .desc = Кнопка для экстренного вызова помощи медицинской службы. При активации активирует тревогу и экстренно вызывает заданную службу в точку.
-ent-ButtonCallEmergencySpecialPurposeSquad = кнопка экстренного вызова отряда специального назначения
-    .desc = Кнопка для экстренного вызова помощи отряда специального назначения. При активации активирует тревогу и экстренно вызывает заданную службу в точку.
-ent-ButtonCallEmergencyEngineeringTechnicalService = кнопка экстренного вызова инженерно-технической службы
-    .desc = Кнопка для экстренного вызова помощи инженерно-технической службы. При активации активирует тревогу и экстренно вызывает заданную службу в точку.
-ent-ButtonCallEmergencyCommandantSquad = кнопка экстренного вызова отряда комендатуры
-    .desc = Кнопка для экстренного вызова помощи отряда комендатуры. При активации активирует тревогу и экстренно вызывает заданную службу в точку.
+ent-CallButtonSpecialPurposeSquad = Кнопка вызова специального назначения
+    .desc = Кнопка вызова отряда специального назначения.
 
-# Экстренные сообщения
-scp-emergency-medical-service-call = ТРЕВОГА! Требуется немедленная помощь медицинской службы в: {$location}!
-scp-emergency-engineering-technical-service-call = ТРЕВОГА! Требуется немедленная помощь инженерно-технической службы в: {$location}!
-scp-emergency-special-purpose-squad-call = ТРЕВОГА! Требуется немедленная помощь отряда специального назначения в: {$location}!
-scp-emergency-commandant-squad-call = ТРЕВОГА! Требуется немедленная помощь отряда комендатуры в: {$location}!
+ent-CallButtonFoodAndSanitationService = Кнопка вызова службы питания и санитарии
+    .desc = Кнопка для вызова продовольственной и санитарной помощи.
 
-# Сообщения в радиоэфире
-scp-medical-service-call = Требуется помощь медицинской службы в: {$location}!
-scp-logistics-service-call = Требуется помощь службы логистики в: {$location}!
-scp-engineering-technical-service-call = Требуется помощь инженерно-технической службы в: {$location}!
-scp-scientific-service-call = Требуется помощь научной службы в: {$location}!
-scp-special-purpose-squad-call = Требуется помощь отряда специального назначения в: {$location}!
-scp-food-and-sanitation-service-call = Требуется помощь службы питания и санитарии в: {$location}!
-scp-commandant-squad-call = Требуется помощь отряда комендатуры в: {$location}!
-scp-ethics-committee-call = Требуется содействие Комитета по этике в: {$location}!
-scp-d-class-request = Требуется персонал класса D в: {$location}!
+ent-CallButtonLogisticsService = Логистическая кнопка вызова
+    .desc = Кнопка вызова логистической помощи.
 
-scp-radio-button-location-examine = Точка вызова службы: {$location}
+ent-CallButtonCommandantSquad = Кнопка вызова командного отряда
+    .desc = Кнопка вызова командного отряда помощи.
+
+ent-CallButtonEthicsCommittee = Комитет по этике нажимает кнопку
+    .desc = Кнопка вызова комитета по этике.
+
+ent-CallButtonEmergencyMedicalService = Кнопка вызова экстренной медицинской помощи
+    .desc = Кнопка вызова экстренной медицинской помощи.
+
+ent-CallButtonEmergencyEngineeringTechnicalService = Кнопка вызова экстренной инженерно-технической службы
+    .desc = Кнопка вызова экстренной инженерно-технической помощи.
+
+ent-CallButtonEmergencySpecialPurposeSquad = Кнопка экстренного вызова специального назначения
+    .desc = Кнопка вызова экстренной помощи отряда специального назначения.
+
+# Emergency Messages
+scp-emergency-medical-service-call = ЭМЕРГЕНЦИЯ! Немедленная медицинская помощь, необходимая в  0!
+scp-emergency-engineering-technical-service-call = ЭМЕРГЕНЦИЯ! Немедленная инженерно-техническая помощь требуется на  0!
+scp-emergency-special-purpose-squad-call = ЭМЕРГЕНЦИЯ! Немедленная помощь отряда специального назначения требуется в  0!
+scp-emergency-commandant-squad-call = ЭМЕРГЕНЦИЯ! Немедленная помощь командного отряда в  0!
+
+# Radio Messages
+scp-medical-service-call = Медицинская помощь, необходимая в  0!
+scp-logistics-service-call = Помощь в логистике требуется на s0s!
+scp-engineering-technical-service-call = Инженерно-техническая помощь требуется на  0!
+scp-scientific-service-call = Научная помощь требуется в  0!
+scp-special-purpose-squad-call = Помощь отряда специального назначения требуется на  0!
+scp-food-and-sanitation-service-call = Продовольственная и санитарно-техническая помощь по адресу  0!
+scp-commandant-squad-call = Командировке требуется помощь в  0!
+scp-ethics-committee-call = Помощь комитета по этике требуется на  0!
+scp-d-class-request = Требуется персонал класса D в  0!
+
+scp-radio-button-location-examine = Цель вызова службы:  0
 scp-radio-button-unknown-location = Неизвестное местоположение
-scp-radio-button-request-sent = Ваш запрос отправлен
+scp-radio-button-request-sent = Ваш запрос был отправлен

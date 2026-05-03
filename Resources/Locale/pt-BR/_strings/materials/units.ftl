@@ -19,3 +19,10 @@ materials-unit-chunk = pedaços de minério
 # bills of spesos... not very good but they are not (yet?) used for crafting anything
 # also the lathe/atm would need bigger denominations to output...
 materials-unit-bill = notas
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+materials-unit-boll = boll
+
+# notas de spesos... não muito bom, mas eles não são (ainda?) usados para a criação de qualquer coisa
+# também o torno /atm precisaria de denominações maiores para a saída...

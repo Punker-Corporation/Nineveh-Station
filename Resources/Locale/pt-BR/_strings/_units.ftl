@@ -40,12 +40,13 @@ units-si-y-long = um pouco
 
 ## Pascals (Pressure)
 
-units-u--pascal = µPa
+units-u--pascal = μPa
 units-m--pascal = mPa
 units-pascal = Pai
 units-k-pascal = kPa
 units-m-pascal = MPa
 units-g-pascal = GPa
+
 units-u--pascal-long = micropascal
 units-m--pascal-long = milipascal
 units-pascal-long = Pascal
@@ -55,12 +56,13 @@ units-g-pascal-long = gigapascal
 
 ## Watts (Power)
 
-units-u--watt = µW
+units-u--watt = μW
 units-m--watt = mW
 units-watt = C
 units-k-watt = kW
 units-m-watt = PM
 units-g-watt = GW
+
 units-u--watt-long = microwatt
 units-m--watt-long = miliwatt
 units-watt-long = watt
@@ -75,6 +77,7 @@ units-m--joule = mJ
 units-joule = J.
 units-k-joule = kJ
 units-m-joule = MJ
+
 units-u--joule-long = microjoule
 units-m--joule-long = milijoule
 units-joule-long = joule

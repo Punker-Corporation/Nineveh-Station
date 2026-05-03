@@ -69,3 +69,9 @@ ui-options-scp-game-auto-open-character-window-enabled-tooltip =
     Define se o menu do personagem será aberto automaticamente ao assumir um novo cargo.
    Se você nunca jogou com este cargo antes, o menu exibirá informações básicas sobre seu personagem e sua função.
    Nas entradas subsequentes, o menu deixará de abrir automaticamente.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ui-options-field-of-view-blur-enabled = Activar o borrão do FOV
+
+ui-options-field-of-view-blur-enabled-tooltip = Borra a área fora do seu campo de visão. Desabilitar para melhor desempenho ou se você encontrá-lo distrair.

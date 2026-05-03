@@ -1,7 +1,7 @@
 marking-HumanHairAfro = Afro
 marking-HumanHairAfro2 = Afro 2
 marking-HumanHairBigafro = Afro (Grande)
-marking-HumanHairAntenna = Ahoge
+marking-HumanHairAntenna = Aoge
 marking-HumanHairBalding = Calvície
 marking-HumanHairBedhead = Descuidado
 marking-HumanHairBedheadv2 = Desleixado 2
@@ -197,3 +197,15 @@ marking-HumanHairVlongfringe = Muito curto (franja)
 marking-HumanHairVolaju = Wolaju
 marking-HumanHairWisp = Fios
 marking-HumanHairCatTail = Cauda (Gato)
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+marking-HumanHairBaby = Querida
+
+marking-HumanHairCube = Cubo
+
+marking-HumanHairBAlt = Cabelo do ombro (Over eye)
+
+marking-HumanHairLongWithBangs = Longo com Bangs
+
+marking-HumanHairOverEyePigtail = Pigtail (Olho por cima)

@@ -1,18 +1,20 @@
-station-map-window-title = Mapa complexo
-station-map-user-interface-flavor-left = Não entrar em pânico
+station-map-window-title = Mapa da estação
+station-map-user-interface-flavor-left = Não entres em pânico.
 station-map-user-interface-flavor-right = v1.42
-station-map-filter-placeholder = Pesquisar por nome
-nav-beacon-window-title = Complexo de faróis
+station-map-filter-placeholder = Procurar pelo nome
+station-map-unknown-station = Estação desconhecida
+
+nav-beacon-window-title = Beacon de Estação
 nav-beacon-toggle-visible = Visível
 nav-beacon-toggle-invisible = Invisível
-nav-beacon-text-label = Rótulo:
+nav-beacon-text-label = Legenda:
 nav-beacon-button-apply = Aplicar
-nav-beacon-examine-text = 
-    Маяк [color={ $enabled -> 
-    [true] forestgreen]включён
-   *[false] crimson]выключен
- }[/color], а на дисплее написано [color={ $color }]"{ $label }"[/color]
-nav-beacon-pos-no-beacons = desconhecido onde
-nav-beacon-pos-format = [color={ $color }]sobre { $marker }[/color]
-nav-beacon-pos-format-direction = [color={ $color }]{ $modifier } a { $direction } de { $marker }[/color]
-nav-beacon-pos-format-direction-mod-far = longe{ "" }
+nav-beacon-examine-text = É [color = {$enabled ->
+    [true] floresta verde] em
+    *[false] Crimson] off
+} [/color] e o ecrã lê [color={$color}] " {$label} " [/color]
+
+nav-beacon-pos-no-beacons = no meio do nada
+nav-beacon-pos-format = [color={$color}] perto de {$marker} [/color]
+nav-beacon-pos-format-direction = [color={$color}] {$modifier} {$direction} de {$marker} [/color]
+nav-beacon-pos-format-direction-mod-far = {""} distante

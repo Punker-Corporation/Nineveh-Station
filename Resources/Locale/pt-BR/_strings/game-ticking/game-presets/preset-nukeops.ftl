@@ -1,8 +1,8 @@
 nukeops-title = Operativos nucleares
 nukeops-description = Operativos nucleares têm como alvo a estação. Tente impedi-los de armar e detonar a bomba nuclear enquanto protege o disco nuclear!
-nukeops-welcome = 
-    Вы - ядерный оперативник. Ваша задача - взорвать { $station } и убедиться, что от неё осталась лишь груда обломков. Ваше руководство, Синдикат, снабдило вас всем необходимым для выполнения этой задачи.
-    Операция "{ $name }" началась! Смерть NanoTrasen!
+nukeops-welcome =
+    És um agente nuclear. Seu objetivo é explodir {$station}, e garantir que não é nada mais do que uma pilha de entulho. Seus chefes, o Sindicato, forneceram-lhe as ferramentas que você precisará para a tarefa.
+    A operação {$name} está pronta! Morte a NanoTrasen!
 nukeops-briefing = Suas tarefas são simples. Entregue a carga e evacue antes que ela detone. Comece.
 nukeops-opsmajor = [color=crimson]Grande vitória para o Sindicato![/color]
 nukeops-opsminor = [color=crimson]Pequena vitória para o Sindicato![/color]

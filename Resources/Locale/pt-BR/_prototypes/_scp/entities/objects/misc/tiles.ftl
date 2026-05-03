@@ -124,3 +124,14 @@ ent-ScpFloorAnechoic2 = { ent-ScpFloorAnechoic1 }
     .desc = { ent-ScpFloorAnechoic1.desc }
 ent-ScpFloorAnechoic3 = { ent-ScpFloorAnechoic1 }
     .desc = { ent-ScpFloorAnechoic1.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpFloorTileItemWood = { ent-FloorTileItemWood }
+    .desc = { ent-FloorTileItemWood.desc }
+
+ent-ScpFloorTileItemWoodPattern = { ent-FloorTileItemWoodPattern }
+    .desc = { ent-FloorTileItemWoodPattern.desc }
+
+ent-ScpFloorTileItemWoodLarge = { ent-FloorTileItemWoodLarge }
+    .desc = { ent-FloorTileItemWoodLarge.desc }

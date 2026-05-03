@@ -5,3 +5,9 @@ add-uplink-command-completion-2 = Uplink uid (por padrão, este é um PDA)
 add-uplink-command-completion-3 = Os descontos de uplink estão incluídos? (verdadeiro/falso)
 add-uplink-command-error-1 = O jogador selecionado não possui entidade controlada
 add-uplink-command-error-2 = Falha ao adicionar uplink ao player
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-adduplink-desc = Cria uplink no item selecionado e liga- o à conta dos usuários
+
+cmd-adduplink-help = Uso: adduplink [username] [item-id] [discountEnabled]

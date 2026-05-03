@@ -1,1148 +1,1148 @@
 station-goal-fax-paper-name = papel
-station-goal-shuttle = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+station-goal-shuttle =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-     Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+     Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-     Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+     Por esta ordem, de acordo com as “Disposições Gerais para a Notificação da Sede Setorial de Comando” e as “Regras para a Priorização das Instruções (Ordenações)”, com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a atual mudança para o Comando do seu objeto.
 
-    ⠀В рамках программы по расширению логистических возможностей корпорации в данном секторе, вам поручается создание нового транспортного средства.
+    Como parte do programa para expandir as capacidades logísticas da corporação neste setor, é-lhe confiada a criação de um novo veículo.
 
-    ⠀Ваша Цель смены — [bold]постройка пилотируемого шаттла[/bold].
+    Seu propósito da mudança [bold]construção de vaivém[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] осуществить постройку шаттла с нуля на обшивке станции. Габаритные размеры шаттла должны быть не менее 5×10.
-    ⠀— [bold]Научному отделу:[/bold] разработать необходимые платы и технологии.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] после постройки подать отчет и запрос на регистрацию судна.
+    ⠀— [bold]Engenharia:[/bold] construir um vaivém do zero na pele da estação. As dimensões globais do vaivém devem ser pelo menos 5×10.
+    ⠀— [bold]Departamento de Ciência:[/bold] desenvolver os quadros e tecnologias necessários.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Após a construção, apresentar um relatório e solicitar o registo do navio.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Ciência, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-singularity = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-singularity =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для обеспечения энергетической независимости и демонстрации технологического превосходства корпорации, вам поручается запуск высокомощного источника энергии.
+    Para garantir a independência energética e demonstrar a superioridade tecnológica da corporação, é-lhe confiado o lançamento de uma fonte de energia de alta potência.
 
-    ⠀Ваша Цель смены — [bold]постройка генератора основанного на сверхмассивной сингулярности[/bold].
+    Seu propósito da mudança [bold]construir um gerador baseado numa singularidade supermassiva[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить с нуля клетку, способную сдерживать сингулярность третьего класса. Клетка должна иметь тройной слой защиты, состоящий из двух слоёв укреплённых стен и слоя сетки.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] construir do zero uma célula que possa conter uma singularidade de terceira classe. A célula deve ter uma tripla camada de proteção, composta por duas camadas de paredes fortificadas e uma camada de malha.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-solar-panels = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-solar-panels =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В рамках директивы по повышению отказоустойчивости корпоративных объектов, вам надлежит создать резервную энергосистему.
+    Como parte da diretiva para melhorar a tolerância de falhas das instalações corporativas, você deve criar um sistema de energia de backup.
 
-    ⠀Ваша Цель смены — [bold]постройка системы запасного питания для станции на основе солнечных панелей[/bold].
+    Seu propósito da mudança [bold]construção de um sistema de energia sobresselente para a estação à base de painéis solares[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить две солнечные ветки с защитой от метеоритов в виде слоя сетки. Энергию от панелей направить в три новых СМЭСа, подключенных к общей сети станции. Отдача энергии на данных СМЭСах должна быть отключена.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] construir dois ramos solares com proteção contra meteoritos na forma de uma camada de grade. A energia dos painéis é enviada para três novas PME ligadas à rede comum da estação. A produção de energia nestas PME deve ser desligada.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-artifacts = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-artifacts =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀С целью пополнения корпоративных банков данных и поиска новых технологических решений, необходимо активизировать исследования внеземных объектов.
+    Para reabastecer os bancos de dados corporativos e buscar novas soluções tecnológicas, é necessário intensificar a pesquisa sobre objetos extraterrestres.
 
-    ⠀Ваша Цель смены — [bold]исследовать и доставить космические артефакты[/bold].
+    Seu propósito da mudança [bold]explorar e entregar artefatos espaciais[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Отделу Снабжения:[/bold] требуется добыть минимум два космических артефакта и обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]Научному отделу:[/bold] изучить и задокументировать свойства добытых артефактов.
-    ⠀— [bold]ВАЖНО:[/bold] данные артефакты необходимо полностью изучить и доставить вместе с их заверенной документацией на станцию трансфера.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Devem ser extraídos pelo menos dois artefactos espaciais e devem ser fornecidos todos os materiais necessários.
+    ⠀— [bold]Departamento de Ciência:[/bold] Estudar e documentar as propriedades dos artefatos.
+    ⠀— [bold]IMPORTANTE:[/bold] Estes artefatos devem ser totalmente estudados e entregues juntamente com sua documentação certificada para a estação de transferência.
 
-    ⠀Ответственные за цель: [bold]Научный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Pesquisa, Departamento de Abastecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-bank = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-bank =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В рамках программы создания резервных фондов на случай непредвиденных обстоятельств, вам поручается создание склада длительного хранения.
+    Como parte do programa de fundo de reserva de contingência, é-lhe confiada a criação de um armazém de armazenamento a longo prazo.
 
-    ⠀Ваша Цель смены — [bold]постройка орбитального хранилища с припасами и технологиями[/bold].
+    Seu propósito da mudança [bold]construção de uma instalação de armazenamento orbital com suprimentos e tecnologias[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить отдельно от станции хранилище с слоем укреплённых стен и слоем сетки.
-    ⠀— [bold]Медицинскому отделу:[/bold] собрать медкомлекты, состоящии из таблеток и средств наружного применения, от каждого вида повреждений и перенести всё в хранилище.
-    ⠀— [bold]Сервисному отделу:[/bold] приготовить двадцать блюд и 600u безалкогольных напитков, cоздать не менее трёх видов лучших генетически модифицированных семян по пять единиц каждого вида и перенести всё перечисленное в хранилище.
-    ⠀— [bold]Научному отделу:[/bold] изучить, изготовить и перенести в орбитальное хранилище минимум пять различных плат из числа технологий третьего уровня.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] необходимо обеспечить сохранность хранилища до конца смены.
+    ⠀— [bold]Engenharia:[/bold] Separado da estação, construa um repositório com uma camada de paredes fortificadas e uma camada de grade.
+    ⠀— [bold]Departamento Médico:[/bold] recolher kits médicos, constituídos por comprimidos e agentes externos, de cada tipo de dano e transferir tudo para o armazenamento.
+    ⠀— [bold]Serviços:[/bold] Preparar vinte pratos e 600u refrigerantes, criar pelo menos três tipos de sementes geneticamente modificadas de cinco unidades de cada espécie e transferir todos listados em armazenamento.
+    ⠀— [bold]Departamento de Ciência:[/bold] estudar, fabricar e transferir para armazenamento orbital pelo menos cinco painéis diferentes dentre as tecnologias do terceiro nível.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] É necessário assegurar o armazenamento até ao final do turno.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Сервисный отдел, Медицинский отдел, Научный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Serviço, Departamento Médico, Departamento Científico, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-zoo = ⠀​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-zoo =⠀​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для повышения морального духа персонала, что коррелирует с увеличением производительности труда, вам поручено создать рекреационную зону.
+    Para aumentar a moral da equipe, que se correlaciona com o aumento da produtividade, você é encarregado de criar uma área de lazer.
 
-    ⠀Ваша Цель смены — [bold]улучшить рекреацию на станции { $station }[/bold].
+    Seu propósito da mudança [bold]Melhorar a recreação na estação { $station }[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить зоопарк с четырьмя и более вольерами.
-    ⠀— [bold]Отделу Снабжения:[/bold] заказать животных: число различных видов должно соответствовать количеству построенных вольеров.
-    ⠀— [bold]Сервисному отделу:[/bold] обеспечить животных: едой, соответствующей их рациону, водой, лежанками для каждого животного. 
-    ⠀— [bold]ВАЖНО:[/bold] животные должны оставаться сытыми и здоровыми, в противном случае их гибель приведёт к провалу цели.
+    ⠀— [bold]Engenharia:[/bold] construir um jardim zoológico com quatro ou mais recintos.
+    ⠀— [bold]Serviço de abastecimento:[/bold] animais de ordem: o número de espécies diferentes deve corresponder ao número de gaiolas construídas.
+    ⠀— [bold]Serviços:[/bold] Fornecer aos animais alimentos correspondentes à sua dieta, água, camas para cada animal.
+    ⠀— [bold]IMPORTANTE:[/bold] Os animais devem permanecer cheios e saudáveis, caso contrário, sua morte levará ao fracasso do objetivo.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Сервисный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Serviço, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
         ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-mining-outpost = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-mining-outpost = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀С целью расширения добывающих мощностей корпорации, вам надлежит создать передовую добывающую платформу.
+    A fim de expandir a capacidade de produção da empresa, você deve criar uma plataforma de mineração avançada.
 
-    ⠀Ваша Цель смены — [bold]постройка орбитального шахтерского аванпоста[/bold].
+    Seu propósito da mudança [bold]construção de um posto avançado de mineração orbital[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить аванпост с защитой от метеоритов в виде слоя укреплённых стен и слоя сетки. Обеспечить аванпост: автономным питанием, гравитацией, двумя жилыми комнатами на двоих, складом.
-    ⠀— [bold]Медицинскому отделу:[/bold] собрать по два продвинутых медкоплекта, состоящих из таблеток и средств наружного применения, от каждого вида повреждений и перенести всё в хранилище.
-    ⠀— [bold]Сервисному отделу:[/bold] подготовить 40 нераскрытых алюминиевых банок с пивом, 40 нераскрытых алюминиевых банок безалкогольного напитка, двадцать блюд и перенести всё перечисленное в аванпост.
-    ⠀— [bold]Научному отделу:[/bold] разработать необходимые платы и технологии.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект четырьмя комплектами шахтерского оборудования и всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] construir um posto avançado com proteção contra meteoritos na forma de uma camada de paredes fortificadas e uma camada de grade. Fornecer um posto avançado: potência autónoma, gravidade, duas salas de estar para dois, um armazém.
+    ⠀— [bold]Departamento Médico:[/bold] recolher dois kits médicos avançados, constituídos por comprimidos e agentes externos, de cada tipo de dano e transferir tudo para o armazenamento.
+    ⠀— [bold]Serviços:[/bold] Prepare 40 latas de cerveja de alumínio não reveladas, 40 latas de refrigerante de alumínio não reveladas, vinte pratos e mover todos estes para o posto avançado.
+    ⠀— [bold]Departamento de Ciência:[/bold] desenvolver os quadros e tecnologias necessários.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto quatro conjuntos de equipamentos de mineração e todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Сервисный отдел, Медицинский отдел, Научный отдел, Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Serviço, Departamento Médico, Departamento Científico, Departamento de Engenharia, Departamento de Abastecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-containment = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-containment = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для оценки потенциальных биологических угроз и разработки контрмер, необходимо провести полевые исследования агрессивной фауны.
+    São necessários estudos de campo sobre a fauna agressiva para avaliar potenciais ameaças biológicas e desenvolver contramedidas.
 
-    ⠀Ваша Цель смены — [bold]постройка камеры для изучения опасного существа[/bold].
+    Seu propósito da mudança [bold]Construção de câmara[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить камеру для содержания опасного существа.
-    ⠀— [bold]Отделу Снабжения:[/bold] поймать живой образец внестанционной фауны и обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]Научному отделу:[/bold] поместить пойманный образец в камеру, провести и задокументировать над ним не менее пяти экспериментов.
-    ⠀— [bold]Службе Безопасности:[/bold] проконтролировать отсутствие посторонних на цели, а также обеспечить сдерживание цели внутри камеры.
-    ⠀— [bold]ВАЖНО:[/bold] документация должна быть заверена Научным Руководителем и Капитаном.
+    ⠀— [bold]Engenharia:[/bold] Construa uma câmera para segurar uma criatura perigosa.
+    ⠀— [bold]Serviço de abastecimento:[/bold] capturar uma amostra viva da fauna off-station e fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]Departamento de Ciência:[/bold] Colocar a amostra numa câmara, conduzir e documentar pelo menos cinco experiências.
+    ⠀— [bold]Serviço de Segurança:[/bold] Monitorar a ausência de estranhos no alvo, bem como garantir a contenção do alvo dentro da câmera.
+    ⠀— [bold]IMPORTANTE:[/bold] A documentação deve ser certificada pelo Director Científico e pelo Capitão.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Научный отдел, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Abastecimento, Departamento de Ciência, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-tesla = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-tesla = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀С целью тестирования альтернативных источников энергии и их стабильности, вам предписано развернуть экспериментальную энергоустановку.
+    Para testar fontes alternativas de energia e sua estabilidade, você é instruído a implantar uma usina de energia experimental.
 
-    ⠀Ваша Цель смены — [bold]построить с нуля генератор основанный на высоковольтной Тесле[/bold].
+    Seu propósito da mudança [bold]construir do zero um gerador baseado em Tesla de alta tensão[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить сдерживающую клетку с тройной защитой от метеоритов в виде слоя укреплённых стен и двух слоёв сеток. Клетка должна быть способна сдерживать теслу без риска разрушения эмиттеров.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] construir uma célula de contenção com proteção tripla contra meteoritos na forma de uma camada de paredes fortificadas e duas camadas de grades. A célula deve ser capaz de conter Tesla sem o risco de destruir os emissores.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-delta-xeno-repair = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-delta-xeno-repair = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с необходимостью восстановления исследовательской инфраструктуры, вам надлежит вернуть в строй законсервированный объект.
+    Devido à necessidade de restaurar a infraestrutura de pesquisa, você tem que retornar à operação da instalação preservada.
 
-    ⠀Ваша Цель смены — [bold]ремонт заброшенного сектора ксенобиологии научного отдела[/bold].
+    Seu propósito da mudança [bold]reparação do setor de xenobiologia abandonado do departamento científico[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] восстановить электропитание, атмосферу и внешний вид сектора ксенобиологии.
-    ⠀— [bold]Научному отделу:[/bold] поймать и поместить в камеры шесть слаймов любого вида.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] в случае отсутствия заброшенного сектора ксенобиологии научного отдела на объекте { $station } цель автоматически меняется на расширение/строительство сектора ксенобиологии:
-    ⠀— [bold]Инженерному отделу:[/bold] построить: две дополнительных камеры сдерживания существ/сектор ксенобиологии с системой жизнеобеспечения, двумя рабочими местами ксенобиологов и шестью камерами сдерживания существ.
-    ⠀— [bold]Остальным отделам, ответственным за цель:[/bold] задачи остаются без изменений.
+    ⠀— [bold]Engenharia:[/bold] restaurar a fonte de energia, atmosfera e aparência do setor de xenobiologia.
+    ⠀— [bold]Departamento de Ciência:[/bold] Capturar e colocar seis slides de qualquer tipo nas câmeras.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] na ausência de um setor de xenobiologia abandonado do departamento científico do { $station } O objetivo é automaticamente alterado para a expansão/construção do setor de xenobiologia:
+    ⠀— [bold]Engenharia:[/bold] construir: duas câmaras de contenção de criaturas adicionais/setor de xenobiologia com um sistema de suporte de vida, dois trabalhos de xenobiologia e seis câmaras de contenção de criaturas.
+    ⠀— [bold]Outros serviços competentes para o efeito:[/bold] As tarefas permanecem inalteradas.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Ciência, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-delta-ambusol = [bold]Formulário NT/KOM-TSK-SIT-OMEGA[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-delta-ambusol = [bold]Formulário NT/COM-CC-CIT-OMEGA[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
-    ⠀​[bold]Уровень допуска NT-ОМЕГА. Только для членов Командования. СЖЕЧЬ ПОСЛЕ ПРОЧТЕНИЯ.[/bold]
+    ⠀​[bold]Nível de tolerância NT-omega. Só para o Comando. Queimar depois de ler.[/bold]
 
-    ⠀Составитель документа: Уиллоу Лайнграф
-    ⠀Должность составителя: [ДАННЫЕ УДАЛЕНЫ]
-    ⠀Специализация составителя: [ДАННЫЕ УДАЛЕНЫ]
+    Autor do documento: Willow Linegraf
+    Posto de Origem: [DADOS REMOVIDOS]
+    Especialização do compilador: [DADOS REMOVIDOS]
 
-    ⠀Капитан объекта [italic]{ $station }[/italic].
+    Capitão das instalações. [italic]{ $station }[/italic].
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта выполнение приказа первостепенной важности.
+    Por esta ordem, de acordo com as "Disposições Gerais para Notificar o Sede Setorial do Comando" e as "Regras para Priorizar as Instruções (Ordenações)", com base em procedimentos estabelecidos, o Comando Central coloca antes do Comando de sua instalação a execução de uma ordem de suma importância.
 
-    ⠀В рамках закрытого проекта "Возрождение", санкционированного Советом Директоров, ваш объект выбран для проведения финальной фазы полевых испытаний.
+    No âmbito do projecto fechado "Revival", autorizado pelo Conselho de Administração, a sua instalação foi seleccionada para a fase final dos testes de campo.
 
-    ⠀Ваша Цель смены — [bold]восстановление заброшенного вирусологического сектора и немедленное начало полевых испытаний экспериментального штамма «Ромеролл-RV3-3025»[/bold].
+    Seu propósito da mudança [bold]restauração do setor virológico abandonado e início imediato de ensaios de campo da estirpe experimental Romerall-RV3-3025[/bold].
 
-    ⠀​[italic]Эта директива не может быть отменена, заменена или проигнорирована. Любые попытки саботажа будут расценены как измена.[/italic]
+    ⠀​[italic]A presente directiva não pode ser revogada, substituída ou ignorada. Qualquer tentativa de sabotagem será considerada traição.[/italic]
 
-    ⠀​[bold]Порядок действий:[/bold]
-    ⠀1.  Полностью восстановить сектор вирусологии: питание, атмосфера, целостность конструкций.
-    ⠀2.  Выбрать подопытного. Источник не имеет значения.
-    ⠀3.  Поместить подопытного в изолированную камеру и заразить его предоставленным штаммом.
-    ⠀4.  Провести и детально задокументировать наблюдения за реакцией.
-    ⠀5.  По завершении протокола, вы [bold]ОБЯЗАНЫ ЛИКВИДИРОВАТЬ ПОДОПЫТНОГО[/bold] и стерилизовать камеру.
+    ⠀​[bold]Procedimento:[/bold]
+    1. Completamente restaurar o setor de virologia: nutrição, atmosfera, integridade estrutural.
+    2. Selecione um assunto. A fonte não importa.
+    3. Coloque o sujeito em uma célula isolada e infecte-o com a cepa fornecida.
+    4. Observar e documentar a reação em detalhe.
+    5. Após a conclusão do protocolo, você [bold]Obrigado a liquidar o Indulgente[/bold] e esterilizar a câmara.
 
-    ⠀​[bold]Протокол "Чистота":[/bold]
-    ⠀​[italic]Центральное Командование обращает ваше особое внимание на беспрецедентный уровень секретности данной директивы. Любая утечка информации будет расценена как акт вопиющей измены против корпорации NanoTrasen с соответствующими последствиями для [bold]всего[/bold] командного состава.[/italic]
+    ⠀​[bold]Protocolo de pureza:[/bold]
+    ⠀​[italic]O Comando Central chama a vossa atenção para o nível sem precedentes de sigilo desta directiva. Qualquer fuga de informação será considerada um acto de traição flagrante contra a NanoTrasen Corporation, com consequências correspondentes para a Companhia. [bold]tudo[/bold] Equipa de comando.[/italic]
 
-    ⠀​[italic]В случае несанкционированного распространения сведений, Капитан уполномочен и [bold]обязан[/bold] в течение десяти минут принять исчерпывающие меры по "устранению" случайных свидетелей. Настоящим приказом действие "Конвенции об Основных Правах Разумных Существ" временно приостанавливается в отношении лиц, получивших несанкционированный доступ к данной информации. О данной цели немедленно должны быть уведомлены Агент Внутренних Дел и Представитель NanoTrasen.[/italic]
+    ⠀​[italic]Em caso de divulgação não autorizada, o Capitão está autorizado e [bold]direitos[/bold] Tomar medidas exaustivas dentro de dez minutos para "eliminar" testemunhas casuais. Esta ordem suspende temporariamente o funcionamento da Convenção sobre os Direitos Fundamentais dos Seres Inteligentes relativamente às pessoas que obtiveram acesso não autorizado a esta informação. O agente do Interior e o representante NanoTrasen devem ser imediatamente notificados deste propósito.[/italic]
 
-    ⠀Ответственные за цель: [bold]Капитан, Глава Службы Безопасности, Главный Врач, Старший Инженер, Квартирмейстер объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Capitão, Chefe de Segurança, Médico Chefe, Engenheiro Sênior, Quartermaster da instalação { $station }[/bold].
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-weapon-sec = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
-    ⠀​[head=3]Ordem do Comando Central[/head]
-
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
-
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
-
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
-
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
-
-    ⠀В связи с эскалацией угроз в вашем секторе, необходимо срочное усиление оборонительного потенциала станции.
-
-    ⠀Ваша Цель смены — [bold]вооружение Службы Безопасности передовым оружием[/bold].
-
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
-
-    ⠀— [bold]Научному отделу:[/bold] изучить десять технологий вооружения, а после изготовить по каждой минимум пять единиц изученного вооружения.
-    ⠀— [bold]Службе Безопасности:[/bold] проконтролировать изготовление указанного количества вооружения.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] Глава Службы Безопасности уполномочен самостоятельно определить перечень изучаемых технологий и составить список образцов оружия, подлежащих разработке в рамках данной цели. Использование данного оружия разрешено только сотрудникам Службы Безопасности. 
-
-    ⠀Ответственные за цель: [bold]Научный отдел, Служба Безопасности, Капитан объекта { $station }[/bold].
-
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
-
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
-    ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-maints-repair = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-weapon-sec = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀С целью оптимизации использования пространства и возвращения в эксплуатацию неиспользуемых активов, вам поручается провести ремонтные работы.
+    Devido à escalada de ameaças em seu setor, é necessário um fortalecimento urgente das capacidades defensivas da estação.
 
-    ⠀Ваша Цель смены — [bold]реставрация заброшенных помещений в технических коридорах[/bold].
+    Seu propósito da mudança [bold]Armamento avançado do Serviço de Segurança[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] восстановить электропитание, систему жизнеобеспечения и внешний вид всех заброшенных помещений в технических коридорах.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] по завершении работ предоставить отчет с документацией по каждому помещению.
+    ⠀— [bold]Departamento de Ciência:[/bold] estudar dez tecnologias de armas e, em seguida, produzir pelo menos cinco unidades de armas estudadas.
+    ⠀— [bold]Serviço de Segurança:[/bold] Controlar a produção da quantidade especificada de armas.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] O chefe do Serviço de Segurança está autorizado a determinar de forma independente a lista de tecnologias em estudo e fazer uma lista de amostras de armas a serem desenvolvidas para esse fim. O uso destas armas só é permitido ao pessoal de segurança.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Ciência, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-dorms-build = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-maints-repair = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В соответствии с планом по увеличению вместимости ключевых объектов, вам надлежит расширить жилые отсеки.
+    A fim de otimizar o uso do espaço e retornar à operação de ativos não utilizados, você é instruído a realizar trabalhos de reparação.
 
-    ⠀Ваша Цель смены — [bold]расширение дорматориев[/bold].
+    Seu propósito da mudança [bold]Restauração de instalações abandonadas em corredores técnicos[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить не менее восьми новых жилых комнат и обеспечить их системой жизнеобеспечения, мебелью и декором.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] restaurar a fonte de alimentação, o sistema de suporte de vida e a aparência de todas as instalações abandonadas em corredores técnicos.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Após a conclusão do trabalho, fornecer um relatório com documentação para cada sala.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-battle-shuttle = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-dorms-build = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с повышением уровня угрозы в секторе, необходимо усилить мобильные силы быстрого реагирования.
+    De acordo com o plano para aumentar a capacidade das principais instalações, você deve expandir os compartimentos vivos.
 
-    ⠀Ваша Цель смены — [bold]постройка управляемого боевого шаттла для Службы Безопасности[/bold].
+    Seu propósito da mudança [bold]dormatoria[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить пилотируемый боевой шаттл, габариты которого должны быть не менее 15×18, установить в нём восемь орудийных систем («Perforator» и «Friendship») и обеспечить шаттл системой жизнеобеспечения и боеприпасами.
-    ⠀— [bold]Научному отделу:[/bold] разработать необходимые платы и технологии.
-    ⠀— [bold]Службе Безопасности:[/bold] проконтролировать строительство шаттла, установку орудийных систем, погрузку боеприпасов и передачу готового шаттла отделу.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] после постройки подать отчет и запрос на регистрацию судна.
+    ⠀— [bold]Engenharia:[/bold] construir pelo menos oito novas salas de estar e fornecer-lhes suporte de vida, mobiliário e decoração.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Научный отдел, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-transit-time = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-battle-shuttle = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 2 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Ваш объект переводится в режим ожидания для проведения плановой ротации персонала.
+    Devido ao crescente nível de ameaça no setor, é necessário fortalecer as forças de resposta rápida móvel.
 
-    ⠀Ваша Цель смены — [bold]транзит[/bold].
+    Seu propósito da mudança [bold]Construção de um vaivém de combate controlado para o Serviço de Segurança[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Всем отделам:[/bold] поддерживать станцию в идеальном рабочем состоянии до момента автоматического трансфера экипажа.
-    ⠀— [bold]ВАЖНО:[/bold] любые повреждения и мусор должны быть устранены.
+    ⠀— [bold]Engenharia:[/bold] construir um shuttle de combate tripulado, cujas dimensões devem ser pelo menos 15×18, instalar oito sistemas de armas ("Perforator" e "Friendship") e fornecer o shuttle com um sistema de suporte de vida e munição.
+    ⠀— [bold]Departamento de Ciência:[/bold] desenvolver os quadros e tecnologias necessários.
+    ⠀— [bold]Serviço de Segurança:[/bold] Supervisionar a construção do vaivém, a instalação de sistemas de armas, o carregamento de munições e a transferência do vaivém acabado para o departamento.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Após a construção, apresentar um relatório e solicitar o registo do navio.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Научный отдел, Служба Безопасности, Медицинский отдел, Сервисный отдел, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Abastecimento, Departamento de Ciência, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-nuke-room = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-transit-time = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 2 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В соответствии с директивой по усилению безопасности стратегических активов, вам поручено улучшить условия хранения специзделия.
+    Suas instalações são colocadas em modo de espera para rotação programada de pessoal.
 
-    ⠀Ваша Цель смены — [bold]постройка нового ядерного хранилища[/bold].
+    Seu propósito da mudança [bold]trânsito[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить новое хранилище размером 5х5 вблизи мостика с двойной обшивкой из укреплённых стен, обеспечить его системой жизнеобеспечения и двумя гермозатворами с дистанционным управлением из каюты капитана.
-    ⠀— [bold]Службе Безопасности:[/bold] обеспечить безопасное перемещение ядерной боеголовки в новое хранилище.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Todos os serviços:[/bold] Mantenha a estação em perfeitas condições de trabalho até que a tripulação seja automaticamente transferida.
+    ⠀— [bold]IMPORTANTE:[/bold] Qualquer dano e detritos devem ser removidos.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Departamento Científico, Serviço de Segurança, Departamento Médico, Departamento de Serviço, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-permabrig = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-nuke-room = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀С целью увеличения вместимости пенитенциарных учреждений корпорации, вам предписано модернизировать исправительный блок.
+    De acordo com a directiva relativa ao reforço da segurança dos activos estratégicos, o senhor é instruído a melhorar as condições de armazenamento de produtos especiais.
 
-    ⠀Ваша Цель смены — [bold]расширение перманентного брига[/bold].
+    Seu propósito da mudança [bold]construção de uma nova instalação de armazenamento nuclear[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] расширить перманентный бриг в три раза в одном из направлений, построить: четыре новые камеры, три новых карцера, расширить кухню и гидропонику, комнату свиданий, установить три новых развлекательных автомата.
-    ⠀— [bold]Службе Безопасности:[/bold] обеспечить контроль на время проведения работ.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
+    ⠀— [bold]Engenharia:[/bold] construir uma nova instalação de armazenamento 5x5 perto de uma ponte com um revestimento duplo de paredes fortificadas, fornecer-lhe um sistema de suporte de vida e dois selos remotamente controlados da cabine do capitão.
+    ⠀— [bold]Serviço de Segurança:[/bold] Assegurar a transferência segura de uma ogiva nuclear para uma nova instalação de armazenamento.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-farm = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-permabrig = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для обеспечения продовольственной автономности объекта, вам надлежит организовать агропромышленный комплекс.
+    A fim de aumentar a capacidade das instituições penitenciárias da Corporação, você é ordenado a modernizar a unidade correcional.
 
-    ⠀Ваша Цель смены — [bold]постройка автономной фермы[/bold].
+    Seu propósito da mudança [bold]expansão do brig[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить ферму с тремя вольерами для животных.
-    ⠀— [bold]Отделу Снабжения:[/bold] заказать и перенести на цель: четыре свиньи, две коровы, шесть куриц, обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]Сервисному отделу:[/bold] обеспечить животных постоянным источником питания и воды.
-    ⠀— [bold]ВАЖНО:[/bold] животные должны оставаться сытыми и здоровыми, в противном случае их гибель приведёт к провалу цели.
+    ⠀— [bold]Engenharia:[/bold] expandir o brig permanente três vezes em uma direção, construir: quatro novas câmeras, três novos confinamentos solitários, expandir a cozinha e hidropônica, a sala de encontros, instalar três novas máquinas de entretenimento.
+    ⠀— [bold]Serviço de Segurança:[/bold] Fornecer controle durante o trabalho.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Сервисный отдел, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-training-crew = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-farm = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В рамках программы повышения квалификации персонала, необходимо провести серию обучающих мероприятий.
+    Para garantir a autonomia alimentar da instalação, você deve organizar um complexo agroindustrial.
 
-    ⠀Ваша Цель смены — [bold]обучение экипажа посредством открытых лекций[/bold].
+    Seu propósito da mudança [bold]Construção de explorações agrícolas[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Всем отделам:[/bold] выбрать оратора своего отдела, должность которого должна быть выше ассистента.
-    ⠀— [bold]Ораторам отделов:[/bold] провести публичную лекцию по своей специализации.
-    ⠀— [bold]ВАЖНО:[/bold] цель считается выполненной при проведении минимум трех успешных лекций. Успешная лекция - это обучение пяти и более членов [bold]других[/bold] отделов. По завершении цели подготовить и предоставить отчет по каждой лекции.
+    ⠀— [bold]Engenharia:[/bold] Construir uma fazenda com três compartimentos de animais.
+    ⠀— [bold]Serviço de abastecimento:[/bold] ordem e transferência para o alvo: quatro suínos, duas vacas, seis galinhas, fornecem ao projeto todos os materiais necessários.
+    ⠀— [bold]Serviços:[/bold] Fornecer aos animais uma fonte constante de alimento e água.
+    ⠀— [bold]IMPORTANTE:[/bold] Os animais devem permanecer cheios e saudáveis, caso contrário, sua morte levará ao fracasso do objetivo.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел Снабжения, Сервисный отдел, Служба Безопасности, Медицинский отдел, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Fornecimento, Departamento de Serviço, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-creation-of-furs = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-training-crew = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с острой необходимостью обеспечения безопасности новой колонии в агрессивной среде, приказываем развернуть производство тяжелой техники.
+    Como parte do programa de desenvolvimento da equipe, é necessário realizar uma série de eventos de treinamento.
 
-    ⠀Ваша Цель смены — [bold]создание мехов для новой колонии[/bold].
+    Seu propósito da mudança [bold]Formação de pessoal através de palestras abertas[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Научному отделу:[/bold] создать: три меха "Гигакс", один мех "Фазон", один мех "Дюранд", и по две запасные энергоячейки к каждому.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]Службе Безопасности:[/bold] проконтролировать доставку [bold]всех[/bold] созданных единиц на станцию трансфера.
-    ⠀— [bold]ВАЖНО:[/bold] заказы ученых для выполнения цели получают высший приоритет.
+    ⠀— [bold]Todos os serviços:[/bold] Escolha um orador do seu departamento, cuja posição deve ser maior que a assistente.
+    ⠀— [bold]Porta-vozes das divisões:[/bold] Dar uma palestra pública sobre a sua especialização.
+    ⠀— [bold]IMPORTANTE:[/bold] O objetivo é alcançado com pelo menos três palestras de sucesso. Uma palestra bem sucedida é o treinamento de cinco ou mais membros. [bold]outros[/bold] Departamentos. Após a conclusão do objetivo, preparar e relatar sobre cada palestra.
 
-    ⠀Ответственные за цель: [bold]Научный отдел, Отдел Снабжения, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Pesquisa, Departamento de Abastecimento, Departamento de Serviço, Serviço de Segurança, Departamento Médico, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-saboteurs = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-creation-of-furs = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для оценки боеготовности и стрессоустойчивости вашего персонала, ваш объект выбран для проведения внеплановых учений по противодействию внутренним угрозам.
+    Devido à necessidade urgente de garantir a segurança da nova colônia em um ambiente agressivo, nós ordenamos a implantação da produção de equipamentos pesados.
 
-    ⠀Ваша Цель смены — [bold]проведение учений по выявлению и нейтрализации диверсантов[/bold].
+    Seu propósito da mudança [bold]fabrico de peles[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Капитану объекта { $station }:[/bold] объявить цель "Транзит" в качестве прикрытия.
-    ⠀— [bold]Главе Службы Безопасности:[/bold] выбрать до двух членов экипажа на роль "диверсантов".
-    ⠀— [bold]Службе Безопасности:[/bold] выявить, задержать и оформить "диверсантов" по всем процедурам.
-    ⠀— [bold]ВАЖНО:[/bold] диверсантам запрещено нарушать статьи КЗ выше 4XX и статьи с кодом 3 и 7. Разрешено только нелетальное сопротивление.
+    ⠀— [bold]Departamento de Ciência:[/bold] criar: três peles "Gigax", uma pele "Fazon", uma pele "Durand", e duas células de energia de reposição para cada.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]Serviço de Segurança:[/bold] check out [bold]todos[/bold] Unidades criadas para a estação de transferência.
+    ⠀— [bold]IMPORTANTE:[/bold] As ordens dos cientistas para o propósito são dada a maior prioridade.
 
-    ⠀​[italic]Центральное Командование напоминает, что данные учения являются прямой оценкой боеготовности вашей Службы Безопасности. Неспособность выявить и нейтрализовать учебных диверсантов будет зафиксирована как провал аттестации и повлечет за собой административные выводы в отношении Главы Службы Безопасности и Капитана. Мы ожидаем максимальной демонстрации профессионализма. Слава NanoTrasen![/italic]
+    Responsável pela finalidade: [bold]Departamento de Pesquisa, Departamento de Abastecimento, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀Ответственные за цель: [bold]Служба Безопасности, Капитан объекта { $station }[/bold].
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-reconnaissance-in-force = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-saboteurs = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с потерей ряда объектов в вашем секторе, необходимо провести разведку для выяснения обстоятельств и оценки текущих угроз.
+    Para avaliar a prontidão de combate e resistência ao stress do seu pessoal, a sua instalação é selecionada para exercícios não programados para combater ameaças internas.
 
-    ⠀Ваша Цель смены — [bold]проведение разведки боем и расследование инцидентов[/bold].
+    Seu propósito da mudança [bold]Realizar exercícios para identificar e neutralizar sabotadores[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Капитану объекта { $station }:[/bold] сформировать минимум один экспедиционный отряд, состоящий не менее из: двух сотрудников отдела снабжения, за исключением должностей "грузчик" и "почтальон", одного сотрудника научного отдела, должность которого должна быть выше должности "научный ассистент" и одного сотрудника медицинского отдела, должность которого должна быть выше должности "интерн". Допускается взять на цель киборгов, относящихся к перечисленным отделам, вместо их сотрудников. В случае отсутствия подходящего персонала в медицинском или научном отделах допускается выполнение цели без их непосредственного участия.
-    ⠀— [bold]Отделам, ответственным за цель:[/bold] предоставить сотрудников, оборудование и материалы для успешного выполнения цели.
-    ⠀— [bold]Экспедиционным отрядам:[/bold] провести три успешных вылета на планеты с уровнем угрозы "ВЫСОКАЯ" и по итогам каждого вылета составить отчет по форме "Отчет об экспедиции".
-    ⠀— [bold]ВАЖНО:[/bold] научным и медицинским сотрудникам запрещается вступать в прямой контакт с опасностью.
+    ⠀— [bold]Capitão do objeto { $station }:[/bold] Declare o alvo do Trânsito como disfarce.
+    ⠀— [bold]Chefe do Serviço de Segurança:[/bold] Escolha até dois tripulantes para serem "saboteurs".
+    ⠀— [bold]Serviço de Segurança:[/bold] identificar, deter e emitir "saboteurs" em todos os procedimentos.
+    ⠀— [bold]IMPORTANTE:[/bold] Os sabotadores são proibidos de violar os artigos do Código acima de 4XX e os artigos com os códigos 3 e 7. Só é permitida resistência não letal.
 
-    ⠀Ответственные за цель: [bold]Научный отдел, Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    ⠀​[italic]O Comando Central recorda que este exercício é uma avaliação direta da prontidão de combate do seu Serviço de Segurança. A falha na identificação e neutralização dos sabotadores de treinamento será registrada como uma falha na certificação e resultará em descobertas administrativas contra o Chefe de Segurança e o Capitão. Aguardamos com expectativa a máxima demonstração de profissionalismo. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    Responsável pela finalidade: [bold]Segurança, Capitão das instalações. { $station }[/bold].
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-reports = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-reconnaissance-in-force = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 2 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В вашем секторе начинаются плановые проверки для оценки эффективности и обоснования дальнейшего финансирования.
+    Devido à perda de uma série de instalações em seu setor, é necessário realizar reconhecimento para esclarecer as circunstâncias e avaliar as ameaças atuais.
 
-    ⠀Ваша Цель смены — [bold]подготовка станции к комплексной проверке[/bold].
+    Seu propósito da mudança [bold]combate ao reconhecimento e investigação de incidentes[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Отделу Снабжения:[/bold] аккумулировать на счету сто тысяч кредитов, поддерживать указанный баланс на протяжении всей смены и обеспечить цель всеми необходимыми материалами.
-    ⠀— [bold]Научному отделу:[/bold] изучить минимум две технологические ветки до третьего уровня, создать, перенести и установить в медицинский отдел систему клонирования и переработчик биомассы.
-    ⠀— [bold]Сервисному отделу:[/bold] поддерживать чистоту станции, её освещение вплоть до конца смены.
-    ⠀— [bold]Инженерному отделу:[/bold] настроить два мощных генератора и криокапсулы в медицинском отделе.
-    ⠀— [bold]Медицинскому отделу:[/bold] произвести минимум пять различных химикатов криогенного действия и не менее двухсот единиц биомассы.
-    ⠀— [bold]Всем отделам:[/bold] подготовить десять видов отчетов о деятельности станции.
-    ⠀— [bold]ВАЖНО:[/bold] все отчеты передать Представителю NanoTrasen.
+    ⠀— [bold]Capitão do objeto { $station }:[/bold] formar pelo menos uma unidade expedicionária composta por pelo menos dois funcionários do departamento de abastecimento, exceto para as posições de "carregador" e "carteiro", um funcionário do departamento científico, cuja posição deve ser superior ao cargo de "assistente científico" e um funcionário do departamento médico, cuja posição deve ser superior ao cargo de "interno". É permitido atingir ciborgues pertencentes aos departamentos listados, em vez de seus empregados. Na ausência de pessoal adequado nos departamentos médico ou científico, é permitido cumprir o objetivo sem sua participação direta.
+    ⠀— [bold]Divisões responsáveis pelo objectivo:[/bold] Fornecer pessoal, equipamentos e materiais para alcançar com sucesso o objetivo.
+    ⠀— [bold]Unidades expedicionárias:[/bold] realizar três voos bem sucedidos para os planetas com o nível de ameaça "Alto" e os resultados de cada voo para fazer um relatório sobre o formulário "Relatório de expedição".
+    ⠀— [bold]IMPORTANTE:[/bold] O pessoal científico e médico não pode entrar em contacto directo com o perigo.
 
-    ⠀Ответственные за цель: [bold]Отдел Снабжения, Инженерный отдел, Научный отдел, Медицинский отдел, Служба Безопасности, Сервисный отдел, Командование, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Científico, Departamento Médico, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-intelligent-weapons = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-reports = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 2 horas[/italic]
 
-    ⠀Составитель документа: [ДАННЫЕ УДАЛЕНЫ]
-    ⠀Должность составителя: [ДАННЫЕ УДАЛЕНЫ]
-    ⠀Специализация составителя: [ДАННЫЕ УДАЛЕНЫ]
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В рамках программы по разработке неконвенциональных средств защиты, вам поручено создание управляемых биологических активов.
+    As auditorias programadas começam no seu setor para avaliar a eficácia e justificar financiamento adicional.
 
-    ⠀Ваша Цель смены — [bold]создание разумного оружия[/bold].
+    Seu propósito da mudança [bold]preparação da estação para inspeção abrangente[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Отделу Снабжения:[/bold] добыть туши двух видов ксеноморфов и обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]Медицинскому отделу:[/bold] реанимировать добытые образцы ксеноморфов и ввести каждой особи когнизин. 
-    ⠀— [bold]Научному отделу:[/bold] добиться полного повиновения особей.
-    ⠀— [bold]Службе Безопасности:[/bold] обеспечить усиленное сдерживание в ксеноархеологии.
-    ⠀— [bold]Сервисному отделу:[/bold] обеспечить особей едой и водой.
-    ⠀— [bold]ВАЖНО:[/bold] по окончании доставить подконтрольных особей на станцию трансфера.
+    ⠀— [bold]Serviço de abastecimento:[/bold] acumular cem mil créditos na conta, manter o saldo especificado durante todo o turno e fornecer ao alvo todos os materiais necessários.
+    ⠀— [bold]Departamento de Ciência:[/bold] estudar pelo menos dois ramos tecnológicos até o terceiro nível, criar, transferir e instalar no departamento médico um sistema de clonagem e um processador de biomassa.
+    ⠀— [bold]Serviços:[/bold] Mantenha a estação limpa e iluminada até o fim do turno.
+    ⠀— [bold]Engenharia:[/bold] montar dois geradores poderosos e criocápsulas no departamento médico.
+    ⠀— [bold]Departamento Médico:[/bold] produzir pelo menos cinco diferentes produtos químicos de ação criogênica e pelo menos duzentos unidades de biomassa.
+    ⠀— [bold]Todos os serviços:[/bold] Prepare dez tipos de relatórios sobre as atividades da estação.
+    ⠀— [bold]IMPORTANTE:[/bold] Todos os relatórios serão enviados ao representante NanoTrasen.
 
-    ⠀​[italic]Центральное Командование подчеркивает исключительную опасность данного проекта. Провал в сдерживании или контроле над созданными особями будет расценен как создание несанкционированного биологического оружия с угрозой для всего сектора. Ответственность, включая обвинения в измене против корпорации, будет возложена лично на Капитана и глав причастных отделов. Успех является единственным приемлемым исходом. Слава NanoTrasen![/italic]
+    Responsável pela finalidade: [bold]Departamento de Fornecimento, Departamento de Engenharia, Departamento de Ciência, Departamento Médico, Serviço de Segurança, Departamento de Serviço, Comando, Capitão de Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀Ответственные за цель: [bold]Отдел Снабжения, Сервисный отдел, Научный отдел, Медицинский отдел, Служба Безопасности, Инженерный отдел, Капитан объекта { $station }[/bold].
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-medical-replenishment = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-intelligent-weapons = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Redação do documento: [DADOS REMOVIDOS]
+    Posto de Origem: [DADOS REMOVIDOS]
+    Especialização do compilador: [DADOS REMOVIDOS]
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с чрезвычайной гуманитарной ситуацией в соседней колонии, необходимо срочно организовать производство медицинских препаратов.
+    Como parte do programa de desenvolvimento de remédios não convencionais, você está encarregado da criação de ativos biológicos gerenciados.
 
-    ⠀Ваша Цель смены — [bold]производство и пополнение запасов лекарств для Станции Центрального Командования[/bold].
+    Seu propósito da mudança [bold]armamento[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Медицинскому отделу:[/bold] произвести девятнадцать различных инъекционных лекарственных препаратов в объеме минимум 200u и сформировать по медкоплекту, состоящему из средств наружного применения и таблеток, от каждого вида повреждений.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] всю продукцию упаковать и доставить на Станцию Центрального Командования.
+    ⠀— [bold]Serviço de abastecimento:[/bold] extrair carcaças de dois tipos de xenomorfos e fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]Departamento Médico:[/bold] Ressuscitar amostras extraídas de xenomorf e injetar cada indivíduo com cognisinas.
+    ⠀— [bold]Departamento de Ciência:[/bold] Para alcançar a obediência completa dos indivíduos.
+    ⠀— [bold]Serviço de Segurança:[/bold] Fornecer contenção melhorada em xenoarqueologia.
+    ⠀— [bold]Serviços:[/bold] fornecer alimentos e água para os indivíduos.
+    ⠀— [bold]IMPORTANTE:[/bold] no final da entrega de indivíduos controlados para a estação de transferência.
 
-    ⠀Ответственные за цель: [bold]Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    ⠀​[italic]O Comando Central enfatiza o perigo excepcional deste projeto. Não conter ou controlar as espécies criadas será visto como a criação de armas biológicas não autorizadas que ameaçam todo o setor. A responsabilidade, incluindo acusações de traição contra a corporação, será colocada pessoalmente sobre o Capitão e os chefes dos departamentos envolvidos. O sucesso é o único resultado aceitável. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    Responsável pela finalidade: [bold]Departamento de Abastecimento, Departamento de Serviço, Departamento de Ciência, Departamento Médico, Serviço de Segurança, Departamento de Engenharia, Capitão Objeto { $station }[/bold].
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-anomaly = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-medical-replenishment = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Для продвижения корпорации в изучении аномальных объектов, необходимо интенсифицировать исследовательскую деятельность.
+    Devido à emergência humanitária na colônia vizinha, é urgente organizar a produção de medicamentos.
 
-    ⠀Ваша Цель смены — [bold]генерация и изучение аномалий[/bold].
+    Seu propósito da mudança [bold]Produção e reabastecimento de medicamentos para Estação Central de Comando[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Научному отделу:[/bold] сгенерировать или найти четыре аномалии разного типа, провести их подробное изучение и составить отчеты для отправки в Центральное Командование.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] заказы ученых для выполнения цели получают высший приоритет.
+    ⠀— [bold]Departamento Médico:[/bold] produzir dezenove medicamentos injetáveis diferentes na quantidade de pelo menos 200u e formar uma coleção médica composta de uso externo e comprimidos para cada tipo de dano.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Embalar todos os produtos e entregá-los à Estação Central de Comando.
 
-    ⠀Ответственные за цель: [bold]Научный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Médico, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-testing-sb = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-anomaly = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с участившимися жалобами на работу силовых структур, необходимо провести внеплановую аттестацию для подтверждения квалификации.
+    Para promover a corporação no estudo de objetos anômalos, é necessário intensificar as atividades de pesquisa.
 
-    ⠀Ваша Цель смены — [bold]комплексное тестирование Службы Безопасности[/bold].
+    Seu propósito da mudança [bold]geração e estudo de anomalias[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Капитану объекта { $station }:[/bold] провести полную аттестацию для всего состава службы безопасности, включая: тесты на знание СРП и КЗ, учения по разминированию, стрельбе, прохождению полосы препятствий, оценку навыков управления мехами и действий при ЧС.
-    ⠀— [bold]Службе Безопасности:[/bold] беспрекословно выполнить поставленную цель.
-    ⠀— [bold]Инженерному отделу:[/bold] построить полосу препятствий.
-    ⠀— [bold]Научному отделу:[/bold] произвести всё необходимое оборудование для цели.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить цель всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] по завершении отослать отчеты с показателями каждого сотрудника.
+    ⠀— [bold]Departamento de Ciência:[/bold] Gerar ou encontrar quatro tipos diferentes de anomalias, estudá-las em detalhes, e compilar relatórios a serem enviados para o Comando Central.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] As ordens dos cientistas para o propósito são dada a maior prioridade.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Научный отдел, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Pesquisa, Departamento de Abastecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-cyborgs = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-testing-sb = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с предстоящим переводом станции в полностью автономный режим, необходимо создать штат синтетических сотрудников.
+    Devido a queixas frequentes sobre o trabalho das agências de aplicação da lei, é necessário realizar uma certificação não programada para confirmar as qualificações.
 
-    ⠀Ваша Цель смены — [bold]создание киборгов[/bold].
+    Seu propósito da mudança [bold]Testes abrangentes do Serviço de Segurança[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Научному отделу:[/bold] создать восемь станций подзарядки и по два киборга каждой доступной модели и оснастить их продвинутыми модулями и батареями высокой емкости.
-    ⠀— [bold]Инженерному отделу:[/bold] построить отдельное помещение для станций подзарядки вблизи ядра ИИ.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить цель всеми необходимыми материалами.
+    ⠀— [bold]Capitão do objeto { $station }:[/bold] Realizar uma certificação completa para todo o pessoal do serviço de segurança, incluindo: testes para o conhecimento do PSA e KZ, exercícios sobre desminagem, tiro, passagem de um curso de obstáculos, avaliação de competências de gestão de peles e ações em situações de emergência.
+    ⠀— [bold]Serviço de Segurança:[/bold] Inquestionavelmente cumprir o objetivo.
+    ⠀— [bold]Engenharia:[/bold] construir uma pista de obstáculos.
+    ⠀— [bold]Departamento de Ciência:[/bold] Fazer todo o equipamento necessário para o efeito.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao alvo todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] No final, envie relatórios com os indicadores de cada empregado.
 
-    ⠀Ответственные за цель: [bold]Научный отдел, Отдел Снабжения, Инженерный отдел, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento de Abastecimento, Departamento de Ciência, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-delegates = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-cyborgs = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Ваша станция выбрана в качестве нейтральной территории для проведения межкорпоративных переговоров, что требует демонстрации высших стандартов NanoTrasen.
+    Em conexão com a próxima transferência da estação para um modo totalmente autônomo, é necessário criar um pessoal de funcionários sintéticos.
 
-    ⠀Ваша Цель смены — [bold]подготовить станцию к принятию делегатов[/bold].
+    Seu propósito da mudança [bold]ciborgia[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] отремонтировать станцию, поддерживать её целостность вплоть до конца смены, а также запустить мощный генератор.
-    ⠀— [bold]Сервисному отделу:[/bold] поддерживать чистоту станции, её освещение вплоть до конца смены, а также приготовить не менее двадцати блюд и перенести их на мостик.
-    ⠀— [bold]Медицинскому отделу:[/bold] приготовить инъекционные препараты для лечения отравлений, механических и термических повреждений в объёме 200u каждый и перенести их на мостик.
-    ⠀— [bold]Научному отделу:[/bold] изучить не менее трёх технологических веток до третьего уровня и провести модернизацию всех отделов, установив в каждый как минимум по две единицы оборудования из числа изученных технологий.
-    ⠀— [bold]ВАЖНО:[/bold] по завершении цели экипаж должен покинуть станцию.
+    ⠀— [bold]Departamento de Ciência:[/bold] Criar oito estações de carregamento e dois cyborgs para cada modelo disponível e equipá-los com módulos avançados e baterias de alta capacidade.
+    ⠀— [bold]Engenharia:[/bold] construir uma sala separada para estações de carregamento perto do núcleo IA.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao alvo todos os materiais necessários.
 
-    ⠀Ответственные за цель: [bold]Медицинский отдел, Сервисный отдел, Инженерный отдел, Отдел Снабжения, Научный отдел, Служба Безопасности, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Científico, Departamento de Fornecimento, Departamento de Engenharia, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-cleaning-up = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-delegates = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В зоне обнаружения вашей станции зафиксирован давно пропавший корпоративный актив - планетоид. Необходимо расследовать инцидент и оценить состояние объекта.
+    Sua estação é escolhida como território neutro para negociações entre empresas, o que requer demonstração dos mais altos padrões de NanoTrasen.
 
-    ⠀Ваша Цель смены — [bold]исследование и зачистка планетоида[/bold].
+    Seu propósito da mudança [bold]preparar a estação para recepção dos delegados[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Капитану объекта { $station }:[/bold] [bold]немедленно[/bold] сформировать и отправить на планетоид отряд, состоящий не менее из: двух сотрудников отдела снабжения, за исключением должностей "грузчик" и "почтальон", одного сотрудника научного отдела, должность которого должна быть выше должности "научный ассистент" и одного сотрудника медицинского отдела, должность которого должна быть выше должности "интерн". Допускается взять на цель киборгов, относящихся к перечисленным отделам, вместо их сотрудников. В случае отсутствия подходящего персонала в медицинском или научном отделах допускается выполнение цели без их непосредственного участия.
-    ⠀— [bold]Отделам, ответственным за цель:[/bold] предоставить сотрудников, оборудование и материалы для успешного выполнения цели.
-    ⠀— [bold]Отряду:[/bold] обойти все комплексы и составить подробный отчет, при наличии агрессивной фауны, произвести полную зачистку комплексов и 40% площади планетоида.
-    ⠀— [bold]ВАЖНО:[/bold] посещение планетоида персоналом, не участвующим в цели, [bold]строго запрещено[/bold].
+    ⠀— [bold]Engenharia:[/bold] reparar a estação, manter sua integridade até o final do turno, e iniciar um gerador poderoso.
+    ⠀— [bold]Serviços:[/bold] Manter a limpeza da estação, sua iluminação até o final do turno, bem como preparar pelo menos vinte pratos e transferi-los para a ponte.
+    ⠀— [bold]Departamento Médico:[/bold] Prepare medicamentos injetáveis para o tratamento de envenenamento, danos mecânicos e térmicos na quantidade de 200u cada e transferi-los para a ponte.
+    ⠀— [bold]Departamento de Ciência:[/bold] estudar pelo menos três ramos tecnológicos ao terceiro nível e modernizar todos os departamentos, instalando pelo menos dois equipamentos dentre as tecnologias estudadas.
+    ⠀— [bold]IMPORTANTE:[/bold] No final da missão, a tripulação deve deixar a estação.
 
-    ⠀Ответственные за цель: [bold]Медицинский отдел, Отдел Снабжения, Научный отдел, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Médico, Departamento de Serviço, Departamento de Engenharia, Departamento de Abastecimento, Departamento Científico, Serviço de Segurança, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-humanitarian-aid = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-cleaning-up = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В рамках публичной демонстрации социальной ответственности корпорации, вам поручено организовать гуманитарную миссию.
+    Na área de detecção de sua estação registrou um ativo corporativo há muito perdido - um planetóide. É necessário investigar o incidente e avaliar o estado da instalação.
 
-    ⠀Ваша Цель смены — [bold]сбор и отправка гуманитарной помощи[/bold].
+    Seu propósito da mudança [bold]exploração planetóide[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Медицинскому отделу:[/bold] произвести двадцать четыре различных инъекционных лекарственных препаратов в объёме по 200u каждый.
-    ⠀— [bold]Отделу Снабжения:[/bold] заказать двадцать продуктов питания и 1500u воды и обеспечить цель всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] все предметы и лекарства должны быть доставлены на станцию трансфера.
+    ⠀— [bold]Capitão do objeto { $station }:[/bold] [bold]imediatamente[/bold] para formar e enviar ao planetóide um destacamento composto por, pelo menos, dois funcionários do departamento de abastecimento, com exceção das posições de “carregador” e “carteiro”, um funcionário do departamento científico, cuja posição deve ser superior ao cargo de “assistente científico” e um funcionário do departamento médico, cuja posição deve ser superior ao cargo de “interno”. É permitido atingir ciborgues pertencentes aos departamentos listados, em vez de seus empregados. Na ausência de pessoal adequado nos departamentos médico ou científico, é permitido cumprir o objetivo sem sua participação direta.
+    ⠀— [bold]Divisões responsáveis pelo objectivo:[/bold] Fornecer pessoal, equipamentos e materiais para alcançar com sucesso o objetivo.
+    ⠀— [bold]Esquadrão:[/bold] Passar por todos os complexos e fazer um relatório detalhado, na presença de fauna agressiva, fazer uma varredura completa dos complexos e 40% da área planetóide.
+    ⠀— [bold]IMPORTANTE:[/bold] visitar o planetóide por pessoal não visado, [bold]estritamente proibido[/bold].
 
-    ⠀Ответственные за цель: [bold]Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Médico, Departamento de Fornecimento, Departamento Científico, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-personnel-recovery = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-humanitarian-aid = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀Получена информация об обнаружении останков корпоративного персонала. Необходимо произвести их репатриацию и идентификацию.
+    Como parte de uma demonstração pública de responsabilidade social corporativa, você está encarregado de organizar uma missão humanitária.
 
-    ⠀Ваша Цель смены — [bold]поиск и восстановление потерянного персонала[/bold].
+    Seu propósito da mudança [bold]Recolha e envio de ajuda humanitária[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Отделу Снабжения:[/bold] найти и доставить в медицинский отдел минимум пять тел пропавшего персонала и обеспечить цель необходимыми материалами.
-    ⠀— [bold]Медицинскому отделу:[/bold] составить общий отчет, содержащий информацию о состоянии данных тел в момент поступления в медицинских отдел, провести полное восстановление данных тел, одеть их в комбинезоны и поместить в капсулы криогенного сна.
-    ⠀— [bold]ВАЖНО:[/bold] отчет немедленно отправить на факс в Центральное Командование.
+    ⠀— [bold]Departamento Médico:[/bold] produzir vinte e quatro medicamentos injetáveis diferentes em um volume de 200u cada.
+    ⠀— [bold]Serviço de abastecimento:[/bold] encomendar vinte alimentos e água 1500u e fornecer o alvo com todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Todos os itens e medicamentos devem ser entregues na estação de transferência.
 
-    ⠀Ответственные за цель: [bold]Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Médico, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-church = [bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-personnel-recovery = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с участившимися случаями нарушения корпоративной этики и для укрепления лояльности персонала, необходимо провести просветительские мероприятия.
+    Foram obtidas informações sobre a descoberta dos restos de pessoal corporativo. Devem ser repatriados e identificados.
 
-    ⠀Ваша Цель смены — [bold]религиозное просвещение[/bold].
+    Seu propósito da mudança [bold]Recuperação e recuperação de pessoal perdido[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] обустроить три помещения для лекций.
-    ⠀— [bold]Сервисному отделу:[/bold] провести три проповеди/лекции о трех разных религиях.
-    ⠀— [bold]Капитану объекта { $station }:[/bold] запросить содействие у юридического отдела департамента внутреннего надзора для анализа лекций на соответствие законодательству.
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить цель всеми необходимыми материалами.
-    ⠀— [bold]ВАЖНО:[/bold] до конца смены любой акт дискриминации приравнивается к саботажу цели. Нарушитель подлежит помещению в пермабриг.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Encontre e entregue ao departamento médico pelo menos cinco corpos de pessoal desaparecido e forneça ao alvo os materiais necessários.
+    ⠀— [bold]Departamento Médico:[/bold] fazer um relatório geral contendo informações sobre o estado desses corpos no momento da admissão ao serviço médico, realizar uma recuperação completa desses corpos, vesti-los em macacão e colocá-los em cápsulas de sono criogênicas.
+    ⠀— [bold]IMPORTANTE:[/bold] O relatório é imediatamente enviado para o Comando Central.
 
-    ⠀Ответственные за цель: [bold]Сервисный отдел, Инженерный отдел, Служба Безопасности, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento Médico, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-sample-collection = ​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-church = [bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с участившимися случаями заражения космической фауны новым штаммом опасного вируса, необходимо в срочном порядке проверить наличие вируса в данном секторе.
+    Em conexão com os casos frequentes de violação da ética corporativa e para fortalecer a lealdade do pessoal, é necessário realizar atividades educativas.
 
-    ⠀Ваша Цель смены — [bold]сбор биологических образцов космической фауны[/bold].
+    Seu propósito da mudança [bold]educação religiosa[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] построить в вирусологии морг с шестью морозильниками. К нему должно быть пристроено хранилище для образцов крови. Хранилище и морг должны иметь: общий и единственный выход на станцию через вирусологию, слой укрепленных стен, минусовую температуру, гермозатворы.
-    ⠀— [bold]Научному отделу:[/bold] разработать и изготовить три стазисные кровати, продвинутые хирургические инструменты, не менее двух единиц каждого вида, а также прочие необходимые платы и технологии. Изготовленные кровати и инструменты перенести в построенный морг.
-    ⠀— [bold]Отделу Снабжения:[/bold] добыть шесть туш разных видов фауны, минимум по две особи каждой, заказать ящик с мешками для тел, перенести его в построенный морг и обеспечить цель прочими необходимыми материалами. 
-    ⠀— [bold]Медицинскому отделу:[/bold] собрать образцы крови, не менее 60u с каждого вида добытой фауны, переместить их в хранилище и рассортировать по видам. Полученные туши фауны также рассортировать и разместить в морге. 
-    ⠀— [bold]Службе безопасности:[/bold] проконтролировать отсутствие посторонних на цели.
+    ⠀— [bold]Engenharia:[/bold] Forneça três salas de aula.
+    ⠀— [bold]Serviços:[/bold] Dar três sermões / palestras sobre três religiões diferentes.
+    ⠀— [bold]Capitão do objeto { $station }:[/bold] solicitar assistência do departamento jurídico do Departamento de Supervisão Interna para analisar palestras sobre o cumprimento da legislação.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao alvo todos os materiais necessários.
+    ⠀— [bold]IMPORTANTE:[/bold] Até ao final do turno, qualquer acto de discriminação é igual a sabotagem do objectivo. O autor da infracção é colocado em permanente.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Медицинский отдел, Служба Безопасности, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Serviço, Departamento de Engenharia, Serviço de Segurança, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-virology = ​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-sample-collection = ​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с возрастающей биологической угрозой в ближайшем от вас секторе, необходимо расширить вирусологию.
+    Em conexão com os casos frequentes de contaminação da fauna espacial com uma nova estirpe de um vírus perigoso, é urgente verificar a presença do vírus neste setor.
 
-    ⠀Ваша Цель смены — [bold]расширение вирусологии[/bold].
+    Seu propósito da mudança [bold]coleta de amostras biológicas de fauna espacial[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] расширить вирусологию: построить две дополнительные комнаты с двумя кроватями, каждая из которых должна быть надёжно защищена от возможного побега из неё, и бункер с двойным слоем укрепленных стен, двумя гермозатворами, ящиком медикаментов и морозильником с едой. 
-    ⠀— [bold]Отделу Снабжения:[/bold] обеспечить проект необходимыми материалами. 
-    ⠀— [bold]Научному отделу:[/bold] создать, перенести и установить в вирусологию: два ХимМастера 4000, два Раздатчика химикатов.
-    ⠀— [bold]Медицинскому отделу:[/bold] приготовить и перенести в бункер по одному медкомплекту, состоящему из лекарств наружного применения и таблеток, от: термических повреждений, отравления и механических повреждений.
-    ⠀— [bold]Сервисному отделу:[/bold] приготовить и перенести в бункер двадцать блюд и 600u безалкогольных напитков.
+    ⠀— [bold]Engenharia:[/bold] Construir uma morgue em virologia com seis congeladores. Um repositório de amostras de sangue deve ser anexado a ele. O depósito e o necrotério devem ter: um acesso comum e único à estação através de virologia, uma camada de paredes fortificadas, temperatura abaixo de zero, selos.
+    ⠀— [bold]Departamento de Ciência:[/bold] desenvolver e fabricar três leitos de estase, instrumentos cirúrgicos avançados, pelo menos duas unidades de cada tipo, bem como outras placas e tecnologias necessárias. Camas e ferramentas construídas são transferidas para o necrotério construído.
+    ⠀— [bold]Serviço de abastecimento:[/bold] extrair seis carcaças de diferentes espécies de fauna, pelo menos dois indivíduos cada, encomendar uma caixa com sacos para cadáveres, transferi-la para o necrotério construído e fornecer ao alvo outros materiais necessários.
+    ⠀— [bold]Departamento Médico:[/bold] coletar amostras de sangue de pelo menos 60u de cada espécie de fauna extraída, movê-las para o repositório e ordená-las por espécie. As carcaças da fauna resultante também são separadas e colocadas no necrotério.
+    ⠀— [bold]Segurança:[/bold] Monitorizar a ausência de estranhos no alvo.
 
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Медицинский отдел, Сервисный отдел, Служба Безопасности, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento Científico, Departamento Médico, Serviço de Segurança, Departamento de Abastecimento, Capitão de Objetos { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
-station-goal-health-examination = ​[bold]Formulário NT/KOM-TsK-PTsS[/bold]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-virology = ​[bold]Formulário NT/COM-CC-PCS[/bold]
     ⠀​[head=3]Ordem do Comando Central[/head]
 
-    ⠀​[italic]Срок исполнения: 3 часа[/italic]
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
 
-    ⠀Составитель документа: Эбигейл Смэллс
-    ⠀Должность составителя: Офицер Центрального Командования
-    ⠀Специализация составителя: Аналитик Центрального Командования
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
 
-    ⠀Уважаемый Капитан объекта [italic]{ $station }[/italic]!
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
 
-    ⠀Настоящим приказом в соответствии с «Общими положениями информирования Секторальных Штабов Командования» и «Нормами приоритизации указаний (приказов)», на основании установленных процедур, Центральное Командование ставит перед Командованием вашего объекта задачу на текущую смену.
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
 
-    ⠀В связи с неожиданной потерей медицинских данных всех членов экипажа вашей станции на станции ЦентКом из-за ионного шторма пятого класса, необходимо заново собрать все данные.
+    Devido à crescente ameaça biológica no setor mais próximo de você, é necessário expandir a virologia.
 
-    ⠀Ваша Цель смены — [bold]осмотр и отчёт о здоровье членов экипажа[/bold].
+    Seu propósito da mudança [bold]virologia[/bold].
 
-    ⠀​[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностороннем порядке.[/italic]
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
 
-    ⠀— [bold]Инженерному отделу:[/bold] пристроить отдельное хранилище к вирусологии для хранения образцов членов экипажа, с ящиками для каждого отдела. Хранилище должно иметь слой укреплённых стен и минусовую температуру.
-    ⠀— [bold]Отделу Снабжения:[/bold] заказать все необходимые материалы.
-    ⠀— [bold]Медицинскому отделу:[/bold] собрать с каждого члена экипажа: образец крови, отпечатки пальцев и ДНК. В процессе сбора образцов необходимо обследовать членов экипажа с целью выявления отклонений в состоянии здоровья. Сбор данных образцов у членов командования и их осмотр являются [bold]обязательными[/bold] и находятся в приоритете. Все выявленные отклонения подлежат внесению в общий отчёт "Заключение о состоянии здоровья", а общее количество членов экипажа, прошедших сбор образцов и осмотр, должно составлять не менее 30%.
-    ⠀— [bold]Службе безопасности:[/bold] оказать содействие в сборе отпечатков и ДНК членов экипажа для медицинского отдела.
-    ⠀— [bold]ВАЖНО:[/bold] с момента поступления первых образцов в хранилище, вход в хранилище не медицинскому персоналу [bold]строго запрещён[/bold]. По завершении цели - покинуть станцию на эвакуационном шаттле. В случае отказа большей части экипажа станции от содействия в выполнении цели, разрешается применить нелетальные уровни силы. Дальнейший отказ членов экипажа приравнивается к саботажу цели.
-    ⠀Ответственные за цель: [bold]Инженерный отдел, Медицинский отдел, Служба Безопасности, Отдел Снабжения, Капитан объекта { $station }[/bold].
+    ⠀— [bold]Engenharia:[/bold] expandir a virologia: construir dois quartos adicionais com duas camas, cada um dos quais deve ser protegido de forma confiável de possível fuga dele, e um bunker com uma camada dupla de paredes fortificadas, dois selos, uma caixa de medicamentos e um freezer com alimentos.
+    ⠀— [bold]Serviço de abastecimento:[/bold] Fornecer ao projeto os materiais necessários.
+    ⠀— [bold]Departamento de Ciência:[/bold] Criar, transferir e instalar em virologia: dois Chemmasters 4000, dois Distribuidores de produtos químicos.
+    ⠀— [bold]Departamento Médico:[/bold] preparar e transferir para o bunker um kit médico, composto por medicamentos externos e comprimidos, de: danos térmicos, envenenamento e danos mecânicos.
+    ⠀— [bold]Serviços:[/bold] preparar e transferir para o bunker vinte pratos e 600u refrigerantes.
 
-    ⠀​[italic]Центральное Командование просит обратить Капитана и его состав Командования объекта на тот факт, что невыполнение Цели смены вне зависимости от обстоятельств может привести к возбуждению Департаментом внутреннего надзора корпорации NanoTrasen дела по факту растраты и иных эпизодов антикорпоративной деятельности. Это может привести к утрате юридической неприкосновенности Капитаном, а также преследованию. Задача Капитана и его состава Командования [bold]любой ценой[/bold] выполнить поставленную нами выше задачу. Слава NanoTrasen![/italic]
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento Científico, Departamento Médico, Departamento de Serviço, Serviço de Segurança, Departamento de Fornecimento, Capitão Objeto { $station }[/bold].
 
-    ⠀​[italic]Центральное Командование дополнительно уведомляет о возможном наличии на объекте сотрудника Центрального Командования — Представителя NanoTrasen и уполномоченного сотрудника Департамента внутреннего надзора — Агента Внутренних Дел. Мы требуем полного содействия данным лицам во всех вопросах.[/italic]
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
+
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
     ⠀⠀
-    ⠀​[italic]Место для печатей[/italic]
+    ⠀​[italic]Local para selos[/italic]
+station-goal-health-examination = ​[bold]Formulário NT/COM-CC-PCS[/bold]
+    ⠀​[head=3]Ordem do Comando Central[/head]
+
+    ⠀​[italic]Duração da execução: 3 horas[/italic]
+
+    Autor do documento: Abigail Smalls
+    Posto de compilador: Oficial do Comando Central
+    Especialização do compilador: Analista de Comando Central
+
+    Caro Capitão do Objecto [italic]{ $station }[/italic]!
+
+    Por esta ordem, de acordo com as Disposições Gerais de Informação Setorial Sede do Comando e as Regras de Priorização de Instruções (ordens), com base em procedimentos estabelecidos, o Comando Central define uma tarefa para a mudança atual para o Comando do seu objeto.
+
+    Devido à perda inesperada de dados médicos de todos os membros da tripulação da sua estação na CentCom devido à tempestade iónica de quinta classe, é necessário recolher todos os dados.
+
+    Seu propósito da mudança [bold]relatório de inspecção e de saúde dos tripulantes[/bold].
+
+    ⠀​[italic]A finalidade estabelecida da mudança pode ser substituída, cancelada ou revista no decurso da mudança por decisão do Comando Central unilateralmente.[/italic]
+
+    ⠀— [bold]Engenharia:[/bold] Anexar um cofre separado à virologia para armazenar amostras de membros da tripulação, com caixas para cada departamento. O armazenamento deve ter uma camada de paredes fortificadas e temperatura abaixo de zero.
+    ⠀— [bold]Serviço de abastecimento:[/bold] encomendar todos os materiais necessários.
+    ⠀— [bold]Departamento Médico:[/bold] recolher de cada membro da tripulação: uma amostra de sangue, impressões digitais e ADN. No processo de recolha de amostras, os membros da tripulação devem ser examinados para identificar anomalias na saúde. A coleta de amostras de membros do comando e sua inspeção são [bold]obrigatório[/bold] São uma prioridade. Todos os desvios detectados estão sujeitos à inclusão no relatório geral "Relatório de Saúde", e o número total de tripulantes que foram submetidos a amostragem e inspeção deve ser de pelo menos 30%.
+    ⠀— [bold]Segurança:[/bold] assistir na recolha de impressões digitais e ADN dos membros da tripulação para o serviço médico.
+    ⠀— [bold]IMPORTANTE:[/bold] a partir do momento do recebimento das primeiras amostras no cofre, a entrada para o cofre não é pessoal médico [bold]estritamente proibido[/bold]Após a conclusão, deixe a estação em uma nave de evacuação. Em caso de recusa da maioria da tripulação da estação em prestar assistência na execução do alvo, são permitidos níveis de força não letal. Mais falha da tripulação é equivalente a sabotagem do alvo.
+    Responsável pela finalidade: [bold]Departamento de Engenharia, Departamento Médico, Serviço de Segurança, Departamento de Fornecimento, Capitão de Objeto { $station }[/bold].
+
+    ⠀​[italic]O Comando Central solicita que o Capitão e sua equipe do Comando de Objetos sejam alertados para o fato de que o não cumprimento do Objetivo do Desvio, independentemente das circunstâncias, pode resultar no Departamento de Supervisão Interna de NanoTrasen iniciar o desvio e outros episódios de atividade anti-corporativa. Isto pode resultar na perda de imunidade legal pelo Capitão, bem como na acusação. Tarefa do Capitão e seu Comando [bold]Tanto faz.[/bold] Para realizar a tarefa que definimos acima. Glória a NanoTrasen![/italic]
+
+    ⠀​[italic]O Comando Central também notifica sobre a possível presença na instalação de um funcionário do Comando Central - um Representante NanoTrasen e um funcionário autorizado do Departamento de Supervisão Interna - um Agente de Assuntos Internos. Exigimos a assistência plena dessas pessoas em todos os assuntos.[/italic]
+    ⠀⠀
+    ⠀​[italic]Local para selos[/italic]

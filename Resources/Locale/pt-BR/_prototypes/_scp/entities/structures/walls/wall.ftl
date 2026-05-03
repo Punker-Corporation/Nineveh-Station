@@ -84,3 +84,11 @@ ent-ScpWallScp096Containment = Parede de isolamento acústico da câmara SCP-096
     .desc = A parede multicamadas da câmara de contenção de SCP-096 foi projetada para absorver completamente ondas sonoras e vibratórias. Utiliza materiais semelhantes aos utilizados em câmaras anecóicas. A destruição é possível se a ressonância acústica anômala permitida for excedida.
 ent-ScpWallScp096ContainmentShattered = fragmentos de isolamento acústico
     .desc = Detritos gravemente danificados, destruídos como resultado da exposição prolongada à ressonância acústica. Sujeito a restauro. Use uma chave de fenda para iniciar o reparo.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ScpBaseWallDamageableVisualsWood = { ent-ScpBaseWallDamageableVisuals }
+    .desc = { ent-ScpBaseWallDamageableVisuals.desc }
+
+ent-ScpWallWood = parede de madeira
+    .desc = { ent-WallWood.desc }

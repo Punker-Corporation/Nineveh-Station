@@ -4,6 +4,7 @@ using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Light;
 using Content.Shared.Light.Components;
+using Content.Shared.Light.EntitySystems;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.PowerCell;
 using Content.Shared.Rounding;
@@ -28,6 +29,7 @@ namespace Content.Server.Light.EntitySystems
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly SharedPointLightSystem _lights = default!;
+        [Dependency] private readonly FlashlightMaintenanceSystem _flashlightMaintenance = default!;
 
         // TODO: Ideally you'd be able to subscribe to power stuff to get events at certain percentages.. or something?
         // But for now this will be better anyway.
@@ -181,6 +183,7 @@ namespace Content.Server.Light.EntitySystems
 
             _lights.SetEnabled(ent, false, pointLightComponent);
             SetActivated(ent, false, ent, makeNoise);
+            _flashlightMaintenance.ApplyOptics(ent.Owner, false);
             ent.Comp.Level = null;
             _activeLights.Remove(ent);
             return true;
@@ -211,8 +214,16 @@ namespace Content.Server.Light.EntitySystems
                 return false;
             }
 
+            if (!_flashlightMaintenance.CanTurnOn(uid))
+            {
+                _audio.PlayPvs(_audio.ResolveSound(component.TurnOnFailSound), uid);
+                _popup.PopupEntity(Loc.GetString("flashlight-maintenance-overheated-popup"), uid, user);
+                return false;
+            }
+
             _lights.SetEnabled(uid, true, pointLightComponent);
             SetActivated(uid, true, component, true);
+            _flashlightMaintenance.ApplyOptics(uid, true);
             _activeLights.Add(uid);
 
             return true;
@@ -243,7 +254,14 @@ namespace Content.Server.Light.EntitySystems
                 _appearance.SetData(uid, HandheldLightVisuals.Power, HandheldLightPowerStates.Dying, appearanceComponent);
             }
 
-            if (component.Activated && !_battery.TryUseCharge(battery.Value.AsNullable(), component.Wattage * frameTime))
+            if (!_flashlightMaintenance.UpdateActiveLight(uid, component.Activated, frameTime))
+            {
+                TurnOff(uid, false);
+                return;
+            }
+
+            var drainMultiplier = _flashlightMaintenance.GetBatteryDrainMultiplier(uid);
+            if (component.Activated && !_battery.TryUseCharge(battery.Value.AsNullable(), component.Wattage * drainMultiplier * frameTime))
                 TurnOff(uid, false);
 
             UpdateLevel(uid);

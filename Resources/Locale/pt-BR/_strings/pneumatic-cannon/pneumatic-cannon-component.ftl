@@ -8,13 +8,12 @@ pneumatic-cannon-component-fire-no-gas = { CAPITALIZE($cannon) } clica, mas não
 
 ## Shown when changing power.
 
-pneumatic-cannon-component-change-power = 
-    { $power -> 
-    [High] Вы устанавливаете ограничитель на максимум. Как бы вышло не слишком сильно...
-    [Medium] Вы устанавливаете ограничитель посередине.
-   *[Low] Вы устанавливаете ограничитель на минимум.
- }
+pneumatic-cannon-component-change-power = { $power ->
+    [High] Ajuste o limitador para a potência máxima. Parece demasiado poderoso...
+    [Medium] Você define o limitador para a potência média.
+    *[Low] Colocaste o limitador em baixa potência.
+}
 
-## Shown when being stunned by having the power too high.
+## Mostrado ao ser atordoado por ter o poder muito alto.
 
 pneumatic-cannon-component-power-stun = { CAPITALIZE($cannon) } te deixa perplexo!

@@ -34,3 +34,9 @@ ent-CratePiraterEVASuitBundle = conjunto de fantasias de pirata em EVA
 ent-CrateSyndicateSuperSurplusBundleAgent = pacote de suprimentos para super sindicato
     .suffix = Agente
     .desc = Contém 125 telecristais de itens aleatórios do sindicato.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-CratePirateChestCannonBallPlasteel = baú pirata de bala de canhão de plasteel
+    .suffix = Bola de canhão de Plasteel cheia, Nascer do sol
+    .desc = { ent-CratePirate.desc }

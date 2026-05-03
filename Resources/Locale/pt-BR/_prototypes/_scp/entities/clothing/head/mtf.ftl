@@ -19,3 +19,9 @@ ent-ClothingHelmetHeavyHD = capacete pesado
 ent-ClothingHelmetMtfMilitary = capacete de combate
     .desc = Modelo de combate de capacete tático. Fornecido especificamente para empresas militares privadas.
     .suffix = FTM
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingHeadHelmetMH = capacete
+    .desc = Um conjunto de chapéus de protecção reforçado. Seu design fornece resistência contra balística e outros fatores prejudiciais.
+    .suffix = MTF

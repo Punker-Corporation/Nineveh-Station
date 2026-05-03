@@ -3,9 +3,10 @@ supermatter-announcement-sender = Sistema automático de motor de supermatéria
 supermatter-announcement-safe = A hiperestrutura cristalina retorna aos parâmetros operacionais seguros. A proteção de emergência está desativada.
 supermatter-announcement-danger = Atenção! Violação da integridade da hiperestrutura cristalina! Integridade: { $integrity }%
 supermatter-announcement-critical = Perigo! A integridade da hiperestrutura cristalina atinge um nível crítico! Integridade: { $integrity }%
-supermatter-announcement-cc-tamper = 
-    Наша автоматическая система обнаружила, что целостность кристалла суперматерии была нарушена внешним воздействием.
-    Инженерный отдел, немедленно отправляйтесь к реактору суперматерии.
+supermatter-announcement-cc-tamper =
+    O nosso sistema de vítimas automáticas detectou que a integridade estrutural do cristal de supermatéria foi comprometida por uma força externa.
+    Departamento de Engenharia, apresente-se ao motor de supermatéria imediatamente.
+
 supermatter-announcement-delam = A SEPARAÇÃO DO CRISTAL É INEVITÁVEL. O cristal da supermatéria atingiu um nível crítico de destruição.
 supermatter-announcement-delam-countdown = Tempo estimado para delaminação: { $seconds } segundos.
 supermatter-announcement-delam-explosion = Habilitar o campo de desestabilização para evitar perdas.

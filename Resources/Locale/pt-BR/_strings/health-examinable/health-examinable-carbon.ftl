@@ -62,6 +62,5 @@ health-examinable-carbon-Radiation-50 = [color=orange]{ CAPITALIZE(POSS-ADJ($tar
 health-examinable-carbon-Radiation-100 = [color=orange]{ CAPITALIZE(POSS-ADJ($target)) } a pele fica coberta de erupções cutâneas e descama em pedaços![/color]
 
 health-examinable-carbon-Mangleness-15 = [color=gray]{ CAPITALIZE(SUBJECT($target)) } parece cansado.[/color]
-health-examinable-carbon-Mangleness-50 = [cor = #505050]{ CAPITALIZE(SUBJECT($target)) } с трудом передвигает ноги от истощения![/color]
-health-examinable-carbon-Mangleness-100 = [cor = #505050]{ CAPITALIZE(SUBJECT($target)) } похож на иссушенную мумию![/color]
-
+health-examinable-carbon-Mangleness-50 = [color=#505050] { CAPITALIZE(SUBJECT($target)) } mal consegue andar devido à exaustão! [/color]
+health-examinable-carbon-Mangleness-100 = [color=#505050] { CAPITALIZE(SUBJECT($target)) } parece uma múmia dessecada! [/color]

@@ -3,3 +3,9 @@ mime-invisible-wall-popup = { CAPITALIZE($mime) } atinge uma parede invisível!
 mime-invisible-wall-failed = Você não pode criar uma parede invisível aqui.
 mime-not-ready-repent = Você ainda não está pronto para se arrepender de seu voto quebrado.
 mime-ready-to-repent = Você se sente pronto para fazer um voto de silêncio novamente.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+mime-invisible-wall-popup-self = Você escova-se contra uma parede invisível!
+
+mime-invisible-wall-popup-others = {CAPITALIZE(THE($mime))} escova contra uma parede invisível!

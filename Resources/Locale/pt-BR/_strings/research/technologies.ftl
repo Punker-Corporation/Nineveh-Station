@@ -65,7 +65,7 @@ research-technology-advanced-parts = Componentes Avançados
 research-technology-anomaly-harnessing = Aplicação de kernels de anomalia
 research-technology-abnormal-artifact-manipulation = Reciclagem de artefatos
 research-technology-gravity-manipulation = Manipulação da gravidade
-research-technology-quantum-leaping = Saltos Quânticos
+research-technology-quantum-leaping = Deslocamento Instável
 research-technology-bluespace-time-manipulation = Manipulação do tempo no Bluespace
 research-technology-advanced-anomaly-research = Estudo Avançado de Anomalias
 research-technology-rped = Substituição rápida de componentes
@@ -86,7 +86,11 @@ research-technology-meat-manipulation = Manipulação de carne
 research-technology-honk-mech = Pele H.O.N.K.
 research-technology-honk-weapons = Armas de banânio
 research-technology-advanced-spray = Sprays avançados
-research-technology-quantum-fiber-weaving = Tecelagem de fibra quântica
+research-technology-quantum-fiber-weaving = Tecelagem de fibra condutiva
 research-technology-bluespace-cargo-transport = Transporte de carga Bluespace
 research-technology-advance-secborgs-combat = Módulos de combate avançados das Forças de Segurança Borg
 research-technology-milira-equipment = Equipamento Milir
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+research-technology-clowning-utilities = Utilitários de Limpeza

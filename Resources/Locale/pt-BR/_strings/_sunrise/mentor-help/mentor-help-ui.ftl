@@ -71,13 +71,17 @@ mentor-help-label-subject = Assunto:
 
 help-choice-title = Selecione o tipo de ajuda
 help-choice-title-label = [color=white][font size=16]Que tipo de ajuda você precisa?[/font][/color]
-help-choice-ahelp-button = Ajuda do administrador
+help-choice-ahelp-button = Suporte administrativo
 help-choice-mhelp-button = Assistência de mentor
-help-choice-ahelp-desc-label = [cor = #CCCCCC][font size=12]• Админ-помощь - для жалоб на игроков, сообщений о багах и нарушениях правил[/font][/color]
-help-choice-mhelp-desc-label = [cor = #CCCCCC][font size=12]• Ментор-помощь - для вопросов о механиках игры и помощи новичкам[/font][/color]
+help-choice-ahelp-desc-label = [color=#CCCCCC][font size=12] • Suporte administrativo - incidentes de regra, travamentos de rodada e falhas críticas de playtest.[/font][/color]
+help-choice-mhelp-desc-label = [cor = #CCCCCC] [font size=12] • Mentor-Ajuda - para perguntas sobre mecânica de jogo e ajudar iniciantes [/font] [/color]
 
 help-kwoink-play-sound = Som de mensagem
 
 mentor-help-statistics-column-mentor = Mentor
 mentor-help-statistics-column-tickets = Ingressos aceitos
 mentor-help-statistics-column-messages = Mensagens
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+mentor-help-unknown-user = Desconhecido

@@ -13,3 +13,7 @@ stamp-component-stamped-name-ethics-committee = Comitê de Ética
 stamp-component-stamped-name-lesser-council = Conselho O4
 stamp-component-stamped-name-regional-command = Gestão regional
 stamp-component-stamped-name-o4-command = Sede da O4
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+stamp-component-stamped-name-regional-administration = Administração regional

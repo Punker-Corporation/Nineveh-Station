@@ -70,3 +70,9 @@ ent-LockableButtonThirdParty = { ent-LockableButton }
 ent-LockableButtonChaosInsurgency = { ent-LockableButton }
     .suffix = { access-name-chaos-insurgency }
     .desc = { ent-LockableButton.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-LockableButtonBunker = { ent-LockableButton }
+    .suffix = { access-name-bunker }
+    .desc = { ent-LockableButton.desc }

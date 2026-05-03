@@ -13,3 +13,7 @@ job-supervisors-security = oficiais, diretor e chefe de segurança
 job-supervisors-science = cientistas e diretor de pesquisa
 job-supervisors-hire = aos seus empregadores
 job-supervisors-everyone = todos em geral
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+job-supervisors-nobody = ninguém

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Frozen;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Speech;
@@ -162,10 +163,64 @@ public abstract partial class SharedChatSystem
                 return false;
         }
 
-        // optional override params > general params for all sounds in set > individual sound params
-        var param = audioParams ?? proto.GeneralParams ?? sound.Params;
+        // Optional call-site override stays absolute. Otherwise, the collection default supplies
+        // voice bus/range/variation and the individual sound overlays its psychoacoustic profile.
+        // This preserves scream/cough/whisper DSP instead of flattening every emote to the species default.
+        var param = audioParams ?? ComposeEmoteAudioParams(proto.GeneralParams, sound.Params);
         _audio.PlayPvs(sound, uid, param);
         return true;
+    }
+
+    private static AudioParams ComposeEmoteAudioParams(AudioParams? generalParams, AudioParams specificParams)
+    {
+        var result = generalParams ?? AudioParams.Default;
+        var defaults = AudioParams.Default;
+
+        if (Differs(specificParams.Volume, defaults.Volume))
+            result.Volume = specificParams.Volume;
+
+        if (Differs(specificParams.Pitch, defaults.Pitch))
+            result.Pitch = specificParams.Pitch;
+
+        if (Differs(specificParams.MaxDistance, defaults.MaxDistance))
+            result.MaxDistance = specificParams.MaxDistance;
+
+        if (Differs(specificParams.RolloffFactor, defaults.RolloffFactor))
+            result.RolloffFactor = specificParams.RolloffFactor;
+
+        if (Differs(specificParams.ReferenceDistance, defaults.ReferenceDistance))
+            result.ReferenceDistance = specificParams.ReferenceDistance;
+
+        if (specificParams.Loop != defaults.Loop)
+            result.Loop = specificParams.Loop;
+
+        if (Differs(specificParams.PlayOffsetSeconds, defaults.PlayOffsetSeconds))
+            result.PlayOffsetSeconds = specificParams.PlayOffsetSeconds;
+
+        if (specificParams.Variation != null)
+            result.Variation = specificParams.Variation;
+
+        if (specificParams.Bus != defaults.Bus)
+            result.Bus = specificParams.Bus;
+
+        if (specificParams.PsychoacousticProfile != defaults.PsychoacousticProfile)
+            result.PsychoacousticProfile = specificParams.PsychoacousticProfile;
+
+        if (Differs(specificParams.FearIntensity, defaults.FearIntensity))
+            result.FearIntensity = specificParams.FearIntensity;
+
+        if (specificParams.AcousticMaterial != defaults.AcousticMaterial)
+            result.AcousticMaterial = specificParams.AcousticMaterial;
+
+        if (specificParams.BypassMasterCompressor != defaults.BypassMasterCompressor)
+            result.BypassMasterCompressor = specificParams.BypassMasterCompressor;
+
+        return result;
+    }
+
+    private static bool Differs(float left, float right)
+    {
+        return MathF.Abs(left - right) > 0.0001f;
     }
     /// <summary>
     /// Checks if a valid emote was typed, to play sounds and etc and invokes an event.

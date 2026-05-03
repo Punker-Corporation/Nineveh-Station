@@ -1,5 +1,5 @@
-collective-mind-chat-wrap-message = [bold]{ $channel }: { $message }[/bold]
-collective-mind-chat-wrap-message-with-author = [bold]{ $channel } ({ $source }): { $message }[/bold]
+collective-mind-chat-wrap-message = [bold] { $channel }: { $message } [/bold]
+collective-mind-chat-wrap-message-with-author = [bold] { $channel } ( { $source } ): { $message } [/bold]
 collective-mind-chat-wrap-message-admin = { $source } ({ $channel }): { $message }
 collective-mind-flesh-cult = Carne
 collective-mind-xeno = Xeno
@@ -11,3 +11,7 @@ collective-mind-zombie = Zumbi
 collective-mind-changeling = Genestealer
 collective-mind-blood-cult = Culto de Sangue
 collective-mind-abductor = Abdutores
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+collective-mind-pirate = Piratas.

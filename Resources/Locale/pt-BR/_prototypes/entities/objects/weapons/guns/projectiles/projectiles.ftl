@@ -128,3 +128,8 @@ ent-BulletLaserHeavy = parafuso laser pesado
     .desc = { "" }
 ent-BulletLaserHeavySpread = fogo laser estreito
     .desc = { "" }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BulletAntiMaterielCannonBall = plasteel cannonball
+    .desc = { ent-BaseBulletTrigger.desc }

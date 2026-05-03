@@ -5,3 +5,7 @@ entity-category-name-roles = Funções
 entity-category-name-mapping = Mapeamento
 entity-category-name-donotmap = Não mapeie
 entity-category-suffix-donotmap = NÃO MAPEE
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+entity-category-name-status-effects = Efeitos do Estado

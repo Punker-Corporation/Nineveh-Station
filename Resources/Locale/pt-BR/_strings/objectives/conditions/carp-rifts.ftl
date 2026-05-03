@@ -1,12 +1,2 @@
-objective-carp-rifts-title = 
-    Открыть { $count } { $count -> 
-    [one] карповый разлом
-    [few] карповых разлома
-   *[other] карповых разломов
- }
-objective-carp-rifts-description = 
-    Используйте действие «Создать карповый разлом» чтобы открыть { $count } { $count -> 
-    [one] карповый разлом
-    [few] карповых разлома
-   *[other] карповых разломов
- } и не допустить их разрушения. Если вы не откроете разлом через 5 минут, вас убьют.
+objective-carp-rifts-title = Abrir fendas de carpas {$count}
+objective-carp-rifts-description = Use a ação de fenda para abrir fendas {$count} e garantir que eles não sejam destruídos. Se não abrires uma fenda depois de 5 minutos, morres.

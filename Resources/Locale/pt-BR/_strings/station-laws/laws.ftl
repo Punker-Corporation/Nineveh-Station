@@ -100,3 +100,40 @@ laws-ui-law-header = Lei { $id }
 laws-ui-state-law = Anuncie leis:
 laws-notify = Você é obrigado a cumprir as leis da IA, que podem ser visualizadas na barra lateral de ações. Você deve sempre seguir suas próprias leis.
 laws-update-notify = Suas leis foram atualizadas. Você pode ver as alterações na barra de ação lateral.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+laws-number-wrapper = [bold] Lei { $lawnumber }: [/bold] { $lawstring }
+
+
+law-crewsimov-name = Crewsimov
+
+law-corporate-name = Empresa
+
+law-ntdefault-name = NT Padrão
+
+law-drone-name = Drone
+
+law-syndicate-name = Syndicate
+
+law-ninja-name = Ninja
+
+law-commandments-name = Os Dez Mandamentos
+
+law-paladin-name = Paladino
+
+law-lall-name = Viver e Deixar Viver
+
+law-efficiency-name = Eficiência da estação
+
+law-robocop-name = Robocop
+
+law-overlord-name = Senhor
+
+law-game-name = Mestre do Jogo
+
+law-painter-name = Pintor
+
+law-antimov-name = Antimov
+
+law-nutimov-name = Nutimov

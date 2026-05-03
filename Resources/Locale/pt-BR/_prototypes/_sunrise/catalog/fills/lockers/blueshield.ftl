@@ -16,3 +16,8 @@ ent-LockerBlueshieldFilledUplink = { ent-LockerBlueshield }
 ent-LockerBlueshieldFilledUplinkMultiphase = { ent-LockerBlueshield }
     .suffix = Completo, Multifásico
     .desc = { ent-LockerBlueshield.desc }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-GunSafeBlueShield = escudo azul seguro
+    .desc = { ent-GunSafe.desc }

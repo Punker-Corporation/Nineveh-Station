@@ -55,3 +55,7 @@ statsentry-total-absorbed-puddle = Os jogadores removeram poças de [color=white
 statsentry-player-with-most-puddle-absorb = A maioria das poças foi removida graças a [color=white]{ $name }[/color]{ $username } - [color=white]{ $count }[/color].
 statsentry-total-captain-card-interacted = A carta do capitão foi vista por jogadores de [color=white]{ $count }[/color].
 statsentry-total-electrocuted-count = Os jogadores ficaram chocados [color=white]{ $count }[/color] vezes.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+statsentry-bank-balance = No final do turno, o saldo de carga foi de créditos [color=white] { $balance } [/color].

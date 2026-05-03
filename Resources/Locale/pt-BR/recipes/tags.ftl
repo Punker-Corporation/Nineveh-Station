@@ -1,7 +1,6 @@
-# Мехи: HAMTR
+# Mechs: HAMTR
 construction-graph-tag-hamtr-central-control-module = módulo de controle central
-construction-graph-tag-hamtr-peripherals-control-module = módulo de controle periférico
-# Мехи: PowerCage и контроллеры
+construction-graph-tag-hamtr-peripherals-control-module = Módulo de controle de periféricos HAMTR
 construction-graph-component-power-cage = unidade de energia
 # Ripley
 construction-graph-tag-ripley-central-control-module = módulo de controle central
@@ -36,13 +35,13 @@ construction-graph-tag-any-anomaly-core = qualquer núcleo de anomalia
 construction-graph-tag-phazon-armor-plates = placas de armadura
 construction-graph-tag-durand-armor-plates = placas de armadura
 construction-graph-tag-gygax-armor-plates = placas de armadura
-# Полы (floor tiles)
+# Pisos ( telhas)
 dark-techmaint-floor = piso técnico escuro
 xeno-floor = xeno-sexo
-# У этих нет своих ентити прототипов
+# Não têm os seus próprios protótipos.
 dark-squiggly-floor = piso ondulado escuro
 dark-squiggly-vertical-floor = piso ondulado vertical escuro
-# Оружие и материалы
+# Armas e materiais
 construction-graph-tag-glass-shard = caco de vidro
 construction-graph-tag-reinforced-glass-shard = caco de vidro temperado
 construction-graph-tag-plasma-glass-shard = fragmento de vidro plasma
@@ -74,7 +73,8 @@ construction-graph-tag-shell-shotgun-improvised-uranium-desc = descrição de um
 construction-graph-tag-shell-shotgun-coin = cartucho de espingarda com moeda
 construction-graph-tag-shell-shotgun-coin-desc = descrição de um cartucho de espingarda com uma moeda
 construction-graph-tag-empty-shotgun-shell = cartucho de espingarda vazio
-# Клоунские предметы
+
+# materiais
 construction-graph-tag-purple-crayon = giz de cera roxo
 construction-graph-tag-yellow-crayon = giz amarelo
 construction-graph-tag-clown-recorder = gravador de palhaço
@@ -90,15 +90,17 @@ construction-graph-tag-clown-mask = máscara de palhaço
 construction-graph-tag-clowne-horn = chifre de palhaço
 construction-graph-tag-happy-honk-meal = feliz almoço buzinando
 construction-graph-tag-woeful-cluwne-meal = almoço triste de Kluwna
-construction-graph-tag-mime-meal = mimar o almoço
-# Кристаллы
+construction-graph-tag-mime-meal = edição mime happy honk fare
+
+# Lápis
 construction-graph-tag-cyan-crystal-shard = fragmento de cristal azul
 construction-graph-tag-blue-crystal-shard = fragmento de cristal azul
 construction-graph-tag-yellow-crystal-shard = fragmento de cristal amarelo
 construction-graph-tag-pink-crystal-shard = fragmento de cristal rosa
 construction-graph-tag-orange-crystal-shard = fragmento de cristal laranja
-construction-graph-tag-black-crystal-shard = fragmento de cristal negro
-# Боты и компоненты
+construction-graph-tag-black-crystal-shard = caco de cristal preto
+
+# desconhecido
 construction-graph-tag-bucket = balde
 construction-graph-tag-proximity-sensor = sensor de proximidade
 construction-graph-tag-borg-arm = mão do borg
@@ -111,8 +113,9 @@ construction-graph-tag-power-cell-small = bateria pequena
 construction-graph-tag-power-cell = bateria
 construction-graph-tag-potato-battery = bateria de batata
 construction-graph-tag-super-compact-ai-chip = chip AI supercompacto
-construction-graph-tag-station-ai-core-electronics = estação eletrônica central AI
-# Импровизированное оружие
+construction-graph-tag-station-ai-core-electronics = estação IA core electronics
+
+# ferramentas
 construction-graph-tag-empty-can = qualquer banco
 construction-graph-tag-igniter = acendedor
 construction-graph-tag-modular-receiver = receptor modular
@@ -135,20 +138,20 @@ construction-graph-tag-blltvest = melhoria da armadura SB
 construction-graph-tag-hblltvest = melhoria da armadura SB
 construction-graph-tag-rflctvest = melhoria da armadura SB
 construction-graph-tag-riotvest = melhoria da armadura SB
-construction-graph-tag-gorilla-upgrade-kit = chip de melhoria de luva G.O.R.I.L.L.A.
-# Щиты и защита
+construction-graph-tag-gorilla-upgrade-kit = == Ligações externas ==
+# Escudos e protecção
 construction-graph-tag-strobe-shield = escudo estroboscópico
 construction-graph-tag-security-helmet = capacete de segurança
 construction-graph-tag-security-hud = HUD protetor
 construction-graph-tag-medical-hud = HUD médico
 construction-graph-tag-sun-glasses = óculos de sol
 construction-graph-tag-flash = pisca-pisca
-# Скафандры
+# Fatos espaciais
 construction-graph-tag-spationaut-hardsuit = traje espacial de astronauta
 construction-graph-tag-mining-hardsuit = terno de mineiro
 construction-graph-tag-nvd = OVN
-construction-graph-tag-mining-goliath-hardsuit = traje de mineração de golias
-# Электроника
+construction-graph-tag-mining-goliath-hardsuit = viagem de mineração de golias
+# Eletrônica
 construction-graph-tag-freezer-electronics = eletrônica de freezer
 construction-graph-tag-door-electronics-circuit-board = placa eletrônica da porta
 construction-graph-tag-firelock-electronics-circuit-board = placa eletrônica da porta de proteção contra incêndio
@@ -166,20 +169,15 @@ construction-graph-tag-wallmount-substation-circuit-board = placa de subestaçã
 construction-graph-tag-surveillance-camera-monitor-board = placa de monitor de câmera de vigilância
 construction-graph-tag-television-board = Placa de TV
 construction-graph-tag-air-alarm-electronics = eletrônica de alarme de ar
-construction-graph-tag-fire-alarm-electronics = eletrônica de alarme de incêndio
-# Инструменты
+construction-graph-tag-fire-alarm-electronics = Equipamento electrónico de alarme de incêndio
 construction-graph-tag-multitool = multiferramenta
 construction-graph-tag-voice-trigger = gatilho de voz
-construction-graph-tag-signal-trigger = gatilho de sinal
-# Оружие и улучшения
-construction-graph-tag-weapon-pistol-chimp-upgrade-kit = Kit de atualização de pistola CHIMP
-# Растения и материалы
-construction-graph-tag-potato = batata
-# Взрывчатые вещества
-construction-graph-tag-payload = qualquer cobrança
-# Манипуляторы
+construction-graph-tag-signal-trigger = um gatilho de sinal
+construction-graph-tag-weapon-pistol-chimp-upgrade-kit = kit de atualização da pistola CHIMP
+construction-graph-tag-potato = uma batata
+construction-graph-tag-payload = carga útil
 step-manipulator-name = manipulador
-# Мехи
+# Mechs
 construction-graph-tag-lockermech-name = armário de peles
 construction-graph-tag-lockermech-desc = descrição do armário de peles
 step-lockermech-toolbox1 = qualquer caixa de ferramentas
@@ -190,20 +188,20 @@ step-lockermech-oxygentank = qualquer cilindro
 step-lockermech-treads = 5 chapas de aço
 step-lockermech-powercell = célula de energia
 step-lockermech-door-electronics = eletrônica de porta
-# Ядерное оружие
+# Armas nucleares
 construction-graph-tag-plutonium-core = núcleo de plutônio
-# Цветы и венки
+# Flores e grinaldas
 construction-graph-tag-geranium = gerânio
 construction-graph-tag-flower = qualquer flor
 construction-graph-tag-sunflower = girassol
-# Импровизированная броня
+# Armadura improvisada
 construction-graph-tag-apron = avental
 construction-graph-tag-utility-belt = cinto de ferramentas
 construction-graph-tag-scrap-armor = sucata de armadura
 construction-graph-tag-scrap-armor-desc = descrição da armadura de sucata
 construction-graph-tag-scrap-helmet = capacete de sucata
 construction-graph-tag-scrap-helmet-desc = descrição de um capacete feito de sucata
-# Предметы
+# Objectos
 construction-graph-tag-ground-cannabis-vita = canábis moída vita
 construction-graph-tag-dried-cannabis-vita = cannabis seca vita
 construction-graph-tag-nanopaste = nanopasta
@@ -213,7 +211,7 @@ construction-graph-tag-doubloon = dobrão
 construction-graph-tag-credit = crédito
 construction-graph-tag-suntick = Santiki
 construction-graph-tag-runic-metal = metal rúnico
-# Мебель
+# Mobiliário
 construction-graph-tag-double-bed = cama de casal
 construction-graph-tag-double-bed-desc = descrição da cama de casal
 construction-graph-tag-sofa = sofá
@@ -231,7 +229,7 @@ construction-graph-tag-red-sofa-desc = descrição do sofá vermelho
 construction-graph-tag-red-sofa-left = lado esquerdo do sofá vermelho
 construction-graph-tag-red-sofa-right = lado direito do sofá vermelho
 construction-graph-tag-red-sofa-corner = parte de canto de um sofá vermelho
-# Предметы крафта
+# Artigos de artesanato
 construction-graph-tag-atmoscross = cruz atmosférica
 construction-graph-tag-atmoscross-desc = descrição da cruz atmosférica
 construction-graph-tag-geranium-crown = coroa de gerânio
@@ -240,18 +238,18 @@ construction-graph-tag-poppy-crown = coroa de papoula
 construction-graph-tag-poppy-crown-desc = descrição de uma coroa de papoula
 construction-graph-tag-sunflower-crown = guirlanda de girassol
 construction-graph-tag-sunflower-crown-desc = descrição de uma guirlanda de girassol
-# Оружие
+# Armas
 construction-graph-tag-trashgun = canhão de lixo
 construction-graph-tag-trashgun-desc = descrição do canhão de lixo
 construction-graph-tag-trashlasergun = arma laser lixo
 construction-graph-tag-trashlasergun-desc = descrição da arma laser de lixo
-# Энергетика
+# Energia
 construction-graph-tag-power-cage = unidade de energia
 construction-graph-tag-power-cage-desc = descrição da unidade de energia
-# Курительные смеси
+# Misturas para fumar
 construction-graph-tag-joint-vita = Junta Vita
 construction-graph-tag-joint-vita-desc = Descrição do batente Vita
-# Контейнеры
+# Containers.
 construction-graph-tag-canister = vasilha
 construction-graph-tag-canister-desc = descrição da lata
 # Energy Sword
@@ -263,3 +261,50 @@ construction-graph-tag-ground-cannabis-vita-desc = descrição da cannabis vita 
 construction-graph-tag-smokeablejointvita = Fumar baseado Vita
 # SCP Tag
 construction-graph-tag-upgradelocus = Melhoria do módulo Locus
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+construction-graph-tag-boxhug = uma caixa de abraços
+
+# mime
+
+construction-graph-tag-manipulator = parte modular da máquina
+
+soil-construction-graph-any-mushroom = qualquer cogumelo
+
+construction-graph-tag-mop-basic = esfregona
+
+# brinquedos
+
+construction-graph-tag-black-carpet = tapete preto
+
+construction-graph-tag-blue-carpet = tapete azul
+
+construction-graph-tag-cyan-carpet = tapete de ciano
+
+construction-graph-tag-green-carpet = tapete verde
+
+construction-graph-tag-orange-carpet = tapete laranja
+
+construction-graph-tag-pink-carpet = tapete rosa
+
+construction-graph-tag-purple-carpet = tapete roxo
+
+construction-graph-tag-red-carpet = tapete vermelho
+
+construction-graph-tag-white-carpet = tapete branco
+
+# mechs
+
+construction-graph-tag-turret-control-electronics = Electrónica do painel de controlo da torre sentinela
+
+# cristais
+
+construction-graph-tag-red-crystal-shard = caco de cristal vermelho
+
+construction-graph-tag-green-crystal-shard = caco de cristal verde
+
+construction-graph-tag-backpack = mochila
+
+
+construction-graph-tag-paper = papel

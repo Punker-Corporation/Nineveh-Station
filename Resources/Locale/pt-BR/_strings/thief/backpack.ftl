@@ -1,56 +1,64 @@
-thief-backpack-window-title = Caixa de ferramentas para ladrões
-thief-backpack-window-description = 
-    Внутри находятся ваши орудия труда, которые растворятся, когда вы будете готовы.
-    Выберите { $maxCount } { $maxCount -> 
-    [1] набор
-   *[other] разных набора
- } из списка.
-thief-backpack-window-selected = Conjuntos selecionados: ({ $selectedCount }/{ $maxCount })
-thief-backpack-window-approve-button = Aceitar
-thief-backpack-button-select = Selecionado [ ]
-thief-backpack-button-deselect = Selecionado [X]
+thief-backpack-window-title = Kit ladrão
 
-# Sets
+thief-backpack-window-description =
+    Dentro estão suas ferramentas do comércio, que se dissolverão quando estiver pronto.
+    Escolher {$maxCount} diferente {$maxCount ->
+        [1] definido
+        *[other] conjuntos
+    } da lista.
 
-thief-backpack-category-chameleon-name = Conjunto camaleão
-thief-backpack-category-chameleon-description = 
-    Вы - никто и кто угодно, вы - мастер маскировки.
-    В комплект входят: комплект хамелеон-одежды,
-    маскировочный проектор и ID карта агента.
-    Маскируйтесь под кого угодно и под что угодно.
-thief-backpack-category-tools-name = Kit de ladrão
-thief-backpack-category-tools-description = 
-    Что это за звук? Малышка C4 стучится в дверь.
-    Ни одна преграда не остановит вас!
-    В комплект входят: два C4, мультитул, передатчик сигналов, челюсти жизни, термальные очки, имплант свободы,
-    продвинутый сварочный аппарат, инженерные очки и изолированные перчатки.
-thief-backpack-category-chemistry-name = Conjunto Anatomista
-thief-backpack-category-chemistry-description = 
-    Вы достигли пика физической формы... с небольшой помощью.
-    В комплект входят: имплантер-хранилище, имплантер-миксер ДНК,
-    бутылочка эфедрина, шприц, пустой шейкер и омега мыло
-thief-backpack-category-syndie-name = Pacote Sindicato
-thief-backpack-category-syndie-description = 
-    Побрякушки из забытого прошлого или украденные у нерадивого агента?
-    Вы нашли кое-какую связь. Виски, эхо...
-    В комплект входят: Емаг, взломщик доступа, сигареты Interdyne, пИИ синдиката, ЭМИ имплант, имплант Смеха,
-    кодовое слово Синдиката, зажигалка, глушитель связи,
-    и несколько странных красных кристаллов.
-thief-backpack-category-sleeper-name = Conjunto Sony
-thief-backpack-category-sleeper-description = 
-    Как в песне поётся: Until we close our eyes for good;
-    используйте свои нелегальные рецепты чтобы заставить спать других.
-    В комплект входят: баллон с оксидом азота, имплант побега,
-    два бутылочки ноктюрина и гипоручка.
-thief-backpack-category-communicator-name = Recrutamento de negociador
-thief-backpack-category-communicator-description = 
-    Богатство - это власть, а секреты - это богатство.
-    Используйте своё красноречие и богатство, чтобы покорить станцию.
-    В комплект входят: мастер-ключ шифрования от всех каналов станции, ручка CyberSun,
-    голосовая маска-хамелеон, а также 20 тысяч космокредитов в чемоданчике.
-thief-backpack-category-smuggler-name = Kit do contrabandista
-thief-backpack-category-smuggler-description = 
-    Всем ворам нужно где-то прятать свои вещи.
-    Не забудьте присоединить свой фултон.
-    В комплект входят: маяк фултона, 10 фултонов, 3 дымовые гранаты, телепортер синдиката,
-    и невидимый ящик, чтобы прятать ценную добычу.
+thief-backpack-window-selected = Kits selecionados: ({$selectedCount}/{$maxCount})
+
+thief-backpack-window-approve-button = Aprovar
+thief-backpack-button-select = Selecionar [  ]
+thief-backpack-button-deselect = Selecionar [X]
+
+# Conjuntos
+
+thief-backpack-category-chameleon-name = Kit Camaleão
+thief-backpack-category-chameleon-description =
+    Vós sois todos e ninguém; sois um mestre do disfarce.
+    Inclui: Um conjunto completo de roupas camaleões com identificação do agente,
+    um projector camaleão e um falso implante de escudo mental.
+    Disfarçar como qualquer um e qualquer coisa.
+
+thief-backpack-category-tools-name = Kit de Violação
+thief-backpack-category-tools-description =
+    Que som é esse? Um C4 a bater-lhes à porta.
+    Nenhum obstáculo pode detê-lo!
+    Inclui: Dois C4, um multitool, sinalizador remoto, mandíbulas de vida,
+    soldador avançado, óculos de engenharia e luvas isoladas.
+
+thief-backpack-category-chemistry-name = Kit de Anatomia
+thief-backpack-category-chemistry-description =
+    Atingiste o máximo do desempenho físico... com uma ajudinha.
+    Inclui: Implanter de armazenamento, misturador de DNA,
+    frasco de efedrina, seringa, shaker vazio e sabão ômega
+
+thief-backpack-category-syndie-name = Kit Syndie
+thief-backpack-category-syndie-description =
+    Trinkets de um passado rejeitado, ou roubado de um agente descuidado?
+    Fizeste algumas ligações. Uísque, eco...
+    Inclui: Um Emag, Quebrador de Acesso, Cigs Interdyne, uma palavra de código Syndicate,
+    Um rádio Jammer, um isqueiro e alguns cristais vermelhos estranhos.
+
+thief-backpack-category-sleeper-name = Kit de dormir
+thief-backpack-category-sleeper-description =
+    Até fecharmos os olhos para sempre, usem as vossas receitas ilegais.
+    para manter os outros a dormir.
+    Incluí: Tanque de óxido nitroso sonolento, duas garrafas de nocturina,
+    e uma caneta.
+
+thief-backpack-category-communicator-name = Kit de Comunicação
+thief-backpack-category-communicator-description =
+    Dinheiro é poder, e segredos são dinheiro. Usa a tua língua prateada
+    e riqueza para subverter a estação.
+    Inclui: Chave principal para todos os canais da estação, uma caneta CyberSun,
+    máscara de camaleão de voz, e 20k spesos dentro de uma pasta.
+
+thief-backpack-category-smuggler-name = Kit Contrabandista
+thief-backpack-category-smuggler-description =
+    Todos os ladrões precisam de um lugar para esconder os seus bens no escuro.
+    Não te esqueças de ligar o teu fulton.
+    Inclui: farol Fulton, 10 fultons, 3 granadas de fumaça,
+    e uma caixa invisível para esconder um valioso saque.

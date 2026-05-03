@@ -1,26 +1,26 @@
-printed-station-records-content = 
+printed-station-records-content =
     ​
     ​
     ​[head=1]SCP[/head]
-    ​[bold]Secure. Contain. Protect.[/bold]
+    ​[bold]Seguro. Conter. Proteger.[/bold]
     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-    ​[bold]Распечатка из базы данных персонала комплекса[/bold]
+    ​[bold]Impressão na base de dados de pessoal complexo[/bold]
 
     ​[head=2]Informações básicas[/head]
 
-    ​[bullet] [color=#594D4A][bold]Имя:[/bold][/color] [italic]{ $name }[/italic]
-    ​[bullet] [color=#594D4A][bold]Должность:[/bold][/color] [italic]{ $job }[/italic]
-    ​[bullet] [color=#594D4A][bold]Отдел:[/bold][/color] [italic]{ $department }[/italic]
-    ​[bullet] [color=#594D4A][bold]Класс персонала:[/bold][/color] [italic]{ $class }[/italic]
-    ​[bullet] [color=#594D4A][bold]Уровень допуска:[/bold][/color] [italic]{ $access }[/italic]
-    ​[bullet] [color=#594D4A][bold]Возраст:[/bold][/color] [italic]{ $age }[/italic]
-    ​[bullet] [color=#594D4A][bold]Пол:[/bold][/color] [italic]{ $gender }[/italic]
-    ​[bullet] [color=#594D4A][bold]Вид:[/bold][/color] [italic]{ $species }[/italic]
+    ​[bullet] [color=#594D4A][bold]Nome:[/bold][/color] [italic]{ $name }[/italic]
+    ​[bullet] [color=#594D4A][bold]Posição:[/bold][/color] [italic]{ $job }[/italic]
+    ​[bullet] [color=#594D4A][bold]Divisão:[/bold][/color] [italic]{ $department }[/italic]
+    ​[bullet] [color=#594D4A][bold]Classe de pessoal:[/bold][/color] [italic]{ $class }[/italic]
+    ​[bullet] [color=#594D4A][bold]Nível de tolerância:[/bold][/color] [italic]{ $access }[/italic]
+    ​[bullet] [color=#594D4A][bold]Idade:[/bold][/color] [italic]{ $age }[/italic]
+    ​[bullet] [color=#594D4A][bold]Paul:[/bold][/color] [italic]{ $gender }[/italic]
+    ​[bullet] [color=#594D4A][bold]Ver:[/bold][/color] [italic]{ $species }[/italic]
 
     ​[head=2]Dados biométricos[/head]
 
-    ​[bullet] [color=#5BA4CF][bold]ДНК:[/bold][/color] [mono]{ $dna }[/mono]
-    ​[bullet] [color=#5BA4CF][bold]Отпечаток пальцев:[/bold][/color] [mono]{ $fingerprint }[/mono]
+    ​[bullet] [color=#5BA4CF][bold]ADN:[/bold][/color] [mono]{ $dna }[/mono]
+    ​[bullet] [color=#5BA4CF][bold]Impressão digital:[/bold][/color] [mono]{ $fingerprint }[/mono]
 
     ​[head=2]Característica[/head]
 

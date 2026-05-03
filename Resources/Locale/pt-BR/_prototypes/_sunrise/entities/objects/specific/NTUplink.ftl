@@ -49,3 +49,21 @@ ent-ClothingHandsPowerGlovesUplinkNTERTCBURN = Luvas elétricas RKhBZZ
 ent-ClothingHandsPowerGlovesUplinkNTERTEpsilon = luvas de poder
     .desc = Luvas duraplast duráveis ​​e resistentes ao fogo. Nem uma palavra sobre NanoTrasen.
     .suffix = Uplink, Épsilon
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-BaseUplinkNTERTAmber = Bluespace ERT visionário
+    .desc = Teletransportador portátil ultra inovador de espaço azul.
+    .suffix = 75BC, 75C, Amber
+
+ent-BaseUplinkNTERTRed = Bluespace ERT visionário
+    .desc = Teletransportador portátil ultra inovador de espaço azul.
+    .suffix = 100BC, 100C, Vermelho
+
+ent-BaseUplinkNTERTGamma = Bluespace ERT visionário
+    .desc = Teletransportador portátil ultra inovador de espaço azul.
+    .suffix = 200BC, 200C, Gama
+
+ent-BaseUplinkNTERTDebug = Bluespace ERT visionário
+    .desc = Teletransportador portátil ultra inovador de espaço azul.
+    .suffix = 999, Depurar

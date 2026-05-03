@@ -24,3 +24,47 @@ ent-ClothingBraStrapless = sutiã sem alças feminino
     .desc = Sutiã sem alças para invisibilidade sob a roupa.
 ent-ClothingBraChristmas = sutiã feminino "Natal"
     .desc = Sutiã com desenho que simboliza o Natal.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBraAdjutant = Sutiã de mulher "Adjutante"
+    .desc = Um sutiã em cores ajudantes.
+
+ent-ClothingBraCMO = sutiã feminino "CMO"
+    .desc = Um sutiã em cores de oficial médico chefe.
+
+ent-ClothingBraCaptain = soutien feminino "Capitão"
+    .desc = Um sutiã em cores de capitão.
+
+ent-ClothingBraCaptainBlack = sutiã preto feminino "Capitão"
+    .desc = Um sutiã preto para o capitão.
+
+ent-ClothingBraCaptainWhite = sutiã branco feminino "Capitão"
+    .desc = Um sutiã branco para o capitão.
+
+ent-ClothingBraHeadOfPersonnel = sutiã feminino "Cabeça de Pessoal"
+    .desc = Um sutiã em cores de pessoal.
+
+ent-ClothingBraHeadOfSecurity = sutiã feminino "Cabeça de Segurança"
+    .desc = Um sutiã em cores de segurança.
+
+ent-ClothingBraQuartermaster = sutiã feminino "Quartermaster"
+    .desc = Um sutiã em cores de contramestre.
+
+ent-ClothingBraResearchDirector = sutiã feminino "Research Director"
+    .desc = Um sutiã em cores de diretor de pesquisa.
+
+ent-ClothingBraBlueshield = sutiã feminino "Blueshield"
+    .desc = Um sutiã em cores de azul.
+
+ent-ClothingBraChiefEngineer = sutiã feminino "Engenheiro Chefe"
+    .desc = Um sutiã em cores de engenheiro chefe.
+
+ent-ClothingBraPink = sutiã rosa feminino
+    .desc = Um sutiã rosa.
+
+ent-ClothingBraPurple = sutiã roxo feminino
+    .desc = Um sutiã roxo.
+
+ent-ClothingBraBlack = sutiã preto de mulheres
+    .desc = Um sutiã preto.

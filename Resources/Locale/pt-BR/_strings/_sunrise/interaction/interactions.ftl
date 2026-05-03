@@ -34,3 +34,17 @@ interaction-name-horns-pat = Acaricie os chifres
 interaction-name-neck-nuzzle = Esfregue o focinho no pescoço
 # tail.yml
 interaction-name-pat-tail = Acaricie a cauda
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+interaction-name-wing-pat = Alas para animais
+
+interaction-name-wing-scratch = Asas de coçar
+
+interaction-name-wing-pull = Puxar asas
+
+interaction-name-wing-hug = Abraçar com asas
+
+interaction-name-wing-cover = Capa com asas
+
+interaction-name-wing-rub = Esfregar asas

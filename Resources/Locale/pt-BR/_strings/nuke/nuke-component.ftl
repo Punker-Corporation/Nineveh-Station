@@ -27,9 +27,10 @@ nuke-user-interface-second-status-await-disk = ESPERANDO DISCO
 nuke-user-interface-second-status-time = HORA: { $time }
 nuke-user-interface-second-status-current-code = CÓDIGO: { $code }
 nuke-user-interface-second-status-cooldown-time = ESPERANDO: { $time }
-nuke-label-nanotrasen = SCP-{ $serial }
-# Нужен ли вообще этот ярлык? Гораздо интереснее указать, что
-# Синдикат украл ядерную боеголовку Фонда
+nuke-label-nanotrasen = NT- {$serial}
+
+# Ao menos precisas desta? É mais engraçado dizer isso.
+# O Sindicato roubou uma bomba nuclear NT
 nuke-label-syndicate = AZUL-{ $serial }
 
 # Codes
@@ -41,3 +42,9 @@ nuke-codes-fax-paper-name = códigos de autenticação nuclear
 nuke-slot-component-slot-name-disk = Disco
 nuke-examine-armed = Ei, por que aquela [color=red]luz vermelha[/color] está piscando?
 nuke-examine-exploding = Pois é... Parece que é tarde demais, amigo.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+nuke-disk-component-microwave = O disco acende e quebra um pouco, mas parece mais ileso?
+
+# Nuke UI

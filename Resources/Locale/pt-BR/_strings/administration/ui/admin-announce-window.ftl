@@ -6,3 +6,9 @@ admin-announce-button = Faça um anúncio
 admin-announce-type-station = Complexo
 admin-announce-type-server = Servidor
 admin-announce-keep-open = Mantenha-se aberto
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+cmd-announceui-desc = Abre a UI de anúncio.
+
+cmd-announceui-help = Uso: annoui

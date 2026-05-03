@@ -11,7 +11,7 @@ tips-dataset-10 = A cognisina, um produto químico difícil de fabricar, torna i
 tips-dataset-11 = As ratoeiras armadas são incrivelmente eficazes contra todos os tipos de pequenas criaturas - incluindo ratos servos.
 tips-dataset-12 = Os extintores de incêndio podem ser preenchidos com absolutamente qualquer reagente do jogo.
 tips-dataset-13 = Alguns reagentes, como o trifluoreto de cloro (CLF3), possuem efeitos únicos que ocorrem através do toque, como a liberação de um borrifador ou na forma de espuma.
-tips-dataset-14 = Não se esqueça de sair e tocar na grama pelo menos de vez em quando entre as rodadas da Estação Espacial 14.
+tips-dataset-14 = Faça pausas entre rodadas. A tensão funciona melhor quando você volta inteiro para o escuro.
 tips-dataset-15 = Use o botão Usar item no mundo (tecla E por padrão) para interagir com objetos se você não quiser pegá-los ou estiver ocupado.
 tips-dataset-16 = O bom senso ajuda a evitar conflitos.
 tips-dataset-17 = Outros jogadores também são pessoas.
@@ -48,7 +48,7 @@ tips-dataset-47 = Como um necrófago, você pode usar um acelerador protocinéti
 tips-dataset-48 = Como necrófago, não se esqueça de cavar em busca de minério! O minério pode ser vendido em carga por um bom dinheiro, usado para construção e também por cientistas para tecnologias sofisticadas.
 tips-dataset-49 = Como reciclador, experimente pedir aos cientistas uma arma gravitacional. Ele pode ser usado para mover objetos de detritos com extrema eficiência!
 tips-dataset-50 = Como reciclador, experimente pedir aos cientistas um gancho. Ele pode ser usado para mover-se sobre detritos.
-tips-dataset-51 = Conselho #51 не существует и никогда не существовал. Игнорируйте любые слухи об обратном.
+tips-dataset-51 = A dica #51 não existe e nunca existiu. Ignorar os rumores em contrário.
 tips-dataset-52 = Como reciclador, considere trabalhar com transportadores. Eles podem solicitar uma ampla variedade de itens úteis para você, incluindo aqueles que podem ser difíceis de obter de outra forma, como armas laser e materiais de construção de naves espaciais.
 tips-dataset-53 = Como carregador, tente perguntar aos cientistas sobre o AVP de Ripley. Combinado com uma garra hidráulica, você pode coletar itens de manutenção valiosos, como tanques de combustível, com muito mais facilidade e fazer entregas rapidamente.
 tips-dataset-54 = Como transportador, tente manter um excedente de materiais. Isto é extremamente útil quando cientistas ou engenheiros precisam deles com urgência.
@@ -119,7 +119,7 @@ tips-dataset-118 = Você pode usar objetos pontiagudos para cortar animais ou ro
 tips-dataset-119 = A maioria dos explosivos possui um temporizador, que você pode definir através do menu RMB. Incluindo o Pinguim Granadeiro!
 tips-dataset-120 = Você pode atordoar o Pinguim Granadeiro, o que pode lhe dar um tempo valioso para matá-lo
 tips-dataset-121 = Você pode clicar com o botão direito nos nomes dos itens no menu para pegá-los, em vez de mirar no item e depois pegá-lo.
-tips-dataset-122 = A Estação Espacial 14 é um jogo de código aberto! Se quiser mudar algo ou adicionar um item simples, tente contribuir com o jogo. Não é tão difícil quanto você pensa.
+tips-dataset-122 = Nineveh é mantida por pessoas que testam, quebram e consertam. Se algo falhar, registre o problema com precisão.
 tips-dataset-123 = Como último recurso, você pode jogar bebidas ou outros recipientes de reagentes atrás de você para criar poças nas quais seus perseguidores escorregarão.
 tips-dataset-124 = Algumas armas, como facas e canivetes, têm maior velocidade de ataque.
 tips-dataset-125 = As mandíbulas da vida podem abrir portas elétricas.
@@ -135,3 +135,9 @@ tips-dataset-134 = Você pode determinar se uma área com eclusas contra incênd
 tips-dataset-135 = Em vez de pegá-lo, você pode clicar com a tecla Alt pressionada na comida para comê-la. Isto também funciona para ratos e outras criaturas sem braços.
 tips-dataset-136 = Se você estiver trancado atrás de uma porta energizada: desligue o APC ou jogue o cartão de identificação na porta para evitar choque elétrico!
 tips-dataset-137 = Se a IA energizou a porta e você tem luvas isoladas, corte e repare o fio de alimentação para reiniciar a eletrificação!
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+tips-dataset-138 = Se você quiser impedir seu prisioneiro de escapar da cela logo após ser desamparado, ligue o modo de combate enquanto desampara - isso vai empurrar o prisioneiro para baixo.
+
+tips-dataset-139 = Certifique-se de limpar seus implantes ilegais com um sabão depois de usá-los! Os detectives podem analisar implantes usados em busca de provas incriminadoras de ADN, mas não se foram limpos.

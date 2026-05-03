@@ -8,3 +8,7 @@ door-remote-switch-state-toggle-bolts = Você configura o controle remoto para t
 door-remote-switch-state-toggle-emergency-access = Você configura o controle remoto para alternar o acesso de emergência
 door-remote-no-power = A porta está desenergizada
 door-remote-denied = Acesso negado
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+door-remote-toggle-eletrify-text = Alternar sobrecarga

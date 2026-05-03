@@ -1,5 +1,5 @@
 ent-AirlockFreezer = { ent-Airlock }
-    .suffix = Freezer
+    .suffix = Congelador
     .desc = { ent-Airlock.desc }
 ent-AirlockEngineering = { ent-Airlock }
     .suffix = Engenharia

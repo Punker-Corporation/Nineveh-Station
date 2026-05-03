@@ -1,4 +1,5 @@
-ent-SpawnPointScpBase = criador de profissão
+ent-SpawnPointScpBase = { ent-SpawnPointJobBase }
+    .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointDirector = { ent-SpawnPointScpBase } { job-name-director }
     .desc = ""
     .suffix = { department-Administration }

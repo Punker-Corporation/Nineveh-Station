@@ -3,6 +3,7 @@ using Content.Client.Light.Components;
 using Content.Shared.Light;
 using Content.Shared.Light.Components;
 using Content.Shared.Toggleable;
+using Content.Shared.UserInterface;
 using Robust.Client.GameObjects;
 using Content.Client.Light.EntitySystems;
 
@@ -12,6 +13,7 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly LightBehaviorSystem _lightBehavior = default!;
+    [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
 
     public override void Initialize()
     {
@@ -19,6 +21,7 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
 
         Subs.ItemStatus<HandheldLightComponent>(ent => new HandheldLightStatus(ent));
         SubscribeLocalEvent<HandheldLightComponent, AppearanceChangeEvent>(OnAppearanceChange);
+        SubscribeLocalEvent<FlashlightMaintenanceComponent, AfterAutoHandleStateEvent>(OnMaintenanceAfterHandleState);
     }
 
     /// <remarks>
@@ -79,5 +82,11 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
                     break;
             }
         }
+    }
+
+    private void OnMaintenanceAfterHandleState(Entity<FlashlightMaintenanceComponent> ent, ref AfterAutoHandleStateEvent args)
+    {
+        if (_ui.TryGetOpenUi<FlashlightMaintenanceBoundUserInterface>(ent.Owner, FlashlightMaintenanceUiKey.Key, out var bui))
+            bui.Reload();
     }
 }

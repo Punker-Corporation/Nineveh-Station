@@ -30,13 +30,14 @@ device-frequency-prototype-name-surveillance-camera-entertainment = Câmeras (en
 device-address-prefix-sensor = Sens-
 device-address-prefix-fire-alarm = Por favor
 # Damn bet you couldn't see this one coming.
-device-address-prefix-teg = TEG-
+device-address-prefix-teg = TEG...
 device-address-prefix-heater = NGR-
 device-address-prefix-freezer = OHL-
 device-address-prefix-volume-pump = OBN-
 device-address-prefix-smes = SMS-
 device-address-prefix-turret = TRT-
-# PDAs and terminals
+
+# PDAs e terminais
 device-address-prefix-console = Cons-
 device-address-prefix-air-alarm = Ar
 device-address-examine-message = Endereço do dispositivo: { $address }.

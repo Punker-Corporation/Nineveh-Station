@@ -1,6 +1,6 @@
-# Общее
+# General.
 scp-facility-beacon-general = Geral
-# Кабинеты
+# Escritórios
 scp-facility-beacon-facility-director-office = Diretor do Sitio
 scp-facility-beacon-chief-researcher-office = Pesquisador Chefe
 scp-facility-beacon-security-commander-office = Chefe de Segurança
@@ -13,7 +13,7 @@ scp-facility-beacon-head-commandant-office = Comandante de Segurança
 scp-facility-beacon-special-purpose-unit-commander-office = Chefe da SecDep
 scp-facility-beacon-amnesticologist-office = Gabinete do Amnesticista
 scp-facility-beacon-parapsychologist-office = Gabinete do Parapsicólogo
-# Камеры SCP
+# Câmaras SCP
 scp-facility-beacon-scp-173-containment = SCP-173
 scp-facility-beacon-scp-939-containment = SCP-939
 scp-facility-beacon-scp-106-containment = SCP-106
@@ -28,7 +28,7 @@ scp-facility-beacon-scp-035-containment = SCP-035
 scp-facility-beacon-scp-079-containment = SCP-079
 scp-facility-beacon-scp-item-containment = itens SCP
 scp-facility-beacon-scp-humanoid-containment = SCP humanoides
-# Отделы и Подразделения
+# Divisões e Unidades
 scp-facility-beacon-administration-department = Gestão da Sitio
 scp-facility-beacon-security-department = Serviço de segurança
 scp-facility-beacon-scientific-service = Departamento de Pesquisa
@@ -42,7 +42,7 @@ scp-facility-beacon-special-purpose-squad = Esquadrão da SecDep
 scp-facility-beacon-cafeteria = Cafeteria
 scp-facility-beacon-class-d-containment-zone = Classe D
 scp-facility-beacon-life-support = Suporte de vida
-# Специальное
+# Especialista
 scp-facility-beacon-checkpoint-entrance-to-light-a = Checkpoint AZ-ZCL "A"
 scp-facility-beacon-checkpoint-entrance-to-light-b = Checkpoint AZ-ZCL "B"
 scp-facility-beacon-checkpoint-light-to-heavy-a = Checkpoint ZCL-ZCP "A"

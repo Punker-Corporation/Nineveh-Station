@@ -1,8 +1,8 @@
-# Группы
+# Grupos
 spray-painter-tab-group-airlockdoubleglass = Dobro
 spray-painter-tab-group-airlocktripleglass = Triplo
 
-# Двойные стеклянные шлюзы
+# Câmaras de ar de vidro duplo
 spray-painter-style-airlockdoubleglass-atmospherics = Atmosféricos
 spray-painter-style-airlockdoubleglass-basic = Ordinário
 spray-painter-style-airlockdoubleglass-cargo = Fornecer
@@ -17,7 +17,7 @@ spray-painter-style-airlockdoubleglass-security = Serviço de segurança
 spray-painter-style-airlockdoubleglass-virology = Virologia
 spray-painter-style-airlockdoubleglass-centralcommand = Comando Central
 
-# Тройные стеклянные шлюзы
+# Câmaras de ar de vidro triplo
 spray-painter-style-airlocktripleglass-atmospherics = Atmosféricos
 spray-painter-style-airlocktripleglass-basic = Ordinário
 spray-painter-style-airlocktripleglass-cargo = Fornecer

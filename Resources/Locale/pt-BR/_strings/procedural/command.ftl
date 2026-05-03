@@ -12,6 +12,7 @@ cmd-dungen-hint-config = Configuração da estrutura
 cmd-dungen-hint-posx = Coordenada X
 cmd-dungen-hint-posy = Coordenada Y
 cmd-dungen-hint-seed = [Seed]
+
 cmd-dungen_preset_vis-desc = Gera uma visualização em bloco de uma predefinição de masmorra.
 cmd-dungen_preset_vis-help = Uso: dungen_preset_vis <mapid> <preset>
 cmd-dungen_pack_vis-success = Com sucesso

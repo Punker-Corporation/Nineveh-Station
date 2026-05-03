@@ -50,3 +50,9 @@ AntagInitialInfected = Zero infectado
 JobNinja = Ninja Espacial
 AntagDragon = Dragão Espacial
 AntagSubvertedSilicon = Silicone hostil
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+roles-antag-nuclear-operative-agent-name = Cirurgião operacional nuclear
+
+roles-antag-nuclear-operative-agent-objective = O médico da equipa nuclear. Cure sua equipe para a vitória!

@@ -8,3 +8,7 @@ department-Security = Serviço de segurança
 department-Science = Departamento Científico
 department-Silicon = Silicones
 department-Specific = Outro
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+department-Unknown = Desconhecido

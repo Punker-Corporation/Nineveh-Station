@@ -13,3 +13,23 @@ ent-SpawnerMTFSquadMH = { spawner-squad-name } FTM Beta-7
 ent-SpawnerMTFSquadMHSpawnOnTrigger = { ent-SpawnerMTFSquadMH }
     .desc = { ent-SpawnerMTFSquadMH.desc }
     .suffix = { ent-SpawnerMTFSquadMH.suffix }, { spawner-on-trigger-suffix }
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-IDCardMHLeader = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardMHSpecialist = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-IDCardMHCadet = { ent-IDCardMTFStandard }
+    .desc = { ent-IDCardMTFStandard.desc }
+
+ent-MHLeaderPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-MHSpecialistPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }
+
+ent-MHCadetPDA = { ent-BaseMTFPDA }
+    .desc = { ent-BaseMTFPDA.desc }

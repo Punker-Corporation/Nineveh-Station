@@ -1,4 +1,4 @@
-# Способности
+# Habilidades.
 changeling-biomass-deficit = Biomassa insuficiente!
 changeling-chemicals-deficit = Não há produtos químicos suficientes!
 changeling-action-fail-lesserform = Não pode ser usado em formato menor!

@@ -1,13 +1,9 @@
 # Borg Voice Change UI
 borg-voice-window-title = Настройки голоса
-borg-voice-window-description = Выберите голос TTS.
-borg-voice-window-play-button = Прослушать
+borg-voice-window-description = Выберите свой голос TTS. Киборги могут говорить любым голосом благодаря своим спикерам.
+borg-voice-window-voice-label = Голос:
+borg-voice-window-play-button = Предварительный просмотр
 
 # Action
-action-name-change-borg-voice = Сменить голос
-action-description-change-borg-voice = Измените голос TTS. Киборги могут говорить любым голосом благодаря динамикам.
-
-# Popups
-borg-voice-popup-sponsor-only = Этот голос доступен только спонсорам!
-borg-voice-popup-changed = Голос изменён на { $voice }!
-borg-voice-popup-invalid = Выбран несуществующий голос!
+action-name-change-borg-voice = Изменить голос
+action-description-change-borg-voice = Измените свой голос. Киборги могут говорить любым голосом благодаря своим спикерам.

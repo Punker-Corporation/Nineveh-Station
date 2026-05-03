@@ -43,3 +43,11 @@ ent-RegionalAdministrationPDA = Gestão regional KPK
 ent-ScpAdminPDA = PDA de administrador
     .suffix = Administrador
     .desc = Se encontrar este PDA contacte imediatamente o ponto Ahelpa mais próximo e devolva-o à Administração.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-DirectorsPDA = PDA do diretor
+    .desc = Um PDA pessoal para o diretor com privilégios de acesso elevados, um calendário de alta prioridade, e-mail criptografado e arquivos seguros. Utilizado para a tomada de decisões e gestão de recursos de instalações críticas.
+
+ent-MTFPDA = MTF PDA
+    .desc = Um PDA de campo para unidades operacionais móveis: acesso rápido a mapas, dados de destino, ordens e registros de ação. Otimizado para uso em condições operacionais autônomas e extremas.

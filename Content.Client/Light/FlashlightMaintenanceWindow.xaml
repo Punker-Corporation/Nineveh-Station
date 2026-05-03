@@ -1,0 +1,35 @@
+<ui:FancyWindow xmlns="https://spacestation14.io" xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
+                SetSize="560 430" Title="{Loc 'flashlight-maintenance-window-title'}" Resizable="False">
+    <BoxContainer Margin="10 8" Orientation="Vertical" SeparationOverride="8">
+        <Label Name="StatusLabel" Text="{Loc 'flashlight-maintenance-window-status'}" />
+        <Label Text="{Loc 'flashlight-maintenance-window-field-note'}" />
+        <Label Text="{Loc 'flashlight-maintenance-window-section-optics'}" StyleClasses="LabelKeyText" />
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Label Text="{Loc 'flashlight-maintenance-window-focus'}" MinWidth="130" />
+            <Slider Name="FocusSlider" MinValue="0" MaxValue="100" HorizontalExpand="True" />
+            <Label Name="FocusValue" Text="0%" MinWidth="48" HorizontalAlignment="Right" />
+        </BoxContainer>
+        <Label Name="ProjectionLabel" Text="-" />
+        <Label Text="{Loc 'flashlight-maintenance-window-section-diagnostics'}" StyleClasses="LabelKeyText" />
+        <BoxContainer Orientation="Vertical" SeparationOverride="4">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Label Name="LensLabel" Text="-" HorizontalExpand="True" />
+                <Button Name="LensButton" Text="{Loc 'flashlight-maintenance-window-service'}" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Label Name="EmitterLabel" Text="-" HorizontalExpand="True" />
+                <Button Name="EmitterButton" Text="{Loc 'flashlight-maintenance-window-service'}" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Label Name="ContactsLabel" Text="-" HorizontalExpand="True" />
+                <Button Name="ContactsButton" Text="{Loc 'flashlight-maintenance-window-service'}" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Label Name="HeatSinkLabel" Text="-" HorizontalExpand="True" />
+                <Button Name="HeatSinkButton" Text="{Loc 'flashlight-maintenance-window-service'}" />
+            </BoxContainer>
+        </BoxContainer>
+        <Label Text="{Loc 'flashlight-maintenance-window-section-thermal'}" StyleClasses="LabelKeyText" />
+        <Label Name="HeatLabel" Text="-" />
+    </BoxContainer>
+</ui:FancyWindow>

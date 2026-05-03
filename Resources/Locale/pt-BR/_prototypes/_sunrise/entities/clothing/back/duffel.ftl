@@ -32,3 +32,8 @@ ent-ClothingBackpackDuffelWhite = bolsa de lona branca
     .desc = Esta mochila parece ótima.
 ent-ClothingBackpackDuffelYellow = bolsa amarela
     .desc = Esta mochila parece ótima.
+
+# Chaves adicionadas para impedir qualquer fallback de localiza??o.
+
+ent-ClothingBackpackDuffelRandomColorSpawner = saco de mochila (cor aleatória)
+    .desc = Um saco com uma cor aleatória.
