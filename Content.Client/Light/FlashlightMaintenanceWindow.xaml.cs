@@ -8,23 +8,38 @@ namespace Content.Client.Light;
 [GenerateTypedNameReferences]
 public sealed partial class FlashlightMaintenanceWindow : FancyWindow
 {
+    private float _lastSentFocus = -1f;
+
     public event Action<float>? OnFocusChanged;
     public event Action<FlashlightModule>? OnServiceModule;
+    public event Action<FlashlightCircuitAction>? OnCircuitAction;
 
     public FlashlightMaintenanceWindow()
     {
         RobustXamlLoader.Load(this);
 
-        FocusSlider.OnReleased += _ => OnFocusChanged?.Invoke(FocusSlider.Value / 100f);
+        MaintenanceTabs.SetTabTitle(0, Loc.GetString("flashlight-maintenance-window-tab-optics"));
+        MaintenanceTabs.SetTabTitle(1, Loc.GetString("flashlight-maintenance-window-tab-diagnostics"));
+        MaintenanceTabs.SetTabTitle(2, Loc.GetString("flashlight-maintenance-window-tab-circuit"));
+
+        FocusSlider.OnValueChanged += _ => SendFocus(false);
+        FocusSlider.OnReleased += _ => SendFocus(true);
         LensButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Lens);
         EmitterButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Emitter);
         ContactsButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.Contacts);
         HeatSinkButton.OnPressed += _ => OnServiceModule?.Invoke(FlashlightModule.HeatSink);
+        ContinuityButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.ProbeContinuity);
+        PolarityButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.ReversePolarity);
+        CapacitorButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.BleedCapacitor);
+        GroundButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.BridgeGround);
+        ResistorButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.TrimResistor);
+        EmitterCalButton.OnPressed += _ => OnCircuitAction?.Invoke(FlashlightCircuitAction.CalibrateEmitter);
     }
 
     public void UpdateState(FlashlightMaintenanceBoundUserInterfaceState state)
     {
         FocusSlider.SetValueWithoutEvent(state.Focus * 100f);
+        _lastSentFocus = state.Focus;
         FocusValue.Text = $"{Percent(state.Focus)}%";
         ProjectionLabel.Text = Loc.GetString(
             "flashlight-maintenance-window-projection",
@@ -33,17 +48,76 @@ public sealed partial class FlashlightMaintenanceWindow : FancyWindow
 
         StatusLabel.Text = state.Overheated
             ? Loc.GetString("flashlight-maintenance-window-overheated")
+            : state.FaultLatched
+                ? Loc.GetString("flashlight-maintenance-window-fault")
             : Loc.GetString("flashlight-maintenance-window-status");
+        FaultLabel.Text = Loc.GetString(
+            "flashlight-maintenance-window-fault-line",
+            ("fault", Loc.GetString(GetFaultLoc(state.LastFault))));
+        CircuitStepLabel.Text = Loc.GetString(
+            "flashlight-maintenance-window-circuit-step",
+            ("step", Loc.GetString(GetStepLoc(state.CircuitStep))));
 
         LensLabel.Text = Loc.GetString("flashlight-maintenance-window-lens", ("value", Percent(state.LensIntegrity)));
         EmitterLabel.Text = Loc.GetString("flashlight-maintenance-window-emitter", ("value", Percent(state.EmitterIntegrity)));
         ContactsLabel.Text = Loc.GetString("flashlight-maintenance-window-contacts", ("value", Percent(state.ContactIntegrity)));
         HeatSinkLabel.Text = Loc.GetString("flashlight-maintenance-window-heatsink", ("value", Percent(state.HeatSinkIntegrity)));
         HeatLabel.Text = Loc.GetString("flashlight-maintenance-window-heat", ("value", Percent(state.Heat)));
+        HeatBar.Value = Math.Clamp(state.Heat, 0f, 1f);
+        LensBar.Value = Math.Clamp(state.LensIntegrity, 0f, 1f);
+        EmitterBar.Value = Math.Clamp(state.EmitterIntegrity, 0f, 1f);
+        ContactsBar.Value = Math.Clamp(state.ContactIntegrity, 0f, 1f);
+        HeatSinkBar.Value = Math.Clamp(state.HeatSinkIntegrity, 0f, 1f);
+
+        var stable = !state.FaultLatched || state.CircuitStep == FlashlightCircuitStep.Stable;
+        ContinuityButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.CheckContinuity;
+        PolarityButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.CorrectPolarity;
+        CapacitorButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.BleedCapacitor;
+        GroundButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.BridgeGround;
+        ResistorButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.MatchImpedance;
+        EmitterCalButton.Disabled = stable || state.CircuitStep != FlashlightCircuitStep.CalibrateEmitter;
     }
 
     private static int Percent(float value)
     {
         return (int) MathF.Round(Math.Clamp(value, 0f, 1f) * 100f);
+    }
+
+    private void SendFocus(bool force)
+    {
+        var focus = FocusSlider.Value / 100f;
+        FocusValue.Text = $"{Percent(focus)}%";
+
+        if (!force && MathF.Abs(focus - _lastSentFocus) < 0.01f)
+            return;
+
+        _lastSentFocus = focus;
+        OnFocusChanged?.Invoke(focus);
+    }
+
+    private static string GetFaultLoc(FlashlightFault fault)
+    {
+        return fault switch
+        {
+            FlashlightFault.ContactDropout => "flashlight-maintenance-fault-contact-dropout",
+            FlashlightFault.ThermalRunaway => "flashlight-maintenance-fault-thermal-runaway",
+            FlashlightFault.EmitterSag => "flashlight-maintenance-fault-emitter-sag",
+            FlashlightFault.GroundLeak => "flashlight-maintenance-fault-ground-leak",
+            _ => "flashlight-maintenance-fault-none",
+        };
+    }
+
+    private static string GetStepLoc(FlashlightCircuitStep step)
+    {
+        return step switch
+        {
+            FlashlightCircuitStep.CheckContinuity => "flashlight-maintenance-step-check-continuity",
+            FlashlightCircuitStep.CorrectPolarity => "flashlight-maintenance-step-correct-polarity",
+            FlashlightCircuitStep.BleedCapacitor => "flashlight-maintenance-step-bleed-capacitor",
+            FlashlightCircuitStep.BridgeGround => "flashlight-maintenance-step-bridge-ground",
+            FlashlightCircuitStep.MatchImpedance => "flashlight-maintenance-step-match-impedance",
+            FlashlightCircuitStep.CalibrateEmitter => "flashlight-maintenance-step-calibrate-emitter",
+            _ => "flashlight-maintenance-step-stable",
+        };
     }
 }

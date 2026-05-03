@@ -1,19 +1,25 @@
-handheld-light-component-on-examine-is-on-message = Agora a luz [color=darkgreen]está acesa[/color].
-handheld-light-component-on-examine-is-off-message = Agora a luz [color=darkred]está apagada[/color].
+handheld-light-component-on-examine-is-on-message = A luz está [color=darkgreen]acesa[/color].
+handheld-light-component-on-examine-is-off-message = A luz está [color=darkred]apagada[/color].
 handheld-light-component-cell-missing-message = Sem bateria...
-handheld-light-component-cell-dead-message = A bateria está fraca...
+handheld-light-component-cell-dead-message = A bateria está descarregada...
 flashlight-maintenance-verb = Abrir diagnóstico óptico
 flashlight-maintenance-overheated-popup = O módulo térmico bloqueou a ignição do feixe.
-flashlight-maintenance-overheated-examine = O alojamento do emissor está saturado de calor; religar agora degrada a matriz.
+flashlight-maintenance-fault-popup = A lanterna tem uma falha elétrica travada.
+flashlight-maintenance-overheated-examine = O alojamento do emissor está saturado de calor e precisa esfriar.
 flashlight-maintenance-examine = Diagnóstico: foco {$focus}%, carga térmica {$heat}%, lente {$lens}%, emissor {$emitter}%, contatos {$contacts}%, dissipador {$heatsink}%.
+flashlight-maintenance-fault-examine = Há uma falha travada no circuito: {$fault}.
 flashlight-maintenance-window-title = Diagnóstico da lanterna tática
 flashlight-maintenance-window-status = Matriz óptica estável. O feixe responde dentro dos parâmetros.
 flashlight-maintenance-window-overheated = Corte térmico ativo. A luz está protegendo a própria eletrônica.
+flashlight-maintenance-window-fault = Falha elétrica travada. Reparo de bancada necessário.
 flashlight-maintenance-window-field-note = Mantenha o foco estreito apenas quando precisar atravessar fumaça, poeira ou corredores longos.
+flashlight-maintenance-window-tab-optics = Óptica
+flashlight-maintenance-window-tab-diagnostics = Diagnóstico
+flashlight-maintenance-window-tab-circuit = Circuito
 flashlight-maintenance-window-section-optics = Conjunto óptico
 flashlight-maintenance-window-section-diagnostics = Árvore de manutenção
 flashlight-maintenance-window-section-thermal = Barramento térmico
-flashlight-maintenance-window-focus = Abertura do cone
+flashlight-maintenance-window-focus = Foco do feixe
 flashlight-maintenance-window-projection = Projeção estimada: {$radius} m / intensidade {$energy} lx
 flashlight-maintenance-window-service = Revisar
 flashlight-maintenance-window-lens = Lente: {$value}% de transparência útil
@@ -21,3 +27,24 @@ flashlight-maintenance-window-emitter = Emissor: {$value}% de alinhamento
 flashlight-maintenance-window-contacts = Contatos: {$value}% de continuidade
 flashlight-maintenance-window-heatsink = Dissipador: {$value}% de acoplamento
 flashlight-maintenance-window-heat = Carga térmica acumulada: {$value}%
+flashlight-maintenance-window-fault-line = Falha: {$fault}
+flashlight-maintenance-window-circuit-note = Resolva a falha na ordem elétrica correta. Um passo errado aquece o driver e danifica os contatos.
+flashlight-maintenance-window-circuit-step = Etapa necessária: {$step}
+flashlight-maintenance-fault-none = nenhuma
+flashlight-maintenance-fault-contact-dropout = queda intermitente nos contatos
+flashlight-maintenance-fault-thermal-runaway = fuga térmica no driver
+flashlight-maintenance-fault-emitter-sag = queda de tensão no emissor
+flashlight-maintenance-fault-ground-leak = fuga para o aterramento
+flashlight-maintenance-step-check-continuity = verificar continuidade nos contatos da célula
+flashlight-maintenance-step-correct-polarity = corrigir polaridade no driver
+flashlight-maintenance-step-bleed-capacitor = descarregar o capacitor de filtragem
+flashlight-maintenance-step-bridge-ground = jumpear o aterramento do chassi
+flashlight-maintenance-step-match-impedance = ajustar resistência em série para casar impedância
+flashlight-maintenance-step-calibrate-emitter = calibrar corrente do emissor
+flashlight-maintenance-step-stable = circuito estável
+flashlight-maintenance-action-continuity = Medir continuidade
+flashlight-maintenance-action-polarity = Inverter polaridade
+flashlight-maintenance-action-capacitor = Descarregar capacitor
+flashlight-maintenance-action-ground = Jumpear terra
+flashlight-maintenance-action-resistor = Ajustar resistor
+flashlight-maintenance-action-emitter = Calibrar emissor

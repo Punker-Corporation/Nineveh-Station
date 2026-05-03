@@ -20,6 +20,7 @@ public sealed class FlashlightMaintenanceBoundUserInterface : BoundUserInterface
         _window.OpenCentered();
         _window.OnFocusChanged += focus => SendMessage(new FlashlightSetFocusMessage(focus));
         _window.OnServiceModule += module => SendMessage(new FlashlightServiceModuleMessage(module));
+        _window.OnCircuitAction += action => SendMessage(new FlashlightCircuitActionMessage(action));
         Reload();
     }
 
@@ -38,6 +39,9 @@ public sealed class FlashlightMaintenanceBoundUserInterface : BoundUserInterface
             comp.Focus,
             comp.HeatCapacity <= 0f ? 0f : comp.Heat / comp.HeatCapacity,
             comp.Overheated,
+            comp.FaultLatched,
+            comp.LastFault,
+            comp.CircuitStep,
             comp.LensIntegrity,
             comp.EmitterIntegrity,
             comp.ContactIntegrity,

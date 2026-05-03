@@ -20,6 +20,33 @@ public sealed partial class HandheldRadioComponent : Component
 
     [DataField, AutoNetworkedField]
     public bool SpeakerEnabled = true;
+
+    [DataField, AutoNetworkedField]
+    public float Congestion;
+
+    [DataField, AutoNetworkedField]
+    public float AdjacentCongestionLow;
+
+    [DataField, AutoNetworkedField]
+    public float AdjacentCongestionHigh;
+
+    [DataField, AutoNetworkedField]
+    public float SignalQuality = 1f;
+
+    [DataField, AutoNetworkedField]
+    public float Drift;
+
+    [DataField, AutoNetworkedField]
+    public string LastStaticPhrase = string.Empty;
+
+    [DataField]
+    public float CongestionUpdateSeconds = 95f;
+
+    [DataField]
+    public float NextCongestionUpdate;
+
+    [DataField]
+    public string StaticSound = "/Audio/_Scp/Effects/Radio/static.ogg";
 }
 
 [Serializable, NetSerializable]
@@ -63,19 +90,37 @@ public sealed class HandheldRadioBoundUserInterfaceState : BoundUserInterfaceSta
     public int MaxChannel;
     public bool MicrophoneEnabled;
     public bool SpeakerEnabled;
+    public float Congestion;
+    public float AdjacentCongestionLow;
+    public float AdjacentCongestionHigh;
+    public float SignalQuality;
+    public float Drift;
+    public string LastStaticPhrase;
 
     public HandheldRadioBoundUserInterfaceState(
         int? selectedChannel,
         int minChannel,
         int maxChannel,
         bool microphoneEnabled,
-        bool speakerEnabled)
+        bool speakerEnabled,
+        float congestion,
+        float adjacentCongestionLow,
+        float adjacentCongestionHigh,
+        float signalQuality,
+        float drift,
+        string lastStaticPhrase)
     {
         SelectedChannel = selectedChannel;
         MinChannel = minChannel;
         MaxChannel = maxChannel;
         MicrophoneEnabled = microphoneEnabled;
         SpeakerEnabled = speakerEnabled;
+        Congestion = congestion;
+        AdjacentCongestionLow = adjacentCongestionLow;
+        AdjacentCongestionHigh = adjacentCongestionHigh;
+        SignalQuality = signalQuality;
+        Drift = drift;
+        LastStaticPhrase = lastStaticPhrase;
     }
 }
 

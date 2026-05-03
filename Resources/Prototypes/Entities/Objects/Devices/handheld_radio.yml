@@ -25,6 +25,7 @@
     selectedChannel: 1
     minChannel: 1
     maxChannel: 36
+    congestionUpdateSeconds: 110
   - type: ActivatableUI
     key: enum.HandheldRadioUiKey.Key
   - type: UserInterface

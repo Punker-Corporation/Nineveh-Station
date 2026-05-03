@@ -17,7 +17,18 @@ public sealed partial class HandheldRadioWindow : DefaultWindow
         ChannelLineEdit.OnTextChanged += OnValueChanged;
     }
 
-    public void SetState(int? selectedChannel, int min, int max, bool microphoneEnabled, bool speakerEnabled)
+    public void SetState(
+        int? selectedChannel,
+        int min,
+        int max,
+        bool microphoneEnabled,
+        bool speakerEnabled,
+        float congestion = 0f,
+        float adjacentCongestionLow = 0f,
+        float adjacentCongestionHigh = 0f,
+        float signalQuality = 1f,
+        float drift = 0f,
+        string lastStaticPhrase = "")
     {
         _min = min;
         _max = max;
@@ -26,6 +37,22 @@ public sealed partial class HandheldRadioWindow : DefaultWindow
         CurrentChannel.Text = selectedChannel is { } channel
             ? Loc.GetString("ui-handheld-radio-current", ("channel", channel))
             : Loc.GetString("ui-handheld-radio-current-null");
+        FrequencyLabel.Text = selectedChannel is { } active
+            ? Loc.GetString("ui-handheld-radio-frequency", ("frequency", GetFrequency(active, drift)))
+            : Loc.GetString("ui-handheld-radio-frequency-null");
+
+        CongestionBar.Value = Math.Clamp(congestion, 0f, 1f);
+        CongestionLabel.Text = Loc.GetString("ui-handheld-radio-congestion", ("value", Percent(congestion)));
+        SignalBar.Value = Math.Clamp(signalQuality, 0f, 1f);
+        SignalLabel.Text = Loc.GetString("ui-handheld-radio-signal", ("value", Percent(signalQuality)));
+        AdjacentLabel.Text = Loc.GetString(
+            "ui-handheld-radio-adjacent",
+            ("low", Percent(adjacentCongestionLow)),
+            ("high", Percent(adjacentCongestionHigh)));
+        DriftLabel.Text = Loc.GetString("ui-handheld-radio-drift", ("value", GetDrift(drift)));
+        StaticPhraseLabel.Text = string.IsNullOrWhiteSpace(lastStaticPhrase)
+            ? Loc.GetString("ui-handheld-radio-static-clear")
+            : Loc.GetString("ui-handheld-radio-static-phrase", ("phrase", lastStaticPhrase));
 
         MicButton.Pressed = activeChannel && microphoneEnabled;
         SpeakerButton.Pressed = activeChannel && speakerEnabled;
@@ -54,5 +81,22 @@ public sealed partial class HandheldRadioWindow : DefaultWindow
         ApplyButton.Disabled = !int.TryParse(ChannelLineEdit.Text, out var channel)
             || channel < _min
             || channel > _max;
+    }
+
+    private static string GetFrequency(int channel, float drift)
+    {
+        var frequency = 120.0f + channel * 0.35f + drift * 0.09f;
+        return frequency.ToString("F2");
+    }
+
+    private static string GetDrift(float drift)
+    {
+        var signed = (drift - 0.5f) * 18f;
+        return signed.ToString("+0.0;-0.0;0.0");
+    }
+
+    private static int Percent(float value)
+    {
+        return (int) MathF.Round(Math.Clamp(value, 0f, 1f) * 100f);
     }
 }

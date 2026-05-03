@@ -6,8 +6,23 @@
   components:
   - type: HandheldLight
     addPrefix: true
+    wattage: 0.72
     blinkingBehaviourId: blinking
     radiatingBehaviourId: radiating
+  - type: FlashlightMaintenance
+    focus: 0.48
+    wideRadius: 2.75
+    focusedRadius: 4.75
+    wideEnergy: 0.95
+    focusedEnergy: 1.65
+    heatPerSecond: 1.05
+    focusHeatMultiplier: 0.85
+    coolingPerSecond: 6.5
+    batteryFocusCost: 0.45
+    lensIntegrity: 0.98
+    emitterIntegrity: 0.96
+    contactIntegrity: 0.95
+    heatSinkIntegrity: 0.97
   - type: LightBehaviour
     behaviours:
       - !type:FadeBehaviour
@@ -42,13 +57,22 @@
     heldPrefix: off
   - type: PointLight
     enabled: false
-    radius: 3
-    energy: 2
+    radius: 3.25
+    energy: 1.35
+    softness: 0.85
+    falloff: 4.4
+    castShadows: true
     netsync: false
   - type: ToggleableVisuals
     spriteLayer: light
   - type: ItemTogglePointLight
   - type: Appearance
+  - type: ActivatableUI
+    key: enum.FlashlightMaintenanceUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.FlashlightMaintenanceUiKey.Key:
+        type: FlashlightMaintenanceBoundUserInterface
   - type: Physics
     canCollide: false
   - type: StealTarget

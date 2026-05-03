@@ -6,6 +6,7 @@ using Content.Shared.Toggleable;
 using Content.Shared.UserInterface;
 using Robust.Client.GameObjects;
 using Content.Client.Light.EntitySystems;
+using Content.Shared.Light.EntitySystems;
 
 namespace Content.Client.Light;
 
@@ -13,6 +14,7 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly LightBehaviorSystem _lightBehavior = default!;
+    [Dependency] private readonly FlashlightMaintenanceSystem _maintenance = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
 
     public override void Initialize()
@@ -57,6 +59,9 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
             return;
         }
 
+        if (TryComp<FlashlightMaintenanceComponent>(uid, out var maintenance))
+            _maintenance.ApplyOptics(uid, enabled && !maintenance.Overheated && !maintenance.FaultLatched, maintenance);
+
         if (TryComp<LightBehaviourComponent>(uid, out var lightBehaviour))
         {
             // Reset any running behaviour to reset the animated properties back to the original value, to avoid conflicts between resets
@@ -86,7 +91,17 @@ public sealed class HandheldLightSystem : SharedHandheldLightSystem
 
     private void OnMaintenanceAfterHandleState(Entity<FlashlightMaintenanceComponent> ent, ref AfterAutoHandleStateEvent args)
     {
+        _maintenance.ApplyOptics(ent.Owner, IsMaintenanceLightActive(ent.Owner, ent.Comp), ent.Comp);
+
         if (_ui.TryGetOpenUi<FlashlightMaintenanceBoundUserInterface>(ent.Owner, FlashlightMaintenanceUiKey.Key, out var bui))
             bui.Reload();
+    }
+
+    private bool IsMaintenanceLightActive(EntityUid uid, FlashlightMaintenanceComponent comp)
+    {
+        return !comp.Overheated &&
+               !comp.FaultLatched &&
+               TryComp<HandheldLightComponent>(uid, out var handheld) &&
+               handheld.Activated;
     }
 }
