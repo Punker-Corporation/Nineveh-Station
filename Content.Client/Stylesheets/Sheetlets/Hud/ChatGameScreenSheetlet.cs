@@ -15,10 +15,10 @@ public sealed class ChatGameScreenSheetlet : Sheetlet<PalettedStylesheet>
         [
             E()
                 .Class(SeparatedChatGameScreen.StyleClassChatContainer)
-                .Panel(new StyleBoxFlat(sheet.SecondaryPalette.Background)),
+                .Panel(new StyleBoxFlat(Color.FromHex("#050504E8"))),
             E<OutputPanel>()
                 .Class(SeparatedChatGameScreen.StyleClassChatOutput)
-                .Panel(new StyleBoxFlat(sheet.SecondaryPalette.BackgroundDark)),
+                .Panel(new StyleBoxFlat(Color.FromHex("#030302F4"))),
         ];
     }
 }

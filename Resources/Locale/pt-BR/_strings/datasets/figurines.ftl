@@ -356,7 +356,7 @@ figurines-AI-6 = { law-antimov-1 }
 
 figurines-AI-7 = { law-nutimov-4 }
 
-# Antagonistas
+# Registros restritos
 
 
 figurines-skeleton-1 = Reclama!

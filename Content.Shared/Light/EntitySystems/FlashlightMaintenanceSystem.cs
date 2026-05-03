@@ -83,9 +83,17 @@ public sealed class FlashlightMaintenanceSystem : EntitySystem
 
     private void OnServiceModule(Entity<FlashlightMaintenanceComponent> ent, ref FlashlightServiceModuleMessage args)
     {
-        // Field service deliberately gives small, bounded gains. The player can stabilize a tool,
-        // but not turn a cheap light into a permanent industrial spotlight mid-round.
-        const float serviceAmount = 0.18f;
+        // Field service is a small alignment puzzle: the closer the needle is to the hidden target,
+        // the more useful the maintenance pass becomes. A bad pass adds heat, so the UI is tactical
+        // instead of a free one-click reset.
+        var error = MathF.Abs(Math.Clamp(args.Calibration, 0f, 1f) - ent.Comp.CalibrationTarget);
+        var precision = Math.Clamp(1f - error / 0.35f, 0f, 1f);
+        var serviceAmount = MathHelper.Lerp(0.05f, 0.24f, precision);
+        ent.Comp.Heat = Math.Clamp(
+            ent.Comp.Heat + ent.Comp.HeatCapacity * MathHelper.Lerp(0.08f, -0.03f, precision),
+            0f,
+            ent.Comp.HeatCapacity);
+
         switch (args.Module)
         {
             case FlashlightModule.Lens:
@@ -105,6 +113,8 @@ public sealed class FlashlightMaintenanceSystem : EntitySystem
 
         if (ent.Comp.Overheated && ent.Comp.Heat <= ent.Comp.ResumeThreshold)
             ent.Comp.Overheated = false;
+
+        ent.Comp.CalibrationTarget = NextCalibrationTarget(ent.Comp.CalibrationTarget, args.Module);
 
         Dirty(ent);
         ApplyOptics(ent.Owner, IsActiveLight(ent.Owner), ent.Comp);
@@ -230,6 +240,7 @@ public sealed class FlashlightMaintenanceSystem : EntitySystem
             ent.Comp.EmitterIntegrity,
             ent.Comp.ContactIntegrity,
             ent.Comp.HeatSinkIntegrity,
+            ent.Comp.CalibrationTarget,
             GetProjectedRadius(ent.Comp),
             GetProjectedEnergy(ent.Comp)));
     }
@@ -262,5 +273,12 @@ public sealed class FlashlightMaintenanceSystem : EntitySystem
     private static bool PartChanged(float oldValue, float newValue)
     {
         return MathF.Abs(oldValue - newValue) > 0.01f;
+    }
+
+    private static float NextCalibrationTarget(float current, FlashlightModule module)
+    {
+        var phase = (int) module * 0.173f + 0.421f;
+        var scrambled = current * 1.6180339f + phase;
+        return scrambled - MathF.Floor(scrambled);
     }
 }

@@ -217,56 +217,6 @@ internal sealed class AdminNameOverlay : Overlay
                 currentOffset += lineoffset;
             }
 
-            // Determine antag symbol
-            string? symbol;
-            switch (_overlaySymbolStyle)
-            {
-                case AdminOverlayAntagSymbolStyle.Specific:
-                    symbol = roleSymbol;
-                    break;
-                case AdminOverlayAntagSymbolStyle.Basic:
-                    symbol = Loc.GetString("player-tab-antag-prefix");
-                    break;
-                default:
-                case AdminOverlayAntagSymbolStyle.Off:
-                    symbol = string.Empty;
-                    break;
-            }
-
-            // Determine antag/role type name
-            string? text;
-            switch (_overlayFormat)
-            {
-                case AdminOverlayAntagFormat.Roletype:
-                    color = roleColor;
-                    symbol = IsFiltered(playerInfo.RoleProto) ? symbol : string.Empty;
-                    text = IsFiltered(playerInfo.RoleProto)
-                        ? roleName.ToUpper()
-                        : string.Empty;
-                    break;
-                case AdminOverlayAntagFormat.Subtype:
-                    color = roleColor;
-                    symbol = IsFiltered(playerInfo.RoleProto) ? symbol : string.Empty;
-                    text = IsFiltered(playerInfo.RoleProto)
-                        ? _roles.GetRoleSubtypeLabel(roleName, playerInfo.Subtype).ToUpper()
-                        : string.Empty;
-                    break;
-                default:
-                case AdminOverlayAntagFormat.Binary:
-                    color = Color.OrangeRed;
-                    symbol = playerInfo.Antag ? symbol : string.Empty;
-                    text = playerInfo.Antag ? _antagLabelClassic : string.Empty;
-                    break;
-            }
-
-            // Draw antag label
-            color.A = alpha;
-            var label = !string.IsNullOrEmpty(symbol)
-                ? Loc.GetString("player-tab-character-name-antag-symbol", ("symbol", symbol), ("name", text))
-                : text;
-            args.ScreenHandle.DrawString(_fontBold, screenCoordinates + currentOffset, label, uiScale, color);
-            currentOffset += lineoffset;
-
             //Save the coordinates and size of the text block, for stack merge check
             drawnOverlays.Add((screenCoordinatesCenter, currentOffset));
         }

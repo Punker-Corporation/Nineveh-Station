@@ -11,8 +11,8 @@
                 <ui:OptionDropDown Name="DropDownPlayerTabColorSetting" Title="{Loc 'ui-options-admin-player-tab-color-setting'}" />
                 <Label Text="{Loc 'ui-options-admin-overlay-title'}"
                        StyleClasses="LabelKeyText"/>
-                <ui:OptionDropDown Name="DropDownOverlayAntagFormat" Title="{Loc 'ui-options-admin-overlay-antag-format'}" />
-                <ui:OptionDropDown Name="DropDownOverlayAntagSymbol" Title="{Loc 'ui-options-admin-overlay-antag-symbol'}" />
+                <ui:OptionDropDown Name="DropDownOverlayAntagFormat" Title="{Loc 'ui-options-admin-overlay-antag-format'}" Visible="False" />
+                <ui:OptionDropDown Name="DropDownOverlayAntagSymbol" Title="{Loc 'ui-options-admin-overlay-antag-symbol'}" Visible="False" />
                 <CheckBox Name="EnableOverlayPlaytimeCheckBox" Text="{Loc 'ui-options-admin-enable-overlay-playtime'}" />
                 <CheckBox Name="EnableOverlayStartingJobCheckBox" Text="{Loc 'ui-options-admin-enable-overlay-starting-job'}" />
                 <ui:OptionSlider Name="OverlayMergeDistanceSlider"  Title="{Loc 'ui-options-admin-overlay-merge-distance'}"/>

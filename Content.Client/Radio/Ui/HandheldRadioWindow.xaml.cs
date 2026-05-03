@@ -48,11 +48,25 @@ public sealed partial class HandheldRadioWindow : DefaultWindow
         if (string.Equals(ChannelLineEdit.Text.Trim(), "null", StringComparison.OrdinalIgnoreCase))
         {
             ApplyButton.Disabled = false;
+            ValidationLabel.Text = Loc.GetString("ui-handheld-radio-validation-muted");
             return;
         }
 
-        ApplyButton.Disabled = !int.TryParse(ChannelLineEdit.Text, out var channel)
-            || channel < _min
-            || channel > _max;
+        if (!int.TryParse(ChannelLineEdit.Text, out var channel))
+        {
+            ApplyButton.Disabled = true;
+            ValidationLabel.Text = Loc.GetString("ui-handheld-radio-validation-number");
+            return;
+        }
+
+        if (channel < _min || channel > _max)
+        {
+            ApplyButton.Disabled = true;
+            ValidationLabel.Text = Loc.GetString("ui-handheld-radio-validation-range", ("min", _min), ("max", _max));
+            return;
+        }
+
+        ApplyButton.Disabled = false;
+        ValidationLabel.Text = Loc.GetString("ui-handheld-radio-validation-ready", ("channel", channel));
     }
 }

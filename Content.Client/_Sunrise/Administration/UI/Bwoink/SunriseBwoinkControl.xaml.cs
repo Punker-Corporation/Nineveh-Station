@@ -78,10 +78,6 @@ public sealed partial class SunriseBwoinkControl : Control
                 sb.Append(' ');
             }
 
-            // Mark antagonists with symbol
-            if (info.Antag && info.ActiveThisRound)
-                sb.Append(new Rune(0x1F5E1)); // 🗡
-
             // Mark new players with symbol
             if (IsNewPlayer(info))
                 sb.Append(new Rune(0x23F2)); // ⏲
@@ -116,7 +112,7 @@ public sealed partial class SunriseBwoinkControl : Control
             if (a.Connected != b.Connected)
                 return a.Connected ? -1 : 1;
 
-            // Sort connected players by whether they have joined the round, then by New Player status, then by Antag status
+            // Sort connected players by whether they have joined the round, then by new-player status.
             if (a.Connected && b.Connected)
             {
                 var aNewPlayer = IsNewPlayer(a);
@@ -130,9 +126,6 @@ public sealed partial class SunriseBwoinkControl : Control
                 if (aNewPlayer != bNewPlayer)
                     return aNewPlayer ? -1 : 1;
 
-                //  Within all four previous groups, antagonists will be listed first.
-                if (a.Antag != b.Antag)
-                    return a.Antag ? -1 : 1;
             }
 
             // Sort disconnected players by participation in the round

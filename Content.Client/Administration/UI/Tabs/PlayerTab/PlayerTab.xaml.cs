@@ -1,10 +1,8 @@
 using System.Linq;
 using Content.Client._Scp.Stylesheets.Palette;
-using Content.Client._Sunrise.AntagObjectives;
 using Content.Client.Administration.Systems;
 using Content.Shared.Administration; // Sunrise-Edit
 using Content.Shared.Administration.Managers; // Sunrise-Edit
-using Content.Client.Administration.UI.AntagObjectives;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -46,8 +44,6 @@ public sealed partial class PlayerTab : Control
     private AdminPlayerTabRoleTypeOption _playerTabRoleSetting;
     private AdminPlayerTabSymbolOption _playerTabSymbolSetting;
 
-    private readonly AntagObjectivesUIController _antagObjectivesUIController; // Sunrise-Edit
-
     public event Action<GUIBoundKeyEventArgs, ListData>? OnEntryKeyBindDown;
 
     public PlayerTab()
@@ -78,7 +74,6 @@ public sealed partial class PlayerTab : Control
 
         RefreshPlayerList(_adminSystem.PlayerList);
 
-        _antagObjectivesUIController = UserInterfaceManager.GetUIController<AntagObjectivesUIController>(); // Sunrise-Edit
     }
 
     #region Antag Overlay
@@ -178,22 +173,17 @@ public sealed partial class PlayerTab : Control
         UpdateHeaderSymbols();
 
         // Sunrise-Sponsors-Start
-        var antagCount = 0;
         var sponsorCount = 0;
         foreach (var player in sortedPlayers)
         {
             if (!_showDisconnected && !player.Connected)
                 continue;
 
-            if (player.Antag)
-                antagCount += 1;
-
             if (player.IsSponsor)
                 sponsorCount += 1;
         }
 
         SponsorCount.Text = Loc.GetString("player-tab-sponsor-count", ("count", sponsorCount));
-        AntagCount.Text = Loc.GetString("player-tab-antag-count", ("count", antagCount));
         // Sunrise-Sponsors-End
 
         SearchList.PopulateList(sortedPlayers.Select(info => new PlayerListData(info,
@@ -212,22 +202,10 @@ public sealed partial class PlayerTab : Control
             _playerTabColorSetting,
             _playerTabRoleSetting,
             _playerTabSymbolSetting);
-        entry.OnObjectives += GetObjectives; // Sunrise-Edit
         button.AddChild(entry);
         button.ToolTip = $"{player.Username}, {player.CharacterName}, {player.IdentityName}, {player.StartingJob}";
         button.StyleClasses.Clear();
     }
-
-    // Sunrise-Start
-    private void GetObjectives(NetEntity? nent)
-    {
-        if (nent == null)
-            return;
-
-        _entManager.System<AntagObjectivesSystem>().RequestAntagObjectives(nent.Value);
-        _antagObjectivesUIController.OpenWindow();
-    }
-    // Sunrise-End
 
     /// <summary>
     /// Determines whether <paramref name="filter"/> is contained in <paramref name="listData"/>.FilteringString.

@@ -3,8 +3,8 @@
 replay-loading = Carregando ({ $cur }/{ $total })
 replay-loading-reading = Lendo arquivos
 replay-loading-processing = Processamento de arquivos
-replay-loading-spawning = Geração de Entidade
-replay-loading-initializing = Inicializando Entidades
+replay-loading-spawning = Instanciando entidades
+replay-loading-initializing = Inicializando entidades
 replay-loading-starting = Entidades em execução
 replay-loading-failed = Falha ao carregar a repetição. Erro:
                         {$reason}

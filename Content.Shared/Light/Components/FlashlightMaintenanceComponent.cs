@@ -34,16 +34,16 @@ public sealed partial class FlashlightMaintenanceComponent : Component
     public float HeatSinkIntegrity = 1f;
 
     [DataField]
-    public float WideRadius = 4.25f;
+    public float WideRadius = 5.1f;
 
     [DataField]
-    public float FocusedRadius = 8.5f;
+    public float FocusedRadius = 11.4f;
 
     [DataField]
-    public float WideEnergy = 1.15f;
+    public float WideEnergy = 1.35f;
 
     [DataField]
-    public float FocusedEnergy = 2.65f;
+    public float FocusedEnergy = 3.35f;
 
     [DataField]
     public float WideFalloff = 4.2f;
@@ -52,31 +52,34 @@ public sealed partial class FlashlightMaintenanceComponent : Component
     public float FocusedFalloff = 8.6f;
 
     [DataField]
-    public float Softness = 0.62f;
+    public float Softness = 0.52f;
 
     [DataField]
-    public float HeatPerSecond = 4.8f;
+    public float HeatPerSecond = 1.65f;
 
     [DataField]
     public float FocusHeatMultiplier = 2.35f;
 
     [DataField]
-    public float CoolingPerSecond = 9.5f;
+    public float CoolingPerSecond = 3.35f;
 
     [DataField]
     public float HeatCapacity = 100f;
 
     [DataField]
-    public float OverheatThreshold = 92f;
+    public float OverheatThreshold = 96f;
 
     [DataField]
-    public float ResumeThreshold = 48f;
+    public float ResumeThreshold = 42f;
 
     [DataField]
     public float ContactFlickerThreshold = 0.72f;
 
     [DataField]
     public float BatteryFocusCost = 0.82f;
+
+    [DataField, AutoNetworkedField]
+    public float CalibrationTarget = 0.63f;
 }
 
 [Serializable, NetSerializable]
@@ -103,6 +106,7 @@ public sealed class FlashlightMaintenanceBoundUserInterfaceState(
     float emitterIntegrity,
     float contactIntegrity,
     float heatSinkIntegrity,
+    float calibrationTarget,
     float projectedRadius,
     float projectedEnergy)
     : BoundUserInterfaceState
@@ -114,6 +118,7 @@ public sealed class FlashlightMaintenanceBoundUserInterfaceState(
     public float EmitterIntegrity = emitterIntegrity;
     public float ContactIntegrity = contactIntegrity;
     public float HeatSinkIntegrity = heatSinkIntegrity;
+    public float CalibrationTarget = calibrationTarget;
     public float ProjectedRadius = projectedRadius;
     public float ProjectedEnergy = projectedEnergy;
 }
@@ -125,7 +130,8 @@ public sealed class FlashlightSetFocusMessage(float focus) : BoundUserInterfaceM
 }
 
 [Serializable, NetSerializable]
-public sealed class FlashlightServiceModuleMessage(FlashlightModule module) : BoundUserInterfaceMessage
+public sealed class FlashlightServiceModuleMessage(FlashlightModule module, float calibration) : BoundUserInterfaceMessage
 {
     public FlashlightModule Module { get; } = module;
+    public float Calibration { get; } = calibration;
 }

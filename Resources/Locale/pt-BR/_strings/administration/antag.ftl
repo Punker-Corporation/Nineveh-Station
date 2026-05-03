@@ -1,28 +1,28 @@
-verb-categories-antag = Antagonistas
-admin-verb-make-traitor = Transforme o alvo em um traidor.
-admin-verb-make-initial-infected = Torne o paciente alvo zero.
-admin-verb-make-zombie = Transforme o alvo em um zumbi.
-admin-verb-make-nuclear-operative = Faça do alvo um agente nuclear solitário.
-admin-verb-make-pirate = Faça do alvo um pirata/corsário. Observe que isso não altera o modo de jogo.
-admin-verb-make-head-rev = Faça do objetivo a cabeça da revolução.
-admin-verb-make-thief = Faça do alvo um ladrão.
-admin-verb-make-paradox-clone = Crie o papel fantasma de um clone paradoxal do alvo.
-admin-verb-make-changeling = Faça do alvo um Genestealer.
-admin-verb-make-vampire = Faça do alvo um vampiro.
-admin-verb-text-make-traitor = Faça um traidor
-admin-verb-text-make-initial-infected = Faça com que seja paciente zero
-admin-verb-text-make-zombie = Faça um zumbi
-admin-verb-text-make-nuclear-operative = Faça dele um agente nuclear
-admin-verb-text-make-pirate = Faça um pirata
-admin-verb-text-make-head-rev = Faça dele o chefe da revolução
-admin-verb-text-make-paradox-clone = Crie um clone paradoxal
-admin-verb-text-make-thief = Faça um ladrão
-admin-verb-text-make-vampire = Faça um vampiro
-admin-verb-text-make-changeling = Faça dele um genestealer
-admin-overlay-antag-classic = ANTAGONISTA
+verb-categories-antag = Intervenção restrita
+admin-verb-make-traitor = Aplicar perfil narrativo restrito ao alvo.
+admin-verb-make-initial-infected = Marcar o alvo como vetor clínico inicial.
+admin-verb-make-zombie = Aplicar estado degenerativo ao alvo.
+admin-verb-make-nuclear-operative = Aplicar perfil de incursão desativado ao alvo.
+admin-verb-make-pirate = Aplicar perfil de saque desativado ao alvo.
+admin-verb-make-head-rev = Aplicar perfil de liderança civil desativado ao alvo.
+admin-verb-make-thief = Aplicar perfil de furto desativado ao alvo.
+admin-verb-make-paradox-clone = Instanciar duplicata paradoxal desativada do alvo.
+admin-verb-make-changeling = Aplicar perfil biológico desativado ao alvo.
+admin-verb-make-vampire = Aplicar perfil hematológico desativado ao alvo.
+admin-verb-text-make-traitor = Perfil restrito
+admin-verb-text-make-initial-infected = Vetor inicial
+admin-verb-text-make-zombie = Estado degenerativo
+admin-verb-text-make-nuclear-operative = Incursão desativada
+admin-verb-text-make-pirate = Saque desativado
+admin-verb-text-make-head-rev = Liderança desativada
+admin-verb-text-make-paradox-clone = Duplicata paradoxal
+admin-verb-text-make-thief = Furto desativado
+admin-verb-text-make-vampire = Perfil hematológico
+admin-verb-text-make-changeling = Perfil biológico
+admin-overlay-antag-classic = RESERVADO
 
 # Chaves adicionadas para impedir qualquer fallback de localiza??o.
 
-admin-verb-make-wizard = Tornar o alvo num Feiticeiro.
+admin-verb-make-wizard = Aplicar perfil arcano desativado ao alvo.
 
-admin-verb-text-make-wizard = Assistente de Fazer
+admin-verb-text-make-wizard = Perfil arcano
